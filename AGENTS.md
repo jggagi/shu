@@ -4,7 +4,7 @@
 
 - 依次读取 README.md、docs/SPEC.md、docs/DECISIONS.md、docs/DEVELOPMENT.md。
 - SPEC 管当前产品要求，DECISIONS 管来源与历史，DEVELOPMENT 管执行；本文件管工作方式。冲突要报告，不静默改设定。
-- 已确认采用 Godot 4 稳定版 + GDScript；具体引擎版本与匹配的导出模板在开始实现时锁定。当前仅文档，无可运行命令；后续实现时补齐已验证的仓库内启动入口，不擅自替换已确认技术。
+- 已确认采用 Godot 4 稳定版 + GDScript；D01 锁定 Godot 4.7.2 stable 及同版本导出模板（.engine-version）。运行、导出和状态检查命令见 README.md；不擅自更换版本或渲染模式。
 - 保持 Web 优先、小故事、首个可复用场景、固定背景面板／宋式中国画／Q 版、养成画面内的师傅互动。具体要求见规格，不在此复制整份设定。
 
 ## 小步互动开发

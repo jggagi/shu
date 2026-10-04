@@ -1,0 +1,12 @@
+{
+  "Source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
+  "SHA256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+  "LicenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/OFL.txt",
+  "Name": "Noto Sans SC",
+  "GitBlobSHA": "fb0637bafbcd804fe32152370a1225990745b4bc",
+  "License": "SIL Open Font License 1.1",
+  "DerivedName": "Shu Demo Sans",
+  "Modifications": "Subset to D01 characters, static weight 450, renamed family.",
+  "Tool": "fontTools 4.60.1",
+  "DerivedSHA256": "a14c536a825f4d3397aca2e2dab1455c7d70dad2f169771cf934a075c87c23c2"
+}

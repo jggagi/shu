@@ -1,0 +1,13 @@
+{
+  "energy_max": 100,
+  "training_cost": 22,
+  "training_gain": 12,
+  "training_duration": 2,
+  "rest_gain": 34,
+  "rest_duration": 1,
+  "mentor_cost": 8,
+  "mentor_duration": 1,
+  "lesson_bonus": 6,
+  "goal": 60,
+  "times": ["卯时", "辰时", "巳时", "午时", "申时", "酉时"]
+}

@@ -1,6 +1,7 @@
 extends Control
 
 const State = preload("res://scripts/demo_state.gd")
+const Weather = preload("res://scripts/weather.gd")
 const INK := Color("354137")
 const JADE := Color("32695c")
 const GOLD := Color("ad8959")
@@ -29,6 +30,9 @@ var choices: Array[Button] = []
 var continue_button: Button
 var player_art: TextureRect
 var mentor_art: TextureRect
+var weather: Node
+var weather_label: Label
+var weather_button: Button
 var busy := false
 var awaiting_continue := false
 var completion_announced := false
@@ -155,30 +159,60 @@ func _build_ui() -> void:
 	bonus_text = _label("", Rect2(1162, 68, 231, 27), 17, JADE)
 	_button("重新开始", Rect2(1230, 101, 164, 32), _reset)
 	var scene_root := Control.new()
+	# Keep background, weather, and foreground independently ordered.
 	scene_root.clip_contents = true
 	scene_root.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_place(scene_root, _rect("scene"))
-	var backdrop := _art("res://assets/art/v2/tingyu-veranda-v2.png", Rect2(0, 0, 1416, 526), scene_root)
+	var background_root := Control.new()
+	background_root.clip_contents = true
+	background_root.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_place(background_root, Rect2(0, 0, 1416, 526), scene_root)
+	var backdrop := _art("res://assets/art/weather3/tingyu-clean-v3.png", Rect2(0, 0, 1416, 526), background_root)
 	backdrop.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
-	_paper(Rect2(55, 30, 208, 54), scene_root, false, true)
-	_label("听 雨 廊", Rect2(75, 40, 168, 35), 29, INK, scene_root)
-	_label("云\n山\n有\n路", Rect2(99, 140, 40, 220), 32, INK, scene_root)
-	_label("修\n心\n为\n先", Rect2(55, 172, 40, 220), 30, INK, scene_root)
-	player_art = _art("res://assets/art/v2/jiang-yanqiu-v2.png", _rect("player"), scene_root)
-	mentor_art = _art("res://assets/art/v2/ye-zhixian-v2.png", _rect("mentor"), scene_root)
+	weather = Weather.new()
+	scene_root.add_child(weather)
+	weather.setup(scene_root, backdrop)
+	var foreground_root := Control.new()
+	foreground_root.clip_contents = true
+	foreground_root.z_index = 2
+	foreground_root.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_place(foreground_root, Rect2(0, 0, 1416, 526), scene_root)
+	_paper(Rect2(55, 30, 208, 54), foreground_root, false, true)
+	_label("听 雨 廊", Rect2(75, 40, 168, 35), 29, INK, foreground_root)
+	_label("云\n山\n有\n路", Rect2(99, 140, 40, 220), 32, INK, foreground_root)
+	_label("修\n心\n为\n先", Rect2(55, 172, 40, 220), 30, INK, foreground_root)
+	player_art = _art("res://assets/art/v2/jiang-yanqiu-v2.png", _rect("player"), foreground_root)
+	mentor_art = _art("res://assets/art/v2/ye-zhixian-v2.png", _rect("mentor"), foreground_root)
+	weather.add_lit_art(player_art)
+	weather.add_lit_art(mentor_art)
 	mentor_hotspot = Button.new()
 	mentor_hotspot.flat = true
 	mentor_hotspot.tooltip_text = "向%s请教" % dialogue.mentor_name
 	mentor_hotspot.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	mentor_hotspot.pressed.connect(_ask)
-	_place(mentor_hotspot, _rect("mentor"), scene_root)
-	var desk := _art("res://assets/art/v2/desk-v2.png", _rect("desk"), scene_root)
+	_place(mentor_hotspot, _rect("mentor"), foreground_root)
+	var desk := _art("res://assets/art/v2/desk-v2.png", _rect("desk"), foreground_root)
 	desk.stretch_mode = TextureRect.STRETCH_SCALE
-	_paper(Rect2(347, 477, 176, 37), scene_root, false, true)
-	_label(dialogue.player_name, Rect2(358, 476, 154, 32), 19, INK, scene_root).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_paper(Rect2(913, 477, 176, 37), scene_root, false, true)
-	_label(dialogue.mentor_name, Rect2(924, 476, 154, 32), 19, INK, scene_root).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_paper(_rect("scene"), null, true)
+	weather.add_lit_art(desk)
+	_paper(Rect2(347, 477, 176, 37), foreground_root, false, true)
+	_label(dialogue.player_name, Rect2(358, 476, 154, 32), 19, INK, foreground_root).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_paper(Rect2(913, 477, 176, 37), foreground_root, false, true)
+	_label(dialogue.mentor_name, Rect2(924, 476, 154, 32), 19, INK, foreground_root).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	var scene_frame := _paper(_rect("scene"), null, true)
+	scene_frame.z_index = 3
+	var weather_paper := _paper(Rect2(886, 182, 204, 32), null, false, true)
+	weather_paper.z_index = 3
+	weather_label = _label("", Rect2(886, 182, 204, 32), 17, INK)
+	weather_label.z_index = 3
+	weather_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	var next_weather := _button("切换天气", Rect2(1103, 182, 136, 32), _next_weather)
+	next_weather.z_index = 3
+	next_weather.tooltip_text = "薄云、微风、小雨、雨歇依次预览；快捷键 5。"
+	weather_button = _button("静态对比", Rect2(1252, 182, 142, 32), _toggle_weather)
+	weather_button.z_index = 3
+	weather_button.tooltip_text = "关闭／开启环境动态，养成状态保持；快捷键 4。"
+	weather.changed.connect(_weather_ui)
+	_weather_ui()
 	_paper(_rect("dialogue"))
 	speaker = _label("", Rect2(45, 709, 632, 34), 24, JADE)
 	_label("1 修炼 · 2 请教 · 3 休息", Rect2(738, 712, 283, 27), 17, MUTED)
@@ -196,6 +230,16 @@ func _build_ui() -> void:
 	train_button.tooltip_text = "修为 +12 · 两时辰；师傅点拨可额外增加 +6。"
 	mentor_button.tooltip_text = "点击师傅也能请教。选择话题后推进一时辰。"
 	rest_button.tooltip_text = "精力最多恢复 34 · 一时辰。"
+
+func _weather_ui() -> void:
+	weather_label.text = weather.phase
+	weather_button.text = "静态对比" if weather.enabled else "开启动态"
+
+func _toggle_weather() -> void:
+	weather.toggle()
+
+func _next_weather() -> void:
+	weather.next_phase()
 
 func _refresh() -> void:
 	date_text.text = state.time_text()
@@ -294,6 +338,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		KEY_1: _train()
 		KEY_2: _ask()
 		KEY_3: _rest()
+		KEY_4: _toggle_weather()
+		KEY_5: _next_weather()
 		KEY_ESCAPE:
 			if state.dialogue_open:
 				_cancel()

@@ -6,7 +6,9 @@
 
 ## 当前可玩：D01 听雨廊
 
-江砚秋与叶知闲同处听雨廊。修炼推进时间与修为，请教口诀得到一次修炼加成，休息恢复精力。修为达到 60 完成第一课，可重新开始反复试玩。姓名按用户概念图确认；画面与数值等待用户试玩拍板。当前使用分层生成的中国画背景、Q 版师徒、木桌与宣纸木框，原 SVG 占位稿仍保留供比较。
+江砚秋与叶知闲同处听雨廊。修炼推进时间与修为，请教口诀得到一次修炼加成，休息恢复精力。修为达到 60 完成第一课，可重新开始反复试玩。姓名与整体美术风格已由用户确认；构图、动态强度与数值继续供试玩拍板。当前使用分层生成的中国画背景、Q 版师徒、木桌与宣纸木框，原 SVG 占位稿仍保留供比较。
+
+当前 **0.1.2-weather3** 加入约 30 秒「薄云 → 微风 → 小雨 → 雨歇」循环：云影缓移、竹叶轻摇、远山薄雾、廊外雨线与檐下滴水。右上「切换天气」可快速预览，「静态对比」可关闭环境效果；阅读对白时天气继续，切换效果不会消耗精力或推进养成时辰。
 
 ## 运行与导出
 
@@ -30,7 +32,7 @@
 3. 再修炼一次：这次修为增加 18，之后恢复基础增量 12。
 4. 休息恢复精力，继续修炼达到 60；点击「重新开始」回到首日初始状态。
 
-键盘 1／2／3 对应修炼／请教／休息；对话选择时 Esc 可取消。当前没有存档或音效，刷新、重开会开始新一轮。建议使用桌面窗口；手机竖屏布局留待后续。
+键盘 1／2／3 对应修炼／请教／休息；4 切换静态／动态，5 预览下一天气；对话选择时 Esc 可取消。当前没有存档或音效，刷新、重开会开始新一轮。建议使用桌面窗口；手机竖屏布局留待后续。
 
 ## 维护入口
 
@@ -39,7 +41,8 @@
 - [开发流程与路线图](docs/DEVELOPMENT.md)：验证记录、用户反馈与下一切片条件。
 - [Codex 工作约定](AGENTS.md)：范围和验证规则。
 - [概念图索引](docs/concepts/README.md)：三张原始概念图与 SHA256。
-- [美术来源](assets/art/v2/source.json)：运行图层、生成提示与 SHA256。
+- [美术来源](assets/art/v2/source.json)与[天气美术来源](assets/art/weather3/source.json)：运行图层、生成提示与 SHA256。
+- `assets/data/weather.json` 调循环时长、雨线密度、竹叶位置与薄雾强度；`scripts/weather.gd` 控天气呈现，`scripts/weather_cycle.gd` 定阶段曲线，养成规则独立。
 - `assets/data/characters.json` 是当前姓名表；对白通过人物标识读取称呼。
 - `assets/data/layout.json` 调人物位置／面板布局；`rules.json` 调养成数值（行动文案同步 `main.gd`）；`dialogue.json` 改对白。状态结算在 `scripts/demo_state.gd`，界面在 `scripts/main.gd`。
 - `tools/make_art.py` 可重新生成原创 SVG 草图。当前界面使用带 OFL 许可的 Noto Serif SC 派生子集 Shu Demo Serif，旧 Sans 子集保留。字体来源、版本与 SHA256 随文件保存；新增汉字时用 `tools/rebuild_font.py` 扩展字库（fontTools 4.60.1，开发工具，运行无需安装）。
@@ -49,5 +52,14 @@
 ```powershell
 godot --headless --path . --script res://tests/state_test.gd
 ```
+
+天气切换与真实渲染检查：
+
+```powershell
+godot --headless --path . --script res://tests/weather_test.gd
+godot --path . --audio-driver Dummy --script res://tests/weather_render.gd
+```
+
+渲染检查使用实际 Compatibility 画面，将截图与预热后的本机指标写入 `.local/qa/weather3`；不是无界面测试或跨设备帧率承诺。
 
 每轮先收试玩反馈，再调整布局和节奏。D02 拟增加余观涛互动与第二项养成活动，待本轮验收后推进。

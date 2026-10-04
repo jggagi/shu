@@ -1,0 +1,26 @@
+{
+  "version": "D01-weather3",
+  "date": "2026-10-04",
+  "generator": "OpenAI imagegen via Codex built-in tool",
+  "reference": "assets/art/v2/tingyu-veranda-v2.png",
+  "prompts": {
+    "clean_background": "Use case: precise-object-edit. Asset type: clean plate for an animated 2D game environment. Edit target: the supplied approved painterly Shushan veranda background. Preserve the SAME 16:9 composition, architecture, dark aged wooden beams/columns and railing, bamboo roller blinds and hanging tassels, blank ivory wall scrolls, distant blue-green mountains with pavilions and waterfalls, right bonsai and warm lantern, wooden deck, brushwork and all base lighting. Change ONLY one thing: remove all foreground leafy bamboo branches/stalks that cover the far LEFT wall scroll and left window/column and the leafy spray at upper-left, reconstructing the uninterrupted blank paper, timber, and distant scenery behind them as a clean background plate. Keep the distant garden trees/mountain foliage intact. Leave the restored far-left wall scroll completely blank with no calligraphy. The removed bamboo will be placed back as separate animated layers by the game engine. Exact framing and proportions as input, no added objects, no people, no table, no rain or wind effects, no text/UI/borders or seals. Match the original Chinese watercolor/gongbi ink painting texture and subtle warm ivory/blue-green palette perfectly. Output one opaque wide 16:9 high-resolution image.",
+    "bamboo_initial": "Use case: background-extraction. Asset type: one transparent 2D game foreground vegetation layer, to be animated with wind. Reference image shows the user's approved Chinese watercolor Shushan veranda; match its LEFT-side bamboo exactly in painting style and color. Create ONLY a graceful cluster of three slender bamboo stems with several long delicate branches and narrow pointed leaf sprays. Stems enter from the bottom-left, rise up the left third, branches reach gently toward the right across the upper half; sparse elegant composition with ample alpha gaps between leaves and a clear central-right area. Muted jade, sage and olive leaves, fine dark ink edges, warm aged green stems, exquisite matte watercolor/gongbi brush granulation. Leaf clusters should be broad enough to show subtle sway, not a dense solid bush. The bottom 15 percent has mainly stems with few leaves, so the bottom can be anchored while the upper leaves move. SINGLE unified bamboo cluster, portrait 2:3 canvas, entire leaves and stems within canvas with padding, natural proportions. No veranda, architecture, mountain, floor, pot, rocks, characters, text or border. True alpha transparency outside stems and leaves including small gaps; no background fill, no checkerboard baked in, no white outline or cast shadow. Keep the same restrained Chinese painting aesthetic and painterly detail as the reference, no glossy 3D or vector simplification.",
+    "bamboo_alpha_cleanup": "Use case: background-extraction. Edit the supplied bamboo asset. KEEP the same delicate bamboo stems and pointed leaf shapes, arrangement, original jade/olive watercolor details, all fine ink linework, full portrait framing and proportions. REMOVE ALL the green haze, olive glow, blurred green background wash and diffuse shadow surrounding and between the leaves. Every gap between leaves and around stems must be fully transparent alpha=0. The foreground leaves and stems themselves must be solid opaque painted silhouettes with only narrow antialiased edges. This must be a clean isolated bamboo cutout for compositing over an existing painted game scene. No green fog, no ambient glow, no colored background, no soft vignette, no drop shadow, no checkerboard baked in, no white outlines. Transparent background, sharp well-defined clean leaves and stalks, no crop, no extra objects or text. Correct alpha removal is the only requested change."
+  },
+  "assets": [
+    {
+      "path": "assets/art/weather3/tingyu-clean-v3.png",
+      "role": "clean backdrop",
+      "sha256": "abf4c683b22fc7f0d95009a9d22e7b1f255f5d06f1c41281d55a5d73f87b77dd",
+      "modifications": "None; generated PNG copied byte-for-byte, display deformation in Godot shader."
+    },
+    {
+      "path": "assets/art/weather3/bamboo-wind-v3.png",
+      "role": "transparent moving bamboo",
+      "sha256": "cfca4b600724f2d86cc94b91c6eae179931a8a48e05a02250cae2eef8da1e2c1",
+      "modifications": "None; generated PNG copied byte-for-byte, display deformation in Godot shader."
+    }
+  ],
+  "procedural": "NoiseTexture2D/FastNoiseLite, GradientTexture2D rain streak; generated once by Godot. Shaders authored in repository; no external texture or plugin."
+}

@@ -15,6 +15,6 @@ if ($LASTEXITCODE -ne 0) { throw 'Web export failed' }
 foreach ($platform in 'windows','web') {
     $licenseDir = Join-Path (Join-Path $buildRoot $platform) 'licenses'
     New-Item -ItemType Directory -Force -Path $licenseDir | Out-Null
-    Copy-Item -LiteralPath (Join-Path $projectRoot 'assets\GODOT-LICENSE.txt'),(Join-Path $projectRoot 'assets\GODOT-NOTICES.txt'),(Join-Path $projectRoot 'assets\fonts\OFL.txt') -Destination $licenseDir
+    Copy-Item -LiteralPath (Join-Path $projectRoot 'assets\GODOT-LICENSE.txt'),(Join-Path $projectRoot 'assets\GODOT-NOTICES.txt'),(Join-Path $projectRoot 'assets\fonts\OFL.txt'),(Join-Path $projectRoot 'assets\fonts\OFL-Serif.txt') -Destination $licenseDir
 }
 Write-Output "Built Windows and Web with $actual"

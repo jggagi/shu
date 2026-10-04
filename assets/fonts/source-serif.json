@@ -1,0 +1,12 @@
+{
+  "Source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
+  "Name": "Noto Serif SC",
+  "SourceSHA256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
+  "License": "SIL Open Font License 1.1",
+  "LicenseFile": "OFL-Serif.txt",
+  "DerivedName": "Shu Demo Serif",
+  "Modifications": "Subset to D01 current code/data characters, static weight 550, renamed family.",
+  "Tool": "fontTools 4.60.1",
+  "Codepoints": 355,
+  "DerivedSHA256": "4119d8ae668ca4393527ddf79070123b55c6b29cea6e81fb3b152b13b75d6009"
+}

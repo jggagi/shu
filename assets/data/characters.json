@@ -1,0 +1,60 @@
+{
+  "source": "docs/concepts/03-character-roster.png",
+  "status": "用户确认以概念图名单为准；细节与故事线待定",
+  "characters": [
+    {
+      "id": "player_yanqiu",
+      "name": "江砚秋",
+      "role": "入门弟子／当前试玩主角",
+      "playable_in_d01": true
+    },
+    {
+      "id": "disciple_tinglan",
+      "name": "沈听岚",
+      "role": "入门弟子／剑术同门",
+      "playable_in_d01": false
+    },
+    {
+      "id": "disciple_xiaotang",
+      "name": "唐小棠",
+      "role": "入门弟子／采药同门",
+      "playable_in_d01": false
+    },
+    {
+      "id": "disciple_yunzhou",
+      "name": "顾云舟",
+      "role": "入门弟子／读书同门",
+      "playable_in_d01": false
+    },
+    {
+      "id": "mentor_zhixian",
+      "name": "叶知闲",
+      "role": "掌门／生活导师；当前请教对象",
+      "playable_in_d01": true
+    },
+    {
+      "id": "mentor_tingyun",
+      "name": "陆停云",
+      "role": "剑课师父",
+      "playable_in_d01": false
+    },
+    {
+      "id": "mentor_jianqing",
+      "name": "唐见青",
+      "role": "药圃师父",
+      "playable_in_d01": false
+    },
+    {
+      "id": "elder_xuanshi",
+      "name": "玄石真人",
+      "role": "山门长老",
+      "playable_in_d01": false
+    },
+    {
+      "id": "uncle_guantao",
+      "name": "余观涛",
+      "role": "师叔",
+      "playable_in_d01": false
+    }
+  ]
+}

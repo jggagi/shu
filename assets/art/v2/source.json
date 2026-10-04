@@ -1,0 +1,58 @@
+{
+  "version": "D01-art2",
+  "date": "2026-10-04",
+  "generator": "OpenAI imagegen via Codex built-in image_gen tool",
+  "usage": "Generated for the user's shu game using user-supplied concept references; final shipping review remains pending.",
+  "assets": [
+    {
+      "file": "tingyu-veranda-v2.png",
+      "role": "environment",
+      "prompt": "Derive a polished wide 16:9 Shushan veranda environment from the central stage of the user cultivation concept: Chinese watercolor/ink/gongbi brushwork, warm cream undertones, dark carved wooden pillars and bamboo blinds, blue-green misty mountain pavilions, bamboo and bonsai. Keep middle/lower areas clear for separate seated figures, clean wooden deck along lower 20 percent. Remove all people, desk, books, cups, incense, UI, labels, calligraphy and seals; keep hanging scrolls blank. Opaque complete backdrop, no modern 3D, vector simplification or text.",
+      "reference": "docs/concepts/02-cultivation-mentor.png",
+      "prompt_kind": "reconstructed-brief",
+      "path": "assets/art/v2/tingyu-veranda-v2.png",
+      "sha256": "d086d059bc16b1969db1765f6357a02df2ba972c8f61e5a14490edd988ce7413",
+      "modifications": "None; original generated PNG copied byte-for-byte. Godot controls handle display sizing."
+    },
+    {
+      "file": "jiang-yanqiu-v2.png",
+      "role": "player",
+      "prompt": "Use case: background-extraction / identity-preserve. Asset type: high-resolution transparent 2D game character sprite. Image 1 is the user's approved Shushan cultivation concept. Extract and faithfully redraw ONLY the young male disciple seated on the LEFT in the central scene as a separate clean character layer. Maintain his identity: expressive warm brown eyes, loose dark-brown hair in a high ponytail with a pale blue ribbon, charming curious face, Song-inspired pale ivory and light blue robe, darker blue sleeve cuffs and subtle fabric folds. Waist-up, entire hair and both forearms visible, body in a slight three-quarter view toward the RIGHT; his left cheek resting lightly on one hand while the other hand loosely holds a writing brush near the lower edge, attentive to his teacher. He is leaning on an imaginary desk, but DO NOT include the desk, books, paper, shadows cast onto the desk, UI or any other person. Keep the original chibi/Q-style proportions, delicate dark ink linework, detailed hand-painted watercolor/gongbi shading, matte cloth, warm skin, subtle natural paper-like brush granulation inside the character. Production-quality crisp silhouette, no thick sticker border, no white outline, no flat vector simplification, no modern clothes, no 3D or photorealism. Isolate a SINGLE character, with generous transparent padding around hair and sleeves, no crop through the hands or hair. True alpha transparency everywhere outside the character; no checkerboard baked in, no scene, no background color, no text, no names or watermark. Portrait canvas, roughly 3:4.",
+      "reference": "docs/concepts/02-cultivation-mentor.png",
+      "prompt_kind": "exact",
+      "path": "assets/art/v2/jiang-yanqiu-v2.png",
+      "sha256": "e783171f4dd888be02683412ec401909623afa4a19e8e06e402e0afe654bfaa5",
+      "modifications": "None; original generated PNG copied byte-for-byte. Godot controls handle display sizing."
+    },
+    {
+      "file": "ye-zhixian-v2.png",
+      "role": "mentor",
+      "prompt": "Use case: identity-preserve / background-extraction. Create ONE production-ready transparent 2D game character sprite of the smiling elder teacher on the RIGHT in the user's approved Shushan cultivation scene (image 1), whose roster identity is 叶知闲 in image 2. Faithfully preserve his warm kind face, white eyebrows, long flowing white hair and long white beard, Song-inspired sage green and ivory layered robes with dark blue trim, small jade and antique gold Taoist head ornament. Chibi/Q-style waist-up character, entire hair and both forearms visible, slightly turned toward the LEFT to converse with his young apprentice. Gentle smiling eyes, one hand stroking the beard, the other arm resting on an imaginary desk. Do not include desk, scrolls, books, scenery, nameplate, labels or any other person. Exquisite dark ink outlines, richly detailed hand-painted watercolor/gongbi shading matching the reference, matte cloth, delicate brush granulation, warm complexion, crisp clean silhouette with no sticker border or white halo. True alpha transparency outside the character, including around fine hair, no checkerboard baked in, no background fill, no text, no logo. Portrait canvas approximately 3:4, generous transparent padding, no cropped hair or hands. Match the seated character scale and high detail of the reference.",
+      "reference": "docs/concepts/02-cultivation-mentor.png",
+      "prompt_kind": "exact",
+      "path": "assets/art/v2/ye-zhixian-v2.png",
+      "sha256": "2b7b5f00e218617a011343436490e0d6919464ace887089373b00da902e8d5d0",
+      "modifications": "None; original generated PNG copied byte-for-byte. Godot controls handle display sizing."
+    },
+    {
+      "file": "desk-v2.png",
+      "role": "foreground",
+      "prompt": "Use case: background-extraction. Create a production-ready horizontal transparent 2D game foreground asset derived faithfully from the worn wooden scholar's desk in the CENTER FRONT of the approved Shushan scene. ONLY the desk and objects on it: a long dark brown aged wood tabletop and carved front edge spanning the whole image width, a tasteful stack of blue thread-bound books and ceramic brush holder at far left, two open ivory blank scrolls to the left of center, a small bronze incense burner exactly around center, a dark teal teacup and a neatly closed book to the right. Match the reference's rich Chinese watercolor/gongbi illustration, fine ink linework, natural grain, Song-inspired tools, matte materials and restrained blue-green accents. Warm light from front. Perspective: viewer seated opposite, tabletop top surface visible, virtually straight horizontal front edge, no legs, no room, no characters, no UI panels, no nameplates, NO text/calligraphy/marks on scrolls or books. Wide horizontal composition about 5:1; the table fills the lower half and the objects rise above it without crowding, ample transparent padding above the objects and narrow padding below the front edge. Desk is a distinct foreground overlay to cover the lower waists of two seated people; center desk must stay low enough not to cover their faces. True alpha transparency everywhere outside desk and objects; no baked checkerboard, no colored background, no shadows outside silhouette, no white halo, no logo. Incense burner has no smoke (smoke will be animated separately). Clean single table silhouette, rich painted textures, no vector simplification, no photorealism or 3D.",
+      "reference": "docs/concepts/02-cultivation-mentor.png",
+      "prompt_kind": "exact",
+      "path": "assets/art/v2/desk-v2.png",
+      "sha256": "93adef996f9d0e793a1b6d4330367d9ac2524b1e24b49f883cdf6e31c665faed",
+      "modifications": "None; original generated PNG copied byte-for-byte. Godot controls handle display sizing."
+    },
+    {
+      "file": "paper-frame-v2.png",
+      "role": "ui",
+      "prompt": "Use case: stylized-concept / production UI texture. Create ONE blank rectangular Chinese Song-inspired game UI panel texture matching the rich painted wood-and-paper interface of the user's Shushan concept. Aspect ratio 4:3. Straight-on flat orthographic rectangle; deep dark aged brown wood frame 35px wide with natural ink-painted grain, subtle antique bronze right-angle corner joints and tiny round studs; inner warm cream handmade rice-paper sheet. Paper center should be largely EMPTY and LIGHT for legible live Chinese text; delicate irregular paper grain and very pale blue-green ink wash only along the bottom edge and extreme corners, with faint distant mountain/bamboo suggestions. All four edges straight; corner ornaments fit within the frame. Designed for Godot nine-slice reuse: corner details limited to the outer 70x70px, long edges contain consistent texture with no large motifs, center paper has no focal objects. No characters, no writing, no Chinese text, no calligraphy, no seals, no icons, no buttons, no additional panels or mockup screenshot, no border outside the panel. Entire canvas is the single panel, opaque background. Crisp premium hand-painted watercolor/gongbi game UI material, restrained antique palette, no vector flatness, no photo or modern glossy bevel. The output will become a reusable status/dialogue panel with text rendered separately.",
+      "reference": "docs/concepts/02-cultivation-mentor.png",
+      "prompt_kind": "exact",
+      "path": "assets/art/v2/paper-frame-v2.png",
+      "sha256": "c0d5bbadaf7269cb9081f4757a36ab63a20495739e67cf86a0b13d95f0c8e67a",
+      "modifications": "None; original generated PNG copied byte-for-byte. Godot controls handle display sizing."
+    }
+  ]
+}

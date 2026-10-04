@@ -4,9 +4,9 @@
 
 **Codex 做可玩 demo → 用户试玩拍板 → Codex 修订 → 更新决定与扩展计划。**
 
-## 当前可玩：D01 问心院
+## 当前可玩：D01 听雨廊
 
-顾青岚与陆松风同处一个固定院落。修炼推进时间与修为，请教口诀得到一次修炼加成，休息恢复精力。修为达到 60 完成第一课，可重新开始反复试玩。画面与数值均为首轮提案，等待用户验收；人物、背景是原创矢量草图。
+江砚秋与叶知闲同处听雨廊。修炼推进时间与修为，请教口诀得到一次修炼加成，休息恢复精力。修为达到 60 完成第一课，可重新开始反复试玩。姓名按用户概念图确认；画面与数值等待用户试玩拍板。当前使用分层生成的中国画背景、Q 版师徒、木桌与宣纸木框，原 SVG 占位稿仍保留供比较。
 
 ## 运行与导出
 
@@ -38,8 +38,11 @@
 - [决定日志](docs/DECISIONS.md)：决定来源、确认状态和后续变更。
 - [开发流程与路线图](docs/DEVELOPMENT.md)：验证记录、用户反馈与下一切片条件。
 - [Codex 工作约定](AGENTS.md)：范围和验证规则。
+- [概念图索引](docs/concepts/README.md)：三张原始概念图与 SHA256。
+- [美术来源](assets/art/v2/source.json)：运行图层、生成提示与 SHA256。
+- `assets/data/characters.json` 是当前姓名表；对白通过人物标识读取称呼。
 - `assets/data/layout.json` 调人物位置／面板布局；`rules.json` 调养成数值（行动文案同步 `main.gd`）；`dialogue.json` 改对白。状态结算在 `scripts/demo_state.gd`，界面在 `scripts/main.gd`。
-- `tools/make_art.py` 可重新生成原创 SVG 草图。字库为带 OFL 许可的 Noto Sans SC 子集，来源与 SHA256 随字库保存；新增汉字时需要扩展子集。
+- `tools/make_art.py` 可重新生成原创 SVG 草图。当前界面使用带 OFL 许可的 Noto Serif SC 派生子集 Shu Demo Serif，旧 Sans 子集保留。字体来源、版本与 SHA256 随文件保存；新增汉字时用 `tools/rebuild_font.py` 扩展字库（fontTools 4.60.1，开发工具，运行无需安装）。
 
 养成边界检查：
 

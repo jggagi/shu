@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "date": "2026-10-04",
+  "source": "User-provided image attachments in the current conversation",
+  "author": "Not specified in attachment metadata",
+  "usage": "User-authorized repository archive and project visual reference; original files preserved",
+  "files": [
+    {
+      "path": "01-shushan-courtyard.png",
+      "originalName": "codex-clipboard-a5d89d7c-25d2-4783-ad27-c0b1148c7e82.png",
+      "role": "Environment and courtyard concept",
+      "bytes": 3609979,
+      "sha256": "ad8f0044445bb0719de1ff0566184ee3b32c941261aa9562ee48d92d5f26e00a"
+    },
+    {
+      "path": "02-cultivation-mentor.png",
+      "originalName": "codex-clipboard-91644560-9128-45a7-beaf-335004863ee3.png",
+      "role": "Primary cultivation presentation visual benchmark",
+      "bytes": 3168372,
+      "sha256": "2e4d1b86844a183a9ccbc5c09ea3d12314c3ac3f6cfb9fb95932c3041e41cfb3"
+    },
+    {
+      "path": "03-character-roster.png",
+      "originalName": "codex-clipboard-53b55711-0940-4046-a5ca-5c63a1650c01.png",
+      "role": "User-confirmed character names and visual reference",
+      "bytes": 3340368,
+      "sha256": "267fa67dc43133794c4df914501515056e323b41a3379c56e8b4b14590e17da0"
+    }
+  ]
+}

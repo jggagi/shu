@@ -64,11 +64,11 @@ def validate_graph(data):
 def validate_package(skill_dir, repo=None):
     entry = (skill_dir / "SKILL.md").read_text(encoding="utf-8")
     require(entry.startswith("---\n"), "skill: missing frontmatter")
-    require("name: godot-cultivation-mode\n" in entry, "skill: unexpected name")
+    require("name: game-cultivation-build\n" in entry, "skill: unexpected name")
     ui = (skill_dir / "agents" / "openai.yaml").read_text(encoding="utf-8")
     short = re.search(r'short_description: "([^"]+)"', ui)
     require(short is not None and 25 <= len(short.group(1)) <= 64, "UI: description length")
-    require("$godot-cultivation-mode" in ui, "UI: missing skill invocation")
+    require("$game-cultivation-build" in ui, "UI: missing skill invocation")
     links = 0
     for path in skill_dir.rglob("*.md"):
         for target in re.findall(r"\[[^\]]+\]\(([^)]+)\)", path.read_text(encoding="utf-8")):

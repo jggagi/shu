@@ -44,6 +44,6 @@
 
 ## 养成模式制作 skill
 
-- 养成行动、人物互动与固定场景支线制作读取 `.agents/skills/godot-cultivation-mode/SKILL.md`；相关引用按当前任务读取，仍遵守本文件的四份必读资料。
+- 养成行动、人物互动与固定场景支线制作读取 `.agents/skills/game-cultivation-build/SKILL.md`；相关引用按当前任务读取，仍遵守本文件的四份必读资料。
 - skill 未被当前 chat 自动发现时直接读取仓库文件，不因此安装全局 skill 或重新初始化。运行合同不代表对应 addon 已存在。
 - 下一 chat 的 tea 工作入口为 `docs/TEA_HANDOFF.md`。保持历史原稿与新的支线归档规则，先交付可试玩的选定阶段，不一次实现全部剧情。

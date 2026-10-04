@@ -1,6 +1,6 @@
 # Godot 养成模式工具包：设计提案
 
-状态：设计稿，2026-10-04。范围按用户最新要求确定为「专门制作养成模式」。制作 skill 已整理为仓库级 0.1.0，入口位于 `.agents/skills/godot-cultivation-mode/SKILL.md`。本文件的运行模块与插件接口仍是设计提案，尚未迁移 shu 代码、实现插件或安装全局 skill。新增架构均为提案；仓库已有批准决定继续有效。
+状态：设计稿，2026-10-04。范围按用户最新要求确定为「专门制作养成模式」。制作 skill 已整理为仓库级 0.1.0，入口位于 `.agents/skills/game-cultivation-build/SKILL.md`。本文件的运行模块与插件接口仍是设计提案，尚未迁移 shu 代码、实现插件或安装全局 skill。新增架构均为提案；仓库已有批准决定继续有效。
 
 工具包定位为 **Godot 养成模式工具包（暂名 Cultivation Mode Kit）**：制作方法放进 skill，养成循环与场景表现放进 GDScript addon，活动和互动事件放进版本化数据。用两个真实养成用例证明复用，再做编辑器插件。底层继续使用 Godot 的渲染、输入与导出能力。
 
@@ -22,7 +22,7 @@
 
 | 部分 | 职责 | 主要产物 |
 | --- | --- | --- |
-| 制作 skill `godot-cultivation-mode` | 读取养成需求和事件约束、选择已有行动、制作与验收养成闭环、落实反馈 | 任务卡、改动、验证证据、决定记录 |
+| 制作 skill `game-cultivation-build` | 读取养成需求和事件约束、选择已有行动、制作与验收养成闭环、落实反馈 | 任务卡、改动、验证证据、决定记录 |
 | Godot runtime addon | 活动菜单、资格检查、时间精力与成长结算、人物事件占用与返回、场景表现 | 可复用 GDScript；宿主规则保留数值权威 |
 | 养成内容与配置 | 活动引用、人物事件、固定场景、热点、音画提示及来源 | 活动索引、事件 JSON、SceneProfile、素材索引 |
 
@@ -74,7 +74,7 @@ content/cultivation/     # 活动与人物事件数据，位置待仓库接入�
 
 ## 4. 养成活动与事件数据
 
-活动索引登记行动名称、资格检查、宿主规则引用和可选人物事件。修炼或休息可以直接结算，请教或同门互动可以打开事件。见 [活动索引样例](../.agents/skills/godot-cultivation-mode/assets/mode.example.json)，数值引用现有宿主规则，保留加成与上限。事件声明所属养成场景、触发活动、参与人物、可调用行动及结束后返回行动面板。
+活动索引登记行动名称、资格检查、宿主规则引用和可选人物事件。修炼或休息可以直接结算，请教或同门互动可以打开事件。见 [活动索引样例](../.agents/skills/game-cultivation-build/assets/mode.example.json)，数值引用现有宿主规则，保留加成与上限。事件声明所属养成场景、触发活动、参与人物、可调用行动及结束后返回行动面板。
 
 事件内部第一版只支持四种节点：
 
@@ -85,7 +85,7 @@ content/cultivation/     # 活动与人物事件数据，位置待仓库接入�
 | `cue` | 请求天气、表情或音效表现 | 已登记提示 ID；不修改游戏数值 |
 | `end` | 结束本段 | 结束原因与下一步说明 |
 
-多阶段支线增加支线/阶段 ID、前置旗标与一次性完成记录；固定场景、物件、文书和短回忆通过登记的 cue 接入。调查或观察事件可以没有属性收益；成本和奖励由明确的宿主规则决定。见 [支线接入参考](../.agents/skills/godot-cultivation-mode/references/side-quests.md) 和 [tea 阶段样例](../.agents/skills/godot-cultivation-mode/assets/tea-chain.example.json)。这些新增接口仍为设计提案。阅读确认使用绑定会话、节点和提示实例的接口；确认前不推进，取消或重置后的旧确认无效。
+多阶段支线增加支线/阶段 ID、前置旗标与一次性完成记录；固定场景、物件、文书和短回忆通过登记的 cue 接入。调查或观察事件可以没有属性收益；成本和奖励由明确的宿主规则决定。见 [支线接入参考](../.agents/skills/game-cultivation-build/references/side-quests.md) 和 [tea 阶段样例](../.agents/skills/game-cultivation-build/assets/tea-chain.example.json)。这些新增接口仍为设计提案。阅读确认使用绑定会话、节点和提示实例的接口；确认前不推进，取消或重置后的旧确认无效。
 
 正文引用稳定 ID，例如 `mentor_zhixian`，显示名来自人物表。行动引用稳定 ID，例如 `mentor.ask_breathing`，代价来自宿主规则；UI 根据行动返回值显示真实结果。剧情文本中不执行 GDScript，也不内嵌“精力减 10”等另一份数值规则。
 
@@ -95,7 +95,7 @@ content/cultivation/     # 活动与人物事件数据，位置待仓库接入�
 
 每次行动由模式控制器分配稳定的 `operation_id`，例如当前存档、互动会话和选项的一次操作。宿主先验证再原子修改状态，记录回执；重试返回相同结果，拒绝同 ID 不同参数。请求失败不改数值。重置建立新会话，允许新一轮正常行动。跨存档恢复时，进度、回执和游戏状态必须一起恢复。
 
-具体合同与 GDScript 调用形状见 [运行时合同](../.agents/skills/godot-cultivation-mode/references/runtime-contract.md)。事件的 JSON 形状见 [养成事件样例](../.agents/skills/godot-cultivation-mode/assets/episode.example.json)：它是格式演示，新对白未成为批准剧情。
+具体合同与 GDScript 调用形状见 [运行时合同](../.agents/skills/game-cultivation-build/references/runtime-contract.md)。事件的 JSON 形状见 [养成事件样例](../.agents/skills/game-cultivation-build/assets/episode.example.json)：它是格式演示，新对白未成为批准剧情。
 
 ## 5. 原稿、可运行内容与来源
 
@@ -164,9 +164,9 @@ P1/P2 按实际改动检查修炼的时间/精力消耗与成长、休息的精�
 
 > 做一段余观涛在听雨廊考察江砚秋的剧情。他表面温和，话里有试探；两种回应都能继续修炼，但人物反馈不同。先做五分钟可玩版本，沿用现有美术。
 
-这是输入格式示例，不是新批准剧情。Codex 会把实际输入整理成 [养成任务卡](../.agents/skills/godot-cultivation-mode/assets/slice-card.template.md)，引用现有规则与人物事件能力，列出结算和返回面板的验收点，再开展授权制作。通常只追问影响玩法规则、设定或实施边界的关键缺项。
+这是输入格式示例，不是新批准剧情。Codex 会把实际输入整理成 [养成任务卡](../.agents/skills/game-cultivation-build/assets/slice-card.template.md)，引用现有规则与人物事件能力，列出结算和返回面板的验收点，再开展授权制作。通常只追问影响玩法规则、设定或实施边界的关键缺项。
 
-本包的 [制作 skill](../.agents/skills/godot-cultivation-mode/SKILL.md) 可作为后续安装和接入的起点，专门支持现有 shu 项目的养成模式。工具包尚未实现时会识别现状，不调用不存在的接口。
+本包的 [制作 skill](../.agents/skills/game-cultivation-build/SKILL.md) 可作为后续安装和接入的起点，专门支持现有 shu 项目的养成模式。工具包尚未实现时会识别现状，不调用不存在的接口。
 
 
 ## 收尾与下一 chat

@@ -1,6 +1,6 @@
 # 新 chat 交接 prompt
 
-在 `C:\Users\guoqi\GameDev\projects\shu`（GitHub：`https://github.com/jggagi/shu`）继续开发。使用仓库里的 `.agents/skills/godot-cultivation-mode/SKILL.md`；如果当前 chat 未发现 `$godot-cultivation-mode`，直接读取该文件执行，不重新初始化游戏或修改全局 skill 配置。
+在 `C:\Users\guoqi\GameDev\projects\shu`（GitHub：`https://github.com/jggagi/shu`）继续开发。使用仓库里的 `.agents/skills/game-cultivation-build/SKILL.md`；如果当前 chat 未发现 `$game-cultivation-build`，直接读取该文件执行，不重新初始化游戏或修改全局 skill 配置。
 
 先检查分支、HEAD、remote 和未提交内容，按 AGENTS.md 依次读取 README、SPEC、DECISIONS、DEVELOPMENT，再读 `docs/TEA_HANDOFF.md` 和 skill 中与支线有关的引用。保留已有用户修改。
 

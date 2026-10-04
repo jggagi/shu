@@ -18,7 +18,7 @@
 仓库内重复检查（已有 Python 3 即可，无第三方包）：
 
 ```text
-python .agents/skills/godot-cultivation-mode/scripts/validate_package.py --repo .
+python .agents/skills/game-cultivation-build/scripts/validate_package.py --repo .
 ```
 
 该命令验证包结构、示例及固定原稿来源，不验证 Godot 运行行为。后续可玩切片仍需真实 UI 验收。文档/skill 提交与远端保存以本文件 Git 历史及当轮交付的 commit 为准。

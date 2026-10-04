@@ -1,11 +1,11 @@
 ---
-name: godot-cultivation-mode
+name: game-cultivation-build
 description: "Build and iterate fixed-scene cultivation/life-sim mode in an existing Godot GDScript game: time/energy, activities, growth, character events and side quests such as tea through staged fixed scenes, object inspection, documents and short memories. Use for cultivation-mode implementation and playtest feedback; not free-roaming exploration, combat, standalone story engines or game initialization."
 metadata:
   version: "0.1.0"
 ---
 
-# Godot Cultivation Mode
+# Game Cultivation Build
 
 Build the cultivation loop: select activity → validate availability → perform activity or character interaction → settle time/energy and actual gains → return to the activity panel. Keep the interactive method: user direction → playable mode slice → user playtest decision → revision → next acceptance point.
 

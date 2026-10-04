@@ -63,3 +63,10 @@ godot --path . --audio-driver Dummy --script res://tests/weather_render.gd
 渲染检查使用实际 Compatibility 画面，将截图与预热后的本机指标写入 `.local/qa/weather3`；不是无界面测试或跨设备帧率承诺。
 
 每轮先收试玩反馈，再调整布局和节奏。D02 拟增加余观涛互动与第二项养成活动，待本轮验收后推进。
+
+
+## 制作 skill 与下一轮 tea
+
+养成模式制作入口：[godot-cultivation-mode](.agents/skills/godot-cultivation-mode/SKILL.md)，仓库级 0.1.0；支持养成行动、人物互动及 tea 等固定场景支线。运行模块/编辑器插件仍为设计，尚未实现。
+
+[工具包设计](docs/CULTIVATION_MODE.md) · [检查记录](docs/CULTIVATION_MODE_CHECKS.md) · [新 chat 的 tea 交接](docs/TEA_HANDOFF.md)。下一轮从《归剑问天》的委托与两杯调查小切片开始；现有 D01-weather3 保持可用。

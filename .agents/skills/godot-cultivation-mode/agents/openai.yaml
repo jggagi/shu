@@ -1,0 +1,4 @@
+interface:
+  display_name: "Godot 养成模式制作"
+  short_description: "制作固定场景的养成行动、成长反馈与人物互动，支持 tea 等支线并落实试玩反馈"
+  default_prompt: "使用 $godot-cultivation-mode，把我的需求接入当前游戏的养成模式，交付一个可试玩拍板的小切片。"

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "mode": "cultivation",
+  "id": "format_sample_tingyu_mode",
+  "source_status": "illustrative",
+  "scene_id": "tingyu_panel",
+  "rules_source": "res://assets/data/rules.json",
+  "note": "格式提案，当前没有此加载器。规则字段用于引用和展示，实际结算由宿主执行，保留加成与上限；不新增另一份数值。",
+  "activities": {
+    "cultivation.train": {
+      "label": "修炼",
+      "action_id": "cultivation.train",
+      "availability_id": "can_train",
+      "rule_refs": {
+        "energy_cost": "training_cost",
+        "growth_gain": "training_gain",
+        "time_cost": "training_duration"
+      }
+    },
+    "cultivation.rest": {
+      "label": "休息",
+      "action_id": "cultivation.rest",
+      "availability_id": "can_rest",
+      "rule_refs": {
+        "energy_recovery": "rest_gain",
+        "energy_cap": "energy_max",
+        "time_cost": "rest_duration"
+      }
+    },
+    "mentor.consult_zhixian": {
+      "label": "向叶知闲请教",
+      "event_id": "format_sample_tingyu",
+      "availability_id": "can_consult_zhixian",
+      "settlement": "deferred_to_event_action",
+      "rule_refs": {
+        "energy_cost": "mentor_cost",
+        "time_cost": "mentor_duration"
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "format_sample_tingyu",
+  "revision": 1,
+  "scene_id": "tingyu_panel",
+  "mode": "cultivation",
+  "activity_id": "mentor.consult_zhixian",
+  "participant_ids": ["player_yanqiu", "mentor_zhixian"],
+  "trigger": {"type": "activity_selected", "activity_id": "mentor.consult_zhixian"},
+  "allowed_action_ids": ["mentor.ask_breathing"],
+  "return_to": "activity_panel",
+  "source": {
+    "status": "illustrative",
+    "repository": null,
+    "path": null,
+    "revision": null,
+    "sections": [],
+    "adaptation_note": "格式演示；对白、场景 ID、行动 ID、提示 ID 为提案，未成为批准剧情或当前可加载内容。"
+  },
+  "entry": "opening",
+  "nodes": {
+    "opening": {
+      "type": "say",
+      "speaker": "mentor_zhixian",
+      "text": "先坐一会儿。心定下来，再听窗外的雨。",
+      "next": "rain"
+    },
+    "rain": {
+      "type": "cue",
+      "cue_id": "weather.light_rain",
+      "next": "ask"
+    },
+    "ask": {
+      "type": "choice",
+      "prompt": "向师傅请教什么？",
+      "options": [
+        {
+          "id": "breathing",
+          "text": "请教吐纳",
+          "action": { "id": "mentor.ask_breathing", "args": {} },
+          "next": "lesson",
+          "failure_next": "retry"
+        },
+        {
+          "id": "leave",
+          "text": "先去整理思绪",
+          "next": "finish"
+        }
+      ]
+    },
+    "lesson": {
+      "type": "say",
+      "speaker": "mentor_zhixian",
+      "text": "记住方才的呼吸。稍后修炼，再试一次。",
+      "next": "finish"
+    },
+    "retry": {
+      "type": "say",
+      "speaker": "mentor_zhixian",
+      "text": "歇一歇，再来请教。",
+      "next": "finish"
+    },
+    "finish": {
+      "type": "end",
+      "reason": "return_to_scene",
+      "handoff": "回到养成行动面板，显示宿主规则结算的实际时间、精力与成长变化，然后允许继续修炼或休息。"
+    }
+  }
+}

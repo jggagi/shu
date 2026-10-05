@@ -1,0 +1,11 @@
+Asset type: transparent foreground prop sheet for a 2D fixed Chinese painted game scene.
+Purpose: TWO core recurring interactive objects tea.cup_first and tea.cup_second, for the opening sword terrace; keep ordinary appearance.
+Primary request: paint exactly two separate ordinary old Song-style small handleless ceramic tea cups, photographed visually at the SAME shallow elevated three-quarter game view, as two independent sprites placed side by side on a truly transparent canvas.
+Reference images: Image 1 approved shu cultivation concept is brushwork, subdued palette and Song aesthetics reference only. It is not an edit target. Do not replicate its UI.
+Subject: LEFT sprite: dull gray-green ceramic old small cup with a smooth lightly polished worn rim. RIGHT sprite: matching humble old cup, dark concentric old tea stains visible inside the bottom, rim comparatively unworn. Both are empty; differences must remain visible at small game scale. Ordinary domestic objects, never magical relics.
+Style/medium: Chinese ink and watercolor illustration with precise fine ink contour and restrained gongbi detail, muted ivory/sage/slate palette, compatible with Q-style characters.
+Composition/framing: exactly one cup centered in left half and one cup centered in right half, equal scale and same orientation, full silhouettes including bases, substantial transparent empty space between and around them; nothing crossing the vertical center. No cast surface shadow or external objects. Wide 2:1 canvas. Transparent alpha outside the cup silhouettes and no baked checkerboard.
+Lighting/mood: soft neutral diffuse light.
+Materials/textures: matte aged ceramic, subtle chips and rubs; natural irregularities, no inscriptions.
+Constraints: exactly TWO cups, no table, tea pot, sword, figures, names, text, watermark, label, border, glow or supernatural symbols. Preserve true transparent alpha.
+Avoid: shiny metallic vessels, ornate gold, photorealistic product photos, flat icons, 3D rendering, arrows or written annotations.

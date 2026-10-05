@@ -1,17 +1,38 @@
 {
   "version": "0.1.3-tea-ab",
+  "date": "2026-10-04",
+  "timezone": "America/Los_Angeles",
+  "source_repository": "https://github.com/jggagi/shu",
+  "source_commit": "acf2bf80daf6eee1a49b37207f061b33f83e6c30",
   "baseline_head": "cc2f438b8d924624aa3ef5f24767dffe02f4116e",
-  "source_dirty": true,
+  "source_dirty": false,
+  "build_input": "git archive of source_commit, independent Windows build",
+  "local_tooling_changes_excluded": true,
+  "engine": "4.7.2.stable.official.ed1daf0bf",
   "user_accepted": false,
+  "validation": {
+    "source_build_web_windows": "PASS",
+    "committed_source_ui_checks": 73,
+    "prior_web_ui": "PASS",
+    "online_smoke": "pending redeployment"
+  },
   "files": {
     "index.apple-touch-icon.png": "f5878bec0fc0849d41fa35576ea5623e009a6f25b6d628e3b7490de254f5d885",
     "index.audio.position.worklet.js": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
     "index.audio.worklet.js": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
-    "index.html": "b15d64b2cd0bed18321207a5769c68379702d0147fd166c09c5a7b59f14be058",
+    "index.html": "3496bd0f06c55ff283afba586edfc545c29ef7e2f0698b20638fc90a1cb813f1",
     "index.icon.png": "5f750d194a603861983bbf1de1a4ffd463153947deb66a54519596be9d51e69c",
     "index.js": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba",
-    "index.pck": "14d40545165313e8c72680ed74b3801e6dd1a12018aa76e847f7343535f969c2",
+    "index.pck": "dd2d331bb4b93ef5c7ac245b2f10c00b1b66aedc984a1aa41426d56dfeffbf7d",
     "index.png": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
-    "index.wasm": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+    "index.wasm": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0",
+    "licenses/GODOT-LICENSE.txt": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80",
+    "licenses/GODOT-NOTICES.txt": "b3c6835addbb97337ebe62c541edd1e0aed1877ff7459c2d3524a92ab954b1cb",
+    "licenses/OFL-Serif.txt": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6",
+    "licenses/OFL.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+    "licenses/tea-art-source.json": "fc3e7fde49c0ec7381cd15374fecdcdbea01b543c435c0c7da6a5293527d6cba",
+    "licenses/tea-cups-v1.txt": "29a6a78ef5d349a2eaf06344c6373628dc7363d7c75e8d920b1db248341f8bf9",
+    "licenses/tea-sword-v1.txt": "1906d30a1a9eac1fc8b53ae582f5a35d95f9b237d0ae7b12807fd5f22638319d",
+    "licenses/tea-terrace-v1.txt": "b924e823271e9bd96ec330b902474291c9e264c7e1551ee48ace52eb03ad19fc"
   }
 }

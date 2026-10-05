@@ -1,3 +1,5 @@
 .local/
 .godot/
 *.import
+/art/work/
+__pycache__/

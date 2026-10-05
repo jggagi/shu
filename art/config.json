@@ -1,0 +1,9 @@
+{
+  "qwen_model": "qwen-image-3.0",
+  "qwen_pro_model": "qwen-image-3.0-pro",
+  "work_dir": "art/work",
+  "approved_dir": "assets/art",
+  "reference_dir": "docs/concepts",
+  "prompt_dir": "art/prompts",
+  "manifest": "art/manifest.jsonl"
+}

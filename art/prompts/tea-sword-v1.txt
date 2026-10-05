@@ -1,0 +1,10 @@
+Asset type: small game inventory prop illustration on opaque warm ivory paper.
+Purpose: the ordinary old sword entrusted to Jiang Yanqiu, first errand of Return Sword to Wentian.
+Primary request: one modest old Chinese straight sword in a worn dark wooden scabbard, plain rubbed bronze guard, faded blue-gray cloth wrapping on hilt. Nothing magical or ornate.
+Reference images: docs/concepts/02-cultivation-mentor.png, style reference only.
+Style/medium: Song Chinese ink and watercolor, fine variable-pressure ink contour, restrained blue-green and brown, muted paper grain, compatible with Q-style game art.
+Composition/framing: wide landscape 3:1, full single sheathed sword diagonally from lower left to upper right, clear silhouette with generous ivory margin. No frame, text, signatures or other props.
+Lighting/mood: soft neutral ordinary domestic object, no dramatic glow.
+Materials/textures: worn wood and cloth, dulled bronze fittings.
+Constraints: no inscriptions, no watermark, no blood, no ornate treasure, no ghost, no character, no interface. Opaque background deliberately accepted as an inventory card; no alpha claim.
+Avoid: photorealism, 3D, neon, calligraphy and sword-explosion effects.

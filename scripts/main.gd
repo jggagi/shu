@@ -36,6 +36,25 @@ var weather_button: Button
 var busy := false
 var awaiting_continue := false
 var completion_announced := false
+var failure_notice := false
+var cultivation_scene: Control
+var tea_scene: Control
+var sword_card: Control
+var tea_entry: Button
+var tea_accept: Button
+var tea_cancel: Button
+var tea_confirm: Button
+var tea_finish: Button
+var tea_status: Label
+var shortcut_label: Label
+var tea_hotspots: Dictionary = {}
+var tea_names: Dictionary = {}
+var tea_data: Dictionary
+var tea_layout: Dictionary
+var tea_session := 0
+var tea_reading := false
+var next_weather: Button
+var weather_paper: Control
 
 func _ready() -> void:
 	layout = JSON.parse_string(FileAccess.get_file_as_string("res://assets/data/layout.json"))
@@ -50,7 +69,10 @@ func _ready() -> void:
 	game_theme.default_font = load("res://assets/fonts/ShuDemoSerif.ttf")
 	game_theme.default_font_size = 21
 	theme = game_theme
+	tea_data = JSON.parse_string(FileAccess.get_file_as_string("res://assets/data/tea.json"))
+	tea_layout = JSON.parse_string(FileAccess.get_file_as_string("res://assets/data/tea-layout.json"))
 	_build_ui()
+	_build_tea_ui()
 	_refresh()
 	_show_text("听雨廊 · 师徒同修", dialogue.idle, "今日功课：修为达到 60。")
 
@@ -98,7 +120,8 @@ func _button(text: String, rect: Rect2, callback: Callable, primary: bool = fals
 	button.add_theme_stylebox_override("pressed", _style(Color("245345")))
 	button.add_theme_stylebox_override("disabled", _style(Color(0.35, 0.38, 0.35, 0.18), GOLD, 0))
 	button.add_theme_stylebox_override("focus", _style(Color(0, 0, 0, 0), GOLD, 3))
-	button.pressed.connect(callback)
+	if callback.is_valid():
+		button.pressed.connect(callback)
 	_place(button, rect, parent)
 	var backing := _paper(Rect2(Vector2.ZERO, rect.size), button, false, true)
 	backing.show_behind_parent = true
@@ -159,6 +182,7 @@ func _build_ui() -> void:
 	bonus_text = _label("", Rect2(1162, 68, 231, 27), 17, JADE)
 	_button("重新开始", Rect2(1230, 101, 164, 32), _reset)
 	var scene_root := Control.new()
+	cultivation_scene = scene_root
 	# Keep background, weather, and foreground independently ordered.
 	scene_root.clip_contents = true
 	scene_root.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -200,12 +224,12 @@ func _build_ui() -> void:
 	_label(dialogue.mentor_name, Rect2(924, 476, 154, 32), 19, INK, foreground_root).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	var scene_frame := _paper(_rect("scene"), null, true)
 	scene_frame.z_index = 3
-	var weather_paper := _paper(Rect2(886, 182, 204, 32), null, false, true)
+	weather_paper = _paper(Rect2(886, 182, 204, 32), null, false, true)
 	weather_paper.z_index = 3
 	weather_label = _label("", Rect2(886, 182, 204, 32), 17, INK)
 	weather_label.z_index = 3
 	weather_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	var next_weather := _button("切换天气", Rect2(1103, 182, 136, 32), _next_weather)
+	next_weather = _button("切换天气", Rect2(1103, 182, 136, 32), _next_weather)
 	next_weather.z_index = 3
 	next_weather.tooltip_text = "薄云、微风、小雨、雨歇依次预览；快捷键 5。"
 	weather_button = _button("静态对比", Rect2(1252, 182, 142, 32), _toggle_weather)
@@ -215,7 +239,7 @@ func _build_ui() -> void:
 	_weather_ui()
 	_paper(_rect("dialogue"))
 	speaker = _label("", Rect2(45, 709, 632, 34), 24, JADE)
-	_label("1 修炼 · 2 请教 · 3 休息", Rect2(738, 712, 283, 27), 17, MUTED)
+	shortcut_label = _label("1 修炼 · 2 请教 · 3 休息", Rect2(738, 712, 283, 27), 17, MUTED)
 	dialogue_text = _label("", Rect2(45, 754, 969, 73), 24)
 	dialogue_text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	result_text = _label("", Rect2(45, 830, 788, 32), 17, MUTED)
@@ -249,7 +273,7 @@ func _refresh() -> void:
 	bonus_text.text = "点拨在心 · 下次修炼 +6" if state.lesson_bonus > 0 else "循序渐进，气息自稳。"
 	energy_bar.value = state.energy
 	progress_bar.value = state.cultivation
-	var locked: bool = busy or state.dialogue_open or awaiting_continue
+	var locked: bool = busy or state.dialogue_open or awaiting_continue or state.tea_active
 	train_button.disabled = locked
 	mentor_button.disabled = locked
 	rest_button.disabled = locked
@@ -258,6 +282,7 @@ func _refresh() -> void:
 		button.visible = state.dialogue_open
 	continue_button.visible = awaiting_continue
 	result_text.visible = not state.dialogue_open
+	_refresh_tea()
 	goal_title.text = "初课已成" if state.complete() else "今日功课"
 	goal_title.add_theme_color_override("font_color", JADE if state.complete() else INK)
 
@@ -267,11 +292,11 @@ func _show_text(title: String, text: String, result: String = "") -> void:
 	result_text.text = result
 
 func _train() -> void:
-	if busy or awaiting_continue or state.dialogue_open:
+	if busy or awaiting_continue or state.dialogue_open or state.tea_active:
 		return
 	var result: Dictionary = state.train()
 	if not result.ok:
-		_show_text("先歇一歇", result.reason)
+		_show_failure(result.reason)
 		return
 	busy = true
 	_show_text("%s · 修炼吐纳" % dialogue.player_name, dialogue.training, "修为 +%d · 精力 -22 · 时间 +两时辰" % result.gain)
@@ -288,23 +313,25 @@ func _train() -> void:
 	_refresh()
 
 func _rest() -> void:
-	if busy or awaiting_continue or state.dialogue_open:
+	if busy or awaiting_continue or state.dialogue_open or state.tea_active:
 		return
 	var result: Dictionary = state.rest()
 	_show_text("%s · 廊下休息" % dialogue.player_name, dialogue.rest, "精力 +%d · 时间 +一时辰" % result.gain)
 	_refresh()
 
 func _ask() -> void:
-	if busy or awaiting_continue:
+	if busy or awaiting_continue or state.dialogue_open or state.tea_active:
 		return
 	var result: Dictionary = state.begin_dialogue()
 	if not result.ok:
-		_show_text("先歇一歇", result.reason)
+		_show_failure(result.reason)
 		return
 	_show_text("%s · 师傅" % dialogue.mentor_name, dialogue.opening)
 	_refresh()
 
 func _choose(topic: String) -> void:
+	if busy or awaiting_continue or state.tea_active or not state.dialogue_open:
+		return
 	var result: Dictionary = state.choose(topic)
 	if not result.ok:
 		return
@@ -313,12 +340,21 @@ func _choose(topic: String) -> void:
 	_refresh()
 
 func _cancel() -> void:
+	if not state.dialogue_open or state.tea_active:
+		return
 	state.cancel_dialogue()
 	_show_text("听雨廊 · 师徒同修", "你向师傅行了一礼，准备先练一遍。", "未消耗精力与时间。")
 	_refresh()
 
 func _continue() -> void:
+	if not awaiting_continue or state.tea_active:
+		return
 	awaiting_continue = false
+	if failure_notice:
+		failure_notice = false
+		_show_text("听雨廊 · 师徒同修", dialogue.idle, "继续安排今日的功课。")
+		_refresh()
+		return
 	_show_text("听雨廊 · 师徒同修", "将师傅的话记在心里，再试试今天的修炼。", "点拨的加成会在下一次修炼中生效。" if state.lesson_bonus else "继续安排今日的功课。")
 	_refresh()
 
@@ -328,6 +364,8 @@ func _reset() -> void:
 	state.reset()
 	awaiting_continue = false
 	completion_announced = false
+	failure_notice = false
+	tea_reading = false
 	_show_text("听雨廊 · 师徒同修", dialogue.idle, "今日功课：修为达到 60。")
 	_refresh()
 
@@ -340,6 +378,166 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		KEY_3: _rest()
 		KEY_4: _toggle_weather()
 		KEY_5: _next_weather()
+		KEY_6: _open_tea()
 		KEY_ESCAPE:
-			if state.dialogue_open:
+			if state.tea_active:
+				_tea_cancel()
+			elif state.dialogue_open:
 				_cancel()
+			elif awaiting_continue:
+				_continue()
+
+
+func _tea_rect(key: String) -> Rect2:
+	var r: Array = tea_layout[key]
+	return Rect2(r[0], r[1], r[2], r[3])
+
+func _build_tea_ui() -> void:
+	tea_entry = _button("归剑问天 · 旧剑委托", Rect2(308, 187, 326, 40), _open_tea)
+	tea_entry.z_index = 4
+	tea_entry.tooltip_text = "接受委托，访问旧剑坪；快捷键 6。调查不消耗养成时间与精力。"
+	tea_scene = Control.new()
+	tea_scene.clip_contents = true
+	tea_scene.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	tea_scene.z_index = 2
+	_place(tea_scene, _rect("scene"))
+	var backdrop := _art("res://assets/art/tea/tea-terrace-v1.png", Rect2(0, 0, 1416, 526), tea_scene)
+	backdrop.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	_paper(_tea_rect("title_panel"), tea_scene, false, true)
+	_label("归剑问天 · 旧剑坪", _tea_rect("title"), 27, INK, tea_scene)
+	_label("分别看看桌上的两只旧杯", _tea_rect("subtitle"), 18, MUTED, tea_scene)
+	_paper(_tea_rect("portrait_panel"), tea_scene, false, true)
+	_art("res://assets/art/v2/jiang-yanqiu-v2.png", _tea_rect("portrait"), tea_scene)
+	_label(dialogue.player_name, _tea_rect("portrait_name"), 21, INK, tea_scene).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	var pair: Texture2D = load("res://assets/art/tea/tea-cups-v1.png")
+	for object_id: String in state.TEA_OBJECT_IDS:
+		var prop := TextureRect.new()
+		var atlas := AtlasTexture.new()
+		atlas.atlas = pair
+		var r: Array = tea_layout[object_id + ".atlas"]
+		atlas.region = Rect2(r[0], r[1], r[2], r[3])
+		prop.texture = atlas
+		prop.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		prop.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		prop.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		_place(prop, _tea_rect(object_id), tea_scene)
+		var hit := _button("", _tea_rect(object_id), _tea_inspect.bind(object_id), false, tea_scene)
+		# Foreground sprites remain separate; no parchment behind the cup hit regions.
+		for child in hit.get_children():
+			child.queue_free()
+		hit.add_theme_stylebox_override("normal", _style(Color(0, 0, 0, 0), GOLD, 0))
+		hit.tooltip_text = tea_data.objects[object_id].label
+		var name_rect := _tea_rect(object_id + ".label")
+		var name_label := _button("", name_rect, _tea_inspect.bind(object_id), false, tea_scene)
+		tea_hotspots[object_id] = hit
+		tea_names[object_id] = name_label
+	_paper(_tea_rect("status_panel"), tea_scene, false, true)
+	tea_status = _label("", _tea_rect("status"), 18, INK, tea_scene)
+	sword_card = Control.new()
+	sword_card.z_index = 2
+	sword_card.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_place(sword_card, _rect("scene"))
+	_paper(Rect2(508, 156, 466, 220), sword_card)
+	_label("一柄旧剑", Rect2(540, 174, 388, 36), 25, INK, sword_card)
+	_art("res://assets/art/tea/tea-sword-v1.png", Rect2(540, 223, 388, 126), sword_card)
+	tea_accept = _button("接受委托 · 去剑坪", Rect2(45, 831, 293, 43), _tea_accept)
+	tea_confirm = _button("记下所见", Rect2(45, 831, 293, 43), Callable())
+	# Bind acknowledgement to the exact active read, never to the latest global read.
+	for connection in tea_confirm.pressed.get_connections():
+		tea_confirm.pressed.disconnect(connection.callable)
+	tea_cancel = _button("暂且返回", Rect2(661, 831, 208, 43), _tea_cancel)
+	tea_finish = _button("结束本段调查", Rect2(353, 831, 293, 43), _tea_finish)
+
+func _refresh_tea() -> void:
+	var active: bool = state.tea_active
+	var terrace: bool = active and state.tea_accepted
+	shortcut_label.text = "Esc 返回 · 查看后确认" if active else "1 修炼 · 2 请教 · 3 休息"
+	cultivation_scene.visible = not terrace
+	tea_scene.visible = terrace
+	sword_card.visible = active and not state.tea_accepted
+	tea_entry.visible = not active
+	tea_entry.disabled = busy or awaiting_continue or state.dialogue_open
+	tea_entry.text = "归剑问天 · 重访剑坪" if state.tea_accepted else "归剑问天 · 旧剑委托"
+	tea_accept.visible = active and not state.tea_accepted
+	tea_cancel.visible = active
+	tea_confirm.visible = terrace and tea_reading
+	tea_finish.visible = terrace and not tea_reading
+	tea_finish.disabled = state.tea_seen.size() < 2
+	for object_id: String in state.TEA_OBJECT_IDS:
+		tea_hotspots[object_id].disabled = tea_reading
+		tea_names[object_id].disabled = tea_reading
+		tea_names[object_id].text = tea_data.objects[object_id].label + (" · 已记" if state.tea_seen.has(object_id) else " · 查看")
+	tea_status.text = "所见 %d / 2   ·   %s" % [state.tea_seen.size(), "本段已结束，可重访" if state.tea_stage_complete else "确认两杯后可结束本段"]
+	weather_label.visible = not terrace
+	weather_paper.visible = not terrace
+	weather_button.visible = not terrace
+	next_weather.visible = not terrace
+
+func _open_tea() -> void:
+	if busy or awaiting_continue or state.dialogue_open or state.tea_active:
+		return
+	var result: Dictionary = state.begin_tea()
+	if not result.ok:
+		return
+	tea_session = int(result.session)
+	tea_reading = false
+	if state.tea_accepted:
+		_tea_overview()
+	else:
+		_show_text("归剑问天 · 山下老人", tea_data.commission, "接受后访问旧剑坪；也可暂且返回。")
+	_refresh()
+
+func _tea_accept() -> void:
+	var result: Dictionary = state.accept_tea(tea_session)
+	if not result.ok:
+		return
+	_tea_overview()
+	_refresh()
+
+func _tea_overview() -> void:
+	_show_text("旧剑坪 · 附近传闻", tea_data.rumor, "旧剑委托 · 调查不消耗精力或时辰。")
+
+func _tea_inspect(object_id: String) -> void:
+	if tea_reading:
+		return
+	var result: Dictionary = state.inspect_tea(object_id, tea_session)
+	if not result.ok:
+		return
+	tea_reading = true
+	_show_text(tea_data.objects[object_id].label, tea_data.objects[object_id].text, "点击记下所见确认；Esc 或暂且返回可取消。")
+	for connection in tea_confirm.pressed.get_connections():
+		tea_confirm.pressed.disconnect(connection.callable)
+	tea_confirm.pressed.connect(_tea_ack.bind(object_id, tea_session, int(result.read_token)))
+	_refresh()
+
+func _tea_ack(object_id: String, session: int, read_token: int) -> void:
+	var result: Dictionary = state.confirm_tea(object_id, session, read_token)
+	if not result.ok:
+		return
+	tea_reading = false
+	_show_text(dialogue.player_name + " · 推想" if state.tea_seen.size() == 2 else "归剑问天 · 所见", tea_data.impression if state.tea_seen.size() == 2 else tea_data.objects[object_id].text, "已记下 %d / 2 · 可再次查看，或暂且返回。" % state.tea_seen.size())
+	_refresh()
+
+func _tea_finish() -> void:
+	if tea_reading:
+		return
+	var result: Dictionary = state.finish_tea(tea_session)
+	if not result.ok:
+		return
+	tea_reading = false
+	_show_text("听雨廊 · 本段调查结束", dialogue.idle, "所见已保留 · 可继续养成或重访剑坪。")
+	_refresh()
+
+func _tea_cancel() -> void:
+	if not state.tea_active:
+		return
+	state.cancel_tea()
+	tea_reading = false
+	_show_text("听雨廊 · 师徒同修", dialogue.idle, "已确认的所见保留；本段尚未结束。" if not state.tea_stage_complete else "本段所见保留 · 可继续养成。")
+	_refresh()
+
+func _show_failure(reason: String) -> void:
+	awaiting_continue = true
+	failure_notice = true
+	_show_text("先歇一歇", reason, "关闭提示后继续安排功课。")
+	_refresh()

@@ -1,0 +1,44 @@
+{
+  "version": "tea-ab-art-1",
+  "date": "2026-10-05",
+  "status": "integrated_pending_user_review",
+  "user_accepted": false,
+  "author": "AI generated under user-directed shu game-art workflow",
+  "usage": "User-authorized shu project game art; provider terms apply; no third-party purchased assets",
+  "reference": "docs/concepts/02-cultivation-mentor.png",
+  "reference_sha256": "2e4d1b86844a183a9ccbc5c09ea3d12314c3ac3f6cfb9fb95932c3041e41cfb3",
+  "layers": [
+    {
+      "file": "tea-terrace-v1.png",
+      "prompt_file": "art/prompts/tea-terrace-v1.txt",
+      "provider": "codex-imagegen",
+      "model": null,
+      "sha256": "9b4ae56e641a4d0bc0f50916f2812c21185d01d71dcb8077738236837f13567f",
+      "candidate": "art/work/tea-terrace-v1.png"
+    },
+    {
+      "file": "tea-cups-v1.png",
+      "prompt_file": "art/prompts/tea-cups-v1.txt",
+      "provider": "codex-imagegen",
+      "model": null,
+      "sha256": "3f976fb4bdf3ea4419091dd9cdd4e6166e30adfd04559b056e5015f71f84cc45",
+      "candidate": "art/work/tea-cups-v1.png"
+    },
+    {
+      "file": "tea-sword-v1.png",
+      "prompt_file": "art/prompts/tea-sword-v1.txt",
+      "provider": "qwen",
+      "model": "qwen-image-3.0",
+      "sha256": "91cb360b23fb600eb507db4312d91e1de50ff147a513463e69860bdd6bb0be4a",
+      "candidate": "art/work/tea-sword-v1.png"
+    }
+  ],
+  "review": {
+    "text": "No generated text/signature/watermark observed",
+    "alpha": "Source RGBA PNG 1774x887 preserved. Full-source component audit selects main cups via AtlasTexture Rect2(139,184,611,535) and Rect2(1024,184,613,535), with transparent margins on all four crop edges; detached alpha speckles outside cup sprites are excluded at render time. Sword intentionally opaque ivory paper.",
+    "identity": "Existing approved Jiang Yanqiu portrait reused; no Gu Qingluo or Xie Changan image invented",
+    "user_acceptance": "Pending",
+    "framing": "Clear table with two separate cup sprites and hotspot regions"
+  },
+  "candidate_storage": "Local generation evidence in art/work, excluded from version control; selected PNGs in assets/art/tea are exact-byte copies with the SHA256 recorded below."
+}

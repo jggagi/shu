@@ -1,0 +1,13 @@
+Asset type: layered fixed-view game background, wide landscape approximately 1536 by 576.
+Purpose: first playable sword terrace inspection scene for shu.
+Primary request: create a NEW empty abandoned sword-practice terrace at Wentian Peak in Sichuan mountains. The supplied image is ONLY the approved brushwork, muted palette, Song aesthetic and depth style reference; do not reproduce its UI or characters.
+Reference images: Image 1 docs/concepts/02-cultivation-mentor.png: style reference only, not an edit target.
+Scene/backdrop: quiet worn stone sword terrace, distant blue-green layered mountains and pale mist, sparse pine, moss at stone joints, simple weathered low wooden tea table on the center-right foreground. An unobtrusive ascending path at distant upper right.
+Subject: an ordinary place that people once used. Empty table top needs ample legible horizontal space for TWO separate interactive teacup layers later. No teacups, sword, people or special story symbols in this background.
+Style/medium: Chinese Song landscape painting, ink outlines of variable pressure, gongbi architectural detail, watercolor and paper grain, soft restrained blue-green accents, warm weathered wood, same visual family as reference. Game composition compatible with separate Q-style protagonist portrait.
+Composition/framing: panoramic fixed camera, horizon at upper third. Table fully visible centered near x=60%, its top around y=67%; surface viewed slightly from above, table occupies middle/right foreground. Left foreground open stone paving. Clear foreground/middle/distant strata; no foreground branches covering the table. Fill canvas to edges.
+Lighting/mood: overcast diffuse afternoon, calm ordinary errand, gently weathered rather than tragic or magical.
+Color palette: ivory paper, slate ink, sage green, pale teal mountains, muted brown wood.
+Materials/textures: modest rubbed wood, stone, paper fibers and low-contrast brushwork.
+Constraints: background plate only, no interface, text, signature, watermark, frame, character, cup or tea pot. No graves, ghosts, memory symbols, modern objects, ornate magical swords, document clues or hearts.
+Avoid: photorealism, 3D rendering, neon colors, dramatic spotlight, ornate palace, romantic fantasy overstatement.

@@ -1,0 +1,31 @@
+{
+  "content_version": "tea-ab-1",
+  "quest_id": "tea",
+  "scene_id": "tea.sword_terrace",
+  "entry_title": "归剑问天",
+  "source": {
+    "repository": "jggagi/shu",
+    "path": "story/sub/tea/README.md",
+    "revision": "086e13eb11bd3710e2b7f8daa1c617c1d386be2c",
+    "local_bytes_sha256": "20fc0889378091e70999bb0cee1ae99df28dad7da0469b9fa8ff76de20f2377c",
+    "sections": [
+      "5 阶段 A",
+      "5 阶段 B",
+      "4 世人的误解"
+    ],
+    "adaptation": "Existing approved manuscript quotations only; UI labels are implementation text. No new authored story. New authored sidequests remain designated to jggagi/sub (currently inaccessible)."
+  },
+  "commission": "顾前辈清醒的时候说过，死后把这柄剑送回问天峰。少侠若顺路，替她走一趟吧。",
+  "rumor": "谢长安早死于问天峰。顾青萝无法接受恋人死亡，思念成疾。她几十年都把第二杯茶留给一个不会回来的人。",
+  "impression": "顾青萝一直在等一个已经死去的人。",
+  "objects": {
+    "tea.cup_first": {
+      "label": "第一只旧杯",
+      "text": "一只普通旧茶杯，杯沿已经磨得发亮。"
+    },
+    "tea.cup_second": {
+      "label": "第二只旧杯",
+      "text": "杯底积着一层又一层茶渍。\n杯沿却几乎没有饮用留下的磨痕。"
+    }
+  }
+}

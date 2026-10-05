@@ -1,0 +1,7 @@
+Asset type: transparent wide game parallax layer.
+Purpose: middle distance mountains behind a separate foreground platform in shu.
+Reference images: image1 style only, image2 far background compositional/palette reference.
+Primary request: ONLY two or three middle distance Shushan/Sichuan mountain peaks, with a tiny dark cleft suitable for a waterfall around 55 percent canvas x, from 30 percent to60 percent canvas y. No water painted.
+Style/medium: Song Chinese landscape ink watercolor, restrained blue-green, weathered vertical rock brushwork, soft fading edge mist.
+Composition/framing: landscape 2:1 canvas, mountains fill middle band below25 percent; highest peak left of center; center-right open valley; bottom mountain bases fade seamlessly into real alpha. Top quarter and broad valley areas completely transparent. Same frontal mountain viewpoint as reference.
+Constraints: true transparent background, isolated mountain layer, no sky, no flat background color, no foreground rocks/pine/platform, no buildings, people, text, UI, watermark or border.

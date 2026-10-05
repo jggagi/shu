@@ -1,0 +1,8 @@
+Asset type: opaque wide 2D game environment layer.
+Purpose: far background for shu standalone back mountain meditation demo.
+Reference images: image 1 is STYLE ONLY, an existing approved Chinese painted shu environment. Do not copy its veranda architecture.
+Primary request: paint distant Sichuan/Shushan mountains and open pale sky, silent and spacious, no people or foreground.
+Style/medium: Song Chinese landscape painting, delicate ink outlines, soft layered watercolor washes, restrained pale blue-green and warm ivory handmade paper grain, match reference brushwork.
+Composition/framing: landscape 2:1 canvas; open pale sky top 35 percent; distant misty mountain silhouettes across lower 65 percent, valleys with strong negative space; left pale peaks, middle distance high thin mountain near x55 percent; no close ledge, no pine, no platform, no near trees, no buildings. No waterfall baked into image because engine adds it.
+Lighting/mood: softly neutral dawn, gentle ambient daylight; no hard sun rays, warm spots, clouds with painted hard edges.
+Constraints: entire canvas opaque; usable as game layer with slight parallax; no frames, text, UI, signatures, watermark, characters, sword, particles. Original painting, not a screenshot.

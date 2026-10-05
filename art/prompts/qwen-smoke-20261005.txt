@@ -1,0 +1,11 @@
+Asset type: 2D game prop candidate, one ordinary old ceramic tea cup.
+Purpose: one authorized Qwen connectivity and image-generation test for shu; not approved production art.
+Primary request: Show a single small, ordinary, unglazed-rim celadon tea cup, with gently worn rim and subtle tea stains, seen at a three-quarter angle.
+Scene/backdrop: Plain warm ivory paper, no surrounding scene.
+Subject: One cup only, no saucer, no lid, no handle.
+Style/medium: Original Song-inspired Chinese ink and watercolor game art, restrained soft blue-green glaze, delicate ink contour, visible paper texture and gentle brush variation.
+Composition/framing: Centered, entire cup visible, ample empty margin on all four sides; square image.
+Lighting/mood: Soft natural diffuse daylight, quiet everyday object.
+Materials/textures: Muted celadon ceramic with restrained signs of use, no decorative motif.
+Constraints: Raster PNG candidate. Opaque ivory background is intentional; do not claim transparency. No people or new story details.
+Avoid: Text, calligraphy, letters, logos, signature, watermark, borders, UI, extra cups, glowing magical effects, photorealistic 3D product render.

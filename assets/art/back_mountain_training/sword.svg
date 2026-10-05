@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="100" viewBox="0 0 220 100">
+  <!-- Original scene-specific placeholder: a sheathed practice sword, no combat. -->
+  <g transform="rotate(-14 110 55)" stroke="#43544d" stroke-linejoin="round">
+    <path d="M24 50L146 43L150 54L25 61Q19 59 24 50Z" fill="#718078" stroke-width="2"/>
+    <path d="M29 53L143 47" fill="none" stroke="#a9b1a0" stroke-width="2"/>
+    <path d="M143 37L151 37L154 62L146 62Z" fill="#9d8862" stroke-width="2"/>
+    <path d="M153 43L195 43L196 54L154 55Z" fill="#625448" stroke-width="2"/>
+    <path d="M163 43L168 55M172 43L177 55M182 43L187 55" stroke="#ad9c7b" stroke-width="2"/>
+    <path d="M194 42L201 42L202 55L195 55Z" fill="#9d8862" stroke-width="2"/>
+    <path d="M201 49Q215 54 208 70Q204 77 197 80" fill="none" stroke="#71948a" stroke-width="3"/>
+  </g>
+</svg>

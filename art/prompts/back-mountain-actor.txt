@@ -1,0 +1,7 @@
+Asset type: transparent game character two-frame sprite sheet.
+Purpose: Jiang Yanqiu/player_yanqiu sits alone meditating in shu back mountain demo.
+Reference images: image1 is identity reference ONLY, existing approved player character. Preserve warm brown eyes, high dark-brown ponytail with pale blue ribbon, ivory/light blue Song-style robe, darker blue cuffs, chibi proportions and painted ink-watercolor finish.
+Primary request: redraw same character FULL BODY seated cross-legged, straight relaxed posture, both hands gently resting in lap, three-quarter facing slightly left. No brush, desk, sword or other prop.
+Composition: exactly TWO equally-sized square tiles side by side in a2:1 landscape canvas, each character center at25 percent and75 percent canvas x. Both figures identical scale, silhouette, pose, baseline, hair and clothing; full head/ponytail/feet visible with generous alpha margin. LEFT tile eyes OPEN, quiet relaxed expression. RIGHT tile same drawing with eyelids CLOSED; ONLY eyes change. No labels, separators, boxes.
+Style/medium: match source identity/style faithfully, delicate dark ink linework, matte watercolor/gongbi shading, warm skin, cloth folds, calm pose suited to small stone platform. Not photorealistic or3D.
+Constraints: true transparent background across and between tiles, no ground shadow beyond small contact shading, no background/sky, no extra limbs, halo, sticker border, text, watermark, UI. Preserve original source unchanged; this is a new scene-specific pose.

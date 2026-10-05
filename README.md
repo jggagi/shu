@@ -16,6 +16,18 @@
 
 [任务卡](docs/TEA_SLICE.md) · [验证记录](docs/TEA_VALIDATION.md) · [美术来源](assets/art/tea/source.json)。玩法状态、内容和布局分别在 demo_state.gd、assets/data/tea.json、tea-layout.json。历史原稿保持原位，本轮运行文字直接引用原稿；没有新写或迁移支线稿。
 
+## 后山独立表现实验
+
+「蜀山后山 · 独自修炼」沿用 DemoState，只提供修炼、动静／光影对比和重置；不接入正式主流程。运行：
+
+```sh
+godot --windowed --path . res://scenes/demos/back_mountain_training.tscn
+```
+
+键盘 1 修炼、4 动静、L 原画／增强光影、R 重置。Lighting v1 保留作实验对照；用户试玩认为变化不明显，后续停止打磨这套复杂光影，优先原画、简单调色与少量微动。详见 [切片与验证](docs/BACK_MOUNTAIN_SLICE.md)、决定 D028。
+
+美术制作默认采用 Codex 建立 reference、Qwen 小样检查后批量生产；项目级 [game-art skill](.agents/skills/game-art/SKILL.md) 和来源记录随源码保存，候选图与凭据不入库。
+
 ## 当前可玩：D01 听雨廊
 
 江砚秋与叶知闲同处听雨廊。修炼推进时间与修为，请教口诀得到一次修炼加成，休息恢复精力。修为达到 60 完成第一课，可重新开始反复试玩。姓名与整体美术风格已由用户确认；构图、动态强度与数值继续供试玩拍板。当前使用分层生成的中国画背景、Q 版师徒、木桌与宣纸木框，原 SVG 占位稿仍保留供比较。

@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "description": "Scene-only lighting profiles for the Back Mountain training demo. Coordinates are 1440x716 art-area coordinates.",
+  "assumptions": [
+    "The sun sits above and to the right; its local +Y ray points down-left.",
+    "Far, middle, leaf and material overlays remain unshaded and use these restrained ambient tints.",
+    "The near-layer shader limits native sunlight to its painted platform band; actor and sword receive light.",
+    "The two native occluders use fixed base silhouettes. Soft finite shapes provide most of the visible ground shadow.",
+    "The cloud overlay belongs to the art-only CanvasLayer and never covers the interface."
+  ],
+  "transition_seconds": 1.05,
+  "cloud": {
+    "min_brightness": 0.88,
+    "envelope_seconds": 16.0,
+    "noise_size": 128,
+    "noise_frequency": 0.006,
+    "drift_rate": [
+      0.00065,
+      0.00022
+    ]
+  },
+  "shadows": {
+    "actor_contact_rect": [
+      925,
+      523,
+      225,
+      29
+    ],
+    "sword_contact_rect": [
+      1160,
+      528,
+      175,
+      18
+    ],
+    "ledge_contact_rect": [
+      420,
+      489,
+      140,
+      18
+    ],
+    "actor_projected_rect": [
+      980,
+      536,
+      78,
+      16
+    ],
+    "sword_projected_rect": [
+      1200,
+      529,
+      46,
+      12
+    ],
+    "projected_rotation_degrees": 135.0,
+    "native_occluder_mask": 2,
+    "contact_color": "#665d53",
+    "projected_color": "#625a51"
+  },
+  "profiles": {
+    "卯时": {
+      "ambient_tint": "#dce4e6",
+      "scene_brightness": 0.94,
+      "sun_color": "#f3e4cf",
+      "sun_energy": 0.055,
+      "sun_rotation": 49.0,
+      "shadow_opacity": 0.11,
+      "shadow_length": 44.0,
+      "mist_multiplier": 1.0
+    },
+    "辰时": {
+      "ambient_tint": "#e8ebe5",
+      "scene_brightness": 0.97,
+      "sun_color": "#f4e8d5",
+      "sun_energy": 0.068,
+      "sun_rotation": 46.0,
+      "shadow_opacity": 0.095,
+      "shadow_length": 35.0,
+      "mist_multiplier": 0.88
+    },
+    "巳时": {
+      "ambient_tint": "#f0eddf",
+      "scene_brightness": 0.985,
+      "sun_color": "#f6ebd6",
+      "sun_energy": 0.08,
+      "sun_rotation": 43.0,
+      "shadow_opacity": 0.08,
+      "shadow_length": 25.0,
+      "mist_multiplier": 0.73
+    },
+    "午时": {
+      "ambient_tint": "#f4f0e4",
+      "scene_brightness": 0.99,
+      "sun_color": "#f8efd9",
+      "sun_energy": 0.09,
+      "sun_rotation": 42.0,
+      "shadow_opacity": 0.065,
+      "shadow_length": 8.0,
+      "mist_multiplier": 0.58
+    },
+    "申时": {
+      "ambient_tint": "#ebdcc7",
+      "scene_brightness": 0.94,
+      "sun_color": "#f1d8b7",
+      "sun_energy": 0.073,
+      "sun_rotation": 37.0,
+      "shadow_opacity": 0.1,
+      "shadow_length": 30.0,
+      "mist_multiplier": 0.68
+    },
+    "酉时": {
+      "ambient_tint": "#dfc9af",
+      "scene_brightness": 0.86,
+      "sun_color": "#e9cfad",
+      "sun_energy": 0.055,
+      "sun_rotation": 31.0,
+      "shadow_opacity": 0.12,
+      "shadow_length": 52.0,
+      "mist_multiplier": 0.93
+    }
+  }
+}

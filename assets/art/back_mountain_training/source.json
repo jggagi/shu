@@ -1,0 +1,91 @@
+{
+  "version": "back-mountain-demo-1",
+  "purpose": "Standalone presentation experiment, not approved production art",
+  "assets": [
+    {
+      "file": "assets/art/back_mountain_training/far.png",
+      "provider": "codex-imagegen",
+      "model": null,
+      "prompt_file": "art/prompts/back-mountain-far.txt",
+      "references": [
+        "assets/art/weather3/tingyu-clean-v3.png"
+      ],
+      "sha256": "cafa8bd13b0d70058683ba91b9f7b55d080983eaf94a6f4c2af454cace95f86d",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "modifications": "None; selected generated PNG copied byte for byte. Actor tiles use Godot AtlasTexture.",
+      "selection": "Selected for experimental demo by Codex; user art acceptance pending.",
+      "author": "Codex using built-in image generation for shu",
+      "license": "Project-generated demo asset; no repository-wide license specified"
+    },
+    {
+      "file": "assets/art/back_mountain_training/mid.png",
+      "provider": "codex-imagegen",
+      "model": null,
+      "prompt_file": "art/prompts/back-mountain-mid.txt",
+      "references": [
+        "assets/art/weather3/tingyu-clean-v3.png",
+        "assets/art/back_mountain_training/far.png"
+      ],
+      "sha256": "3af99b2e667dd40189a1363b060b09fc81bf273ae7920a9b6e4b88f916355ad7",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "modifications": "None; selected generated PNG copied byte for byte. Actor tiles use Godot AtlasTexture.",
+      "selection": "Selected for experimental demo by Codex; user art acceptance pending.",
+      "author": "Codex using built-in image generation for shu",
+      "license": "Project-generated demo asset; no repository-wide license specified"
+    },
+    {
+      "file": "assets/art/back_mountain_training/near.png",
+      "provider": "codex-imagegen",
+      "model": null,
+      "prompt_file": "art/prompts/back-mountain-near.txt",
+      "references": [
+        "assets/art/weather3/tingyu-clean-v3.png",
+        "assets/art/back_mountain_training/far.png"
+      ],
+      "sha256": "300147286dc2ef82161d4d59d8e737ef1de3042508008ad7a6d56fc4dccbad92",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "modifications": "None; selected generated PNG copied byte for byte. Actor tiles use Godot AtlasTexture.",
+      "selection": "Selected for experimental demo by Codex; user art acceptance pending.",
+      "author": "Codex using built-in image generation for shu",
+      "license": "Project-generated demo asset; no repository-wide license specified"
+    },
+    {
+      "file": "assets/art/back_mountain_training/actor-sheet.png",
+      "provider": "codex-imagegen",
+      "model": null,
+      "prompt_file": "art/prompts/back-mountain-actor.txt",
+      "references": [
+        "assets/art/v2/jiang-yanqiu-v2.png"
+      ],
+      "sha256": "2e57778cc533371f1eea54cc9af7652cade1e9bb4e8eda0902101877a2d6eacc",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "modifications": "None; selected generated PNG copied byte for byte. Actor tiles use Godot AtlasTexture.",
+      "selection": "Selected for experimental demo by Codex; user art acceptance pending.",
+      "author": "Codex using built-in image generation for shu",
+      "license": "Project-generated demo asset; no repository-wide license specified"
+    },
+    {
+      "file": "assets/art/back_mountain_training/sword.svg",
+      "author": "Codex for shu",
+      "source": "Original SVG scene-specific sheathed sword placeholder",
+      "license": "Original project asset",
+      "sha256": "6f948209bb652ed07bb222be775ccae09ac0d366cb5e7e1542c015a7e47f4c10"
+    }
+  ]
+}

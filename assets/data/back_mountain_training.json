@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "training_seconds": 1.8,
+  "parallax_strengths": [
+    1,
+    2,
+    4,
+    6
+  ],
+  "actor_rect": [
+    880,
+    260,
+    290,
+    290
+  ],
+  "actor_hotspot_inset": [
+    20,
+    8,
+    20,
+    8
+  ],
+  "sword_rect": [
+    1145,
+    480,
+    200,
+    90
+  ],
+  "waterfall_rect": [
+    610,
+    280,
+    18,
+    110
+  ],
+  "waterfall_alpha": 0.36,
+  "mist_rects": [
+    [
+      245,
+      128,
+      960,
+      276
+    ],
+    [
+      516,
+      278,
+      734,
+      210
+    ]
+  ],
+  "mist_density": 0.12,
+  "mist_layer_factors": [
+    0.72,
+    0.48
+  ],
+  "mist_densities": {
+    "卯时": 0.145,
+    "辰时": 0.125,
+    "巳时": 0.105,
+    "午时": 0.075,
+    "申时": 0.09,
+    "酉时": 0.13
+  },
+  "mist_seed": 471205,
+  "time_tints": {
+    "卯时": "#d6e4e8",
+    "辰时": "#e8ece4",
+    "巳时": "#f7f0df",
+    "午时": "#fff9e9",
+    "申时": "#e9d6b8",
+    "酉时": "#b9a28c"
+  },
+  "hair_uv_rect": [
+    0.1,
+    0.015,
+    0.78,
+    0.62
+  ],
+  "pine_uv_rect": [
+    0.0,
+    0.0,
+    0.39,
+    0.64
+  ],
+  "grass_uv_rect": [
+    0.57,
+    0.76,
+    0.67,
+    0.87
+  ],
+  "gust_interval_min": 8.0,
+  "gust_interval_max": 14.0,
+  "gust_duration_min": 1.0,
+  "gust_duration_max": 3.0,
+  "gust_leaf_count_min": 1,
+  "gust_leaf_count_max": 2,
+  "gust_wind_strength": 0.055,
+  "leaf_seed": 20261005,
+  "training_leaf_count_min": 1,
+  "training_leaf_count_max": 2,
+  "training_wind_strength": 0.105,
+  "training_leaf_seed": 51802,
+  "blink_interval_min": 4.0,
+  "blink_interval_max": 7.0,
+  "blink_duration": 0.12,
+  "blink_seed": 194705
+}

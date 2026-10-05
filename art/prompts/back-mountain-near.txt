@@ -1,0 +1,8 @@
+Asset type: transparent wide game foreground environment layer.
+Purpose: cliffside meditation platform and pine foreground of shu, overlay over distant mountains.
+Reference images: image1 style only; image2 far landscape palette/composition.
+Primary request: a small empty stone meditation terrace on a Shushan cliff, with weathered pale stone slabs, irregular cliff edge and worn short steps, one old pine tree on LEFT edge. No character and no sword.
+Style/medium: Song Chinese landscape ink and watercolor, fine matte rock grain and ink-edged pine needles, restrained jade and warm gray/ivory.
+Composition/framing: landscape2:1 canvas. Platform lies entirely in lower third of canvas, extends from x20 to100 percent, visible upper surface around y75..90 percent. Its right-center at x70 percent,y80 percent should be flat enough to seat a small character. Cliff rocks extend to bottom. Pine trunk emerges far left and branches frame upper-left without obscuring center/right mountain view. A tiny grass tuft near platform edge. Large area above platform and between branches has TRUE alpha transparency; no opaque sky or distant mountains.
+Lighting/mood: soft neutral ambient light, calm, no dramatic spotlight.
+Constraints: true transparent background; no humans, animals, waterfall, houses, sword, lettering, UI, signature, watermark or border.

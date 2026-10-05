@@ -1,0 +1,25 @@
+{
+  "version": "back-mountain-clouds-v1-flow-revision",
+  "author": "Codex for shu",
+  "source": "Original scene-specific shader; reuses the existing fixed-seed runtime mist noise, no downloaded or generated raster cloud image.",
+  "license": "Original project asset; no repository-wide license specified",
+  "file": "assets/shaders/back_mountain_cloud.gdshader",
+  "sha256": "3b2b6e5281e5c0c84f8c8448d7d7c5e9f1246826464a7fe96c8f0692423feccb",
+  "runtime_texture": {
+    "type": "NoiseTexture2D / FastNoiseLite",
+    "seed": 471205,
+    "size": [
+      128,
+      128
+    ],
+    "frequency": 0.025,
+    "seamless": true,
+    "engine": "4.7.2.stable.official.ed1daf0bf"
+  },
+  "selection": "User accepted the Clouds v1 flow revision for the standalone back-mountain demo; not a project-wide production art standard.",
+  "user_acceptance": {
+    "date": "2026-10-05",
+    "basis": "本 chat 用户：很好 我喜欢",
+    "scope": "Current standalone Clouds v1 flow revision and visual tuning"
+  }
+}

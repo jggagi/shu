@@ -1,0 +1,80 @@
+{
+  "source_commit": "e7fa4207c721f78103abfb04a191a61a9bf05942",
+  "method": "git archive canonical merged main",
+  "project_overrides": {
+    "run/main_scene": "res://scenes/demos/back_mountain_training.tscn",
+    "config/name": "蜀山后山 · Clouds v1 · 流动增强版",
+    "config/version": "0.1.0-back-mountain-clouds-v1"
+  },
+  "project_godot_sha256": "d5215a4130e1b4a3e7976e41806db5e9e5d49dd6492030fbf7d8996426aa3dd6",
+  "version": "0.1.0-back-mountain-clouds-v1",
+  "profile": "standalone back mountain Clouds v1 flow revision",
+  "source_pr": "https://github.com/jggagi/shu/pull/2",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "web_template": "web_nothreads_release.zip",
+  "built_at": "2026-10-05T15:37:53.890154+00:00",
+  "user_accepted": "很好 我喜欢",
+  "root_site": "Existing A/B build preserved byte-for-byte",
+  "artifacts": {
+    "index.apple-touch-icon.png": {
+      "sha256": "f5878bec0fc0849d41fa35576ea5623e009a6f25b6d628e3b7490de254f5d885",
+      "bytes": 7522
+    },
+    "index.audio.position.worklet.js": {
+      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
+      "bytes": 2973
+    },
+    "index.audio.worklet.js": {
+      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
+      "bytes": 7298
+    },
+    "index.html": {
+      "sha256": "4dc92eb9f904e221f5011c47cc29267c3cf06d5114ae131d4a7414bb10995ed7",
+      "bytes": 5476
+    },
+    "index.icon.png": {
+      "sha256": "5f750d194a603861983bbf1de1a4ffd463153947deb66a54519596be9d51e69c",
+      "bytes": 3034
+    },
+    "index.js": {
+      "sha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba",
+      "bytes": 279815
+    },
+    "index.pck": {
+      "sha256": "06d30456140ca34756900a3aa993a945bf9e972e0ac5b18abf8b0a1e50d2c7a5",
+      "bytes": 20815108
+    },
+    "index.png": {
+      "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
+      "bytes": 21443
+    },
+    "index.wasm": {
+      "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0",
+      "bytes": 39514754
+    },
+    "licenses/GODOT-LICENSE.txt": {
+      "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80",
+      "bytes": 1149
+    },
+    "licenses/GODOT-NOTICES.txt": {
+      "sha256": "b3c6835addbb97337ebe62c541edd1e0aed1877ff7459c2d3524a92ab954b1cb",
+      "bytes": 107728
+    },
+    "licenses/OFL-Serif.txt": {
+      "sha256": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6",
+      "bytes": 4350
+    },
+    "licenses/OFL.txt": {
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+      "bytes": 4388
+    },
+    "provenance/clouds-source.json": {
+      "sha256": "b35bfd8a4121ea4a008613aa6d45f0270ae0f83b810ccbc125f163275642edab",
+      "bytes": 999
+    },
+    "provenance/source.json": {
+      "sha256": "3baf6ea4d327353a27ca45e5e37ba2ea1d31fd16e77a3db805adc981b898fd71",
+      "bytes": 3680
+    }
+  }
+}

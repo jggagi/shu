@@ -1,5 +1,5 @@
 {
-  "content_version": "tea-ab-1",
+  "content_version": "tea-ab-object-2",
   "quest_id": "tea",
   "scene_id": "tea.sword_terrace",
   "entry_title": "归剑问天",
@@ -13,7 +13,7 @@
       "5 阶段 B",
       "4 世人的误解"
     ],
-    "adaptation": "Existing approved manuscript quotations only; UI labels are implementation text. No new authored story. New authored sidequests remain designated to jggagi/sub (currently inaccessible)."
+    "adaptation": "A/B manuscript snapshot retained; first-cup description and repair feedback adapted from the explicit 2026-10-05 user UI request. Second cup, rumor, impression and reveal order unchanged. See ui_adaptation. No new authored sidequest manuscript."
   },
   "commission": "顾前辈清醒的时候说过，死后把这柄剑送回问天峰。少侠若顺路，替她走一趟吧。",
   "rumor": "谢长安早死于问天峰。顾青萝无法接受恋人死亡，思念成疾。她几十年都把第二杯茶留给一个不会回来的人。",
@@ -21,11 +21,40 @@
   "objects": {
     "tea.cup_first": {
       "label": "第一只旧杯",
-      "text": "一只普通旧茶杯，杯沿已经磨得发亮。"
+      "text": "杯口有细小缺痕，杯底留有陈年茶渍。",
+      "actions": [
+        {
+          "id": "repair",
+          "label": "修补",
+          "cost_rule": "training_cost"
+        },
+        {
+          "id": "ask_mentor",
+          "label": "询问{mentor}",
+          "character_id": "mentor_zhixian",
+          "cost_rule": "mentor_cost"
+        }
+      ]
     },
     "tea.cup_second": {
       "label": "第二只旧杯",
-      "text": "杯底积着一层又一层茶渍。\n杯沿却几乎没有饮用留下的磨痕。"
+      "text": "杯底积着一层又一层茶渍。\n杯沿却几乎没有饮用留下的磨痕。",
+      "actions": [
+        {
+          "id": "ask_mentor",
+          "label": "询问{mentor}",
+          "character_id": "mentor_zhixian",
+          "cost_rule": "mentor_cost"
+        }
+      ]
     }
-  }
+  },
+  "feedback": {
+    "repair": "裂痕被细细补起，却仍能看出岁月留下的痕迹。"
+  },
+  "ui_adaptation": {
+    "source": "2026-10-05 用户 object-centric interaction 请求",
+    "note": "首杯描述采用用户指定文字，修补反馈采用用户示例；询问复用既有 rumor，第二杯 text 和 impression 保留原稿。只用于当前 UI 适配，不是新支线稿。"
+  },
+  "stage_complete_notice": "本段线索已收齐；支线后续尚未开放。"
 }

@@ -61,6 +61,36 @@ def validate_graph(data):
     return len(nodes)
 
 
+def validate_return_policy(policy):
+    require(policy["return_when"] == "quest_complete", "sidequest: return must wait for whole quest completion")
+    require(policy["leave_while_incomplete"] is False, "sidequest: unfinished early return")
+    require(policy["stage_completion_is_quest_completion"] is False, "sidequest: stage/quest completion conflated")
+
+
+def validate_scene_objects(data):
+    require(data["schema_version"] == 1 and data["kind"] == "scene_object_interaction_example" and data["status"] == "illustrative", "objects: unsupported or unlabelled example")
+    require(data["selection_policy"] == "single", "objects: selection must have one popover")
+    require(data["inspect_policy"] == "direct_host_commit", "objects: ordinary inspect cannot require acknowledgement")
+    require(data["narrative"] == {"presentation": "passive_journal", "requires_ack": False}, "objects: narrative strip must be passive")
+    validate_return_policy(data["return_policy"])
+    objects = data["objects"]
+    require(bool(objects), "objects: empty scene")
+    ids = [item["id"] for item in objects]
+    require(len(set(ids)) == len(ids), "objects: duplicate object ID")
+    allowed = data["host_action_ids"]
+    require(len(set(allowed)) == len(allowed), "objects: duplicate host action ID")
+    for item in objects:
+        require(all(isinstance(item.get(key), str) and item[key] for key in ["id", "label_ref", "description_ref", "anchor_ref"]), "objects: missing content/anchor binding")
+        actions = item["actions"]
+        require(len({action["id"] for action in actions}) == len(actions), "objects: duplicate contextual action")
+        for action in actions:
+            require(action["id"] in allowed, "objects: unregistered host action")
+            require(isinstance(action.get("cost_rule"), str) and action["cost_rule"], "objects: cost must reference host rule")
+            require(action["repeat_policy"] in {"once_per_object_per_run", "repeatable"}, "objects: unknown repeat policy")
+            require(not ({"script", "handler", "energy_cost"} & set(action)), "objects: inline executable handler or second numeric authority")
+    return ids
+
+
 def validate_package(skill_dir, repo=None):
     entry = (skill_dir / "SKILL.md").read_text(encoding="utf-8")
     require(entry.startswith("---\n"), "skill: missing frontmatter")
@@ -94,6 +124,9 @@ def validate_package(skill_dir, repo=None):
     plan = json.loads((assets / "tea-chain.example.json").read_text(encoding="utf-8"))
     require(plan["kind"] == "cultivation_sidequest_adaptation_plan" and plan["status"] == "proposal_not_playable", "tea: unlabelled plan")
     require(plan["mode"] == "cultivation" and plan["return_to"] == "activity_panel", "tea: mode/return mismatch")
+    validate_return_policy(plan["return_policy"])
+    object_data = json.loads((assets / "scene-objects.example.json").read_text(encoding="utf-8"))
+    object_ids = validate_scene_objects(object_data)
     stages = plan["stages"]
     require(len({stage["id"] for stage in stages}) == len(stages), "tea: duplicate stage")
     previous = None
@@ -102,6 +135,7 @@ def validate_package(skill_dir, repo=None):
         previous = stage["id"]
     cups = plan["recurring_objects"]
     require(cups["first_visit"] == cups["ending_visit"] and len(set(cups["first_visit"])) == 2, "tea: changed recurring cups")
+    require(set(object_ids) == set(cups["first_visit"]), "objects: current cup IDs differ from recurring objects")
     source = plan["source"]
     require(re.fullmatch(r"[a-f0-9]{40}", source["revision"]) is not None, "tea: invalid source revision")
     require(re.fullmatch(r"[a-f0-9]{64}", source["sha256"]) is not None, "tea: invalid source hash")
@@ -111,7 +145,7 @@ def validate_package(skill_dir, repo=None):
         require(hashlib.sha256(raw).hexdigest() == source["sha256"], "tea: pinned source hash mismatch")
         headings = set(re.findall(r"^#{1,6}\s+(.+)$", raw.decode("utf-8"), re.MULTILINE))
         require(all(stage["source_section"] in headings for stage in stages), "tea: source section missing")
-    return f"PASS: {links} references, {node_count} event nodes, {len(stages)} tea stages; " + ("pinned source verified." if repo else "source check skipped (supply --repo).")
+    return f"PASS: {links} references, {node_count} event nodes, {len(stages)} tea stages, {len(object_ids)} scene objects; " + ("pinned source verified." if repo else "source check skipped (supply --repo).")
 
 
 def main():

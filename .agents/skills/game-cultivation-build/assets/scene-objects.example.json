@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "kind": "scene_object_interaction_example",
+  "status": "illustrative",
+  "scene_id": "tea.sword_terrace",
+  "quest_id": "tea",
+  "selection_policy": "single",
+  "inspect_policy": "direct_host_commit",
+  "narrative": {
+    "presentation": "passive_journal",
+    "requires_ack": false
+  },
+  "return_policy": {
+    "return_when": "quest_complete",
+    "leave_while_incomplete": false,
+    "stage_completion_is_quest_completion": false,
+    "unimplemented_next": "stay_in_branch_with_content_notice"
+  },
+  "host_action_ids": [
+    "repair",
+    "ask_mentor"
+  ],
+  "objects": [
+    {
+      "id": "tea.cup_first",
+      "label_ref": "tea.json/objects/tea.cup_first/label",
+      "description_ref": "tea.json/objects/tea.cup_first/text",
+      "anchor_ref": "tea-layout.json/tea.cup_first",
+      "actions": [
+        {
+          "id": "repair",
+          "label": "修补",
+          "cost_rule": "training_cost",
+          "repeat_policy": "once_per_object_per_run",
+          "feedback_key": "repair"
+        },
+        {
+          "id": "ask_mentor",
+          "label_ref": "cast-resolved ask label",
+          "cost_rule": "mentor_cost",
+          "repeat_policy": "once_per_object_per_run",
+          "feedback_key": "rumor"
+        }
+      ]
+    },
+    {
+      "id": "tea.cup_second",
+      "label_ref": "tea.json/objects/tea.cup_second/label",
+      "description_ref": "tea.json/objects/tea.cup_second/text",
+      "anchor_ref": "tea-layout.json/tea.cup_second",
+      "actions": [
+        {
+          "id": "ask_mentor",
+          "label_ref": "cast-resolved ask label",
+          "cost_rule": "mentor_cost",
+          "repeat_policy": "once_per_object_per_run",
+          "feedback_key": "rumor"
+        }
+      ]
+    }
+  ],
+  "note": "Illustrative normalized view data, not a loader schema or executable callbacks. Content/anchors resolve in the host adapter; actual costs, enabled state, inspected IDs and narrative triggers come from current host state/data. Other props and repeatable actions require their own approved host binding."
+}

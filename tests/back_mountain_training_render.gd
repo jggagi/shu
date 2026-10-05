@@ -5,6 +5,9 @@ extends SceneTree
 # Native OS input / human playtesting is recorded separately.
 const SCENE_PATH := "res://scenes/demos/back_mountain_training.tscn"
 const OUTPUT_DIR := "res://.local/qa/back-mountain-lighting-v1"
+const CLOUD_OUTPUT_DIR := "res://.local/qa/back-mountain-clouds-v1"
+const CLOUD_DETAIL_RECT := Rect2(Vector2(330.0, 220.0), Vector2(520.0, 290.0))
+const CLOUD_COMPARISON_RECT := Rect2(Vector2(110.0, 75.0), Vector2(1220.0, 175.0))
 const STATE_FIELDS := [
 	"day", "time_index", "energy", "cultivation", "understanding", "lesson_bonus",
 	"dialogue_open", "tea_accepted", "tea_seen", "tea_stage_complete", "tea_quest_complete",
@@ -209,6 +212,7 @@ func _run() -> void:
 	report.time_fixture = {"reachable_indices": reachable, "午时_index": noon_index, "酉时_index": evening_index, "noon_label_snapshot": noon_labels}
 
 	await _run_lighting_sequence()
+	await _run_clouds_sequence()
 
 	# Reset remains a real button path. The narrow window check is performed after
 	# reset so the final layout evidence starts from a known UI state.
@@ -232,6 +236,7 @@ func _run_lighting_sequence() -> void:
 	check(game.reset_demo(), "Lighting v1 render sequence starts from a fresh DemoState")
 	game.qa_motion_paused = true
 	game.set_dynamic(false)
+
 	game._set_actor_hover(false)
 	game._set_sword_hover(false)
 	game.set_process(false)
@@ -472,6 +477,94 @@ func _run_lighting_sequence() -> void:
 	game.qa_motion_paused = true
 	game.set_dynamic(false)
 
+func _run_clouds_sequence() -> void:
+	var previous_process := game.is_processing()
+	var previous_dynamic: bool = game.dynamic_enabled
+	var previous_lighting: bool = game.lighting_enabled
+	var previous_qa_pause: bool = game.qa_motion_paused
+	var previous_presentation_time: float = game.presentation_time
+	var previous_cloud_times := _cloud_times()
+	var state_before_clouds := _state_snapshot(game.state)
+	var cloud_report := {"screenshots": [], "pixel_deltas": {}}
+	report["clouds_v1"] = cloud_report
+
+	# The cloud comparisons share one deterministic world fixture. Disable
+	# lighting and pause QA motion so only explicit seeks and cloud uniforms vary.
+	game.qa_motion_paused = true
+	game.set_process(false)
+	game.set_lighting(false)
+	game.set_dynamic(true)
+	game.seek_presentation(0.0)
+	game.set_dynamic(false)
+	var static_frame: Image = await _capture_cloud("01_static.png")
+	game.set_dynamic(true)
+	game.seek_presentation(0.0)
+	var dynamic_t0: Image = await _capture_cloud("02_dynamic_t0.png")
+	game.seek_presentation(5.0)
+	await _capture_cloud("02b_dynamic_t5.png")
+	game.seek_presentation(10.0)
+	var dynamic_t10: Image = await _capture_cloud("03_dynamic_t10.png")
+	game.seek_presentation(20.0)
+	var dynamic_t20: Image = await _capture_cloud("04_dynamic_t20.png")
+	var valley_detail := await _capture_cloud_region("05_valley_cloud.png", dynamic_t20, CLOUD_DETAIL_RECT)
+	check(valley_detail.get_width() > 0 and valley_detail.get_height() > 0, "valley cloud detail is cropped from the actual t20 engine frame")
+
+	var static_to_dynamic := _pixel_delta(_crop_art_rect(static_frame, CLOUD_COMPARISON_RECT), _crop_art_rect(dynamic_t0, CLOUD_COMPARISON_RECT))
+	var t0_to_t10 := _pixel_delta(_crop_art_rect(dynamic_t0, CLOUD_COMPARISON_RECT), _crop_art_rect(dynamic_t10, CLOUD_COMPARISON_RECT))
+	var t10_to_t20 := _pixel_delta(_crop_art_rect(dynamic_t10, CLOUD_COMPARISON_RECT), _crop_art_rect(dynamic_t20, CLOUD_COMPARISON_RECT))
+	cloud_report.pixel_deltas["static_vs_dynamic_t0"] = static_to_dynamic
+	cloud_report.pixel_deltas["dynamic_t0_to_t10"] = t0_to_t10
+	cloud_report.pixel_deltas["dynamic_t10_to_t20"] = t10_to_t20
+	check(int(static_to_dynamic.changed_samples) == 0, "static presentation keeps clouds visible at the same cloud time as dynamic t0")
+	check(int(t0_to_t10.changed_samples) > 0 and int(t10_to_t20.changed_samples) > 0, "mountain cloud band changes across explicit dynamic time seeks")
+
+	# Isolate cloud output at t20 by temporarily zeroing only the three cloud
+	# alpha uniforms. Restore their configured values before the frozen capture.
+	var cloud_alphas: Array = []
+	for material in game._cloud_materials:
+		cloud_alphas.append(float(material.get_shader_parameter("cloud_alpha")))
+		material.set_shader_parameter("cloud_alpha", 0.0)
+	var clouds_hidden_t20: Image = await _capture_cloud("clouds_hidden_t20.png")
+	for material_index in game._cloud_materials.size():
+		game._cloud_materials[material_index].set_shader_parameter("cloud_alpha", cloud_alphas[material_index])
+	var hidden_delta := _pixel_delta(_crop_art_rect(clouds_hidden_t20, CLOUD_COMPARISON_RECT), _crop_art_rect(dynamic_t20, CLOUD_COMPARISON_RECT))
+	cloud_report.pixel_deltas["clouds_visible_vs_hidden_t20"] = hidden_delta
+	check(int(hidden_delta.changed_samples) > 0, "cloud shader alpha changes mountain pixels while Lighting is disabled")
+
+	var t20_cloud_times := _cloud_times()
+	game.set_dynamic(false)
+	var static_frozen_t20: Image = await _capture_cloud("static_frozen_t20.png")
+	game.seek_presentation(25.0)
+	var static_frozen_seek25: Image = await _capture_cloud("static_frozen_seek25.png")
+	var frozen_delta := _pixel_delta(_crop_art_rect(static_frozen_t20, CLOUD_COMPARISON_RECT), _crop_art_rect(static_frozen_seek25, CLOUD_COMPARISON_RECT))
+	cloud_report.pixel_deltas["static_t20_vs_static_seek25"] = frozen_delta
+	check(_cloud_times() == t20_cloud_times, "static mode holds t20 cloud uniforms across a later presentation seek")
+	check(int(frozen_delta.changed_samples) == 0, "static cloud band is identical after seeking beyond t20")
+	check(not game.lighting_enabled, "all Clouds v1 captures run with Lighting disabled")
+	check(state_before_clouds == _state_snapshot(game.state), "cloud render sequence preserves DemoState")
+
+	# Restore the enclosing renderer fixture before its reset-button checks.
+	game.set_process(previous_process)
+	game.qa_motion_paused = previous_qa_pause
+	game.set_dynamic(previous_dynamic)
+	game.seek_presentation(previous_presentation_time)
+	for material_index in mini(game._cloud_materials.size(), previous_cloud_times.size()):
+		game._cloud_materials[material_index].set_shader_parameter("cloud_time", previous_cloud_times[material_index])
+	game.set_lighting(previous_lighting)
+	game.refresh_environment(false)
+	if previous_lighting and game.lighting != null:
+		game.lighting.finish_transition()
+	check(game.is_processing() == previous_process, "cloud render sequence restores the enclosing process state")
+	check(game.dynamic_enabled == previous_dynamic and game.lighting_enabled == previous_lighting, "cloud render sequence restores dynamic and lighting controls")
+	check(state_before_clouds == _state_snapshot(game.state), "restoring the renderer fixture preserves DemoState")
+	var cloud_report_path := ProjectSettings.globalize_path(CLOUD_OUTPUT_DIR + "/qa-report.json")
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(CLOUD_OUTPUT_DIR))
+	var cloud_report_file := FileAccess.open(cloud_report_path, FileAccess.WRITE)
+	if cloud_report_file != null:
+		cloud_report_file.store_string(JSON.stringify(cloud_report, "  ") + "\n")
+	else:
+		check(false, "cloud QA report can be written")
+
 func _wait_until_idle() -> void:
 	var deadline := Time.get_ticks_msec() + 5000
 	while game.busy and Time.get_ticks_msec() < deadline:
@@ -547,6 +640,30 @@ func _capture(filename: String) -> Image:
 	frame_count += 1
 	return image
 
+func _capture_cloud(filename: String) -> Image:
+	await process_frame
+	await RenderingServer.frame_post_draw
+	var image: Image = root.get_texture().get_image()
+	var output_path := ProjectSettings.globalize_path(CLOUD_OUTPUT_DIR)
+	DirAccess.make_dir_recursive_absolute(output_path)
+	var error := image.save_png(output_path.path_join(filename))
+	check(error == OK, "cloud screenshot saved: " + filename)
+	report.clouds_v1.screenshots.append(filename)
+	captures["clouds-v1/" + filename] = image
+	frame_count += 1
+	return image
+
+func _capture_cloud_region(filename: String, source: Image, art_rect: Rect2) -> Image:
+	var image := _crop_art_rect(source, art_rect)
+	var output_path := ProjectSettings.globalize_path(CLOUD_OUTPUT_DIR)
+	DirAccess.make_dir_recursive_absolute(output_path)
+	var error := image.save_png(output_path.path_join(filename))
+	check(error == OK, "cloud detail screenshot saved: " + filename)
+	report.clouds_v1.screenshots.append(filename)
+	captures["clouds-v1/" + filename] = image
+	frame_count += 1
+	return image
+
 func _capture_region(filename: String, art_rect: Rect2) -> Image:
 	await RenderingServer.frame_post_draw
 	var frame: Image = root.get_texture().get_image()
@@ -558,6 +675,12 @@ func _capture_region(filename: String, art_rect: Rect2) -> Image:
 	captures[filename] = image
 	frame_count += 1
 	return image
+
+func _cloud_times() -> Array:
+	var times: Array = []
+	for material in game._cloud_materials:
+		times.append(float(material.get_shader_parameter("cloud_time")))
+	return times
 
 func _crop_art(image: Image) -> Image:
 	var transform: Transform2D = root.get_final_transform() * game._art_root.get_global_transform_with_canvas()

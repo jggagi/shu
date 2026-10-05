@@ -271,6 +271,70 @@ func _run() -> void:
 	game.set_lighting(true)
 	check(lighting.current_profile == lighting.profiles[str(rule_times[game.state.time_index])], "reset dawn profile matches the active DemoState rules")
 
+	# Clouds v1 is a presentation-only system with bounded numeric tuning.
+	var cloud_config: Dictionary = game.config.get("clouds", {})
+	check(not cloud_config.is_empty(), "cloud configuration is exposed in the scene data")
+	var far_speed := float(cloud_config.get("far_speed", NAN))
+	var valley_speed := float(cloud_config.get("valley_speed", NAN))
+	var far_alpha := float(cloud_config.get("far_alpha", NAN))
+	var valley_alpha := float(cloud_config.get("valley_alpha", NAN))
+	var cloud_distortion := float(cloud_config.get("distortion", NAN))
+	var density_cycle := float(cloud_config.get("density_cycle_seconds", NAN))
+	check(not is_nan(far_speed) and not is_inf(far_speed) and far_speed > 0.0, "far cloud speed is finite and positive")
+	check(not is_nan(valley_speed) and not is_inf(valley_speed) and valley_speed > 0.0 and far_speed > valley_speed, "far clouds move faster than positive-speed valley clouds")
+	check(not is_nan(far_alpha) and not is_inf(far_alpha) and far_alpha >= 0.0 and far_alpha <= 1.0, "far cloud alpha is finite and within 0..1")
+	check(not is_nan(valley_alpha) and not is_inf(valley_alpha) and valley_alpha >= 0.0 and valley_alpha <= 1.0, "valley cloud alpha is finite and within 0..1")
+	check(not is_nan(cloud_distortion) and not is_inf(cloud_distortion) and cloud_distortion >= 0.0 and cloud_distortion <= 0.006, "cloud distortion is finite and within 0..0.006")
+	check(not is_nan(density_cycle) and not is_inf(density_cycle) and density_cycle >= 15.0 and density_cycle <= 30.0, "cloud density cycle is finite and within 15..30 seconds")
+
+	var cloud_materials: Array = game._cloud_materials
+	check(cloud_materials.size() == 3, "Clouds v1 exposes three independent shader layers")
+	var far_cloud = game._far_layer.get_node_or_null("FarCloud")
+	var valley_behind = game._far_layer.get_node_or_null("ValleyCloudBehindPeaks")
+	var valley_across = game._mid_layer.get_node_or_null("ValleyCloudAcrossWaists")
+	var cloud_far_art = game._far_layer.get_node_or_null("FarArtwork")
+	var cloud_mid_art = game._mid_layer.get_node_or_null("MiddleArtwork")
+	check(far_cloud != null and valley_behind != null and valley_across != null, "cloud layer nodes exist at their assigned mountain depths")
+	if far_cloud != null and valley_behind != null and valley_across != null and cloud_far_art != null and cloud_mid_art != null and cloud_materials.size() == 3:
+		check(cloud_far_art.get_parent() == game._far_layer and cloud_far_art.get_index() < far_cloud.get_index(), "FarCloud follows FarArtwork on the far layer")
+		check(valley_behind.get_parent() == game._far_layer and far_cloud.get_index() < valley_behind.get_index() and game._far_layer.z_index < game._mid_layer.z_index, "ValleyCloudBehindPeaks follows FarCloud and stays behind middle peaks")
+		check(valley_across.get_parent() == game._mid_layer and cloud_mid_art.get_index() < valley_across.get_index() and game._mid_layer.z_index < game._near_layer.z_index, "ValleyCloudAcrossWaists follows MiddleArtwork and stays behind the near layer")
+		check(far_cloud.material == cloud_materials[0] and valley_behind.material == cloud_materials[1] and valley_across.material == cloud_materials[2], "cloud layer order matches the three exposed shader materials")
+
+	# Check the real _process path with QA clock motion enabled. Static mode must
+	# hold existing cloud uniforms; dynamic mode advances them with the shared
+	# presentation clock while Lighting remains disabled.
+	var prior_qa_pause: bool = game.qa_motion_paused
+	var prior_dynamic: bool = game.dynamic_enabled
+	var prior_lighting: bool = game.lighting_enabled
+	game.qa_motion_paused = false
+	game.set_dynamic(false)
+	game.set_lighting(false)
+	var gameplay_before_clouds := [game.state.day, game.state.time_index, game.state.energy, game.state.cultivation]
+	var frozen_cloud_times := _cloud_times()
+	for _frame in 4:
+		await process_frame
+	check(_cloud_times() == frozen_cloud_times, "static mode freezes cloud uniforms through actual process frames")
+	game.set_dynamic(true)
+	var advancing_cloud_times := _cloud_times()
+	for _frame in 4:
+		await process_frame
+	var advanced_cloud_times := _cloud_times()
+	check(advanced_cloud_times.size() == 3 and advancing_cloud_times.size() == 3, "dynamic cloud clock exposes all three synchronized uniforms")
+	if advanced_cloud_times.size() == 3 and advancing_cloud_times.size() == 3:
+		check(advanced_cloud_times != advancing_cloud_times, "dynamic mode advances cloud uniforms through actual process frames")
+		for cloud_time in advanced_cloud_times:
+			check(is_equal_approx(float(cloud_time), game.presentation_time), "dynamic cloud uniform follows the shared presentation clock")
+	check(not game.lighting_enabled, "cloud clock advances with Lighting disabled")
+	check(gameplay_before_clouds == [game.state.day, game.state.time_index, game.state.energy, game.state.cultivation], "cloud processing preserves day, time index, energy, and cultivation")
+	game.set_dynamic(false)
+	game.qa_motion_paused = prior_qa_pause
+	check(game.reset_demo(), "cloud clock checks leave an idle scene that resets")
+	for material in game._cloud_materials:
+		check(is_equal_approx(float(material.get_shader_parameter("cloud_time")), 0.0), "reset_demo explicitly resets each cloud uniform to time zero in static mode")
+	game.set_dynamic(prior_dynamic)
+	game.set_lighting(prior_lighting)
+
 	_finish()
 
 func _wait_until_idle() -> void:
@@ -300,6 +364,12 @@ func _full_state_snapshot() -> Dictionary:
 	snapshot["tea_session"] = game.state.tea_session
 	snapshot["time_text"] = game.state.time_text()
 	return snapshot
+
+func _cloud_times() -> Array:
+	var times: Array = []
+	for material in game._cloud_materials:
+		times.append(float(material.get_shader_parameter("cloud_time")))
+	return times
 
 func check(condition: bool, label: String) -> void:
 	checks[label] = condition

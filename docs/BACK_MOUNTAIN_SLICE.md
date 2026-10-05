@@ -131,3 +131,51 @@
 ## 源码归档授权（2026-10-05）
 
 用户在确认停止复杂光影投入后要求「推到 github」。本次将后山可玩切片、Lighting v1 实验及 D028 试玩结论、项目级 game-art 分工、选定素材／精确提示／来源和必要 QA 一并归档到既有 `jggagi/shu`。`.local/`、`.godot/`、`art/work/` 和 Python 缓存留在本机；不保存凭据。Git 提交与远端散列是源码交付证据，历史“未提交／推送”描述属于此前实现阶段。此次只更新源码，既有 gh-pages 未执行新的 Web 导出／部署。
+
+## Back Mountain Clouds v1（2026-10-05）
+
+用户已授权制作，尚待试玩拍板。复杂 Lighting v1 的视觉收益有限；本轮优先玩家肉眼可感知的环境表现，不为了物理正确性增加系统，不默认扩展复杂实时光影。只验证山间云气能否让后山有空气、距离和呼吸感。
+
+- 高空远云：一张宽幅柔淡云气层，在原画天空上、独立中景山峰后。远景 PNG 已包含天空，不能直接将云放在该不透明 PNG 后方；保留原图，通过中景透明山峰建立实际前后关系。
+- 山腰云海：两层，第一层在远景上／中景峰前轮廓后，第二层遮中景山腰、位于松树石台与人物后。没有前景云、脸前雾或 UI 遮挡。
+- 单个 `back_mountain_cloud.gdshader`，复用既有 `mist_seed=471205` 的 128² seamless NoiseTexture2D；两次纹理采样，极慢横向 UV drift、0.004 UV 正弦低频形变、24 秒平滑聚散。没有新增 PNG、每帧资源创建、模糊链或云管理器；旧轻雾及 Lighting 实验保持。
+- 实际设计画布参数：高空 7 px/s、alpha 上限 0.12；山腰前层 4 px/s、上限 0.44，后层 3.2 px/s、上限 0.352。不同固定 phase（0.3／2.2／1.1），风向同向。alpha 是局部上限，还乘软边／碎云覆盖与 0.24～1.0 的聚散因子；首版 0.18 和原画静态雾混在一起，故仅调强可见遮挡，不增技术层。
+- 没有新增 brightness response／云影接口。Clouds 在 L 关闭复杂 Lighting 后仍完整工作；Lighting 原代码、配置和默认开关保留。
+- 4／顶部动静开关：Static 留住当前云形，冻结移动、形变、聚散；Dynamic 从冻结的表现时钟继续。R 重置恢复初始云形，并保留两个开关选择。DemoState 的 day／time_index／energy／cultivation 与 train() 结算不受云影响。
+
+本轮文件为控制器、原表现 JSON、一个云 shader／UID、两份原有 QA 与本文；决定 D030 和 DEVELOPMENT 仅追加记录。场景 tscn、main、DemoState、rules、tea、Lighting 源码／配置和原始美术均不修改。复用噪声与原创 shader 来源见 [clouds-source.json](../assets/art/back_mountain_training/clouds-source.json)。
+
+### Clouds v1 验证与试玩
+
+证据目录 `.local/qa/back-mountain-clouds-v1/`。固定时钟真实引擎截图：`01_static.png`、`02_dynamic_t0.png`、`03_dynamic_t10.png`、`04_dynamic_t20.png`、`05_valley_cloud.png`。后者为实际 t20 帧的山腰局部；辅助的同帧去云图用于检查云的贡献，Static 后续 seek 图用于冻结检查。使用 seek，不等待 20 秒。
+
+Godot 4.7.2 stable：指定 checkout 的 headless 状态检查 153 条 PASS、0 FAIL；macOS Cocoa／Apple M4 Compatibility 真正渲染 157 条 PASS、0 FAIL（1152×720 和 960×600）。包含原有修炼唯一结算、拒绝／重置／viewport 热点、光影回归，以及云参数、层级、静态冻结／恢复、无养成变化检查。最终两份日志无 ERROR／FAIL；未做 Web／Windows 导出。
+
+Codex 已逐张查看 01～05：没有硬边或明显整张 PNG 平移感；中央山腰和右侧山谷局部有淡云遮挡，近景石台／人物保持清楚。10／20 秒对照的云带变化可辨，但整体仍偏克制，尚未达到整座山消失的强遮挡；不将像素变化或测试通过视为用户认为“明显更好”。辅助去云对照确认山体像素确由云改变，静态跨 seek 为 0 差异。
+
+新版 standalone 已正常启动（play.log／play-engine.log）。CUA 仍绑定旧 Lighting v1 实例，未操作旧窗口；本轮原生 OS 鼠标试玩未验证，viewport 输入检查不冒充原生试玩。Web／Windows、低配性能、长时运行和用户视觉认可尚未验证；不提交、不推送、不发布。
+
+下一唯一验收点：「现在这些云，是不是明显让后山活起来了，而且没有抢走江砚秋的注意力？」
+
+
+### Clouds v1 试玩修订：流动增强（2026-10-05）
+
+用户反馈「云的飘动我看不太出来」。初版自动渲染和截图变化通过不代表玩家能感知；保留初版证据于 `.local/qa/back-mountain-clouds-v1/before-flow-revision/`，本节参数替代上述初版参数。
+
+当前高空 14 px/s、alpha 上限 0.18；山腰前层 12 px/s、上限 0.44，后层 9.6 px/s、上限 0.352。shader 横向采样频率由 1.7 调至 2.8，让碎云有更容易追踪的柔轮廓；云带更薄、纵向曲线更不规则，色彩略向淡米白调整。聚散幅度降为 0.8～1.0，避免横移被整层淡出吞没。形变仍为 0.004，周期仍为 24 秒；层数、共享噪声、两次采样和 Lighting／玩法边界不变。
+
+指定副本状态 153 条 PASS、真实 Apple M4 Compatibility 渲染 158 条 PASS，零失败；静态跨 seek 仍为 0 差异。新增 `02b_dynamic_t5.png`，Codex 重新查看静态、0／5／10／20 秒和山腰局部，能辨认山腰碎云位置更快改变，人物和石台保持清楚。用户本 chat 回复「很好 我喜欢」，认可当前流动增强版；本轮视觉验收完成，认可范围为后山 demo 的当前云效果与参数。新版标题「蜀山后山 · Clouds v1 · 流动增强版」，启动日志为 `play-flow.log`／`play-flow-engine.log`；原生 OS 输入与 Web／Windows／低配／长时验证边界保持。无提交或推送。
+
+
+### 用户试玩认可（2026-10-05）
+
+用户「很好 我喜欢」。保留当前流动增强参数，不继续增加复杂效果。本轮后山云的视觉验收已完成；不将该认可扩为所有平台、正式产品美术标准或远端交付授权。下一切片尚未安排；当前代码未提交／推送。
+
+
+### Clouds v1 一键三连授权（2026-10-05）
+
+用户在认可流动增强版后要求「一键三连」，授权本切片源码提交／推送／PR 合并，以及既有 GitHub Pages 的独立后山试玩入口 `https://jggagi.github.io/shu/back-mountain/`。既有根路径 A/B 试玩与本机 tea C 并行修改保留。本次仅交付本 chat 的 Clouds v1 文件与必要说明，不将 tea C 纳入提交。
+
+发布 Web 从 canonical main 的合并提交 `git archive` 快照导出，临时仅覆盖快照的 `run/main_scene` 为 `res://scenes/demos/back_mountain_training.tscn`、`config/name` 为后山云实验、`config/version` 为 `0.1.0-back-mountain-clouds-v1`；正式工程入口及版本保持。声明的覆盖、引擎、提交和产物 SHA256 写入独立入口的 `build-info.json`。用匹配版本单线程 Web 模板，无新依赖。
+
+实际 commit／PR／merge／Pages 部署与浏览器输入验证以 Git、发布 `build-info.json` 及 `.local/qa/back-mountain-clouds-v1/release/` 收据为准；本节记录授权与方法，不提前声称部署成功。Windows 导出／启动不属于本次 Web 发布验证。

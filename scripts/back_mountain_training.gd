@@ -57,6 +57,8 @@ var _hair_material: ShaderMaterial
 var _near_material: ShaderMaterial
 var _waterfall_material: ShaderMaterial
 var _mist_materials: Array[ShaderMaterial] = []
+var _mist_noise: NoiseTexture2D
+var _cloud_materials: Array[ShaderMaterial] = []
 var _leaf_nodes: Array[Polygon2D] = []
 var _gust_schedule: Array[Dictionary] = []
 var _blink_schedule: Array[Dictionary] = []
@@ -80,7 +82,7 @@ var _default_hint := "点击江砚秋可修炼，点击旧剑也可修炼。"
 
 
 func _ready() -> void:
-	get_window().title = "蜀山后山 · 独自修炼 · 光影 v1"
+	get_window().title = "蜀山后山 · Clouds v1 · 流动增强版"
 	config = JSON.parse_string(FileAccess.get_file_as_string(CONFIG_PATH))
 	if not (config is Dictionary):
 		config = {}
@@ -146,6 +148,7 @@ func _build_scene() -> void:
 	_add_art_texture(ART_DIR + "mid.png", Rect2(Vector2.ZERO, ART_SIZE), _mid_layer, TextureRect.STRETCH_SCALE, "MiddleArtwork")
 	_build_waterfall()
 	_build_mist()
+	_build_clouds()
 	_near_art = _add_art_texture(ART_DIR + "near.png", Rect2(Vector2.ZERO, ART_SIZE), _near_layer, TextureRect.STRETCH_SCALE, "NearArtwork")
 	_build_near_wind()
 	_build_actor_and_sword()
@@ -290,6 +293,7 @@ func _build_mist() -> void:
 	generator.seed = int(config.get("mist_seed", 471205))
 	generator.frequency = 0.025
 	noise.noise = generator
+	_mist_noise = noise
 	var shader := load("res://assets/shaders/back_mountain_mist.gdshader") as Shader
 	if shader == null:
 		return
@@ -310,6 +314,43 @@ func _build_mist() -> void:
 		material.set_shader_parameter("mist_tint", Color("dfe7e2"))
 		mist.material = material
 		_mist_materials.append(material)
+
+
+func _build_clouds() -> void:
+	# The opaque far painting contains the sky. Place its sky wash above it,
+	# then let the separate middle peaks naturally occlude the distant washes.
+	var clouds: Dictionary = config.get("clouds", {})
+	var shader := load("res://assets/shaders/back_mountain_cloud.gdshader") as Shader
+	if shader == null or _mist_noise == null:
+		return
+	_add_cloud("FarCloud", Rect2(-24, 8, 1488, 160), _far_layer, shader,
+		float(clouds.get("far_speed", 14.0)), float(clouds.get("far_alpha", 0.18)), 0.3)
+	_add_cloud("ValleyCloudBehindPeaks", Rect2(-24, 125, 1488, 280), _far_layer, shader,
+		float(clouds.get("valley_speed", 12.0)) * 0.8, float(clouds.get("valley_alpha", 0.44)) * 0.8, 2.2)
+	# Above the middle mountain waists, below the pine, stone ledge and actor.
+	_add_cloud("ValleyCloudAcrossWaists", Rect2(-24, 195, 1488, 270), _mid_layer, shader,
+		float(clouds.get("valley_speed", 12.0)), float(clouds.get("valley_alpha", 0.44)), 1.1)
+
+
+func _add_cloud(node_name: String, rect: Rect2, parent: Control, shader: Shader,
+	speed: float, alpha: float, phase: float) -> void:
+	var cloud := ColorRect.new()
+	cloud.name = node_name
+	cloud.color = Color.WHITE
+	cloud.mouse_filter = MOUSE_FILTER_IGNORE
+	_place(cloud, rect, parent)
+	var clouds: Dictionary = config.get("clouds", {})
+	var material := ShaderMaterial.new()
+	material.shader = shader
+	material.set_shader_parameter("cloud_noise", _mist_noise)
+	material.set_shader_parameter("cloud_time", presentation_time)
+	material.set_shader_parameter("speed_uv", speed / rect.size.x)
+	material.set_shader_parameter("cloud_alpha", clampf(alpha, 0.0, 1.0))
+	material.set_shader_parameter("distortion", clampf(float(clouds.get("distortion", 0.004)), 0.0, 0.006))
+	material.set_shader_parameter("density_cycle_seconds", maxf(float(clouds.get("density_cycle_seconds", 24.0)), 0.01))
+	material.set_shader_parameter("phase", phase)
+	cloud.material = material
+	_cloud_materials.append(material)
 
 
 func _build_near_wind() -> void:
@@ -601,6 +642,8 @@ func reset_demo() -> bool:
 		lighting.advance(0.0, 0.0, dynamic_enabled, -1.0)
 	for material in _mist_materials:
 		material.set_shader_parameter("mist_time", 0.0)
+	for material in _cloud_materials:
+		material.set_shader_parameter("cloud_time", 0.0)
 	if _waterfall_material != null:
 		_waterfall_material.set_shader_parameter("flow_time", 0.0)
 	_set_wind_strength(0.0)
@@ -778,6 +821,8 @@ func _sync_shader_times() -> void:
 		_waterfall_material.set_shader_parameter("flow_time", presentation_time)
 	for material in _mist_materials:
 		material.set_shader_parameter("mist_time", presentation_time)
+	for material in _cloud_materials:
+		material.set_shader_parameter("cloud_time", presentation_time)
 	var gust := _active_gust(presentation_time)
 	var wind_strength := 0.0
 	if not gust.is_empty():

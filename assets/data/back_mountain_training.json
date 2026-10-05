@@ -101,5 +101,13 @@
   "blink_interval_min": 4.0,
   "blink_interval_max": 7.0,
   "blink_duration": 0.12,
-  "blink_seed": 194705
+  "blink_seed": 194705,
+  "clouds": {
+    "far_speed": 14.0,
+    "far_alpha": 0.18,
+    "valley_speed": 12.0,
+    "valley_alpha": 0.44,
+    "distortion": 0.004,
+    "density_cycle_seconds": 24.0
+  }
 }

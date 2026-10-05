@@ -7,6 +7,6 @@
   "DerivedName": "Shu Demo Serif",
   "Modifications": "Subset to D01 current code/data characters, static weight 550, renamed family.",
   "Tool": "fontTools 4.60.1",
-  "Codepoints": 472,
-  "DerivedSHA256": "8b57793ecde05a09cb239827cd4bafa3e8283a9a5f5e7d83d54e342cf87880d2"
+  "Codepoints": 503,
+  "DerivedSHA256": "f784bc67b0fca0478bcbe742afe5dc5ed45c8a49e33f36dcf6efef28fb87fcd8"
 }

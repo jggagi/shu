@@ -5,36 +5,129 @@
   "quest_id": "tea",
   "mode": "cultivation",
   "return_to": "activity_panel",
-  "titles": {"entry": "归剑问天", "completed": "两盏茶"},
+  "titles": {
+    "entry": "归剑问天",
+    "completed": "两盏茶"
+  },
   "source": {
     "repository": "jggagi/shu",
     "path": "story/sub/tea/README.md",
     "revision": "086e13eb11bd3710e2b7f8daa1c617c1d386be2c",
     "sha256": "20fc0889378091e70999bb0cee1ae99df28dad7da0469b9fa8ff76de20f2377c",
     "hash_basis": "UTF-8 file bytes at the pinned Git revision",
-    "story_status": "approved_direction_unimplemented"
+    "story_status": "approved_direction_ab_implemented_remaining_unimplemented"
   },
   "recurring_objects": {
-    "first_visit": ["tea.cup_first", "tea.cup_second"],
-    "ending_visit": ["tea.cup_first", "tea.cup_second"]
+    "first_visit": [
+      "tea.cup_first",
+      "tea.cup_second"
+    ],
+    "ending_visit": [
+      "tea.cup_first",
+      "tea.cup_second"
+    ]
   },
   "stages": [
-    {"id": "return_sword", "after": null, "source_section": "阶段 A：归剑问天", "capabilities": ["character_event"]},
-    {"id": "cups_first", "after": "return_sword", "source_section": "阶段 B：第一次看见两只杯子", "capabilities": ["fixed_scene", "inspect_object"]},
-    {"id": "late_dates", "after": "cups_first", "source_section": "阶段 C：第一个裂缝——谢长安没有那么早死", "capabilities": ["fixed_scene", "inspect_object", "read_document"]},
-    {"id": "medical", "after": "late_dates", "source_section": "阶段 D：第二个反转——顾青萝在谢长安死前就病了", "capabilities": ["read_document"]},
-    {"id": "letter", "after": "medical", "source_section": "阶段 E：第三个反转——谢长安也曾想抓住过去", "capabilities": ["inspect_object", "read_document"]},
-    {"id": "memory", "after": "letter", "source_section": "阶段 F：可玩回忆——今天刚认识", "capabilities": ["short_memory"]},
-    {"id": "records", "after": "memory", "source_section": "阶段 G：时间缩小成“喝茶”", "capabilities": ["read_document"]},
-    {"id": "last_day", "after": "records", "source_section": "阶段 H：最后一天", "capabilities": ["read_document", "brief_presentation"]},
-    {"id": "official_notice", "after": "last_day", "source_section": "阶段 I：真正的击穿——她根本不知道死的是谁", "capabilities": ["read_document"]},
-    {"id": "cups_return", "after": "official_notice", "source_section": "6. 结尾：回到同一个剑坪", "capabilities": ["fixed_scene", "inspect_object", "silent_tea_action"]}
+    {
+      "id": "return_sword",
+      "after": null,
+      "source_section": "阶段 A：归剑问天",
+      "capabilities": [
+        "character_event"
+      ]
+    },
+    {
+      "id": "cups_first",
+      "after": "return_sword",
+      "source_section": "阶段 B：第一次看见两只杯子",
+      "capabilities": [
+        "fixed_scene",
+        "inspect_object"
+      ]
+    },
+    {
+      "id": "late_dates",
+      "after": "cups_first",
+      "source_section": "阶段 C：第一个裂缝——谢长安没有那么早死",
+      "capabilities": [
+        "fixed_scene",
+        "inspect_object",
+        "read_document"
+      ]
+    },
+    {
+      "id": "medical",
+      "after": "late_dates",
+      "source_section": "阶段 D：第二个反转——顾青萝在谢长安死前就病了",
+      "capabilities": [
+        "read_document"
+      ]
+    },
+    {
+      "id": "letter",
+      "after": "medical",
+      "source_section": "阶段 E：第三个反转——谢长安也曾想抓住过去",
+      "capabilities": [
+        "inspect_object",
+        "read_document"
+      ]
+    },
+    {
+      "id": "memory",
+      "after": "letter",
+      "source_section": "阶段 F：可玩回忆——今天刚认识",
+      "capabilities": [
+        "short_memory"
+      ]
+    },
+    {
+      "id": "records",
+      "after": "memory",
+      "source_section": "阶段 G：时间缩小成“喝茶”",
+      "capabilities": [
+        "read_document"
+      ]
+    },
+    {
+      "id": "last_day",
+      "after": "records",
+      "source_section": "阶段 H：最后一天",
+      "capabilities": [
+        "read_document",
+        "brief_presentation"
+      ]
+    },
+    {
+      "id": "official_notice",
+      "after": "last_day",
+      "source_section": "阶段 I：真正的击穿——她根本不知道死的是谁",
+      "capabilities": [
+        "read_document"
+      ]
+    },
+    {
+      "id": "cups_return",
+      "after": "official_notice",
+      "source_section": "6. 结尾：回到同一个剑坪",
+      "capabilities": [
+        "fixed_scene",
+        "inspect_object",
+        "silent_tea_action"
+      ]
+    }
   ],
   "unresolved": [
     "触发阶段、日期及时间/精力规则",
-    "每阶段线索确认与完成条件",
+    "后续各阶段线索取得与完成条件；整条终点提交",
     "正式角色、场景、物件、文书注册与素材准备",
     "短回忆形式；不据此新增自由探索或战斗",
     "是否保留收起空杯；不可作为已批准必选行动"
-  ]
+  ],
+  "return_policy": {
+    "return_when": "quest_complete",
+    "leave_while_incomplete": false,
+    "stage_completion_is_quest_completion": false,
+    "unimplemented_next": "stay_in_branch_with_content_notice"
+  },
+  "implementation_note": "This full-chain plan is illustrative, not loadable runtime data. Current shu A/B is implemented; C-I/ending remain unimplemented. A/B completion cannot satisfy the full quest return gate."
 }

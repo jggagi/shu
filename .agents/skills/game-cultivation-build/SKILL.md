@@ -2,14 +2,14 @@
 name: game-cultivation-build
 description: "Build and iterate fixed-scene cultivation/life-sim mode in an existing Godot GDScript game: time/energy, activities, growth, character events and side quests such as tea through staged fixed scenes, object inspection, documents and short memories. Use for cultivation-mode implementation and playtest feedback; not free-roaming exploration, combat, standalone story engines or game initialization."
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Game Cultivation Build
 
-Build the cultivation loop: select activity → validate availability → perform activity or character interaction → settle time/energy and actual gains → return to the activity panel. Keep the interactive method: user direction → playable mode slice → user playtest decision → revision → next acceptance point.
+For ordinary cultivation activities, build the loop: select activity → validate availability → perform activity or character interaction → settle time/energy and actual gains → return to the activity panel. Keep the interactive method: user direction → playable mode slice → user playtest decision → revision → next acceptance point.
 
-This skill specializes in fixed-background/panel cultivation mode. Training, rest, study, character interactions and staged side quests are registered activities/events; include only those requested or already present. A side quest may use several fixed scene profiles, inspectable objects, document panels and a short memory sequence, returning to cultivation after each segment. Free-roaming exploration, combat, standalone story engines and unrelated modes require their own workflow.
+This skill specializes in fixed-background/panel cultivation mode. Training, rest, study, character interactions and staged side quests are registered activities/events; include only those requested or already present. A side quest is an embedded branch of cultivation mode. It may use fixed scene profiles, inspectable objects, documents and short memories. Keep its context until the host declares the whole quest complete; completing a stage or closing an object view does not return to the main activity panel. Preserve an explicit project/user-defined interruption policy when one exists. Free-roaming exploration, combat, standalone story engines and unrelated modes require their own workflow.
 
 ## Start with the active project and authorized slice
 
@@ -22,7 +22,7 @@ This skill specializes in fixed-background/panel cultivation mode. Training, res
 
 For a small wording or layout correction, reuse the active slice card and source references. Change the affected content/layout, check the changed branch or view, and record the feedback delta. Do not create a new episode, extract a framework or expand into full-platform regression unless the change affects those behaviors. Mandatory project reads still apply.
 
-Create or update a [mode slice card](assets/slice-card.template.md): selected activity, authoritative time/energy/growth rules, availability, entry/return behavior, source constraints for any attached event, reused capabilities and player-visible acceptance points. Do not invent costs or relationship systems to fill a template.
+Create or update a [mode slice card](assets/slice-card.template.md): selected activity, authoritative time/energy/growth rules, availability, entry/return behavior, source constraints for any attached event, reused capabilities and player-visible acceptance points. For a side quest, separate stage completion from whole-quest completion, declare its return gate, and show incomplete future content honestly without inventing completion or automatically returning to the main panel. Do not invent costs or relationship systems to fill a template.
 
 Do not silently invent replacements for named characters, rewrite the ending or schedule a stored draft for implementation. Label connective dialogue and new details as adaptations. Ask only for missing details that materially affect the story or execution boundary; make reversible layout choices and continue independent work.
 
@@ -37,13 +37,17 @@ For a multi-stage side quest, read [side-quest integration](references/side-ques
 - Prefer a scene/profile or content change when existing capabilities suffice. Extend a shared module only for a concrete missing capability; use a second real use case before making a general abstraction.
 - Keep one runtime authority in the repository. Do not duplicate addon code into the skill or editor plugin. If `painted-scene` is available and fits the scene, reuse it; otherwise retain the host adapter without making an uninstalled skill a dependency.
 
+## Object interaction within a side quest
+
+Use Object → Action → Narrative: select the scene prop, show its anchored contextual actions, then display passive narrative feedback. Ordinary inspect/ask/repair actions execute directly; display costs for cost-bearing actions and charge inspection/reading only if explicitly defined by the host; confirmation is reserved for explicitly irreversible/high-risk actions. For scene-object work, read [object interaction](references/object-interaction.md) and its [illustrative data example](assets/scene-objects.example.json). Reuse the host's installed presentation components; story logic and resource settlement stay in host/data. Do not add a second bottom-button or global-menu path for the same prop.
+
 ## Implement the cultivation loop
 
 Use the project's installed runtime. The [runtime contract](references/runtime-contract.md) describes the proposed toolkit, not an assumption that these classes already exist. With today's shu, adapt current `main.gd`, `demo_state.gd` and weather interfaces only as required by the authorized slice.
 
 Keep stable character, scene and action IDs. Resolve display names from the cast. Use whitelisted host actions; validate before committing state, return actual cost/gain and guard retried selections. Separate narrative progress and game time from presentation weather time. Keep UI independent of scene lighting.
 
-The host rules/state own day/time, energy, growth and any existing relationship values. The mode controller owns activity availability display, interaction occupancy and return to the panel; do not create a second numeric state authority. Check eligibility against current state before settlement. A rejected event action changes no resources, retains occupancy and follows `failure_next`. End, cancellation or an unrecoverable event exit releases occupancy. Reading acknowledgement is tied to the active session/node/cue instance; cancelled or reset sessions cannot advance through an old callback.
+The host rules/state own day/time, energy, growth and any existing relationship values. The mode controller owns activity availability display, interaction occupancy and return to the panel; do not create a second numeric state authority. Check eligibility against current state before settlement. A rejected action changes no resources and retains occupancy. Graph event actions follow `failure_next`; direct contextual object actions show the host rejection reason in the passive journal and stay in the branch. For ordinary character events, end/cancel releases occupancy. For an embedded side quest, stage end, object close, Escape and recoverable failures retain the branch; only its authorized whole-quest return gate releases it. Rest within the branch can advance time without returning to the main panel. A restart is a new run, not an early return within the same quest. When an explicitly awaited narrative cue exists, its acknowledgement is tied to the active session/node/cue instance; obsolete or reset callbacks cannot advance it. This cue protocol does not require confirmation for ordinary object inspection.
 
 A cast ID does not guarantee an available portrait. Check the asset index; use an appropriate text-only entrance or authorized new art when needed. Do not relabel another character's image as the new character. A new dialogue branch does not automatically add an unrelated activity.
 
@@ -51,7 +55,7 @@ If the toolkit is installed, use `say`, `choice`, `cue`, `end` nodes and its dec
 
 ## Verify, then present for playtest
 
-Run checks proportionate to the change. Observe activity → actual time/energy/growth result → another activity, character/side-quest event → return, insufficient resources, cancellation/retry and reset. For a side quest, also check stage gates, interruption/resume, spoiler-free rereading and one-time milestone settlement. Check affected layout; record build, launch, automated checks, actual UI interaction and user approval separately.
+Run checks proportionate to the change. Observe activity → actual time/energy/growth result → another activity, character event → return, insufficient resources, cancellation/retry and reset. For a side quest, check that unfinished stages and even a completed nonterminal stage cannot return to the main panel; verify in-branch rest, explicit terminal return, stage gates, spoiler-free rereading and one-time milestone settlement. Test future terminal return with a clearly marked fixture when the actual ending is not implemented; never describe the fixture as playable completion. Check affected layout; record build, launch, automated checks, actual UI interaction and user approval separately.
 
 For extraction, compare the existing playable loop before and after. For weather/presentation changes, check UI readability, scaling, pause/static mode and independence from game state. Record untested platforms accurately; producing a Web build does not verify Windows or Steam Deck.
 

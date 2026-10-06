@@ -253,10 +253,10 @@ func _build_ui() -> void:
 	weather_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	next_weather = _button("切换天气", Rect2(1103, 182, 136, 32), _next_weather)
 	next_weather.z_index = 3
-	next_weather.tooltip_text = "薄云、微风、小雨、雨歇依次预览；快捷键 5。"
+	next_weather.tooltip_text = "晴、多云、小雨平滑切换；5 循环，7／8／9 直达。"
 	weather_button = _button("静态对比", Rect2(1252, 182, 142, 32), _toggle_weather)
 	weather_button.z_index = 3
-	weather_button.tooltip_text = "关闭／开启环境动态，养成状态保持；快捷键 4。"
+	weather_button.tooltip_text = "保留当前天气并冻结环境运动；快捷键 4。"
 	weather.changed.connect(_weather_ui)
 	_weather_ui()
 	dialogue_panel = _paper(_rect("dialogue"))
@@ -288,6 +288,7 @@ func _next_weather() -> void:
 	weather.next_phase()
 
 func _refresh() -> void:
+	weather.set_time_index(state.time_index)
 	date_text.text = state.time_text()
 	energy_text.text = "精力  %d / 100" % state.energy
 	progress_text.text = "修为  %d / 60" % state.cultivation
@@ -384,6 +385,7 @@ func _reset() -> void:
 	if busy:
 		return
 	state.reset()
+	weather.reset_environment(state.time_index)
 	_tea_pacing_generation += 1
 	tea_recollection_waiting = false
 	tea_ending_waiting = false
@@ -410,6 +412,9 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		KEY_4: _toggle_weather()
 		KEY_5: _next_weather()
 		KEY_6: _open_tea()
+		KEY_7: weather.set_weather("clear")
+		KEY_8: weather.set_weather("cloudy")
+		KEY_9: weather.set_weather("light_rain")
 		KEY_ESCAPE:
 			if state.tea_active:
 				if tea_memory != null and tea_memory.visible: _close_object_popover()

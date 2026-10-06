@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "seed": 20261006,
+  "twilight_multiplier": 0.65,
+  "birds": {
+    "enabled": true,
+    "interval_min": 28.0,
+    "interval_max": 58.0,
+    "duration_min": 10.0,
+    "duration_max": 13.0,
+    "count_min": 1,
+    "count_max": 3,
+    "weather_chance": {"clear": 0.8, "cloudy": 0.45, "light_rain": 0.0}
+  },
+  "squirrel": {
+    "enabled": true,
+    "interval_min": 60.0,
+    "interval_max": 110.0,
+    "duration_min": 4.4,
+    "duration_max": 5.4,
+    "count_min": 1,
+    "count_max": 1,
+    "weather_chance": {"clear": 0.65, "cloudy": 0.5, "light_rain": 0.0}
+  },
+  "cat": {
+    "enabled": true,
+    "interval_min": 3.0,
+    "interval_max": 6.0,
+    "duration_min": 180.0,
+    "duration_max": 240.0,
+    "count_min": 1,
+    "count_max": 1,
+    "weather_chance": {"clear": 1.0, "cloudy": 1.0, "light_rain": 0.3}
+  },
+  "fish": {"enabled": false},
+  "visuals": {"bird_scale": 0.72, "bird_alpha": 0.70, "squirrel_scale": 0.58, "cat_scale": 1.15},
+  "motion": {
+    "cat_cycle_seconds": 30.0,
+    "cat_head_begin": 6.0,
+    "cat_head_seconds": 3.0,
+    "cat_tail_begin": 12.0,
+    "cat_tail_seconds": 2.0,
+    "cat_groom_begin": 15.0,
+    "cat_groom_seconds": 2.0,
+    "cat_play_begin": 19.0,
+    "cat_play_seconds": 4.5,
+    "cat_pet_seconds": 3.2,
+    "squirrel_run_fps": 9.0,
+    "squirrel_bob_pixels": 2.2
+  }
+}

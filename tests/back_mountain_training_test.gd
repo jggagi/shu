@@ -29,7 +29,7 @@ func _run() -> void:
 	if game.state == null or not (game.config is Dictionary) or not game.config.has("training_seconds"):
 		_finish()
 		return
-	# Keep the original tint checks below pinned to the v0 presentation path.
+	# Keep the preserved lighting experiment off while checking Environment v1.
 	game.set_lighting(false)
 
 	game.config.training_seconds = 0.05
@@ -81,7 +81,10 @@ func _run() -> void:
 	var expected_static = _fresh_matching(game.state)
 	var expected_static_result: Dictionary = expected_static.train()
 	var expected_static_time := str(expected_static.rules.times[expected_static.time_index])
-	var expected_static_tint := Color(str(game.config.get("time_tints", {}).get(expected_static_time, "#f4f0e5")))
+	var expected_static_profile: Dictionary = game.environment_config.time_profiles[game.environment_config.time_mapping[expected_static_time]]
+	var expected_static_color := Color(str(expected_static_profile.world_tint))
+	var expected_static_brightness := float(expected_static_profile.brightness) * float(game.environment_config.weather_profiles[game.environment_presenter.weather_id].brightness_multiplier)
+	var expected_static_tint := Color(expected_static_color.r * expected_static_brightness, expected_static_color.g * expected_static_brightness, expected_static_color.b * expected_static_brightness, 1.0)
 	game.set_dynamic(false)
 	var before_static_train := _state_snapshot(game.state)
 	var before_static_clock: String = game.state.time_text()
@@ -239,8 +242,8 @@ func _run() -> void:
 		check(game._date_label.get_canvas() != game._world_canvas.get_canvas(), "HUD labels remain on a separate UI canvas")
 	var far_art := game._far_layer.get_node_or_null("FarArtwork") as TextureRect
 	var mid_art := game._mid_layer.get_node_or_null("MiddleArtwork") as TextureRect
-	check(far_art != null and far_art.material is CanvasItemMaterial and far_art.material.light_mode == CanvasItemMaterial.LIGHT_MODE_UNSHADED, "far mountain artwork stays unshaded")
-	check(mid_art != null and mid_art.material is CanvasItemMaterial and mid_art.material.light_mode == CanvasItemMaterial.LIGHT_MODE_UNSHADED, "middle mountain artwork stays unshaded")
+	check(far_art != null and far_art.material == game.environment_adapter.far_material and game.environment_adapter.far_material.shader.code.contains("render_mode unshaded"), "far mountain artwork stays unshaded")
+	check(mid_art != null and mid_art.material == game.environment_adapter.middle_material and game.environment_adapter.middle_material.shader.code.contains("render_mode unshaded"), "middle mountain artwork stays unshaded")
 	check(lighting.occluders is Array and lighting.occluders.size() <= 2, "native lighting uses no more than two occluders")
 	if lighting.occluders is Array:
 		for occluder in lighting.occluders:

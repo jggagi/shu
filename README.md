@@ -28,6 +28,22 @@ godot --windowed --path . res://scenes/demos/back_mountain_training.tscn
 
 键盘 1 修炼、4 动静、L 原画／增强光影、R 重置。Lighting v1 保留作实验对照；用户试玩认为变化不明显，后续停止打磨这套复杂光影，优先原画、简单调色与少量微动。详见 [切片与验证](docs/BACK_MOUNTAIN_SLICE.md)、决定 D028。
 
+本机新增 **Back Mountain Environment v1.2**（太阳表现已获用户试玩认可）：同一独立场景中，真实六时辰驱动亮度／色调／晨雾，7 晴、8 多云、9 小雨，0 仅视觉夜景预览。按用户「三种天气没啥区别」反馈，已加强晴／阴亮度差、云量与雨雾，并让细雨在试玩窗口可见。时辰 1.2 秒、天气 8 秒平滑变化，4 静态保留当前环境并冻结运动；L 的旧光影实验保留，环境在关闭它时仍完整有效。晴天新增随真实时辰变化的淡金／暖橙太阳，多云、小雨与夜景会遮隐；见 [太阳修订](docs/BACK_MOUNTAIN_SLICE.md#environment-v12-晴天太阳2026-10-06)。在线链接仍是此前 Clouds 版本，本轮未发布。运行命令与截图见 [Environment v1 记录](docs/BACK_MOUNTAIN_SLICE.md#back-mountain-environment-v1客户端日期-2026-10-05)，最新检查见 [天气反馈修订](docs/BACK_MOUNTAIN_SLICE.md#environment-v11-天气反馈修订2026-10-05)。
+
+此前 **Ambient Life v1 · 山间生趣**：远鸟偶尔掠过天空，松鼠短暂经过松枝，猫偶尔在岩石边安静趴着。复用已有时辰／天气／动静状态；不影响修炼与数值。A 开关生趣，B／S／C 强制查看鸟／松鼠／猫，U 恢复自动；强制查看仍遵守天气、夜景和静态限制。没有适合鱼的水域，不启用鱼。实现、参数和本机验证见 [本轮切片](docs/BACK_MOUNTAIN_SLICE.md#ambient-life-v12026-10-06)，待用户试玩验收，未发布。
+
+此前 **Ambient Life v1.1 · 山间小动作**：猫在清晨／多云时偶尔抬头，晴天中午更多打盹，按现有风力参数轻摆尾；松鼠增加小幅迈腿、跑动起伏和停下时的尾巴调整。动作复用已有环境与事件时钟，关闭动态恢复静止；出现密度、位置与玩法保持。C 查看猫后约 6 秒可见清晨抬头、约 12 秒轻摆尾；S 查看松鼠，U 恢复自动。[修订记录](docs/BACK_MOUNTAIN_SLICE.md#ambient-life-v11猫与松鼠的小动作2026-10-06)。
+
+此前本机 **大橘猫 v1 · 摸摸与自娱**：胖乎乎的橘色虎斑猫更容易在岩石边遇见，点击猫可摸摸，它会眯眼蹭手；闲着时会舔爪、拨落叶、翻身玩。晴天中午偏爱打盹，修炼时安静待着，小雨／夜景隐藏，关闭动态保留静卧并暂停互动。C 立即查看大橘，U 恢复自动；不消耗时间或资源。[本轮记录](docs/BACK_MOUNTAIN_SLICE.md#大橘猫-v1摸摸与自娱2026-10-06)。外形、节奏与互动仍待用户试玩，未发布。
+
+当前本机窗口为 **大橘猫 v2 · 水彩画风**：按「画风有点违和」反馈，以现有后山与主角作风格参考，重新设计细线、水彩毛色、柔和阴影的胖橘。八个透明 PNG 姿态已接入，摸摸与自己玩的行为沿用 v1；旧 SVG 保留作历史。[素材与实际效果](docs/BACK_MOUNTAIN_SLICE.md#大橘猫-v2水彩画风2026-10-06)，新画风已获用户认可（2026-10-06「很好 我喜欢」），授权保存到 GitHub；在线试玩尚未更新。
+
+Mac mini 独立启动：
+
+```sh
+/Users/guoq/.local/bin/godot --windowed --path /Users/guoq/Developer/shu res://scenes/demos/back_mountain_training.tscn
+```
+
 美术制作默认采用 Codex 建立 reference、Qwen 小样检查后批量生产；项目级 [game-art skill](.agents/skills/game-art/SKILL.md) 和来源记录随源码保存，候选图与凭据不入库。
 
 ## 当前可玩：D01 听雨廊

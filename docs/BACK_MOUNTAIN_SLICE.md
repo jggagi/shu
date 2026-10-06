@@ -179,3 +179,279 @@ Codex 已逐张查看 01～05：没有硬边或明显整张 PNG 平移感；中�
 发布 Web 从 canonical main 的合并提交 `git archive` 快照导出，临时仅覆盖快照的 `run/main_scene` 为 `res://scenes/demos/back_mountain_training.tscn`、`config/name` 为后山云实验、`config/version` 为 `0.1.0-back-mountain-clouds-v1`；正式工程入口及版本保持。声明的覆盖、引擎、提交和产物 SHA256 写入独立入口的 `build-info.json`。用匹配版本单线程 Web 模板，无新依赖。
 
 实际 commit／PR／merge／Pages 部署与浏览器输入验证以 Git、发布 `build-info.json` 及 `.local/qa/back-mountain-clouds-v1/release/` 收据为准；本节记录授权与方法，不提前声称部署成功。Windows 导出／启动不属于本次 Web 发布验证。
+
+## Back Mountain Environment v1（客户端日期 2026-10-05）
+
+**状态：已授权实现、本机自动与真实渲染验证完成；尚待用户试玩验收。** 当前源码基线 `e7fa420`，`main` 上已有 tea C／完整支线并行修改均保留；没有提交、推送或部署，在线入口仍为已发布的 Clouds v1。
+
+### 目标与结构
+
+用户已确认 Clouds／cloud shadow 带来明显正向视觉价值，复杂 Lighting v1 的成本与玩家收益不相称；本轮优先简单调色、分层原画和可见的环境流动。
+
+`DemoState.time_index + rules.times → EnvironmentPresenter → BackMountainEnvironment → 既有云／雾、细雨、世界调色和艺术云影`。
+
+- 通用 presenter 是一个约 200 行的 RefCounted：读取 profile、验证 ID、确定性合成、独立时辰／天气插值和暴露当前／目标参数。没有场景节点、第二套游戏时间、养成结算、随机天气或气候模拟。
+- 后山适配器知道实际图层与 shader。保留已认可云的三层、速度、碎云轮廓和种子噪声；只调 alpha／tint，小雨将现有山腰云略压低。复用轻量云影 shader 和已有噪声，独立于旧 Lighting 开关；不叠两份云影。
+- 远景原画用低对比山色罩染与顶部渐变天空罩染，人物／近景统一 world tint × brightness。UI 留在原画布。现有听雨廊 rain shader 包含窗户 mask，因此没有照搬；新增后山专用细雨 wash，不含粒子、落地 splash 或屏幕白线阵列。
+- 保留 Lighting v1 源码、配置、原生光／接触影实验及原默认开关。L 可关闭旧实验；Environment 的时辰、云、云影、雾、雨仍生效。旧 Lighting 的调色不再覆盖 Environment 的最终参数。
+
+### 时辰与天气
+
+| 时辰 | 当前主要差异 |
+| --- | --- |
+| 卯 | 冷而湿润，亮度较低，雾较多，远山较柔。 |
+| 辰 | 开始变暖、变亮，雾稍散，远山渐清楚。 |
+| 巳 | 清亮白昼，云与山层次较清楚。 |
+| 午 | 六档中最亮，雾最少，保留原画克制用色。 |
+| 申 | 偏暖、柔和，远山对比开始下降。 |
+| 酉 | 暖暮色、明显变暗，远山逐渐沉入暮色；小雨组合仍可读。 |
+
+| 稳定天气 ID | 当前修正方向 |
+| --- | --- |
+| `clear` | 少量云气，弱云影、较少雾、稍亮、较弱风，无雨。 |
+| `cloudy` | 保留认可的云量与流速，云影恢复，天空略暗、雾稍多、风稍明显。 |
+| `light_rain` | 更多低云、明显雨雾、天空更灰、远山对比下降、略暗，加入细而低不透明度的雨线。 |
+
+六个时辰与三个天气各自定义，没有 18 份重复组合。配置在 `assets/data/back_mountain_environment.json`，最终亮度设下限。时辰 1.2 秒、天气 8 秒各自从当前画面插值；切换中断不跳帧，修炼不会让天气提早完成。小雨转晴时，雨线先用 4 秒淡出，其余云／雾／明暗继续完成 8 秒过渡。
+
+修炼接受时仍仅调用一次 `DemoState.train()`，HUD 与环境目标立即读取结算后的真实时辰，1.8 秒演出继续；只有表现参数插值，没有“半个午时”的游戏状态。Night Preview 只覆盖视觉 profile：较低亮度、冷色、单独更深的天空和较柔远山，云继续按原表现时钟移动。没有新夜景 PNG、月亮／灯火或正式夜间时辰。
+
+4 静态冻结云、雾、雨和云影的运动，保留当前时辰／天气／夜景；profile 过渡与修炼仍可进行。R 在 idle 重置真实状态、退出夜景并归初始卯时，保留选定天气与两个 A/B 开关；busy 中重置仍拒绝。
+
+### 本轮文件
+
+- 新增 `scripts/environment_presenter.gd`、`scripts/back_mountain_environment.gd`、`assets/data/back_mountain_environment.json`。
+- 新增 `assets/shaders/back_mountain_environment_art.gdshader`、`assets/shaders/back_mountain_rain.gdshader`，以及新资源 UID。
+- 修改 `scripts/back_mountain_training.gd` 接入目标／QA 控件，修正精力条与按钮重叠；场景 tscn 和原云参数／shader 不变。
+- 新增 `tests/back_mountain_environment_test.gd`；更新 `tests/back_mountain_training_test.gd` 的两处旧调色／材质断言、`tests/back_mountain_training_render.gd` 的当前环境序列。旧渲染序列保留为 `_run_legacy_lighting_clouds()`，它记录旧视觉实验；当前默认命令运行 Environment v1，不将旧像素结论复用为当前验收。
+- 后山独立字库 `ShuBackMountainSerif.ttf` 与 `source-back-mountain.json`：复用已存在 fontTools 4.60.1 和已归档源字体，扩至 291 码点；未安装依赖、未改 tea 字库。
+- README、本任务卡、DECISIONS D032、DEVELOPMENT 仅补本轮入口／状态；SPEC 没有写入调色数值或把本轮实现升级为验收。
+
+### 运行与实际验证
+
+```sh
+/Users/guoq/.local/bin/godot --windowed --path /Users/guoq/Developer/shu res://scenes/demos/back_mountain_training.tscn
+```
+
+1 或点江砚秋／旧剑修炼；4 动静；7 晴、8 多云、9 小雨；0 夜景预览；L 旧光影；R 重置。天气按钮位于顶部小区域，不盖山体。正常修炼只可达卯→巳→申，辰／午／酉作为真实 `state.time_index` QA fixture 完整验证，没有新养成行动。
+
+真正执行：Godot `4.7.2.stable.official.ed1daf0bf`，macOS／Apple M4／GL Compatibility。
+
+- `back_mountain_environment_test.gd`：93 条 PASS，零失败；全 18 组合确定性、分段推进一致、无效 ID、独立／中断过渡、雨先退、完整 DemoState／tea 字段保持、修炼目标、重置与 Lighting OFF 的实际 uniform 写入。
+- `back_mountain_training_test.gd`：153 条 PASS；修炼唯一结算、busy／低精力拒绝、动静切换、原 Lighting 与云接口回归。
+- 原 `state_test.gd`：14 条 PASS；原 `weather_test.gd`：8 条 PASS。
+- `back_mountain_training_render.gd`：98 次实际断言调用（report 中 84 个唯一名称），零失败；19 张真实 960×600 PNG。通过 viewport 真实 hit testing 点击三个天气／夜景／动静／reset／人物热点，修炼 100/0 → 78/12、卯→巳；静态连续帧一致，动态雨／云时钟和世界画面变化。全部 Environment 截图在 Lighting OFF 下生成。
+- 后山字体原始 SHA256、生成子集覆盖及 Godot 实际导入后的 `Font.has_char()` 覆盖全部控制器文案通过；`font-coverage.log` 为 PASS。最终 standalone 已打开，标题「蜀山后山 · Environment v1 · 时辰与天气」，`play.log` 无错误；不据此声称原生输入通过。
+- 25 份原始美术／来源、core、rules、天气、tea 数据、主入口及旧 Lighting 文件与本轮开始 SHA256 完全一致；`git diff --check` 通过。最终正常权限测试／渲染日志无 ERROR／FAIL。早期沙箱 macOS 证书、窗口服务及 editor settings 保存限制不作为测试通过记录。
+
+证据在 `.local/qa/back-mountain-environment-v1/`（忽略）：`state.log`、`training-state.log`、`core-state.log`、`corridor-weather.log`、`render.log`、`report.json`、`preserved-before.json`、`preserved-core-check.json`。
+
+可复跑：
+
+```sh
+/Users/guoq/.local/bin/godot --headless --path /Users/guoq/Developer/shu --script res://tests/back_mountain_environment_test.gd
+/Users/guoq/.local/bin/godot --headless --path /Users/guoq/Developer/shu --script res://tests/back_mountain_training_test.gd
+/Users/guoq/.local/bin/godot --path /Users/guoq/Developer/shu --audio-driver Dummy --script res://tests/back_mountain_training_render.gd
+```
+
+必需截图均已生成且实际查看：`01_mao_clear.png`、`02_mao_cloudy.png`、`03_mao_rain.png`；`04_wu_clear.png`、`05_wu_cloudy.png`、`06_wu_rain.png`；`07_you_clear.png`、`08_you_cloudy.png`、`09_you_rain.png`；`10_night_preview.png`；`11_cloudy_to_clear_mid.png`、`12_rain_to_clear_mid.png`。另有修炼 `13_training_start.png`、`14_training_mid.png`、`15_training_end.png`，雨运动 `rain_motion_t5.png`／`rain_motion_t10.png`，静态 `static_hold_a.png`／`static_hold_b.png`。
+
+### 视觉自评与边界
+
+Codex 逐张看了必需 12 图及修炼起／中／终帧：卯冷、午亮、酉暖暗可直接辨认；同午时晴更清楚、多云云带与暗化更明显、小雨的低云／雨雾使远山更朦胧。细雨很克制，960×600 单张图主要感受到雨气，雨线没有成为主体；夜景有深天空与远山层次，人物衣袖／五官仍可读，但当前没有独立月光亮部。暮雨偏暗但不吞掉人物，顶部／底部 UI 保持原色与可读。全部这些效果在 Lighting OFF 仍成立。以上是 Codex 的制作自评，用户是否“一眼感到时间与天气”仍待试玩。
+
+本轮未验证原生 OS 鼠标／键盘、Web／Windows 导出、低配、手机／Steam Deck或长期性能；viewport 合成输入不冒充原生输入。没有存档、声音、随机天气、天气玩法收益、季节或真正夜间玩法。外置卷 metadata 查询不可用，未绕过卷检查进行外置构建或安装；只复用现有本地工具执行本机检查。
+
+下一验收只回答：**不看时辰文字，能否感到一天正在过去？晴、多云、小雨，是否像三个不同的蜀山时刻？** Environment v1 用户认可后才考虑听雨廊作为第二 adopter。
+
+### Environment v1.1 天气反馈修订（2026-10-05）
+
+用户试玩反馈：「晴天 多云 小雨 没啥区别」。首版细雨在 960×600 下是低透明的亚像素线，多云的云量／遮光差也不足。本轮局部修订，不将此前 Codex 的视觉自评当成人的验收。
+
+- 晴：天气亮度倍率 1.12、云量倍率 0.12、雾倍率 0.35，露出清楚山峰。
+- 多云：亮度 0.90，高云／山腰云倍率 1.5／1.7、雾 1.6，增加云带与遮光。
+- 小雨：亮度 0.78、高云／山腰云 2.2、雾 4.0，远山更柔；雨线加宽至约一个显示像素、长度 16–28 原画像素，速度 250 原画像素／秒。雨在中景之后、前景与人物之前，透明边缘自然透出背景雨，脸部实心区不受影响。
+- 远／中景共同使用现有环境罩染 shader，中景雾化较轻；原云 shader／速度和复杂 Lighting 源码保持，8 秒天气／4 秒雨退、六时辰与修炼结算不变。没有新素材、粒子系统、随机天气或玩法修改。
+
+本轮代码仅改 `back_mountain_environment.json`、后山适配器、细雨 shader、后山窗口标题和相关两份检查脚本。通用 presenter 没有改接口或插值；窗口标题含 **Environment v1.1**。
+
+本机实际检查：环境状态 93、修炼回归 153、真实 Apple M4 Compatibility 渲染 119 次断言（105 个唯一名称），均 PASS；23 张 960×600 截图。新增固定同一时刻三天气的画面亮度排序，以及只改变 rain_amount、只改变 rain_time 的独立渲染检查，避免用云移动冒充雨可见。
+
+| 真实时辰 | 晴平均亮度 | 多云 | 小雨 |
+| --- | --- | --- | --- |
+| 卯 | 0.5143 | 0.4072 | 0.3492 |
+| 午 | 0.6467 | 0.5176 | 0.4392 |
+| 酉 | 0.3603 | 0.2867 | 0.2494 |
+
+这些是画面艺术区 RGB 加权均值，不是显示器测光或人类辨识度证明。固定雨时钟、只关雨，6336 个区域像素变化；只改雨时钟，9288 个区域像素变化；完整顶部／底部 UI 与脸部实心区域均零差异。渲染检查发现雨节点相对 z 顺序问题，已修正为中景内 z=0，复跑通过。
+
+日志与报告：`.local/qa/back-mountain-weather-feedback/`；原图对照在其 `before/`，当前截图在 `.local/qa/back-mountain-environment-v1/`，新增 `rain_uniform_on/off.png`、`rain_only_motion_t5/t10.png`。Codex 已观察卯／午的三天气、酉雨、夜景与过渡；暮雨／夜雨仍偏暗，人物轮廓与脸部保持可读，等待用户意见。
+
+未提交／推送／发布，Web／Windows 与原生输入未验证。下一唯一验收：不看天气文字，是否能直接认出晴、多云和小雨。试玩时每次切换保留约 8 秒完成平滑过渡。
+
+### Environment v1.2 晴天太阳（2026-10-06）
+
+用户要求「晴 可以加入太阳吗」。本轮加入小型淡金／暖橙日轮，晴天显示，多云和小雨按原 8 秒过渡淡出；夜景隐藏。位置、半径、暖色和强度写在现有六个 TimeProfile，晴可见性写在三个 WeatherProfile。薄 presenter 继续只合成／插值参数，后山适配器创建一个小型绘制日轮，云与山峰自然遮挡；没有新增真实光源、光芒、镜头效果、生成 PNG 或养成效果。
+
+清晨位于右侧较低天空，正午升高，傍晚在左侧偏暖、部分被峰顶与松枝遮挡；这是一条构图用轨迹，不代表天文模拟。修炼依据真实 DemoState 时辰平滑改变日轮位置，静态对比不伪造游戏时间，切天气也不推进资源或时辰。窗口标题 Environment v1.2。
+
+生产文件：`assets/data/back_mountain_environment.json`、`scripts/environment_presenter.gd`、`scripts/back_mountain_environment.gd`、`assets/shaders/back_mountain_sun.gdshader` 及其 UID；后山控制器仅更新窗口版本文字。当前验收重点为太阳的构图／大小与水墨画面的协调；其他场景和原始素材保持。
+
+证据目录 `.local/qa/back-mountain-sun/`；当前真实截图仍在 `.local/qa/back-mountain-environment-v1/`。未提交／推送／发布；Web／Windows、实体输入和长期性能未验证。此次请求不视为此前三天气表现已经获得认可。
+
+太阳本轮本机验证：状态检查 93 条 PASS；Apple M4／Compatibility 实际渲染 156 次断言、142 个唯一名称、25 张截图，零失败。固定时钟只关日轮，6160 个艺术区像素变化，完整顶部／底部 UI 与脸部实心区域零变化；六时辰位置、晴／云／雨可见性、晴转多云与云／雨转晴的中途淡化、夜景隐藏／恢复均通过。当前 core／rules／tea／原始后山素材等 26 份输入与本轮开始哈希一致（准确数量见 `preserved-check.json`）；太阳大小／位置／色调仍待用户试玩。清晨、正午、傍晚日轮截图已实际观察。
+
+试玩用 `.local/qa/back-mountain-sun/play_clear.gd` 打开同一真实 demo 场景，仅在开局选择晴天，方便直接看太阳；常规入口仍保持原默认天气，按 7 选择晴。此启动脚本不修改养成状态。
+
+太阳试玩验收（2026-10-06）：用户反馈「不错 我喜欢」。Environment v1.2 本轮晴天太阳表现验收通过，保留当前构图、半径、暖色与时辰位置参数。该认可不新增提交／推送／发布授权，也不代表 Web／Windows 或下一场景已验收。太阳切片收尾，下一切片尚未安排。
+
+## Ambient Life v1（2026-10-06）
+
+状态：D035 已授权实现，尚未用户试玩验收。本轮目标是让后山偶尔出现自然生命，仍保持安静、松弛。动物只属于环境表现，不产生行动、奖励、点击互动或养成效果。
+
+本轮文件：新增 `scripts/ambient_life_presenter.gd`、`scripts/back_mountain_ambient_life.gd`（及 Godot UID）、`assets/data/back_mountain_ambient_life.json`、`assets/art/ambient_life/{birds,squirrel,cat}.svg` 与 source.json、`tests/ambient_life_presenter_test.gd`、`tests/back_mountain_ambient_life_test.gd`；修改 `scenes/demos/back_mountain_training.tscn`、`scripts/back_mountain_training.gd`、`tests/back_mountain_training_render.gd`、后山专用字体 ShuBackMountainSerif.ttf 与 source-back-mountain.json，以及 README、BACK_MOUNTAIN_SLICE、DECISIONS、DEVELOPMENT 四份文档。专用字体仅补齐 QA 按钮汉字，并保留 OFL 来源；没有修改茶场景字体。
+
+`Environment state + Scene capabilities → AmbientLifePresenter → BackMountainAmbientLife`。公共 presenter 不认识场景节点、坐标或素材，只观察真实 Environment 时辰、天气、夜景 QA 与现有 dynamic 开关；场景适配器读取显式 markers，沿路径播放小型原创 SVG。Environment／Clouds／Lighting 代码与参数保持原样，其他场景不接入。
+
+### 当前 capabilities 与素材
+
+| 类型 | 启用 | 场景依据与表现 |
+| --- | --- | --- |
+| Birds | true | 开阔天空提供 `SkyBirdLane`，从左侧远天空掠向右侧，位于山峰与前景之后；1～3 只，三帧简化振翅，轻微上下起伏。 |
+| Squirrel | true | 现有松树斜枝提供 `SquirrelPath`；一次跑过一段、短停、继续跑、淡出，不驻留。 |
+| Cat | true | `CatSpot_Rock` 位于左侧现有岩石边；`spot_type=rock`、`sunny=true`、`sheltered=false`。低对比静卧，微弱呼吸，不设动物点击区。 |
+| Fish | false | 后山只有远景瀑布，没有适合呈现鱼影的近处河流、池塘或溪面；不新增水域或鱼节点。 |
+
+素材目录 `assets/art/ambient_life/`：birds.svg 72×14（三帧）、squirrel.svg 68×44、cat.svg 96×52，均为本轮原创简化矢量轮廓。来源、作者与 SHA256 在 source.json；没有复制参考作品或生成大尺寸动物图。最终大小由本轮配置控制。
+
+### 自动出现与环境关系
+
+当前参数为制作初值，位于 `assets/data/back_mountain_ambient_life.json`，不写成永久 SPEC：
+
+| 类型 | 下一机会间隔 | 一次持续 | 晴／多云／小雨机会概率 |
+| --- | --- | --- | --- |
+| Birds | 28～58 秒 | 10～13 秒 | 0.80／0.45／0 |
+| Squirrel | 60～110 秒 | 4.4～5.4 秒 | 0.65／0.50／0 |
+| Cat | 80～150 秒 | 26～48 秒 | 0.55／0.45／0.30，仅有遮雨落点时允许小雨 |
+
+机会不保证出现。成功事件结束后再采样间隔；机会未通过天气、概率、占用或修炼状态检查时，重新等待一个间隔。RandomNumberGenerator 使用明确 seed `20261006`，按定时机会抽样，逐帧只推进时钟。测试可覆盖 seed；强制 QA 不消费随机流、不修改配置或永久概率。
+
+卯／辰／巳／午正常，申／酉机会概率乘 0.65；后山夜景默认关闭全部动物。晴天猫优先 sunny 落点，多云可用普通落点，小雨只能用 sheltered 落点；当前后山没有遮雨落点，因此小雨无猫。测试中的临时屋檐 marker 只验证选择规则，不加入生产场景。没有猫寻路。
+
+同一时刻最多一个明显动态事件（鸟、松鼠或未来鱼），安静猫可共存。真实修炼 `busy` 抑制新事件。关闭生趣清空全部动物并暂停调度；Dynamic OFF 隐藏鸟和松鼠、暂停调度时钟，已有猫恢复完整静止姿态，避免停在半帧。再打开 Dynamic 恢复剩余等待；天气／夜景改变时清除不再允许的事件。
+
+### 运行与 QA 控件
+
+```sh
+/Users/guoq/.local/bin/godot --windowed --path /Users/guoq/Developer/shu res://scenes/demos/back_mountain_training.tscn
+```
+
+底部小型 QA 控件：A 生趣开关，B 远鸟、S 松鼠、C 猫，U 恢复自动。强制只绕过出现概率，仍要求 scene capability、dynamic、天气与夜景允许；强制预览暂停自动调度，U 清除强制事件并恢复自动剩余等待。原有 1 修炼、4 动静、7／8／9 天气、0 夜景、L 旧光影、R 重置继续可用。R 沿原 DemoState 重置逻辑，同时重启生趣固定 seed；Ambient adapter 自身 reset 不修改玩法。
+
+自动检查与实际 Compatibility 渲染入口：
+
+```sh
+/Users/guoq/.local/bin/godot --headless --path /Users/guoq/Developer/shu --script res://tests/ambient_life_presenter_test.gd
+/Users/guoq/.local/bin/godot --headless --path /Users/guoq/Developer/shu --script res://tests/back_mountain_ambient_life_test.gd
+/Users/guoq/.local/bin/godot --path /Users/guoq/Developer/shu --audio-driver Dummy --script res://tests/back_mountain_training_render.gd -- --ambient-life
+```
+
+尚未验证 Web／Windows、实体鼠标键盘、声音与长期运行；本机 viewport 注入点击与键盘检查单独记录，不视为实体输入验收。原游戏仍无动物声音。当前可见性／节奏由用户试玩决定，不提前迁移第二场景。
+
+### 本轮实际检查与视觉自评
+
+Mac mini／Godot 4.7.2／Apple M4／GL Compatibility 实际执行：
+
+| 检查 | 结果 |
+| --- | --- |
+| AmbientLifePresenter 固定 seed、分帧一致性、占用、强制／自动隔离、静态、天气与夜景 | 56 条 PASS |
+| 后山 Ambient 集成：完整 DemoState／tea 字段与 Environment 快照、真实 marker 移除、遮雨猫测试 fixture、重置 | 60 条 PASS |
+| 原后山修炼、动静、Lighting／Clouds 回归 | 153 条 PASS |
+| 原 Environment 状态回归 | 93 条 PASS |
+| 原核心养成 state_test | 14 条 PASS |
+| 原 Environment／太阳实际渲染回归 | 156 次断言 PASS、25 张截图 |
+| Ambient 实际 Compatibility 渲染 | 73 次断言 PASS、14 张截图；最终零失败、零引擎错误 |
+
+渲染证据目录 `.local/qa/back-mountain-ambient-life-v1/`，报告 report.json 与 ambient-render.log。实际截图：`01_base_no_life.png`、`02_birds.png`、`03_squirrel.png`、`04_cat.png`、`05_clear_life.png`、`06_cloudy_life.png`、`07_light_rain_life.png`、`08_dynamic_off.png`，另有 `02_birds_motion_start.png`、`03_squirrel_early.png`、`03_squirrel_middle.png`、`07_light_rain_no_animals_baseline.png`、`08_dynamic_off_hold.png`、`09_training_after_reset.png`。
+
+02／03／04 是明确标记的强制 QA；05／06 通过现有配置与 seed 自然调度，只有生趣时钟受控推进，其他运动冻结。晴天截图记录自然鸟事件在 58.5 秒时的约 4.10 秒龄，多云记录自然松鼠事件在 108.45 秒时的约 1.33 秒龄；这是确定性截图证据，不是实际墙钟长时间试玩。07 为真实生产 marker 的雨景，没有遮雨落点，动物全部隐藏。08 的静卧猫在两个受控时刻保持整个艺术区像素一致。
+
+实际运动对照：鸟在两个可见时刻沿路径移动超过 100 个艺术坐标像素，改变 88 个渲染像素；UI 顶／底栏和人物脸部零变化。松鼠前→中、中→后分别改变 400／403 个艺术区像素，三个截图落点均沿现有松枝。首次远鸟检查错误要求至少 100 个变化像素，导致单项失败；在实际看图确认远鸟应保持微小后，改为两次可见运动位置与正像素变化联合检查，重跑通过。首次报告与日志保留为 attempt1-report.json、attempt1-ambient-render.log。
+
+Codex 实际查看八张要求截图及鸟／松鼠运动图：鸟小、远、克制，不穿到人物前；松鼠脚点贴松枝，未横穿空背景；猫像岩石边本来就趴着的小动物，低对比、没有卖萌标记。人物仍是首要视觉主体，当前没有明显抢镜元素。建议保留三种生命的当前大小与低密度，本轮无需删猫或进一步降频；自然节奏与“山间生趣”感仍待用户试玩确认。
+
+素材三份 SHA256 与来源一致。任务起点对照的 29 份输入中 24 份一致，含 core rules／DemoState、Environment、Clouds、Lighting 与原后山美术；另外五份 main.gd、project.godot、export_presets.cfg、tea.json、tea_memory_scene.gd 在本轮外的并行写入范围发生更新，按现状保留。准确对照见 preserved-check.json，不声称并行文件未变化。`git diff --check` 通过；本轮无提交、推送或发布。
+
+下一唯一试玩问题：这些偶尔出现的小生命，是否让蜀山更有自然生命和人间烟火，同时保留安静、松弛的山间气质？
+
+## Ambient Life v1.1：猫与松鼠的小动作（2026-10-06）
+
+用户要求「猫和松鼠可以随着环境有一些动态吗」。本轮局部表现修订已授权，未获动作强度验收。只修改后山 Ambient adapter、动物 SVG 与来源、少量 motion 配置、窗口版本文字、针对性测试及记录；公共调度器、原有间隔／概率、路径／落点、Environment／Clouds／Lighting 与养成规则保持。
+
+- 猫：四个 96×52 原创姿态（静卧、小幅抬头、轻微侧看、轻摆尾），帧 0 保留原静卧轮廓。一次出现仍为 26～48 秒，大多数时间静卧；约每 18 秒中的第 6～9 秒，清晨卯／辰或多云可抬头，晴天巳／午更多睡觉。第 12～14 秒依已有 Environment 风力参数轻摆尾。小雨有遮雨落点的测试场景仍静卧，生产后山雨天仍无猫。修炼或明显动态事件（鸟／松鼠）发生时，不播放抬头／摆尾。已有微弱呼吸保留。
+- 松鼠：四个 68×44 原创姿态（停下、三帧迈腿／尾巴），继续原跑→停→跑路径与时长。跑动起伏不超过 2.2 个艺术坐标像素，风力参数仅轻微影响步频；暂停阶段脚点稳定，仅短暂调整尾巴。
+- 动作只取现有事件年龄、环境风力、天气和真实时辰，无逐帧随机和第二套环境时钟。关闭 Dynamic 隐藏松鼠并复位其姿态；已有猫恢复原静卧帧与完整静态比例，重新打开再按原事件年龄继续。
+
+素材现为四帧紧凑图集：cat.svg 384×52、squirrel.svg 272×44，运行 AtlasTexture 按原单帧大小取样；scale、颜色、位置不扩大。source.json 更新原作者与 SHA256，原有 birds.svg 不变。QA 键位与启动命令沿用上一节；窗口标题含 Ambient Life v1.1。
+
+新增实际动作截图入口：
+
+```sh
+/Users/guoq/.local/bin/godot --path /Users/guoq/Developer/shu --audio-driver Dummy --script res://tests/back_mountain_training_render.gd -- --ambient-motion
+```
+
+当前验收点：猫和松鼠的动作是否自然可见，且保持后山安静、松弛的气质？未提交、推送或发布；Web／Windows 与实体输入仍未验证。
+
+本轮实际验证：Ambient 调度器回归 56 条 PASS，后山生趣集成（含新增姿态、时辰／风力、注意力抑制、静态复位、路径边界与状态隔离）99 条 PASS；Apple M4／Compatibility 实际渲染 54 次断言 PASS、12 张 960×600 截图，零失败。证据目录 `.local/qa/back-mountain-ambient-life-v1-1/`，报告 report.json，日志 presenter.log、integration.log、motion-render.log。猫静卧→抬头改变 129 个艺术区像素，抬头→轻摆尾改变 254 个；松鼠两个跑停对照分别改变 409／415 个。
+
+实际截图：cat_age1.png、cat_age7.png、cat_age12_2.png、cat_age12_8.png、cat_wu_age7.png、cat_quick_suppressed.png、cat_busy_suppressed.png、cat_dynamic_off.png、squirrel_early.png、squirrel_run.png、squirrel_pause.png、squirrel_dynamic_off.png。全部是明确的受控 QA 姿态，不声称为自动出现或长时间试玩。Codex 已实际查看猫的静卧／抬头／摆尾、午时／静态，以及松鼠早期／跑动／暂停图：动作可见但克制，猫身体稳定留在岩石上，松鼠沿松枝，人物仍为视觉中心。建议保留本轮动作强度，待用户试玩确认。
+
+task-start 哈希对照：DemoState、rules、公共 AmbientLifePresenter、Environment presenter／adapter／data、原云 shader 与 scene marker 均未变化；后山控制器只有窗口标题更新。三份动物来源 SHA256 匹配，鸟素材未变化。`git diff --check` 通过；并行 tea 文件保留，未提交、推送或发布。
+
+## 大橘猫 v1：摸摸与自娱（2026-10-06）
+
+用户要求「我希望猫是大橘猫，可爱一点，能够和玩家互动，也能自己玩」（D036）。本轮把后山猫从安静的偶发远景元素改为更容易亲近的橘色虎斑，保留原岩石落点。方向已明确授权，外形、动作与节奏等待试玩。
+
+- 外形：圆脸、胖肚、奶油色下巴／爪子、橘色虎斑；八帧 96×72 可编辑原创 SVG，显示比例 1.15。没有新增外部参考图或图片生成调用。来源、作者及 SHA256 在 `assets/art/ambient_life/source.json`，标准库生成脚本 `tools/make_orange_cat.py` 可重建同一图集。
+- 摸摸：直接点击实际猫位置，眯眼轻蹭约 3.2 秒，底栏回应「大橘眯着眼，蹭了蹭你的手。」；过程中重复点击不重启动作。透明热点跟随实际层变换，不与主角、剑或 UI 重叠，不消耗精力／时辰，不改变修为、剧情或 Environment 状态。
+- 自娱：约每 30 秒中的第 15～17 秒舔爪，第 19～23.5 秒拨小落叶、短暂翻身，再休息。已有清晨／多云抬头与风力轻摆尾保留；晴天巳／午偏爱打盹。修炼或鸟／松鼠经过时自娱暂停，摸摸回应与自娱期间抑制新的明显生趣事件。
+- 出现：晴／多云的机会间隔 3～6 秒、白天基础概率 1，停留 180～240 秒；原调度器的傍晚概率修正保留。雨天没有遮雨落点，猫及热点隐藏；夜景不出现。关闭 Dynamic 保留静卧但禁用互动；关闭生趣隐藏猫；R 正常重置也清除摸摸状态和姿态。鸟／松鼠配置、路径、Environment 与 core rules 保持。
+
+启动仍用上方独立场景命令；窗口标题「蜀山后山 · 大橘猫 v1 · 摸摸与自娱」。C 立即查看大橘、U 恢复自动，晴／多云自动出现不需要强制 QA。底栏提示点击大橘摸摸。当前猫在清晨／多云自己玩约需等到出现后 19 秒；这项时长是可调参数。
+
+针对性验证入口：
+
+```sh
+/Users/guoq/.local/bin/godot --headless --path /Users/guoq/Developer/shu --script res://tests/back_mountain_orange_cat_test.gd
+/Users/guoq/.local/bin/godot --path /Users/guoq/Developer/shu --audio-driver Dummy --script res://tests/back_mountain_orange_cat_render.gd
+```
+
+证据目录 `.local/qa/back-mountain-orange-cat-v1/`。Web／Windows、实体输入、声音与长期运行仍未验证；本轮没有动物声音。本机实际渲染、自动检查和用户试玩认可分别记录。未提交、推送或发布。下一唯一验收点：大橘是否足够可爱，摸摸回应和自己玩是否自然可见。
+
+本机实际验证：新增猫互动集成 74 条 PASS；原生趣集成 99、公共调度器 56、原修炼 153 条 PASS。真实 Apple M4／GL Compatibility 窗口渲染 55 条断言 PASS、六张 960×600 截图，实际 viewport 鼠标点击触发摸摸，猫图像区域变化 1516 个像素，所有 DemoState 字段与该 fixture 的 Environment 状态保持。最终检查零失败、零引擎错误。首次集成发现重置后隐藏猫仍留在摸摸帧，已在 adapter reset 明确恢复帧 0 后复核通过。
+
+截图与 report.json 清楚区分：01_clear_auto_cat.png 和 03_auto_self_play_age20_4.png 为固定 seed 的自然调度（仅生趣时钟受控推进），02_mouse_pet_reaction.png 为真实 viewport 注入鼠标；04_cloudy_forced_cat.png、06_static_cat_frame0.png 为受控 QA，05_light_rain_no_cat.png 为生产无遮雨落点。并非长时间墙钟试玩或实体鼠标验收。Codex 实际查看这些画面和额外舔爪／翻身草图截图：橘色圆脸、虎斑与胖肚清晰，动作留在原岩石上，提示文字可读，主角仍为视觉中心。当前外形与节奏供用户试玩决定。
+
+渲染首次报告因误把主动切天气后的 Environment 与切换前比较而失败；第二次猫像素区域未包含 viewport 缩放，正确输入与姿态检查通过但像素检查失败。改为每个 fixture 自己的状态快照，以及实际图像坐标、稳定窗口尺寸后重跑全部通过；保留 attempt1／attempt2 日志及报告，不降低像素验收。最终日志 orange-cat-integration.log、orange-cat-render.log；原回归日志 ambient-regression.log、presenter-regression.log、training-regression.log。font 子集 306 字符覆盖 PASS，来源哈希匹配。与 v1.1 起点哈希对照确认 core rules／DemoState、公共调度器、Environment 数据和适配器、Clouds shader、scene marker 未变（preserved-check.json）；鸟／松鼠素材哈希也保持。`git diff --check` 通过，保留并行 tea 内容；未提交、推送或发布。
+
+## 大橘猫 v2：水彩画风（2026-10-06）
+
+用户认为 v1 猫「画风有点违和」，要求设计与环境／游戏统一的可爱橘猫素材（D038）。重新对照实际主角与后山背景，修正平整色块、均匀描边的问题：细而略不规则的棕灰线，水彩／淡彩毛色与柔和阴影，细毛发笔触、赭橙虎斑、米白下巴与肉爪，保持圆脸胖肚与温和表情。画风方向来自用户明确要求；具体候选仍待用户认可。
+
+本轮内置 imagegen 生成一张角色设定与八姿态图集，1774×887 RGBA，实际有 1,024,671 个全透明像素；各姿态均有透明外缘和可见猫像素。PNG 原样保存于 [orange-cat-painterly-v2.png](../assets/art/ambient_life/orange-cat-painterly-v2.png)，八姿态为静卧、抬头、侧看、摆尾、舔爪、翻身、拨叶子、摸摸回应。精确 [提示词](../art/prompts/orange-cat-painterly-v2.txt)、实际主角及 [后山风格参考](concepts/orange-cat-scene-style-v2.png) 随 provenance 保留；provider=codex-imagegen，隐藏模型不填写。此次为一只角色的画风设定与本机候选检查，没有 Qwen 量产或付费 API 调用；后续批量制作仍遵守 game-art 分工。
+
+后山已使用这份候选：Godot AtlasTexture 读取 4×2 图集，记录各帧区域与落脚锚点，保留约 96 艺术坐标宽 × 原 1.15 scale 的逻辑尺寸。PNG 没有裁切、抠图或像素修改；两处相邻姿态边界微调只发生在 atlas 坐标。跨行的空白差用锚点抵消，舔爪／翻身不在岩石上下漂移。Sprite offset 随姿态，frame metadata 表示动作编号，不再从 SVG 横向坐标推断。旧 cat.svg 与生成脚本留作 v1 历史；鸟／松鼠素材、原概率和本轮前全部猫行为不改。
+
+窗口标题「蜀山后山 · 大橘猫 v2 · 水彩画风」，运行命令与 C／U、点击摸摸沿用 v1。已实际执行：生趣集成 99 条 PASS；橘猫集成 102 条 PASS，含八姿态 alpha、图集边界、显示尺寸、热点／重复点击、全状态快照和重置；Compatibility 实际渲染 65 条 PASS、八张 960×600 截图，零失败、零引擎错误。真实 viewport 鼠标点击后的猫图像区域改变 2242 个像素，原养成与该 fixture 的 Environment 快照不变。
+
+证据在 `.local/qa/back-mountain-orange-cat-v2/`：asset-audit.json、integration.log、ambient-regression.log、render.log、report.json。截图 01_clear_auto_cat.png、02_mouse_pet_reaction.png、03_auto_groom_age15_2.png、04_auto_self_play_age20_4.png、05_auto_roll_age21.png、06_cloudy_forced_cat.png、07_light_rain_no_cat.png、08_static_cat_frame0.png。01／03／04／05 是固定 seed 自然调度、受控推进生趣年龄；06／08 为受控 QA，02 为注入鼠标，07 是生产雨景无猫。Codex 已查看八张：毛色与环境协调，圆脸可读，细线／毛发与主角比前版更接近；翻肚皮、舔爪、拨叶子和摸摸抬脸均有区别，原岩石落脚稳定，主角仍占画面视觉中心。该自评不代替用户美术认可。
+
+与前轮哈希对照，DemoState／rules、公共调度器、Environment 数据／presenter／adapter、原云 shader 和 scene marker 相同（preserved-from-v1-check.json）。SVG 历史与 raster/layout 的来源 SHA256 匹配；`git diff --check` 通过，未提交、推送或发布。Web／Windows、实体输入、声音与长期运行仍未验证。下一唯一验收点：这版橘猫是否既可爱，又像本来属于当前蜀山画面。
+
+
+### 水彩橘猫试玩认可与 GitHub 归档授权（2026-10-06）
+
+用户反馈「很好 我喜欢 保存到 github」，当前水彩橘猫美术验收通过，授权保存本轮可复现切片到 GitHub。上述待认可／未授权说明是历史阶段状态；本次归档包括猫所依赖的后山天气、太阳、生趣调度和原互动，保留并行《两盏茶》工作。使用独立功能分支，在线部署／合并未授权；本机截图和忽略目录继续留本机，不当作版本化产物。
+
+
+归档前独立验证：以远端 main 的 e7fa420 为基础，仅带入上述后山文件与相关文档，核心 DemoState／主流程／tea 数据保留该基础版本。状态 14、后山修炼 153、调度 56、环境 93、生趣 99、橘猫 102，共 517 条检查通过；真实 Compatibility 渲染 65 条、八张截图通过并实际查看。两份后山测试将并行剧情新增字段改为“存在时填充并比较”，因此保留本机完整快照覆盖，也可在 GitHub 既有状态模型上独立运行。本机证据在 `.local/qa/back-mountain-orange-cat-v2/github-stage/`，图片与缓存不入库。

@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "description": "Deterministic time and weather presentation profiles for the Back Mountain demo.",
+  "min_brightness": 0.42,
+  "transition": {
+    "time_seconds": 1.2,
+    "weather_seconds": 8.0,
+    "rain_release_seconds": 4.0
+  },
+  "time_mapping": {
+    "卯时": "mao",
+    "辰时": "chen",
+    "巳时": "si",
+    "午时": "wu",
+    "申时": "shen",
+    "酉时": "you"
+  },
+  "time_profiles": {
+    "mao": {
+      "brightness": 0.92,
+      "world_tint": "#dce9eb",
+      "sky_tint": "#94b4c6",
+      "sky_strength": 0.18,
+      "far_contrast": 0.72,
+      "mist_multiplier": 1.5,
+      "cloud_alpha_multiplier": 0.9,
+      "sun_x": 0.82,
+      "sun_y": 0.2,
+      "sun_radius": 24,
+      "sun_strength": 0.78,
+      "sun_warmth": 0.45
+    },
+    "chen": {
+      "brightness": 0.94,
+      "world_tint": "#e5e9dc",
+      "sky_tint": "#ced6c1",
+      "sky_strength": 0.08,
+      "far_contrast": 0.88,
+      "mist_multiplier": 1.1,
+      "cloud_alpha_multiplier": 1.0,
+      "sun_x": 0.74,
+      "sun_y": 0.13,
+      "sun_radius": 24,
+      "sun_strength": 0.9,
+      "sun_warmth": 0.3
+    },
+    "si": {
+      "brightness": 1.0,
+      "world_tint": "#faf3df",
+      "sky_tint": "#e8ddc2",
+      "sky_strength": 0.04,
+      "far_contrast": 0.97,
+      "mist_multiplier": 0.8,
+      "cloud_alpha_multiplier": 1.0,
+      "sun_x": 0.65,
+      "sun_y": 0.1,
+      "sun_radius": 23,
+      "sun_strength": 1,
+      "sun_warmth": 0.1
+    },
+    "wu": {
+      "brightness": 1.05,
+      "world_tint": "#fff8e8",
+      "sky_tint": "#eae4cf",
+      "sky_strength": 0.02,
+      "far_contrast": 1.0,
+      "mist_multiplier": 0.55,
+      "cloud_alpha_multiplier": 0.95,
+      "sun_x": 0.55,
+      "sun_y": 0.08,
+      "sun_radius": 23,
+      "sun_strength": 1,
+      "sun_warmth": 0.05
+    },
+    "shen": {
+      "brightness": 0.9,
+      "world_tint": "#ecd2b1",
+      "sky_tint": "#d6ac8a",
+      "sky_strength": 0.12,
+      "far_contrast": 0.82,
+      "mist_multiplier": 0.95,
+      "cloud_alpha_multiplier": 1.0,
+      "sun_x": 0.44,
+      "sun_y": 0.13,
+      "sun_radius": 26,
+      "sun_strength": 0.9,
+      "sun_warmth": 0.7
+    },
+    "you": {
+      "brightness": 0.78,
+      "world_tint": "#eac2a3",
+      "sky_tint": "#996f76",
+      "sky_strength": 0.3,
+      "far_contrast": 0.65,
+      "mist_multiplier": 1.2,
+      "cloud_alpha_multiplier": 0.9,
+      "sun_x": 0.36,
+      "sun_y": 0.21,
+      "sun_radius": 29,
+      "sun_strength": 0.75,
+      "sun_warmth": 1
+    }
+  },
+  "night_preview": {
+    "brightness": 0.55,
+    "world_tint": "#b2c1d3",
+    "sky_tint": "#23344e",
+    "sky_strength": 0.62,
+    "far_contrast": 0.52,
+    "mist_multiplier": 1.25,
+    "cloud_alpha_multiplier": 0.65,
+    "sun_x": 0.55,
+    "sun_y": 0.08,
+    "sun_radius": 23,
+    "sun_strength": 0,
+    "sun_warmth": 0.05
+  },
+  "weather_profiles": {
+    "clear": {
+      "brightness_multiplier": 1.12,
+      "mist_multiplier": 0.35,
+      "overcast_strength": 0.0,
+      "far_contrast_multiplier": 1.0,
+      "far_cloud_multiplier": 0.12,
+      "valley_cloud_multiplier": 0.12,
+      "cloud_shadow_strength": 0.025,
+      "rain_amount": 0.0,
+      "wind_strength": 0.3,
+      "sun_visibility": 1.0
+    },
+    "cloudy": {
+      "brightness_multiplier": 0.9,
+      "mist_multiplier": 1.6,
+      "overcast_strength": 0.52,
+      "far_contrast_multiplier": 0.86,
+      "far_cloud_multiplier": 1.5,
+      "valley_cloud_multiplier": 1.7,
+      "cloud_shadow_strength": 0.12,
+      "rain_amount": 0.0,
+      "wind_strength": 0.65,
+      "sun_visibility": 0.0
+    },
+    "light_rain": {
+      "brightness_multiplier": 0.78,
+      "mist_multiplier": 4.0,
+      "overcast_strength": 0.88,
+      "far_contrast_multiplier": 0.62,
+      "far_cloud_multiplier": 2.2,
+      "valley_cloud_multiplier": 2.2,
+      "cloud_shadow_strength": 0.15,
+      "rain_amount": 0.65,
+      "wind_strength": 0.85,
+      "sun_visibility": 0.0
+    }
+  }
+}

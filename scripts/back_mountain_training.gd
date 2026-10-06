@@ -1,6 +1,9 @@
 extends Control
 
 const State = preload("res://scripts/demo_state.gd")
+const Presenter = preload("res://scripts/environment_presenter.gd")
+const EnvironmentAdapter = preload("res://scripts/back_mountain_environment.gd")
+const AmbientAdapter = preload("res://scripts/back_mountain_ambient_life.gd")
 const Lighting = preload("res://scripts/back_mountain_lighting.gd")
 const CONFIG_PATH := "res://assets/data/back_mountain_training.json"
 const ART_DIR := "res://assets/art/back_mountain_training/"
@@ -20,6 +23,13 @@ var state = State.new()
 var config: Dictionary = {}
 var dynamic_enabled := true
 var lighting_enabled := true
+var environment_config: Dictionary = {}
+var environment_presenter = Presenter.new()
+var environment_adapter: Node
+var weather_buttons: Dictionary = {}
+var night_button: Button
+var ambient_life: Node
+var ambient_buttons: Dictionary = {}
 var lighting: Node
 var busy := false
 var presentation_time := 0.0
@@ -78,11 +88,11 @@ var _training_leaf_count := 1
 var _training_count := 0
 var _displayed_tint := Color.WHITE
 var _art_pointer := Vector2.INF
-var _default_hint := "点击江砚秋可修炼，点击旧剑也可修炼。"
+var _default_hint := "点击江砚秋或旧剑修炼，点击大橘摸摸。"
 
 
 func _ready() -> void:
-	get_window().title = "蜀山后山 · Clouds v1 · 流动增强版"
+	get_window().title = "蜀山后山 · 大橘猫 v2 · 水彩画风"
 	config = JSON.parse_string(FileAccess.get_file_as_string(CONFIG_PATH))
 	if not (config is Dictionary):
 		config = {}
@@ -94,8 +104,22 @@ func _ready() -> void:
 	lighting.name = "BackMountainLighting"
 	add_child(lighting)
 	lighting.setup(self)
+	lighting.set_enabled(lighting_enabled)
+	environment_config = JSON.parse_string(FileAccess.get_file_as_string("res://assets/data/back_mountain_environment.json"))
+	environment_presenter.configure(environment_config)
+	environment_adapter = EnvironmentAdapter.new()
+	environment_adapter.name = "BackMountainEnvironment"
+	add_child(environment_adapter)
+	environment_adapter.setup(self)
+	_build_environment_controls()
 	_refresh_hud()
 	refresh_environment()
+	ambient_life = AmbientAdapter.new()
+	ambient_life.name = "BackMountainAmbientLife"
+	add_child(ambient_life)
+	ambient_life.setup(self)
+	ambient_life.cat_petted.connect(_on_cat_petted)
+	_build_ambient_controls()
 	_hint_label.text = _default_hint
 	_update_controls()
 
@@ -425,7 +449,7 @@ func _build_header() -> void:
 	_add_line(Vector2(310, 18), Vector2(310, 70), Color("cdbb99"), 1)
 	_date_label = _make_label("", Rect2(342, 18, 242, 30), 23, INK)
 	_energy_label = _make_label("", Rect2(610, 12, 210, 27), 18, INK)
-	_energy_bar = _make_bar(Rect2(612, 49, 188, 12), int(state.rules.energy_max), Color("548d9a"))
+	_energy_bar = _make_bar(Rect2(612, 43, 188, 6), int(state.rules.energy_max), Color("548d9a"))
 	_cultivation_label = _make_label("", Rect2(843, 19, 214, 27), 18, INK)
 	dynamic_button = _make_button("静态对比", Rect2(1084, 23, 143, 42), _toggle_dynamic, true)
 	dynamic_button.tooltip_text = "切换环境与人物微动；快捷键 4。"
@@ -439,11 +463,11 @@ func _build_header() -> void:
 func _build_footer() -> void:
 	_add_panel(Rect2(0, FOOTER_TOP, VIEW_SIZE.x, VIEW_SIZE.y - FOOTER_TOP), Color("eee7d9"), Color("ad8959"), 1)
 	_add_line(Vector2(28, FOOTER_TOP + 11), Vector2(1412, FOOTER_TOP + 11), Color("cdbb99"), 1)
-	_hint_label = _make_label("", Rect2(38, 820, 934, 25), 17, MUTED)
+	_hint_label = _make_label("", Rect2(38, 820, 560, 25), 17, MUTED)
 	_result_label = _make_label("", Rect2(38, 848, 990, 38), 22, INK)
 	_result_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_make_label("1 修炼 · 4 静态", Rect2(1110, 829, 285, 25), 17, MUTED, HORIZONTAL_ALIGNMENT_RIGHT)
-	_make_label("R 重新开始", Rect2(1110, 855, 285, 24), 17, MUTED, HORIZONTAL_ALIGNMENT_RIGHT)
+	_make_label("1 修炼 · 4 静态", Rect2(1240, 820, 165, 25), 15, MUTED, HORIZONTAL_ALIGNMENT_RIGHT)
+	_make_label("R 重新开始", Rect2(1240, 855, 165, 24), 15, MUTED, HORIZONTAL_ALIGNMENT_RIGHT)
 
 
 func _build_scene_frame() -> void:
@@ -615,6 +639,8 @@ func request_training() -> Dictionary:
 	_update_actor_face()
 	_hint_label.text = "修炼"
 	_sync_shader_times()
+	_refresh_hud()
+	refresh_environment(true)
 	_update_controls()
 	return last_result
 
@@ -636,7 +662,11 @@ func reset_demo() -> bool:
 	_actor_sprite.scale = _actor_base_scale
 	_update_actor_face()
 	_refresh_hud()
+	set_night_preview(false, false)
 	refresh_environment()
+	environment_presenter.finish_transition()
+	_apply_environment()
+	environment_adapter.sync_motion(0.0)
 	if lighting != null:
 		lighting.cloud_time = 0.0
 		lighting.advance(0.0, 0.0, dynamic_enabled, -1.0)
@@ -647,9 +677,13 @@ func reset_demo() -> bool:
 	if _waterfall_material != null:
 		_waterfall_material.set_shader_parameter("flow_time", 0.0)
 	_set_wind_strength(0.0)
+	_apply_environment()
 	_update_leaf_art(0.0)
-	_hint_label.text = "点选江砚秋可修炼，点选旧剑也可修炼。"
+	_hint_label.text = _default_hint
 	_result_label.text = ""
+	if ambient_life != null:
+		ambient_life.reset()
+		_update_ambient_controls()
 	_update_controls()
 	return true
 
@@ -675,6 +709,7 @@ func set_dynamic(value: bool) -> void:
 	_update_dynamic_button()
 	if lighting != null:
 		lighting.advance(0.0, presentation_time, dynamic_enabled, _lighting_training_progress())
+	_apply_environment()
 
 
 func seek_presentation(seconds: float) -> void:
@@ -687,32 +722,119 @@ func seek_presentation(seconds: float) -> void:
 	_update_actor_face()
 	if lighting != null:
 		lighting.advance(0.0, presentation_time, dynamic_enabled, _lighting_training_progress())
+	_apply_environment()
 
 
 func refresh_environment(smooth: bool = false) -> void:
 	var times: Array = state.rules.times
-	if times.is_empty():
+	if times.is_empty() or environment_config.is_empty():
 		return
-	var shown_index := int(_training_receipt.get("time_index_before", state.time_index)) if busy else int(state.time_index)
-	var safe_index := clampi(shown_index, 0, times.size() - 1)
-	var time_name := str(times[safe_index])
-	var tints: Dictionary = config.get("time_tints", {})
-	var tint_text := str(tints.get(time_name, "#f4f0e5"))
-	_displayed_tint = Color(tint_text)
-	for art_node in _art_nodes:
-		art_node.modulate = _displayed_tint
-	for leaf in _leaf_nodes:
-		leaf.modulate = _displayed_tint
-	if _waterfall_material != null:
-		_waterfall_material.set_shader_parameter("flow_tint", Color("e2e9e3") * _displayed_tint)
-	for material in _mist_materials:
-		material.set_shader_parameter("mist_tint", Color("dfe7e2") * _displayed_tint)
-	var densities: Dictionary = config.get("mist_densities", {})
-	var base_density := float(densities.get(time_name, config.get("mist_density", 0.12)))
-	for i in _mist_materials.size():
-		_mist_materials[i].set_shader_parameter("mist_density", base_density * _mist_layer_factor(i))
+	var time_name := str(times[clampi(state.time_index, 0, times.size() - 1)])
+	var profile_id := str(environment_config.time_mapping.get(time_name, ""))
+	environment_presenter.set_time_profile(profile_id, smooth)
 	if lighting != null:
-		lighting.set_time_index(safe_index, smooth)
+		lighting.set_time_index(state.time_index, smooth)
+	_apply_environment()
+
+
+func _apply_environment() -> void:
+	if environment_adapter != null:
+		environment_adapter.apply_environment(environment_presenter.get_current_environment())
+	if ambient_life != null:
+		ambient_life.observe_environment()
+		_update_ambient_controls()
+
+
+func set_weather(id: String, smooth: bool = true) -> bool:
+	if not environment_presenter.set_weather(id, smooth):
+		return false
+	_apply_environment()
+	_update_environment_controls()
+	return true
+
+
+func set_night_preview(value: bool, smooth: bool = true) -> void:
+	environment_presenter.set_night_preview(value, smooth)
+	_apply_environment()
+	_update_environment_controls()
+
+
+func _build_environment_controls() -> void:
+	var labels := {"clear": "晴 · 7", "cloudy": "多云 · 8", "light_rain": "小雨 · 9"}
+	var index := 0
+	for id in labels:
+		var button := _make_button(labels[id], Rect2(330 + index * 102, 54, 96, 25), set_weather.bind(id))
+		button.add_theme_font_size_override("font_size", 15)
+		weather_buttons[id] = button
+		index += 1
+	night_button = _make_button("夜景预览 · 0", Rect2(645, 54, 163, 25), _toggle_night)
+	night_button.add_theme_font_size_override("font_size", 15)
+	night_button.tooltip_text = "仅视觉预览，不改变养成时辰。"
+	_update_environment_controls()
+
+
+func _update_environment_controls() -> void:
+	for id in weather_buttons:
+		weather_buttons[id].modulate = Color("b7d4bd") if id == environment_presenter.weather_id else Color.WHITE
+	if night_button != null:
+		night_button.text = "退出夜景 · 0" if environment_presenter.night_preview else "夜景预览 · 0"
+
+
+func _toggle_night() -> void:
+	set_night_preview(not environment_presenter.night_preview)
+
+
+func _build_ambient_controls() -> void:
+	ambient_buttons.toggle = _make_button("生趣：开 · A", Rect2(625, 820, 148, 27), _toggle_ambient_life)
+	var caps: Dictionary = ambient_life.get_capabilities()
+	if caps.birds:
+		ambient_buttons.birds = _make_button("鸟 · B", Rect2(781, 820, 76, 27), force_ambient_life.bind("birds"))
+	if caps.squirrel:
+		ambient_buttons.squirrel = _make_button("松鼠 · S", Rect2(865, 820, 89, 27), force_ambient_life.bind("squirrel"))
+	if caps.cat:
+		ambient_buttons.cat = _make_button("猫 · C", Rect2(962, 820, 77, 27), force_ambient_life.bind("cat"))
+	ambient_buttons.auto = _make_button("自动 · U", Rect2(1047, 820, 141, 27), resume_ambient_auto)
+	for button in ambient_buttons.values():
+		button.add_theme_font_size_override("font_size", 15)
+	_update_ambient_controls()
+
+
+func _update_ambient_controls() -> void:
+	if ambient_buttons.is_empty():
+		return
+	ambient_buttons.toggle.text = "生趣：开 · A" if ambient_life.presenter.enabled else "生趣：关 · A"
+	for kind in ["birds", "squirrel", "cat", "fish"]:
+		if ambient_buttons.has(kind):
+			ambient_buttons[kind].disabled = not ambient_life.presenter.can_spawn(kind)
+	ambient_buttons.auto.modulate = Color("b7d4bd") if ambient_life.presenter.auto_enabled else Color.WHITE
+
+
+func set_ambient_life(value: bool) -> void:
+	ambient_life.set_enabled(value)
+	_update_ambient_controls()
+
+
+func _toggle_ambient_life() -> void:
+	set_ambient_life(not ambient_life.presenter.enabled)
+
+
+func force_ambient_life(kind: String) -> bool:
+	var accepted: bool = ambient_life.force_event(kind)
+	_update_ambient_controls()
+	return accepted
+
+
+func resume_ambient_auto() -> void:
+	ambient_life.resume_auto()
+	_update_ambient_controls()
+
+
+func pet_cat() -> bool:
+	return ambient_life.pet_cat()
+
+
+func _on_cat_petted() -> void:
+	_hint_label.text = "大橘眯着眼，蹭了蹭你的手。"
 
 
 func _process(delta: float) -> void:
@@ -731,6 +853,10 @@ func _process(delta: float) -> void:
 			_sync_shader_times()
 	if lighting != null:
 		lighting.advance(delta, presentation_time, dynamic_enabled, _lighting_training_progress())
+	environment_presenter.advance(delta)
+	_apply_environment()
+	if ambient_life != null and not qa_motion_paused:
+		ambient_life.advance(delta, busy)
 	if busy and training_elapsed >= float(config.get("training_seconds", 1.8)):
 		_finish_training()
 
@@ -823,6 +949,8 @@ func _sync_shader_times() -> void:
 		material.set_shader_parameter("mist_time", presentation_time)
 	for material in _cloud_materials:
 		material.set_shader_parameter("cloud_time", presentation_time)
+	if environment_adapter != null:
+		environment_adapter.sync_motion(presentation_time)
 	var gust := _active_gust(presentation_time)
 	var wind_strength := 0.0
 	if not gust.is_empty():
@@ -831,6 +959,8 @@ func _sync_shader_times() -> void:
 	if busy:
 		var progress := clampf(training_elapsed / maxf(float(config.get("training_seconds", 1.8)), 0.01), 0.0, 1.0)
 		wind_strength = maxf(wind_strength, float(config.get("training_wind_strength", 0.11)) * sin(PI * progress))
+	var environment := environment_presenter.get_current_environment()
+	wind_strength *= float(environment.get("wind_strength", 1.0))
 	_set_wind_strength(wind_strength)
 
 
@@ -905,7 +1035,6 @@ func _finish_training() -> void:
 	_hint_label.text = _default_hint
 	_set_result("修为 +%d · 精力 -%d · 时间 +%d 时辰" % [gain, energy_cost, duration])
 	_refresh_hud()
-	refresh_environment(true)
 	_sync_shader_times()
 	_update_controls()
 
@@ -950,13 +1079,13 @@ func set_lighting(value: bool) -> void:
 	lighting_enabled = value
 	if lighting != null:
 		lighting.set_enabled(value)
-	refresh_environment()
+	_apply_environment()
 	_update_lighting_button()
 
 
 func _update_lighting_button() -> void:
 	if lighting_button != null:
-		lighting_button.text = "光影：增强 · L" if lighting_enabled else "光影：原画 · L"
+		lighting_button.text = "旧光影：开 · L" if lighting_enabled else "旧光影：关 · L"
 
 
 func _toggle_lighting() -> void:
@@ -988,5 +1117,23 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			_toggle_lighting()
 		KEY_4:
 			_toggle_dynamic()
+		KEY_7:
+			set_weather("clear")
+		KEY_8:
+			set_weather("cloudy")
+		KEY_9:
+			set_weather("light_rain")
+		KEY_0:
+			_toggle_night()
 		KEY_R:
 			reset_demo()
+		KEY_A:
+			_toggle_ambient_life()
+		KEY_B:
+			force_ambient_life("birds")
+		KEY_S:
+			force_ambient_life("squirrel")
+		KEY_C:
+			force_ambient_life("cat")
+		KEY_U:
+			resume_ambient_auto()

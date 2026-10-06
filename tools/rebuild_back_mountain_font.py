@@ -19,7 +19,7 @@ def main():
     root = Path(__file__).resolve().parents[1]
     if hashlib.sha256(args.font_source.read_bytes()).hexdigest() != SOURCE_SHA256:
         raise SystemExit("Unexpected source SHA256")
-    files = [root / "scripts/back_mountain_training.gd", root / "scripts/demo_state.gd",
+    files = [root / "scripts/back_mountain_training.gd", root / "scripts/back_mountain_ambient_life.gd", root / "scripts/demo_state.gd",
              root / "assets/data/rules.json", root / "assets/data/back_mountain_training.json"]
     chars = {ord(c) for p in files for c in p.read_text(encoding="utf-8") if ord(c) >= 32}
     chars |= set(range(32, 127))
@@ -46,7 +46,7 @@ def main():
               "SourceSHA256":SOURCE_SHA256, "Name":"Noto Serif SC",
               "License":"SIL Open Font License 1.1", "LicenseFile":"OFL-Serif.txt",
               "DerivedName":"Shu Back Mountain Serif", "Codepoints":len(chars),
-              "Modifications":"Subset to standalone back mountain controller/state/data; weight 550; renamed.",
+              "Modifications":"Subset to standalone back mountain controller/ambient adapter/state/data; weight 550; renamed.",
               "Tool":"fontTools " + fontTools.__version__,
               "Rebuild":"python tools/rebuild_back_mountain_font.py <source-font>",
               "DerivedSHA256":hashlib.sha256(out.read_bytes()).hexdigest()}

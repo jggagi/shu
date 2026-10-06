@@ -1,0 +1,58 @@
+{
+  "version": 4,
+  "author": "Codex for shu",
+  "source": "Original SVG birds/squirrel and retained legacy cat; painterly orange cat v2 provenance is recorded separately under raster_cat.",
+  "license": "Original project assets; no repository-wide license specified",
+  "engine": "Godot 4.7.2 stable",
+  "files": {
+    "birds.svg": {
+      "sha256": "5f3c8c9d98cc35279ec95e3f44fe89970c4c0f0747e4cd2a6b77cd6a0abfbfcd"
+    },
+    "cat.svg": {
+      "sha256": "2c4925f188e5400dc5df460c224cd5204551b019b8e8935d7c425e883fcc5064"
+    },
+    "squirrel.svg": {
+      "sha256": "4560100f32e1462f364706bc960566a24e117b9068e7a52c1a3b921bf2e2e63f"
+    }
+  },
+  "selection": "Painterly orange cat v2 art accepted by user on 2026-10-06; GitHub source archive authorized.",
+  "animation": {
+    "cat.svg": "Eight original 96x72 orange-tabby poses: resting, head lift, glance, tail flick, grooming, rolling, pawing a leaf, pet response.",
+    "squirrel.svg": "Four 68x44 original poses: pause and three running/tail poses."
+  },
+  "generator": "tools/make_orange_cat.py rebuilds retained legacy SVG cat only; v2 raster was generated with built-in imagegen.",
+  "raster_cat": {
+    "file": "assets/art/ambient_life/orange-cat-painterly-v2.png",
+    "layout": "assets/art/ambient_life/orange-cat-layout-v2.json",
+    "provider": "codex-imagegen",
+    "model": null,
+    "purpose": "Single character art-direction and eight-pose design sheet selected for the local Back Mountain demo",
+    "author": "Codex using built-in image generation for shu",
+    "license": "Project-generated candidate asset; no repository-wide license specified",
+    "prompt_file": "art/prompts/orange-cat-painterly-v2.txt",
+    "references": [
+      "assets/art/back_mountain_training/actor-sheet.png",
+      "docs/concepts/orange-cat-scene-style-v2.png"
+    ],
+    "size": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "poses": [
+      "rest",
+      "head lift",
+      "glance",
+      "tail curl",
+      "groom",
+      "roll",
+      "paw leaf",
+      "pet response"
+    ],
+    "modifications": "Generated PNG copied byte for byte. Godot AtlasTexture uses recorded regions and foot pivots; no pixel edits.",
+    "sha256": "7b2d03c74bc347eb226f56901383227af481f5744617fe60a6209c5cc63b50e6",
+    "layout_sha256": "cc2d80b79e6f7faace59d0caeedec467f7880d5284026772fcf20ea0d829f480",
+    "status": "user approved on 2026-10-06",
+    "legacy": "cat.svg retained as v1 rejected-style history; no longer used in scene"
+  }
+}

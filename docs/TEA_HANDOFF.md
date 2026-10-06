@@ -1,5 +1,7 @@
 # 《两盏茶》当前交接（2026-10-06）
 
+制作方法整理时重新核对（2026-10-06）：[Tea PR #4](https://github.com/jggagi/shu/pull/4) 已 MERGED，功能分支 head 为 `973c4b2`，实时 remote main 为 `89e4369`；本机仍是 dirty 的 `main/e7fa420`。完整 Tea 源码与运行正文已在远端，下面的“不合并／归档分支”是先前交付时点，不再描述当前 PR 状态。完整体验/最新过去画面仍待用户拍板，本轮未核对或更新线上部署；事实比较与 skill 入口见 [制作方法 v1](SCENE_REUSE_HANDOFF.md)。不 pull/reset/clean 本机并行内容。
+
 用户本轮要求「总结目前状态，提交到 GitHub，我会新开 chat 继续开发」，已授权本轮源码提交与推送；不据此认定完整视觉验收或线上发布。归档分支为 `codex/tea-full-past-scenes`，基于最新 main `07bd2ee`（已含独立后山橘猫合并）。准确提交号看该分支 Git 记录；不合并或部署 Pages。
 
 ## 当前可玩状态

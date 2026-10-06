@@ -1,6 +1,8 @@
 # 开发流程与扩展计划
 
-更新日期：2026-10-05。产品要求以 [SPEC.md](SPEC.md) 为准。
+当前制作方法入口（2026-10-06）：[Shu fixed-scene production method v1](SCENE_REUSE_HANDOFF.md)。两份新 scene/ambient skills、game-art 场景校准及 cultivation observer 边界只整理已有经验；下一验收切片为 **Tingyu Corridor — Second Adopter**，目标与二场景试玩后才考虑 addon 的门槛见该入口。本轮不实施迁移。实时 PR/main 状态以该快照为准，下方保留既有切片历史。
+
+更新日期：2026-10-06。产品要求以 [SPEC.md](SPEC.md) 为准。
 
 ## 环境与当前入口
 

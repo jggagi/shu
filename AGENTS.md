@@ -42,8 +42,12 @@
 - 日常修 bug 或剧情编辑不重新初始化。重复接入只补缺，不覆盖已有规则或修改 override 优先级。
 
 
-## 养成模式制作 skill
+## 场景制作 skill routing
 
-- 养成行动、人物互动与固定场景支线制作读取 `.agents/skills/game-cultivation-build/SKILL.md`；相关引用按当前任务读取，仍遵守本文件的四份必读资料。
+- 固定画景、天气、时辰与环境动态 → `.agents/skills/game-painted-scene-build/SKILL.md`。
+- 环境动物、生趣、scene capability 与 ambient scheduling → `.agents/skills/game-ambient-life-build/SKILL.md`。
+- Raster art production → `.agents/skills/game-art/SKILL.md`。
+- 养成行动、人物互动、物品叙事与支线 → `.agents/skills/game-cultivation-build/SKILL.md`。
+- 相关引用按当前任务读取，仍遵守本文件的四份必读资料。Skill 保存制作流程与验收方法，不代表 runtime/addon 已安装。
 - skill 未被当前 chat 自动发现时直接读取仓库文件，不因此安装全局 skill 或重新初始化。运行合同不代表对应 addon 已存在。
-- 下一 chat 的 tea 工作入口为 `docs/TEA_HANDOFF.md`。保持历史原稿与新的支线归档规则，先交付可试玩的选定阶段，不一次实现全部剧情。
+- 下一 chat 的 tea 工作入口为 `docs/TEA_HANDOFF.md`。保持历史原稿与新的支线归档规则，按当前授权和实际代码选择小型修订，不用历史阶段边界否定已实现的完整支线。

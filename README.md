@@ -107,6 +107,8 @@ godot --path . --audio-driver Dummy --script res://tests/weather_render.gd
 
 ## 制作 skill 与下一轮 tea
 
-养成模式制作入口：[game-cultivation-build](.agents/skills/game-cultivation-build/SKILL.md)，仓库级 0.1.1；支持养成行动、人物互动及 tea 等固定场景支线。运行模块/编辑器插件仍为设计，尚未实现。
+养成模式制作入口：[game-cultivation-build](.agents/skills/game-cultivation-build/SKILL.md)，仓库级 0.1.1；支持养成行动、人物互动及 tea 等固定场景支线。拟议的 cultivation toolkit／编辑器插件仍为设计，尚未实现。
+
+固定画景、时辰／天气与环境动态使用 [game-painted-scene-build](.agents/skills/game-painted-scene-build/SKILL.md)；低频环境动物与场景能力使用 [game-ambient-life-build](.agents/skills/game-ambient-life-build/SKILL.md)；raster 素材由 [game-art](.agents/skills/game-art/SKILL.md) 制作并在真实场景校准。现有 Environment/Ambient presenters 是 reusable shu modules，`shu_scene_runtime` addon 尚未实现。事实校准、运行边界与下一阶段 **Tingyu Corridor — Second Adopter** 见 [制作方法 v1](docs/SCENE_REUSE_HANDOFF.md)，本轮只整理方法，不迁移听雨廊。
 
 [工具包设计](docs/CULTIVATION_MODE.md) · [检查记录](docs/CULTIVATION_MODE_CHECKS.md) · [新 chat 的 tea 交接](docs/TEA_HANDOFF.md)。A/B 与阶段 C 已验收；完整调查和过去场景已实现，D01 养成保持可用；新画面与完整体验继续由用户试玩拍板。

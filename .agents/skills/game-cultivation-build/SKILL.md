@@ -35,7 +35,7 @@ For a multi-stage side quest, read [side-quest integration](references/side-ques
 - After mandatory project reads, inspect the selected source, affected characters/scenes/actions, their interface definitions and relevant tests. Use indexes to choose dependencies; invalidate cached summaries when source hashes or contract versions change.
 - Record the affected file list and contract versions in the slice card. If a story is too large, split at a meaningful narrative boundary and keep ending constraints in every applicable card.
 - Prefer a scene/profile or content change when existing capabilities suffice. Extend a shared module only for a concrete missing capability; use a second real use case before making a general abstraction.
-- Keep one runtime authority in the repository. Do not duplicate addon code into the skill or editor plugin. If `painted-scene` is available and fits the scene, reuse it; otherwise retain the host adapter without making an uninstalled skill a dependency.
+- Keep one runtime authority in the repository. Do not duplicate addon code into the skill or editor plugin. For fixed painted environments route to repository `game-painted-scene-build`; for scene capabilities and ambient scheduling route to `game-ambient-life-build` when present. These are production-method skills, not runtime libraries. Retain the installed host adapter; do not invent an addon dependency.
 
 ## Object interaction within a side quest
 
@@ -52,6 +52,10 @@ The host rules/state own day/time, energy, growth and any existing relationship 
 A cast ID does not guarantee an available portrait. Check the asset index; use an appropriate text-only entrance or authorized new art when needed. Do not relabel another character's image as the new character. A new dialogue branch does not automatically add an unrelated activity.
 
 If the toolkit is installed, use `say`, `choice`, `cue`, `end` nodes and its declared contract version. Validate references before activation. Never execute script text from narrative data. Preserve source art, provenance and notices when adapting assets.
+
+## Presentation observers
+
+Environment and Ambient Life are presentation observers. They may read authoritative time, weather and foreground/busy state; they must not independently modify energy, gameplay time, growth or quest progress. Cultivation host state remains the sole gameplay authority. The scene adapter maps presentation parameters to its nodes, materials, paths, contact anchors and hitboxes; neither a skill nor a presenter owns a second settlement path.
 
 ## Verify, then present for playtest
 

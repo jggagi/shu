@@ -17,6 +17,16 @@ For Codex references or an explicitly requested Codex image/edit, use the availa
 
 Use the repo CLI for bulk, many candidates, routine props/backgrounds/sprites/NPCs and explicit Qwen requests. Default to `qwen-image-3.0`. Pass `--model qwen-image-3.0-pro` only on explicit user request. A missing Qwen configuration requires its two environment variables; do not choose a paid OpenAI fallback. Real generations cost money: run them only within the user's requested scope. Validation stays offline unless the user explicitly requests a real online generation test. Do not retry failed/uncertain billable calls automatically.
 
+## Scene-calibrated game assets
+
+素材本身好看 ≠ 放进游戏场景后成立。Inspect the actual game scene and existing cast/style first; establish or select a reference before producing transparent character, animal or prop poses. Review a small sample in the real scene before expanding a batch.
+
+Check intended display scale, silhouette, value/color, edge quality and visual weight against the scene, including nearby actors and the dominant composition. Inspect alpha and crop, then check contact with the actual ground, branch or furniture; approval on a transparent checkerboard alone is insufficient. Back Mountain's orange-cat revision is a concrete example: the flat SVG was technically usable but felt foreign; scene-referenced watercolor poses and per-pose anchors addressed the mismatch.
+
+For multi-pose assets, record pose identity, crop/atlas region, foot or contact anchor (with coordinate origin/units) and intended display scale. Preserve exact prompts, references, author/provider, usage/permission notes and SHA256 alongside selected assets. Pose changes should preserve contact and apparent body size when placed in the scene.
+
+This skill delivers raster assets, pose sheets, inspected alpha, crop/contact metadata and art provenance. Final Godot clickable rects, Area2D/Control hitboxes, input gating and coordinate transforms belong to the implementation skill / scene adapter; an art crop is not an interaction contract.
+
 ## Repository workflow
 
 - Inspect `art/config.json` and existing provenance before selecting destinations. Reuse the target game's existing reference and approved-asset directories; preserve existing `source.json` records. The starter configuration uses `docs/concepts` for references and `assets/art` for approved assets, `art/work` for candidates, `art/prompts` for exact prompts and `art/manifest.jsonl` for provenance. Empty working directories are created on demand. For Godot projects, `art/.gdignore` excludes this production workspace from import.

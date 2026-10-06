@@ -1,0 +1,22 @@
+{
+  "memory_return_ms": 1100,
+  "first_cup_pause_ms": 2000,
+  "filled_cups_hold_ms": 1500,
+  "investigation_hints": {
+    "tea.household": "柜边的两副碗筷",
+    "tea.ledger": "桌上的生活账册",
+    "tea.medical_early": "药罐旁的早期诊录",
+    "tea.medical_habits": "桌上的后续诊录",
+    "tea.cabinet": "柜中旧物",
+    "tea.letter": "桌上的旧信",
+    "tea.memory": "桌上的旧记",
+    "tea.record_early": "书页左侧的早期旧记",
+    "tea.record_late": "书页中间的后期旧记",
+    "tea.record_last": "书页右侧的最后旧记",
+    "tea.last_day": "桌上的末页",
+    "tea.notice_death": "桌边的后事记录",
+    "tea.notice_cups": "桌上的午后记录",
+    "tea.cup_first": "第一只旧杯",
+    "tea.cup_second": "第二只旧杯"
+  }
+}

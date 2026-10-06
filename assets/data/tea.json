@@ -1,5 +1,5 @@
 {
-  "content_version": "tea-ab-object-2",
+  "content_version": "tea-past-local-1",
   "quest_id": "tea",
   "scene_id": "tea.sword_terrace",
   "entry_title": "归剑问天",
@@ -56,5 +56,49 @@
     "source": "2026-10-05 用户 object-centric interaction 请求",
     "note": "首杯描述采用用户指定文字，修补反馈采用用户示例；询问复用既有 rumor，第二杯 text 和 impression 保留原稿。只用于当前 UI 适配，不是新支线稿。"
   },
-  "stage_complete_notice": "本段线索已收齐；支线后续尚未开放。"
+  "stage_complete_notice": "本段线索已收齐，可以沿石阶前往旧院。",
+  "courtyard": {
+    "scene_id": "tea.old_courtyard",
+    "title": "归剑问天 · 问天峰旧院",
+    "intro": "旧院就在剑坪后。把旧剑放回去之前，看看这里留下的日常。",
+    "impression": "谢长安没有在传闻所说的时候死去。他们在这里一起生活了许多年。",
+    "stage_complete_notice": "药罐旁还有几张诊录。",
+    "objects": {
+      "tea.household": {
+        "label": "两副碗筷",
+        "text": "柜边放着两副碗筷。两件冬衣的袖口反复补过，窗上也留着几次修补的痕迹。药罐旁，一只碗用来接漏下的水。\n\n不像专为纪念谁而留下的陈设。这里曾有人生火、吃饭、过冬，把日子过了很久。",
+        "actions": [],
+        "popover_width": 410,
+        "description_height": 245,
+        "requires": []
+      },
+      "tea.ledger": {
+        "label": "生活账册",
+        "text": "起页记着两人迁居问天峰的年份。山下传闻，也从这一年起说谢长安已死。\n账上却一直有添米、补衣、买药的支出。\n\n其后第十一年，仍记着两人的衣食用度。\n谢长安没有在传闻所说的时候死去。他们在这里一起生活了许多年。",
+        "actions": [],
+        "popover_width": 410,
+        "description_height": 245,
+        "requires": [
+          "tea.household"
+        ]
+      },
+      "tea.coats": {
+        "label": "两件冬衣",
+        "text": "两件冬衣的袖口反复补过。",
+        "actions": []
+      },
+      "tea.medicine_pot": {
+        "label": "药罐",
+        "text": "药罐旁，一只碗用来接漏下的水。",
+        "actions": []
+      },
+      "tea.window": {
+        "label": "修补过的窗",
+        "text": "窗上留着几次修补的痕迹。",
+        "actions": [],
+        "popover_below": true
+      }
+    },
+    "ui_adaptation": "生活物件短描述从 sub 的 tea.household 拆分；账册两页并排在同一锚定浮层直接阅读，不增世界历法或剧情。"
+  }
 }

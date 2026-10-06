@@ -1,0 +1,27 @@
+{
+  "version": "tea-c-reference-1",
+  "status": "accepted_for_stage_c_local_slice",
+  "user_accepted": true,
+  "author": "AI generated under user-directed shu game-art workflow",
+  "provider": "codex-imagegen",
+  "model": null,
+  "purpose": "old courtyard scene reference used for stage C local art review",
+  "license_usage": "User-authorized shu project generation; provider terms apply; no purchased or third-party copied image",
+  "prompt_file": "art/prompts/tea-courtyard-reference-v1.txt",
+  "references": [],
+  "candidate": "art/work/tea-courtyard-reference-v1.png",
+  "file": "tea-courtyard-reference-v1.png",
+  "sha256": "cc01552fd82f23edc20c3a2a2b4fda2df505022568d9116919c6a04917273d26",
+  "review": {
+    "framing": "five original stage-C props separated; hotspots adjusted to actual composition",
+    "text": "no legible generated text, watermark or signature observed",
+    "characters": "no new cast image",
+    "alpha": "opaque background; no cutout required",
+    "production_note": "Qwen environment not configured in this session; one built-in reference selected, no batch production"
+  },
+  "user_acceptance": {
+    "date": "2026-10-05",
+    "basis": "本 chat 用户：验收通过",
+    "scope": "本轮阶段 C 可玩切片，未升级为全项目最终美术标准"
+  }
+}

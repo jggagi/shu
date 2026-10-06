@@ -7,6 +7,7 @@ var session := 0
 var buttons: Dictionary = {}
 var anchor_x := 0.0
 var anchor_point := Vector2.ZERO
+var below_object := false
 
 func present(data: Dictionary, actions: Array, object_rect: Rect2, scene_size: Vector2, active_session: int) -> void:
 	for child in get_children():
@@ -15,10 +16,16 @@ func present(data: Dictionary, actions: Array, object_rect: Rect2, scene_size: V
 	buttons.clear()
 	object_id = data.id
 	session = active_session
-	size = Vector2(310, 138 + actions.size()*48)
+	var width := float(data.get("popover_width",310))
+	var description_height := float(data.get("description_height",74))
+	var action_y := 54.0 + description_height + 2.0
+	size = Vector2(width, action_y + 10 + actions.size()*48)
 	position = Vector2(clampf(object_rect.get_center().x-size.x/2, 18, scene_size.x-size.x-18), maxf(18, object_rect.position.y-size.y-22))
+	below_object = bool(data.get("popover_below",false))
+	if below_object:
+		position.y = object_rect.end.y + 22
 	position.y = minf(position.y, scene_size.y-size.y-24)
-	anchor_point = Vector2(object_rect.get_center().x, object_rect.position.y-5)-position
+	anchor_point = Vector2(object_rect.get_center().x, object_rect.end.y+5 if below_object else object_rect.position.y-5)-position
 	anchor_x = clampf(anchor_point.x, 24, size.x-24)
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	var paper := NinePatchRect.new()
@@ -31,18 +38,18 @@ func present(data: Dictionary, actions: Array, object_rect: Rect2, scene_size: V
 	paper.scale = Vector2(0.07,0.07)
 	paper.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(paper)
-	_label(data.label, Rect2(20,12,270,35),25)
-	var description := _label(data.text, Rect2(20,52,270,74),19)
-	description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_label(data.label, Rect2(20,12,width-40,35),25)
+	var description := _label(data.text, Rect2(20,52,width-40,description_height),19,true)
+
 	for i in actions.size():
 		var action: Dictionary = actions[i]
 		var button := Button.new()
-		button.text = action.label + (" · 已完成" if action.done else "   精力 -%d" % action.cost)
+		button.text = action.label + (" · 已完成" if action.done else ("   精力 -%d" % action.cost if action.get("show_cost",true) else ""))
 		button.disabled = not action.enabled
 		button.tooltip_text = action.reason
 		button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-		button.position = Vector2(19,128+i*48)
-		button.size = Vector2(272,40)
+		button.position = Vector2(19,action_y+i*48)
+		button.size = Vector2(width-38,40)
 		button.add_theme_font_size_override("font_size",20)
 		for style in ["normal","hover","pressed","focus","disabled"]:
 			var box := StyleBoxFlat.new()
@@ -65,8 +72,10 @@ func present(data: Dictionary, actions: Array, object_rect: Rect2, scene_size: V
 func _request(id: String, action_id: String, active_session: int) -> void:
 	action_requested.emit(id, action_id, active_session)
 
-func _label(text: String, rect: Rect2, font_size: int) -> Label:
+func _label(text: String, rect: Rect2, font_size: int, wrap: bool = false) -> Label:
 	var label := Label.new()
+	# Wrapping must precede text/size so the unwrapped minimum never clamps width.
+	if wrap: label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	label.text = text
 	label.position = rect.position
 	label.size = rect.size
@@ -78,9 +87,10 @@ func _label(text: String, rect: Rect2, font_size: int) -> Label:
 
 func _draw() -> void:
 	if not visible: return
-	var left := Vector2(anchor_x-10,size.y-1)
-	var right := Vector2(anchor_x+10,size.y-1)
-	var tip := Vector2(anchor_x,size.y+14)
+	var edge_y := 1.0 if below_object else size.y-1
+	var left := Vector2(anchor_x-10,edge_y)
+	var right := Vector2(anchor_x+10,edge_y)
+	var tip := Vector2(anchor_x,-14 if below_object else size.y+14)
 	draw_colored_polygon(PackedVector2Array([left,right,tip]),Color("f4eddf"))
 	draw_polyline(PackedVector2Array([left,tip,right]),Color("88704b"),1.5,true)
 	if anchor_point.distance_to(tip) > 16:

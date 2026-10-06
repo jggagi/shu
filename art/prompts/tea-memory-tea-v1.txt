@@ -1,0 +1,13 @@
+Asset type: production fixed scene game background, landscape 1440x900.
+Purpose: diary past tea production scene for Two Cups of Tea.
+Primary request: Use reference 1 for exact original two identities and architecture, reference 2 for shu architecture. Change only poses and tea prop count: both living adults sit opposite each other at the same low tea table, woman on left, man on right. Gu Qingluo has returned voluntarily and is reaching toward HER cup, cautiously curious. Xie Chang'an gently pours tea toward that cup. Both appear calmly occupied with tea, no touching, hugging or exaggerated romance. Preserve the camera and all buildings.
+Reference images: past-standing-v1.png for identities, camera and living courtyard; tea-courtyard-reference-v1.png for shu architectural/brushwork consistency.
+Scene/backdrop: same inhabited timber courtyard, house and paper window left, hanging clothes rear, doorway right, medicine stove left, pale mountains beyond. Same low tea table lower center-right with exactly TWO small cups and one small teapot, no other cups or bowls. Intact ordinary home with patched cotton garments, no luxury.
+Subject: Gu Qingluo seated left x620 y610, same dark bun, jade hairpin and pale blue-gray robe, reserved curious expression; Xie Chang'an seated right x1020 y610, same tied hair gray ribbon and muted brown-gray robe. Adult Q-style proportions, about three heads tall. Exactly two simple cups TOTAL, not duplicate cups in hands and on table; one per person, one small teapot.
+Style/medium: Song-style Chinese painting, fine ink lines, muted diluted mineral pigment on warm fibrous paper; restrained, soft flat washes, no glossy anime rendering.
+Composition/framing: entire courtyard, complete feet visible. Heads near y470, characters unobscured in lower middle/right; upper 40 percent and far left are quiet painted space for game dialogue to be overlaid later. No text or UI in generated image. Keep architecture recognizable to reference 2.
+Lighting/mood: Quiet late morning becoming soft afternoon, ordinary shared daily life, warm but restrained, no sunset yet.
+Color palette: parchment cream, sage, pale blue-gray and charcoal brown.
+Materials/textures: wood, stone, cotton and handmade paper.
+Constraints: one clean landscape scene; exactly one living man for the alone shot, otherwise exactly the specified living pair; exactly two cups total; no third person, no letters/book in hand, no weapon, no magical effects; preserve supplied identities and courtyard architecture. No ghosts or death imagery.
+Avoid: contact sheets, borders, text, signatures, watermark, captions, UI, photorealism, modern objects, hugs, kissing, pink romance.

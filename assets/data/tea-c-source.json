@@ -1,0 +1,51 @@
+{
+  "stage": {
+    "id": "late_dates",
+    "title": "问天峰旧院",
+    "profile": "courtyard",
+    "intro": "旧院就在剑坪后。把旧剑放回去之前，看看这里留下的日常。",
+    "items": [
+      "tea.household",
+      "tea.ledger"
+    ]
+  },
+  "objects": {
+    "tea.household": {
+      "label": "两副碗筷",
+      "pages": [
+        {
+          "speaker": "问天峰旧院",
+          "text": "柜边放着两副碗筷。两件冬衣的袖口反复补过，窗上也留着几次修补的痕迹。药罐旁，一只碗用来接漏下的水。"
+        },
+        {
+          "speaker": "江砚秋",
+          "text": "不像专为纪念谁而留下的陈设。这里曾有人生火、吃饭、过冬，把日子过了很久。"
+        }
+      ],
+      "requires": []
+    },
+    "tea.ledger": {
+      "label": "生活账册",
+      "pages": [
+        {
+          "speaker": "旧页",
+          "text": "起页记着两人迁居问天峰的年份。山下传闻，也从这一年起说谢长安已死。\n账上却一直有添米、补衣、买药的支出。"
+        },
+        {
+          "speaker": "江砚秋",
+          "text": "其后第十一年，仍记着两人的衣食用度。\n谢长安没有在传闻所说的时候死去。他们在这里一起生活了许多年。"
+        }
+      ],
+      "requires": [
+        "tea.household"
+      ]
+    }
+  },
+  "origin": {
+    "repository": "jggagi/sub",
+    "path": "tea/full-chain.json",
+    "revision": "50acc08b5cdd7d8a83525f1c0c1102ca9b7d6ca5",
+    "sha256": "8fe564cb9455c8006e2441560bbd1d64c9053b46ae79691b5797bd4f4a319afc",
+    "adaptation": "账册和医案以迁居/传闻之年作相对对照；未锁定世界历法。"
+  }
+}

@@ -1,0 +1,13 @@
+Asset type: production fixed scene game background, landscape 1440x900.
+Purpose: past courtyard diary encounter, Gu Qingluo and Xie Changan meeting again.
+Primary request: Use reference 1 for the exact original two adult identities and living courtyard architecture; reference 2 for shu's modest Song-style painted world. Change only character poses, prop count and framing as specified. Exactly two characters now STANDING apart and facing each other; neither seated or drinking. Clear full bodies, integrated into the painting.
+Reference images: living-courtyard-reference-v1.png for identities and living courtyard; tea-courtyard-reference-v1.png for shu architectural/brushwork consistency.
+Scene/backdrop: same timber courtyard, house and paper window left, hanging clothes on rear wall, doorway right, medicine stove left, pale mountains beyond. A low tea table near lower center-right at x900 y740 with EXACTLY TWO SMALL CUPS sitting on its surface and one small teapot; neither character holds a cup. No other cups or bowls. Split firewood by the man. Intact ordinary inhabited home, no luxurious furnishings.
+Subject: Gu Qingluo left x620 y570, full body about 280px high, dark simple bun and pale jade hairpin, pale blue-gray robe, slightly wary and curious, looking right. Xie Chang'an right x1020 y580, same dark tied hair and gray ribbon, muted brown-gray work robe, reserved gentle expression, looking left. Match faces and clothing in reference 1. Adult Q-style proportions about three heads tall; distinguish male/female clearly; no child proportions or large glossy eyes.
+Style/medium: Song-style Chinese painting, fine ink lines, muted diluted mineral pigment on warm fibrous paper; restrained, soft flat washes, no glossy anime rendering.
+Composition/framing: entire courtyard, complete feet visible. Heads near y470, characters unobscured in lower middle/right; upper 40 percent and far left are quiet painted space for game dialogue to be overlaid later. No text or UI in generated image. Keep architecture recognizable to reference 2.
+Lighting/mood: quiet morning, gentle warm sunlight, ordinary life and cautious new acquaintance, no overt romance.
+Color palette: parchment cream, sage, pale blue-gray and charcoal brown.
+Materials/textures: wood, stone, cotton and handmade paper.
+Constraints: one clean single landscape scene, exactly two characters and two cups, no third person, no letters/book in hand, no weapon, no magical effects. Preserve identities from reference 1. No ghosts or death imagery.
+Avoid: contact sheets, borders, text, signatures, watermark, captions, UI, photorealism, modern objects, hugs, kissing, pink romance.

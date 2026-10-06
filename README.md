@@ -4,17 +4,15 @@
 
 **Codex 做可玩 demo → 用户试玩拍板 → Codex 修订 → 更新决定与扩展计划。**
 
-## 当前支线试玩：归剑问天 · A/B
+## 当前本机试玩：《两盏茶》完整支线
 
-[在线试玩（GitHub Pages）](https://jggagi.github.io/shu/) · 建议桌面横向窗口；首次加载约 55 MB。
+[在线正式版](https://jggagi.github.io/shu/)仍为 **0.1.4-tea-objects**（A/B 已验收发布）。阶段 C 已获用户验收；用户随后授权完整支线。本机候选 **0.1.9-tea-past-local** 已补齐医者诊察、写信和后事过去场景，完成本机专项与真实 Web 全流程验证；新画面与完整体验待你试玩拍板；用户已授权将当前源码归档至 GitHub 分支 `codex/tea-full-past-scenes`，在线试玩尚未发布本候选。
 
-**0.1.4-tea-objects**（内容 tea-ab-object-2；在线部署版本以 build-info.json 为准）：养成画面点击「归剑问天 · 旧剑委托」（或按 6），接受后进入剑坪。悬停旧杯有淡墨亮边和小标签，直接点击即查看并更新「旧杯 0/2 → 1/2 → 2/2」；杯旁浮层提供修补／询问，不再经底部确认或右侧统一菜单。点击另一杯切换浮层，点击空白／Esc 只收起浮层；进入支线后，整条支线完成前不返回养成主界面。
+接受旧剑委托 → 剑坪双杯 → 旧院账册 → 诊录 → 柜中旧信 → 今天刚认识 → 几册旧记 → 最后一天 → 后事公文 → 归剑回到原剑坪。文书逐页读；医案、写信、日记与后事片段进入过去旧院，人物对白与时间变化在画面中呈现，收起回到当下调查。没有底部确认或右侧菜单。阶段完成、歇息与场景往返都留在支线内；最终重新调查同一双杯，先添一杯、停一会儿、再添另一杯，才显示《两盏茶》并允许返回养成。
 
-剑坪底部仅显示薄札记；右下「廊下歇息」沿用恢复至多 34 精力、推进一时辰，留在剑坪并保留进度。查看与两杯完成不耗精力／时间；首杯修补 -22、每杯询问 -8，每个物件行动在当前运行内只结算一次，重访不会重复收费。精力不足时对应动作不可用。两杯直接查看后自动达成 A/B 本段条件，原有初期推想显示在札记；这不是整条支线完成，仍留在剑坪；不发装备或修为奖励。刷新／关闭／重新开始会重置，没有新增存档。
+查看与阅读不花精力或养成时间；原修炼、师傅与歇息数值保持。重新开始／刷新清空当前运行，无磁盘存档、声音或新奖励。
 
-只修订现有 A/B 的物品交互与支线返回规则；阶段 C 和后续行程尚未实现，2/2 后显示“本段线索已收齐；支线后续尚未开放”，不假装支线结局、不自动返回。顶部 HUD、听雨廊养成流程和美术原图保持；首杯描述／修补反馈采用用户明确给定的 UI 适配文字，第二杯、传闻、推想及原稿揭示顺序保留，历史原稿不迁移。
-
-[任务卡](docs/TEA_SLICE.md) · [验证记录](docs/TEA_VALIDATION.md) · [美术来源](assets/art/tea/source.json)。玩法状态、内容和布局分别在 demo_state.gd、assets/data/tea.json、tea-layout.json。历史原稿保持原位，本轮运行文字直接引用原稿；没有新写或迁移支线稿。
+[过去片段任务卡](docs/TEA_PAST_ALL_SLICE.md) · [过去片段验证](docs/TEA_PAST_ALL_VALIDATION.md) · [节奏收尾任务卡](docs/TEA_PACING_SLICE.md) · [本轮验证](docs/TEA_PACING_VALIDATION.md) · [日记演出任务卡](docs/TEA_MEMORY_SLICE.md) · [演出验证](docs/TEA_MEMORY_VALIDATION.md) · [完整支线任务卡](docs/TEA_FULL_SLICE.md) · [验证记录](docs/TEA_FULL_VALIDATION.md) · [已验收 C](docs/TEA_C_VALIDATION.md) · [旧院美术来源](assets/art/tea-c/source.json)。新支线归档入口已核实为 `jggagi/sub/tea/full-chain.json`，完整运行快照及来源哈希在 `assets/data/tea-full-source.json`、`tea-full-provenance.json`；历史原稿不迁移、不改写。
 
 ## 后山独立表现实验
 
@@ -111,4 +109,4 @@ godot --path . --audio-driver Dummy --script res://tests/weather_render.gd
 
 养成模式制作入口：[game-cultivation-build](.agents/skills/game-cultivation-build/SKILL.md)，仓库级 0.1.1；支持养成行动、人物互动及 tea 等固定场景支线。运行模块/编辑器插件仍为设计，尚未实现。
 
-[工具包设计](docs/CULTIVATION_MODE.md) · [检查记录](docs/CULTIVATION_MODE_CHECKS.md) · [新 chat 的 tea 交接](docs/TEA_HANDOFF.md)。A/B 委托与两杯调查已接入，D01 养成保持可用；待用户验收后才接阶段 C。
+[工具包设计](docs/CULTIVATION_MODE.md) · [检查记录](docs/CULTIVATION_MODE_CHECKS.md) · [新 chat 的 tea 交接](docs/TEA_HANDOFF.md)。A/B 与阶段 C 已验收；完整调查和过去场景已实现，D01 养成保持可用；新画面与完整体验继续由用户试玩拍板。

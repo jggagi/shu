@@ -4,6 +4,7 @@ const State = preload("res://scripts/demo_state.gd")
 const Weather = preload("res://scripts/weather.gd")
 const SceneObject = preload("res://scripts/interactive_scene_object.gd")
 const ObjectPopover = preload("res://scripts/scene_object_popover.gd")
+const TeaMemory = preload("res://scripts/tea_memory_scene.gd")
 const INK := Color("354137")
 const JADE := Color("32695c")
 const GOLD := Color("ad8959")
@@ -46,11 +47,15 @@ var tea_entry: Button
 var tea_accept: Button
 var tea_cancel: Button
 var tea_return: Button
+var tea_backdrop: TextureRect
+var tea_title: Label
+var tea_paths: Dictionary = {}
 var tea_status: Label
 var shortcut_label: Label
 var tea_hotspots: Dictionary = {}
 var selected_object_id := ""
 var object_popover: Control
+var tea_memory: Control
 var tea_journal: Control
 var tea_journal_text: Label
 var tea_journal_entries: Array[String] = []
@@ -59,8 +64,15 @@ var dialogue_panel: Control
 var actions_panel: Control
 var cultivation_frame: Control
 var tea_data: Dictionary
+var tea_full: Dictionary
+var tea_fill_views: Array[Polygon2D] = []
 var tea_layout: Dictionary
 var tea_session := 0
+var tea_pour_waiting := false
+var tea_recollection_waiting := false
+var tea_ending_waiting := false
+var tea_pacing: Dictionary
+var _tea_pacing_generation := 0
 var next_weather: Button
 var weather_paper: Control
 
@@ -78,7 +90,9 @@ func _ready() -> void:
 	game_theme.default_font_size = 21
 	theme = game_theme
 	tea_data = JSON.parse_string(FileAccess.get_file_as_string("res://assets/data/tea.json"))
+	tea_full = JSON.parse_string(FileAccess.get_file_as_string("res://assets/data/tea-full-source.json"))
 	tea_layout = JSON.parse_string(FileAccess.get_file_as_string("res://assets/data/tea-layout.json"))
+	tea_pacing = JSON.parse_string(FileAccess.get_file_as_string("res://assets/data/tea-pacing.json"))
 	_build_ui()
 	_build_tea_ui()
 	_refresh()
@@ -370,6 +384,10 @@ func _reset() -> void:
 	if busy:
 		return
 	state.reset()
+	_tea_pacing_generation += 1
+	tea_recollection_waiting = false
+	tea_ending_waiting = false
+	tea_pour_waiting = false
 	awaiting_continue = false
 	completion_announced = false
 	failure_notice = false
@@ -380,6 +398,8 @@ func _reset() -> void:
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo:
+		return
+	if tea_memory != null and tea_memory.visible and event.keycode != KEY_ESCAPE:
 		return
 	match event.keycode:
 		KEY_1: _train()
@@ -392,7 +412,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		KEY_6: _open_tea()
 		KEY_ESCAPE:
 			if state.tea_active:
-				if not selected_object_id.is_empty(): _close_object_popover()
+				if tea_memory != null and tea_memory.visible: _close_object_popover()
+				elif not selected_object_id.is_empty(): _close_object_popover()
 				else: _tea_cancel()
 			elif state.dialogue_open:
 				_cancel()
@@ -413,10 +434,10 @@ func _build_tea_ui() -> void:
 	tea_scene.mouse_filter = Control.MOUSE_FILTER_STOP
 	tea_scene.z_index = 2
 	_place(tea_scene, _tea_rect("scene"))
-	var backdrop := _art("res://assets/art/tea/tea-terrace-v1.png", Rect2(Vector2.ZERO, tea_scene.size), tea_scene)
-	backdrop.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	tea_backdrop = _art("res://assets/art/tea/tea-terrace-v1.png", Rect2(Vector2.ZERO, tea_scene.size), tea_scene)
+	tea_backdrop.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 	_paper(_tea_rect("title_panel"), tea_scene, false, true)
-	_label("归剑问天 · 旧剑坪", _tea_rect("title"), 27, INK, tea_scene)
+	tea_title = _label("归剑问天 · 旧剑坪", _tea_rect("title"), 27, INK, tea_scene)
 	tea_status = _label("", _tea_rect("subtitle"), 18, MUTED, tea_scene)
 	tea_return = _button("返回听雨廊", Rect2(1243,24,146,32), _tea_cancel, false, tea_scene)
 	tea_return.tooltip_text = "整条支线完成后返回养成主界面。"
@@ -431,11 +452,55 @@ func _build_tea_ui() -> void:
 		object_view.object_selected.connect(_tea_inspect)
 		_place(object_view, _tea_rect(object_id), tea_scene)
 		tea_hotspots[object_id] = object_view
+	for object_id: String in tea_data.courtyard.objects:
+		var object_view := SceneObject.new()
+		object_view.configure(object_id, tea_data.courtyard.objects[object_id].label, null)
+		object_view.object_selected.connect(_tea_inspect)
+		_place(object_view, _tea_rect(object_id), tea_scene)
+		tea_hotspots[object_id] = object_view
+	for object_id: String in tea_full.objects:
+		if tea_hotspots.has(object_id): continue
+		var object_view := SceneObject.new()
+		object_view.configure(object_id, tea_full.objects[object_id].label, null)
+		object_view.object_selected.connect(_tea_inspect)
+		_place(object_view, _tea_rect(object_id), tea_scene)
+		tea_hotspots[object_id] = object_view
+	for object_id: String in state.TEA_OBJECT_IDS:
+		var fill := Polygon2D.new()
+		var tea_surface := PackedVector2Array()
+		for point in 32:
+			var angle := TAU * point / 32.0
+			tea_surface.append(Vector2(cos(angle)*65.0,sin(angle)*29.0))
+		fill.polygon = tea_surface
+		fill.color = Color(0.43,0.32,0.12,0.86)
+		fill.position = _tea_rect(object_id).position + Vector2(83,53)
+		fill.z_index = 2
+		tea_scene.add_child(fill)
+		tea_fill_views.append(fill)
+	for path_id: String in ["tea.path_old_courtyard", "tea.path_sword_terrace", "tea.story_next"]:
+		var path_view := SceneObject.new()
+		path_view.configure(path_id, "", null)
+		path_view.persistent_hint = true
+		path_view.hint.text = "前往旧院 →" if path_id == "tea.path_old_courtyard" else "← 重访剑坪"
+		path_view.object_selected.connect(_tea_path)
+		_place(path_view, _tea_rect(path_id), tea_scene)
+		path_view.set_state(false,false)
+		path_view.hint.position = Vector2(8,25)
+		path_view.hint.size = Vector2(path_view.size.x-16,28)
+		path_view.hint.add_theme_constant_override("shadow_outline_size",0)
+		path_view.hint.add_theme_stylebox_override("normal",_style(Color(0.96,0.93,0.87,0.88),GOLD))
+		tea_paths[path_id] = path_view
 	object_popover = ObjectPopover.new()
 	object_popover.z_index = 5
 	tea_scene.add_child(object_popover)
 	object_popover.action_requested.connect(_tea_action)
 	object_popover.hide()
+	tea_memory = TeaMemory.new()
+	tea_memory.z_index = 20
+	_place(tea_memory, Rect2(0, 0, 1440, 900))
+	tea_memory.action_requested.connect(_tea_action)
+	tea_memory.close_requested.connect(_tea_memory_close)
+	tea_memory.close_view()
 	tea_journal = Control.new()
 	_place(tea_journal, _tea_rect("journal"))
 	_paper(Rect2(Vector2.ZERO,tea_journal.size),tea_journal,false,true)
@@ -457,6 +522,9 @@ func _build_tea_ui() -> void:
 func _refresh_tea() -> void:
 	var active: bool = state.tea_active
 	var terrace: bool = active and state.tea_accepted
+	var memory_active: bool = _uses_memory_view()
+	if not memory_active and tea_memory != null:
+		tea_memory.close_view()
 	shortcut_label.text = ("Esc 返回" if state.can_return_from_tea() else "Esc 收起物品 · 3 歇息") if active else "1 修炼 · 2 请教 · 3 休息"
 	cultivation_scene.visible = not terrace
 	cultivation_frame.visible = not terrace
@@ -464,17 +532,47 @@ func _refresh_tea() -> void:
 	sword_card.visible = active and not state.tea_accepted
 	tea_entry.visible = not active
 	tea_entry.disabled = busy or awaiting_continue or state.dialogue_open
-	tea_entry.text = "归剑问天 · 重访剑坪" if state.tea_accepted else "归剑问天 · 旧剑委托"
+	tea_entry.text = "两盏茶 · 重访剑坪" if state.tea_quest_complete else "归剑问天 · 重访剑坪" if state.tea_accepted else "归剑问天 · 旧剑委托"
 	tea_accept.visible = active and not state.tea_accepted
 	tea_cancel.visible = active and not state.tea_accepted
-	tea_return.visible = terrace and state.can_return_from_tea()
+	tea_return.visible = terrace and state.can_return_from_tea() and not tea_ending_waiting
 	for chrome in [dialogue_panel,actions_panel,speaker,dialogue_text,result_text,shortcut_label,train_button,mentor_button,rest_button]:
 		chrome.visible = not terrace
 	tea_journal.visible = terrace
 	tea_rest.visible = terrace
-	tea_status.text = "昔日高台之上，仍两只旧杯。   旧杯 %d / 2" % state.tea_seen.size()
-	for object_id: String in state.TEA_OBJECT_IDS:
-		tea_hotspots[object_id].set_state(object_id == selected_object_id, state.tea_seen.has(object_id))
+	var courtyard: bool = state.tea_scene_id == state.TEA_COURTYARD_ID
+	var stage: Dictionary = state.story_stage()
+	var later: bool = state.tea_story_stage > 0
+	tea_title.text = "两盏茶" if state.tea_quest_complete else "归剑问天 · " + (str(stage.title) if courtyard or state.tea_story_stage == 7 else "旧剑坪")
+	tea_backdrop.texture = load("res://assets/art/tea-c/tea-courtyard-reference-v1.png" if courtyard else "res://assets/art/tea/tea-terrace-v1.png")
+	tea_backdrop.modulate = Color.WHITE
+	tea_status.text = "" if state.tea_ending_step > 0 or tea_recollection_waiting else _tea_investigation_prompt(courtyard, stage)
+	tea_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	tea_rest.text = "院中歇息" if courtyard else "廊下歇息"
+	tea_journal.visible = terrace and state.tea_ending_step == 0 and not memory_active
+	tea_rest.visible = terrace and state.tea_ending_step == 0 and not memory_active
+	tea_paths["tea.path_old_courtyard"].visible = terrace and not memory_active and not courtyard and state.tea_stage_complete and state.tea_story_stage < 7
+	tea_paths["tea.path_sword_terrace"].visible = terrace and not memory_active and courtyard
+	var next_view: Control = tea_paths["tea.story_next"]
+	next_view.visible = terrace and not memory_active and not tea_recollection_waiting and courtyard and state.story_stage_complete() and state.tea_story_stage < 7 and selected_object_id.is_empty()
+	var next_labels := ["翻看药匣诊录 →", "打开柜中旧物 →", "翻到旧记中的一日 →", "翻阅几册旧记 →", "翻到最后一日 →", "查看后事公文 →", "归剑 · 回到剑坪 →"]
+	if state.tea_story_stage < 7:
+		next_view.hint.text = next_labels[state.tea_story_stage]
+		var next_anchors := [Vector2(96,397),Vector2(1172,294),Vector2(1126,403),Vector2(1126,403),Vector2(1126,403),Vector2(1126,403),Vector2(380,326)]
+		next_view.position = next_anchors[state.tea_story_stage]
+	for object_id: String in tea_hotspots:
+		var in_courtyard: bool = tea_data.courtyard.objects.has(object_id)
+		var seen: Dictionary = state.tea_c_seen if in_courtyard else state.tea_seen
+		var shown: bool = terrace and courtyard == in_courtyard and (in_courtyard or object_id in state.TEA_OBJECT_IDS)
+		if later and courtyard:
+			shown = terrace and object_id in stage.items
+			seen = state.tea_story_seen
+		elif state.tea_story_stage == 7:
+			shown = terrace and object_id in state.TEA_OBJECT_IDS
+			seen = state.tea_story_seen
+		tea_hotspots[object_id].visible = shown and not memory_active
+		tea_hotspots[object_id].set_state(object_id == selected_object_id, seen.has(object_id))
+	for i in tea_fill_views.size(): tea_fill_views[i].visible = terrace and not memory_active and state.tea_story_stage == 7 and state.tea_ending_step > i
 	if terrace and not selected_object_id.is_empty():
 		_present_object_popover()
 	weather_label.visible = not terrace
@@ -504,17 +602,56 @@ func _tea_accept() -> void:
 func _tea_overview() -> void:
 	_append_tea_narrative(tea_data.rumor)
 
-func _tea_inspect(object_id: String) -> void:
-	var result: Dictionary = state.view_tea(object_id,tea_session)
+func _tea_path(path_id: String) -> void:
+	if tea_memory != null and tea_memory.visible: return
+	if path_id == "tea.story_next":
+		if not tea_paths[path_id].visible: return
+		_advance_tea_story()
+		return
+	if not tea_paths.has(path_id) or not tea_paths[path_id].visible: return
+	var target: String = state.TEA_COURTYARD_ID if path_id == "tea.path_old_courtyard" else state.TEA_TERRACE_ID
+	var result: Dictionary = state.switch_tea_scene(target, tea_session)
 	if not result.ok: return
+	tea_session = int(result.session)
+	_tea_pacing_generation += 1
+	tea_recollection_waiting = false
+	_close_object_popover()
+	var text: String = tea_data.courtyard.intro if target == state.TEA_COURTYARD_ID else "剑坪仍在，两只旧杯还放在原处。"
+	if state.tea_c_complete and state.tea_story_stage == 0: text = tea_data.courtyard.impression + "  " + tea_data.courtyard.stage_complete_notice
+	_append_tea_narrative(text)
+	_refresh()
+
+func _tea_inspect(object_id: String) -> void:
+	if tea_memory != null and tea_memory.visible: return
+	if state.tea_story_stage > 0 and (state.tea_scene_id == state.TEA_COURTYARD_ID or state.tea_story_stage == 7):
+		_close_object_popover()
+		var read: Dictionary = state.read_tea_story(object_id, tea_session)
+		if read.ok:
+			selected_object_id = object_id
+			if state.tea_ending_step == 0 and not _uses_memory_view(): _append_tea_narrative(str(read.page.text))
+		else: _append_tea_narrative(read.reason)
+		_refresh()
+		return
+	var courtyard: bool = state.tea_scene_id == state.TEA_COURTYARD_ID
+	var result: Dictionary = state.view_tea_c(object_id,tea_session) if courtyard else state.view_tea(object_id,tea_session)
+	if not result.ok:
+		_close_object_popover()
+		_append_tea_narrative(result.reason)
+		_refresh()
+		return
 	selected_object_id = object_id
-	_append_tea_narrative(tea_data.objects[object_id].text)
+	var objects: Dictionary = tea_data.courtyard.objects if courtyard else tea_data.objects
+	_append_tea_narrative(objects[object_id].text)
 	if result.new_completion:
-		_append_tea_narrative(tea_data.objects[object_id].text + "  " + tea_data.impression + "  " + tea_data.stage_complete_notice)
+		_append_tea_narrative(tea_data.courtyard.impression + "  " + tea_data.courtyard.stage_complete_notice if courtyard else objects[object_id].text + "  " + tea_data.impression + "  " + tea_data.stage_complete_notice)
 	_refresh()
 
 func _present_object_popover() -> void:
-	var object_data: Dictionary = tea_data.objects[selected_object_id].duplicate(true)
+	if state.tea_story_stage > 0 and (state.tea_scene_id == state.TEA_COURTYARD_ID or state.tea_story_stage == 7):
+		_present_story_popover()
+		return
+	var objects: Dictionary = tea_data.courtyard.objects if state.tea_scene_id == state.TEA_COURTYARD_ID else tea_data.objects
+	var object_data: Dictionary = objects[selected_object_id].duplicate(true)
 	object_data["id"] = selected_object_id
 	var actions: Array = []
 	for definition: Dictionary in object_data.get("actions",[]):
@@ -528,7 +665,46 @@ func _present_object_popover() -> void:
 
 func _tea_action(object_id: String, action_id: String, session: int) -> void:
 	# A replaced/closed popover cannot spend resources through an old callback.
-	if object_id != selected_object_id or not object_popover.visible: return
+	if object_id != selected_object_id or session != tea_session: return
+	var memory_active: bool = tea_memory != null and tea_memory.visible
+	if memory_active and not action_id.begins_with("page:") and action_id != "memory_close": return
+	if not object_popover.visible and not memory_active: return
+	if action_id == "memory_close":
+		if tea_memory == null or not tea_memory.visible: return
+		if tea_memory.remaining_hold_seconds() > 0.0: return
+		_tea_memory_close()
+		return
+	if action_id.begins_with("page:"):
+		if memory_active and tea_memory.remaining_hold_seconds() > 0.0: return
+		var result: Dictionary = state.turn_tea_story(object_id,session,int(action_id.get_slice(":",1)))
+		if result.ok:
+			if not _uses_memory_view(): _append_tea_narrative(str(result.page.text))
+		else: _append_tea_narrative(result.reason)
+		_refresh()
+		return
+	if action_id == "story_next":
+		if tea_recollection_waiting: return
+		_advance_tea_story()
+		return
+	if action_id.begins_with("fill:"):
+		if tea_pour_waiting or tea_ending_waiting: return
+		var result: Dictionary = state.fill_tea_cup(object_id,session,int(action_id.get_slice(":",1)))
+		if result.ok:
+			tea_pour_waiting = int(result.ending_step) == 1
+			tea_ending_waiting = int(result.ending_step) == 2
+			_close_object_popover()
+		else: _append_tea_narrative(result.reason)
+		_refresh()
+		if result.ok:
+			var ending_step: int = int(result.ending_step)
+			var generation := _tea_pacing_generation
+			var duration := float(tea_pacing.first_cup_pause_ms if ending_step == 1 else tea_pacing.filled_cups_hold_ms) / 1000.0
+			await get_tree().create_timer(duration).timeout
+			if generation == _tea_pacing_generation and state.tea_active and tea_session == session and state.tea_ending_step == ending_step:
+				tea_pour_waiting = false
+				tea_ending_waiting = false
+				_refresh()
+		return
 	var result: Dictionary = state.execute_tea_action(object_id,action_id,session)
 	if result.ok:
 		_append_tea_narrative(tea_data.feedback[result.feedback_key] if tea_data.feedback.has(result.feedback_key) else tea_data[result.feedback_key])
@@ -537,10 +713,11 @@ func _tea_action(object_id: String, action_id: String, session: int) -> void:
 	_refresh()
 
 func _tea_rest() -> void:
+	if tea_memory != null and tea_memory.visible: return
 	var result: Dictionary = state.rest_tea(tea_session)
 	if not result.ok: return
 	_close_object_popover()
-	_append_tea_narrative(dialogue.rest + "  精力 +%d。" % result.gain)
+	_append_tea_narrative(("在旧院坐了一会儿。" if state.tea_scene_id == state.TEA_COURTYARD_ID else dialogue.rest) + "  精力 +%d。" % result.gain)
 	_refresh()
 
 func _append_tea_narrative(text: String) -> void:
@@ -550,26 +727,32 @@ func _append_tea_narrative(text: String) -> void:
 	tea_journal_text.tooltip_text = text
 
 func _close_object_popover() -> void:
+	state.close_tea_story()
 	selected_object_id = ""
 	if object_popover != null: object_popover.hide()
+	if tea_memory != null: tea_memory.close_view()
 	for object_id: String in tea_hotspots:
-		tea_hotspots[object_id].set_state(false,state.tea_seen.has(object_id))
+		tea_hotspots[object_id].set_state(false,state.tea_seen.has(object_id) or state.tea_c_seen.has(object_id))
+	if tea_paths.has("tea.story_next"): _refresh_tea()
 
 func _input(event: InputEvent) -> void:
+	if tea_memory != null and tea_memory.visible: return
 	if not state.tea_active or selected_object_id.is_empty(): return
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var point := get_global_mouse_position()
 		if object_popover.get_global_rect().has_point(point): return
-		for object_view: Control in tea_hotspots.values():
-			if object_view.get_global_rect().has_point(point): return
+		for object_view: Control in tea_hotspots.values() + tea_paths.values():
+			if object_view.visible and object_view.get_global_rect().has_point(point): return
 		_close_object_popover()
 
 func _tea_cancel() -> void:
-	if not state.tea_active: return
+	if not state.tea_active or tea_ending_waiting: return
 	var result: Dictionary = state.cancel_tea()
 	if not result.ok:
 		_append_tea_narrative(result.reason)
 		return
+	_tea_pacing_generation += 1
+	tea_recollection_waiting = false
 	_close_object_popover()
 	_show_text("听雨廊 · 师徒同修",dialogue.idle,"所见已保留 · 可继续养成或重访剑坪。")
 	_refresh()
@@ -579,3 +762,94 @@ func _show_failure(reason: String) -> void:
 	failure_notice = true
 	_show_text("先歇一歇", reason, "关闭提示后继续安排功课。")
 	_refresh()
+
+func _advance_tea_story() -> void:
+	if tea_recollection_waiting: return
+	var result: Dictionary = state.advance_tea_story(tea_session)
+	if not result.ok:
+		_append_tea_narrative(result.reason)
+		return
+	tea_session = int(result.session)
+	_close_object_popover()
+	_append_tea_narrative(str(state.story_stage().intro))
+	_refresh()
+
+func _story_action(id: String, label: String) -> Dictionary:
+	return {"id":id,"label":label,"cost":0,"show_cost":false,"done":false,"enabled":true,"reason":""}
+
+func _present_story_popover() -> void:
+	var source: Dictionary = tea_full.objects[selected_object_id]
+	if _uses_memory_view():
+		object_popover.hide()
+		tea_memory.present(selected_object_id, source, state.tea_story_page, state.tea_story_token, tea_session)
+		return
+	tea_memory.close_view()
+	var page: Dictionary = source.pages[state.tea_story_page]
+	var data: Dictionary = {"id":selected_object_id,"label":str(page.speaker) + " · %d / %d" % [state.tea_story_page+1,source.pages.size()],"text":page.text,"popover_width":430,"description_height":190}
+	var actions: Array = []
+	if state.tea_story_stage == 7 and state.tea_ending_step > 0:
+		data.label = source.label
+		data.text = ""
+		data.description_height = 0
+		if state.tea_ending_step == 1 and selected_object_id == "tea.cup_second":
+			var pour := _story_action("fill:%d" % state.tea_story_token,"添茶")
+			pour.enabled = not tea_pour_waiting
+			pour.reason = "静静等一会儿。" if tea_pour_waiting else ""
+			actions.append(pour)
+		object_popover.present(data,actions,_tea_rect(selected_object_id),tea_scene.size,tea_session)
+		return
+	if state.tea_story_page < source.pages.size()-1:
+		var label := "翻到下一页"
+		if state.story_stage().profile == "memory": label = "坐下 · 等一会儿" if state.tea_story_page == 9 else "继续读这段对话"
+		actions.append(_story_action("page:%d" % state.tea_story_token,label))
+	elif state.tea_story_stage < 7 and state.story_stage_complete():
+		var labels := ["翻看药匣诊录", "打开柜中旧物", "翻到旧记中的一日", "翻阅几册旧记", "翻到最后一日", "查看后事公文", "归剑 · 回到剑坪"]
+		actions.append(_story_action("story_next",labels[state.tea_story_stage]))
+	elif state.tea_story_stage == 7 and state.story_stage_complete():
+		if (state.tea_ending_step == 0 and selected_object_id == "tea.cup_first") or (state.tea_ending_step == 1 and selected_object_id == "tea.cup_second"):
+			actions.append(_story_action("fill:%d" % state.tea_story_token,"添茶"))
+	object_popover.present(data,actions,_tea_rect(selected_object_id),tea_scene.size,tea_session)
+
+func _uses_memory_view() -> bool:
+	if selected_object_id.is_empty() or state.tea_story_object != selected_object_id or state.tea_story_stage <= 0 or state.tea_scene_id != state.TEA_COURTYARD_ID:
+		return false
+	if selected_object_id in ["tea.memory", "tea.record_early", "tea.record_late", "tea.record_last", "tea.last_day", "tea.letter", "tea.notice_cups"]:
+		return true
+	if selected_object_id in ["tea.cabinet", "tea.medical_early", "tea.notice_death"]:
+		return state.tea_story_page >= 1
+	return selected_object_id == "tea.medical_habits" and state.tea_story_page == 0
+
+func _tea_memory_close() -> void:
+	if tea_memory == null or not tea_memory.visible or selected_object_id.is_empty():
+		return
+	_tea_pacing_generation += 1
+	var generation := _tea_pacing_generation
+	var session := tea_session
+	tea_recollection_waiting = true
+	_close_object_popover()
+	_refresh()
+	await get_tree().create_timer(float(tea_pacing.memory_return_ms) / 1000.0).timeout
+	if generation == _tea_pacing_generation and state.tea_active and session == tea_session:
+		tea_recollection_waiting = false
+		_refresh()
+
+func _tea_investigation_prompt(courtyard: bool, stage: Dictionary) -> String:
+	if not courtyard and state.tea_story_stage > 0 and state.tea_story_stage < 7:
+		return "沿石阶前往旧院。"
+	if state.tea_story_stage == 0:
+		if not courtyard:
+			return "昔日高台之上，仍两只旧杯。   旧杯 %d / 2" % state.tea_seen.size()
+		if state.tea_c_complete: return "账册已阅 · 药匣中尚有旧页"
+		var item := "tea.ledger" if state.tea_c_seen.has("tea.household") else "tea.household"
+		return str(tea_pacing.investigation_hints[item]) + " · 查看"
+	if state.story_stage_complete():
+		return "第一只旧杯 · 添茶" if state.tea_story_stage == 7 else "旧页已阅 · 继续调查"
+	for item_variant in stage.get("items", []):
+		var item := str(item_variant)
+		if state.tea_story_seen.has(item): continue
+		var available := true
+		for required in tea_full.objects[item].get("requires", []):
+			if not state.tea_story_seen.has(str(required)): available = false
+		if available:
+			return str(tea_pacing.investigation_hints.get(item, "旧页")) + " · 查看"
+	return "依次翻阅留下的旧页。"

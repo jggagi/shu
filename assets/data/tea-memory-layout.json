@@ -1,0 +1,291 @@
+{
+  "canvas": [
+    1440,
+    900
+  ],
+  "default_shot": "standing",
+  "camera_drift": [
+    8,
+    5
+  ],
+  "shot_paths": {
+    "standing": "res://assets/art/tea-memory/past-standing-v1.png",
+    "alone": "res://assets/art/tea-memory/past-alone-v1.png",
+    "tea": "res://assets/art/tea-memory/past-tea-v1.png",
+    "dusk": "res://assets/art/tea-memory/past-dusk-v1.png",
+    "diagnosis": "res://assets/art/tea-memory/past-diagnosis-v1.png",
+    "writing": "res://assets/art/tea-memory/past-writing-v1.png",
+    "after_question": "res://assets/art/tea-memory/past-after-question-v1.png",
+    "after_cups": "res://assets/art/tea-memory/past-after-cups-v1.png"
+  },
+  "tones": {
+    "neutral": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "afternoon_warm": [
+      1.0,
+      0.985,
+      0.94
+    ],
+    "later_warm": [
+      1.0,
+      0.96,
+      0.88
+    ],
+    "old_pages_warm": [
+      1.0,
+      0.945,
+      0.82
+    ],
+    "dusk": [
+      0.88,
+      0.85,
+      0.79
+    ]
+  },
+  "bubble_anchors": {
+    "顾青萝": [
+      110,
+      85,
+      470,
+      195
+    ],
+    "谢长安": [
+      820,
+      65,
+      510,
+      195
+    ],
+    "谢长安旧记": [
+      820,
+      65,
+      510,
+      195
+    ],
+    "旧记中的一日": [
+      130,
+      100,
+      650,
+      225
+    ],
+    "最后一天": [
+      130,
+      100,
+      650,
+      225
+    ],
+    "末页": [
+      130,
+      100,
+      650,
+      225
+    ],
+    "柜中旧物": [
+      110,
+      85,
+      470,
+      195
+    ],
+    "叙述": [
+      130,
+      100,
+      650,
+      225
+    ]
+  },
+  "page_shots": {
+    "tea.cabinet": [
+      {
+        "shot": "standing",
+        "tone": "neutral"
+      },
+      {
+        "shot": "standing",
+        "tone": "neutral"
+      },
+      {
+        "shot": "alone",
+        "tone": "neutral"
+      }
+    ],
+    "tea.memory": [
+      {
+        "shot": "standing",
+        "tone": "afternoon_warm"
+      },
+      {
+        "shot": "standing",
+        "tone": "afternoon_warm"
+      },
+      {
+        "shot": "standing",
+        "tone": "afternoon_warm"
+      },
+      {
+        "shot": "standing",
+        "tone": "afternoon_warm",
+        "hold_ms": 850
+      },
+      {
+        "shot": "standing",
+        "tone": "afternoon_warm"
+      },
+      {
+        "shot": "standing",
+        "tone": "afternoon_warm"
+      },
+      {
+        "shot": "standing",
+        "tone": "afternoon_warm"
+      },
+      {
+        "shot": "standing",
+        "tone": "afternoon_warm"
+      },
+      {
+        "shot": "standing",
+        "tone": "afternoon_warm"
+      },
+      {
+        "shot": "standing",
+        "tone": "afternoon_warm"
+      },
+      {
+        "shot": "alone",
+        "tone": "afternoon_warm",
+        "auto_shot": "tea",
+        "auto_after_ms": 2000,
+        "auto_tone": "afternoon_warm",
+        "hold_ms": 2700
+      },
+      {
+        "shot": "tea",
+        "tone": "afternoon_warm"
+      }
+    ],
+    "tea.record_early": [
+      {
+        "shot": "standing",
+        "tone": "neutral"
+      },
+      {
+        "shot": "tea",
+        "tone": "afternoon_warm"
+      },
+      {
+        "shot": "tea",
+        "tone": "later_warm"
+      }
+    ],
+    "tea.record_late": [
+      {
+        "shot": "tea",
+        "tone": "later_warm"
+      },
+      {
+        "shot": "tea",
+        "tone": "old_pages_warm"
+      }
+    ],
+    "tea.record_last": [
+      {
+        "shot": "tea",
+        "tone": "old_pages_warm"
+      },
+      {
+        "shot": "tea",
+        "tone": "old_pages_warm"
+      }
+    ],
+    "tea.last_day": [
+      {
+        "shot": "dusk",
+        "tone": "dusk"
+      },
+      {
+        "shot": "dusk",
+        "tone": "dusk"
+      },
+      {
+        "shot": "dusk",
+        "tone": "dusk"
+      },
+      {
+        "shot": "dusk",
+        "tone": "dusk",
+        "hold_ms": 1500
+      },
+      {
+        "shot": "dusk",
+        "tone": "dusk"
+      },
+      {
+        "shot": "dusk",
+        "tone": "dusk",
+        "fade_to_black": true,
+        "hold_ms": 1700
+      }
+    ],
+    "tea.medical_early": [
+      {},
+      {
+        "shot": "diagnosis",
+        "tone": "neutral",
+        "caption": "往事 · 医者诊察"
+      }
+    ],
+    "tea.medical_habits": [
+      {
+        "shot": "diagnosis",
+        "tone": "later_warm",
+        "caption": "往事 · 移居后的诊察"
+      },
+      {}
+    ],
+    "tea.letter": [
+      {
+        "shot": "writing",
+        "tone": "afternoon_warm",
+        "caption": "往事 · 顾青萝的信"
+      },
+      {
+        "shot": "writing",
+        "tone": "afternoon_warm",
+        "caption": "往事 · 顾青萝的信"
+      },
+      {
+        "shot": "writing",
+        "tone": "afternoon_warm",
+        "caption": "往事 · 顾青萝的信"
+      },
+      {
+        "shot": "writing",
+        "tone": "afternoon_warm",
+        "caption": "往事 · 顾青萝的信"
+      }
+    ],
+    "tea.notice_death": [
+      {},
+      {
+        "shot": "after_question",
+        "tone": "neutral",
+        "caption": "往事 · 次日问天峰"
+      }
+    ],
+    "tea.notice_cups": [
+      {
+        "shot": "after_cups",
+        "tone": "afternoon_warm",
+        "caption": "往事 · 午后"
+      },
+      {
+        "shot": "after_cups",
+        "tone": "afternoon_warm",
+        "caption": "往事 · 午后"
+      }
+    ]
+  },
+  "transition_ms": 650
+}

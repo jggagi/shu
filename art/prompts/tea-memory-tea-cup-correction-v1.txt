@@ -1,0 +1,13 @@
+Asset type: precise correction of one selected production scene, same 1440x900 framing.
+Purpose: correct the two-cup motif in the shared-tea past frame; this replaces the same frame in the four-scene local candidate, not an additional story scene.
+Primary request: Edit the supplied shared-tea image ONLY to ensure exactly TWO cups total. There are currently three cup shapes near the table: one beneath/near Gu Qingluo's fingertips on the left, one at center beneath the pour, and one on the right near Xie Chang'an. Remove the extra leftmost cup beside Gu's fingertips, restoring continuous wood tabletop behind it. Keep the center cup receiving tea and the right-hand cup. Adjust Gu's fingertips minimally toward the center cup if necessary, without adding any cup in her hands. There must be exactly TWO visible cups in the entire image, plus the existing single teapot.
+Reference images: past-tea-v1.png is the precise edit target and sole identity/composition reference.
+Scene/backdrop: Preserve all courtyard architecture, mountains, stove, window, clothing, table geometry, stools and paper texture exactly.
+Subject: Preserve both original adult Q-style characters' faces, hairstyles, robe colors, relative sizes and positions. Xie continues pouring into the center cup; Gu remains seated and curious, without a cup hidden in her hand.
+Style/medium: Preserve the supplied Song-style ink and muted watercolor painting, no repainting into a new style.
+Composition/framing: Preserve full landscape framing and all figure placement. Do not crop, zoom or create panels.
+Lighting/mood: Preserve supplied quiet warm afternoon.
+Color palette: Preserve all existing colors.
+Materials/textures: Fill removed cup area with matching wooden table texture.
+Constraints: Change only the extra cup and any minimal fingertip adjustment; no new props, characters, faces, symbols or dialogue. Exactly two cups total and one teapot. This is the same four-frame production scope.
+Avoid: extra cups, cups held in hands, modern objects, text, lettering, signatures, watermark, border, UI, changes to faces or background.

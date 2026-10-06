@@ -1,0 +1,115 @@
+{
+  "version": "tea-memory-v1",
+  "author": "AI generated under user-directed shu game-art workflow",
+  "license_usage": "User-authorized project generation; provider terms apply; no third-party artwork copied.",
+  "scope_authorization": "User explicitly allowed these four Qwen production frames and their supplied references/prompts in this chat on 2026-10-05.",
+  "reference": {
+    "file": "docs/concepts/tea-memory-living-reference-v1.png",
+    "provider": "codex-imagegen",
+    "model": null,
+    "sha256": "be376e0c97d5990118403011a73478ce064dd568a77b8ccfe4e80285452bb8b1",
+    "actual_candidate_reference_path": "art/work/tea-memory/living-courtyard-reference-v1.png",
+    "prompt_file": "art/prompts/tea-memory-reference-v1.txt",
+    "references": [
+      "assets/art/tea-c/tea-courtyard-reference-v1.png",
+      "assets/art/v2/jiang-yanqiu-v2.png"
+    ],
+    "identity_note": "Jiang Yanqiu portrait is rendering style only; two new original adult identities are Gu Qingluo and Xie Changan."
+  },
+  "assets": [
+    {
+      "file": "past-standing-v1.png",
+      "provider": "qwen",
+      "model": "qwen-image-3.0",
+      "sha256": "ccc679237ee3231022d0a3c9939d1cd96cb66b1b23cdd32949d9b105b0d10c7b",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "prompt_file": "art/prompts/tea-memory-standing-v1.txt",
+      "references": [
+        "art/work/tea-memory/living-courtyard-reference-v1.png",
+        "assets/art/tea-c/tea-courtyard-reference-v1.png"
+      ],
+      "status": "selected_for_local_trial",
+      "user_accepted": false
+    },
+    {
+      "file": "past-alone-v1.png",
+      "provider": "qwen",
+      "model": "qwen-image-3.0",
+      "sha256": "621498f17ee837681918bdb9cc6b46177bcdca26daf8a5395898fd2f57c9d06f",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "prompt_file": "art/prompts/tea-memory-alone-v1.txt",
+      "references": [
+        "assets/art/tea-memory/past-standing-v1.png",
+        "assets/art/tea-c/tea-courtyard-reference-v1.png"
+      ],
+      "status": "selected_for_local_trial",
+      "user_accepted": false
+    },
+    {
+      "file": "past-tea-v1.png",
+      "provider": "codex-imagegen",
+      "model": null,
+      "sha256": "9c5f2da5c7795f1bd9a3c847b4c6f90e86895436468ff0cbf9e6a869ee9ec832",
+      "dimensions": [
+        1586,
+        992
+      ],
+      "prompt_file": "art/prompts/tea-memory-tea-precise-edit-v1.txt",
+      "references": [
+        "art/work/tea-memory/past-tea-v1.png"
+      ],
+      "status": "selected_for_local_trial",
+      "user_accepted": false,
+      "base_generation": {
+        "provider": "qwen",
+        "model": "qwen-image-3.0",
+        "prompt_file": "art/prompts/tea-memory-tea-v1.txt",
+        "candidate": "art/work/tea-memory/past-tea-v1.png",
+        "sha256": "2bb9959a1130fab185d9c5c2895f81fbf264c9a9c0d26469542e2801189b1282",
+        "review": "Three cup shapes; corrected rather than selected as final."
+      },
+      "edit_review": "Exactly two cups observed; original identities, robe colors and architecture retained; small repainting/position shifts reviewed against dialogue anchors."
+    },
+    {
+      "file": "past-dusk-v1.png",
+      "provider": "qwen",
+      "model": "qwen-image-3.0",
+      "sha256": "f92ae0399b6c982d12ddc54302e357bfaf162b29f73a8592a52c7fe50382b4af",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "prompt_file": "art/prompts/tea-memory-dusk-v1.txt",
+      "references": [
+        "assets/art/tea-memory/past-standing-v1.png",
+        "assets/art/tea-c/tea-courtyard-reference-v1.png"
+      ],
+      "status": "selected_for_local_trial",
+      "user_accepted": false
+    }
+  ],
+  "review": {
+    "framing": "Living courtyard architecture retained; dialogue anchors follow actual faces rather than requested approximate coordinates.",
+    "characters": "Same robe colors, hair ties and identities; alone shot has only living Xie, tea shot both, last-evening shot Xie weary. Aging is subtle; no likeness of existing player is reused.",
+    "text": "No legible generated writing, signature or watermark observed in selected images.",
+    "alpha": "All four are opaque full backgrounds, no cutout needed.",
+    "interpretation": "Painted fixed-scene tableaux and camera/crossfade presentation, not skeletal character animation. Pose deviations from prompts reviewed: last-evening pair stand rather than sit; narrative does not require seated pose.",
+    "acceptance": "Agent selected for local playable review, visual and full-experience user approval pending."
+  },
+  "not_selected": [
+    {
+      "candidate": "art/work/tea-memory/past-tea-corrected-v1.png",
+      "provider": "qwen",
+      "model": "qwen-image-3.0",
+      "prompt_file": "art/prompts/tea-memory-tea-cup-correction-v1.txt",
+      "sha256": "a4c8ed8603b1d83fc19c6e10a27ee3e7381ac59498356d1e9a26361ae954dfa2",
+      "review": "Successful returned image, but three cups remained; not selected."
+    }
+  ]
+}

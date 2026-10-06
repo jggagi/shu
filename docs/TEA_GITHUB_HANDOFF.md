@@ -1,5 +1,7 @@
 # 《两盏茶》GitHub 归档与交接
 
+2026-10-06 本轮只读复核：[PR #4](https://github.com/jggagi/shu/pull/4) 已 MERGED，head `973c4b2`，实时 main `89e4369`。下文“不合并／草稿 PR”保留为归档时点的执行边界；当前完整体验仍待试玩，不能由 merge 推断验收或 Pages 更新。本轮未执行新的 Git 交付，详见 [制作方法事实快照](SCENE_REUSE_HANDOFF.md)。
+
 2026-10-06，用户明确要求总结当前状态并提交到 GitHub，以便新 chat 继续开发（D039）。候选 **0.1.9-tea-past-local / tea-past-local-1**；当前方向认可与源码归档授权不等于完整体验验收。
 
 ## 归档范围

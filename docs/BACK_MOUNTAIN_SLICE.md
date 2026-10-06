@@ -455,3 +455,10 @@ task-start 哈希对照：DemoState、rules、公共 AmbientLifePresenter、Envi
 
 
 归档前独立验证：以远端 main 的 e7fa420 为基础，仅带入上述后山文件与相关文档，核心 DemoState／主流程／tea 数据保留该基础版本。状态 14、后山修炼 153、调度 56、环境 93、生趣 99、橘猫 102，共 517 条检查通过；真实 Compatibility 渲染 65 条、八张截图通过并实际查看。两份后山测试将并行剧情新增字段改为“存在时填充并比较”，因此保留本机完整快照覆盖，也可在 GitHub 既有状态模型上独立运行。本机证据在 `.local/qa/back-mountain-orange-cat-v2/github-stage/`，图片与缓存不入库。
+
+
+### 归档追记与当前 PR 状态（2026-10-06）
+
+归档时已提交并推送 `ecf40067ee9a7b8a408befcb71e8bd1ea4c6cea7` 到 `codex/back-mountain-orange-cat-v2`，远端哈希核实相同；当时创建草稿 PR #3，48 个范围内文件。独立工作树未带入 DemoState、主流程、Tea 素材／数据／文档或入口配置改动，原 checkout 并行工作保留。本机交付收据 `.local/qa/back-mountain-orange-cat-v2/github-stage/delivery-receipt.json` 及 scoped-render 证据继续留本机，不提交或删除。
+
+当前重新核对：[PR #3](https://github.com/jggagi/shu/pull/3) 已 MERGED，Tea PR #4 也已 MERGED，GitHub main 为 `89e4369`；不再描述为 OPEN/draft。上述记录保留归档历史，不据此推断在线试玩已更新。本轮只保存 scene-making skills 与文档，不新增部署或游戏验证。

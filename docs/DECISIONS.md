@@ -207,3 +207,11 @@ D037 美术授权：用户明确允许本轮四张分镜生成，选定已有原
 | D039 | 提交／推送已明确授权 | 将当前完整支线、过去场景、节奏、测试和美术来源保存到独立 GitHub 分支，并整理新 chat 交接；保留并行后山。完整体验与新画面仍待试玩，线上正式版不变，不据此合并或发布。 | 用户「总结目前状态，提交到 GitHub，我会新开 chat 继续开发」。 |
 
 本条更新此前本轮不提交／推送的历史边界；保留原状态记录以说明授权来源。见 [当前交接](TEA_HANDOFF.md) 与 [归档验证](TEA_GITHUB_HANDOFF.md)。
+
+## 场景制作方法沉淀（客户端日期 2026-10-06）
+
+| 编号 | 状态 | 决定及影响 | 依据 |
+| --- | --- | --- | --- |
+| D040 | 用户明确授权方法整理／文档实施 | Consolidate Shu Scene-Making Skills v1：新增固定画景与环境生趣 skills，小幅补强 art/cultivation 及真实 binding；skill 管方法，runtime 管执行，adapter 管场景，宿主管 gameplay。优先肉眼可见收益；听雨廊作为下一 Second Adopter，二真实场景共用并试玩后才考虑 addon。 | 本轮用户完整任务；禁止本轮新玩法、runtime 泛化、听雨廊迁移、commit/push/merge/发布。 |
+
+本轮不是产品玩法变更，不新增 SPEC 要求。实时 PR #3/#4 均已合并；本机旧 HEAD 的 dirty/untracked 与远端功能归档分开，Tea 完整体验仍待认可。代码/证据依据、候选提取顺序与下一验收点见 [制作方法 v1](SCENE_REUSE_HANDOFF.md)；此前仅提案与 draft 状态保留为历史。

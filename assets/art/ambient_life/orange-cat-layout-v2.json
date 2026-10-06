@@ -1,0 +1,172 @@
+{
+	"cell_width": 443.5,
+	"columns": 4,
+	"frames": [
+		{
+			"filled_pixels": 64762,
+			"opaque_bounds": [
+				21,
+				201,
+				408,
+				222
+			],
+			"pivot": [
+				225.0,
+				423
+			],
+			"pose_index": 0,
+			"region": [
+				0,
+				0,
+				443,
+				443
+			]
+		},
+		{
+			"filled_pixels": 65104,
+			"opaque_bounds": [
+				21,
+				200,
+				396,
+				223
+			],
+			"pivot": [
+				219.0,
+				423
+			],
+			"pose_index": 1,
+			"region": [
+				443,
+				0,
+				444,
+				443
+			]
+		},
+		{
+			"filled_pixels": 63016,
+			"opaque_bounds": [
+				22,
+				195,
+				391,
+				228
+			],
+			"pivot": [
+				217.5,
+				423
+			],
+			"pose_index": 2,
+			"region": [
+				887,
+				0,
+				443,
+				443
+			]
+		},
+		{
+			"filled_pixels": 72154,
+			"opaque_bounds": [
+				14,
+				159,
+				401,
+				264
+			],
+			"pivot": [
+				214.5,
+				423
+			],
+			"pose_index": 3,
+			"region": [
+				1330,
+				0,
+				444,
+				443
+			]
+		},
+		{
+			"filled_pixels": 70120,
+			"opaque_bounds": [
+				20,
+				92,
+				403,
+				254
+			],
+			"pivot": [
+				221.5,
+				346
+			],
+			"pose_index": 4,
+			"region": [
+				0,
+				443,
+				443,
+				444
+			]
+		},
+		{
+			"filled_pixels": 63248,
+			"opaque_bounds": [
+				20,
+				156,
+				425,
+				203
+			],
+			"pivot": [
+				232.5,
+				359
+			],
+			"pose_index": 5,
+			"region": [
+				443,
+				443,
+				455,
+				444
+			]
+		},
+		{
+			"filled_pixels": 59691,
+			"opaque_bounds": [
+				3,
+				128,
+				412,
+				221
+			],
+			"pivot": [
+				209.0,
+				349
+			],
+			"pose_index": 6,
+			"region": [
+				898,
+				443,
+				432,
+				444
+			]
+		},
+		{
+			"filled_pixels": 69325,
+			"opaque_bounds": [
+				14,
+				96,
+				408,
+				249
+			],
+			"pivot": [
+				218.0,
+				345
+			],
+			"pose_index": 7,
+			"region": [
+				1330,
+				443,
+				444,
+				444
+			]
+		}
+	],
+	"image_size": [
+		1774,
+		887
+	],
+	"logical_width": 96.0,
+	"rows": 2
+}

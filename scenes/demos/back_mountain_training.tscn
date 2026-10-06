@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://scripts/back_mountain_training.gd" id="1"]
+
+[sub_resource type="Curve2D" id="Curve_birds"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -40, 95, -130, -12, 130, 12, 700, 125, 0, 0, 0, 0, 1480, 165)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve_squirrel"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 240, 154, 0, 0, 0, 0, 310, 150, 0, 0, 0, 0, 368, 170, 0, 0, 0, 0, 445, 196, 0, 0, 0, 0, 520, 215)
+}
+point_count = 5
 
 [node name="BackMountainTraining" type="Control"]
 layout_mode = 3
@@ -10,3 +22,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1")
+
+[node name="AmbientCapabilities" type="Node2D" parent="."]
+
+[node name="SkyBirdLane" type="Path2D" parent="AmbientCapabilities"]
+curve = SubResource("Curve_birds")
+
+[node name="SquirrelPath" type="Path2D" parent="AmbientCapabilities"]
+curve = SubResource("Curve_squirrel")
+
+[node name="CatSpot_Rock" type="Marker2D" parent="AmbientCapabilities"]
+position = Vector2(490, 523)
+metadata/spot_type = "rock"
+metadata/sheltered = false
+metadata/sunny = true

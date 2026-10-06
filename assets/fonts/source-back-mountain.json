@@ -5,9 +5,9 @@
   "License": "SIL Open Font License 1.1",
   "LicenseFile": "OFL-Serif.txt",
   "DerivedName": "Shu Back Mountain Serif",
-  "Codepoints": 238,
-  "Modifications": "Subset to standalone back mountain controller/state/data; weight 550; renamed.",
-  "Tool": "fontTools 4.51.0",
+  "Codepoints": 306,
+  "Modifications": "Subset to standalone back mountain controller/ambient adapter/state/data; weight 550; renamed.",
+  "Tool": "fontTools 4.60.1",
   "Rebuild": "python tools/rebuild_back_mountain_font.py <source-font>",
-  "DerivedSHA256": "f24d1b1924bc092242435aa44f8d644150849fed96d59fb75ec39b571554e587"
+  "DerivedSHA256": "ad0a82e3195035690c37e13c6a52b258a7545ba7ab38f08c8cb36847b06fb36e"
 }

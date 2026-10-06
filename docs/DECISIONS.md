@@ -215,3 +215,15 @@ D037 美术授权：用户明确允许本轮四张分镜生成，选定已有原
 | D040 | 用户明确授权方法整理／文档实施 | Consolidate Shu Scene-Making Skills v1：新增固定画景与环境生趣 skills，小幅补强 art/cultivation 及真实 binding；skill 管方法，runtime 管执行，adapter 管场景，宿主管 gameplay。优先肉眼可见收益；听雨廊作为下一 Second Adopter，二真实场景共用并试玩后才考虑 addon。 | 本轮用户完整任务；禁止本轮新玩法、runtime 泛化、听雨廊迁移、commit/push/merge/发布。 |
 
 本轮不是产品玩法变更，不新增 SPEC 要求。实时 PR #3/#4 均已合并；本机旧 HEAD 的 dirty/untracked 与远端功能归档分开，Tea 完整体验仍待认可。代码/证据依据、候选提取顺序与下一验收点见 [制作方法 v1](SCENE_REUSE_HANDOFF.md)；此前仅提案与 draft 状态保留为历史。
+
+
+## Tingyu Corridor — Second Adopter 第一切片（客户端日期 2026-10-06）
+
+| 编号 | 状态 | 决定及影响 | 依据 |
+| --- | --- | --- | --- |
+| D041 | 用户授权本地实现／待试玩认可 | 听雨廊只复用 EnvironmentPresenter 接入已有六时辰和晴／多云／小雨；以自己的 adapter/profile 保留廊景构图、人物和 UI。Static 保留画面并冻结环境运动，Dynamic 恢复；环境只观察，不改玩法。 | 本 chat 完整任务「Tingyu Corridor — Second Adopter」；授权独立 worktree、实现及本地验证，禁止 commit/push/PR/merge/部署。 |
+
+本条接替 D018 的主场景自动循环与隐藏效果式静态对比；历史实现与验证记录保持。独立过渡时长、色调、雾量是可调制作参数，尚未被用户批准为永久规则。本轮不接动物／猫、不扩剧情、不创建 addon；第二场景真正试玩后再评估共用代码提取。见 [当前切片](TINGYU_ENVIRONMENT_SLICE.md)。
+
+
+D041 GitHub交付授权追记（2026-10-06）：用户要求「创建 PR and merge」，授权本轮切片的commit/push、创建main PR和merge，接替前述制作阶段限制。不增加动物、剧情或addon，不部署；原checkout与产物保持，具体视觉参数的用户反馈仍单独记录。

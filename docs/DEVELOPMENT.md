@@ -301,3 +301,13 @@ Ambient Life v1.1 反馈修订：用户希望猫和松鼠随环境有小动作�
 ### TEA GitHub 源码与交接归档（2026-10-06）
 
 按D039，当前完整支线和过去片段归档至 `codex/tea-full-past-scenes`，从已合入后山橘猫的main `07bd2ee`开始。仅提交tea代码、布局、必要字体、九张运行背景及来源、精确提示、测试和文档，不纳入后山新增修改或`.local`产物。当前完整体验仍待用户试玩；线上0.1.4保持。新chat入口 [TEA_HANDOFF](TEA_HANDOFF.md)，本次复核与远端交付边界 [TEA_GITHUB_HANDOFF](TEA_GITHUB_HANDOFF.md)。
+
+
+### Tingyu Corridor — Second Adopter：时辰／天气第一切片（2026-10-06）
+
+最新 `origin/main` / `7f34a5347e60c87fb982df1fb3d488a41d4d4f40` 上创建独立 worktree，分支 `codex/tingyu-environment-v1`。原 checkout 的 main、tracked 文件、本机产物和安全快照保持；本轮不提交／推送／PR／合并／部署。
+
+按 D041，只将听雨廊自己的天气 adapter 接到已有 EnvironmentPresenter，六时辰读取 DemoState，晴／多云／小雨用独立 profile；不复制后山构图或控制器，不接动物与剧情。Static 保留完整场景并冻结环境时钟，主动切换仍过渡；原行动／师傅／物件／Tea／重置保持。参数与分层验收见 [当前任务卡](TINGYU_ENVIRONMENT_SLICE.md)。下一验收点仅为用户判断天气辨识度、时辰氛围、自然动态与师徒可读性；用户试玩认可尚未完成。
+
+
+Tingyu GitHub交付追记（2026-10-06）：用户随后明确授权创建PR并merge，包含必要的commit/push。最新origin/main仍为7f34a53，候选源码与已验证包的源文件哈希一致；交付前只补授权记录，不重复构建/游戏检查。范围为本轮17文件，`.local`日志、截图、试玩包与安全快照不入Git。源码合并与本机试玩认可分开；不部署或同步原local main。具体远端结果以PR合并状态/commit为准。

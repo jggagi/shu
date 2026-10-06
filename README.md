@@ -48,7 +48,7 @@ Mac mini 独立启动：
 
 江砚秋与叶知闲同处听雨廊。修炼推进时间与修为，请教口诀得到一次修炼加成，休息恢复精力。修为达到 60 完成第一课，可重新开始反复试玩。姓名与整体美术风格已由用户确认；构图、动态强度与数值继续供试玩拍板。当前使用分层生成的中国画背景、Q 版师徒、木桌与宣纸木框，原 SVG 占位稿仍保留供比较。
 
-沿用 **0.1.2-weather3** 加入的约 30 秒「薄云 → 微风 → 小雨 → 雨歇」循环：云影缓移、竹叶轻摇、远山薄雾、廊外雨线与檐下滴水。右上「切换天气」可快速预览，「静态对比」可关闭环境效果；阅读对白时天气继续，切换效果不会消耗精力或推进养成时辰。
+本机候选 **0.1.10-tingyu-environment-local**：作为 EnvironmentPresenter 的第二场景，听雨廊以自己的 profile 接入真实六时辰及晴／多云／小雨。保留原背景、竹叶、廊外雨雾和师徒；时辰跟随原行动，天气由右上「切换天气」选择。Static 保留完整画面并冻结环境运动；主动更换时辰／天气仍平滑过渡，Dynamic 从冻结位置恢复。环境切换不改变玩法状态。具体氛围与强度待用户试玩，见 [本轮切片与验证](docs/TINGYU_ENVIRONMENT_SLICE.md)。此前 30 秒循环保留为历史代码，不再驱动主场景。
 
 ## 运行与导出
 
@@ -72,7 +72,7 @@ Mac mini 独立启动：
 3. 再修炼一次：这次修为增加 18，之后恢复基础增量 12。
 4. 休息恢复精力，继续修炼达到 60；点击「重新开始」回到首日初始状态。
 
-键盘 1／2／3 对应修炼／请教／休息；4 切换静态／动态，5 预览下一天气；对话选择时 Esc 可取消。当前没有存档或音效，刷新、重开会开始新一轮。建议使用桌面窗口；手机竖屏布局留待后续。
+键盘 1／2／3 对应修炼／请教／休息；4 切换静态／动态，5 切换下一天气，7／8／9 直接选晴／多云／小雨；对话选择时 Esc 可取消。当前没有存档或音效，刷新、重开会开始新一轮。建议使用桌面窗口；手机竖屏布局留待后续。
 
 ## 维护入口
 
@@ -82,7 +82,7 @@ Mac mini 独立启动：
 - [Codex 工作约定](AGENTS.md)：范围和验证规则。
 - [概念图索引](docs/concepts/README.md)：三张原始概念图与 SHA256。
 - [美术来源](assets/art/v2/source.json)与[天气美术来源](assets/art/weather3/source.json)：运行图层、生成提示与 SHA256。
-- `assets/data/weather.json` 调循环时长、雨线密度、竹叶位置与薄雾强度；`scripts/weather.gd` 控天气呈现，`scripts/weather_cycle.gd` 定阶段曲线，养成规则独立。
+- `assets/data/tingyu_environment.json` 调听雨廊时辰／天气表现与过渡，`assets/data/weather.json` 保留廊景雨线、竹叶位置与更新频率；`scripts/weather.gd` 为听雨廊 adapter，复用 `EnvironmentPresenter`，养成规则独立。`scripts/weather_cycle.gd` 仅为原循环历史。
 - `assets/data/characters.json` 是当前姓名表；对白通过人物标识读取称呼。
 - `assets/data/layout.json` 调人物位置／面板布局；`rules.json` 调养成数值（行动文案同步 `main.gd`）；`dialogue.json` 改对白。状态结算在 `scripts/demo_state.gd`，界面在 `scripts/main.gd`。
 - `tools/make_art.py` 可重新生成原创 SVG 草图。当前界面使用带 OFL 许可的 Noto Serif SC 派生子集 Shu Demo Serif，旧 Sans 子集保留。字体来源、版本与 SHA256 随文件保存；新增汉字时用 `tools/rebuild_font.py` 扩展字库（fontTools 4.60.1，开发工具，运行无需安装）。
@@ -100,7 +100,7 @@ godot --headless --path . --script res://tests/weather_test.gd
 godot --path . --audio-driver Dummy --script res://tests/weather_render.gd
 ```
 
-渲染检查使用实际 Compatibility 画面，将截图与预热后的本机指标写入 `.local/qa/weather3`；不是无界面测试或跨设备帧率承诺。
+当前渲染检查使用实际 Compatibility 画面，将时辰／天气／过渡／动静及 UI 截图写入 `.local/qa/tingyu-environment-v1`；同时记录实际窗口与图像尺寸。历史 weather3 性能记录保留，本轮不作跨设备帧率承诺。
 
 每轮先收试玩反馈，再调整布局和节奏。D02 拟增加余观涛互动与第二项养成活动，待本轮验收后推进。
 
@@ -109,6 +109,6 @@ godot --path . --audio-driver Dummy --script res://tests/weather_render.gd
 
 养成模式制作入口：[game-cultivation-build](.agents/skills/game-cultivation-build/SKILL.md)，仓库级 0.1.1；支持养成行动、人物互动及 tea 等固定场景支线。拟议的 cultivation toolkit／编辑器插件仍为设计，尚未实现。
 
-固定画景、时辰／天气与环境动态使用 [game-painted-scene-build](.agents/skills/game-painted-scene-build/SKILL.md)；低频环境动物与场景能力使用 [game-ambient-life-build](.agents/skills/game-ambient-life-build/SKILL.md)；raster 素材由 [game-art](.agents/skills/game-art/SKILL.md) 制作并在真实场景校准。现有 Environment/Ambient presenters 是 reusable shu modules，`shu_scene_runtime` addon 尚未实现。事实校准、运行边界与下一阶段 **Tingyu Corridor — Second Adopter** 见 [制作方法 v1](docs/SCENE_REUSE_HANDOFF.md)，本轮只整理方法，不迁移听雨廊。
+固定画景、时辰／天气与环境动态使用 [game-painted-scene-build](.agents/skills/game-painted-scene-build/SKILL.md)；低频环境动物与场景能力使用 [game-ambient-life-build](.agents/skills/game-ambient-life-build/SKILL.md)；raster 素材由 [game-art](.agents/skills/game-art/SKILL.md) 制作并在真实场景校准。现有 Environment/Ambient presenters 是 reusable shu modules，`shu_scene_runtime` addon 尚未实现。事实校准、运行边界与下一阶段 **Tingyu Corridor — Second Adopter** 见 [制作方法 v1](docs/SCENE_REUSE_HANDOFF.md)，方法整理已完成；本机听雨廊第一切片只接时辰／天气，尚待用户试玩，不创建 addon。
 
 [工具包设计](docs/CULTIVATION_MODE.md) · [检查记录](docs/CULTIVATION_MODE_CHECKS.md) · [新 chat 的 tea 交接](docs/TEA_HANDOFF.md)。A/B 与阶段 C 已验收；完整调查和过去场景已实现，D01 养成保持可用；新画面与完整体验继续由用户试玩拍板。

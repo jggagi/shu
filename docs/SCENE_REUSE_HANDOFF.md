@@ -82,3 +82,11 @@ Environment/Ambient presentation observers 可读取 time/weather/busy，不能�
 保存基线 `89e43692deaacf9ca66fb39c3a91a8ea0f437b30`，分支 `codex/shu-scene-skills-v1`。仅带入 12 个 skill/文档改动及后山归档追记，共 13 文件；排序与 Tea provenance 保持远端版本，runtime/素材/本机产物不进入新 diff。原 checkout 仍保留 `main/e7fa420` 及全部并行文件；等待 PR 合并后再单独处理同步。安全快照仅在原 checkout `.local/safety/scene-skills-20261006T143032Z/`，含 263 个 tracked/untracked 文件、校验 manifest、原索引和 diff；恢复到新空目录核对，不覆盖当前文件。忽略的 `.local/.godot/art/work` 内容仍在原处，未提交或删除。
 
 本次隔离保存复核：四份 quick validation、cultivation package、136 个本地引用及 staged diff 检查通过；与安全快照比较，原 checkout 的 263 个文件、HEAD 和索引保持。未执行游戏回归或构建。
+
+
+## Second Adopter 第一切片接手状态（2026-10-06）
+
+后续用户已授权并开始 Tingyu Corridor 时辰／天气本地切片，接替上文“下一路线／本轮不实现”的历史阶段边界；范围仅 EnvironmentPresenter，不接 AmbientLifePresenter／猫。最新基线 `7f34a53`，独立 `codex/tingyu-environment-v1`，真实检查与下一试玩点见 [TINGYU_ENVIRONMENT_SLICE](TINGYU_ENVIRONMENT_SLICE.md)。共用 presenter 保持原模块，adapter 继续保留听雨廊实际坐标与遮罩；尚未达到用户试玩认可及 addon 提取门槛。本轮无 commit/push/PR/merge/部署。
+
+
+Second Adopter交付授权更新（2026-10-06）：用户已要求创建PR并merge，授权当前时辰／天气切片的commit/push和main PR合并，接替上一节本轮不提交的历史边界；不部署、不更新原local main、不扩下一切片。当前实现与验证见TINGYU_ENVIRONMENT_SLICE，用户视觉反馈及addon提取门槛继续独立。

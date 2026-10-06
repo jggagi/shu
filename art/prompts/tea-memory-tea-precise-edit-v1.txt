@@ -1,0 +1,13 @@
+Asset type: precise edit of the supplied game scene.
+Purpose: fix an extra cup in one of the four existing past-scene frames, preserving the scene and original two adult characters.
+Primary request: REMOVE ONLY THE RIGHTMOST CUP on the tea table, centered approximately at x1060,y675 in this 1440x900 image. It is the empty white-gray cup directly beside Xie Chang'an's forearm and to the RIGHT of the cup currently receiving the tea stream. Fill its entire shape with matching wooden tabletop. Keep the cup beneath the pouring stream, keep the cup beside Gu Qingluo's fingers on the LEFT. The result MUST have exactly TWO cups total. Do not add a cup anywhere else.
+Reference images: past-tea-v1.png is the edit target, not a general style suggestion.
+Scene/backdrop: preserve every building, mountain, window, stove, clothing, stool, tabletop edge and background mark exactly.
+Subject: preserve both original characters, their faces, hair, body proportions, clothing, hand poses and seated positions; preserve the man's teapot and tea pouring stream.
+Style/medium: preserve the existing restrained Song-style ink/watercolor, paper grain, brushwork and colors.
+Composition/framing: preserve the exact landscape camera and aspect ratio; image remains a game backdrop, no panels, no cropping.
+Lighting/mood: preserve existing daylight.
+Color palette: unchanged.
+Materials/textures: restore wood grain where the rightmost cup was, no visible smudges or artificial patch.
+Constraints: final image exactly TWO cups and ONE teapot, no additional cups held in hands; no other visual change. This is one corrected frame in the existing four-frame candidate.
+Avoid: third cup, extra people, text, labels, annotations, watermark, signature, border, UI or changes to identity.

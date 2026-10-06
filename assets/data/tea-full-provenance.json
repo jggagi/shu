@@ -1,0 +1,27 @@
+{
+  "repository": "https://github.com/jggagi/sub",
+  "path": "tea/full-chain.json",
+  "revision": "50acc08b5cdd7d8a83525f1c0c1102ca9b7d6ca5",
+  "sha256": "8fe564cb9455c8006e2441560bbd1d64c9053b46ae79691b5797bd4f4a319afc",
+  "checked_date": "2026-10-05",
+  "historical_source_unchanged": true,
+  "presentation": {
+    "art_reuse": [
+      {
+        "path": "assets/art/tea/tea-terrace-v1.png",
+        "sha256": "9b4ae56e641a4d0bc0f50916f2812c21185d01d71dcb8077738236837f13567f"
+      },
+      {
+        "path": "assets/art/tea/tea-cups-v1.png",
+        "sha256": "3f976fb4bdf3ea4419091dd9cdd4e6166e30adfd04559b056e5015f71f84cc45"
+      },
+      {
+        "path": "assets/art/tea-c/tea-courtyard-reference-v1.png",
+        "sha256": "cc01552fd82f23edc20c3a2a2b4fda2df505022568d9116919c6a04917273d26"
+      }
+    ],
+    "memory": "Presentation revised per D033, D034 and D037: living past courtyard, diagnosis, writing and after-death tableaux; source text unchanged. Selected-frame hashes in assets/art/tea-memory/source.json and past-scenes-source.json.",
+    "tea_fill": "Program-drawn translucent polygon tea surfaces; no newly generated raster asset.",
+    "manuscript": "Byte-identical runtime source snapshot, not a new authored manuscript."
+  }
+}

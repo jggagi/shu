@@ -1,0 +1,95 @@
+{
+  "version": "tea-past-scenes-v1",
+  "date": "2026-10-06",
+  "author": "AI-generated under user-directed shu game-art workflow",
+  "license_usage": "User-authorized project generation; provider terms apply. Original project references.",
+  "scope_authorization": "User expressly allowed four Qwen Image 3.0 frames with selected original references and unpublished story prompts this turn. No further billable retries.",
+  "assets": [
+    {
+      "file": "past-diagnosis-v1.png",
+      "provider": "qwen",
+      "model": "qwen-image-3.0",
+      "sha256": "6cc9269eec68aad387f9ea6a028b80ec5a9c7e6f29f2619516f751e60a860bb9",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "prompt_file": "art/prompts/tea-past-all/diagnosis-v1.txt",
+      "references": [
+        "assets/art/tea-memory/past-standing-v1.png",
+        "assets/art/tea-c/tea-courtyard-reference-v1.png"
+      ],
+      "status": "selected_for_local_trial",
+      "user_accepted": false,
+      "prompt_sha256": "a240f4f204346ff1abba8f7c050e89666d10651968bf7614b3f3a404e9807c01"
+    },
+    {
+      "file": "past-writing-v1.png",
+      "provider": "qwen",
+      "model": "qwen-image-3.0",
+      "sha256": "1b79a8c983b4dac1a4f2c75a95bf49742874faa7efa6c389e143bab2d74c2fad",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "prompt_file": "art/prompts/tea-past-all/writing-v1.txt",
+      "references": [
+        "assets/art/tea-memory/past-standing-v1.png",
+        "assets/art/tea-c/tea-courtyard-reference-v1.png"
+      ],
+      "status": "selected_for_local_trial",
+      "user_accepted": false,
+      "prompt_sha256": "1a721ef466b8dd32b5956099517b22ae05021f28337b197774d68039af9191db"
+    },
+    {
+      "file": "past-after-question-v1.png",
+      "provider": "codex-imagegen",
+      "model": null,
+      "sha256": "fda84e8ff4c25b4f586a07f71bce848c8c803c27967275e72002d5ad5ef2ade3",
+      "dimensions": [
+        1586,
+        992
+      ],
+      "prompt_file": "art/prompts/tea-past-all/after-question-identity-edit-v1.txt",
+      "references": [
+        "art/work/tea-past-all/past-after-question-v1.png"
+      ],
+      "status": "selected_for_local_trial",
+      "user_accepted": false,
+      "base_generation": {
+        "provider": "qwen",
+        "model": "qwen-image-3.0",
+        "candidate": "art/work/tea-past-all/past-after-question-v1.png",
+        "prompt_file": "art/prompts/tea-past-all/after-question-v1.txt",
+        "review": "Right disciple resembled Xie; not selected before identity correction."
+      },
+      "prompt_sha256": "61bf815767e001df3333263fccdcf7a760daa4e43307534042804ae59251ba3b"
+    },
+    {
+      "file": "past-after-cups-v1.png",
+      "provider": "qwen",
+      "model": "qwen-image-3.0",
+      "sha256": "1e6f5a483798c39bf9d912de711a75de1a97e5ab56469b18d1ad275c5f064834",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "prompt_file": "art/prompts/tea-past-all/after-cups-v1.txt",
+      "references": [
+        "assets/art/tea-memory/past-standing-v1.png",
+        "assets/art/tea-c/tea-courtyard-reference-v1.png"
+      ],
+      "status": "selected_for_local_trial",
+      "user_accepted": false,
+      "prompt_sha256": "0db442a56455ca5c4d627a5227edad0f8e84db239f0ee283f7e3b4eb0f603f94"
+    }
+  ],
+  "review": {
+    "diagnosis": "Three distinct people: physician takes pulse; Gu upright; Xie visibly alive. No cure or magical symptoms.",
+    "writing": "Gu alone writing; her agency preserved; no legible generated text.",
+    "after_question": "Corrected to braided charcoal-robed anonymous female disciple, distinct from pale-robed high-bun Xie. No Xie/corpse/ghost. Small composition shifts reviewed.",
+    "after_cups": "Only Gu, exactly two visible cups and opposite empty seat. No Xie or ghost.",
+    "presentation": "Opaque full-scene painted tableaux with existing camera drift/crossfades, not skeletal actor animation.",
+    "acceptance": "Agent selected for local playtest; user visual/full experience acceptance pending."
+  }
+}

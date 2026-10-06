@@ -1,0 +1,13 @@
+Asset type: production fixed scene game background, landscape 1440x900.
+Purpose: diary past alone production scene for Two Cups of Tea.
+Primary request: Use reference 1 for exact original identities and living courtyard architecture, reference 2 for shu architectural consistency. Show Xie Chang'an ALONE, seated at the right of the low tea table, eyes lowered patiently, hands resting near a small teapot. Gu Qingluo has walked out of this shot; do not show her or any ghost/silhouette. This is a quiet pause in an ordinary day; he is alive and healthy. Keep all buildings, camera, character face and robe unchanged. Exactly TWO cups resting on table.
+Reference images: past-standing-v1.png for identities, camera and living courtyard; tea-courtyard-reference-v1.png for shu architectural/brushwork consistency.
+Scene/backdrop: same inhabited timber courtyard, house and paper window left, hanging clothes rear, doorway right, medicine stove left, pale mountains beyond. Same low tea table lower center-right with exactly TWO small cups and one small teapot, no other cups or bowls. Intact ordinary home with patched cotton garments, no luxury.
+Subject: Only Xie Chang'an at x1020 y610, seated about 280px high, same dark loosely tied hair with gray ribbon, muted brown-gray robe, gentle reserved adult Q-style face. An empty stool on left where Gu can later sit. No extra person.
+Style/medium: Song-style Chinese painting, fine ink lines, muted diluted mineral pigment on warm fibrous paper; restrained, soft flat washes, no glossy anime rendering.
+Composition/framing: entire courtyard, complete feet visible. Heads near y470, characters unobscured in lower middle/right; upper 40 percent and far left are quiet painted space for game dialogue to be overlaid later. No text or UI in generated image. Keep architecture recognizable to reference 2.
+Lighting/mood: Same quiet morning as encounter, still sun, patient unforced pause, no death or despair.
+Color palette: parchment cream, sage, pale blue-gray and charcoal brown.
+Materials/textures: wood, stone, cotton and handmade paper.
+Constraints: one clean landscape scene; exactly one living man for the alone shot, otherwise exactly the specified living pair; exactly two cups total; no third person, no letters/book in hand, no weapon, no magical effects; preserve supplied identities and courtyard architecture. No ghosts or death imagery.
+Avoid: contact sheets, borders, text, signatures, watermark, captions, UI, photorealism, modern objects, hugs, kissing, pink romance.

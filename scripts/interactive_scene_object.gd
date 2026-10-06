@@ -12,6 +12,7 @@ var hint: Label
 var mark: Label
 var motion: Tween
 var ink_material: ShaderMaterial
+var persistent_hint := false
 var emphasis := 0.0:
 	set(value):
 		emphasis = value
@@ -87,8 +88,21 @@ func _hover(value: bool) -> void:
 	hovered = value
 	_update_visual()
 
+func _draw() -> void:
+	if prop != null and prop.texture == null and (hovered or selected):
+		draw_style_box(_surface_outline(), Rect2(Vector2.ZERO, size))
+
+func _surface_outline() -> StyleBoxFlat:
+	var box := StyleBoxFlat.new()
+	box.bg_color = Color(0.95,0.91,0.80,0.08)
+	box.border_color = Color(0.68,0.54,0.35,0.75)
+	box.set_border_width_all(1)
+	box.set_corner_radius_all(5)
+	return box
+
 func _update_visual() -> void:
-	hint.visible = hovered and not selected
+	queue_redraw()
+	hint.visible = persistent_hint or (hovered and not selected)
 	if motion != null:
 		motion.kill()
 	if not is_inside_tree():

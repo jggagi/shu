@@ -1,0 +1,395 @@
+{
+  "schema_version": 1,
+  "quest_id": "tea",
+  "entry_title": "归剑问天",
+  "completed_title": "两盏茶",
+  "source": {
+    "repository": "https://github.com/jggagi/sub",
+    "path": "tea/full-chain.json",
+    "historical_repository": "https://github.com/jggagi/shu",
+    "historical_path": "story/sub/tea/README.md",
+    "historical_commit": "086e13eb11bd3710e2b7f8daa1c617c1d386be2c",
+    "historical_sha256": "20fc0889378091e70999bb0cee1ae99df28dad7da0469b9fa8ff76de20f2377c"
+  },
+  "adaptation": {
+    "date": "2026-10-04",
+    "timezone": "America/Los_Angeles",
+    "chronology": "账册和医案以迁居/传闻之年作相对对照；未锁定世界历法。",
+    "choices": "顾青萝的信与谢长安遵守请求的选择按原稿保留；江砚秋只作见证者。",
+    "ending": "原剑坪同 ID 两杯；先添一杯，停一会儿，再添另一杯；无对白、幻影或复活。",
+    "runtime": "当前运行进度，无磁盘存档；文书分页适配，不承诺正式内容时长。"
+  },
+  "stages": [
+    {
+      "id": "late_dates",
+      "title": "问天峰旧院",
+      "profile": "courtyard",
+      "intro": "旧院就在剑坪后。把旧剑放回去之前，看看这里留下的日常。",
+      "items": [
+        "tea.household",
+        "tea.ledger"
+      ]
+    },
+    {
+      "id": "medical",
+      "title": "药匣中的旧页",
+      "profile": "courtyard",
+      "intro": "药匣中夹着几张诊录。先从日期最早的一页读起。",
+      "items": [
+        "tea.medical_early",
+        "tea.medical_habits"
+      ]
+    },
+    {
+      "id": "letter",
+      "title": "柜中旧信",
+      "profile": "courtyard",
+      "intro": "柜门已经松动。信与旧物被整齐收在深处。",
+      "items": [
+        "tea.cabinet",
+        "tea.letter"
+      ]
+    },
+    {
+      "id": "memory",
+      "title": "旧页中的片刻",
+      "profile": "memory",
+      "intro": "翻到旧记中的一日。逐页读过这段对话。",
+      "items": [
+        "tea.memory"
+      ]
+    },
+    {
+      "id": "records",
+      "title": "几册旧记",
+      "profile": "courtyard",
+      "intro": "书脊与纸色不同。按前后次序，翻开几册旧记。",
+      "items": [
+        "tea.record_early",
+        "tea.record_late",
+        "tea.record_last"
+      ]
+    },
+    {
+      "id": "last_day",
+      "title": "末页",
+      "profile": "courtyard",
+      "intro": "旧记终于翻到末页。",
+      "items": [
+        "tea.last_day"
+      ]
+    },
+    {
+      "id": "official_notice",
+      "title": "山门旧档",
+      "profile": "courtyard",
+      "intro": "最后一份是上山弟子留下的记录。",
+      "items": [
+        "tea.notice_death",
+        "tea.notice_cups"
+      ]
+    },
+    {
+      "id": "cups_return",
+      "title": "回到剑坪",
+      "profile": "terrace",
+      "intro": "剑坪没有变。附近仍有人讲着旧传闻。江砚秋没有作答。",
+      "items": [
+        "tea.cup_first",
+        "tea.cup_second"
+      ]
+    }
+  ],
+  "objects": {
+    "tea.household": {
+      "label": "两副碗筷",
+      "pages": [
+        {
+          "speaker": "问天峰旧院",
+          "text": "柜边放着两副碗筷。两件冬衣的袖口反复补过，窗上也留着几次修补的痕迹。药罐旁，一只碗用来接漏下的水。"
+        },
+        {
+          "speaker": "江砚秋",
+          "text": "不像专为纪念谁而留下的陈设。这里曾有人生火、吃饭、过冬，把日子过了很久。"
+        }
+      ],
+      "requires": []
+    },
+    "tea.ledger": {
+      "label": "生活账册",
+      "pages": [
+        {
+          "speaker": "旧页",
+          "text": "起页记着两人迁居问天峰的年份。山下传闻，也从这一年起说谢长安已死。\n账上却一直有添米、补衣、买药的支出。"
+        },
+        {
+          "speaker": "江砚秋",
+          "text": "其后第十一年，仍记着两人的衣食用度。\n谢长安没有在传闻所说的时候死去。他们在这里一起生活了许多年。"
+        }
+      ],
+      "requires": [
+        "tea.household"
+      ]
+    },
+    "tea.medical_early": {
+      "label": "最早的诊录",
+      "pages": [
+        {
+          "speaker": "蜀山医者诊录",
+          "text": "传闻之年前一年。\n顾青萝伤及神识后，医者开始留下诊录。那时谢长安尚在。"
+        },
+        {
+          "speaker": "蜀山医者诊录",
+          "text": "旧事渐失。\n近事难留。\n剑法无损。\n故人难识。"
+        }
+      ],
+      "requires": []
+    },
+    "tea.medical_habits": {
+      "label": "移居后的诊录",
+      "pages": [
+        {
+          "speaker": "蜀山医者诊录",
+          "text": "新发生的事愈来愈难留下。较早的旧事随后脱落，人名、面孔与关系逐渐失去意义。\n剑法、步法、煮茶等熟练动作，保留得更久。"
+        },
+        {
+          "speaker": "江砚秋",
+          "text": "这些诊录早于谢长安真正去世的时间。顾青萝不是在他死后，才开始忘记。"
+        }
+      ],
+      "requires": [
+        "tea.medical_early"
+      ]
+    },
+    "tea.cabinet": {
+      "label": "锁起的旧物",
+      "pages": [
+        {
+          "speaker": "柜中旧物",
+          "text": "旧信、剑穗、刻过名字的木牌，都收在柜中。旁边几页早期记录，一次次写着给她看信，帮她回想从前。"
+        },
+        {
+          "speaker": "谢长安旧记",
+          "text": "“我是谢长安。”\n“这是你写给我的。”\n“我们认识很多年。你记得吗？”\n他说得越来越急，她却害怕，甚至哭了。"
+        },
+        {
+          "speaker": "谢长安旧记",
+          "text": "今日不该逼她。"
+        }
+      ],
+      "requires": []
+    },
+    "tea.letter": {
+      "label": "顾青萝的信",
+      "pages": [
+        {
+          "speaker": "顾青萝",
+          "text": "长安：\n如果以后有一天，我问你是谁，你可以告诉我你的名字。"
+        },
+        {
+          "speaker": "顾青萝",
+          "text": "但不要告诉我，我以前爱你。\n不要拿那些信给我看，也不要跟我说我们约好了什么。"
+        },
+        {
+          "speaker": "顾青萝",
+          "text": "一个陌生人醒来，忽然有人告诉她：“你应该爱我，因为你以前爱过我。”\n我想那一定很害怕。"
+        },
+        {
+          "speaker": "顾青萝",
+          "text": "如果到那一天，你还愿意见我，就再认识一次吧。\n如果我不喜欢你了，也不要怪我。"
+        }
+      ],
+      "requires": [
+        "tea.cabinet"
+      ]
+    },
+    "tea.memory": {
+      "label": "旧记中的一日",
+      "pages": [
+        {
+          "speaker": "顾青萝",
+          "text": "你是谁？"
+        },
+        {
+          "speaker": "谢长安",
+          "text": "谢长安。"
+        },
+        {
+          "speaker": "顾青萝",
+          "text": "我们认识？"
+        },
+        {
+          "speaker": "旧记中的一日",
+          "text": "谢长安停了一会儿。"
+        },
+        {
+          "speaker": "谢长安",
+          "text": "今天刚认识。"
+        },
+        {
+          "speaker": "谢长安",
+          "text": "喝茶吗？"
+        },
+        {
+          "speaker": "顾青萝",
+          "text": "你泡得好吗？"
+        },
+        {
+          "speaker": "谢长安",
+          "text": "不好。"
+        },
+        {
+          "speaker": "顾青萝",
+          "text": "那我为什么要喝？"
+        },
+        {
+          "speaker": "谢长安",
+          "text": "也是。"
+        },
+        {
+          "speaker": "旧记中的一日",
+          "text": "谢长安自己坐下。\n过了一会儿，顾青萝回来，在对面坐下。"
+        },
+        {
+          "speaker": "顾青萝",
+          "text": "……给我一杯。"
+        }
+      ],
+      "requires": []
+    },
+    "tea.record_early": {
+      "label": "前册",
+      "pages": [
+        {
+          "speaker": "谢长安旧记",
+          "text": "三月初二。青萝今日认得我。\n三月初七。今日不认得。"
+        },
+        {
+          "speaker": "谢长安旧记",
+          "text": "三月初八。茶太苦，她没喝。\n三月初九。少放一半茶叶，还是嫌苦。"
+        },
+        {
+          "speaker": "谢长安旧记",
+          "text": "三月十二。她问我是不是天天来。我说是。她说，那你明天也来吧。"
+        }
+      ],
+      "requires": []
+    },
+    "tea.record_late": {
+      "label": "后册",
+      "pages": [
+        {
+          "speaker": "谢长安旧记",
+          "text": "今天一起吃饭。"
+        },
+        {
+          "speaker": "谢长安旧记",
+          "text": "今天喝茶。"
+        }
+      ],
+      "requires": [
+        "tea.record_early"
+      ]
+    },
+    "tea.record_last": {
+      "label": "最后几页",
+      "pages": [
+        {
+          "speaker": "谢长安旧记",
+          "text": "喝茶。"
+        },
+        {
+          "speaker": "谢长安旧记",
+          "text": "喝茶。"
+        }
+      ],
+      "requires": [
+        "tea.record_late"
+      ]
+    },
+    "tea.last_day": {
+      "label": "末页",
+      "pages": [
+        {
+          "speaker": "最后一天",
+          "text": "顾青萝看见他咳嗽，问：“你是不是病了？”\n谢长安说：“一点。”"
+        },
+        {
+          "speaker": "最后一天",
+          "text": "过了一会儿，她忘了刚才问过，又问：“你是不是病了？”\n“嗯。”"
+        },
+        {
+          "speaker": "顾青萝",
+          "text": "傍晚。\n“你明天还来吗？”"
+        },
+        {
+          "speaker": "谢长安",
+          "text": "他停了很久。\n“来。”"
+        },
+        {
+          "speaker": "顾青萝",
+          "text": "那就好。"
+        },
+        {
+          "speaker": "末页",
+          "text": "谢长安因旧伤与疾病走到生命尽头。\n当夜，他去世。"
+        }
+      ],
+      "requires": []
+    },
+    "tea.notice_death": {
+      "label": "次日的公文",
+      "pages": [
+        {
+          "speaker": "蜀山弟子后事记录",
+          "text": "到问天峰。\n谢长安已于昨夜病故。\n顾青萝神志尚安。"
+        },
+        {
+          "speaker": "蜀山弟子后事记录",
+          "text": "问其是否识得死者。\n\n答曰：不识。"
+        }
+      ],
+      "requires": []
+    },
+    "tea.notice_cups": {
+      "label": "午后的附记",
+      "pages": [
+        {
+          "speaker": "蜀山弟子后事记录",
+          "text": "顾青萝自行至院中。\n煮水。\n取茶。\n置杯二。"
+        },
+        {
+          "speaker": "午后的附记",
+          "text": "弟子问：“为何置二杯？”\n顾青萝想了很久。\n“不知道。”\n“总觉得少一只不对。”"
+        }
+      ],
+      "requires": [
+        "tea.notice_death"
+      ]
+    },
+    "tea.cup_first": {
+      "label": "第一只旧杯",
+      "pages": [
+        {
+          "speaker": "旧剑坪",
+          "text": "她并没有在等谁。"
+        }
+      ],
+      "requires": []
+    },
+    "tea.cup_second": {
+      "label": "第二只旧杯",
+      "pages": [
+        {
+          "speaker": "旧剑坪",
+          "text": "她已经忘了。"
+        },
+        {
+          "speaker": "旧剑坪",
+          "text": "只是一直记得，这里应该有两只杯子。"
+        }
+      ],
+      "requires": []
+    }
+  }
+}

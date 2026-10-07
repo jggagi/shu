@@ -1,5 +1,7 @@
 # Shu fixed-scene production method — v1（2026-10-06）
 
+当前方法增补为 v1.1（2026-10-07）：用户同意将听雨廊完整动态制作经验沉淀到现有 painted-scene／ambient-life skills。新增[听雨廊复用案例](../.agents/skills/game-painted-scene-build/references/tingyu-corridor.md)，作为新场景配置、适配与画面验收入口。以下保留 v1 整理与后续实现的历史记录；历史“尚未接入／下一场景”描述按各段日期理解。
+
 本轮用户授权 Consolidate Shu Scene-Making Skills v1：保存“中国画固定场景＋环境变化＋生活生趣＋物品互动＋养成叙事”的制作经验。两份新 skill 与两份现有 skill 的小幅补强属于制作方法整理，不新增玩法、素材或运行框架，不开始听雨廊迁移，不提交／推送／合并／发布。此前本文件的 skill 提案由本轮授权接替；下一场景仍仅为路线。
 
 接手依次读 README、SPEC、DECISIONS、DEVELOPMENT，再按 AGENTS routing 读取相关 skill。Godot 4.7.2 stable、GDScript、Compatibility 保持。
@@ -124,3 +126,15 @@ AmbientLifePresenter 源文件不变。Tingyu 仅接 Birds + Cat，通过场景 
 ## 最新听雨廊实施入口（2026-10-07）
 
 用户已授权 [完整计划](TINGYU_IMPROVEMENT_PLAN.md) A–D。当前 [完整候选记录](TINGYU_COMPLETE_SLICE.md) 管实际状态；环境、交互与声音已接入，AR1/AR2 新 PNG 因 Qwen 未配置而待生成。使用现有 skills，方法文件未修改。不要把 optional pose fallback 或按钮接入当成新姿态已完成。
+
+## v1.1：听雨廊动态场景制作复用（2026-10-07）
+
+用户询问动态环境如何复用，并同意更新现有两个制作 skill 和案例。本轮将已实现的协调风、雨后余滴／湿色、局部灯暖、茶气／细烟、人物表现、真实事件声音，以及猫多姿态／短路径／互动热点的制作方法纳入现有入口。
+
+- [game-painted-scene-build v1.1](../.agents/skills/game-painted-scene-build/SKILL.md)：根据真实器物／构图选效果，共享环境时间、风相位与实际声音事件，分开世界调色与UI，保留Static和场景退出合同。
+- [game-ambient-life-build v1.1](../.agents/skills/game-ambient-life-build/SKILL.md)：场景能力、密度调参、每姿态接触点／缩放、短路径与暂停接续、移动热点和动作语义明确的光标；修正“听雨廊猫尚未复用”的旧入口描述。
+- [听雨廊复用案例](../.agents/skills/game-painted-scene-build/references/tingyu-corridor.md)：实际模块和配置表、新场景接入所需材料、典型失败与证据限制。维护一份案例，由两份skill按需读取。
+
+EnvironmentPresenter／AmbientLifePresenter仍为项目共用模块；听雨廊的遮罩、坐标、私有Presenter字段依赖、人物ID与器物处理仍需新场景适配。六时辰ID、猫的频率和已认可香炉的源图区域均不是通用默认值。完整新候选、猫步态与手形v2仍保留各自验收状态，历史Web／Windows包不包含后续猫／香炉／光标修订。
+
+本轮只修改制作说明和绑定引用，不修改runtime或素材、不运行游戏构建／测试，也不据此产生Git发布授权。完成状态与本轮文档检查见[开发记录](DEVELOPMENT.md)。

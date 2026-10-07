@@ -37,10 +37,10 @@ EnvironmentPresenter复用profile组合和独立平滑过渡，AmbientLifePresen
 | 原生真实画面 | macOS Apple M4 Compatibility/OpenGL实际窗口渲染20张完整捕获、0失败。根代理审核晴云雨、六时辰、阵风前／峰／平静、步态／脚点、Static／Resume／Reset及1200×750视口。完整宿主快照在表现推进前后相同；Static两次图像像素相同。`render-report.json` 与 `render-final.log`。此批捕获加速表现时间，不代替自然频率／长时验收。 |
 | Web真实鼠标 | IAB实际画布684×427／视口685×428，鼠标切六时辰预览与晴云雨，实际点击走动中及休息时猫，观察轻摸姿态和提示；实际猫范围使用抚摸光标，离开范围恢复，Static禁用。Static两次完整截图像素相同，Resume原位接续且可再次轻摸，Reset清空并恢复卯时多云动态。控制台warn/error为空。最终包完成相应鼠标复核；`web-mouse-record.json` 与 `courtyard-web-*.jpg`。 |
 | 实际运行入口 | 原生1152×720试玩窗口与loopback Web服务已启动，`playable.log`、`web-server.log`。原生OS鼠标交互没有单独自动化验收；鼠标证据来自实际Web。 |
-| 用户认可 | 最新听雨廊Web收尾已按本chat用户明确反馈记入交接；本庭院仍待用户体验拍板。Windows实机等不能继承Web认可。 |
+| 用户认可 | 最新听雨廊Web收尾已按本chat用户明确反馈记入交接；用户随后在本chat明确回复「验收通过」，山门庭院首轮独立试玩认可完成。Windows实机等不能继承Web认可。 |
 
 全部日志／截图在本工作树 `.local/qa/courtyard-v1/`，不进入Git。原生完整参考 `02-clear.png`、`04-light-rain.png`；Web完整截图 `courtyard-web-clear-day.jpg`、`courtyard-web-rain-dusk.jpg`、`courtyard-web-moving-pet.jpg`、`courtyard-web-resume-pet.jpg`。
 
 回归边界：原听雨廊ambient套件154项有12项失败；对同一最新origin/main建立未修改基线并运行，逐项结果完全一致（142通过／12失败）。失效断言涉及既有落点／雨退休／鸟Static及headless tween；记录 `tingyu-baseline-comparison.json`。不能将该套件写成全通过，也没有把既有失败算作庭院新增回归。
 
-Windows实机、手机、低配、长时运行未验证；本轮没有声音系统。下一验收点：用户判断构图、天气辨识、风的可感知节奏、猫自然落脚与姿态，以及摸摸的手感；用户反馈后做小型修订，不自动扩大范围。
+Windows实机、手机、低配、长时运行未验证；本轮没有声音系统。用户于本chat确认「验收通过」，本轮构图、天气、阵风、橘猫与交互体验收尾。下一独立验收项为Windows实机及其他尚未执行的平台／稳定性检查；本次认可不扩展到这些项目。Git归档或公开发布按后续明确授权处理。

@@ -355,6 +355,6 @@ Web 新包在 IAB 完成鼠标行动流程与键盘天气／动静复核，控�
 
 用户明确确认最新版听雨廊Web试玩收尾通过，覆盖前述候选“Web认可待完成”；Windows实机、设备听感等仍按原证据保留未验证项。按D054，从最新origin/main `9cab32a`建立 `codex/mountain-gate-courtyard-v1` 隔离工作树，原main与既有worktree/.local保持。
 
-根代理负责原创庭院构图、环境适配、集成及原生／Web审核，真实luna_worker完成单猫配置、短路径helper最小提取和合同检查。复用EnvironmentPresenter、AmbientLifePresenter、橘猫图集与抚摸光标；庭院重新制作遮罩、路径、参数和adapter。无剧情／养成奖励／addon。最终导入与Web导出成功、猫41项通过、原生20张完整渲染0失败、实际Web鼠标天气／猫／动静／重置通过；旧听雨廊套件12失败与未改基线逐项相同。庭院用户认可及Windows等仍待完成。
+根代理负责原创庭院构图、环境适配、集成及原生／Web审核，真实luna_worker完成单猫配置、短路径helper最小提取和合同检查。复用EnvironmentPresenter、AmbientLifePresenter、橘猫图集与抚摸光标；庭院重新制作遮罩、路径、参数和adapter。无剧情／养成奖励／addon。最终导入与Web导出成功、猫41项通过、原生20张完整渲染0失败、实际Web鼠标天气／猫／动静／重置通过；旧听雨廊套件12失败与未改基线逐项相同。用户随后在本chat确认「验收通过」，庭院首轮独立试玩认可完成；Windows等独立验收仍未完成。
 
 范围、启动命令、逐层证据与下一验收点见 [庭院任务卡](COURTYARD_SLICE.md)，实际复用问题见 [庭院案例](../.agents/skills/game-painted-scene-build/references/mountain-gate-courtyard.md)。本轮没有commit/push/merge/公开发布授权。

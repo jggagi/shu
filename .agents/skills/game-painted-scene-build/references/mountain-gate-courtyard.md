@@ -1,6 +1,6 @@
 # 山门庭院：第三个独立画景的复用案例
 
-日期：2026-10-07。本轮只做时辰／三天气、一阵风、一只橘猫，是 [听雨廊方法案例](tingyu-corridor.md) 的实际新场景适配。用户已确认最新听雨廊Web收尾通过；庭院仍须独立试玩认可。全部证据与入口见 [庭院切片](../../../../docs/COURTYARD_SLICE.md)。
+日期：2026-10-07。本轮只做时辰／三天气、一阵风、一只橘猫，是 [听雨廊方法案例](tingyu-corridor.md) 的实际新场景适配。用户已确认最新听雨廊Web收尾通过；用户随后在本chat确认「验收通过」，庭院独立试玩认可完成。全部证据与入口见 [庭院切片](../../../../docs/COURTYARD_SLICE.md)。
 
 | 已复用 | 新场景绑定 |
 | --- | --- |
@@ -27,6 +27,6 @@
 
 ## 本轮实际结果
 
-两个Presenter原文件未改，庭院环境及动物各有配置／adapter。导入、独立Web导出、41项猫合同、20张真实Compatibility渲染及Web鼠标通过；庭院用户认可待完成。旧听雨廊154项套件的12失败与origin/main未改基线逐项相同，不能称全量通过。原生与Web证据、视口及未验收平台详见庭院任务卡。
+两个Presenter原文件未改，庭院环境及动物各有配置／adapter。导入、独立Web导出、41项猫合同、20张真实Compatibility渲染及Web鼠标通过；庭院用户已在本chat确认「验收通过」。旧听雨廊154项套件的12失败与origin/main未改基线逐项相同，不能称全量通过。原生与Web证据、视口及未验收平台详见庭院任务卡。
 
 集成还暴露两项执行问题：环境preload别名 `Environment` 与Godot内置类同名，改成 `EnvironmentAdapter`；Reset会正常提升既有Tea失效token，表现只读检查应在Reset之前比较完整宿主状态，不能把合法Reset当表现写入。原生窗口被遮挡时await frame_post_draw可能停住，捕获改用显式RenderingServer.force_draw；仍为真实Compatibility渲染，不用headless图替代。

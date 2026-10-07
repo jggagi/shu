@@ -147,3 +147,10 @@ EnvironmentPresenter／AmbientLifePresenter仍为项目共用模块；听雨廊�
 Windows 导出成功与 Windows 实机操作仍分开：既有包的导出证据保留，当前 Windows 实机仍未验证；设备扬声器／耳机听感、手机、低配与长时稳定性不因 Web 认可自动完成。没有取得本轮 Git 提交、推送、合并或公开部署授权。
 
 下一复用切片为独立「山门庭院」：只接六时辰／三天气、一阵风与一只同身份橘猫。两个 presenter 复用，构图、图层／遮罩、猫能力点、路径与参数全部重新声明。独立入口及当前验收见 [庭院切片](COURTYARD_SLICE.md) 和 [庭院复用案例](../.agents/skills/game-painted-scene-build/references/mountain-gate-courtyard.md)。
+
+
+## 山门庭院首轮用户验收收尾（2026-10-07，客户端日期）
+
+用户在本chat明确确认「验收通过」，山门庭院独立试玩认可完成（D055）。当前切片验证了两个Presenter、猫身份／姿态与光标在新构图中的复用，以及庭院独立遮罩、路径、能力和参数适配；没有新增剧情、奖励或addon。实际复用范围及暴露的问题见 [庭院案例](../.agents/skills/game-painted-scene-build/references/mountain-gate-courtyard.md)。
+
+Windows实机、手机、低配与长时稳定性仍未验证；旧听雨廊套件12项失败与未改基线一致的记录保持。本次只更新认可与交接，不新增Git提交／推送／合并或公开部署授权。后续可独立安排平台验收及源码归档。

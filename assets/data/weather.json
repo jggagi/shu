@@ -2,7 +2,6 @@
   "cycle_seconds": 30.0,
   "rain_main": 88,
   "rain_side": 16,
-  "eave_drops": 8,
   "bamboo_rect": [2, -30, 260, 560],
   "shader_update_hz": 30,
   "mist_max_alpha": 0.12

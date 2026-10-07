@@ -1,0 +1,550 @@
+{
+  "version": "tingyu-actors-v1",
+  "date": "2026-10-07",
+  "generator": "Qwen Image 3.0 through project CLI; Godot local region composition",
+  "assets": [
+    {
+      "path": "assets/art/tingyu_actors/player-closed.png",
+      "pose": "player-closed",
+      "provider": "qwen",
+      "model": "qwen-image-3.0",
+      "author": "Qwen generation, local scene integration by Codex",
+      "usage": "Produced for user shu game within explicit generation authorization; user playtest acceptance pending",
+      "prompt_file": "art/prompts/tingyu-actors/player-closed.txt",
+      "references": [
+        "assets/art/v2/jiang-yanqiu-v2.png"
+      ],
+      "raw_candidate_sha256": "cd14e3f2569f0ecca0d2aae658af8b0c6e1a296be2b46bba7ae4a1b95e6b52a7",
+      "sha256": "25cf78e773d98814850cfc0d34c1fe0e4660b811a7595c909b02649ab26e19b4",
+      "modifications": "Only authored local face or beard-hand regions composited into original RGBA. Original alpha and every pixel outside the recipe regions retained. No body/canvas rescale.",
+      "recipe_file": "art/prompts/tingyu-actors/composition.json",
+      "composition": {
+        "base": "assets/art/v2/jiang-yanqiu-v2.png",
+        "candidate": "art/work/tingyu-actors/player-closed.png",
+        "output": "art/work/assembled/player-closed.png",
+        "translation": [
+          -8,
+          -16
+        ],
+        "feather": 8,
+        "regions": [
+          [
+            [
+              600,
+              694
+            ],
+            [
+              641,
+              656
+            ],
+            [
+              729,
+              651
+            ],
+            [
+              774,
+              681
+            ],
+            [
+              785,
+              748
+            ],
+            [
+              757,
+              785
+            ],
+            [
+              665,
+              790
+            ],
+            [
+              613,
+              762
+            ]
+          ],
+          [
+            [
+              839,
+              627
+            ],
+            [
+              867,
+              605
+            ],
+            [
+              906,
+              604
+            ],
+            [
+              930,
+              632
+            ],
+            [
+              933,
+              706
+            ],
+            [
+              913,
+              744
+            ],
+            [
+              864,
+              749
+            ],
+            [
+              839,
+              709
+            ]
+          ]
+        ]
+      },
+      "inspection": {
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "alpha_exact": true,
+        "changed_pixels": 32059,
+        "changed_bounds": [
+          600,
+          604,
+          933,
+          790
+        ],
+        "raw_qwen_mode": "RGB",
+        "changed_pixels_outside_authored_regions": 0,
+        "lower_desk_region_rgba_exact": true
+      },
+      "canvas_region": [
+        0,
+        0,
+        1086,
+        1448
+      ],
+      "display_rect_scene_local": [
+        260,
+        101,
+        348,
+        464
+      ],
+      "scene_origin_design": [
+        12,
+        154
+      ],
+      "contact": "Original cheek/brush and lower desk-hand pixels outside edited regions retained; mentor-teach modifies only beard-hand area."
+    },
+    {
+      "path": "assets/art/tingyu_actors/player-rest.png",
+      "pose": "player-rest",
+      "provider": "qwen",
+      "model": "qwen-image-3.0",
+      "author": "Qwen generation, local scene integration by Codex",
+      "usage": "Produced for user shu game within explicit generation authorization; user playtest acceptance pending",
+      "prompt_file": "art/prompts/tingyu-actors/player-rest.txt",
+      "references": [
+        "assets/art/v2/jiang-yanqiu-v2.png"
+      ],
+      "raw_candidate_sha256": "598b99b922050a63f929fb85c2ba39b23aefc16bc27bb01ee930de1af2a71120",
+      "sha256": "0b2647839620345e364adb779a65c2d360c4b0a5508c115b6956ff491aa9e7ad",
+      "modifications": "Only authored local face or beard-hand regions composited into original RGBA. Original alpha and every pixel outside the recipe regions retained. No body/canvas rescale.",
+      "recipe_file": "art/prompts/tingyu-actors/composition.json",
+      "composition": {
+        "base": "assets/art/v2/jiang-yanqiu-v2.png",
+        "candidate": "art/work/tingyu-actors/player-rest.png",
+        "output": "art/work/assembled/player-rest.png",
+        "translation": [
+          -3,
+          -10
+        ],
+        "feather": 8,
+        "regions": [
+          [
+            [
+              599,
+              635
+            ],
+            [
+              658,
+              597
+            ],
+            [
+              749,
+              601
+            ],
+            [
+              790,
+              650
+            ],
+            [
+              797,
+              749
+            ],
+            [
+              774,
+              785
+            ],
+            [
+              661,
+              795
+            ],
+            [
+              606,
+              767
+            ]
+          ],
+          [
+            [
+              824,
+              558
+            ],
+            [
+              885,
+              540
+            ],
+            [
+              928,
+              591
+            ],
+            [
+              940,
+              687
+            ],
+            [
+              926,
+              749
+            ],
+            [
+              866,
+              753
+            ],
+            [
+              828,
+              701
+            ]
+          ],
+          [
+            [
+              776,
+              788
+            ],
+            [
+              829,
+              777
+            ],
+            [
+              865,
+              791
+            ],
+            [
+              864,
+              835
+            ],
+            [
+              818,
+              849
+            ],
+            [
+              775,
+              835
+            ]
+          ]
+        ]
+      },
+      "inspection": {
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "alpha_exact": true,
+        "changed_pixels": 57736,
+        "changed_bounds": [
+          599,
+          541,
+          939,
+          849
+        ],
+        "raw_qwen_mode": "RGB",
+        "changed_pixels_outside_authored_regions": 0,
+        "lower_desk_region_rgba_exact": true
+      },
+      "canvas_region": [
+        0,
+        0,
+        1086,
+        1448
+      ],
+      "display_rect_scene_local": [
+        260,
+        101,
+        348,
+        464
+      ],
+      "scene_origin_design": [
+        12,
+        154
+      ],
+      "contact": "Original cheek/brush and lower desk-hand pixels outside edited regions retained; mentor-teach modifies only beard-hand area."
+    },
+    {
+      "path": "assets/art/tingyu_actors/mentor-listen.png",
+      "pose": "mentor-listen",
+      "provider": "qwen",
+      "model": "qwen-image-3.0",
+      "author": "Qwen generation, local scene integration by Codex",
+      "usage": "Produced for user shu game within explicit generation authorization; user playtest acceptance pending",
+      "prompt_file": "art/prompts/tingyu-actors/mentor-listen.txt",
+      "references": [
+        "assets/art/v2/ye-zhixian-v2.png"
+      ],
+      "raw_candidate_sha256": "9edaf3b796b1e029d4e1bc5b64784ddc0e68b6eff6a496e44d42cfb16f70bd37",
+      "sha256": "ba53a6b15a21302869c1fcfb21e282522a4d18c3a5bffe75eb403ce2787b6d9d",
+      "modifications": "Only authored local face or beard-hand regions composited into original RGBA. Original alpha and every pixel outside the recipe regions retained. No body/canvas rescale.",
+      "recipe_file": "art/prompts/tingyu-actors/composition.json",
+      "composition": {
+        "base": "assets/art/v2/ye-zhixian-v2.png",
+        "candidate": "art/work/tingyu-actors/mentor-listen.png",
+        "output": "art/work/assembled/mentor-listen.png",
+        "translation": [
+          -2,
+          -14
+        ],
+        "feather": 8,
+        "regions": [
+          [
+            [
+              378,
+              576
+            ],
+            [
+              414,
+              563
+            ],
+            [
+              448,
+              578
+            ],
+            [
+              469,
+              609
+            ],
+            [
+              470,
+              632
+            ],
+            [
+              408,
+              640
+            ],
+            [
+              376,
+              615
+            ]
+          ],
+          [
+            [
+              534,
+              580
+            ],
+            [
+              586,
+              574
+            ],
+            [
+              635,
+              598
+            ],
+            [
+              664,
+              628
+            ],
+            [
+              644,
+              652
+            ],
+            [
+              581,
+              645
+            ],
+            [
+              537,
+              626
+            ]
+          ],
+          [
+            [
+              436,
+              670
+            ],
+            [
+              477,
+              660
+            ],
+            [
+              541,
+              670
+            ],
+            [
+              560,
+              689
+            ],
+            [
+              548,
+              714
+            ],
+            [
+              465,
+              714
+            ],
+            [
+              433,
+              696
+            ]
+          ]
+        ]
+      },
+      "inspection": {
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "alpha_exact": true,
+        "changed_pixels": 17440,
+        "changed_bounds": [
+          376,
+          563,
+          664,
+          714
+        ],
+        "raw_qwen_mode": "RGB",
+        "changed_pixels_outside_authored_regions": 0,
+        "lower_desk_region_rgba_exact": true
+      },
+      "canvas_region": [
+        0,
+        0,
+        1086,
+        1448
+      ],
+      "display_rect_scene_local": [
+        780,
+        51,
+        394,
+        525
+      ],
+      "scene_origin_design": [
+        12,
+        154
+      ],
+      "contact": "Original cheek/brush and lower desk-hand pixels outside edited regions retained; mentor-teach modifies only beard-hand area."
+    },
+    {
+      "path": "assets/art/tingyu_actors/mentor-teach.png",
+      "pose": "mentor-teach",
+      "provider": "qwen",
+      "model": "qwen-image-3.0",
+      "author": "Qwen generation, local scene integration by Codex",
+      "usage": "Produced for user shu game within explicit generation authorization; user playtest acceptance pending",
+      "prompt_file": "art/prompts/tingyu-actors/mentor-teach.txt",
+      "references": [
+        "assets/art/v2/ye-zhixian-v2.png"
+      ],
+      "raw_candidate_sha256": "f0c6b94983ac57d98f5a151bffa9b6dfad8be9b4dbb06de516ed8898dce1009f",
+      "sha256": "e5c407e62c885cde4816cbb360ba34f4c5d1423d24f7545b9c8634f588164724",
+      "modifications": "Only authored local face or beard-hand regions composited into original RGBA. Original alpha and every pixel outside the recipe regions retained. No body/canvas rescale.",
+      "recipe_file": "art/prompts/tingyu-actors/composition.json",
+      "composition": {
+        "base": "assets/art/v2/ye-zhixian-v2.png",
+        "candidate": "art/work/tingyu-actors/mentor-teach.png",
+        "output": "art/work/assembled/mentor-teach.png",
+        "translation": [
+          -4,
+          8
+        ],
+        "feather": 8,
+        "regions": [
+          [
+            [
+              392,
+              723
+            ],
+            [
+              457,
+              722
+            ],
+            [
+              495,
+              759
+            ],
+            [
+              493,
+              897
+            ],
+            [
+              434,
+              946
+            ],
+            [
+              345,
+              974
+            ],
+            [
+              287,
+              956
+            ],
+            [
+              291,
+              902
+            ],
+            [
+              321,
+              861
+            ],
+            [
+              371,
+              812
+            ],
+            [
+              392,
+              774
+            ]
+          ]
+        ]
+      },
+      "inspection": {
+        "dimensions": [
+          1086,
+          1448
+        ],
+        "alpha_exact": true,
+        "changed_pixels": 33318,
+        "changed_bounds": [
+          287,
+          722,
+          495,
+          974
+        ],
+        "raw_qwen_mode": "RGB",
+        "changed_pixels_outside_authored_regions": 0,
+        "lower_desk_region_rgba_exact": true
+      },
+      "canvas_region": [
+        0,
+        0,
+        1086,
+        1448
+      ],
+      "display_rect_scene_local": [
+        780,
+        51,
+        394,
+        525
+      ],
+      "scene_origin_design": [
+        12,
+        154
+      ],
+      "contact": "Original cheek/brush and lower desk-hand pixels outside edited regions retained; mentor-teach modifies only beard-hand area."
+    }
+  ],
+  "composition_edge_guard_pixels": 0.01
+}

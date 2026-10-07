@@ -3,13 +3,14 @@ render_mode unshaded;
 
 uniform float weather_time = 0.0;
 uniform float wind_strength = 0.0;
+uniform float gust_sway_px = 0.0;
 uniform float cloud_strength = 0.0;
 uniform float rain_strength = 0.0;
 uniform bool shadow_pass = false;
 void vertex() {
 	float anchored = pow(1.0 - UV.y, 2.0);
 	float sway = sin(weather_time * 1.2 + UV.y * 3.5) + 0.35 * sin(weather_time * 2.1 + UV.x * 4.0);
-	VERTEX.x += sway * anchored * wind_strength * 5.5;
+	VERTEX.x += sway * anchored * wind_strength * 5.5 + anchored * gust_sway_px;
 }
 void fragment() {
 	vec4 base = COLOR; // Godot fragment COLOR already includes TEXTURE and modulation.

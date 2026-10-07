@@ -2,8 +2,10 @@ extends Control
 
 const State = preload("res://scripts/demo_state.gd")
 const Weather = preload("res://scripts/weather.gd")
+const AmbientLife = preload("res://scripts/tingyu_ambient_life.gd")
 const SceneObject = preload("res://scripts/interactive_scene_object.gd")
 const ObjectPopover = preload("res://scripts/scene_object_popover.gd")
+const ActorLife = preload("res://scripts/tingyu_actor_life.gd")
 const TeaMemory = preload("res://scripts/tea_memory_scene.gd")
 const INK := Color("354137")
 const JADE := Color("32695c")
@@ -34,6 +36,7 @@ var continue_button: Button
 var player_art: TextureRect
 var mentor_art: TextureRect
 var weather: Node
+var ambient_life: Node
 var weather_label: Label
 var weather_button: Button
 var busy := false
@@ -41,6 +44,8 @@ var awaiting_continue := false
 var completion_announced := false
 var failure_notice := false
 var cultivation_scene: Control
+var background_root: Control
+var foreground_root: Control
 var tea_scene: Control
 var sword_card: Control
 var tea_entry: Button
@@ -75,6 +80,17 @@ var tea_pacing: Dictionary
 var _tea_pacing_generation := 0
 var next_weather: Button
 var weather_paper: Control
+var sound_button: Button
+var sound_volume: HSlider
+var environment_panel: Control
+var sound_status: Label
+var actor_life: Node
+var corridor_props: Dictionary = {}
+var corridor_popover: Control
+var corridor_object_id := ""
+var corridor_inspected: Dictionary = {}
+var corridor_data: Dictionary
+var rest_serial := 0
 
 func _ready() -> void:
 	layout = JSON.parse_string(FileAccess.get_file_as_string("res://assets/data/layout.json"))
@@ -93,10 +109,125 @@ func _ready() -> void:
 	tea_full = JSON.parse_string(FileAccess.get_file_as_string("res://assets/data/tea-full-source.json"))
 	tea_layout = JSON.parse_string(FileAccess.get_file_as_string("res://assets/data/tea-layout.json"))
 	tea_pacing = JSON.parse_string(FileAccess.get_file_as_string("res://assets/data/tea-pacing.json"))
+	corridor_data = JSON.parse_string(FileAccess.get_file_as_string("res://assets/data/tingyu_life.json"))
 	_build_ui()
 	_build_tea_ui()
+	ambient_life = AmbientLife.new()
+	ambient_life.name = "TingyuAmbientLife"
+	add_child(ambient_life)
+	ambient_life.setup(self, cultivation_scene, background_root, foreground_root)
+	ambient_life.cat_petted.connect(_cat_petted)
+	if ambient_life.has_signal("bird_started"):
+		ambient_life.bird_started.connect(func(): weather.ambient_audio.play_cue("bird"))
+	actor_life = ActorLife.new()
+	add_child(actor_life)
+	actor_life.setup(self, player_art, mentor_art)
+	weather.salient_attention_getter = Callable(self, "scene_salient_attention_busy")
+	_build_corridor_props()
 	_refresh()
 	_show_text("听雨廊 · 师徒同修", dialogue.idle, "今日功课：修为达到 60。")
+
+func _process(delta: float) -> void:
+	if actor_life != null:
+		actor_life.advance(delta)
+	if ambient_life != null:
+		ambient_life.advance(delta)
+	_update_corridor_props()
+
+func foreground_attention_busy() -> bool:
+	return busy or state.dialogue_open or awaiting_continue or state.tea_active or not corridor_object_id.is_empty()
+
+
+func scene_salient_attention_busy() -> bool:
+	return foreground_attention_busy() or (actor_life != null and actor_life.is_action_active()) or (ambient_life != null and ambient_life.is_salient_active())
+
+func scene_life_attention_busy() -> bool:
+	return foreground_attention_busy() or (weather != null and weather.get_gust_active()) or (actor_life != null and actor_life.is_action_active())
+
+func _cat_petted() -> void:
+	result_text.text = "猫眯起眼，轻轻蹭了蹭你的手。"
+	weather.ambient_audio.play_cue("pet")
+
+func _build_corridor_props() -> void:
+	for entry: Dictionary in corridor_data.objects:
+		var prop := SceneObject.new()
+		prop.name = "TingyuProp_" + str(entry.id)
+		var r: Array = entry.rect
+		_place(prop, Rect2(r[0], r[1], r[2], r[3]), foreground_root)
+		prop.configure(str(entry.id), str(entry.label), null)
+		prop.tooltip_text = str(entry.label) + " · 点击查看；Esc 收起"
+		prop.object_selected.connect(_select_corridor_prop)
+		corridor_props[entry.id] = prop
+	corridor_popover = ObjectPopover.new()
+	corridor_popover.name = "TingyuPropPopover"
+	corridor_popover.z_index = 5
+	cultivation_scene.add_child(corridor_popover)
+	corridor_popover.action_requested.connect(_corridor_prop_action)
+	corridor_popover.hide()
+
+func _update_corridor_props() -> void:
+	var locked: bool = busy or state.dialogue_open or awaiting_continue or state.tea_active
+	for id: String in corridor_props:
+		var prop: Control = corridor_props[id]
+		prop.disabled = locked
+		if locked and prop.hovered:
+			prop._hover(false)
+		prop.mouse_filter = Control.MOUSE_FILTER_IGNORE if locked else Control.MOUSE_FILTER_STOP
+		if prop.selected != (id == corridor_object_id):
+			prop.set_state(id == corridor_object_id, false)
+	if state.tea_active and not corridor_object_id.is_empty():
+		_close_corridor_prop()
+
+func _select_corridor_prop(id: String) -> void:
+	if not corridor_props.has(id):
+		return
+	if busy or state.dialogue_open or awaiting_continue or state.tea_active:
+		return
+	corridor_object_id = id
+	_present_corridor_prop()
+	_refresh()
+
+func _present_corridor_prop() -> void:
+	for entry: Dictionary in corridor_data.objects:
+		if str(entry.id) != corridor_object_id:
+			continue
+		var viewed: bool = corridor_inspected.has(corridor_object_id)
+		var data := {"id": entry.id, "label": entry.label, "text": entry.narrative if viewed else entry.description, "popover_width": 306, "description_height": 61}
+		var actions := [{"id": "close" if viewed else "inspect", "label": "收起" if viewed else entry.action, "done": false, "cost": 0, "show_cost": false, "enabled": true, "reason": ""}]
+		var prop: Control = corridor_props[corridor_object_id]
+		corridor_popover.present(data, actions, prop.get_rect(), cultivation_scene.size, 0)
+		# The empty space between teacher and pupil keeps faces and cup visible.
+		corridor_popover.position = Vector2(613, 264)
+		corridor_popover.anchor_point = prop.get_rect().get_center() - corridor_popover.position
+		corridor_popover.anchor_x = clampf(corridor_popover.anchor_point.x, 24, corridor_popover.size.x - 24)
+		corridor_popover.queue_redraw()
+
+func _corridor_prop_action(id: String, action_id: String, _session: int) -> void:
+	if id != corridor_object_id or not corridor_popover.visible or state.tea_active:
+		return
+	if action_id == "close":
+		_close_corridor_prop()
+	elif action_id == "inspect":
+		corridor_inspected[id] = true
+		weather.ambient_audio.play_cue("rest")
+		_present_corridor_prop()
+
+func _close_corridor_prop() -> void:
+	corridor_object_id = ""
+	if corridor_popover != null:
+		corridor_popover.hide()
+	_refresh()
+
+func set_ambient_life_enabled(value: bool) -> void:
+	if ambient_life != null:
+		ambient_life.set_enabled(value)
+
+func force_ambient_life(kind: String) -> bool:
+	return ambient_life != null and ambient_life.force_event(kind)
+
+func resume_ambient_life_auto() -> void:
+	if ambient_life != null:
+		ambient_life.resume_auto()
 
 func _rect(key: String) -> Rect2:
 	var value: Array = layout[key]
@@ -209,7 +340,7 @@ func _build_ui() -> void:
 	scene_root.clip_contents = true
 	scene_root.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_place(scene_root, _rect("scene"))
-	var background_root := Control.new()
+	background_root = Control.new()
 	background_root.clip_contents = true
 	background_root.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_place(background_root, Rect2(0, 0, 1416, 526), scene_root)
@@ -217,8 +348,8 @@ func _build_ui() -> void:
 	backdrop.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 	weather = Weather.new()
 	scene_root.add_child(weather)
-	weather.setup(scene_root, backdrop)
-	var foreground_root := Control.new()
+	weather.setup(scene_root, backdrop, Callable(self, "foreground_attention_busy"))
+	foreground_root = Control.new()
 	foreground_root.clip_contents = true
 	foreground_root.z_index = 2
 	foreground_root.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -240,24 +371,56 @@ func _build_ui() -> void:
 	var desk := _art("res://assets/art/v2/desk-v2.png", _rect("desk"), foreground_root)
 	desk.stretch_mode = TextureRect.STRETCH_SCALE
 	weather.add_lit_art(desk)
+	# The desk is intentionally shallow; render its painted censer separately
+	# so this round vessel does not inherit the desk's vertical compression.
+	(desk.material as ShaderMaterial).set_shader_parameter("desk_clean_incense", true)
+	var incense := _art("res://assets/art/v2/desk-v2.png", _rect("incense"), foreground_root)
+	incense.name = "TingyuIncense"
+	incense.stretch_mode = TextureRect.STRETCH_SCALE
+	weather.add_lit_art(incense)
+	(incense.material as ShaderMaterial).set_shader_parameter("incense_sprite", true)
 	_paper(Rect2(347, 477, 176, 37), foreground_root, false, true)
 	_label(dialogue.player_name, Rect2(358, 476, 154, 32), 19, INK, foreground_root).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_paper(Rect2(913, 477, 176, 37), foreground_root, false, true)
 	_label(dialogue.mentor_name, Rect2(924, 476, 154, 32), 19, INK, foreground_root).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	cultivation_frame = _paper(_rect("scene"), null, true)
 	cultivation_frame.z_index = 3
-	weather_paper = _paper(Rect2(886, 182, 204, 32), null, false, true)
-	weather_paper.z_index = 3
-	weather_label = _label("", Rect2(886, 182, 204, 32), 17, INK)
-	weather_label.z_index = 3
-	weather_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	next_weather = _button("切换天气", Rect2(1103, 182, 136, 32), _next_weather)
-	next_weather.z_index = 3
-	next_weather.tooltip_text = "晴、多云、小雨平滑切换；5 循环，7／8／9 直达。"
-	weather_button = _button("静态对比", Rect2(1252, 182, 142, 32), _toggle_weather)
-	weather_button.z_index = 3
-	weather_button.tooltip_text = "保留当前天气并冻结环境运动；快捷键 4。"
+	environment_panel = Control.new()
+	environment_panel.name = "TingyuEnvironmentPanel"
+	environment_panel.z_index = 3
+	environment_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_place(environment_panel, Rect2(812, 173, 580, 74))
+	weather_paper = _paper(Rect2(0, 0, 580, 74), environment_panel, false, true)
+	weather_label = _label("", Rect2(14, 5, 208, 29), 17, INK, environment_panel)
+	next_weather = _button("切换天气", Rect2(231, 5, 137, 29), _next_weather, false, environment_panel)
+	next_weather.tooltip_text = "5 切换天气 · 7 晴 · 8 多云 · 9 小雨"
+	weather_button = _button("降低动态", Rect2(380, 5, 184, 29), _toggle_weather, false, environment_panel)
+	weather_button.tooltip_text = "4 冻结人物、猫、风、热气与声音；再次开启继续。"
+	sound_button = _button("开启声音", Rect2(14, 40, 136, 29), _toggle_sound, false, environment_panel)
+	sound_button.tooltip_text = "S 声音开关；声音默认关闭，主动开启后生效。"
+	sound_volume = HSlider.new()
+	sound_volume.name = "TingyuSoundVolume"
+	sound_volume.min_value = 0.0
+	sound_volume.max_value = 100.0
+	sound_volume.step = 1.0
+	sound_volume.value = weather.ambient_audio.volume * 100.0
+	sound_volume.focus_mode = Control.FOCUS_ALL
+	sound_volume.tooltip_text = "环境音量 · 左右方向键调节"
+	var track := _style(Color("d1c2a5"), GOLD, 0)
+	track.content_margin_left = 0
+	track.content_margin_right = 0
+	track.content_margin_top = 3
+	track.content_margin_bottom = 3
+	sound_volume.add_theme_stylebox_override("slider", track)
+	sound_volume.add_theme_stylebox_override("grabber_area", _style(JADE, JADE, 0))
+	sound_volume.value_changed.connect(_change_sound_volume)
+	_place(sound_volume, Rect2(162, 42, 202, 24), environment_panel)
+	sound_status = _label("", Rect2(380, 40, 184, 29), 16, MUTED, environment_panel)
 	weather.changed.connect(_weather_ui)
+	var capabilities := get_node_or_null("AmbientCapabilities") as Node2D
+	if capabilities != null:
+		capabilities.reparent(scene_root, false)
+		capabilities.position = Vector2.ZERO
 	_weather_ui()
 	dialogue_panel = _paper(_rect("dialogue"))
 	speaker = _label("", Rect2(45, 709, 632, 34), 24, JADE)
@@ -278,8 +441,27 @@ func _build_ui() -> void:
 	rest_button.tooltip_text = "精力最多恢复 34 · 一时辰。"
 
 func _weather_ui() -> void:
-	weather_label.text = weather.phase
-	weather_button.text = "静态对比" if weather.enabled else "开启动态"
+	weather_label.text = "廊外 · " + weather.phase + (" · 动" if weather.enabled else " · 静")
+	weather_button.text = "降低动态" if weather.enabled else "开启动态"
+	_sound_ui()
+
+func _toggle_sound() -> void:
+	weather.ambient_audio.set_enabled(not weather.ambient_audio.enabled)
+	_sound_ui()
+
+
+func _change_sound_volume(value: float) -> void:
+	weather.ambient_audio.set_volume(value / 100.0)
+	sound_volume.tooltip_text = "环境音量 %d%% · 左右方向键调节" % int(value)
+	_sound_ui()
+
+
+func _sound_ui() -> void:
+	if sound_status == null:
+		return
+	sound_button.text = "关闭声音" if weather.ambient_audio.enabled else "开启声音"
+	var level := int(round(weather.ambient_audio.volume * 100.0))
+	sound_status.text = "声音已关闭 · %d%%" % level if not weather.ambient_audio.enabled else "音量为零" if level == 0 else "静态静音 · %d%%" % level if not weather.enabled else "环境音量 · %d%%" % level
 
 func _toggle_weather() -> void:
 	weather.toggle()
@@ -296,7 +478,7 @@ func _refresh() -> void:
 	bonus_text.text = "点拨在心 · 下次修炼 +6" if state.lesson_bonus > 0 else "循序渐进，气息自稳。"
 	energy_bar.value = state.energy
 	progress_bar.value = state.cultivation
-	var locked: bool = busy or state.dialogue_open or awaiting_continue or state.tea_active
+	var locked: bool = foreground_attention_busy()
 	train_button.disabled = locked
 	mentor_button.disabled = locked
 	rest_button.disabled = locked
@@ -315,7 +497,7 @@ func _show_text(title: String, text: String, result: String = "") -> void:
 	result_text.text = result
 
 func _train() -> void:
-	if busy or awaiting_continue or state.dialogue_open or state.tea_active:
+	if foreground_attention_busy():
 		return
 	var result: Dictionary = state.train()
 	if not result.ok:
@@ -324,11 +506,9 @@ func _train() -> void:
 	busy = true
 	_show_text("%s · 修炼吐纳" % dialogue.player_name, dialogue.training, "修为 +%d · 精力 -22 · 时间 +两时辰" % result.gain)
 	_refresh()
-	var original := player_art.position
-	var motion := create_tween()
-	motion.tween_property(player_art, "position:y", original.y - 8, 0.22)
-	motion.tween_property(player_art, "position:y", original.y, 0.25)
-	await motion.finished
+	actor_life.play_action("train")
+	weather.ambient_audio.play_cue("train")
+	await get_tree().create_timer(1.8).timeout
 	busy = false
 	if state.complete() and not completion_announced:
 		completion_announced = true
@@ -336,19 +516,29 @@ func _train() -> void:
 	_refresh()
 
 func _rest() -> void:
-	if busy or awaiting_continue or state.dialogue_open or state.tea_active:
+	if foreground_attention_busy():
 		return
 	var result: Dictionary = state.rest()
-	_show_text("%s · 廊下休息" % dialogue.player_name, dialogue.rest, "精力 +%d · 时间 +一时辰" % result.gain)
+	var lines: Array = corridor_data.rest_lines
+	var flavor := str(lines[rest_serial % lines.size()])
+	rest_serial += 1
+	var profile: String = str(weather.config.time_index_mapping[state.time_index])
+	var atmosphere: String = str(corridor_data.weather_lines.get(weather.presenter.weather_id, ""))
+	if profile == "you": atmosphere = str(corridor_data.dusk_line)
+	_show_text("%s · 廊下休息" % dialogue.player_name, flavor, "精力 +%d · 时间 +一时辰 · %s" % [result.gain, atmosphere])
+	actor_life.play_action("rest")
+	weather.ambient_audio.play_cue("rest")
 	_refresh()
 
 func _ask() -> void:
-	if busy or awaiting_continue or state.dialogue_open or state.tea_active:
+	if foreground_attention_busy():
 		return
 	var result: Dictionary = state.begin_dialogue()
 	if not result.ok:
 		_show_failure(result.reason)
 		return
+	actor_life.play_action("listen")
+	weather.ambient_audio.play_cue("mentor")
 	_show_text("%s · 师傅" % dialogue.mentor_name, dialogue.opening)
 	_refresh()
 
@@ -359,6 +549,8 @@ func _choose(topic: String) -> void:
 	if not result.ok:
 		return
 	awaiting_continue = true
+	actor_life.play_action("teach")
+	weather.ambient_audio.play_cue("mentor")
 	_show_text("%s · 师傅" % dialogue.mentor_name, dialogue[topic], "领悟 +1 · 精力 -8 · 下一次修炼 +6" if topic == "breathing" else "领悟 +1 · 精力 -8 · 时间 +一时辰")
 	_refresh()
 
@@ -384,8 +576,15 @@ func _continue() -> void:
 func _reset() -> void:
 	if busy:
 		return
+	corridor_object_id = ""
+	corridor_inspected.clear()
+	corridor_popover.hide()
+	rest_serial = 0
+	actor_life.reset()
 	state.reset()
 	weather.reset_environment(state.time_index)
+	if ambient_life != null:
+		ambient_life.reset()
 	_tea_pacing_generation += 1
 	tea_recollection_waiting = false
 	tea_ending_waiting = false
@@ -412,11 +611,14 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		KEY_4: _toggle_weather()
 		KEY_5: _next_weather()
 		KEY_6: _open_tea()
+		KEY_S: _toggle_sound()
 		KEY_7: weather.set_weather("clear")
 		KEY_8: weather.set_weather("cloudy")
 		KEY_9: weather.set_weather("light_rain")
 		KEY_ESCAPE:
-			if state.tea_active:
+			if not corridor_object_id.is_empty():
+				_close_corridor_prop()
+			elif state.tea_active:
 				if tea_memory != null and tea_memory.visible: _close_object_popover()
 				elif not selected_object_id.is_empty(): _close_object_popover()
 				else: _tea_cancel()
@@ -431,7 +633,7 @@ func _tea_rect(key: String) -> Rect2:
 	return Rect2(r[0], r[1], r[2], r[3])
 
 func _build_tea_ui() -> void:
-	tea_entry = _button("归剑问天 · 旧剑委托", Rect2(308, 187, 326, 40), _open_tea)
+	tea_entry = _button("归剑问天 · 旧剑委托", Rect2(42, 251, 235, 32), _open_tea)
 	tea_entry.z_index = 4
 	tea_entry.tooltip_text = "接受后进入支线，整条完成前留在其中；快捷键 6。查看不消耗精力或时辰。"
 	tea_scene = Control.new()
@@ -536,7 +738,7 @@ func _refresh_tea() -> void:
 	tea_scene.visible = terrace
 	sword_card.visible = active and not state.tea_accepted
 	tea_entry.visible = not active
-	tea_entry.disabled = busy or awaiting_continue or state.dialogue_open
+	tea_entry.disabled = foreground_attention_busy()
 	tea_entry.text = "两盏茶 · 重访剑坪" if state.tea_quest_complete else "归剑问天 · 重访剑坪" if state.tea_accepted else "归剑问天 · 旧剑委托"
 	tea_accept.visible = active and not state.tea_accepted
 	tea_cancel.visible = active and not state.tea_accepted
@@ -580,13 +782,16 @@ func _refresh_tea() -> void:
 	for i in tea_fill_views.size(): tea_fill_views[i].visible = terrace and not memory_active and state.tea_story_stage == 7 and state.tea_ending_step > i
 	if terrace and not selected_object_id.is_empty():
 		_present_object_popover()
+	environment_panel.visible = not terrace
 	weather_label.visible = not terrace
 	weather_paper.visible = not terrace
 	weather_button.visible = not terrace
 	next_weather.visible = not terrace
+	sound_button.visible = not terrace
+	sound_volume.visible = not terrace
 
 func _open_tea() -> void:
-	if busy or awaiting_continue or state.dialogue_open or state.tea_active:
+	if foreground_attention_busy():
 		return
 	var result: Dictionary = state.begin_tea()
 	if not result.ok: return
@@ -741,6 +946,13 @@ func _close_object_popover() -> void:
 	if tea_paths.has("tea.story_next"): _refresh_tea()
 
 func _input(event: InputEvent) -> void:
+	if not corridor_object_id.is_empty() and event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		var point := get_global_mouse_position()
+		if not corridor_popover.get_global_rect().has_point(point):
+			var prop_hit := false
+			for prop: Control in corridor_props.values():
+				if prop.get_global_rect().has_point(point): prop_hit = true
+			if not prop_hit: _close_corridor_prop()
 	if tea_memory != null and tea_memory.visible: return
 	if not state.tea_active or selected_object_id.is_empty(): return
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:

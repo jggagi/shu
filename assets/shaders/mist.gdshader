@@ -10,12 +10,17 @@ uniform float drift_speed = 0.011;
 uniform float phase_offset = 0.0;
 uniform vec2 patch_origin = vec2(265.0, 23.0);
 uniform vec2 patch_size = vec2(875.0, 343.0);
+uniform vec2 lower_fade = vec2(40.0, 100.0);
+uniform vec2 upper_fade = vec2(195.0, 270.0);
+uniform vec2 noise_scale = vec2(1.7, 0.65);
 
 void fragment() {
 	vec2 p = UV * patch_size + patch_origin;
 	vec2 scene_uv = p / vec2(1416.0, 526.0);
 	vec2 shift = vec2(weather_time * drift_speed + phase_offset, phase_offset * 0.37);
-	float cloud = smoothstep(0.2, 0.7, texture(mist_noise, scene_uv * vec2(2.0, 0.7) + shift).r);
-	float height = smoothstep(30.0, 140.0, p.y) * (1.0 - smoothstep(320.0, 380.0, p.y));
-	COLOR = vec4(mist_tint.rgb, cloud * height * density * window_mask(p));
+	float cloud = smoothstep(0.2, 0.7, texture(mist_noise, scene_uv * noise_scale + shift).r);
+	float height = smoothstep(lower_fade.x, lower_fade.y, p.y)
+		* (1.0 - smoothstep(upper_fade.x, upper_fade.y, p.y));
+	float window = window_mask(p);
+	COLOR = vec4(mist_tint.rgb, cloud * height * density * window);
 }

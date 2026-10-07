@@ -10,7 +10,7 @@
 
 接受旧剑委托 → 剑坪双杯 → 旧院账册 → 诊录 → 柜中旧信 → 今天刚认识 → 几册旧记 → 最后一天 → 后事公文 → 归剑回到原剑坪。文书逐页读；医案、写信、日记与后事片段进入过去旧院，人物对白与时间变化在画面中呈现，收起回到当下调查。没有底部确认或右侧菜单。阶段完成、歇息与场景往返都留在支线内；最终重新调查同一双杯，先添一杯、停一会儿、再添另一杯，才显示《两盏茶》并允许返回养成。
 
-查看与阅读不花精力或养成时间；原修炼、师傅与歇息数值保持。重新开始／刷新清空当前运行，无磁盘存档、声音或新奖励。
+查看与阅读不花精力或养成时间；原修炼、师傅与歇息数值保持。重新开始／刷新清空当前运行，无磁盘存档；《两盏茶》支线无声音或新奖励。听雨廊本地候选新增可开关的雨声与檐滴，见 [环境声音切片](docs/TINGYU_AUDIO_SLICE.md)。
 
 [过去片段任务卡](docs/TEA_PAST_ALL_SLICE.md) · [过去片段验证](docs/TEA_PAST_ALL_VALIDATION.md) · [节奏收尾任务卡](docs/TEA_PACING_SLICE.md) · [本轮验证](docs/TEA_PACING_VALIDATION.md) · [日记演出任务卡](docs/TEA_MEMORY_SLICE.md) · [演出验证](docs/TEA_MEMORY_VALIDATION.md) · [完整支线任务卡](docs/TEA_FULL_SLICE.md) · [验证记录](docs/TEA_FULL_VALIDATION.md) · [已验收 C](docs/TEA_C_VALIDATION.md) · [旧院美术来源](assets/art/tea-c/source.json)。新支线归档入口已核实为 `jggagi/sub/tea/full-chain.json`，完整运行快照及来源哈希在 `assets/data/tea-full-source.json`、`tea-full-provenance.json`；历史原稿不迁移、不改写。
 
@@ -42,13 +42,17 @@ Mac mini 独立启动：
 /Users/guoq/.local/bin/godot --windowed --path /Users/guoq/Developer/shu res://scenes/demos/back_mountain_training.tscn
 ```
 
-美术制作默认采用 Codex 建立 reference、Qwen 小样检查后批量生产；项目级 [game-art skill](.agents/skills/game-art/SKILL.md) 和来源记录随源码保存，候选图与凭据不入库。
+美术制作默认采用 Codex 建立 reference、Qwen 小样检查后批量生产；项目级 [game-art skill](.agents/skills/game-art/SKILL.md) 和来源记录随源码保存，候选图与凭据不入库。本机 Qwen 配置与发送授权边界见 [Qwen 美术制作配置](docs/QWEN_ART_SETUP.md)。
 
 ## 当前可玩：D01 听雨廊
 
 江砚秋与叶知闲同处听雨廊。修炼推进时间与修为，请教口诀得到一次修炼加成，休息恢复精力。修为达到 60 完成第一课，可重新开始反复试玩。姓名与整体美术风格已由用户确认；构图、动态强度与数值继续供试玩拍板。当前使用分层生成的中国画背景、Q 版师徒、木桌与宣纸木框，原 SVG 占位稿仍保留供比较。
 
 本机候选 **0.1.10-tingyu-environment-local**：作为 EnvironmentPresenter 的第二场景，听雨廊以自己的 profile 接入真实六时辰及晴／多云／小雨。保留原背景、竹叶、廊外雨雾和师徒；时辰跟随原行动，天气由右上「切换天气」选择。Static 保留完整画面并冻结环境运动；主动更换时辰／天气仍平滑过渡，Dynamic 从冻结位置恢复。环境切换不改变玩法状态。具体氛围与强度待用户试玩，见 [本轮切片与验证](docs/TINGYU_ENVIRONMENT_SLICE.md)。此前 30 秒循环保留为历史代码，不再驱动主场景。
+
+本机已接入听雨廊完整 P0–P2 实施候选：统一纸木控制面板、茶气、摸猫、案上两器物、雨后湿色、山雾与风／行动声音，以及师徒呼吸和四个行动姿态。用户已明确授权向配置的北京 Qwen 工作空间发送两张原角色 PNG 参考图和四个精确提示；共完成四次 Qwen Image 3.0 生成，无重试。原始 RGB 输出只在本地以 `tools/compose_tingyu_actors.gd` 合入原始 RGBA 角色图，保留原 alpha 与多边形范围外的原像素。四姿态通过 Godot 原生预览；新 Web／Windows 包均导出成功，Web 鼠标行动流程与键盘天气／动静切换已复核，浏览器控制台无警告／错误。Windows 实机、设备听感与用户试玩仍待完成；原养成结算与 Tea 保持。见[当前实施与验证](docs/TINGYU_COMPLETE_SLICE.md)。
+
+最新本机反馈修订：香炉恢复合适比例并升起细烟；猫更常来，默认多云约6秒可遇见，新增四个迈步、站姿与坐姿，在右侧空桌面短距离往返，点击仍可摸摸。Busy和静态暂停动作，恢复后接续。Mac原生画面已检查；具体节奏与步态待试玩，旧Web／Windows包尚未包含这两轮修订。见[猫走动记录](docs/TINGYU_CAT_DESK_SLICE.md)与[香炉记录](docs/TINGYU_INCENSE_SLICE.md)。
 
 ## 运行与导出
 
@@ -72,7 +76,7 @@ Mac mini 独立启动：
 3. 再修炼一次：这次修为增加 18，之后恢复基础增量 12。
 4. 休息恢复精力，继续修炼达到 60；点击「重新开始」回到首日初始状态。
 
-键盘 1／2／3 对应修炼／请教／休息；4 切换静态／动态，5 切换下一天气，7／8／9 直接选晴／多云／小雨；对话选择时 Esc 可取消。当前没有存档或音效，刷新、重开会开始新一轮。建议使用桌面窗口；手机竖屏布局留待后续。
+键盘 1／2／3 对应修炼／请教／休息；4 切换静态／动态，5 切换下一天气，7／8／9 直接选晴／多云／小雨；对话选择时 Esc 可取消。当前没有存档，刷新、重开会开始新一轮。本地听雨廊可点击「开启声音」，旁边滑条调音量；`9` 小雨、`7` 晴可试听雨声与雨后余滴，在线版尚未更新。建议使用桌面窗口；手机竖屏布局留待后续。
 
 ## 维护入口
 
@@ -85,7 +89,7 @@ Mac mini 独立启动：
 - `assets/data/tingyu_environment.json` 调听雨廊时辰／天气表现与过渡，`assets/data/weather.json` 保留廊景雨线、竹叶位置与更新频率；`scripts/weather.gd` 为听雨廊 adapter，复用 `EnvironmentPresenter`，养成规则独立。`scripts/weather_cycle.gd` 仅为原循环历史。
 - `assets/data/characters.json` 是当前姓名表；对白通过人物标识读取称呼。
 - `assets/data/layout.json` 调人物位置／面板布局；`rules.json` 调养成数值（行动文案同步 `main.gd`）；`dialogue.json` 改对白。状态结算在 `scripts/demo_state.gd`，界面在 `scripts/main.gd`。
-- `tools/make_art.py` 可重新生成原创 SVG 草图。当前界面使用带 OFL 许可的 Noto Serif SC 派生子集 Shu Demo Serif，旧 Sans 子集保留。字体来源、版本与 SHA256 随文件保存；新增汉字时用 `tools/rebuild_font.py` 扩展字库（fontTools 4.60.1，开发工具，运行无需安装）。
+- `tools/make_art.py` 可重新生成原创 SVG 草图。当前界面使用带 OFL 许可的 Noto Serif SC 派生子集 Shu Demo Serif，旧 Sans 子集保留。字体来源、版本与 SHA256 随文件保存；新增汉字时用 `tools/rebuild_font.py` 扩展字库（fontTools，实际版本见字体来源记录；开发工具，运行无需安装）。
 
 养成边界检查：
 
@@ -109,6 +113,6 @@ godot --path . --audio-driver Dummy --script res://tests/weather_render.gd
 
 养成模式制作入口：[game-cultivation-build](.agents/skills/game-cultivation-build/SKILL.md)，仓库级 0.1.1；支持养成行动、人物互动及 tea 等固定场景支线。拟议的 cultivation toolkit／编辑器插件仍为设计，尚未实现。
 
-固定画景、时辰／天气与环境动态使用 [game-painted-scene-build](.agents/skills/game-painted-scene-build/SKILL.md)；低频环境动物与场景能力使用 [game-ambient-life-build](.agents/skills/game-ambient-life-build/SKILL.md)；raster 素材由 [game-art](.agents/skills/game-art/SKILL.md) 制作并在真实场景校准。现有 Environment/Ambient presenters 是 reusable shu modules，`shu_scene_runtime` addon 尚未实现。事实校准、运行边界与下一阶段 **Tingyu Corridor — Second Adopter** 见 [制作方法 v1](docs/SCENE_REUSE_HANDOFF.md)，方法整理已完成；本机听雨廊第一切片只接时辰／天气，尚待用户试玩，不创建 addon。
+固定画景、时辰／天气与环境动态使用 [game-painted-scene-build](.agents/skills/game-painted-scene-build/SKILL.md)；低频环境动物与场景能力使用 [game-ambient-life-build](.agents/skills/game-ambient-life-build/SKILL.md)；raster 素材由 [game-art](.agents/skills/game-art/SKILL.md) 制作并在真实场景校准。现有 Environment/Ambient presenters 是 reusable shu modules，`shu_scene_runtime` addon 尚未实现。[制作方法 v1](docs/SCENE_REUSE_HANDOFF.md)记录听雨廊仅接时辰／天气时的历史状态及未来 addon 决策门；当前完整候选和复核状态见[实施记录](docs/TINGYU_COMPLETE_SLICE.md)。
 
 [工具包设计](docs/CULTIVATION_MODE.md) · [检查记录](docs/CULTIVATION_MODE_CHECKS.md) · [新 chat 的 tea 交接](docs/TEA_HANDOFF.md)。A/B 与阶段 C 已验收；完整调查和过去场景已实现，D01 养成保持可用；新画面与完整体验继续由用户试玩拍板。

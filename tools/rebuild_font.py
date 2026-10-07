@@ -1,9 +1,10 @@
-"""Regenerate the D01 serif subset; development dependency: fontTools 4.60.1."""
+"""Regenerate the D01 serif subset; development dependency: existing fontTools (version recorded in source-serif.json)."""
 from pathlib import Path
 import argparse
 import hashlib
 import json
 
+import fontTools
 from fontTools import subset
 from fontTools.ttLib import TTFont
 from fontTools.varLib.instancer import instantiateVariableFont
@@ -38,7 +39,7 @@ def main():
     missing = sorted(c for c in chars if c not in present)
     if missing:
         raise SystemExit(f'Missing codepoints: {missing}')
-    metadata = {'Source':'https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf', 'Name':'Noto Serif SC', 'SourceSHA256':SOURCE_SHA256, 'License':'SIL Open Font License 1.1', 'LicenseFile':'OFL-Serif.txt', 'DerivedName':'Shu Demo Serif', 'Modifications':'Subset to D01 current code/data characters, static weight 550, renamed family.', 'Tool':'fontTools 4.60.1', 'Codepoints':len(chars), 'DerivedSHA256':hashlib.sha256(out.read_bytes()).hexdigest()}
+    metadata = {'Source':'https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf', 'Name':'Noto Serif SC', 'SourceSHA256':SOURCE_SHA256, 'License':'SIL Open Font License 1.1', 'LicenseFile':'OFL-Serif.txt', 'DerivedName':'Shu Demo Serif', 'Modifications':'Subset to D01 current code/data characters, static weight 550, renamed family.', 'Tool':'fontTools ' + fontTools.__version__, 'Codepoints':len(chars), 'DerivedSHA256':hashlib.sha256(out.read_bytes()).hexdigest()}
     (root / 'assets/fonts/source-serif.json').write_text(json.dumps(metadata,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(f'Serif subset: {len(chars)} codepoints; coverage PASS; {out.stat().st_size} bytes')
 

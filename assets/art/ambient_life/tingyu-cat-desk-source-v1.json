@@ -1,0 +1,22 @@
+{
+  "provider": "codex-imagegen",
+  "model": null,
+  "author": "Codex using built-in image generation for shu",
+  "purpose": "Single companion walking/sitting character direction sheet selected for Tingyu desk motion",
+  "license": "Project-generated assets; no repository-wide license specified",
+  "status": "selected for local runtime; user pose and motion acceptance pending",
+  "prompt_file": "art/prompts/tingyu-cat-desk-v1.txt",
+  "references": [
+    "assets/art/ambient_life/orange-cat-painterly-v2.png"
+  ],
+  "file": "assets/art/ambient_life/tingyu-cat-desk-v1.png",
+  "layout": "assets/art/ambient_life/tingyu-cat-desk-layout-v1.json",
+  "size": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "sha256": "d4a0771c742adb15b043a8981285dd66fbbea355946d8c509165cc639c8cc918",
+  "layout_sha256": "2f0079440a0da78f2250967d1125ffd6fc1f681d2f1abcdbe5a275e7469c636d",
+  "modifications": "Generated image copied byte for byte; no pixel or alpha edits. Per-pose atlas regions and contact pivots only."
+}

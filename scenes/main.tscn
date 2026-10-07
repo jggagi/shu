@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1"]
+
+[sub_resource type="Curve2D" id="Curve_bird_lane"]
+_data = {
+"points": PackedVector2Array(0, 0, 80, -10, 560, 85, -80, 10, 80, 10, 705, 72, -80, -10, 0, 0, 850, 88)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve_cat_desk"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1228, 472, 0, 0, 0, 0, 1259, 472, 0, 0, 0, 0, 1290, 472)
+}
+point_count = 3
 
 [node name="CultivationDemo" type="Control"]
 layout_mode=3
@@ -10,3 +22,24 @@ anchor_bottom=1.0
 grow_horizontal=2
 grow_vertical=2
 script=ExtResource("1")
+
+[node name="AmbientCapabilities" type="Node2D" parent="."]
+
+[node name="BirdLane" type="Path2D" parent="AmbientCapabilities"]
+curve = SubResource("Curve_bird_lane")
+
+[node name="CatWalk_Desk" type="Path2D" parent="AmbientCapabilities"]
+curve = SubResource("Curve_cat_desk")
+metadata/sheltered = true
+
+[node name="CatSpot_SunnyThreshold" type="Marker2D" parent="AmbientCapabilities"]
+position = Vector2(1290, 472)
+metadata/spot_type = "desk_sunny_edge"
+metadata/sheltered = true
+metadata/sunny = true
+
+[node name="CatSpot_Eave" type="Marker2D" parent="AmbientCapabilities"]
+position = Vector2(1228, 472)
+metadata/spot_type = "desk_sheltered_edge"
+metadata/sheltered = true
+metadata/sunny = false

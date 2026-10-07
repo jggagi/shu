@@ -3,6 +3,7 @@ extends Node
 signal cat_petted
 
 const LifePresenter = preload("res://scripts/ambient_life_presenter.gd")
+const CatMotion = preload("res://scripts/ambient_cat_motion.gd")
 const CONFIG_PATH := "res://assets/data/back_mountain_ambient_life.json"
 const ART_PATH := "res://assets/art/ambient_life/"
 
@@ -304,26 +305,14 @@ func _render() -> void:
 func _cat_pose_frame(age: float, wind: float, attention_busy: bool) -> int:
 	if _cat_pet_active() and not _game.busy:
 		return 7
-	if attention_busy or _game.environment_presenter.weather_id == "light_rain":
-		return 0
-	var phase := fmod(age, float(config.motion.cat_cycle_seconds))
-	var profile: String = _game.environment_presenter.time_profile_id
-	var head_begin := float(config.motion.cat_head_begin)
-	# Sunny midday is mostly sleep; morning/cloudy weather permits a quiet glance.
-	var glance_allowed: bool = profile in ["mao", "chen"] or _game.environment_presenter.weather_id == "cloudy"
-	if glance_allowed and phase >= head_begin and phase < head_begin + float(config.motion.cat_head_seconds):
-		return 1 if phase < head_begin + 1.0 or phase >= head_begin + 2.0 else 2
-	var tail_begin := float(config.motion.cat_tail_begin)
-	if wind > 0.1 and phase >= tail_begin and phase < tail_begin + float(config.motion.cat_tail_seconds):
-		return 3 if int((phase - tail_begin) * lerpf(1.0, 2.0, wind)) % 2 == 0 else 0
-	var active_allowed: bool = not (profile in ["si", "wu"] and _game.environment_presenter.weather_id == "clear")
-	var groom_begin := float(config.motion.cat_groom_begin)
-	if active_allowed and phase >= groom_begin and phase < groom_begin + float(config.motion.cat_groom_seconds):
-		return 4 if int((phase - groom_begin) * 2.0) % 2 == 0 else 0
-	var play_begin := float(config.motion.cat_play_begin)
-	if active_allowed and phase >= play_begin and phase < play_begin + float(config.motion.cat_play_seconds):
-		return 6 if phase < play_begin + 1.6 or phase >= play_begin + 3.0 else 5
-	return 0
+	return CatMotion.idle_pose(
+		age,
+		wind,
+		str(_game.environment_presenter.time_profile_id),
+		str(_game.environment_presenter.weather_id),
+		config.motion,
+		attention_busy
+	)
 
 
 func _choose_cat_spot(serial: int) -> Marker2D:

@@ -73,3 +73,5 @@ Record which states and screenshots were checked and what remains untested. Ask 
 - [Ambient life config](../../../assets/data/back_mountain_ambient_life.json) shows example schedule and motion data; its values are not universal defaults.
 - [Tingyu adapter](../../../scripts/tingyu_ambient_life.gd), [desk motion helper](../../../scripts/tingyu_cat_desk_motion.gd), [scene markers](../../../scenes/main.tscn) and [schedule](../../../assets/data/tingyu_ambient_life.json) are current scene-specific examples.
 - [Back Mountain slice notes](../../../docs/BACK_MOUNTAIN_SLICE.md) document capability choices, the absent fish habitat, weather/attention/static behavior, actual renders, and user-playtest status.
+
+New-scene application: [Mountain Gate Courtyard](../game-painted-scene-build/references/mountain-gate-courtyard.md) records the independent three-system slice, new masks/stone landing and the actual cat-path helper boundary; its validation remains scene-specific.

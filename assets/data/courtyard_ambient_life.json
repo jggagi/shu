@@ -1,0 +1,33 @@
+{
+  "seed": 20261007,
+  "cat": {
+    "enabled": true,
+    "interval_min": 2.0,
+    "interval_max": 3.0,
+    "duration_min": 260.0,
+    "duration_max": 300.0,
+    "count_min": 1,
+    "count_max": 1,
+    "pet_seconds": 1.6,
+    "weather_chance": {
+      "clear": 1.0,
+      "cloudy": 1.0,
+      "light_rain": 1.0
+    }
+  },
+  "visuals": {
+    "cat_alpha": 1.0,
+    "cat_fade_seconds": 1.0
+  },
+  "motion": {
+    "cat_cycle_seconds": 42.0,
+    "cat_head_begin": 7.0,
+    "cat_head_seconds": 3.0,
+    "cat_tail_begin": 14.0,
+    "cat_tail_seconds": 2.0,
+    "cat_groom_begin": 23.0,
+    "cat_groom_seconds": 2.0,
+    "cat_play_begin": 31.0,
+    "cat_play_seconds": 4.0
+  }
+}

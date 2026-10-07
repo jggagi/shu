@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "author": "Codex built-in image generation; original scene directed by Codex",
+  "provider": "codex-imagegen",
+  "model": null,
+  "purpose": "original composition reference selected for standalone courtyard prototype",
+  "prompt": "art/prompts/courtyard/scene-reference.txt",
+  "references": [],
+  "permission": "User requested original courtyard materials in this slice; only scene text sent, no project image upload, no Qwen calls. Production selection is not player acceptance.",
+  "files": [
+    {
+      "path": "assets/art/courtyard/mountain-gate-v1.png",
+      "sha256": "f73b70368e17e8d49eead9065cea426b973f0d226365c5874a3b612b79ffbeef",
+      "alpha": "Opaque scene background; no cutout required."
+    },
+    {
+      "path": "assets/art/courtyard/distance-mask.svg",
+      "sha256": "09e4a364ac7ac90d102e38ed3041e7c69447147c3dd14047ddad254a0cb8a8f4",
+      "author": "Codex; original scene-specific mask"
+    },
+    {
+      "path": "assets/art/courtyard/foliage-mask.svg",
+      "sha256": "eb6b6baeed929832030a890813a4461a7f81a45fbc877864df1a4b87fdd231d4",
+      "author": "Codex; original scene-specific mask"
+    },
+    {
+      "path": "assets/art/courtyard/exposed-rain-mask.svg",
+      "sha256": "00168ec03b645c7b097469f4420e72313b2d1f812f69ba4787b4285fd9487991",
+      "author": "Codex; original scene-specific mask"
+    }
+  ],
+  "masks": "Original scene-authored SVGs, logical 1280x720; foliage limits local UV displacement; distance grades painted depths; exposed-rain excludes roof, pillars and sheltered cat landing.",
+  "cat": "Existing approved orange-cat PNG atlases and source records unchanged."
+}

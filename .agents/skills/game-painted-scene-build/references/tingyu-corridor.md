@@ -62,3 +62,7 @@
 - 只把具体观察写成对应层级的证据；一个切片的正面反馈不自动覆盖后来修改或整个候选。
 
 更多制作流程见 [game-painted-scene-build](../SKILL.md) 与 [game-ambient-life-build](../../game-ambient-life-build/SKILL.md)。
+
+## 最新认可追记（2026-10-07）
+
+用户在山门庭院任务中明确确认最新版听雨廊Web试玩收尾通过，更新此前Web／猫／光标与整体待试玩的阶段状态。Windows实机、设备听感及长时证据仍分别保留；此轮未重测听雨廊。下一实际复用案例见 [山门庭院](mountain-gate-courtyard.md)。

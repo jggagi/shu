@@ -1,6 +1,6 @@
 # 开发流程与扩展计划
 
-当前制作方法入口（方法基线，2026-10-06）：[Shu fixed-scene production method v1](SCENE_REUSE_HANDOFF.md)。两份新 scene/ambient skills、game-art 场景校准及 cultivation observer 边界只整理已有经验；该基线当时将 **Tingyu Corridor — Second Adopter** 设为下一验收切片。听雨廊现已进入完整 P0–P2 本地实施候选，最新证据见下方；方法入口中的二场景试玩门槛仍适用于未来 addon 决策。实时 PR/main 状态以该快照为准，下方保留既有切片历史。
+当前制作方法入口：[Shu fixed-scene production method](SCENE_REUSE_HANDOFF.md)。2026-10-07用户同意将听雨廊经验沉淀为两份scene/ambient skills v1.1及[听雨廊复用案例](../.agents/skills/game-painted-scene-build/references/tingyu-corridor.md)。共用模块与场景适配分开，新场景按实际构图、能力点与玩家目标选效果；已有v1方法和Git记录留作历史，实时分支状态需另行核对。
 
 更新日期：2026-10-07。产品要求以 [SPEC.md](SPEC.md) 为准。
 
@@ -19,6 +19,12 @@
 ### 当前反馈修订：摸猫手形光标（2026-10-07）
 
 按D052新增原创透明SVG手形光标，仅听雨廊可摸猫热点使用；走动热点沿用，Busy／Static禁用时恢复箭头，其他按钮保持原指针。制作记录见[猫走动切片](TINGYU_CAT_DESK_SLICE.md)，Godot4.7.2导入与实际原生加载／释放预览已通过，40×40素材和专用形状正确注册，预览无运行错误；用户反馈首版像举手后，当前换成掌心向下、并拢轻弯手指的v2，热点对齐指尖；导入与原生预览已检查，实际悬停手感待用户试玩。
+
+### 制作方法更新：动态场景复用 v1.1（2026-10-07）
+
+用户同意更新现有`game-painted-scene-build`与`game-ambient-life-build`，并新增一个共用听雨廊案例。入口保存选效果、协调注意力／声音、Static接续、姿态接触点／热点等方法；案例保存实际配置与源码入口、踩坑说明和新场景交接清单。纠正已有“听雨廊尚未复用”的当前入口描述，保留历史版本状态和平台证据限制。具体制作数据仍归场景，不将本轮猫频率、手形、坐标或香炉遮罩升级为全项目标准。
+
+本轮只整理skill与文档；两份skill的skill-creator frontmatter检查均通过，8份相关文档的210个本地链接全部存在，新案例resident段落锚点及11个效果配置键已核对，`git diff --check`通过。没有运行游戏构建或测试；这些文档检查不替代新场景的真实制作／试玩。不新增addon／素材／全局安装，也未commit或push。下一使用点：新场景按案例填写背景图层、实际落点／路径、宿主状态来源、选定效果与可观察的试玩目标。
 
 ## 环境与当前入口（D01-weather3 历史快照）
 

@@ -44,6 +44,8 @@ Mac mini 独立启动：
 
 美术制作默认采用 Codex 建立 reference、Qwen 小样检查后批量生产；项目级 [game-art skill](.agents/skills/game-art/SKILL.md) 和来源记录随源码保存，候选图与凭据不入库。本机 Qwen 配置与发送授权边界见 [Qwen 美术制作配置](docs/QWEN_ART_SETUP.md)。
 
+动态场景制作复用入口：[制作方法](docs/SCENE_REUSE_HANDOFF.md)与[听雨廊案例](.agents/skills/game-painted-scene-build/references/tingyu-corridor.md)。现有painted-scene／ambient-life skills v1.1将协调风、雨后余韵、灯暖、烟气、事件声音和动物短路径整理为方法；新场景沿用项目共用模块，重新制作实际图层、遮罩、能力点与适配代码。
+
 ## 当前可玩：D01 听雨廊
 
 江砚秋与叶知闲同处听雨廊。修炼推进时间与修为，请教口诀得到一次修炼加成，休息恢复精力。修为达到 60 完成第一课，可重新开始反复试玩。姓名与整体美术风格已由用户确认；构图、动态强度与数值继续供试玩拍板。当前使用分层生成的中国画背景、Q 版师徒、木桌与宣纸木框，原 SVG 占位稿仍保留供比较。

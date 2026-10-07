@@ -7,6 +7,205 @@
     "weather_seconds": 4.5,
     "rain_release_seconds": 2.4
   },
+  "mist_layers": [
+    {
+      "lower_fade": [
+        42,
+        104
+      ],
+      "upper_fade": [
+        198,
+        274
+      ],
+      "noise_scale": [
+        1.7,
+        0.65
+      ],
+      "density_weight": 0.61,
+      "drift_speed": 0.008,
+      "phase_offset": 0.0
+    },
+    {
+      "lower_fade": [
+        154,
+        216
+      ],
+      "upper_fade": [
+        314,
+        365
+      ],
+      "noise_scale": [
+        2.2,
+        0.9
+      ],
+      "density_weight": 0.54,
+      "drift_speed": -0.006,
+      "phase_offset": 0.43
+    }
+  ],
+  "tea_steam": {
+    "patch": [
+      924,
+      385,
+      66,
+      78
+    ],
+    "origin": [
+      30,
+      71
+    ],
+    "rise_pixels": 54.0,
+    "curl_pixels": 2.4,
+    "wind_drift_pixels": 3.5,
+    "day_alpha": 0.24,
+    "accent_alpha": 0.32
+  },
+  "incense_smoke": {
+    "patch": [
+      785,
+      310,
+      76,
+      104
+    ],
+    "origin": [
+      36,
+      97
+    ],
+    "rise_pixels": 87.0,
+    "curl_pixels": 3.4,
+    "wind_drift_pixels": 4.0,
+    "opacity": 0.30
+  },
+  "wetness": {
+    "rain_fill_seconds": 4.0,
+    "dry_seconds": 35.0,
+    "residual_mist_density": 0.055
+  },
+  "window_light": {
+    "profile_strength": {
+      "mao": 0.35,
+      "chen": 0.65,
+      "si": 0.85,
+      "wu": 0.65,
+      "shen": 0.3,
+      "you": 0.0
+    },
+    "weather_multiplier": {
+      "clear": 1.0,
+      "cloudy": 0.62,
+      "light_rain": 0.28
+    },
+    "patch_rect": [
+      270,
+      315,
+      970,
+      360
+    ],
+    "center": [
+      620,
+      337
+    ],
+    "radius": [
+      350,
+      20
+    ],
+    "warm_color": "#fff0ce"
+  },
+  "eave_drips": {
+    "seed": 20261022,
+    "patch": [
+      550,
+      26,
+      250,
+      225
+    ],
+    "anchors": [
+      [
+        561,
+        78
+      ],
+      [
+        630,
+        33
+      ],
+      [
+        725,
+        32
+      ]
+    ],
+    "first_collection_seconds": [
+      2.6,
+      4.8,
+      7.3
+    ],
+    "collection_min_seconds": 6.0,
+    "collection_max_seconds": 10.0,
+    "fall_seconds": 1.0,
+    "fall_distance": 175.0,
+    "opacity": 0.65,
+    "tail_first_seconds": 2.8,
+    "tail_spacing_seconds": 1.8,
+    "tail_limit_seconds": 9.0,
+    "tail_drop_count": 3
+  },
+  "wind_moments": {
+    "seed": 20261021,
+    "first_delay_seconds": 8.0,
+    "interval_min_seconds": 22.0,
+    "interval_max_seconds": 34.0,
+    "duration_seconds": 7.0,
+    "tassel_delay_seconds": 0.65,
+    "calm_multiplier": 0.22,
+    "bamboo_sway_pixels": 19.0,
+    "tassel_source_pixels": 12.0,
+    "busy_multiplier": 0.18,
+    "attention_response_seconds": 0.4
+  },
+  "ambient_audio": {
+    "default_volume": 0.45,
+    "rain_gain": 0.62,
+    "drop_gain": 0.38,
+    "busy_multiplier": 0.35,
+    "attention_seconds": 0.35,
+    "fade_seconds": 0.25,
+    "drop_impact_fraction": 0.88,
+    "late_drop_limit_seconds": 0.25
+  },
+  "lantern_light": {
+    "profile_strength": {
+      "mao": 0.0,
+      "chen": 0.0,
+      "si": 0.0,
+      "wu": 0.0,
+      "shen": 0.18,
+      "you": 1.0
+    },
+    "transition_seconds": 1.6,
+    "center": [
+      1368,
+      403
+    ],
+    "core_half_size": [
+      24,
+      58
+    ],
+    "spill_center": [
+      1368,
+      428
+    ],
+    "spill_radius": [
+      235,
+      108
+    ],
+    "warm_color": "#ffba66",
+    "core_gain": 0.7,
+    "spill_gain": 0.6,
+    "flicker_slow_amplitude": 0.025,
+    "flicker_fast_amplitude": 0.01,
+    "flicker_slow_frequency": 0.63,
+    "flicker_fast_frequency": 1.47,
+    "cat_warmth": 0.65
+  },
   "time_index_mapping": [
     "mao",
     "chen",
@@ -59,8 +258,8 @@
     "you": {
       "brightness": 0.74,
       "world_tint": "#dfb4a3",
-      "sky_tint": "#b98b91",
-      "sky_strength": 0.32,
+      "sky_tint": "#8d9dab",
+      "sky_strength": 0.42,
       "far_contrast": 0.7,
       "mist_multiplier": 1.1
     }

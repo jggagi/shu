@@ -1,0 +1,17 @@
+{
+  "asset_id": "tingyu-cat-pet-cursor-v1",
+  "author": "Codex for shu",
+  "origin": "Original locally authored SVG",
+  "license": "Project-original art; no external source material",
+  "output": "assets/art/ui/cat-pet-cursor.svg",
+  "sha256": "b97918e287df850cbd8f7da729f5f2d3bdf0f48704065f11aae8042beab84954",
+  "size": [
+    40,
+    40
+  ],
+  "hotspot": [
+    12,
+    12
+  ],
+  "purpose": "Open petting hand shown over an interactable Tingyu cat"
+}

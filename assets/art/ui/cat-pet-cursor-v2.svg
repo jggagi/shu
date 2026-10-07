@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <defs><linearGradient id="skin" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff4de"/><stop offset="1" stop-color="#e4bf96"/></linearGradient></defs>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Back of the hand faces up; the close, softly curled fingers touch below. -->
+    <path d="M38 12 L25 12 C19 12 12 15 7 18 C4 20 2.5 22 4 24 C4.7 25 6.3 25 7.5 24 C6.5 26 7.4 28 9 28 C10.2 28 11.2 27 12.3 25.7 C12 28 13.5 29.5 15 29 C16.3 28.6 17.3 27.2 18.4 25.8 C18.1 28 19.2 29.5 21 29 C22.7 28.6 24 25.6 25.4 23 C28 24.6 31.2 24.5 33 21 L38 21 Z" fill="url(#skin)" stroke="#fffaf0" stroke-width="3.5"/>
+    <path d="M38 12 L25 12 C19 12 12 15 7 18 C4 20 2.5 22 4 24 C4.7 25 6.3 25 7.5 24 C6.5 26 7.4 28 9 28 C10.2 28 11.2 27 12.3 25.7 C12 28 13.5 29.5 15 29 C16.3 28.6 17.3 27.2 18.4 25.8 C18.1 28 19.2 29.5 21 29 C22.7 28.6 24 25.6 25.4 23 C28 24.6 31.2 24.5 33 21 L38 21 Z" fill="url(#skin)" stroke="#5e4837" stroke-width="1.25"/>
+    <path d="M7.5 24 C9 21 10.5 20.2 14 18.7 M12.3 25.7 C13.5 23 15 21 18 20 M18.4 25.8 C19.5 23.8 20.8 22.2 23 21.2" fill="none" stroke="#ba926e" stroke-width=".9"/>
+    <!-- Thumb lies relaxed beneath the palm, instead of a raised stop gesture. -->
+    <path d="M30.5 19.2 C28.7 18.2 26.5 18.1 24.3 19.4 C22.8 20.3 22.8 22 24.1 22.7 C25.1 23.3 26.3 22.8 27.4 22" fill="url(#skin)" stroke="#8b684b" stroke-width=".9"/>
+    <path d="M34 12 L38 12 L38 21 L33 21 Q34.8 17 34 12 Z" fill="#d9e1d4" stroke="#5e4837" stroke-width="1.1"/>
+    <path d="M35.7 13.5 L35.4 19.6" fill="none" stroke="#fffaf0" stroke-width=".9"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+{
+  "asset_id": "tingyu-cat-pet-cursor-v2",
+  "author": "Codex for shu",
+  "origin": "Original locally authored SVG; revised after user rejected the raised open-hand gesture",
+  "license": "Project-original art; no external source material",
+  "output": "assets/art/ui/cat-pet-cursor-v2.svg",
+  "sha256": "3a9044efaa9a8a52c5978444d939da7fe9401674c645d0ae824ae06bb6970ae6",
+  "size": [
+    40,
+    40
+  ],
+  "hotspot": [
+    8,
+    24
+  ],
+  "purpose": "Palm-down petting hand with close gently curled fingers and wrist entering from right"
+}

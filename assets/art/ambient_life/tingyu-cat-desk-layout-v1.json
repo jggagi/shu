@@ -1,0 +1,133 @@
+{
+  "image_size": [
+    1536,
+    1024
+  ],
+  "cell_width": 512,
+  "columns": 3,
+  "rows": 2,
+  "logical_width": 96.0,
+  "frames": [
+    {
+      "pose_index": 8,
+      "pose": "walk-contact-a",
+      "region": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "pivot": [
+        256,
+        476
+      ],
+      "opaque_bounds": [
+        54,
+        86,
+        446,
+        390
+      ]
+    },
+    {
+      "pose_index": 9,
+      "pose": "walk-pass-a",
+      "region": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "pivot": [
+        256,
+        480
+      ],
+      "opaque_bounds": [
+        50,
+        86,
+        442,
+        394
+      ]
+    },
+    {
+      "pose_index": 10,
+      "pose": "walk-contact-b",
+      "region": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "pivot": [
+        256,
+        477
+      ],
+      "opaque_bounds": [
+        47,
+        84,
+        433,
+        393
+      ]
+    },
+    {
+      "pose_index": 11,
+      "pose": "walk-pass-b",
+      "region": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "pivot": [
+        256,
+        417
+      ],
+      "opaque_bounds": [
+        49,
+        16,
+        458,
+        401
+      ]
+    },
+    {
+      "pose_index": 12,
+      "pose": "sit-look",
+      "region": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "pivot": [
+        256,
+        424
+      ],
+      "opaque_bounds": [
+        66,
+        46,
+        384,
+        378
+      ]
+    },
+    {
+      "pose_index": 13,
+      "pose": "stand-sniff",
+      "region": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "pivot": [
+        256,
+        425
+      ],
+      "opaque_bounds": [
+        18,
+        13,
+        463,
+        412
+      ]
+    }
+  ],
+  "anchor_note": "Cell-local pivot x=256 and y at alpha>=100 lower bound. Only AtlasTexture crops; original generated RGBA copied byte for byte."
+}

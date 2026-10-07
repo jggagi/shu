@@ -1,0 +1,119 @@
+{
+  "version": "tingyu-audio-v2",
+  "date": "2026-10-07",
+  "tool_author": "Codex agent (OpenAI)",
+  "generator": {
+    "script": "tools/make_tingyu_audio.py",
+    "script_sha256": "4e86eba433bfec6a4257174a14074cb0c7b0c4128e1e4469cbe4feac45d67dea",
+    "runtime": "Python 3 standard library only",
+    "command": "python3 tools/make_tingyu_audio.py"
+  },
+  "provenance": "Original procedural synthesis for the shu project. No external recordings, samples, or third-party audio were used.",
+  "license": "Project-original synthetic material; no third-party material. This provenance record does not assert a separate legal grant.",
+  "format": {
+    "sample_rate_hz": 24000,
+    "channels": 2,
+    "bit_depth": 16,
+    "container": "RIFF/WAVE PCM"
+  },
+  "rain_loop": {
+    "seed": 20261006,
+    "algorithm": "Sixteen seconds of deterministic noise split into lower, mid, and high bands with less low-frequency weight and a lower overall level. Six hundred forty short high-band bursts use independently seeded positions, lengths, envelopes, and strengths for a softer uneven patter. Circular filter state and wrapped bursts keep the loop boundary continuous.",
+    "target_rms": 0.105,
+    "peak_limit": 0.58,
+    "file": {
+      "path": "assets/audio/tingyu/rain-loop.wav",
+      "sha256": "6efd3c4e25e6cad83767288e256920a4701508938ac32ed2b7722db54d7a78ed",
+      "format": "WAV PCM signed 16-bit little-endian stereo",
+      "sample_rate_hz": 24000,
+      "frames": 384000,
+      "duration_seconds": 16.0,
+      "rms": 0.10499679959720197,
+      "peak": 0.32373046875
+    }
+  },
+  "eave_drops": {
+    "seeds": [
+      20261017,
+      20261019
+    ],
+    "algorithm": "Two distinct 0.45-second original syntheses combine filtered-noise onsets with three quieter damped resonances, a soft attack, and a short tail fade. Stereo levels differ slightly per drop; no sampled source is used.",
+    "peak_target": 0.26,
+    "peak_limit": 0.32,
+    "files": [
+      {
+        "path": "assets/audio/tingyu/eave-drop-1.wav",
+        "sha256": "7bbffdb7d6a626b6c7f97f8b1fc5d99e326c20f6e2aff53813533b68ddfd3b36",
+        "format": "WAV PCM signed 16-bit little-endian stereo",
+        "sample_rate_hz": 24000,
+        "frames": 10800,
+        "duration_seconds": 0.45,
+        "rms": 0.02485474426221692,
+        "peak": 0.249603271484375
+      },
+      {
+        "path": "assets/audio/tingyu/eave-drop-2.wav",
+        "sha256": "79df71171b54301956158beb24ec2fca9b5a9f7aa23f1fafcbedd9dfc1b3c761",
+        "format": "WAV PCM signed 16-bit little-endian stereo",
+        "sample_rate_hz": 24000,
+        "frames": 10800,
+        "duration_seconds": 0.45,
+        "rms": 0.023838618555255316,
+        "peak": 0.249603271484375
+      }
+    ]
+  },
+  "leaf_rustle": {
+    "seeds": [
+      20261025,
+      20261027
+    ],
+    "algorithm": "A twelve-second deterministic stereo loop combines filtered low, mid, and high noise with twenty-eight individually tapered, sparse rustles. Circular filters, wrapped events, and a periodic bed envelope avoid a special end fade.",
+    "target_rms": 0.105,
+    "file": {
+      "path": "assets/audio/tingyu/leaf-rustle.wav",
+      "sha256": "5e05e8906870bfb13b490fee9a783bdbc3b85054cd0799305be82e8da48018f2",
+      "format": "WAV PCM signed 16-bit little-endian stereo",
+      "sample_rate_hz": 24000,
+      "frames": 288000,
+      "duration_seconds": 12.0,
+      "rms": 0.10499678416993923,
+      "peak": 0.321014404296875
+    }
+  },
+  "short_cues": {
+    "algorithm": "Three original deterministic procedural clips: a filtered fabric swish, a soft amplitude-pulsed purr, and three shaped frequency-swept bird chirps. All clips use the same stereo PCM format as the ambient loops.",
+    "files": {
+      "cloth": {
+        "path": "assets/audio/tingyu/cloth.wav",
+        "sha256": "ac1e9ff056949268062b4bcdaa2c5a9683e6e78ecf1bb55eb885574e70fdeacb",
+        "format": "WAV PCM signed 16-bit little-endian stereo",
+        "sample_rate_hz": 24000,
+        "frames": 9120,
+        "duration_seconds": 0.38,
+        "rms": 0.04454770250325799,
+        "peak": 0.139984130859375
+      },
+      "purr": {
+        "path": "assets/audio/tingyu/purr.wav",
+        "sha256": "10803649e6a602fbe1e7074a90f2f53ccf0a331a743847d9d91f6340971465d9",
+        "format": "WAV PCM signed 16-bit little-endian stereo",
+        "sample_rate_hz": 24000,
+        "frames": 22080,
+        "duration_seconds": 0.92,
+        "rms": 0.0268639435164512,
+        "peak": 0.1300048828125
+      },
+      "bird": {
+        "path": "assets/audio/tingyu/bird.wav",
+        "sha256": "0589e8689b6f1bfe48284def1101288521eca2adaa86a35824d04804e4fd9d1e",
+        "format": "WAV PCM signed 16-bit little-endian stereo",
+        "sample_rate_hz": 24000,
+        "frames": 13919,
+        "duration_seconds": 0.5799583333333334,
+        "rms": 0.045316492834581744,
+        "peak": 0.1199951171875
+      }
+    }
+  }
+}

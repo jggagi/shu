@@ -6,7 +6,7 @@
   "LicenseFile": "OFL-Serif.txt",
   "DerivedName": "Shu Demo Serif",
   "Modifications": "Subset to D01 current code/data characters, static weight 550, renamed family.",
-  "Tool": "fontTools 4.51.0",
-  "Codepoints": 728,
-  "DerivedSHA256": "b16300f64484d9db726fe7c51aea2e92703b1c36b6b24b3199cce5ed3f54879a"
+  "Tool": "fontTools 4.60.1",
+  "Codepoints": 757,
+  "DerivedSHA256": "7d8ad236c8e2b56d8e92ce191b4bbb2900a6631031260301ff3000cacfed5a2d"
 }

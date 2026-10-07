@@ -349,3 +349,12 @@ Tingyu GitHub交付追记（2026-10-06）：用户随后明确授权创建PR并m
 原生预览中自然眨眼发生于环境时钟 9.643092；Static 冻结眨眼，前后两张冻结 PNG 的 SHA256 同为 `5425bbc70ee424d4a5b4ab5be026c3e3b39edfa5bf94d793cd501dc024446aaa`，恢复后回到基础姿态。修炼、休息、倾听、点拨、继续、再次修炼和重置均使用相应姿态并保留既有结算；960×600 休息画面已检查，预览无引擎错误／警告。此前 610 秒久留与混音录音是新 PNG 前的历史证据，不代表当前候选重复完成长测或设备听感验收。
 
 Web 新包在 IAB 完成鼠标行动流程与键盘天气／动静复核，控制台警告／错误为空。Windows 包尚未在 Windows 实机运行；设备听感与用户试玩也未完成，因此仍不宣称跨平台或整体最终验收。本轮未新增／运行自动测试套件。见[完整候选](TINGYU_COMPLETE_SLICE.md)。
+
+
+### 山门庭院：独立方法复用切片（2026-10-07）
+
+用户明确确认最新版听雨廊Web试玩收尾通过，覆盖前述候选“Web认可待完成”；Windows实机、设备听感等仍按原证据保留未验证项。按D054，从最新origin/main `9cab32a`建立 `codex/mountain-gate-courtyard-v1` 隔离工作树，原main与既有worktree/.local保持。
+
+根代理负责原创庭院构图、环境适配、集成及原生／Web审核，真实luna_worker完成单猫配置、短路径helper最小提取和合同检查。复用EnvironmentPresenter、AmbientLifePresenter、橘猫图集与抚摸光标；庭院重新制作遮罩、路径、参数和adapter。无剧情／养成奖励／addon。最终导入与Web导出成功、猫41项通过、原生20张完整渲染0失败、实际Web鼠标天气／猫／动静／重置通过；旧听雨廊套件12失败与未改基线逐项相同。庭院用户认可及Windows等仍待完成。
+
+范围、启动命令、逐层证据与下一验收点见 [庭院任务卡](COURTYARD_SLICE.md)，实际复用问题见 [庭院案例](../.agents/skills/game-painted-scene-build/references/mountain-gate-courtyard.md)。本轮没有commit/push/merge/公开发布授权。

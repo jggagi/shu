@@ -138,3 +138,12 @@ AmbientLifePresenter 源文件不变。Tingyu 仅接 Birds + Cat，通过场景 
 EnvironmentPresenter／AmbientLifePresenter仍为项目共用模块；听雨廊的遮罩、坐标、私有Presenter字段依赖、人物ID与器物处理仍需新场景适配。六时辰ID、猫的频率和已认可香炉的源图区域均不是通用默认值。完整新候选、猫步态与手形v2仍保留各自验收状态，历史Web／Windows包不包含后续猫／香炉／光标修订。
 
 本轮只修改制作说明和绑定引用，不修改runtime或素材、不运行游戏构建／测试，也不据此产生Git发布授权。完成状态与本轮文档检查见[开发记录](DEVELOPMENT.md)。
+
+
+## 听雨廊 Web 收尾认可与山门庭院接手（2026-10-07，客户端日期）
+
+用户在本轮明确确认「最新版听雨廊的 Web 试玩收尾通过」。这是用户对最新 Web 体验的认可，覆盖此前猫走动、抚摸手形与整体收尾待试玩的门；本轮不重新执行听雨廊验证，也不虚构对应构建哈希。之前的候选／待验收描述保留为历史阶段。
+
+Windows 导出成功与 Windows 实机操作仍分开：既有包的导出证据保留，当前 Windows 实机仍未验证；设备扬声器／耳机听感、手机、低配与长时稳定性不因 Web 认可自动完成。没有取得本轮 Git 提交、推送、合并或公开部署授权。
+
+下一复用切片为独立「山门庭院」：只接六时辰／三天气、一阵风与一只同身份橘猫。两个 presenter 复用，构图、图层／遮罩、猫能力点、路径与参数全部重新声明。独立入口及当前验收见 [庭院切片](COURTYARD_SLICE.md) 和 [庭院复用案例](../.agents/skills/game-painted-scene-build/references/mountain-gate-courtyard.md)。

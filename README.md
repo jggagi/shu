@@ -118,3 +118,16 @@ godot --path . --audio-driver Dummy --script res://tests/weather_render.gd
 固定画景、时辰／天气与环境动态使用 [game-painted-scene-build](.agents/skills/game-painted-scene-build/SKILL.md)；低频环境动物与场景能力使用 [game-ambient-life-build](.agents/skills/game-ambient-life-build/SKILL.md)；raster 素材由 [game-art](.agents/skills/game-art/SKILL.md) 制作并在真实场景校准。现有 Environment/Ambient presenters 是 reusable shu modules，`shu_scene_runtime` addon 尚未实现。[制作方法 v1](docs/SCENE_REUSE_HANDOFF.md)记录听雨廊仅接时辰／天气时的历史状态及未来 addon 决策门；当前完整候选和复核状态见[实施记录](docs/TINGYU_COMPLETE_SLICE.md)。
 
 [工具包设计](docs/CULTIVATION_MODE.md) · [检查记录](docs/CULTIVATION_MODE_CHECKS.md) · [新 chat 的 tea 交接](docs/TEA_HANDOFF.md)。A/B 与阶段 C 已验收；完整调查和过去场景已实现，D01 养成保持可用；新画面与完整体验继续由用户试玩拍板。
+
+
+## 独立山门庭院 v1（本地切片）
+
+最新版听雨廊 Web 试玩收尾已获用户确认（2026-10-07）；其他平台证据见 [交接记录](docs/SCENE_REUSE_HANDOFF.md)。新的庭院只用于验证动态场景制作方法：六时辰／三天气、一阵风与檐下大橘短路径，鼠标摸摸、静态／继续、重置。不接正式主流程或新增养成奖励。
+
+```sh
+godot --windowed --path . res://scenes/demos/mountain_gate_courtyard.tscn
+python tools/build_courtyard.py --godot godot
+python tools/serve_courtyard.py --port 8772
+```
+
+Web 导出使用独立 `.local` 快照覆盖入口，正式 project.godot 主场景保持。控制面板提供全部时辰／天气；4 动静、T 下一时辰、7／8／9 晴云雨、R 重置。时辰预览不推进 DemoState，主动预览在 Static 中仍平滑变化，运动保持冻结。详细验证与素材来源见 [庭院切片](docs/COURTYARD_SLICE.md)。

@@ -68,3 +68,5 @@ When new raster artwork is requested, follow the repository's [game-art workflow
 - [Environment profile data](../../../assets/data/back_mountain_environment.json) is a scene-specific example, not a default parameter set.
 - [Tingyu adapter](../../../scripts/weather.gd) and [profile](../../../assets/data/tingyu_environment.json) show coordinated scene effects; artwork masks and indoor anchors stay specific to Tingyu.
 - [Back Mountain slice notes](../../../docs/BACK_MOUNTAIN_SLICE.md) record the Lighting v1 / D028 feedback, the simpler environment work, screenshots, and validation boundaries.
+
+New-scene application: [Mountain Gate Courtyard](references/mountain-gate-courtyard.md) records the independent three-system slice, new masks/stone landing and the actual cat-path helper boundary; its validation remains scene-specific.

@@ -359,6 +359,15 @@ Web 新包在 IAB 完成鼠标行动流程与键盘天气／动静复核，控�
 
 范围、启动命令、逐层证据与下一验收点见 [庭院任务卡](COURTYARD_SLICE.md)，实际复用问题见 [庭院案例](../.agents/skills/game-painted-scene-build/references/mountain-gate-courtyard.md)。本轮没有commit/push/merge/公开发布授权。
 
+
+## 下一大里程碑：蜀山三日 · 养成纵切 v1（规划，2026-10-08）
+
+当前 main 已经拥有听雨廊、后山和山门庭院三个成熟度不同但已实际验证的固定场景，以及可复用的时辰／天气和环境生趣能力。下一阶段优先从“继续制作独立场景表现”转向“把已有场景组成连续养成游戏”。
+
+完整拆解见 [蜀山三日 · 养成纵切 v1 规划](THREE_DAY_VERTICAL_SLICE_PLAN.md)。总路线拆为六个独立验收切片：M1 多场景养成骨架 → M2 后山练剑 → M3 山门闲逛 → M4 余观涛首次偶遇 → M5 三日养成循环 → M6 整体纵切收尾。预计总 Agent 实施量约 10–14 小时；每个切片独立试玩后再决定下一步。
+
+当前只确定**下一实施入口为 M1**；该规划不等于 M1–M6 已获一次性实现授权，也不据此创建 `shu_scene_runtime`、存档、完整技能树、战斗、关系系统或随机天气模型。三日纵切的核心验收是：玩家是否开始在有限时间中做有机会成本的成长／地点选择，并感到世界会对这些安排作出回应。
+
 ## 溪边茶亭独立切片（客户端日期 2026-10-07）
 
 按D054已完成本地候选：[STREAM_TEAHOUSE_SLICE](STREAM_TEAHOUSE_SLICE.md)。独立画景、六时辰三天气、水面流动／雨圈、露天石岸居民猫及摸摸，Static／Resume／Reset接入。起点为隔离worktree detached `9cab32a`，clean；没有改主入口／DemoState／Tea。Root使用tiered-coding，两个real luna_worker分别负责水面shader与猫adapter／测试，Root完成原画／几何／controller／整合和最终验证。

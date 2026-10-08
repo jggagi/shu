@@ -6,23 +6,25 @@
   "source_has_uncommitted_changes": true,
   "source_repository": "https://github.com/jggagi/shu",
   "engine": "4.7.2.stable.official.ed1daf0bf",
-  "published_at_utc": "2026-10-08T13:48:46.038580+00:00",
+  "published_at_utc": "2026-10-08T14:02:48.349648+00:00",
   "route": "/shu/",
   "runtime_sha256": {
     "index.apple-touch-icon.png": "f5878bec0fc0849d41fa35576ea5623e009a6f25b6d628e3b7490de254f5d885",
     "index.wasm": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0",
     "index.icon.png": "5f750d194a603861983bbf1de1a4ffd463153947deb66a54519596be9d51e69c",
-    "index.html": "546d10daa0beb5c1c77a6a761af8073c97870604837501cdc4161db0c97fa6d6",
+    "index.html": "120ea2d53dad6e50be0f4b72eda385357bd2507bcdf541114d9bba9c3ed43905",
     "index.png": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
     "index.audio.worklet.js": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
     "index.js": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba",
     "index.audio.position.worklet.js": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
-    "index.pck": "7c276e06f383f8ae8151fae0ad8b2c687a4bf4565d8ef70c3c4193d915379308"
+    "index.pck": "2e697dcc3900249bcd754c6a45defd283d0add57dab5eb1d40a986629628c563"
   },
   "selected_source_sha256": {
     "scripts/jiang_sword_actor.gd": "820c917eb79b8c53ff98b000be2fbb779c6b671984bc01bbb3075bda062c70c8",
     "scripts/back_mountain_sword_practice.gd": "8ccffd9fee0acf2694f7cd79d8530ef864f83abeff926dd3163495f346d9d738",
-    "assets/data/back_mountain_sword_practice.json": "550eadb13347e00f1a8c612005652072ed257ee20b6ddc62392d4e7e05ed56f7"
+    "assets/data/back_mountain_sword_practice.json": "550eadb13347e00f1a8c612005652072ed257ee20b6ddc62392d4e7e05ed56f7",
+    "assets/fonts/ShuDemoSerif.ttf": "4acfa567ba9ae732da1736721c1db6f8ec47781bb7a89ba58d39f5e07d6955ef",
+    "assets/fonts/source-serif.json": "50bbe090c6a13c6df48269c4b495475dd8a832966720cfb616f99d6afc291d42"
   },
   "checks": {
     "regression_suites": 11,
@@ -38,8 +40,14 @@
       ]
     ],
     "local_web_input": true,
-    "public_web_input": "pending"
+    "public_web_input": "pending",
+    "font_coverage": {
+      "source_files": 50,
+      "codepoints": 774,
+      "missing": 0
+    }
   },
   "licenses": "licenses/",
-  "provenance": "provenance/"
+  "provenance": "provenance/",
+  "content_revision": "font-coverage-fix-1"
 }

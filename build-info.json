@@ -1,45 +1,45 @@
 {
-  "version": "0.1.4-tea-objects",
-  "content_version": "tea-ab-object-2",
-  "skill_version": "0.1.1",
-  "date": "2026-10-05",
-  "timezone": "America/Los_Angeles",
+  "version": "0.1.17-native-2d-sword",
+  "purpose": "Playable cultivation M1/M2 with original Jiang native 2D sword rig; motion naturalness awaits user playtest",
+  "source_base_commit": "d7e3002c6cd860ca33a591c4787492233a201b46",
+  "source_local_branch": "codex/three-day-m2-sword-training",
+  "source_has_uncommitted_changes": true,
   "source_repository": "https://github.com/jggagi/shu",
-  "source_commit": "35acdc0174d7c22722cb848d095534563ebf55ca",
-  "source_pull_request": "https://github.com/jggagi/shu/pull/1",
-  "source_dirty": false,
-  "build_input": "git archive of merged source_commit; independent Mac Compatibility Web export",
-  "local_tooling_changes_excluded": true,
   "engine": "4.7.2.stable.official.ed1daf0bf",
-  "user_accepted": true,
-  "validation": {
-    "headless_checks": 292,
-    "native_ui_checks": 99,
-    "merged_source_ui_checks": 74,
-    "browser_local": "PASS",
-    "online_smoke": "pending deployment",
-    "Windows_native": "not verified for 0.1.4"
-  },
-  "quest_scope": "A/B implemented; C-I and terminal gameplay not implemented; 2/2 is stage completion only",
-  "files": {
-    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "README.md": "70262f24405da4548f3e3fe4f873ea7168a47c37ee839667c59c8f59d8aae325",
+  "published_at_utc": "2026-10-08T13:48:46.038580+00:00",
+  "route": "/shu/",
+  "runtime_sha256": {
     "index.apple-touch-icon.png": "f5878bec0fc0849d41fa35576ea5623e009a6f25b6d628e3b7490de254f5d885",
-    "index.audio.position.worklet.js": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
-    "index.audio.worklet.js": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
-    "index.html": "5afc45263b33e210243a35f812db7c4a2f7f5e74b6793b1f25b398d9eb040451",
-    "index.icon.png": "5f750d194a603861983bbf1de1a4ffd463153947deb66a54519596be9d51e69c",
-    "index.js": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba",
-    "index.pck": "b520dce994a0a6e551d63e87dc43246ca13f1ae8658693cf30650fb5700bcc78",
-    "index.png": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
     "index.wasm": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0",
-    "licenses/GODOT-LICENSE.txt": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80",
-    "licenses/GODOT-NOTICES.txt": "b3c6835addbb97337ebe62c541edd1e0aed1877ff7459c2d3524a92ab954b1cb",
-    "licenses/OFL-Serif.txt": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6",
-    "licenses/OFL.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
-    "licenses/tea-art-source.json": "fc3e7fde49c0ec7381cd15374fecdcdbea01b543c435c0c7da6a5293527d6cba",
-    "licenses/tea-cups-v1.txt": "29a6a78ef5d349a2eaf06344c6373628dc7363d7c75e8d920b1db248341f8bf9",
-    "licenses/tea-sword-v1.txt": "1906d30a1a9eac1fc8b53ae582f5a35d95f9b237d0ae7b12807fd5f22638319d",
-    "licenses/tea-terrace-v1.txt": "b924e823271e9bd96ec330b902474291c9e264c7e1551ee48ace52eb03ad19fc"
-  }
+    "index.icon.png": "5f750d194a603861983bbf1de1a4ffd463153947deb66a54519596be9d51e69c",
+    "index.html": "546d10daa0beb5c1c77a6a761af8073c97870604837501cdc4161db0c97fa6d6",
+    "index.png": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
+    "index.audio.worklet.js": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
+    "index.js": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba",
+    "index.audio.position.worklet.js": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
+    "index.pck": "7c276e06f383f8ae8151fae0ad8b2c687a4bf4565d8ef70c3c4193d915379308"
+  },
+  "selected_source_sha256": {
+    "scripts/jiang_sword_actor.gd": "820c917eb79b8c53ff98b000be2fbb779c6b671984bc01bbb3075bda062c70c8",
+    "scripts/back_mountain_sword_practice.gd": "8ccffd9fee0acf2694f7cd79d8530ef864f83abeff926dd3163495f346d9d738",
+    "assets/data/back_mountain_sword_practice.json": "550eadb13347e00f1a8c612005652072ed257ee20b6ddc62392d4e7e05ed56f7"
+  },
+  "checks": {
+    "regression_suites": 11,
+    "native_render_checks": 38,
+    "native_sizes": [
+      [
+        1152,
+        720
+      ],
+      [
+        960,
+        600
+      ]
+    ],
+    "local_web_input": true,
+    "public_web_input": "pending"
+  },
+  "licenses": "licenses/",
+  "provenance": "provenance/"
 }

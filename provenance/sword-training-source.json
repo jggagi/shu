@@ -1,0 +1,214 @@
+{
+  "author": "Qwen Image 3.0 / project art direction Codex",
+  "usage": "Original game character poses derived from project-owned references; no third-party artwork",
+  "source_alpha": "Raw PNG retained; authored magenta backdrop removed at runtime by sword_pose_chroma.gdshader. No claim of native transparent output.",
+  "contact_metadata": "Atlas cell pixels; [0,0] top-left; foot anchors must be checked in actual scene before --approve.",
+  "sources": [
+    {
+      "file": "assets/art/sword_training/poses-a-v2.png",
+      "sha256": "bdd635d778b28dd2ce8ea3dd69e4e62c24f03852c51b3fa300610323a79791be",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "provider": "qwen",
+      "model": "qwen-image-3.0",
+      "prompt": "art/prompts/sword-training/poses-a-v2.txt",
+      "references": [
+        "assets/art/back_mountain_training/actor-sheet.png",
+        "docs/concepts/sword-standing-reference-v1.png"
+      ]
+    },
+    {
+      "file": "assets/art/sword_training/poses-b-v2.png",
+      "sha256": "856f39c584c7a3c074fdab101e2ea1333547217e89eb75c90827f6516c630637",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "provider": "qwen",
+      "model": "qwen-image-3.0",
+      "prompt": "art/prompts/sword-training/poses-b-v2.txt",
+      "references": [
+        "assets/art/back_mountain_training/actor-sheet.png",
+        "docs/concepts/sword-standing-reference-v1.png"
+      ]
+    },
+    {
+      "file": "assets/art/sword_training/poses-c-v3.png",
+      "sha256": "08b81f78301d09a70f310e6ffc23db4580cf770326ccb67492a4527696fc557d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "provider": "qwen",
+      "model": "qwen-image-3.0",
+      "prompt": "art/prompts/sword-training/poses-c-v3.txt",
+      "references": [
+        "assets/art/back_mountain_training/actor-sheet.png",
+        "docs/concepts/sword-standing-reference-v1.png"
+      ]
+    }
+  ],
+  "status": "approved_for_local_M2_playtest",
+  "human_acceptance": "Pending user playtest; root inspected all eight contact poses at1152x720 and small-window action at960x600",
+  "pose_metadata": [
+    {
+      "id": "rise",
+      "path": "res://assets/art/sword_training/poses-a-v2.png",
+      "region": [
+        0,
+        0,
+        512,
+        1024
+      ],
+      "foot_anchor": [
+        260,
+        825
+      ],
+      "display_scale": 0.6
+    },
+    {
+      "id": "ready",
+      "path": "res://assets/art/sword_training/poses-a-v2.png",
+      "region": [
+        512,
+        0,
+        512,
+        1024
+      ],
+      "foot_anchor": [
+        260,
+        859
+      ],
+      "display_scale": 0.6
+    },
+    {
+      "id": "windup",
+      "path": "res://assets/art/sword_training/poses-a-v2.png",
+      "region": [
+        1024,
+        0,
+        512,
+        1024
+      ],
+      "foot_anchor": [
+        280,
+        870
+      ],
+      "display_scale": 0.6
+    },
+    {
+      "id": "cut",
+      "path": "res://assets/art/sword_training/poses-b-v2.png",
+      "region": [
+        0,
+        0,
+        512,
+        1024
+      ],
+      "foot_anchor": [
+        305,
+        905
+      ],
+      "display_scale": 0.52
+    },
+    {
+      "id": "followthrough",
+      "path": "res://assets/art/sword_training/poses-b-v2.png",
+      "region": [
+        512,
+        0,
+        512,
+        1024
+      ],
+      "foot_anchor": [
+        300,
+        912
+      ],
+      "display_scale": 0.52
+    },
+    {
+      "id": "recover",
+      "path": "res://assets/art/sword_training/poses-b-v2.png",
+      "region": [
+        1024,
+        0,
+        512,
+        1024
+      ],
+      "foot_anchor": [
+        310,
+        914
+      ],
+      "display_scale": 0.52
+    },
+    {
+      "id": "replace_sword",
+      "path": "res://assets/art/sword_training/poses-c-v3.png",
+      "region": [
+        0,
+        0,
+        768,
+        1024
+      ],
+      "foot_anchor": [
+        416,
+        930
+      ],
+      "display_scale": 0.49
+    },
+    {
+      "id": "sit",
+      "path": "res://assets/art/sword_training/poses-c-v3.png",
+      "region": [
+        768,
+        0,
+        768,
+        1024
+      ],
+      "foot_anchor": [
+        384,
+        940
+      ],
+      "display_scale": 0.49
+    }
+  ],
+  "modifications": "No image edits. Raw PNG bytes copied; region/scale/contact metadata and sampled chroma matte with edge despill are applied only at runtime.",
+  "reference_sha256": {
+    "assets/art/back_mountain_training/actor-sheet.png": "2e57778cc533371f1eea54cc9af7652cade1e9bb4e8eda0902101877a2d6eacc",
+    "docs/concepts/sword-standing-reference-v1.png": "ac78cfceaf99dfff64f9dc48a54cee5561e4b1715e06152073a2ecf53833dcb3"
+  },
+  "continuous_rig": {
+    "file": "assets/art/sword_training/continuous-parts-v1.png",
+    "sha256": "db71b7a2b1f396fec09d3ee3ce741ca3c261f6376894253fa25dd81a21fc63c2",
+    "provider": "qwen",
+    "model": "qwen-image-3.0",
+    "prompt": "art/prompts/sword-training/continuous-parts-v1.txt",
+    "references": [
+      "assets/art/back_mountain_training/actor-sheet.png",
+      "docs/concepts/sword-standing-reference-v1.png"
+    ],
+    "alpha": "Raw RGB retained; real background sampled at runtime; no native transparency claim",
+    "geometry": "Two region-local cutouts, fixed calibrated display scales; body foot pivot and arm shoulder pivot in current action metadata",
+    "status": "root_approved_in_real_scene;user_acceptance_pending",
+    "legacy_poses": "Historical M2 poses preserved; no longer sampled by formal flow",
+    "runtime_articulation": {
+      "controller": "scripts/back_mountain_sword_practice.gd",
+      "metadata": "assets/data/back_mountain_sword_practice.json",
+      "geometry": "Original RGB atlas unchanged; fixed body and shoulder/elbow weighted arm mesh; smooth sleeve blend, rigid hand and sword",
+      "status": "root_reviewed_real_native_and_web;user_motion_acceptance_pending"
+    }
+  },
+  "native_skeleton_v1": {
+    "route": "User selected exploration A, Godot native 2D; approved original-character sword slice on 2026-10-08",
+    "source": "assets/art/sword_training/continuous-parts-v1.png",
+    "source_sha256": "db71b7a2b1f396fec09d3ee3ce741ca3c261f6376894253fa25dd81a21fc63c2",
+    "raw_source_unchanged": true,
+    "controller": "scripts/jiang_sword_actor.gd",
+    "geometry": "Two source UV regions on native Polygon2D weighted grids; one original RGB texture, no raster edits or generated art",
+    "animation": "Skeleton2D / Bone2D / AnimationPlayer; planted lower body, restrained hip/chest/head motion, shoulder/elbow/wrist chain; hand and blade rigid at wrist",
+    "status": "Root inspected actual Compatibility ready/windup/cut images; user motion naturalness pending",
+    "cost": "No new generation, purchase or paid service"
+  }
+}

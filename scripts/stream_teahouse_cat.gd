@@ -7,6 +7,7 @@ const CAT_ART_DIR := "res://assets/art/ambient_life/"
 const CAT_CURSOR_PATH := "res://assets/art/ui/cat-pet-cursor-v2.svg"
 const WEATHER_FADE_SECONDS := 1.5
 const PET_SECONDS := 2.4
+const PET_MIN_ALPHA := 0.5
 
 var sprite: Sprite2D
 var hotspot: Button
@@ -283,7 +284,7 @@ func _can_pet() -> bool:
 	return (
 		is_instance_valid(sprite)
 		and sprite.visible
-		and _weather_alpha > 0.001
+		and _weather_alpha >= PET_MIN_ALPHA
 		and bool(_context.get("dynamic_enabled", true))
 		and not _is_raining()
 		and not bool(_context.get("busy", false))

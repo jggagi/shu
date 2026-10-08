@@ -154,6 +154,21 @@ func _test_rain_fade_and_static_resume() -> void:
 	check(not cat.motion.global_position().is_equal_approx(before_rain), "clear Dynamic weather resumes travel")
 	check(_hotspot_available(), "the restored clear-weather resident is pettable")
 
+	# A fully hidden resident must become perceptible before input is captured.
+	_set_context({"weather_id": "light_rain"})
+	cat.advance(1.5)
+	check(is_zero_approx(_cat_alpha()), "rain can fully hide the resident")
+	_set_context({"weather_id": "clear"})
+	cat.advance(1.0 / 60.0)
+	check(not _hotspot_available(), "first fade-in frame does not expose an invisible hotspot")
+	check(not cat.pet(), "first fade-in frame cannot pet an unseen cat")
+	check(cat.hotspot.mouse_filter == Control.MOUSE_FILTER_IGNORE, "faint resident passes pointer input through")
+	check(cat.hotspot.mouse_default_cursor_shape == Control.CURSOR_ARROW, "faint resident does not reveal a pet cursor")
+	cat.advance(0.6)
+	check(not _hotspot_available(), "resident below half opacity remains noninteractive")
+	cat.advance(0.15)
+	check(_hotspot_available(), "perceptible resident enables petting during fade-in")
+
 
 func _test_reset() -> void:
 	check(cat.pet(), "reset fixture enters an active pet response")

@@ -8,6 +8,7 @@ import hashlib
 import json
 import shutil
 import subprocess
+import tempfile
 
 FILES = [
     "scenes/demos/stream_teahouse.tscn",
@@ -40,8 +41,8 @@ def main():
     if not version.startswith(expected + ".stable"):
         raise SystemExit(f"Expected Godot {expected}.stable, got {version}")
     output = root / ".local/build/stream-teahouse"
-    stage = output / "project"
-    stage.mkdir(parents=True, exist_ok=True)
+    output.mkdir(parents=True, exist_ok=True)
+    stage = Path(tempfile.mkdtemp(prefix="project-", dir=output))
     hashes = {}
     for relative in FILES:
         source = root / relative
@@ -71,6 +72,7 @@ def main():
         for relative in ["assets/fonts/OFL-Serif.txt", "assets/GODOT-LICENSE.txt", "assets/GODOT-NOTICES.txt"]:
             shutil.copy2(root / relative, licenses / Path(relative).name)
     receipt = {"engine": version, "main_scene": "res://scenes/demos/stream_teahouse.tscn",
+               "stage_relative_path": stage.relative_to(output).as_posix(),
                "source_files_sha256": hashes,
                "scope": "isolated local Web and Windows exports; no main-project changes or publication"}
     (output / "build-info.json").write_text(json.dumps(receipt, indent=2) + "\n")

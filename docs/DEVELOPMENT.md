@@ -358,3 +358,23 @@ Web 新包在 IAB 完成鼠标行动流程与键盘天气／动静复核，控�
 根代理负责原创庭院构图、环境适配、集成及原生／Web审核，真实luna_worker完成单猫配置、短路径helper最小提取和合同检查。复用EnvironmentPresenter、AmbientLifePresenter、橘猫图集与抚摸光标；庭院重新制作遮罩、路径、参数和adapter。无剧情／养成奖励／addon。最终导入与Web导出成功、猫41项通过、原生20张完整渲染0失败、实际Web鼠标天气／猫／动静／重置通过；旧听雨廊套件12失败与未改基线逐项相同。用户随后在本chat确认「验收通过」，庭院首轮独立试玩认可完成；Windows等独立验收仍未完成。
 
 范围、启动命令、逐层证据与下一验收点见 [庭院任务卡](COURTYARD_SLICE.md)，实际复用问题见 [庭院案例](../.agents/skills/game-painted-scene-build/references/mountain-gate-courtyard.md)。本轮没有commit/push/merge/公开发布授权。
+
+## 溪边茶亭独立切片（客户端日期 2026-10-07）
+
+按D054已完成本地候选：[STREAM_TEAHOUSE_SLICE](STREAM_TEAHOUSE_SLICE.md)。独立画景、六时辰三天气、水面流动／雨圈、露天石岸居民猫及摸摸，Static／Resume／Reset接入。起点为隔离worktree detached `9cab32a`，clean；没有改主入口／DemoState／Tea。Root使用tiered-coding，两个real luna_worker分别负责水面shader与猫adapter／测试，Root完成原画／几何／controller／整合和最终验证。
+
+最终猫56项、主规则14项通过；真实Compatibility75项／30截图／0失败，含18种环境、两个窗口尺寸、完整Static帧一致与晴天水域像素确实变化。像素对照发现并修复了无纹理polygon的UV整合问题，最终全部重跑、重新Web／Windows导出；浏览器真实输入与控制台复核。Windows实机、手机、长时与用户视觉认可继续待验。当前原画／猫石岸承托和水域mask已由Codex审核，下一验收点仅为用户试玩新构图、水动强度和猫步态。没有提交／推送／PR／合并／公开发布。
+
+溪边茶亭 v1 验收追记（2026-10-07）：用户明确「验收通过」。下一轮方案为从一段远瀑的向下细流纹／局部微扰动／落点薄雾开始，先用真实窗口动静对照验收，再扩到溪水急流。本轮只读核对现有后山 waterfall shader 与当前水面，更新验收资料；没有 runtime、素材或构建修改。
+
+溪边茶亭 v1.1 远瀑实施追记（D057）：用户对方案回复「好」后本地完成。real luna_worker 负责两份独立 shader，Root 负责原画水路 polygon、落点雾范围、调色绑定、强度调优和最终验收。两个效果仅共用原有呈现时钟；原画与主场景入口不变。真实 Compatibility 重跑至97项／50张完整截图／0失败，包含独立瀑布动态像素和邻山稳定检查；Static整幅图像字节一致，18环境和两尺寸审核。证据保存至 `.local/qa/stream-teahouse-v1.1/`，v1旧证据与本轮baseline保留。最终独立Web／Windows重导出，24依赖SHA256与receipt一致；浏览器实际正午晴、Static／Resume、雨中暮色和Reset复核。新视觉效果等待用户试玩，Windows实机与长时未验证，没有Git或发布动作。
+
+溪边茶亭 v1.2 暮色反馈修订：实际确认户外遮罩斜边与未跟随暮色调色的亮雾造成局部不连贯。仅修改两份现有效果shader、宿主参数绑定及独立包版本；原图与profile不变。Compatibility 104项／54张完整截图／0失败，18环境与两尺寸审核；暮色新增遮罩边缘回归、谷内雾保留及全帧Static一致性。此前问题边缘的红色通道增亮24/255，修正后同位置为0/255。Web／Windows本地导出成功、24份依赖哈希一致；Windows实机、长时和修正后用户认可仍待验。证据在 `.local/qa/stream-teahouse-v1.2/` 与 `.local/qa/stream-dusk-fix/`，旧QA保留，未提交或公开发布。
+
+暮色修订Web复核：实际加载v1.2，键盘切至暮色小雨并切换Static／Resume，控制台警告／错误为空；保留该画面供用户继续试玩。
+
+溪边茶亭v1.3河流水面增强（D058）：Root用tiered-coding将单份shader委派real luna_worker，自己校准5点河道／边缘参数、整合、检查shader与真实渲染并增强偏淡的第一版。所有原画采样位置固定，未新增素材或玩法。最终Compatibility134项／81张完整截图／0失败，18种环境及1152×720／960×600审核；独立远近水域像素变化、石岸区域逐像素相同，完整Static与暮色接缝回归通过。最终QA在 `.local/qa/stream-teahouse-v1.3/`，本轮baseline及日志在 `.local/qa/stream-river-v1/`，v1.2旧证据保留。新动感仍待用户试玩，Windows实机、低端和长时未验证；没有Git或公开发布动作。
+
+v1.3导出与Web复核：独立Web／Windows包完成，24依赖哈希一致。真实Web加载v1.3并键盘切正午晴、动静与暮色小雨，控制台警告／错误为空。新动感待用户试玩。
+
+2026-10-07收尾：用户接受溪边茶亭v1.3并授权PR／merge。基于最新main c83c8ff集成，保留庭院，决定号D056–D058；独立包补齐CatResidentMotion依赖。最终基线猫56项、主规则14项、原生134项／81截图均通过；Web／Windows导出及25份依赖哈希通过，Web实际Static／Resume／Reset和环境切换无控制台警告／错误。原工作区与历史QA保留。Windows实机和长时运行仍未验证，未部署公开试玩页。

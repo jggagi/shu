@@ -154,3 +154,9 @@ Windows 导出成功与 Windows 实机操作仍分开：既有包的导出证据
 用户在本chat明确确认「验收通过」，山门庭院独立试玩认可完成（D055）。当前切片验证了两个Presenter、猫身份／姿态与光标在新构图中的复用，以及庭院独立遮罩、路径、能力和参数适配；没有新增剧情、奖励或addon。实际复用范围及暴露的问题见 [庭院案例](../.agents/skills/game-painted-scene-build/references/mountain-gate-courtyard.md)。
 
 Windows实机、手机、低配与长时稳定性仍未验证；旧听雨廊套件12项失败与未改基线一致的记录保持。本次只更新认可与交接，不新增Git提交／推送／合并或公开部署授权。后续可独立安排平台验收及源码归档。
+
+## 溪边茶亭v1.3交接（2026-10-07）
+
+用户认可当前独立画景并授权PR合并，详见[溪边茶亭记录](STREAM_TEAHOUSE_SLICE.md)。复用现有EnvironmentPresenter和CatResidentMotion的兼容入口，原画水路、瀑布、石岸脚点及户外遮罩按新构图重新校准；水面用固定原图采样识别水色，顺流推进明暗细节，避免扭动岸石。所有局部效果跟随暮色调色，硬裁切的雨雾边缘在原遮罩内部柔化；同一controlled elapsed保证Static全帧冻结与连续Resume。未创建addon或改DemoState。
+
+运行入口 `res://scenes/demos/stream_teahouse.tscn`；专用构建 `tools/build_stream_teahouse.py`。Windows实机、手机、低端和长时仍未验证。后续按用户新反馈小步调参；本轮不自动发布Web、扩玩法或改其他已验收画景。

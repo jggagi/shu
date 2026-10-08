@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "asset": "assets/art/stream_teahouse/stream-teahouse-v1.png",
+  "provider": "codex-imagegen",
+  "model": null,
+  "author": "AI-generated original scene, selected by Codex for shu local candidate",
+  "purpose": "One composition reference reused as the first playable background; no production batch",
+  "prompt_file": "art/prompts/stream-teahouse/reference.txt",
+  "style_reference": "assets/art/weather3/tingyu-clean-v3.png",
+  "permission": "User requested the independent local scene, accepted v1 and v1.3, and authorized PR/merge on 2026-10-07",
+  "usage": "Original generated project art; no third-party work imported. Cat poses are existing project art with original provenance retained.",
+  "sha256": "fcec0e8e25c22e21842676c702e06d0c3888c95a947846a8ebfee7aea1733901",
+  "width": 1672,
+  "height": 941,
+  "alpha": "Opaque scene background",
+  "geometry": "assets/data/stream_teahouse.json",
+  "logical_canvas": [
+    1280,
+    720
+  ],
+  "reused_cat_sources": [
+    "assets/art/ambient_life/orange-cat-layout-v2.json",
+    "assets/art/ambient_life/tingyu-cat-desk-source-v1.json"
+  ],
+  "acceptance": {
+    "date": "2026-10-07",
+    "user_feedback": "不错 准备PR merge收尾",
+    "scope": "Current Stream Teahouse v1.3 local visual slice; not Windows/device/long-running acceptance"
+  }
+}

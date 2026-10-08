@@ -1,0 +1,13 @@
+{
+  "Source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
+  "SourceSHA256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
+  "Name": "Noto Serif SC",
+  "License": "SIL Open Font License 1.1",
+  "LicenseFile": "OFL-Serif.txt",
+  "DerivedName": "Shu Stream Teahouse Serif",
+  "Modifications": "Subset to stream_teahouse.gd UI; static weight 550; renamed.",
+  "Codepoints": 156,
+  "Tool": "fontTools 4.51.0",
+  "Rebuild": "python tools/rebuild_stream_teahouse_font.py <source-font>",
+  "DerivedSHA256": "5534a59f7da5d325c05408d97288c2925b16d724a7a1ee306f2cb97c78bda73d"
+}

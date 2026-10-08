@@ -1,0 +1,3256 @@
+{
+	"clips": {
+		"cut": [
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					0,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					384,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					768,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					1152,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					1536,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					1920,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					0,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					384,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					768,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					1152,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					1536,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					1920,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					0,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					384,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					768,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					1152,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					1536,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					1920,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					0,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					384,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					768,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					1152,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					1536,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					1920,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					0,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					384,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					768,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					1152,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					1536,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_0.png",
+				"region": [
+					1920,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					0,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					384,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					768,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					1152,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					1536,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					1920,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					0,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					384,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					768,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					1152,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					1536,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					1920,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					0,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					384,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					768,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					1152,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					1536,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					1920,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					0,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					384,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					768,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					1152,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					1536,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					1920,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					0,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					384,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					768,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					1152,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					1536,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_1.png",
+				"region": [
+					1920,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					0,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					384,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					768,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					1152,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					1536,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					1920,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					0,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					384,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					768,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					1152,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					1536,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					1920,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					0,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					384,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					768,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					1152,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					1536,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					1920,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					0,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					384,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					768,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					1152,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					1536,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					1920,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					0,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					384,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					768,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					1152,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					1536,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_2.png",
+				"region": [
+					1920,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					0,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					384,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					768,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					1152,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					1536,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					1920,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					0,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					384,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					768,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					1152,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					1536,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					1920,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					0,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					384,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					768,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					1152,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					1536,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					1920,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					0,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					384,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					768,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					1152,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					1536,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					1920,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					0,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					384,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					768,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					1152,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					1536,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/cut_3.png",
+				"region": [
+					1920,
+					1536,
+					384,
+					384
+				]
+			}
+		],
+		"staff": [
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					0,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					384,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					768,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					1152,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					1536,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					1920,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					0,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					384,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					768,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					1152,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					1536,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					1920,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					0,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					384,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					768,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					1152,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					1536,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					1920,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					0,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					384,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					768,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					1152,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					1536,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					1920,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					0,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					384,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					768,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					1152,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					1536,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_0.png",
+				"region": [
+					1920,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					0,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					384,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					768,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					1152,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					1536,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					1920,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					0,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					384,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					768,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					1152,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					1536,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					1920,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					0,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					384,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					768,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					1152,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					1536,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					1920,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					0,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					384,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					768,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					1152,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					1536,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					1920,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					0,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					384,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					768,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					1152,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					1536,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_1.png",
+				"region": [
+					1920,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					0,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					384,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					768,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					1152,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					1536,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					1920,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					0,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					384,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					768,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					1152,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					1536,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					1920,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					0,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					384,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					768,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					1152,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					1536,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					1920,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					0,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					384,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					768,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					1152,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					1536,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					1920,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					0,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					384,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					768,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					1152,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					1536,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_2.png",
+				"region": [
+					1920,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					0,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					384,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					768,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					1152,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					1536,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					1920,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					0,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					384,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					768,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					1152,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					1536,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					1920,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					0,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					384,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					768,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					1152,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					1536,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					1920,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					0,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					384,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					768,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					1152,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					1536,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					1920,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					0,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					384,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					768,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					1152,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					1536,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/staff_3.png",
+				"region": [
+					1920,
+					1536,
+					384,
+					384
+				]
+			}
+		],
+		"thrust": [
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					0,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					384,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					768,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					1152,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					1536,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					1920,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					0,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					384,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					768,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					1152,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					1536,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					1920,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					0,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					384,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					768,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					1152,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					1536,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					1920,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					0,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					384,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					768,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					1152,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					1536,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					1920,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					0,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					384,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					768,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					1152,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					1536,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_0.png",
+				"region": [
+					1920,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					0,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					384,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					768,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					1152,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					1536,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					1920,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					0,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					384,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					768,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					1152,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					1536,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					1920,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					0,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					384,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					768,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					1152,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					1536,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					1920,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					0,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					384,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					768,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					1152,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					1536,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					1920,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					0,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					384,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					768,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					1152,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					1536,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_1.png",
+				"region": [
+					1920,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					0,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					384,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					768,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					1152,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					1536,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					1920,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					0,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					384,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					768,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					1152,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					1536,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					1920,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					0,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					384,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					768,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					1152,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					1536,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					1920,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					0,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					384,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					768,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					1152,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					1536,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					1920,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					0,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					384,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					768,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					1152,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					1536,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_2.png",
+				"region": [
+					1920,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					0,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					384,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					768,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					1152,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					1536,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					1920,
+					0,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					0,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					384,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					768,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					1152,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					1536,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					1920,
+					384,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					0,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					384,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					768,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					1152,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					1536,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					1920,
+					768,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					0,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					384,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					768,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					1152,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					1536,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					1920,
+					1152,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					0,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					384,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					768,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					1152,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					1536,
+					1536,
+					384,
+					384
+				]
+			},
+			{
+				"path": "res://assets/art/animation_lab/thrust_3.png",
+				"region": [
+					1920,
+					1536,
+					384,
+					384
+				]
+			}
+		]
+	},
+	"fps": 30,
+	"frame_size": [
+		384,
+		384
+	],
+	"version": 1
+}

@@ -143,3 +143,8 @@ python tools/serve_courtyard.py --port 8772
 ```
 
 Web 导出使用独立 `.local` 快照覆盖入口，正式 project.godot 主场景保持。控制面板提供全部时辰／天气；4 动静、T 下一时辰、7／8／9 晴云雨、R 重置。时辰预览不推进 DemoState，主动预览在 Static 中仍平滑变化，运动保持冻结。详细验证与素材来源见 [庭院切片](docs/COURTYARD_SLICE.md)。
+
+
+## 动作方案对照实验
+
+[动作对照试玩入口](https://jggagi.github.io/shu/animation-lab/)：Godot 原生 2D 骨骼、Blender 30 fps 透明序列、同一 Blender 模型的实时 3D，三段原创研究动作共用镜头和时钟。支持半速／逐帧／时间轴／单看；研究人物和身法并非最终美术或选定路线。零付费探索，购买另行确认；不接入正式养成结算。制作与验证见 [实验报告](docs/ANIMATION_OPTIONS_LAB.md)，实际公开构建以该入口 `build-info.json` 为准。

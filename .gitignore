@@ -3,3 +3,6 @@
 *.import
 /art/work/
 __pycache__/
+
+# Reproducible animation lab intermediate frames; packed atlases are the runtime assets.
+/assets/art/animation_lab/blender_frames/

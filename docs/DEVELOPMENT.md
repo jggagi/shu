@@ -389,3 +389,11 @@ v1.3导出与Web复核：独立Web／Windows包完成，24依赖哈希一致。�
 2026-10-07收尾：用户接受溪边茶亭v1.3并授权PR／merge。基于最新main c83c8ff集成，保留庭院，决定号D056–D058；独立包补齐CatResidentMotion依赖。最终基线猫56项、主规则14项、原生134项／81截图均通过；Web／Windows导出及25份依赖哈希通过，Web实际Static／Resume／Reset和环境切换无控制台警告／错误。原工作区与历史QA保留。Windows实机和长时运行仍未验证，未部署公开试玩页。
 
 合并前代码审查补修：重复构建使用新staging以排除历史资源污染；猫淡入达到50%后才启用摸摸。构建stdlib回归2项（模拟Godot）、猫63项、实际渲染134项／81截图均通过；真实Web／Windows重建25份哈希匹配，旧stage canary保留且未进入新stage。修复后Web实际操作无控制台警告／错误。
+
+
+### 动作方案零付费探索（2026-10-07）
+
+用户授权先零付费探索，购买另行确认。独立 `codex/animation-options-lab` worktree 提供原生 2D 骨骼、Blender 透明序列、Blender GLB 实时 3D 三路同动作对照；正式 main 与原 M2 试玩保持。来源、构建、真实 UI／渲染与自动检查见 [动作方案对照](ANIMATION_OPTIONS_LAB.md)。研究角色／身法不是最终产品方案，用户选择尚待完成；未 commit／push／PR／merge／公开部署。
+
+
+2026-10-08 用户明确授权将动作对照实验发布到 GitHub Pages。采用独立 `/animation-lab/`，从既有发布快照恢复缺失的 Pages／发布分支，并保持原入口文件不变；源码归档至 `codex/animation-options-lab`，不合入正式 main。玩法／美术路线选择仍待试玩，发布证据见 [动作方案对照](ANIMATION_OPTIONS_LAB.md) 与该入口 `build-info.json`。

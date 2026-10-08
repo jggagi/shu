@@ -1,0 +1,97 @@
+{
+  "description": "Original authored motion data for five selectable sword manuals, on the existing unchanged Jiang painted atlas and native skeleton. No paid generation or new character art. Gameplay authority is DemoState; motion remains presentation only.",
+  "source_data": "assets/data/sword_manuals.json",
+  "source_sha256": {
+    "scripts/main.gd": "3a317bee8e0a435728accba4473df2b923f331aebb3a49fda62c045353a7a452",
+    "scripts/demo_state.gd": "17b29c0572fba0d1f88e4cb4b910f2d3d343c5fa92a704edfc42493d3b33e4e0",
+    "scripts/back_mountain_view.gd": "8bce8fc75fddce338ac053f293761bf7002f3fd0d4384cd1fc1a4c63b9b45b05",
+    "scripts/back_mountain_sword_practice.gd": "1cecdbfa237817d8cadde260af1bc34a2cc1e09f1191bba23da8ba254203400c",
+    "scripts/jiang_sword_actor.gd": "c92735849c7c5277fe1827d19e5cadd4bae548a32d068b6c114247cc78cabdaa",
+    "scripts/sword_manual_catalog.gd": "14c728de7dad4065e898107d2867f5dc349e88fd3baa67d1ebc722f0f50b2a9f",
+    "assets/data/sword_manuals.json": "873ec58c098a3ab2608deb796f5c4bd7e50df8ba7b8e647659b8c678949acefe",
+    "assets/data/back_mountain_sword_practice.json": "550eadb13347e00f1a8c612005652072ed257ee20b6ddc62392d4e7e05ed56f7",
+    "assets/data/rules.json": "18bc6f1b74fa4423f3e464775f2d5b63a2adb07b8fa7f1c96f87df8711184951",
+    "assets/art/sword_training/continuous-parts-v1.png": "db71b7a2b1f396fec09d3ee3ce741ca3c261f6376894253fa25dd81a21fc63c2",
+    "assets/fonts/ShuDemoSerif.ttf": "942030d0494a33982458c676caa61a07f0cc33defe2bbf509c3c7cca6d5fc7a2",
+    "assets/fonts/source-serif.json": "85108098a541cbaf84d5887fd7c33e0b81b88987f03a2cb40edfe65f7ca4a27d",
+    "project.godot": "940cef825571d86c501fd89fe6eae2217d24851f63c96f6a63f936cddb27b153"
+  },
+  "manuals": [
+    {
+      "id": "pine_wind",
+      "title": "松风剑谱",
+      "style": "沉肩 · 斜劈",
+      "techniques": [
+        {
+          "id": "pine_pair",
+          "title": "松间双斩"
+        },
+        {
+          "id": "pine_low_high",
+          "title": "低扫接斜斩"
+        }
+      ]
+    },
+    {
+      "id": "listening_rain",
+      "title": "听雨剑谱",
+      "style": "收肘 · 点刺",
+      "techniques": [
+        {
+          "id": "rain_double_point",
+          "title": "檐下双点"
+        },
+        {
+          "id": "rain_wait_point",
+          "title": "听雨一线"
+        }
+      ]
+    },
+    {
+      "id": "returning_tide",
+      "title": "回澜剑谱",
+      "style": "转腕 · 回环",
+      "techniques": [
+        {
+          "id": "tide_turn",
+          "title": "回澜绕锋"
+        },
+        {
+          "id": "tide_reverse",
+          "title": "逆水回锋"
+        }
+      ]
+    },
+    {
+      "id": "swift_swallow",
+      "title": "燕掠剑谱",
+      "style": "短蓄 · 快斩",
+      "techniques": [
+        {
+          "id": "swallow_three",
+          "title": "燕掠三叠"
+        },
+        {
+          "id": "swallow_pause",
+          "title": "燕归停锋"
+        }
+      ]
+    },
+    {
+      "id": "rising_peak",
+      "title": "叠峰剑谱",
+      "style": "落锋 · 上挑",
+      "techniques": [
+        {
+          "id": "peak_raise",
+          "title": "叠峰双挑"
+        },
+        {
+          "id": "peak_drop",
+          "title": "峰回落剑"
+        }
+      ]
+    }
+  ],
+  "source_has_uncommitted_changes": true
+}

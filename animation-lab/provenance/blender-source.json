@@ -1,0 +1,6960 @@
+{
+  "version": 1,
+  "purpose": "Original Blender full-body motion study; exploratory and not final Jiang artwork or verified martial technique.",
+  "tool": "Blender 4.5.9 LTS",
+  "source_motion": "assets/data/animation_lab/motion.json",
+  "source_motion_sha256": "f35bf165456e60a9e069a5a682f920e6f3d7e4b22711fb52a958c3ff3dc79885",
+  "builder_script": "tools/animation_lab/make_blender_demo.py",
+  "builder_script_sha256": "b411d5c80c75afe5558d68b1ef95e90444ec094a86671599152e283940a05d56",
+  "palette_reference": "assets/art/v2/jiang-yanqiu-v2.png (color inspiration only; no image pixels imported)",
+  "model": "Original stylized Q版 blue-white robe, dark tied hair, warm face, boots and separate sword/staff toggle meshes.",
+  "coordinate_system": "X forward, Y lateral, Z up; metres; source motion JSON read-only.",
+  "rig": {
+    "armature": "Jiang_Rig",
+    "character_mesh": "Jiang_Training_Dummy",
+    "weapon_variants": [
+      "Weapon_Sword_Variant",
+      "Weapon_Staff_Variant"
+    ],
+    "weighted_armature_meshes": 3
+  },
+  "animations": {
+    "fps": 30,
+    "duration_seconds": 4.0,
+    "source_samples_per_clip": {
+      "thrust": 121,
+      "cut": 121,
+      "staff": 121
+    },
+    "glb_actions": [
+      "cut",
+      "staff",
+      "thrust"
+    ]
+  },
+  "camera": {
+    "name": "LabCamera",
+    "position": [
+      4.0,
+      -7.0,
+      3.3
+    ],
+    "target": [
+      0,
+      0,
+      1.4
+    ],
+    "ortho_scale": 4.2,
+    "render_resolution": [
+      384,
+      384
+    ],
+    "camera_frame_bounds_camera_space": {
+      "left": -2.1,
+      "right": 2.1,
+      "bottom": -2.1,
+      "top": 2.1
+    }
+  },
+  "glb": {
+    "path": "assets/art/animation_lab/model.glb",
+    "sha256": "8a737aba92b4b1879c6deed5f3aa43d527ba41a9e8ee8e7a4daa2460b2838b99",
+    "size_bytes": 807340
+  },
+  "renders": {
+    "status": "rendered",
+    "fps": 30,
+    "resolution": [
+      384,
+      384
+    ],
+    "frames_per_clip": 120,
+    "clips": [
+      "thrust",
+      "cut",
+      "staff"
+    ],
+    "total_frames": 360,
+    "total_seconds": 171.021,
+    "seconds_per_frame": 0.475,
+    "bytes_total": 39118734,
+    "transparent": true,
+    "frame_time_range_seconds": [
+      0.0,
+      3.966666666666667
+    ],
+    "frame_bounds_and_sha256": [
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0000.png",
+        "frame": 0,
+        "time_seconds": 0.0,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "b65efa454834f066bee50cfbbaa8da3d28d590d3da7c42bdb86a0ee7812ffa94"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0001.png",
+        "frame": 1,
+        "time_seconds": 0.03333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 268,
+          "bottom": 325,
+          "width": 124,
+          "height": 241
+        },
+        "size_bytes": 108879,
+        "sha256": "873b311012c7cf8f855e8010bcefee7bfb7c40d45183e1f4d4d5147ec36d4feb"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0002.png",
+        "frame": 2,
+        "time_seconds": 0.06666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 268,
+          "bottom": 325,
+          "width": 124,
+          "height": 241
+        },
+        "size_bytes": 108828,
+        "sha256": "a1f8b0346656ec72dd2d6173bb2b5933459f4dd4d2f89ad3f302b4d9bf53b1d3"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0003.png",
+        "frame": 3,
+        "time_seconds": 0.1,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 144,
+          "top": 85,
+          "right": 268,
+          "bottom": 325,
+          "width": 125,
+          "height": 241
+        },
+        "size_bytes": 108530,
+        "sha256": "39ee92430c92e5ba0193df83a36d6a50ba05768ff2bfde5fc3714d25a8232e56"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0004.png",
+        "frame": 4,
+        "time_seconds": 0.13333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 143,
+          "top": 85,
+          "right": 268,
+          "bottom": 325,
+          "width": 126,
+          "height": 241
+        },
+        "size_bytes": 108484,
+        "sha256": "067c22845a7c71a5bf8c049245b5c623e26b41a65e9f4a5f6db8b9177fef92b9"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0005.png",
+        "frame": 5,
+        "time_seconds": 0.16666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 143,
+          "top": 85,
+          "right": 268,
+          "bottom": 325,
+          "width": 126,
+          "height": 241
+        },
+        "size_bytes": 108353,
+        "sha256": "b4cc90b1be96cfb38d7f58fcf7443522aa49f0c6c4a909c0d2afc12d371207fd"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0006.png",
+        "frame": 6,
+        "time_seconds": 0.2,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 142,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 126,
+          "height": 241
+        },
+        "size_bytes": 108224,
+        "sha256": "ae4e23412c15192a46b2ed2beaa47620b6fc00d23a24b309f8335d682fb780f8"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0007.png",
+        "frame": 7,
+        "time_seconds": 0.23333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 141,
+          "top": 85,
+          "right": 266,
+          "bottom": 325,
+          "width": 126,
+          "height": 241
+        },
+        "size_bytes": 107970,
+        "sha256": "574ac1c25ad18737879d39404f932276bd56b7d910ffec57de9533a2b47e5467"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0008.png",
+        "frame": 8,
+        "time_seconds": 0.26666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 265,
+          "bottom": 325,
+          "width": 126,
+          "height": 241
+        },
+        "size_bytes": 107713,
+        "sha256": "e99b09e31701c32c258490ee6fe0be3680826bafd691466715fbae20386bed9e"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0009.png",
+        "frame": 9,
+        "time_seconds": 0.3,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 139,
+          "top": 85,
+          "right": 264,
+          "bottom": 325,
+          "width": 126,
+          "height": 241
+        },
+        "size_bytes": 107588,
+        "sha256": "30f287a1bee8a86a51a56d70d1053f482d4d52bb2818eff9570608482d34ab61"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0010.png",
+        "frame": 10,
+        "time_seconds": 0.3333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 139,
+          "top": 85,
+          "right": 262,
+          "bottom": 325,
+          "width": 124,
+          "height": 241
+        },
+        "size_bytes": 107388,
+        "sha256": "f89c57140c9751258acbfc35baa7297200c6f57746b427a509c482ac2e1fc31d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0011.png",
+        "frame": 11,
+        "time_seconds": 0.36666666666666664,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 84,
+          "right": 261,
+          "bottom": 325,
+          "width": 124,
+          "height": 242
+        },
+        "size_bytes": 107049,
+        "sha256": "9be6d7f468257eff2f7298ffba112c5ded68380ff7fc55b1fe6adfe1266e2331"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0012.png",
+        "frame": 12,
+        "time_seconds": 0.4,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 84,
+          "right": 260,
+          "bottom": 325,
+          "width": 123,
+          "height": 242
+        },
+        "size_bytes": 107435,
+        "sha256": "7ab027e1c4dcec1f283721f1b219c6c70481e3c89cfa1f1e49d81f58416fc8cd"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0013.png",
+        "frame": 13,
+        "time_seconds": 0.43333333333333335,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 84,
+          "right": 259,
+          "bottom": 325,
+          "width": 122,
+          "height": 242
+        },
+        "size_bytes": 107279,
+        "sha256": "5fa52fc8b4d24fc8d1c0352daa0dde52e52ca7713179198423d5e18d0a67406a"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0014.png",
+        "frame": 14,
+        "time_seconds": 0.4666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 84,
+          "right": 259,
+          "bottom": 325,
+          "width": 123,
+          "height": 242
+        },
+        "size_bytes": 107223,
+        "sha256": "d448612cfdbdeab34aae03647129e23838cf9f6ace4d9d3167ad8081919229a2"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0015.png",
+        "frame": 15,
+        "time_seconds": 0.5,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 84,
+          "right": 259,
+          "bottom": 325,
+          "width": 123,
+          "height": 242
+        },
+        "size_bytes": 107223,
+        "sha256": "b3a0b368f7dd40f4958c234f6895816844957b2f55628102375e74d408262f78"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0016.png",
+        "frame": 16,
+        "time_seconds": 0.5333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 84,
+          "right": 259,
+          "bottom": 325,
+          "width": 123,
+          "height": 242
+        },
+        "size_bytes": 107223,
+        "sha256": "4aebcd2e990aa33631ba5c39e0156a2e8f5db142773af4ff834f927eec1bda0f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0017.png",
+        "frame": 17,
+        "time_seconds": 0.5666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 84,
+          "right": 259,
+          "bottom": 325,
+          "width": 123,
+          "height": 242
+        },
+        "size_bytes": 107223,
+        "sha256": "9a01d6b9c55effd486c4183cfb47a5fb14d81fcbc7a89b40aa3b57f8993adb72"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0018.png",
+        "frame": 18,
+        "time_seconds": 0.6,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 84,
+          "right": 259,
+          "bottom": 325,
+          "width": 123,
+          "height": 242
+        },
+        "size_bytes": 107223,
+        "sha256": "f0a4cc265b61a9431a9b26ced0f3f293a54d15268b208dfef2e15b0a82fe0533"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0019.png",
+        "frame": 19,
+        "time_seconds": 0.6333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 84,
+          "right": 259,
+          "bottom": 325,
+          "width": 123,
+          "height": 242
+        },
+        "size_bytes": 107223,
+        "sha256": "944594ff3b1deabfb01f0f7b5338107cda1b4a92c13ae22d7a4679bf997ad380"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0020.png",
+        "frame": 20,
+        "time_seconds": 0.6666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 84,
+          "right": 259,
+          "bottom": 325,
+          "width": 123,
+          "height": 242
+        },
+        "size_bytes": 107223,
+        "sha256": "f324267a3209256c6ddbab1c532ace9bbf84743e3e382d96fc61b5528529e64e"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0021.png",
+        "frame": 21,
+        "time_seconds": 0.7,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 84,
+          "right": 259,
+          "bottom": 325,
+          "width": 123,
+          "height": 242
+        },
+        "size_bytes": 107223,
+        "sha256": "0e4d491847849c228c782bd2d7b47abc1af3247063a748c27867d6878f982d35"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0022.png",
+        "frame": 22,
+        "time_seconds": 0.7333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 84,
+          "right": 259,
+          "bottom": 325,
+          "width": 123,
+          "height": 242
+        },
+        "size_bytes": 107223,
+        "sha256": "a76d37d7d952263349b2a83ce525e41174ceb1b857ae0659b848dd69211c53d8"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0023.png",
+        "frame": 23,
+        "time_seconds": 0.7666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 84,
+          "right": 259,
+          "bottom": 325,
+          "width": 123,
+          "height": 242
+        },
+        "size_bytes": 107223,
+        "sha256": "7ca01aa2262486206b2026b2766bd1bdc79368a0b7cffdd22e069ce8fba3351f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0024.png",
+        "frame": 24,
+        "time_seconds": 0.8,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 84,
+          "right": 259,
+          "bottom": 325,
+          "width": 123,
+          "height": 242
+        },
+        "size_bytes": 107223,
+        "sha256": "15c2be39c943221dd9a50a04470e2ed130219c6e5e70aa10fdb7f290618c4598"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0025.png",
+        "frame": 25,
+        "time_seconds": 0.8333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 84,
+          "right": 259,
+          "bottom": 325,
+          "width": 123,
+          "height": 242
+        },
+        "size_bytes": 107223,
+        "sha256": "17acbd74fd0c5ddd81091d8377043d4803dbdd03a6c59d103d2c97ea70cbb6c5"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0026.png",
+        "frame": 26,
+        "time_seconds": 0.8666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 84,
+          "right": 260,
+          "bottom": 325,
+          "width": 123,
+          "height": 242
+        },
+        "size_bytes": 107428,
+        "sha256": "235fab72ea93633b0c68eebeaaf157d5c179c40659b4a7ab004d2e2b926a5854"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0027.png",
+        "frame": 27,
+        "time_seconds": 0.9,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 139,
+          "top": 85,
+          "right": 264,
+          "bottom": 324,
+          "width": 126,
+          "height": 240
+        },
+        "size_bytes": 107657,
+        "sha256": "1bca49dccab0141ebd942e96c34e6b402aa280f5b1e8d8575c6a8b1e68e331af"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0028.png",
+        "frame": 28,
+        "time_seconds": 0.9333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 142,
+          "top": 86,
+          "right": 270,
+          "bottom": 322,
+          "width": 129,
+          "height": 237
+        },
+        "size_bytes": 108292,
+        "sha256": "580499189f51f94465e5c5e8ed29ed8b1b9620234b695c35d3536661c497f9a8"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0029.png",
+        "frame": 29,
+        "time_seconds": 0.9666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 87,
+          "right": 277,
+          "bottom": 320,
+          "width": 133,
+          "height": 234
+        },
+        "size_bytes": 108794,
+        "sha256": "f323e9f5ee1084652a76a48c8f0d0d8aa3742e956c5b45823055252c450fd1fb"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0030.png",
+        "frame": 30,
+        "time_seconds": 1.0,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 146,
+          "top": 87,
+          "right": 282,
+          "bottom": 318,
+          "width": 137,
+          "height": 232
+        },
+        "size_bytes": 109168,
+        "sha256": "4e9545487c19b253d3ea075fcea9d29852cc650c742763f66a0d19242f452346"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0031.png",
+        "frame": 31,
+        "time_seconds": 1.0333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 87,
+          "right": 283,
+          "bottom": 318,
+          "width": 137,
+          "height": 232
+        },
+        "size_bytes": 109427,
+        "sha256": "d334a4567e36fd86762948c7baf66fa36339380cb5c4a13e75c342bba8d1fd80"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0032.png",
+        "frame": 32,
+        "time_seconds": 1.0666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 148,
+          "top": 88,
+          "right": 286,
+          "bottom": 319,
+          "width": 139,
+          "height": 232
+        },
+        "size_bytes": 109216,
+        "sha256": "13795a06fafca6014d3ed1ef108724259e95f0293473dab65d4f1c9d6f2824e2"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0033.png",
+        "frame": 33,
+        "time_seconds": 1.1,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 150,
+          "top": 89,
+          "right": 291,
+          "bottom": 320,
+          "width": 142,
+          "height": 232
+        },
+        "size_bytes": 109420,
+        "sha256": "4f843bb8f8a9733f9eb1cc82ea0f7e5861e13163a7107f0f4cb3aa4211fc2218"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0034.png",
+        "frame": 34,
+        "time_seconds": 1.1333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 152,
+          "top": 89,
+          "right": 297,
+          "bottom": 321,
+          "width": 146,
+          "height": 233
+        },
+        "size_bytes": 109625,
+        "sha256": "cf1d3e0ba6e16a6df41fac43ea115ffbd7705e4786fc59d244523765d9fef8d3"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0035.png",
+        "frame": 35,
+        "time_seconds": 1.1666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 155,
+          "top": 91,
+          "right": 305,
+          "bottom": 322,
+          "width": 151,
+          "height": 232
+        },
+        "size_bytes": 109919,
+        "sha256": "9f12db3bb3d15fc6fe90f92070c6a3a10dc7903a390ef7d0dd30a1ec70e7b2d3"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0036.png",
+        "frame": 36,
+        "time_seconds": 1.2,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 157,
+          "top": 92,
+          "right": 314,
+          "bottom": 324,
+          "width": 158,
+          "height": 233
+        },
+        "size_bytes": 110520,
+        "sha256": "aa9a0c1fc0e27878cf615ce6bfdeb66c19325755efbd73aada5b6dfa01ff86db"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0037.png",
+        "frame": 37,
+        "time_seconds": 1.2333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 159,
+          "top": 93,
+          "right": 322,
+          "bottom": 325,
+          "width": 164,
+          "height": 233
+        },
+        "size_bytes": 110563,
+        "sha256": "d5da78f04c19cc0998277d4b964ea2645614bb50aef1af23d5a3431a886c152b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0038.png",
+        "frame": 38,
+        "time_seconds": 1.2666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 94,
+          "right": 330,
+          "bottom": 326,
+          "width": 170,
+          "height": 233
+        },
+        "size_bytes": 110703,
+        "sha256": "36287dbeb1a3076bffb7403445b542041e3ee17ac9703b901a45f762ba654d3d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0039.png",
+        "frame": 39,
+        "time_seconds": 1.3,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 162,
+          "top": 95,
+          "right": 337,
+          "bottom": 328,
+          "width": 176,
+          "height": 234
+        },
+        "size_bytes": 110522,
+        "sha256": "3269d09602ec25627271925588d5c1642ec9d627c3d74d9e482b2ba38e58f7ce"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0040.png",
+        "frame": 40,
+        "time_seconds": 1.3333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 164,
+          "top": 96,
+          "right": 342,
+          "bottom": 329,
+          "width": 179,
+          "height": 234
+        },
+        "size_bytes": 110153,
+        "sha256": "0e394a5a55163a36be8da641218c9820fdddb6333b9dad9d6b7f1ec3fcbec512"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0041.png",
+        "frame": 41,
+        "time_seconds": 1.3666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 164,
+          "top": 97,
+          "right": 344,
+          "bottom": 329,
+          "width": 181,
+          "height": 233
+        },
+        "size_bytes": 110357,
+        "sha256": "96a9b8f46404de12cd47b3fc52f3c95fc8ad69bd86e1dcdc92afe648e7f34112"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0042.png",
+        "frame": 42,
+        "time_seconds": 1.4,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 164,
+          "top": 97,
+          "right": 344,
+          "bottom": 329,
+          "width": 181,
+          "height": 233
+        },
+        "size_bytes": 110264,
+        "sha256": "2c9bdcb829aad6b8c6c8b056bf67b2660ce60dda8ae6aed3a5631025fd13ca77"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0043.png",
+        "frame": 43,
+        "time_seconds": 1.4333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 164,
+          "top": 97,
+          "right": 344,
+          "bottom": 329,
+          "width": 181,
+          "height": 233
+        },
+        "size_bytes": 110264,
+        "sha256": "d9376fce0324a8a66ddfa3526c0f6ad69d53fdb93f2059b1151f3255913a0192"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0044.png",
+        "frame": 44,
+        "time_seconds": 1.4666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 164,
+          "top": 97,
+          "right": 344,
+          "bottom": 329,
+          "width": 181,
+          "height": 233
+        },
+        "size_bytes": 110264,
+        "sha256": "e8e4ffab6d85a9e5ed873137ba2dddd0bfd08facc828cecc5c420f44ae8fceda"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0045.png",
+        "frame": 45,
+        "time_seconds": 1.5,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 164,
+          "top": 97,
+          "right": 344,
+          "bottom": 329,
+          "width": 181,
+          "height": 233
+        },
+        "size_bytes": 110264,
+        "sha256": "2b846febd8baac3bacd109357d189abad48d791dd34fc4da317f6b7d0478146f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0046.png",
+        "frame": 46,
+        "time_seconds": 1.5333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 164,
+          "top": 97,
+          "right": 344,
+          "bottom": 329,
+          "width": 181,
+          "height": 233
+        },
+        "size_bytes": 110264,
+        "sha256": "48023f6187873084c9801e083e009749a70f2ccd1dc07d655cfe72a18a07004d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0047.png",
+        "frame": 47,
+        "time_seconds": 1.5666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 164,
+          "top": 97,
+          "right": 344,
+          "bottom": 329,
+          "width": 181,
+          "height": 233
+        },
+        "size_bytes": 110264,
+        "sha256": "59f94f96769d09bcfff0329457eb47f115a6385813598de48284e34b5cedb254"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0048.png",
+        "frame": 48,
+        "time_seconds": 1.6,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 164,
+          "top": 97,
+          "right": 344,
+          "bottom": 329,
+          "width": 181,
+          "height": 233
+        },
+        "size_bytes": 110264,
+        "sha256": "1349726022cc86c41baaff138aea3085a499c88c7561a4039e43b44dd73d4826"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0049.png",
+        "frame": 49,
+        "time_seconds": 1.6333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 164,
+          "top": 97,
+          "right": 344,
+          "bottom": 329,
+          "width": 181,
+          "height": 233
+        },
+        "size_bytes": 110264,
+        "sha256": "644cc8cb392ef247f0cbf4c9ae1ec58435acc297e4fc042386c3d2d8c085bee2"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0050.png",
+        "frame": 50,
+        "time_seconds": 1.6666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 164,
+          "top": 97,
+          "right": 344,
+          "bottom": 329,
+          "width": 181,
+          "height": 233
+        },
+        "size_bytes": 110313,
+        "sha256": "dc808a69c797031b707e69b101f0fc6d4b694826570c73d79b1c09d47062932d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0051.png",
+        "frame": 51,
+        "time_seconds": 1.7,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 164,
+          "top": 96,
+          "right": 343,
+          "bottom": 329,
+          "width": 180,
+          "height": 234
+        },
+        "size_bytes": 110201,
+        "sha256": "3003003ca570a76e97573d6241c435c490c103eac75b254f61d484cc04bef4ed"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0052.png",
+        "frame": 52,
+        "time_seconds": 1.7333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 164,
+          "top": 96,
+          "right": 342,
+          "bottom": 329,
+          "width": 179,
+          "height": 234
+        },
+        "size_bytes": 110138,
+        "sha256": "6013be4765212a5c8849ed10ae1a4772a3c360cee8fdf2f77e583c4becf7d211"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0053.png",
+        "frame": 53,
+        "time_seconds": 1.7666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 164,
+          "top": 96,
+          "right": 339,
+          "bottom": 329,
+          "width": 176,
+          "height": 234
+        },
+        "size_bytes": 110108,
+        "sha256": "2a8a75bbe27dc06703e47f15788dfb4894b55dad37d04738002d37564eb5078a"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0054.png",
+        "frame": 54,
+        "time_seconds": 1.8,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 164,
+          "top": 95,
+          "right": 336,
+          "bottom": 329,
+          "width": 173,
+          "height": 235
+        },
+        "size_bytes": 110157,
+        "sha256": "9eeaadc5443bc2ad6eb5bfe5c73a4500a41b78b4b4c274ecd4a5861e3b5d8b87"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0055.png",
+        "frame": 55,
+        "time_seconds": 1.8333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 164,
+          "top": 95,
+          "right": 333,
+          "bottom": 329,
+          "width": 170,
+          "height": 235
+        },
+        "size_bytes": 109936,
+        "sha256": "d9c9146fcecc215fffebd57de937f48c0ef3677d0a4ed23360883c78eb537d3d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0056.png",
+        "frame": 56,
+        "time_seconds": 1.8666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 163,
+          "top": 94,
+          "right": 328,
+          "bottom": 329,
+          "width": 166,
+          "height": 236
+        },
+        "size_bytes": 110121,
+        "sha256": "25ba94f37467946986a0a4eb4be58c761727096026bef19e58e7e4959ca4c420"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0057.png",
+        "frame": 57,
+        "time_seconds": 1.9,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 163,
+          "top": 94,
+          "right": 324,
+          "bottom": 329,
+          "width": 162,
+          "height": 236
+        },
+        "size_bytes": 110335,
+        "sha256": "2af4faa4c8bc6fca9fe11f56f084877f8c2c69bb1ee8851680774ae13eab97e5"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0058.png",
+        "frame": 58,
+        "time_seconds": 1.9333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 163,
+          "top": 93,
+          "right": 319,
+          "bottom": 329,
+          "width": 157,
+          "height": 237
+        },
+        "size_bytes": 110542,
+        "sha256": "04620f6ffbc0cb69b1d85943dfead450427a013268b9141ace441407465425a2"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0059.png",
+        "frame": 59,
+        "time_seconds": 1.9666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 162,
+          "top": 93,
+          "right": 315,
+          "bottom": 329,
+          "width": 154,
+          "height": 237
+        },
+        "size_bytes": 110394,
+        "sha256": "553a471d6252d039bca291cf85f8cd153bf17f1439cbc760d19fa4461ce27f2f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0060.png",
+        "frame": 60,
+        "time_seconds": 2.0,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 92,
+          "right": 310,
+          "bottom": 329,
+          "width": 150,
+          "height": 238
+        },
+        "size_bytes": 110578,
+        "sha256": "d40dc555a85dc6d7eaff49310182203561d462de78849b6d717d5adad3b8446c"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0061.png",
+        "frame": 61,
+        "time_seconds": 2.033333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 160,
+          "top": 92,
+          "right": 306,
+          "bottom": 329,
+          "width": 147,
+          "height": 238
+        },
+        "size_bytes": 110462,
+        "sha256": "1c6f8340fefaf6cfaf1a8ea7c779aa0b0f7f79d7fe60f23e5dc89358c2a075df"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0062.png",
+        "frame": 62,
+        "time_seconds": 2.066666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 160,
+          "top": 91,
+          "right": 302,
+          "bottom": 329,
+          "width": 143,
+          "height": 239
+        },
+        "size_bytes": 110321,
+        "sha256": "f3b66f9f176499f40e5141377e57b6e67abcec77c50e07f03af65a0790316946"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0063.png",
+        "frame": 63,
+        "time_seconds": 2.1,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 159,
+          "top": 91,
+          "right": 298,
+          "bottom": 329,
+          "width": 140,
+          "height": 239
+        },
+        "size_bytes": 109984,
+        "sha256": "7ebd7a5f4e5cc3f49296458caa4615e8276e448b18cef59ee7c57ffc31e6321c"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0064.png",
+        "frame": 64,
+        "time_seconds": 2.1333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 158,
+          "top": 91,
+          "right": 296,
+          "bottom": 329,
+          "width": 139,
+          "height": 239
+        },
+        "size_bytes": 110076,
+        "sha256": "3fc69bd0b3164919bfc8259b0921655cfaff220f46c2d36842014cb19ec3c3a8"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0065.png",
+        "frame": 65,
+        "time_seconds": 2.1666666666666665,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 158,
+          "top": 91,
+          "right": 294,
+          "bottom": 329,
+          "width": 137,
+          "height": 239
+        },
+        "size_bytes": 109992,
+        "sha256": "83f2f70c50be4981e7d2f93fb5ffb4e29d463b850455e9496a7a0a829457cb17"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0066.png",
+        "frame": 66,
+        "time_seconds": 2.2,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 158,
+          "top": 91,
+          "right": 293,
+          "bottom": 329,
+          "width": 136,
+          "height": 239
+        },
+        "size_bytes": 109891,
+        "sha256": "83c09ca08f337e18448ac4753703d07be0465eaf115cc440187d7df649b177ae"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0067.png",
+        "frame": 67,
+        "time_seconds": 2.2333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 158,
+          "top": 91,
+          "right": 293,
+          "bottom": 329,
+          "width": 136,
+          "height": 239
+        },
+        "size_bytes": 109845,
+        "sha256": "8bb47aafa3f92d80a7302323822a721b46c22141d95b482420bf95874cf30055"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0068.png",
+        "frame": 68,
+        "time_seconds": 2.2666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 157,
+          "top": 90,
+          "right": 292,
+          "bottom": 329,
+          "width": 136,
+          "height": 240
+        },
+        "size_bytes": 109828,
+        "sha256": "b6a0c21bf214fd5473b112b88e66b30415d5a40c42b1bc33bfa3c3e8a42e9216"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0069.png",
+        "frame": 69,
+        "time_seconds": 2.3,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 157,
+          "top": 90,
+          "right": 291,
+          "bottom": 328,
+          "width": 135,
+          "height": 239
+        },
+        "size_bytes": 109809,
+        "sha256": "62fc35307f06f1db473548602cd00b290717356747746f754ea5469af523c11b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0070.png",
+        "frame": 70,
+        "time_seconds": 2.3333333333333335,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 156,
+          "top": 90,
+          "right": 290,
+          "bottom": 328,
+          "width": 135,
+          "height": 239
+        },
+        "size_bytes": 110053,
+        "sha256": "c49479de1a4fc97d1519a22a6584b62383b379faa4d0481be10c5c52c6d7b08b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0071.png",
+        "frame": 71,
+        "time_seconds": 2.3666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 155,
+          "top": 89,
+          "right": 288,
+          "bottom": 327,
+          "width": 134,
+          "height": 239
+        },
+        "size_bytes": 109943,
+        "sha256": "c4f5bb855f9258a1715d9edc413210e0291dddb2c90598bd9f6e5a331608d182"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0072.png",
+        "frame": 72,
+        "time_seconds": 2.4,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 154,
+          "top": 89,
+          "right": 286,
+          "bottom": 326,
+          "width": 133,
+          "height": 238
+        },
+        "size_bytes": 109972,
+        "sha256": "01b22387a31f66c4f6f30f63808046d6f8206c836008af5bb9d50bee0ac068e0"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0073.png",
+        "frame": 73,
+        "time_seconds": 2.433333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 153,
+          "top": 88,
+          "right": 283,
+          "bottom": 325,
+          "width": 131,
+          "height": 238
+        },
+        "size_bytes": 110039,
+        "sha256": "05ddefcb0f6372b61a964b0e5a15f19fc63b08fb86cf7fa56c8e0a625a918ade"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0074.png",
+        "frame": 74,
+        "time_seconds": 2.466666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 152,
+          "top": 88,
+          "right": 281,
+          "bottom": 324,
+          "width": 130,
+          "height": 237
+        },
+        "size_bytes": 109974,
+        "sha256": "868490db07e98977153ea71fa47d9beee49e54f3eb1e961e8cfe0cabdcaf101c"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0075.png",
+        "frame": 75,
+        "time_seconds": 2.5,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 151,
+          "top": 87,
+          "right": 279,
+          "bottom": 323,
+          "width": 129,
+          "height": 237
+        },
+        "size_bytes": 109823,
+        "sha256": "8bcd619481794e804fcb26e5feead16b0f820aaf22904344aff961b9767afc6a"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0076.png",
+        "frame": 76,
+        "time_seconds": 2.533333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 150,
+          "top": 87,
+          "right": 276,
+          "bottom": 322,
+          "width": 127,
+          "height": 236
+        },
+        "size_bytes": 109865,
+        "sha256": "a4792e7fd6320cb6e229da4d58a14b58d966aff2d61a726a9f0e7f614b62ace0"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0077.png",
+        "frame": 77,
+        "time_seconds": 2.566666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 149,
+          "top": 87,
+          "right": 274,
+          "bottom": 322,
+          "width": 126,
+          "height": 236
+        },
+        "size_bytes": 109842,
+        "sha256": "a7d52479cdef0c97db6cfe604f3b729d02f9df6db9d64f9fb2b5cdc3c84c6c03"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0078.png",
+        "frame": 78,
+        "time_seconds": 2.6,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 148,
+          "top": 86,
+          "right": 272,
+          "bottom": 321,
+          "width": 125,
+          "height": 236
+        },
+        "size_bytes": 109957,
+        "sha256": "e2475fc06c1f71ce4be81ca5884a74c35f02dfda4eda25969d36e1f24d4e92ad"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0079.png",
+        "frame": 79,
+        "time_seconds": 2.6333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 148,
+          "top": 86,
+          "right": 271,
+          "bottom": 321,
+          "width": 124,
+          "height": 236
+        },
+        "size_bytes": 109913,
+        "sha256": "8c2b393f4a298748049ac2ef9e22d0b08d7837575c3944ae731070990204ba5f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0080.png",
+        "frame": 80,
+        "time_seconds": 2.6666666666666665,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 148,
+          "top": 86,
+          "right": 270,
+          "bottom": 320,
+          "width": 123,
+          "height": 235
+        },
+        "size_bytes": 109913,
+        "sha256": "6d98f0e464d31ab9da02004a952a364693936a0000db08a4331fc05ea4b29446"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0081.png",
+        "frame": 81,
+        "time_seconds": 2.7,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 86,
+          "right": 270,
+          "bottom": 320,
+          "width": 124,
+          "height": 235
+        },
+        "size_bytes": 109732,
+        "sha256": "cc4d7f10ad64da85988e6fd8abe10e02bfb3d32b1d38d9422f52473c0facd86e"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0082.png",
+        "frame": 82,
+        "time_seconds": 2.7333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 86,
+          "right": 270,
+          "bottom": 320,
+          "width": 124,
+          "height": 235
+        },
+        "size_bytes": 109931,
+        "sha256": "12f05b0214ff7d6c8ac498091f00ea637b8677878a5e539a2afef344efc751aa"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0083.png",
+        "frame": 83,
+        "time_seconds": 2.7666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 86,
+          "right": 270,
+          "bottom": 320,
+          "width": 124,
+          "height": 235
+        },
+        "size_bytes": 109705,
+        "sha256": "2b967fdb25fb369a136034fc4636308a74702da1e592c3e588b6b25435f7b296"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0084.png",
+        "frame": 84,
+        "time_seconds": 2.8,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 86,
+          "right": 270,
+          "bottom": 321,
+          "width": 124,
+          "height": 236
+        },
+        "size_bytes": 109759,
+        "sha256": "f8bdebab2e6616b10063fbc580f25a139a061b281d16d7fd276d53a8b1bb9340"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0085.png",
+        "frame": 85,
+        "time_seconds": 2.8333333333333335,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 86,
+          "right": 269,
+          "bottom": 321,
+          "width": 123,
+          "height": 236
+        },
+        "size_bytes": 109686,
+        "sha256": "3593fbae2694f87540dbb530241f715db7b7e7f907ff8abadf022213542f9aa7"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0086.png",
+        "frame": 86,
+        "time_seconds": 2.8666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 86,
+          "right": 269,
+          "bottom": 321,
+          "width": 123,
+          "height": 236
+        },
+        "size_bytes": 109580,
+        "sha256": "8ce73e6f51f38d11aa0f429fccbbb63042fc1fd069f870efafd702bc01ccc39a"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0087.png",
+        "frame": 87,
+        "time_seconds": 2.9,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 86,
+          "right": 269,
+          "bottom": 322,
+          "width": 123,
+          "height": 237
+        },
+        "size_bytes": 109548,
+        "sha256": "329a4ff1048ed289d04f8bc95b0f6139fd624016c35d9a2b30defd345556b86d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0088.png",
+        "frame": 88,
+        "time_seconds": 2.933333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 146,
+          "top": 86,
+          "right": 269,
+          "bottom": 322,
+          "width": 124,
+          "height": 237
+        },
+        "size_bytes": 109322,
+        "sha256": "cdd8c5c0aa9599e4dfc51b8501e62eb39767191dc6869a37f16f0bb1733ec555"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0089.png",
+        "frame": 89,
+        "time_seconds": 2.966666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 146,
+          "top": 86,
+          "right": 269,
+          "bottom": 323,
+          "width": 124,
+          "height": 238
+        },
+        "size_bytes": 109269,
+        "sha256": "abf23c2741078c38d75be8e252702f821b56c8c230b496bd261f1f89e4eb487f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0090.png",
+        "frame": 90,
+        "time_seconds": 3.0,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 146,
+          "top": 86,
+          "right": 268,
+          "bottom": 324,
+          "width": 123,
+          "height": 239
+        },
+        "size_bytes": 109174,
+        "sha256": "99369b1e82b2d76c2ca0a9c06a5b5eaf5fb04aca58d9397a4449d3b0067ec210"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0091.png",
+        "frame": 91,
+        "time_seconds": 3.033333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 146,
+          "top": 85,
+          "right": 268,
+          "bottom": 324,
+          "width": 123,
+          "height": 240
+        },
+        "size_bytes": 109036,
+        "sha256": "540c6a6710af53276a1f86a84a4cad539ccd3df20fadac67a874bcacbe5ab79b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0092.png",
+        "frame": 92,
+        "time_seconds": 3.066666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 268,
+          "bottom": 324,
+          "width": 124,
+          "height": 240
+        },
+        "size_bytes": 108857,
+        "sha256": "53de4caa07a2811aa0ffe4dc9c65fa3f4d64164cf77c9ef49f599f57c0050449"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0093.png",
+        "frame": 93,
+        "time_seconds": 3.1,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 268,
+          "bottom": 325,
+          "width": 124,
+          "height": 241
+        },
+        "size_bytes": 108765,
+        "sha256": "241f3f4efe92042676467a5c0455c56f1a4f504d820d3c738480118eb6d52e04"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0094.png",
+        "frame": 94,
+        "time_seconds": 3.1333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 268,
+          "bottom": 325,
+          "width": 124,
+          "height": 241
+        },
+        "size_bytes": 108942,
+        "sha256": "5d112a1605104b33e6e5c0414f7372bc2c3e1a2d0e12688571468a48b376bd91"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0095.png",
+        "frame": 95,
+        "time_seconds": 3.1666666666666665,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 268,
+          "bottom": 325,
+          "width": 124,
+          "height": 241
+        },
+        "size_bytes": 108816,
+        "sha256": "45a064ab095e4d1d9f81cab644729665a622d34c571029138f389a69727b7d52"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0096.png",
+        "frame": 96,
+        "time_seconds": 3.2,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "df13fc4b3612f8670fd694edd4f2a583f40b9425358f691a77fbbc3f35c137f5"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0097.png",
+        "frame": 97,
+        "time_seconds": 3.2333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "5703cf782263d82ca953ae17048571b93fc0a438bc2f180f5d824a48ec7356f6"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0098.png",
+        "frame": 98,
+        "time_seconds": 3.2666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "9d719dc85a842d8d11b3cbe9d8aebe5e829cab8dcd11585696199331c98e0cb8"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0099.png",
+        "frame": 99,
+        "time_seconds": 3.3,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "73580a618ae141f899fc1f2aab0bb93e15662540554184e0d7a41b45bc2e631d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0100.png",
+        "frame": 100,
+        "time_seconds": 3.3333333333333335,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "931a57b184f5ec8d7a69bdd73b3435fa5bd356bb7c2fd16a2dbc0842a9d6353b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0101.png",
+        "frame": 101,
+        "time_seconds": 3.3666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "2381f082bdaec328159335da50e13abcff16e7005b59db5ebcc5eca2f897ad79"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0102.png",
+        "frame": 102,
+        "time_seconds": 3.4,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "3352be6fa6bdb354181650eac80bd0afda00a65120fe2cb2dd058ae222b7d74c"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0103.png",
+        "frame": 103,
+        "time_seconds": 3.433333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "6b5332b7cf5223def6213b829a77a5a9ff0475ab5d5507ddcad0978fc3ac7832"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0104.png",
+        "frame": 104,
+        "time_seconds": 3.466666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "770ca6abbfa8a1147aeecfaa479182479cafa05cd0f23befc40aa82f65e80442"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0105.png",
+        "frame": 105,
+        "time_seconds": 3.5,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "401255d04627bb88c2a229c4c4726f36fe3ba1c44017db41c2b44f46027a7ca4"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0106.png",
+        "frame": 106,
+        "time_seconds": 3.533333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "b0abd01e78a998f16e303db9c5716031387080e1d4e3e0e05d890d8a85870449"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0107.png",
+        "frame": 107,
+        "time_seconds": 3.566666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "6d637fa0d1e4d1c501a59b18ec58b09dedebcba7f257cba313052bcd63a6d99c"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0108.png",
+        "frame": 108,
+        "time_seconds": 3.6,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "522800635835d2ccc369a6e6f496cd33049d500983336227c4b4bb477f59ac37"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0109.png",
+        "frame": 109,
+        "time_seconds": 3.6333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "9435459f237fa7bdd07cee9f4165bc33658130a653024e0792da59e8943dcf1c"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0110.png",
+        "frame": 110,
+        "time_seconds": 3.6666666666666665,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "b1126a7f29f08a6a80e59e6fbdbb88ca77024268ce708af80d46dc1080d97f54"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0111.png",
+        "frame": 111,
+        "time_seconds": 3.7,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "38c1832ef6e217e82b93f0e856518938deda7d2d0fa42b5bfdd8131052ceaf03"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0112.png",
+        "frame": 112,
+        "time_seconds": 3.7333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "732626fdf2e2a453081d1bc5fc1a618a04c2b69efe199db4b0d6bacff8f0b842"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0113.png",
+        "frame": 113,
+        "time_seconds": 3.7666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "96f89d9349064ff80d257733638fc7f29fe6b84d67de90450ae06cbd56b7ded5"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0114.png",
+        "frame": 114,
+        "time_seconds": 3.8,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "e2d75364a0baab084667df3a9cecfe763304cab88ce301aa02775d40dd11f365"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0115.png",
+        "frame": 115,
+        "time_seconds": 3.8333333333333335,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "196e8b688f0fae6050732027d37a08041c47b67eddc80712d04d615205057d3d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0116.png",
+        "frame": 116,
+        "time_seconds": 3.8666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "b1fc515440260573344ada1e93060f40d30c89dd16fdaa6d471dc5143a4b6b3b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0117.png",
+        "frame": 117,
+        "time_seconds": 3.9,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "40af175e1b6137fc1daef696391b403e6396ce9fd6350090e569b01fc969657b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0118.png",
+        "frame": 118,
+        "time_seconds": 3.933333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "cf9e28713a0a9280a705279ab8b6f1710879a04997b73805d20ca21d5dd5f1af"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/thrust/0119.png",
+        "frame": 119,
+        "time_seconds": 3.966666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "e29c585e8be52e4e3ba23b05b47b272c99125114c6dd8bf17a65fdb7124fde75"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0000.png",
+        "frame": 0,
+        "time_seconds": 0.0,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "521c23c8e1b96ff9b28a06e864ecd69f2b9f7f0519d4abf9fb02b64b94624b8a"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0001.png",
+        "frame": 1,
+        "time_seconds": 0.03333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 266,
+          "bottom": 325,
+          "width": 122,
+          "height": 241
+        },
+        "size_bytes": 108650,
+        "sha256": "56d3ecc650898127627f365e251da07721f787fe5a26aaf000df52d9a4a1de99"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0002.png",
+        "frame": 2,
+        "time_seconds": 0.06666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 263,
+          "bottom": 325,
+          "width": 119,
+          "height": 241
+        },
+        "size_bytes": 108699,
+        "sha256": "07f4ff986091ddf571a7a61602b5a6cac104bd2e8186b7f3e66914d3bcbb0818"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0003.png",
+        "frame": 3,
+        "time_seconds": 0.1,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 144,
+          "top": 85,
+          "right": 257,
+          "bottom": 325,
+          "width": 114,
+          "height": 241
+        },
+        "size_bytes": 108497,
+        "sha256": "128dabe48d12c599e7a3793bc2ee1d7d8e0a2e9f8d0287f70edd7ebe0b8fedc3"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0004.png",
+        "frame": 4,
+        "time_seconds": 0.13333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 144,
+          "top": 85,
+          "right": 250,
+          "bottom": 325,
+          "width": 107,
+          "height": 241
+        },
+        "size_bytes": 108788,
+        "sha256": "ed1dd7638f2f3c05c515e0527df05d5224d82c67b883c7be94b1c787262f7db2"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0005.png",
+        "frame": 5,
+        "time_seconds": 0.16666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 143,
+          "top": 85,
+          "right": 240,
+          "bottom": 326,
+          "width": 98,
+          "height": 242
+        },
+        "size_bytes": 108087,
+        "sha256": "efe046918174ccd72fd2ddc905b1c32a32ae3e0cbc9c1894ef606323a6dbc053"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0006.png",
+        "frame": 6,
+        "time_seconds": 0.2,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 143,
+          "top": 85,
+          "right": 233,
+          "bottom": 326,
+          "width": 91,
+          "height": 242
+        },
+        "size_bytes": 107712,
+        "sha256": "180ed92c5538c5b774e260949b6ce64a8d5573a673ea6b303e80a48dbe006140"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0007.png",
+        "frame": 7,
+        "time_seconds": 0.23333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 142,
+          "top": 84,
+          "right": 233,
+          "bottom": 326,
+          "width": 92,
+          "height": 243
+        },
+        "size_bytes": 107662,
+        "sha256": "4141acc9445ee157c1c2db621e005e4f2104c9a1e3e0f39698b0191a21e698c3"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0008.png",
+        "frame": 8,
+        "time_seconds": 0.26666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 141,
+          "top": 84,
+          "right": 232,
+          "bottom": 326,
+          "width": 92,
+          "height": 243
+        },
+        "size_bytes": 107387,
+        "sha256": "02b83ee6edfa4f50efde3c9c70c70d552d12a6b800653ea4a7014fb331e635f2"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0009.png",
+        "frame": 9,
+        "time_seconds": 0.3,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 141,
+          "top": 84,
+          "right": 232,
+          "bottom": 326,
+          "width": 92,
+          "height": 243
+        },
+        "size_bytes": 107323,
+        "sha256": "4a53fffd7b3cd48ea0d03b845628e060bd8af9852b40c6f5992c9f884034f815"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0010.png",
+        "frame": 10,
+        "time_seconds": 0.3333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 141,
+          "top": 79,
+          "right": 232,
+          "bottom": 326,
+          "width": 92,
+          "height": 248
+        },
+        "size_bytes": 106851,
+        "sha256": "bcc12471fddf6f221c07e22aac958aa694e49ef5dadc7ea6302874878ba0e76b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0011.png",
+        "frame": 11,
+        "time_seconds": 0.36666666666666664,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 141,
+          "top": 74,
+          "right": 231,
+          "bottom": 326,
+          "width": 91,
+          "height": 253
+        },
+        "size_bytes": 106906,
+        "sha256": "066895e0b3a23ca859511b05acbe9a14a9d6badadfa73295ddda4191193d8b31"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0012.png",
+        "frame": 12,
+        "time_seconds": 0.4,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 70,
+          "right": 231,
+          "bottom": 326,
+          "width": 94,
+          "height": 257
+        },
+        "size_bytes": 107076,
+        "sha256": "c245d1381a412ca30fdcb1c850a5c74760789161c353f0dffdf9e18f8745de1a"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0013.png",
+        "frame": 13,
+        "time_seconds": 0.43333333333333335,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 67,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 260
+        },
+        "size_bytes": 107005,
+        "sha256": "6c7a13e4892de79366fae5f2db3600cd0a0c202aaf6d00250e840b8dac467ad0"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0014.png",
+        "frame": 14,
+        "time_seconds": 0.4666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 65,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 262
+        },
+        "size_bytes": 106852,
+        "sha256": "d632b228de7d9d5b19b1470b09fdf140602e71a9de39dc8802c4c1617ea157fa"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0015.png",
+        "frame": 15,
+        "time_seconds": 0.5,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 65,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 262
+        },
+        "size_bytes": 106878,
+        "sha256": "bd236f2f1a37312bbed5f9ce0196fb1dbbe137f145b557a7a5c5cdb328753358"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0016.png",
+        "frame": 16,
+        "time_seconds": 0.5333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 65,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 262
+        },
+        "size_bytes": 106878,
+        "sha256": "bd52d37ac90b47716527eebf0c3adae775ec85f34d266a678fd804fa06dfb591"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0017.png",
+        "frame": 17,
+        "time_seconds": 0.5666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 65,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 262
+        },
+        "size_bytes": 106878,
+        "sha256": "7330c1ac012a561a455667585450e26df35fb012334348b6089ca6802006918f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0018.png",
+        "frame": 18,
+        "time_seconds": 0.6,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 65,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 262
+        },
+        "size_bytes": 106878,
+        "sha256": "fe5e3aece1c7744a6b39571f5e38e60c3cbff70dcff1fe1a1651ebc662cd9675"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0019.png",
+        "frame": 19,
+        "time_seconds": 0.6333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 65,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 262
+        },
+        "size_bytes": 106878,
+        "sha256": "1156a93a7a507e0b138ee3157204d9ac3e3bb20ef36bf6d191f13f27c4d1f86d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0020.png",
+        "frame": 20,
+        "time_seconds": 0.6666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 65,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 262
+        },
+        "size_bytes": 106878,
+        "sha256": "06cb64d921da2895e6ddbfe7b5e84782bbc1c62d2f0b31d22082430e33db18b6"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0021.png",
+        "frame": 21,
+        "time_seconds": 0.7,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 65,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 262
+        },
+        "size_bytes": 106878,
+        "sha256": "79a520487dec024f7fc05d1acd0cd34cdc50fa9d4b7c4b6038b1cb942a56aef1"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0022.png",
+        "frame": 22,
+        "time_seconds": 0.7333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 65,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 262
+        },
+        "size_bytes": 106878,
+        "sha256": "b521fb2791993eab239ec8af93c4683dab77359e40c047fb811d023ddf654092"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0023.png",
+        "frame": 23,
+        "time_seconds": 0.7666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 65,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 262
+        },
+        "size_bytes": 106878,
+        "sha256": "01432c35ae95c2f5829e9ba5827e46d8ee85ad2faf481e93c14d20edff95e7c8"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0024.png",
+        "frame": 24,
+        "time_seconds": 0.8,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 65,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 262
+        },
+        "size_bytes": 106878,
+        "sha256": "45675e3067391d774d72adba7d968115723723f8cad432ccade5c5bab35e91dc"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0025.png",
+        "frame": 25,
+        "time_seconds": 0.8333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 65,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 262
+        },
+        "size_bytes": 106878,
+        "sha256": "9c3bcfdb9b37d7391ac6ea1005fb870cffe8c55c42df21c5cfdd700cc6265560"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0026.png",
+        "frame": 26,
+        "time_seconds": 0.8666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 65,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 262
+        },
+        "size_bytes": 106878,
+        "sha256": "d6aca4351525f1517a64c173118f9c799bf325e5b4c8bc440aac2f1fdcd88377"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0027.png",
+        "frame": 27,
+        "time_seconds": 0.9,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 65,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 262
+        },
+        "size_bytes": 106878,
+        "sha256": "abcfc6590813c7bf35dbe4ed19d5262ce0480b7d0580856bca0508c78db641de"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0028.png",
+        "frame": 28,
+        "time_seconds": 0.9333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 65,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 262
+        },
+        "size_bytes": 106878,
+        "sha256": "f97b9a0024f4703f20eb3ef9f4f050af4f1c404b357a75675d7345588b8b8255"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0029.png",
+        "frame": 29,
+        "time_seconds": 0.9666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 66,
+          "right": 231,
+          "bottom": 326,
+          "width": 95,
+          "height": 261
+        },
+        "size_bytes": 106856,
+        "sha256": "814b6abbc974d42166ae0e8855969a8d4f2f394c1b6ff1a81cbba484a7d690b0"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0030.png",
+        "frame": 30,
+        "time_seconds": 1.0,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 141,
+          "top": 68,
+          "right": 232,
+          "bottom": 326,
+          "width": 92,
+          "height": 259
+        },
+        "size_bytes": 107216,
+        "sha256": "aefc06caaffc7bd8388307274b1c1fc01b5eb31afc6bae33de189b4496435ab7"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0031.png",
+        "frame": 31,
+        "time_seconds": 1.0333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 143,
+          "top": 75,
+          "right": 234,
+          "bottom": 326,
+          "width": 92,
+          "height": 252
+        },
+        "size_bytes": 107581,
+        "sha256": "08fdeb24d041eda8e1bf5923ec4a6cb2fa99a120d2c4b636e1bb8a7d6fc0eb96"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0032.png",
+        "frame": 32,
+        "time_seconds": 1.0666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 87,
+          "right": 235,
+          "bottom": 326,
+          "width": 91,
+          "height": 240
+        },
+        "size_bytes": 108045,
+        "sha256": "fb43147ec58a059c12658d64e3192d89600b84c1679d4061315d696ca3eb8138"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0033.png",
+        "frame": 33,
+        "time_seconds": 1.1,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 149,
+          "top": 88,
+          "right": 266,
+          "bottom": 325,
+          "width": 118,
+          "height": 238
+        },
+        "size_bytes": 109040,
+        "sha256": "a184728af216cc945b76e02790c4e28bf2ea2541583d2835a6319254a8f9f381"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0034.png",
+        "frame": 34,
+        "time_seconds": 1.1333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 152,
+          "top": 90,
+          "right": 289,
+          "bottom": 325,
+          "width": 138,
+          "height": 236
+        },
+        "size_bytes": 109327,
+        "sha256": "ec78c73af795d6115387491a20849aed130839fc4969d41d507bfc24e5a38a48"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0035.png",
+        "frame": 35,
+        "time_seconds": 1.1666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 152,
+          "top": 91,
+          "right": 302,
+          "bottom": 325,
+          "width": 151,
+          "height": 235
+        },
+        "size_bytes": 108958,
+        "sha256": "2148f296782fc3b5e42d5f0f70d29b628efad7564f80c0668510a0d3d2f948cd"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0036.png",
+        "frame": 36,
+        "time_seconds": 1.2,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 151,
+          "top": 91,
+          "right": 306,
+          "bottom": 325,
+          "width": 156,
+          "height": 235
+        },
+        "size_bytes": 108450,
+        "sha256": "a4abf1d144d1505b235664f22406619cc37717c3480dd00207de4e39bf087edc"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0037.png",
+        "frame": 37,
+        "time_seconds": 1.2333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 151,
+          "top": 91,
+          "right": 310,
+          "bottom": 325,
+          "width": 160,
+          "height": 235
+        },
+        "size_bytes": 108209,
+        "sha256": "72f0b907511097ecc2f22ee9f55ccecccf6ee3b52816d73c09e6b95f9620eda7"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0038.png",
+        "frame": 38,
+        "time_seconds": 1.2666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 152,
+          "top": 92,
+          "right": 318,
+          "bottom": 325,
+          "width": 167,
+          "height": 234
+        },
+        "size_bytes": 107617,
+        "sha256": "9677cbe4743f32dbc987801740241fde275d3a9d250870ab58a14a7c17aa6950"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0039.png",
+        "frame": 39,
+        "time_seconds": 1.3,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 152,
+          "top": 93,
+          "right": 327,
+          "bottom": 324,
+          "width": 176,
+          "height": 232
+        },
+        "size_bytes": 107557,
+        "sha256": "da20d8764683f3cea08e291c348a756dbf01f314441b51c78969b18732737e9d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0040.png",
+        "frame": 40,
+        "time_seconds": 1.3333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 154,
+          "top": 95,
+          "right": 332,
+          "bottom": 324,
+          "width": 179,
+          "height": 230
+        },
+        "size_bytes": 106890,
+        "sha256": "0ebae855d2caeab71874d229768837bc012110b8328604030667fdf31b85dca1"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0041.png",
+        "frame": 41,
+        "time_seconds": 1.3666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 155,
+          "top": 96,
+          "right": 330,
+          "bottom": 323,
+          "width": 176,
+          "height": 228
+        },
+        "size_bytes": 105661,
+        "sha256": "5e5a2deb09b4e6b13b38a2f67bae982ff6f7b957dbf6474c4f63eae739a1db93"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0042.png",
+        "frame": 42,
+        "time_seconds": 1.4,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 157,
+          "top": 97,
+          "right": 324,
+          "bottom": 323,
+          "width": 168,
+          "height": 227
+        },
+        "size_bytes": 104761,
+        "sha256": "29f1e668523263f14623562d73243e9866effe548fde01d654c1bf62a2ae9dd9"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0043.png",
+        "frame": 43,
+        "time_seconds": 1.4333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 159,
+          "top": 98,
+          "right": 317,
+          "bottom": 323,
+          "width": 159,
+          "height": 226
+        },
+        "size_bytes": 104390,
+        "sha256": "3f77e18ba9b6ebc3c72856e900d8b7789e42bee33807b3a76d2c10a3a88642d4"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0044.png",
+        "frame": 44,
+        "time_seconds": 1.4666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 160,
+          "top": 98,
+          "right": 312,
+          "bottom": 323,
+          "width": 153,
+          "height": 226
+        },
+        "size_bytes": 104274,
+        "sha256": "db525bec6dd092eb72121634752564dfc3e8633d044c2eca6ac4f375502da352"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0045.png",
+        "frame": 45,
+        "time_seconds": 1.5,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 160,
+          "top": 98,
+          "right": 312,
+          "bottom": 323,
+          "width": 153,
+          "height": 226
+        },
+        "size_bytes": 104140,
+        "sha256": "0ded3e4b5ace04c82f5582aed51b2d6c3c77192d353445fe98667f507ab0ec4a"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0046.png",
+        "frame": 46,
+        "time_seconds": 1.5333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 160,
+          "top": 98,
+          "right": 311,
+          "bottom": 323,
+          "width": 152,
+          "height": 226
+        },
+        "size_bytes": 103898,
+        "sha256": "7025f6f4f95badffb97ee6e17768b1f468d80c15f76019a98f05781ab6f7d03b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0047.png",
+        "frame": 47,
+        "time_seconds": 1.5666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 160,
+          "top": 98,
+          "right": 309,
+          "bottom": 323,
+          "width": 150,
+          "height": 226
+        },
+        "size_bytes": 103615,
+        "sha256": "e9b46b570695fefe2a9b00aaf3ba2e8593bb0a3c4b303df8aecc4b53e70be3b2"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0048.png",
+        "frame": 48,
+        "time_seconds": 1.6,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 98,
+          "right": 307,
+          "bottom": 323,
+          "width": 147,
+          "height": 226
+        },
+        "size_bytes": 103671,
+        "sha256": "e80d933f36f4fafb09bc43c84cc0077b6d3181e52372eaec3a46d8c661efc853"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0049.png",
+        "frame": 49,
+        "time_seconds": 1.6333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 98,
+          "right": 305,
+          "bottom": 323,
+          "width": 145,
+          "height": 226
+        },
+        "size_bytes": 103483,
+        "sha256": "3cdd2b86e0c1f0dadb8f47e93ed38aa8f5c12c3cbd07eb93ea71117440db8757"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0050.png",
+        "frame": 50,
+        "time_seconds": 1.6666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 97,
+          "right": 303,
+          "bottom": 323,
+          "width": 143,
+          "height": 227
+        },
+        "size_bytes": 104357,
+        "sha256": "2ba04248b727313866f18a2ec99f57922f9268881f2b1f1ff95fd24d9b8e8e06"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0051.png",
+        "frame": 51,
+        "time_seconds": 1.7,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 159,
+          "top": 97,
+          "right": 301,
+          "bottom": 323,
+          "width": 143,
+          "height": 227
+        },
+        "size_bytes": 104498,
+        "sha256": "9dd0350f645c63bedf7fdf7807a35ea97b5f4d5efe47260aeb4754f415b914a2"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0052.png",
+        "frame": 52,
+        "time_seconds": 1.7333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 158,
+          "top": 97,
+          "right": 299,
+          "bottom": 323,
+          "width": 142,
+          "height": 227
+        },
+        "size_bytes": 104705,
+        "sha256": "81a9b430440682cbf1b9ebfac4f6490bfc9125a17a8370400c317106fc536196"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0053.png",
+        "frame": 53,
+        "time_seconds": 1.7666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 159,
+          "top": 97,
+          "right": 297,
+          "bottom": 323,
+          "width": 139,
+          "height": 227
+        },
+        "size_bytes": 104672,
+        "sha256": "63bbfa2f3a4a5d3739ff283ca4e678b169d1ca42c7f946decd0d75121ac18348"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0054.png",
+        "frame": 54,
+        "time_seconds": 1.8,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 160,
+          "top": 97,
+          "right": 297,
+          "bottom": 323,
+          "width": 138,
+          "height": 227
+        },
+        "size_bytes": 104480,
+        "sha256": "56313c80830364feff8246493a7bd0a31d0f43c545f2a4d1dd39e844d5823d80"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0055.png",
+        "frame": 55,
+        "time_seconds": 1.8333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 160,
+          "top": 97,
+          "right": 297,
+          "bottom": 323,
+          "width": 138,
+          "height": 227
+        },
+        "size_bytes": 104526,
+        "sha256": "8512d2aa0c2c5da97fd99b46a3be8b19d28334dab5e6ab3256a6a899ebcbadf1"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0056.png",
+        "frame": 56,
+        "time_seconds": 1.8666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 160,
+          "top": 96,
+          "right": 298,
+          "bottom": 323,
+          "width": 139,
+          "height": 228
+        },
+        "size_bytes": 104642,
+        "sha256": "fb4d3aa68e10c5de33213c107d877211cf826fd30da855641f073dd2f274f20a"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0057.png",
+        "frame": 57,
+        "time_seconds": 1.9,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 159,
+          "top": 96,
+          "right": 300,
+          "bottom": 323,
+          "width": 142,
+          "height": 228
+        },
+        "size_bytes": 104858,
+        "sha256": "c237f24f616822ae45065b93c984403925855f6f3da082d2583e0ad36c9b14d5"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0058.png",
+        "frame": 58,
+        "time_seconds": 1.9333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 159,
+          "top": 95,
+          "right": 303,
+          "bottom": 323,
+          "width": 145,
+          "height": 229
+        },
+        "size_bytes": 104806,
+        "sha256": "6f26addeafaa48d40246784347f31be4ba3c060919583ef68c2e0afc50af1ca9"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0059.png",
+        "frame": 59,
+        "time_seconds": 1.9666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 158,
+          "top": 95,
+          "right": 307,
+          "bottom": 323,
+          "width": 150,
+          "height": 229
+        },
+        "size_bytes": 105088,
+        "sha256": "cfe55f8359af6bb941005422a0f59f8b8e8de3df4f1e70ec2d535ddf6d4ff8ba"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0060.png",
+        "frame": 60,
+        "time_seconds": 2.0,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 156,
+          "top": 94,
+          "right": 311,
+          "bottom": 323,
+          "width": 156,
+          "height": 230
+        },
+        "size_bytes": 104994,
+        "sha256": "a593a1e313493872931bc82537a1aaadad50f4a21290f5a06055c856e7abc4a1"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0061.png",
+        "frame": 61,
+        "time_seconds": 2.033333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 155,
+          "top": 93,
+          "right": 314,
+          "bottom": 323,
+          "width": 160,
+          "height": 231
+        },
+        "size_bytes": 105005,
+        "sha256": "1ae90e3195ee0b7b53d451724d5ce8b473131d06b150ab007c9f69459cd44826"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0062.png",
+        "frame": 62,
+        "time_seconds": 2.066666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 153,
+          "top": 92,
+          "right": 316,
+          "bottom": 323,
+          "width": 164,
+          "height": 232
+        },
+        "size_bytes": 105767,
+        "sha256": "d307cb788fb0ee8f463ff74c225f06cfa03d699e52b6e4231d9092f87ee946c5"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0063.png",
+        "frame": 63,
+        "time_seconds": 2.1,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 152,
+          "top": 91,
+          "right": 317,
+          "bottom": 323,
+          "width": 166,
+          "height": 233
+        },
+        "size_bytes": 105557,
+        "sha256": "d10d0a7ce95759b49b9729cb330d6b44094ab7ea2553f6af9b7049cb5a38b586"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0064.png",
+        "frame": 64,
+        "time_seconds": 2.1333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 151,
+          "top": 91,
+          "right": 315,
+          "bottom": 323,
+          "width": 165,
+          "height": 233
+        },
+        "size_bytes": 105867,
+        "sha256": "98102467d53336d0c0c738826a0e86f4839ab7ee897a7cf1f9722690fbc90f9a"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0065.png",
+        "frame": 65,
+        "time_seconds": 2.1666666666666665,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 150,
+          "top": 90,
+          "right": 313,
+          "bottom": 323,
+          "width": 164,
+          "height": 234
+        },
+        "size_bytes": 106255,
+        "sha256": "ab765bfa330afc93993ec3424182d20d7e7a744d78a926caa368f65cd3d7ec8f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0066.png",
+        "frame": 66,
+        "time_seconds": 2.2,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 149,
+          "top": 89,
+          "right": 310,
+          "bottom": 323,
+          "width": 162,
+          "height": 235
+        },
+        "size_bytes": 106735,
+        "sha256": "2072951462097a79d180a655357a11f08e60d226575ac5e364a47ffd4d917790"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0067.png",
+        "frame": 67,
+        "time_seconds": 2.2333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 148,
+          "top": 89,
+          "right": 307,
+          "bottom": 323,
+          "width": 160,
+          "height": 235
+        },
+        "size_bytes": 106781,
+        "sha256": "0b1a04abd8e552f49f14c6e44bb8b2584453b177ba035d7bcb22c559e858e641"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0068.png",
+        "frame": 68,
+        "time_seconds": 2.2666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 88,
+          "right": 305,
+          "bottom": 324,
+          "width": 159,
+          "height": 237
+        },
+        "size_bytes": 106964,
+        "sha256": "a7ec1c1ef40a2cc4c09d0e0df446a6664c2e6a21482c34d50e877a218e07b029"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0069.png",
+        "frame": 69,
+        "time_seconds": 2.3,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 88,
+          "right": 304,
+          "bottom": 324,
+          "width": 158,
+          "height": 237
+        },
+        "size_bytes": 107109,
+        "sha256": "38e8d5588e050cf8cbef4a8b71dd522c5af30088366843bc841c7f31c2f459e9"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0070.png",
+        "frame": 70,
+        "time_seconds": 2.3333333333333335,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 88,
+          "right": 304,
+          "bottom": 324,
+          "width": 158,
+          "height": 237
+        },
+        "size_bytes": 106845,
+        "sha256": "23b07140a0b36f8fe39c152f01803b97fedc07bd1e9cb8df963853caeb2dea44"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0071.png",
+        "frame": 71,
+        "time_seconds": 2.3666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 88,
+          "right": 304,
+          "bottom": 324,
+          "width": 158,
+          "height": 237
+        },
+        "size_bytes": 107067,
+        "sha256": "6e22bfb0ec8b603cdf3f396facfd0a515cb34809fa221f8811c1881a39f8880c"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0072.png",
+        "frame": 72,
+        "time_seconds": 2.4,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 88,
+          "right": 304,
+          "bottom": 324,
+          "width": 158,
+          "height": 237
+        },
+        "size_bytes": 106995,
+        "sha256": "0d43ff095662c06e7dc08312b2e33f8a5b0601347667b3a1d4bb1d4621fe9178"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0073.png",
+        "frame": 73,
+        "time_seconds": 2.433333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 88,
+          "right": 304,
+          "bottom": 324,
+          "width": 158,
+          "height": 237
+        },
+        "size_bytes": 106929,
+        "sha256": "c2c542878b1be1bae402e70e956fc9f456e2728f217088a7ca89e9ad62873d67"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0074.png",
+        "frame": 74,
+        "time_seconds": 2.466666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 88,
+          "right": 303,
+          "bottom": 324,
+          "width": 157,
+          "height": 237
+        },
+        "size_bytes": 107392,
+        "sha256": "53b9977d09606316212ec13af42a5339893a5033e7ce695b83fd0480d6c443c3"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0075.png",
+        "frame": 75,
+        "time_seconds": 2.5,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 88,
+          "right": 303,
+          "bottom": 324,
+          "width": 157,
+          "height": 237
+        },
+        "size_bytes": 107548,
+        "sha256": "32505b4d8d2286d47554c2bed3ff5540f95335e35da2d4c70542950d378db2da"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0076.png",
+        "frame": 76,
+        "time_seconds": 2.533333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 88,
+          "right": 302,
+          "bottom": 324,
+          "width": 156,
+          "height": 237
+        },
+        "size_bytes": 107772,
+        "sha256": "d00954ee3cce451ba761d1dbbf2e7d7f6b3f79c6c425d89650b9843db41e82c9"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0077.png",
+        "frame": 77,
+        "time_seconds": 2.566666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 87,
+          "right": 301,
+          "bottom": 324,
+          "width": 155,
+          "height": 238
+        },
+        "size_bytes": 107813,
+        "sha256": "0e04808977b92a415e11d8b31ca3a992255f3e1683964fc10d534e31f45ea425"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0078.png",
+        "frame": 78,
+        "time_seconds": 2.6,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 87,
+          "right": 300,
+          "bottom": 324,
+          "width": 154,
+          "height": 238
+        },
+        "size_bytes": 107833,
+        "sha256": "635cee9cc170e9c3ae9a872dce22aec832250a5460dfe8b2fb85f5573f66ff2a"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0079.png",
+        "frame": 79,
+        "time_seconds": 2.6333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 87,
+          "right": 299,
+          "bottom": 324,
+          "width": 153,
+          "height": 238
+        },
+        "size_bytes": 108214,
+        "sha256": "e4b41e8519eafad3c66239631e6a06df1cae01fbd68137ca93cb01298ebb52be"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0080.png",
+        "frame": 80,
+        "time_seconds": 2.6666666666666665,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 87,
+          "right": 297,
+          "bottom": 324,
+          "width": 151,
+          "height": 238
+        },
+        "size_bytes": 108227,
+        "sha256": "1fc597815cd4219d1f088cb097bbe47266effca9619761cb78b3eb26ebc6ef93"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0081.png",
+        "frame": 81,
+        "time_seconds": 2.7,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 87,
+          "right": 295,
+          "bottom": 324,
+          "width": 149,
+          "height": 238
+        },
+        "size_bytes": 108515,
+        "sha256": "491c9f943cadc70e4c03a39f862442fd4472c1ed05f3052083c9cc77e82daaca"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0082.png",
+        "frame": 82,
+        "time_seconds": 2.7333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 87,
+          "right": 293,
+          "bottom": 324,
+          "width": 147,
+          "height": 238
+        },
+        "size_bytes": 108556,
+        "sha256": "aef8518691180115e7430107e4a3fa90279169423788371c878190afb76c4386"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0083.png",
+        "frame": 83,
+        "time_seconds": 2.7666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 87,
+          "right": 290,
+          "bottom": 325,
+          "width": 144,
+          "height": 239
+        },
+        "size_bytes": 108906,
+        "sha256": "661f46262611a32245fb7da5bb7d73f9cc9bf6251125fc4fcbc1ea49e6f22957"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0084.png",
+        "frame": 84,
+        "time_seconds": 2.8,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 86,
+          "right": 288,
+          "bottom": 325,
+          "width": 142,
+          "height": 240
+        },
+        "size_bytes": 109036,
+        "sha256": "0a02e2ee7f9cf561b54314010af05e068b5cd252ffed4335f93b452852c85211"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0085.png",
+        "frame": 85,
+        "time_seconds": 2.8333333333333335,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 146,
+          "top": 86,
+          "right": 285,
+          "bottom": 325,
+          "width": 140,
+          "height": 240
+        },
+        "size_bytes": 108965,
+        "sha256": "7125cd963bbd5e3aea90dcbe701f5b0c40d347ba6cfc98a6154a29077d5003cd"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0086.png",
+        "frame": 86,
+        "time_seconds": 2.8666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 146,
+          "top": 86,
+          "right": 282,
+          "bottom": 325,
+          "width": 137,
+          "height": 240
+        },
+        "size_bytes": 109020,
+        "sha256": "d157ac61469ecf96cc40bab4a784aa70fdbf8037165eecca1d9faad026f9eed4"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0087.png",
+        "frame": 87,
+        "time_seconds": 2.9,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 146,
+          "top": 86,
+          "right": 280,
+          "bottom": 325,
+          "width": 135,
+          "height": 240
+        },
+        "size_bytes": 108805,
+        "sha256": "b80b274ee472134494daabc7f0633eddd3cb0264b71264e5a3a4de92cd53ec5a"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0088.png",
+        "frame": 88,
+        "time_seconds": 2.933333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 146,
+          "top": 86,
+          "right": 277,
+          "bottom": 325,
+          "width": 132,
+          "height": 240
+        },
+        "size_bytes": 109029,
+        "sha256": "62e131d363c3aebbcbdb61e887119b5c4c01782c60810abcd3f0fb25fe57eb3b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0089.png",
+        "frame": 89,
+        "time_seconds": 2.966666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 86,
+          "right": 275,
+          "bottom": 325,
+          "width": 131,
+          "height": 240
+        },
+        "size_bytes": 108820,
+        "sha256": "261c5e0a9b87f788a7caa2d8d8bfb823a03feb0baceaf1ca0cca482949decf61"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0090.png",
+        "frame": 90,
+        "time_seconds": 3.0,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 86,
+          "right": 273,
+          "bottom": 325,
+          "width": 129,
+          "height": 240
+        },
+        "size_bytes": 108818,
+        "sha256": "830d7024d5c0b7040ef8def67e44674889cad338ee24c77da4208a485bc37e51"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0091.png",
+        "frame": 91,
+        "time_seconds": 3.033333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 86,
+          "right": 271,
+          "bottom": 325,
+          "width": 127,
+          "height": 240
+        },
+        "size_bytes": 108724,
+        "sha256": "6db0e8756ffa640ccbdebcd457030f3e6ca248a1a2d5590f3f3d3a1782ad67a7"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0092.png",
+        "frame": 92,
+        "time_seconds": 3.066666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 269,
+          "bottom": 325,
+          "width": 125,
+          "height": 241
+        },
+        "size_bytes": 108710,
+        "sha256": "f4543e1b9e1dc9bd910cdd8ccd2f04d5ffb13a3f8125be0b2ec799509210fed0"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0093.png",
+        "frame": 93,
+        "time_seconds": 3.1,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 268,
+          "bottom": 325,
+          "width": 124,
+          "height": 241
+        },
+        "size_bytes": 108582,
+        "sha256": "46e589c691ed2c978e0a43d3e77ec048de2d39ddf8a7cae8e4b617dfa8a887f5"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0094.png",
+        "frame": 94,
+        "time_seconds": 3.1333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 268,
+          "bottom": 325,
+          "width": 124,
+          "height": 241
+        },
+        "size_bytes": 108770,
+        "sha256": "df3d6d85e6125be1a32640e53168ff162e14ee230d7f868bd770c28fd9bcfa2c"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0095.png",
+        "frame": 95,
+        "time_seconds": 3.1666666666666665,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "676116d5b37baa459a9c6204e3ab0cfca6ccdb3008b58623d868b141c0055b09"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0096.png",
+        "frame": 96,
+        "time_seconds": 3.2,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "e547dda83e95197331d820028b03ed47a10da1b176829ef4f5a97224f80226d0"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0097.png",
+        "frame": 97,
+        "time_seconds": 3.2333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "71ec3c237c8bcecaaff2f1282e631271e02ab51e86e24f2c9667859897d92f6f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0098.png",
+        "frame": 98,
+        "time_seconds": 3.2666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "01f0158d8bfc91b53071609479651fb27096eac9d498d0f6979cd05c13ed64c7"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0099.png",
+        "frame": 99,
+        "time_seconds": 3.3,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "1caa6e6ba89ee79c4d656cf3c78208cb0fd179968835eac95803b7252c683e87"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0100.png",
+        "frame": 100,
+        "time_seconds": 3.3333333333333335,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "c8d459c19f908aa57bc0e7db893161373deb8f597ef09f5e8ed3a6a028482318"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0101.png",
+        "frame": 101,
+        "time_seconds": 3.3666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "79eb2b369a17dabfaf6d5c16719debe84c57a9f4d44cc0e56cdfe4c2edcf1ee9"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0102.png",
+        "frame": 102,
+        "time_seconds": 3.4,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "9025e5b832397296c27360f6b17725f6008647fca7dfc9dc2aff3bf6ecefa979"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0103.png",
+        "frame": 103,
+        "time_seconds": 3.433333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "3f6e92d620b68aed47b36af3f306038e4d4aa82916c722d4143907e6db04901b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0104.png",
+        "frame": 104,
+        "time_seconds": 3.466666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "78ce5f710624437dc8647c4906d8ccd66429e1e141c3be9e28e9cf6a9d96e010"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0105.png",
+        "frame": 105,
+        "time_seconds": 3.5,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "461475c2f2c86fd974e437e895b530c83dab796d67c2f2158bcd8e57ec526928"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0106.png",
+        "frame": 106,
+        "time_seconds": 3.533333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "cce77c4fd74c891cef80ebb47ad056aaf48cd2b628fdef14f72e5cf626fb1cfd"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0107.png",
+        "frame": 107,
+        "time_seconds": 3.566666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "02d270da15ea3e1c1adaeac0144c7878e7605119ff6f687d1816fc1c2c88bd8b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0108.png",
+        "frame": 108,
+        "time_seconds": 3.6,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "239e5732e4a7d8b969ec6b2c0131d98901c53da714c6eb9b1cc52a3ada252bcc"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0109.png",
+        "frame": 109,
+        "time_seconds": 3.6333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "9d2dff37ce1bf9791c950c45c58fff81f279a76915bc40342483ccc5d64c7d7a"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0110.png",
+        "frame": 110,
+        "time_seconds": 3.6666666666666665,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "ffc2e41a45c3948109da4bf2a4b6462ac13ed74b03046fa9e5166f987392695b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0111.png",
+        "frame": 111,
+        "time_seconds": 3.7,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "94354957734c792dba91e98dfb72965c21466e0afe20e3cfa46757b72db74588"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0112.png",
+        "frame": 112,
+        "time_seconds": 3.7333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "ee679429e4e69b50efe6594654e44ad64877d909b9c30b7a4c2f542ba1111bc4"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0113.png",
+        "frame": 113,
+        "time_seconds": 3.7666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "21996dcb0ee4f4e417674426a649b20dc26b86fe5808cc7d2ea5269fdd0ecca4"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0114.png",
+        "frame": 114,
+        "time_seconds": 3.8,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "64e0895eb01351f4b00c4a1432ef41e68c1bf7ea0c084cbff5b42e5331b2ac85"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0115.png",
+        "frame": 115,
+        "time_seconds": 3.8333333333333335,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "08a435d7a8972825727fe3261257df35f030f8e702574d8981b7044a7bf82435"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0116.png",
+        "frame": 116,
+        "time_seconds": 3.8666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "21bae0d842cbd3fd57b17eaa1c535e98a05429c7a9df2580aee2dbea79104315"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0117.png",
+        "frame": 117,
+        "time_seconds": 3.9,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "0a2e3e77d419f3718e74761cc611002896a5e57fb40fa5874ff36d32d525d418"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0118.png",
+        "frame": 118,
+        "time_seconds": 3.933333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "c0a46941c749fe5b6da76a4f97ebc2683cdbdef3ce147184b2d7cb7cfcb8906a"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/cut/0119.png",
+        "frame": 119,
+        "time_seconds": 3.966666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 145,
+          "top": 85,
+          "right": 267,
+          "bottom": 325,
+          "width": 123,
+          "height": 241
+        },
+        "size_bytes": 108670,
+        "sha256": "1d79f397df12214ea74bfbcf82036c0cbfb3c60348077e722d334bd1b29f5a59"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0000.png",
+        "frame": 0,
+        "time_seconds": 0.0,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "e379d7be7d5483b3d71f361e7926da7485fa1430c26daae6fc36dc800a78dac0"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0001.png",
+        "frame": 1,
+        "time_seconds": 0.03333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 318,
+          "bottom": 325,
+          "width": 179,
+          "height": 241
+        },
+        "size_bytes": 109417,
+        "sha256": "30ff87c7d2058a7608d1f4843eeaca8235dd1ed9b34a3617067fd622e5162103"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0002.png",
+        "frame": 2,
+        "time_seconds": 0.06666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 139,
+          "top": 85,
+          "right": 316,
+          "bottom": 325,
+          "width": 178,
+          "height": 241
+        },
+        "size_bytes": 109278,
+        "sha256": "03a9c266e983ee6e9dcc33247820c2575dc898e64f9411acb5c99c8fc8165364"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0003.png",
+        "frame": 3,
+        "time_seconds": 0.1,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 139,
+          "top": 85,
+          "right": 312,
+          "bottom": 325,
+          "width": 174,
+          "height": 241
+        },
+        "size_bytes": 109094,
+        "sha256": "2bb4cb3b817f4c92a5fe3e84ce6187e1c752ac113528b2e3c3bf2791ae334fd6"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0004.png",
+        "frame": 4,
+        "time_seconds": 0.13333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 85,
+          "right": 308,
+          "bottom": 325,
+          "width": 171,
+          "height": 241
+        },
+        "size_bytes": 108873,
+        "sha256": "5b7c57676ef1796ec81279609497ee5cc88ae6d61c849fa2d57891770e7460e0"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0005.png",
+        "frame": 5,
+        "time_seconds": 0.16666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 85,
+          "right": 303,
+          "bottom": 326,
+          "width": 166,
+          "height": 242
+        },
+        "size_bytes": 108469,
+        "sha256": "f45156d784bb2b19d99e85abe7eb1676a8173e6b01a63ef2aff66509b4259716"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0006.png",
+        "frame": 6,
+        "time_seconds": 0.2,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 84,
+          "right": 298,
+          "bottom": 326,
+          "width": 162,
+          "height": 243
+        },
+        "size_bytes": 108271,
+        "sha256": "48659b206b2faaccdbc1b81dd95b499f34efdf116425a9d95fab28465f95c89c"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0007.png",
+        "frame": 7,
+        "time_seconds": 0.23333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 84,
+          "right": 292,
+          "bottom": 326,
+          "width": 156,
+          "height": 243
+        },
+        "size_bytes": 107958,
+        "sha256": "9d5a6078952e71dd732335b7d93cae1861972f718ff3388a0f851cc29d18a373"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0008.png",
+        "frame": 8,
+        "time_seconds": 0.26666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 84,
+          "right": 286,
+          "bottom": 326,
+          "width": 150,
+          "height": 243
+        },
+        "size_bytes": 107759,
+        "sha256": "a84cabed2c86d31d67d9c46904888017a07b7bca25930eb3221a23a2c69c9013"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0009.png",
+        "frame": 9,
+        "time_seconds": 0.3,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 84,
+          "right": 281,
+          "bottom": 326,
+          "width": 145,
+          "height": 243
+        },
+        "size_bytes": 107540,
+        "sha256": "5bd49040f6995764b6c1f8311857be9bc0b1bfdcc5949fbf14c5779c424bfb93"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0010.png",
+        "frame": 10,
+        "time_seconds": 0.3333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 83,
+          "right": 276,
+          "bottom": 326,
+          "width": 140,
+          "height": 244
+        },
+        "size_bytes": 107332,
+        "sha256": "507ecf253c30eac135c48f695b8e6f3ca839cdf4bd0718971cb9adfa40198f2b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0011.png",
+        "frame": 11,
+        "time_seconds": 0.36666666666666664,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 83,
+          "right": 272,
+          "bottom": 326,
+          "width": 136,
+          "height": 244
+        },
+        "size_bytes": 107205,
+        "sha256": "e8d13e69983d82fd331f04b733ebf2dac1436ddc101a3651e95dfd36b763f9f3"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0012.png",
+        "frame": 12,
+        "time_seconds": 0.4,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 137,
+          "top": 83,
+          "right": 269,
+          "bottom": 326,
+          "width": 133,
+          "height": 244
+        },
+        "size_bytes": 107374,
+        "sha256": "072a7e81487006339d17085ccd1cf0e6d5c6405d6c55c9a6298345944564c3a9"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0013.png",
+        "frame": 13,
+        "time_seconds": 0.43333333333333335,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 83,
+          "right": 267,
+          "bottom": 326,
+          "width": 130,
+          "height": 244
+        },
+        "size_bytes": 106913,
+        "sha256": "e1ce8475d4e0f5b5936646b6055ec7c9fb014a1b389cf2f5cedc9a81cb9d771d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0014.png",
+        "frame": 14,
+        "time_seconds": 0.4666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 83,
+          "right": 267,
+          "bottom": 326,
+          "width": 130,
+          "height": 244
+        },
+        "size_bytes": 107105,
+        "sha256": "c4e188f4aca0adcf954899b6832c89efcc24df68e77a3e006702803d2ad0dc05"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0015.png",
+        "frame": 15,
+        "time_seconds": 0.5,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 83,
+          "right": 267,
+          "bottom": 326,
+          "width": 130,
+          "height": 244
+        },
+        "size_bytes": 107105,
+        "sha256": "15346a7f1f10a9156a595c7bb8b5b75fcb6ca6415ca5281c395373e8b205fcef"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0016.png",
+        "frame": 16,
+        "time_seconds": 0.5333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 83,
+          "right": 267,
+          "bottom": 326,
+          "width": 130,
+          "height": 244
+        },
+        "size_bytes": 107105,
+        "sha256": "b59d449bd6c65a806f599c8bd042a25e1df11179461eb57cd1f6edb2eedc29e8"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0017.png",
+        "frame": 17,
+        "time_seconds": 0.5666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 83,
+          "right": 267,
+          "bottom": 326,
+          "width": 130,
+          "height": 244
+        },
+        "size_bytes": 107105,
+        "sha256": "88a74e185a1f16300ce4d83888a8194c2dfa9021fdb2574ce2bddf3da74c467d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0018.png",
+        "frame": 18,
+        "time_seconds": 0.6,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 83,
+          "right": 267,
+          "bottom": 326,
+          "width": 130,
+          "height": 244
+        },
+        "size_bytes": 107105,
+        "sha256": "408b4114b642c10d362af8e593b2f3060d2c5c8c56062a21e481cdfaec901393"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0019.png",
+        "frame": 19,
+        "time_seconds": 0.6333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 83,
+          "right": 267,
+          "bottom": 326,
+          "width": 130,
+          "height": 244
+        },
+        "size_bytes": 107105,
+        "sha256": "6193efadcdf9b0d10010b9e34a4c57dec4e65125c381d44ef276f80d8cac1d03"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0020.png",
+        "frame": 20,
+        "time_seconds": 0.6666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 83,
+          "right": 267,
+          "bottom": 326,
+          "width": 130,
+          "height": 244
+        },
+        "size_bytes": 107105,
+        "sha256": "18db131506b2cb3ad595a25a0437cdef07f04a8e8feea09c208269d445bdcc2d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0021.png",
+        "frame": 21,
+        "time_seconds": 0.7,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 83,
+          "right": 267,
+          "bottom": 326,
+          "width": 130,
+          "height": 244
+        },
+        "size_bytes": 107105,
+        "sha256": "58bd32d55f5e1bbc2e110abbf86d69fcd82df62d0f9e22cf350c51f54575243b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0022.png",
+        "frame": 22,
+        "time_seconds": 0.7333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 83,
+          "right": 267,
+          "bottom": 326,
+          "width": 130,
+          "height": 244
+        },
+        "size_bytes": 107105,
+        "sha256": "d3ca408cab9b8e508c1645b4ad360c24572a72ac0b70ba00559831c2541d02c3"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0023.png",
+        "frame": 23,
+        "time_seconds": 0.7666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 83,
+          "right": 267,
+          "bottom": 326,
+          "width": 130,
+          "height": 244
+        },
+        "size_bytes": 107105,
+        "sha256": "a92a873ac2522cf95674b1dbc8ae1092bc3dd9382e7c6203c97cf10d2348beab"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0024.png",
+        "frame": 24,
+        "time_seconds": 0.8,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 83,
+          "right": 267,
+          "bottom": 326,
+          "width": 130,
+          "height": 244
+        },
+        "size_bytes": 107105,
+        "sha256": "e98e1fb33fc92c6397588e305bf0a6260d9bcad695f9adc955cb9d4c66a5fd58"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0025.png",
+        "frame": 25,
+        "time_seconds": 0.8333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 83,
+          "right": 267,
+          "bottom": 326,
+          "width": 130,
+          "height": 244
+        },
+        "size_bytes": 107105,
+        "sha256": "136590190d6d11ef1f3d514d73718258e6d56b4ca6f5fa2bb73066532dd01b6f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0026.png",
+        "frame": 26,
+        "time_seconds": 0.8666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 138,
+          "top": 83,
+          "right": 269,
+          "bottom": 326,
+          "width": 132,
+          "height": 244
+        },
+        "size_bytes": 107304,
+        "sha256": "c89a475352e6c543f7f679d6d3793e4d3d87462f01c2de47e4a461066dbf3103"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0027.png",
+        "frame": 27,
+        "time_seconds": 0.9,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 139,
+          "top": 83,
+          "right": 279,
+          "bottom": 324,
+          "width": 141,
+          "height": 242
+        },
+        "size_bytes": 107799,
+        "sha256": "e80607f69274bd2c3b0c1c797c8832e19767d115cdd9b020667139cb3bec3c37"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0028.png",
+        "frame": 28,
+        "time_seconds": 0.9333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 141,
+          "top": 84,
+          "right": 293,
+          "bottom": 322,
+          "width": 153,
+          "height": 239
+        },
+        "size_bytes": 108640,
+        "sha256": "a0db46b3754d3e26d258a26cd4e94a793ccb9dcea3dc9d2551a7f8f31ffadae2"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0029.png",
+        "frame": 29,
+        "time_seconds": 0.9666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 144,
+          "top": 85,
+          "right": 305,
+          "bottom": 319,
+          "width": 162,
+          "height": 235
+        },
+        "size_bytes": 110416,
+        "sha256": "7344fdbb4e93598e0e3a76aa66135ef3cf261b0ba08b2fd3cb46f55c4d5f21b5"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0030.png",
+        "frame": 30,
+        "time_seconds": 1.0,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 146,
+          "top": 85,
+          "right": 310,
+          "bottom": 318,
+          "width": 165,
+          "height": 234
+        },
+        "size_bytes": 110857,
+        "sha256": "7b8c181f152f8a7bb2144cc79a3367968249eb55de5270ab59613506ecc03141"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0031.png",
+        "frame": 31,
+        "time_seconds": 1.0333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 146,
+          "top": 85,
+          "right": 312,
+          "bottom": 319,
+          "width": 167,
+          "height": 235
+        },
+        "size_bytes": 111204,
+        "sha256": "8ff4a83591fec3dc404ee6a0d9191edd4e91e7e8a72c882f043664cdf61f7e71"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0032.png",
+        "frame": 32,
+        "time_seconds": 1.0666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 147,
+          "top": 86,
+          "right": 317,
+          "bottom": 319,
+          "width": 171,
+          "height": 234
+        },
+        "size_bytes": 111137,
+        "sha256": "bb0b6539551a366e9ff5580e7a987db739c233ecc159cbd7036d0e28d0c26008"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0033.png",
+        "frame": 33,
+        "time_seconds": 1.1,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 148,
+          "top": 87,
+          "right": 324,
+          "bottom": 320,
+          "width": 177,
+          "height": 234
+        },
+        "size_bytes": 111478,
+        "sha256": "3f1b2c8d155ce2d9f5089e9d38cab912e49492790a6948099a62dbb41ca5e7a4"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0034.png",
+        "frame": 34,
+        "time_seconds": 1.1333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 151,
+          "top": 88,
+          "right": 333,
+          "bottom": 321,
+          "width": 183,
+          "height": 234
+        },
+        "size_bytes": 111811,
+        "sha256": "7c897e3890aab2b6c6f1981757287acc5ae207c34de035be43b018508cba6025"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0035.png",
+        "frame": 35,
+        "time_seconds": 1.1666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 153,
+          "top": 89,
+          "right": 342,
+          "bottom": 322,
+          "width": 190,
+          "height": 234
+        },
+        "size_bytes": 112192,
+        "sha256": "a85f980e3fc173e57115b2a38c357869ef5455a5ffc5a5f8890a790874b54dd5"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0036.png",
+        "frame": 36,
+        "time_seconds": 1.2,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 156,
+          "top": 91,
+          "right": 351,
+          "bottom": 323,
+          "width": 196,
+          "height": 233
+        },
+        "size_bytes": 112214,
+        "sha256": "b0728cde80da12a3459e039321044c0e4e8dd7c01e513ba7b56b39f67dea7422"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0037.png",
+        "frame": 37,
+        "time_seconds": 1.2333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 157,
+          "top": 92,
+          "right": 359,
+          "bottom": 324,
+          "width": 203,
+          "height": 233
+        },
+        "size_bytes": 111900,
+        "sha256": "d34d670b50e48092d35541c550690590bb53f16648e867522594124560b95ce4"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0038.png",
+        "frame": 38,
+        "time_seconds": 1.2666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 158,
+          "top": 93,
+          "right": 367,
+          "bottom": 325,
+          "width": 210,
+          "height": 233
+        },
+        "size_bytes": 111279,
+        "sha256": "ec120a05c2b98a908f5b393304103ea97f6537a80bfb0cfcc8b47c94f205520c"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0039.png",
+        "frame": 39,
+        "time_seconds": 1.3,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 159,
+          "top": 95,
+          "right": 372,
+          "bottom": 326,
+          "width": 214,
+          "height": 232
+        },
+        "size_bytes": 110829,
+        "sha256": "1934564a91a1e5aa6d3a56b56866b2dde21f2d1a290f3dcefd939270eacffb84"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0040.png",
+        "frame": 40,
+        "time_seconds": 1.3333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 160,
+          "top": 95,
+          "right": 376,
+          "bottom": 327,
+          "width": 217,
+          "height": 233
+        },
+        "size_bytes": 110236,
+        "sha256": "3aabe7ee13aa6c899766314ca70aee38be4bda95e066e23066ffe36b8063eb70"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0041.png",
+        "frame": 41,
+        "time_seconds": 1.3666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 96,
+          "right": 379,
+          "bottom": 328,
+          "width": 219,
+          "height": 233
+        },
+        "size_bytes": 109503,
+        "sha256": "6cc0b84dbc8998a74e0a38684852b339b13fa294fb27af2d7eeb974c26ac6787"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0042.png",
+        "frame": 42,
+        "time_seconds": 1.4,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 96,
+          "right": 379,
+          "bottom": 328,
+          "width": 219,
+          "height": 233
+        },
+        "size_bytes": 109415,
+        "sha256": "21b88fde3c8d2f938a69ee8803d98cb5054f6374a6251d7d72b72f207ba2a4b9"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0043.png",
+        "frame": 43,
+        "time_seconds": 1.4333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 96,
+          "right": 379,
+          "bottom": 328,
+          "width": 219,
+          "height": 233
+        },
+        "size_bytes": 109415,
+        "sha256": "3dc4796a3777b7f23e047715d9bc483882205c4cc70473950f264b415478cd41"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0044.png",
+        "frame": 44,
+        "time_seconds": 1.4666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 96,
+          "right": 379,
+          "bottom": 328,
+          "width": 219,
+          "height": 233
+        },
+        "size_bytes": 109415,
+        "sha256": "228c03ae462f258506c1f905a4d58162da2edcaaa55aac37beb7c851cd11227a"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0045.png",
+        "frame": 45,
+        "time_seconds": 1.5,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 96,
+          "right": 379,
+          "bottom": 328,
+          "width": 219,
+          "height": 233
+        },
+        "size_bytes": 109415,
+        "sha256": "fa6a1f1621e62667a83a7582e52da72183c262cc667781c698245fac09048e5f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0046.png",
+        "frame": 46,
+        "time_seconds": 1.5333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 96,
+          "right": 379,
+          "bottom": 328,
+          "width": 219,
+          "height": 233
+        },
+        "size_bytes": 109415,
+        "sha256": "9786245a43c12a8b74a5e74e1731c2f8134a363cb34b5851f018f2c36284da95"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0047.png",
+        "frame": 47,
+        "time_seconds": 1.5666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 96,
+          "right": 379,
+          "bottom": 328,
+          "width": 219,
+          "height": 233
+        },
+        "size_bytes": 109415,
+        "sha256": "f9f34aa715e6e2f2f157ffbd4eb12b9ba0659b03cef508c3603dee4bdc458545"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0048.png",
+        "frame": 48,
+        "time_seconds": 1.6,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 96,
+          "right": 379,
+          "bottom": 328,
+          "width": 219,
+          "height": 233
+        },
+        "size_bytes": 109415,
+        "sha256": "f26e72781733d3b139d580b0098fd9a0abb9f339f4c06043dce68457cf950845"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0049.png",
+        "frame": 49,
+        "time_seconds": 1.6333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 96,
+          "right": 379,
+          "bottom": 328,
+          "width": 219,
+          "height": 233
+        },
+        "size_bytes": 109415,
+        "sha256": "525f6fc8b9a9349e5b521414b9ba149840922d2cf2260c1b20a2f4c851a16f55"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0050.png",
+        "frame": 50,
+        "time_seconds": 1.6666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 96,
+          "right": 379,
+          "bottom": 328,
+          "width": 219,
+          "height": 233
+        },
+        "size_bytes": 109415,
+        "sha256": "b97dad898e3830b24de1d3d513e23fc41d6146a55d872d73fd6234f21154dcc4"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0051.png",
+        "frame": 51,
+        "time_seconds": 1.7,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 96,
+          "right": 379,
+          "bottom": 328,
+          "width": 219,
+          "height": 233
+        },
+        "size_bytes": 109415,
+        "sha256": "8bc6b74dc2f357a8cdde376175ee58973c3121ddd76f7d83ecc4bbf97659abd5"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0052.png",
+        "frame": 52,
+        "time_seconds": 1.7333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 96,
+          "right": 379,
+          "bottom": 328,
+          "width": 219,
+          "height": 233
+        },
+        "size_bytes": 109415,
+        "sha256": "c5b117a4f51ffd7e8f6326d065bd9ddbb8b83ed66b439aa9373e45746438a293"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0053.png",
+        "frame": 53,
+        "time_seconds": 1.7666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 96,
+          "right": 379,
+          "bottom": 328,
+          "width": 219,
+          "height": 233
+        },
+        "size_bytes": 109646,
+        "sha256": "9615d8375fb61d2c691bc60f0436da09bfd687033a0c99e9fef9f203932ab2c6"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0054.png",
+        "frame": 54,
+        "time_seconds": 1.8,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 96,
+          "right": 378,
+          "bottom": 328,
+          "width": 218,
+          "height": 233
+        },
+        "size_bytes": 109691,
+        "sha256": "3a9b3f333849af1a15d0900c9b139e112261dc7d1a1b0a34e73a448727a21cda"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0055.png",
+        "frame": 55,
+        "time_seconds": 1.8333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 95,
+          "right": 376,
+          "bottom": 328,
+          "width": 216,
+          "height": 234
+        },
+        "size_bytes": 110144,
+        "sha256": "daf1959b73e218b633e7e133c3fb5a1aac8eee6fa24426370a7d5c82fc4c0af0"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0056.png",
+        "frame": 56,
+        "time_seconds": 1.8666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 161,
+          "top": 95,
+          "right": 372,
+          "bottom": 328,
+          "width": 212,
+          "height": 234
+        },
+        "size_bytes": 110607,
+        "sha256": "33c37bbbae6ab766c9cc055b38abe1579f468995770cb86d20321444c472b9a0"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0057.png",
+        "frame": 57,
+        "time_seconds": 1.9,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 160,
+          "top": 94,
+          "right": 367,
+          "bottom": 328,
+          "width": 208,
+          "height": 235
+        },
+        "size_bytes": 111394,
+        "sha256": "eeffc2d43f96a7991e94920bf8e826323a2df97cf6c05a84ab2f2588fbfaa3c6"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0058.png",
+        "frame": 58,
+        "time_seconds": 1.9333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 160,
+          "top": 93,
+          "right": 361,
+          "bottom": 328,
+          "width": 202,
+          "height": 236
+        },
+        "size_bytes": 111827,
+        "sha256": "d3fe84282e15518dce5ebcea0669b9636c83a276c039a0929c482385c1acc06d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0059.png",
+        "frame": 59,
+        "time_seconds": 1.9666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 160,
+          "top": 92,
+          "right": 353,
+          "bottom": 329,
+          "width": 194,
+          "height": 238
+        },
+        "size_bytes": 112144,
+        "sha256": "c6239441341555dfe403a5330a316c296dc30f69602c191cb9ba258ac2bbafa6"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0060.png",
+        "frame": 60,
+        "time_seconds": 2.0,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 159,
+          "top": 91,
+          "right": 344,
+          "bottom": 329,
+          "width": 186,
+          "height": 239
+        },
+        "size_bytes": 112397,
+        "sha256": "968ce3accd6ce8e4c0935f16c875e3c698159401d0f18c28db0220747fc73f2d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0061.png",
+        "frame": 61,
+        "time_seconds": 2.033333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 159,
+          "top": 90,
+          "right": 334,
+          "bottom": 329,
+          "width": 176,
+          "height": 240
+        },
+        "size_bytes": 112155,
+        "sha256": "c9551a326eace0780903c79a291ed9cabd3fa306dd8e11b7dea5d6a2fcb014ab"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0062.png",
+        "frame": 62,
+        "time_seconds": 2.066666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 157,
+          "top": 89,
+          "right": 323,
+          "bottom": 329,
+          "width": 167,
+          "height": 241
+        },
+        "size_bytes": 111883,
+        "sha256": "378400813e80852a9bf66905a88300a582b40bd4415cbcc467a58715daa00bfd"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0063.png",
+        "frame": 63,
+        "time_seconds": 2.1,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 156,
+          "top": 88,
+          "right": 313,
+          "bottom": 329,
+          "width": 158,
+          "height": 242
+        },
+        "size_bytes": 111507,
+        "sha256": "c0830c8133dc217edc3acb6bf2725d66fb3beb103c58f00c0f3d0cb116a65252"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0064.png",
+        "frame": 64,
+        "time_seconds": 2.1333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 155,
+          "top": 87,
+          "right": 304,
+          "bottom": 329,
+          "width": 150,
+          "height": 243
+        },
+        "size_bytes": 111435,
+        "sha256": "0783e8b2a931097f8a9318bfa9265871230944f537315587a28a4c0b6defed6e"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0065.png",
+        "frame": 65,
+        "time_seconds": 2.1666666666666665,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 155,
+          "top": 86,
+          "right": 297,
+          "bottom": 329,
+          "width": 143,
+          "height": 244
+        },
+        "size_bytes": 111142,
+        "sha256": "2aa69df4903ede07ab022c2c015014c0b09d14dfd8ef2d0302d682af9ae62cf7"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0066.png",
+        "frame": 66,
+        "time_seconds": 2.2,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 154,
+          "top": 86,
+          "right": 291,
+          "bottom": 330,
+          "width": 138,
+          "height": 245
+        },
+        "size_bytes": 110936,
+        "sha256": "3f70c6f96df47c29307d720dfb3b7f9741212a28fe8dff97829a4fef6acdd364"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0067.png",
+        "frame": 67,
+        "time_seconds": 2.2333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 154,
+          "top": 86,
+          "right": 288,
+          "bottom": 330,
+          "width": 135,
+          "height": 245
+        },
+        "size_bytes": 110627,
+        "sha256": "355d8f51cefa647b8b845fda4ac4cdd8f1e98f2d469fe309ab11fdacb5ea55ce"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0068.png",
+        "frame": 68,
+        "time_seconds": 2.2666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 154,
+          "top": 86,
+          "right": 288,
+          "bottom": 329,
+          "width": 135,
+          "height": 244
+        },
+        "size_bytes": 110469,
+        "sha256": "3dfb1e83866829bcafb712c05b4c871f5e5635f01bedac8940055a81c89f40f1"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0069.png",
+        "frame": 69,
+        "time_seconds": 2.3,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 154,
+          "top": 86,
+          "right": 289,
+          "bottom": 329,
+          "width": 136,
+          "height": 244
+        },
+        "size_bytes": 110495,
+        "sha256": "46eb8f0f3cc478a9f77d004436efaa042781448d87bd43c3986417dd16d8c63e"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0070.png",
+        "frame": 70,
+        "time_seconds": 2.3333333333333335,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 153,
+          "top": 86,
+          "right": 291,
+          "bottom": 329,
+          "width": 139,
+          "height": 244
+        },
+        "size_bytes": 110624,
+        "sha256": "a169c14678e20d5afc681d7e99b5b076ec21de2245c83992efedce68c5c7cb68"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0071.png",
+        "frame": 71,
+        "time_seconds": 2.3666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 152,
+          "top": 86,
+          "right": 294,
+          "bottom": 328,
+          "width": 143,
+          "height": 243
+        },
+        "size_bytes": 110938,
+        "sha256": "7b01da7afd513ddc60ecd5ad77a93f7fa17b57ce3a11417bd4696af6aaa90212"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0072.png",
+        "frame": 72,
+        "time_seconds": 2.4,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 151,
+          "top": 86,
+          "right": 297,
+          "bottom": 327,
+          "width": 147,
+          "height": 242
+        },
+        "size_bytes": 110932,
+        "sha256": "2a6dd80a39a0489d98cf3772bd5befb98cea090f33572c4398d60b505bff271c"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0073.png",
+        "frame": 73,
+        "time_seconds": 2.433333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 150,
+          "top": 86,
+          "right": 301,
+          "bottom": 326,
+          "width": 152,
+          "height": 241
+        },
+        "size_bytes": 111057,
+        "sha256": "a19cd02484309e88a59c3b6389dd78b81c1a3b77997008a2b22a6757a2210776"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0074.png",
+        "frame": 74,
+        "time_seconds": 2.466666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 148,
+          "top": 86,
+          "right": 304,
+          "bottom": 325,
+          "width": 157,
+          "height": 240
+        },
+        "size_bytes": 110895,
+        "sha256": "a71ee77f621374731ea50bfccad1408374a8d837cf722c1565c72e5c82be70da"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0075.png",
+        "frame": 75,
+        "time_seconds": 2.5,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 146,
+          "top": 86,
+          "right": 308,
+          "bottom": 324,
+          "width": 163,
+          "height": 239
+        },
+        "size_bytes": 110676,
+        "sha256": "29402bb57fe726283cf525757e66b2f6d629ed3f40eed5a197bfc4b63dd04b5f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0076.png",
+        "frame": 76,
+        "time_seconds": 2.533333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 144,
+          "top": 85,
+          "right": 311,
+          "bottom": 323,
+          "width": 168,
+          "height": 239
+        },
+        "size_bytes": 110707,
+        "sha256": "44569f5c1376126ddd353cba5888cceb99b30f3d4a7c6cce1f3b0f46d59ca87e"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0077.png",
+        "frame": 77,
+        "time_seconds": 2.566666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 143,
+          "top": 85,
+          "right": 314,
+          "bottom": 322,
+          "width": 172,
+          "height": 238
+        },
+        "size_bytes": 110680,
+        "sha256": "75d13d188e1d4d966503be9ed67739065e284cd6e0442b13529d61dd3fd24a22"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0078.png",
+        "frame": 78,
+        "time_seconds": 2.6,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 142,
+          "top": 85,
+          "right": 316,
+          "bottom": 321,
+          "width": 175,
+          "height": 237
+        },
+        "size_bytes": 110784,
+        "sha256": "c833ff82400b059e8fca7dfc5423c979b8e05a2662da0857e968f863715bdd1d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0079.png",
+        "frame": 79,
+        "time_seconds": 2.6333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 141,
+          "top": 85,
+          "right": 317,
+          "bottom": 321,
+          "width": 177,
+          "height": 237
+        },
+        "size_bytes": 110502,
+        "sha256": "377ba0cccb02a14229348132b49fef65d6145bfde5ced3ab2ed426ef6044f890"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0080.png",
+        "frame": 80,
+        "time_seconds": 2.6666666666666665,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 318,
+          "bottom": 320,
+          "width": 179,
+          "height": 236
+        },
+        "size_bytes": 110511,
+        "sha256": "2c2cee5620c74ca654cd42302d42b4406b53e82993440bf1027133e26bf979fa"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0081.png",
+        "frame": 81,
+        "time_seconds": 2.7,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 320,
+          "width": 180,
+          "height": 236
+        },
+        "size_bytes": 110572,
+        "sha256": "7bcbd3cb128ee071dc693f7b9019f355b36250552695423d961db7eff1f963cc"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0082.png",
+        "frame": 82,
+        "time_seconds": 2.7333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 320,
+          "width": 180,
+          "height": 236
+        },
+        "size_bytes": 110502,
+        "sha256": "7933644f13266c37bf221a3a477b0438e93612ca95ba95c29c2157bd2bc9388a"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0083.png",
+        "frame": 83,
+        "time_seconds": 2.7666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 320,
+          "width": 180,
+          "height": 236
+        },
+        "size_bytes": 110401,
+        "sha256": "0dfe0b5ea3d1bcf4e95da32b2d9193c608408233894b7de9f982612a7a5367c9"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0084.png",
+        "frame": 84,
+        "time_seconds": 2.8,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 321,
+          "width": 180,
+          "height": 237
+        },
+        "size_bytes": 110322,
+        "sha256": "1730b07608bfbb2ba010237115860f8bef102c3408ff4a79d7eb5e93cf2ec1dc"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0085.png",
+        "frame": 85,
+        "time_seconds": 2.8333333333333335,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 321,
+          "width": 180,
+          "height": 237
+        },
+        "size_bytes": 110368,
+        "sha256": "8b56f3dcefa6d0ef66bbc86869e76aabd49d9000895643523a31595e9baa9e2f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0086.png",
+        "frame": 86,
+        "time_seconds": 2.8666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 321,
+          "width": 180,
+          "height": 237
+        },
+        "size_bytes": 110180,
+        "sha256": "9a087a195494f69e137cd45335ad6120d2f425a50a03aee9b394e3bd67147d02"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0087.png",
+        "frame": 87,
+        "time_seconds": 2.9,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 322,
+          "width": 180,
+          "height": 238
+        },
+        "size_bytes": 110229,
+        "sha256": "a98083e830f2f34c5c4e191960091c7ff3a344450826907c5ff63874c07c86bb"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0088.png",
+        "frame": 88,
+        "time_seconds": 2.933333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 322,
+          "width": 180,
+          "height": 238
+        },
+        "size_bytes": 109973,
+        "sha256": "5b1fb85ae6a9f1b5f76bb0ea11ee1b471ab514985429cb9354a1bf6ebd75281d"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0089.png",
+        "frame": 89,
+        "time_seconds": 2.966666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 323,
+          "width": 180,
+          "height": 239
+        },
+        "size_bytes": 109799,
+        "sha256": "85c8a06f3e67bcf06e297d48ad95290f89394c78e49c7992a0f710f6e98e5b7c"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0090.png",
+        "frame": 90,
+        "time_seconds": 3.0,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 324,
+          "width": 180,
+          "height": 240
+        },
+        "size_bytes": 109629,
+        "sha256": "c80829fdd9bde90371b76f72866066d6d07e134c1725a794253513076e58ebdc"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0091.png",
+        "frame": 91,
+        "time_seconds": 3.033333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 324,
+          "width": 180,
+          "height": 240
+        },
+        "size_bytes": 109536,
+        "sha256": "cbd87ea1675872b9cf6ad1f09ce4ccbb68f30ceb90be65db2b07524aa5aab5f4"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0092.png",
+        "frame": 92,
+        "time_seconds": 3.066666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 324,
+          "width": 180,
+          "height": 240
+        },
+        "size_bytes": 109531,
+        "sha256": "4a1fec8d82a1c53f4cbdd0e75a1e747cd6c75e682ab5f9e2a059c84682cbb695"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0093.png",
+        "frame": 93,
+        "time_seconds": 3.1,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109377,
+        "sha256": "6ae543c2e31fb680e6f89a368ce222471901212dfb93eecba2bec51726792085"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0094.png",
+        "frame": 94,
+        "time_seconds": 3.1333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109354,
+        "sha256": "ff66a230fa2368e32d9d2831134cedefce8d3daf353350efd85562376c3063ea"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0095.png",
+        "frame": 95,
+        "time_seconds": 3.1666666666666665,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109252,
+        "sha256": "5590dbfea1007bd2584458ce4d3a3228012d6d063691616c9eed292e119daa35"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0096.png",
+        "frame": 96,
+        "time_seconds": 3.2,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "d2c377e07b4be5c6c8e3a8c2775779c72a3e35528ed474cc482f4c9ea7fba17f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0097.png",
+        "frame": 97,
+        "time_seconds": 3.2333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "16072f8a4805feac8932865a3cc5376784b4d0df810bf8978a5cdb02ebf10218"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0098.png",
+        "frame": 98,
+        "time_seconds": 3.2666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "190fa8d34a391b77a0e8aa3c79475d6b04672f37185c7d13465ee1896477fa2b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0099.png",
+        "frame": 99,
+        "time_seconds": 3.3,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "3693b9cdeb55b6be762cb4047502c2e7080fb5924e6cfe4edf5ad6b7f27c86d0"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0100.png",
+        "frame": 100,
+        "time_seconds": 3.3333333333333335,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "18e2869714a98e6bb79e8880a2fef2e87501dd83a966197a659a4dbe38d16e8f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0101.png",
+        "frame": 101,
+        "time_seconds": 3.3666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "98c5602d7bf7f2532dff72974997d0e77710221105e0183d2780148f1171df49"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0102.png",
+        "frame": 102,
+        "time_seconds": 3.4,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "e08d9c38247356fe4da9bea957f8b6bb00e110d76a06e944bc81de7ba0eb880f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0103.png",
+        "frame": 103,
+        "time_seconds": 3.433333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "b39b7b0e55c7709106b9bd80a23dcf516f427573342983b215b78af306dd2b50"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0104.png",
+        "frame": 104,
+        "time_seconds": 3.466666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "9d315bc149307e59e1dab1497c2d6b4eb1358d040c2650f7345204d502d1f353"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0105.png",
+        "frame": 105,
+        "time_seconds": 3.5,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "d4b5a7c3f1e5f057fdab6f6f4c2c4f3b274fb7bfba27dfe6bfbab0f99c242d01"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0106.png",
+        "frame": 106,
+        "time_seconds": 3.533333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "9bd05181181a11bc9338a43928087704f87e79ce76d4547672034920f66c4627"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0107.png",
+        "frame": 107,
+        "time_seconds": 3.566666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "e66cc6d05aada4580812459f8b69fc692992104628731fd897bf27ca6064060e"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0108.png",
+        "frame": 108,
+        "time_seconds": 3.6,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "c5fc555f8078a8d61deaa9aab217606e84c468207ba8c6859b861e703366277f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0109.png",
+        "frame": 109,
+        "time_seconds": 3.6333333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "8174da04e3006b8e7bfd01d9ac5d94a8fd1ba0371fa7e551fabff15ccaa5b5ae"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0110.png",
+        "frame": 110,
+        "time_seconds": 3.6666666666666665,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "0ba0cdbd7075d1ac35834e62b9f5d3114c3566648fae22a862940d8cbc61459f"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0111.png",
+        "frame": 111,
+        "time_seconds": 3.7,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "e4bf9cbf6e18ee64c6c4a971453c18f3a8ebbc41302a9df51776462a0f093135"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0112.png",
+        "frame": 112,
+        "time_seconds": 3.7333333333333334,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "44c600be0a966a7b0582987cbac49b4f8542018043730ba1125160629ef5e3f9"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0113.png",
+        "frame": 113,
+        "time_seconds": 3.7666666666666666,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "7df71cba69114944dee8a3c195ed6627a55435f8f22744b922f4169ff2838658"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0114.png",
+        "frame": 114,
+        "time_seconds": 3.8,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "eb8abdf5129681395efc036623a4f168aef4ce42eb27f44804d257f1d46bc35b"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0115.png",
+        "frame": 115,
+        "time_seconds": 3.8333333333333335,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "7a47e997174138f17a25d2ec914e5274afbf1baab68a981eb6b96d7aa51d4fa3"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0116.png",
+        "frame": 116,
+        "time_seconds": 3.8666666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "d889838c2a4f540ec2946b8515472f8909936e9c1e6598dd6633cfa41df1f9c3"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0117.png",
+        "frame": 117,
+        "time_seconds": 3.9,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "f442ce3152d69ffc758fc65d03a85dd431c8cb3ab5fc2a197a3b6c96d547e119"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0118.png",
+        "frame": 118,
+        "time_seconds": 3.933333333333333,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "0919d2fb7d85e6a5be32689a8c29b5dfe98067dd957ea0066cb9c3b31566e853"
+      },
+      {
+        "path": "assets/art/animation_lab/blender_frames/staff/0119.png",
+        "frame": 119,
+        "time_seconds": 3.966666666666667,
+        "resolution": [
+          384,
+          384
+        ],
+        "alpha_bbox_px": {
+          "left": 140,
+          "top": 85,
+          "right": 319,
+          "bottom": 325,
+          "width": 180,
+          "height": 241
+        },
+        "size_bytes": 109197,
+        "sha256": "adc9135096843355d1a60eddbe0a02e81f61833860e87447d302adfc80bd99b3"
+      }
+    ],
+    "alpha_bounds_by_clip": {
+      "thrust": {
+        "frames_with_alpha_bounds": 120,
+        "min_left": 137,
+        "max_right": 344,
+        "min_top": 84,
+        "max_bottom": 329,
+        "minimum_edge_margin_px": 39,
+        "cropped_frames": []
+      },
+      "cut": {
+        "frames_with_alpha_bounds": 120,
+        "min_left": 137,
+        "max_right": 332,
+        "min_top": 65,
+        "max_bottom": 326,
+        "minimum_edge_margin_px": 51,
+        "cropped_frames": []
+      },
+      "staff": {
+        "frames_with_alpha_bounds": 120,
+        "min_left": 137,
+        "max_right": 379,
+        "min_top": 83,
+        "max_bottom": 330,
+        "minimum_edge_margin_px": 4,
+        "cropped_frames": []
+      }
+    },
+    "cropped_frames": [],
+    "all_frames_inside_camera": true
+  }
+}

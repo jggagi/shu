@@ -46,6 +46,18 @@ Mac mini 独立启动：
 
 动态场景制作复用入口：[制作方法](docs/SCENE_REUSE_HANDOFF.md)与[听雨廊案例](.agents/skills/game-painted-scene-build/references/tingyu-corridor.md)。现有painted-scene／ambient-life skills v1.1将协调风、雨后余韵、灯暖、烟气、事件声音和动物短路径整理为方法；新场景沿用项目共用模块，重新制作实际图层、遮罩、能力点与适配代码。
 
+## 溪边茶亭独立试玩
+
+本机新增 **溪边茶亭 v1.3**：新茶亭／石岸／溪水／远山构图，六时辰、晴／多云／小雨，细流水纹和雨滴涟漪；水彩橘猫在露天石台休息、走几步并可摸摸。Static 保留完整画面与猫当前位置，Resume 接续，Reset 恢复初始清晨／多云。实际18种环境、两种窗口尺寸与浏览器输入已审核，用户于2026-10-07验收v1通过。v1.1 已接入中部偏右的两级远瀑：水路内部细纹向下流动，落点少量薄雾，沿用同一冻结／恢复时钟；v1.2 按暮色区域不连贯反馈，统一雨雾／水纹调色并柔化户外遮罩边缘；v1.3 新增沿弯曲河道向前推进的碎亮纹和宽缓倒影明暗，远细近宽、远慢近快；岸边渐隐与原画水色限制保护石岸和河床，水纹跟随暮色调色。当前v1.3已获用户认可并授权PR合并；Windows实机和长时仍未验证，独立试玩尚未公开部署。
+
+```sh
+godot --windowed --path . res://scenes/demos/stream_teahouse.tscn
+python tools/build_stream_teahouse.py --godot godot
+python -m http.server 8771 --bind 127.0.0.1 --directory .local/build/stream-teahouse/web
+```
+
+打开本机 `http://127.0.0.1:8771/`。1–6 时辰、7／8／9 天气、空格 Static／Resume、R Reset；点击岸边橘猫摸摸。独立导出不会改变原主场景入口。详情与证据见 [本轮切片](docs/STREAM_TEAHOUSE_SLICE.md)。
+
 ## 当前可玩：D01 听雨廊
 
 江砚秋与叶知闲同处听雨廊。修炼推进时间与修为，请教口诀得到一次修炼加成，休息恢复精力。修为达到 60 完成第一课，可重新开始反复试玩。姓名与整体美术风格已由用户确认；构图、动态强度与数值继续供试玩拍板。当前使用分层生成的中国画背景、Q 版师徒、木桌与宣纸木框，原 SVG 占位稿仍保留供比较。

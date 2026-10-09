@@ -1,27 +1,39 @@
 {
-  "description": "Original authored five-manual motion in Godot native 2D, with constrained leg motion and front/back painted references. Gameplay authority is DemoState; motion is presentation only. The side-turn midpoint no longer compresses the head. No paid production in the body/volume revision.",
+  "description": "Original five-manual motion in Godot native 2D, now with generated registered 45/90/135-degree upper-body turn references. Original legs and sword arm remain; torso blends adjacent views, head/hair chooses a crisp view. DemoState remains gameplay authority. Not full-frame redraw or arbitrary 3D turning; user naturalness acceptance pending.",
   "source_data": "assets/data/sword_manuals.json",
   "source_sha256": {
-    "README.md": "8f7544b92a83867f39d260e2f229f8ae12eb40b47697317965e3c2bbd0451e67",
+    "README.md": "1a4cbc8122d89b7c726c285ef3dee9cb9dd30ee73d6851f9f83cfefa98922400",
     "assets/art/sword_training/back-body-reference-v1.png": "0439eba10666ce077ddafe479c24f3dbb1d7d5183cd1a9a0f76467a0c39e10df",
     "assets/art/sword_training/continuous-parts-v1.png": "db71b7a2b1f396fec09d3ee3ce741ca3c261f6376894253fa25dd81a21fc63c2",
-    "assets/data/back_mountain_sword_practice.json": "2268a9d24cd72faff0618174c6cfd02b9f49a66ee29523fbe7df57db471277df",
+    "assets/data/back_mountain_sword_practice.json": "67ef2f8a39d9b6e50d647cccb371abd92c0e39079ea90a32188f71b82f3f9414",
     "assets/data/rules.json": "18bc6f1b74fa4423f3e464775f2d5b63a2adb07b8fa7f1c96f87df8711184951",
     "assets/data/sword_manuals.json": "26bd6b6e625fc37076358c35493434371293a63057785ae53e4d2ade988d5304",
     "assets/fonts/ShuDemoSerif.ttf": "d4d3b01311d5bf16a760e19b5d87422b6c80d85a7cb0ce7e987e188769de8775",
     "assets/fonts/source-serif.json": "4fc41006f95b3c9b3ebcdd6cfd18f77e90a2923a883adc08ce5a78f366227501",
-    "assets/shaders/sword_pose_chroma.gdshader": "c74d6817ab6a7d47d084e5686c4ee5966f599f60ad47659b3c404eb35edf5045",
-    "docs/DECISIONS.md": "a5ad09556e463efea4b32fe46ba8f5dec25b7523b25dc9b742d4e1d3fe6476fd",
-    "docs/DEVELOPMENT.md": "2edbec57d1cfa93a8e2224983da954d71ee5e6dc836cd681c611d7e982dc4b95",
-    "docs/SWORD_FULL_BODY_SLICE.md": "6bacc7718611418e819365b847c5d6440d9606c0c73ff37d0c552f6fda0e3790",
-    "project.godot": "0c7fda92a79cb87e4aa46aab63453fc8dd8a01116920f00fd5a5ebde79f374c8",
+    "assets/shaders/sword_pose_chroma.gdshader": "9c597ffb58361fe78763a13104955e9493dbe903dd6680d74374de8cffa7cab7",
+    "docs/DECISIONS.md": "c483e63d1e6ccf48f5c3405cec10b9e4c59614ac6d64e68f61f25e6524b1f23f",
+    "docs/DEVELOPMENT.md": "a4a5c7445e98cd970da72928636c068c9dc0d264fb7df34014dce1deaa28221d",
+    "docs/SWORD_FULL_BODY_SLICE.md": "78bfffc031aaf9ab81a60bc840a004fcaeb619edab9cf1ece7a89543923326dd",
+    "project.godot": "071cc42541e1f7cb7b265b74e8ad66b78c9c72441c30b2381a7848451ecfb4e5",
     "scripts/back_mountain_sword_practice.gd": "1cecdbfa237817d8cadde260af1bc34a2cc1e09f1191bba23da8ba254203400c",
     "scripts/back_mountain_view.gd": "8bce8fc75fddce338ac053f293761bf7002f3fd0d4384cd1fc1a4c63b9b45b05",
     "scripts/demo_state.gd": "17b29c0572fba0d1f88e4cb4b910f2d3d343c5fa92a704edfc42493d3b33e4e0",
-    "scripts/jiang_sword_actor.gd": "8ae33a10c7096a1f3f4e220aa8c66961ec22fb0a0244a5256b5d4e9c218d4ebe",
+    "scripts/jiang_sword_actor.gd": "046ace82ee86b4ae84bb92a6e0a8c1d594070d887700f8c4fb1971398445ef31",
     "scripts/main.gd": "3a317bee8e0a435728accba4473df2b923f331aebb3a49fda62c045353a7a452",
     "scripts/sword_manual_catalog.gd": "14c728de7dad4065e898107d2867f5dc349e88fd3baa67d1ebc722f0f50b2a9f",
-    "tests/sword_full_body_motion_test.gd": "5cab2ddb988a6a771b04aecdf52c7ac8566ea306150fe586d5e5636728a293df"
+    "tests/sword_full_body_motion_test.gd": "5cab2ddb988a6a771b04aecdf52c7ac8566ea306150fe586d5e5636728a293df",
+    "art/manifest.jsonl": "f0ffc8eb055a824429ec5121a0f3c0f6619f7dfb4d62726e9762721650c29b90",
+    "assets/art/sword_training/turn-front-quarter-v2.png": "c775b83e909440cc7ac11287391933595ccd787d552f6730b77435f026fc318d",
+    "assets/art/sword_training/turn-front-quarter-v2.source.json": "183350b3f44669fcbe50145bbc25175c4d6e722a566e27aba69a69957004bf2b",
+    "assets/art/sword_training/turn-rear-quarter-v2.png": "069d390a7e0e84dec04997d64d997fff5128987f5ee8919ea79e161e08d03b00",
+    "assets/art/sword_training/turn-rear-quarter-v2.source.json": "f177c687f3d997f54b7b03ec09f770bc67748d84c82cc62976389e455d5c0ff5",
+    "assets/art/sword_training/turn-side-reference-v1.png": "e18fe618614135936bc224fc0ef64c27cc62954e7c414a6500650445cf348124",
+    "assets/art/sword_training/turn-side-reference-v1.source.json": "32ac421beeaecf9b529cce2cdc57af50099e7e4a1539e1fec6e2eb1e0b289df6",
+    "tests/sword_turn_inbetween_test.gd": "947012e1e1fabe641002e98a0c8225f26b1f9af52eacfa174a61d565ee2d3eb0",
+    "art/prompts/sword-training/turn-front-quarter-v2.txt": "2210723dc9f0995121c1c40bd81affe5bf7131ec9e96798aa2ceec2000c28e18",
+    "art/prompts/sword-training/turn-side-reference-v1.txt": "edfe5537d2898b4842f1443d8920719be7d81a08820b5cd33f267e5207e8f104",
+    "art/prompts/sword-training/turn-rear-quarter-v2.txt": "a3d3ef19cae61363746bbd0cabd5e076565d9fb57a33feaa1184bcfdec6e56e3",
+    "docs/SWORD_TURN_INBETWEENS_SLICE.md": "8ca9cae071dc25e5e8504fea66eebda502ec22900ac1aa577f4f93087b5f7cf5"
   },
   "manuals": [
     {
@@ -100,5 +112,13 @@
       ]
     }
   ],
-  "source_has_uncommitted_changes": true
+  "source_has_uncommitted_changes": true,
+  "turn_reference_provenance": [
+    "provenance/turn-front-quarter-v2.source.json",
+    "provenance/prompts/turn-front-quarter-v2.txt",
+    "provenance/turn-side-reference-v1.source.json",
+    "provenance/prompts/turn-side-reference-v1.txt",
+    "provenance/turn-rear-quarter-v2.source.json",
+    "provenance/prompts/turn-rear-quarter-v2.txt"
+  ]
 }

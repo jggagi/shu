@@ -1,0 +1,32 @@
+{
+  "asset_id": "turn-side-reference-v1",
+  "provider": "codex-imagegen",
+  "model": null,
+  "purpose": "Registered authored turning in-between reference",
+  "prompt_file": "art/prompts/sword-training/turn-side-reference-v1.txt",
+  "references": [
+    "assets/art/sword_training/continuous-parts-v1.png",
+    "assets/art/sword_training/back-body-reference-v1.png"
+  ],
+  "output": "assets/art/sword_training/turn-side-reference-v1.png",
+  "sha256": "e18fe618614135936bc224fc0ef64c27cc62954e7c414a6500650445cf348124",
+  "created_at": "2026-10-09T00:55:17.056999+00:00",
+  "status": "candidate",
+  "runtime_registration": {
+    "angle_degrees": 90,
+    "canvas": [
+      1536,
+      1024
+    ],
+    "source_offset_pixels": [
+      0,
+      0
+    ],
+    "source_waist_anchor_pixels": [
+      420,
+      570
+    ],
+    "upper_body_only": true,
+    "lower_body_and_sword_arm": "Original atlas retained; generated regions unused"
+  }
+}

@@ -1,26 +1,33 @@
 {
-  "description": "Original authored motion data for five selectable sword manuals, on the existing unchanged Jiang painted atlas and native skeleton. No paid generation or new character art. Gameplay authority is DemoState; motion remains presentation only.",
+  "description": "Original authored five-manual motion in Godot native 2D, with constrained leg motion and front/back painted references. Gameplay authority is DemoState; motion is presentation only. The side-turn midpoint no longer compresses the head. No paid production in the body/volume revision.",
   "source_data": "assets/data/sword_manuals.json",
   "source_sha256": {
-    "scripts/main.gd": "3a317bee8e0a435728accba4473df2b923f331aebb3a49fda62c045353a7a452",
-    "scripts/demo_state.gd": "17b29c0572fba0d1f88e4cb4b910f2d3d343c5fa92a704edfc42493d3b33e4e0",
-    "scripts/back_mountain_view.gd": "8bce8fc75fddce338ac053f293761bf7002f3fd0d4384cd1fc1a4c63b9b45b05",
-    "scripts/back_mountain_sword_practice.gd": "1cecdbfa237817d8cadde260af1bc34a2cc1e09f1191bba23da8ba254203400c",
-    "scripts/jiang_sword_actor.gd": "c92735849c7c5277fe1827d19e5cadd4bae548a32d068b6c114247cc78cabdaa",
-    "scripts/sword_manual_catalog.gd": "14c728de7dad4065e898107d2867f5dc349e88fd3baa67d1ebc722f0f50b2a9f",
-    "assets/data/sword_manuals.json": "873ec58c098a3ab2608deb796f5c4bd7e50df8ba7b8e647659b8c678949acefe",
-    "assets/data/back_mountain_sword_practice.json": "550eadb13347e00f1a8c612005652072ed257ee20b6ddc62392d4e7e05ed56f7",
-    "assets/data/rules.json": "18bc6f1b74fa4423f3e464775f2d5b63a2adb07b8fa7f1c96f87df8711184951",
+    "README.md": "8f7544b92a83867f39d260e2f229f8ae12eb40b47697317965e3c2bbd0451e67",
+    "assets/art/sword_training/back-body-reference-v1.png": "0439eba10666ce077ddafe479c24f3dbb1d7d5183cd1a9a0f76467a0c39e10df",
     "assets/art/sword_training/continuous-parts-v1.png": "db71b7a2b1f396fec09d3ee3ce741ca3c261f6376894253fa25dd81a21fc63c2",
-    "assets/fonts/ShuDemoSerif.ttf": "942030d0494a33982458c676caa61a07f0cc33defe2bbf509c3c7cca6d5fc7a2",
-    "assets/fonts/source-serif.json": "85108098a541cbaf84d5887fd7c33e0b81b88987f03a2cb40edfe65f7ca4a27d",
-    "project.godot": "940cef825571d86c501fd89fe6eae2217d24851f63c96f6a63f936cddb27b153"
+    "assets/data/back_mountain_sword_practice.json": "2268a9d24cd72faff0618174c6cfd02b9f49a66ee29523fbe7df57db471277df",
+    "assets/data/rules.json": "18bc6f1b74fa4423f3e464775f2d5b63a2adb07b8fa7f1c96f87df8711184951",
+    "assets/data/sword_manuals.json": "26bd6b6e625fc37076358c35493434371293a63057785ae53e4d2ade988d5304",
+    "assets/fonts/ShuDemoSerif.ttf": "d4d3b01311d5bf16a760e19b5d87422b6c80d85a7cb0ce7e987e188769de8775",
+    "assets/fonts/source-serif.json": "4fc41006f95b3c9b3ebcdd6cfd18f77e90a2923a883adc08ce5a78f366227501",
+    "assets/shaders/sword_pose_chroma.gdshader": "c74d6817ab6a7d47d084e5686c4ee5966f599f60ad47659b3c404eb35edf5045",
+    "docs/DECISIONS.md": "a5ad09556e463efea4b32fe46ba8f5dec25b7523b25dc9b742d4e1d3fe6476fd",
+    "docs/DEVELOPMENT.md": "2edbec57d1cfa93a8e2224983da954d71ee5e6dc836cd681c611d7e982dc4b95",
+    "docs/SWORD_FULL_BODY_SLICE.md": "6bacc7718611418e819365b847c5d6440d9606c0c73ff37d0c552f6fda0e3790",
+    "project.godot": "0c7fda92a79cb87e4aa46aab63453fc8dd8a01116920f00fd5a5ebde79f374c8",
+    "scripts/back_mountain_sword_practice.gd": "1cecdbfa237817d8cadde260af1bc34a2cc1e09f1191bba23da8ba254203400c",
+    "scripts/back_mountain_view.gd": "8bce8fc75fddce338ac053f293761bf7002f3fd0d4384cd1fc1a4c63b9b45b05",
+    "scripts/demo_state.gd": "17b29c0572fba0d1f88e4cb4b910f2d3d343c5fa92a704edfc42493d3b33e4e0",
+    "scripts/jiang_sword_actor.gd": "8ae33a10c7096a1f3f4e220aa8c66961ec22fb0a0244a5256b5d4e9c218d4ebe",
+    "scripts/main.gd": "3a317bee8e0a435728accba4473df2b923f331aebb3a49fda62c045353a7a452",
+    "scripts/sword_manual_catalog.gd": "14c728de7dad4065e898107d2867f5dc349e88fd3baa67d1ebc722f0f50b2a9f",
+    "tests/sword_full_body_motion_test.gd": "5cab2ddb988a6a771b04aecdf52c7ac8566ea306150fe586d5e5636728a293df"
   },
   "manuals": [
     {
       "id": "pine_wind",
       "title": "松风剑谱",
-      "style": "沉肩 · 斜劈",
+      "style": "举剑 · 下劈",
       "techniques": [
         {
           "id": "pine_pair",
@@ -28,14 +35,14 @@
         },
         {
           "id": "pine_low_high",
-          "title": "低扫接斜斩"
+          "title": "高低连劈"
         }
       ]
     },
     {
       "id": "listening_rain",
       "title": "听雨剑谱",
-      "style": "收肘 · 点刺",
+      "style": "收剑 · 平刺",
       "techniques": [
         {
           "id": "rain_double_point",
@@ -50,7 +57,7 @@
     {
       "id": "returning_tide",
       "title": "回澜剑谱",
-      "style": "转腕 · 回环",
+      "style": "回身 · 换向",
       "techniques": [
         {
           "id": "tide_turn",
@@ -65,7 +72,7 @@
     {
       "id": "swift_swallow",
       "title": "燕掠剑谱",
-      "style": "短蓄 · 快斩",
+      "style": "跃起 · 快斩",
       "techniques": [
         {
           "id": "swallow_three",
@@ -80,7 +87,7 @@
     {
       "id": "rising_peak",
       "title": "叠峰剑谱",
-      "style": "落锋 · 上挑",
+      "style": "屈膝 · 上挑",
       "techniques": [
         {
           "id": "peak_raise",
@@ -88,7 +95,7 @@
         },
         {
           "id": "peak_drop",
-          "title": "峰回落剑"
+          "title": "沉锋再起"
         }
       ]
     }

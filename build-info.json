@@ -1,43 +1,51 @@
 {
-  "version": "0.1.18-five-sword-manuals",
-  "purpose": "Five selectable original sword manuals with ten native 2D forms; shared cultivation state, independent per-manual practice counts; motion naturalness awaits user playtest",
-  "content_revision": "five-manuals-v1",
+  "version": "0.1.21-turn-volume",
+  "purpose": "Five distinct sword manuals with turn, crouch and jump motion; turn midpoint preserves head width and torso volume; naturalness awaits user playtest",
+  "content_revision": "turn-volume-v1",
   "source_base_commit": "d7e3002c6cd860ca33a591c4787492233a201b46",
   "source_local_branch": "codex/three-day-m2-sword-training",
   "source_has_uncommitted_changes": true,
   "source_repository": "https://github.com/jggagi/shu",
   "engine": "4.7.2.stable.official.ed1daf0bf",
-  "published_at_utc": "2026-10-08T14:59:02.429175+00:00",
+  "published_at_utc": "2026-10-09T00:40:34.919714+00:00",
   "route": "/shu/",
   "runtime_sha256": {
     "index.apple-touch-icon.png": "f5878bec0fc0849d41fa35576ea5623e009a6f25b6d628e3b7490de254f5d885",
-    "index.audio.position.worklet.js": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
-    "index.audio.worklet.js": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
-    "index.html": "a4ba260e7aea878c6ff7645278ba15a0ff993fc51ecb930bdfad1de4564b88c4",
+    "index.wasm": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0",
     "index.icon.png": "5f750d194a603861983bbf1de1a4ffd463153947deb66a54519596be9d51e69c",
-    "index.js": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba",
-    "index.pck": "a9482a4d6aaff39318d841704a4a253c372735345f592c2431aff9ffc1c0e455",
+    "index.html": "b1dd89a35d84c9c0d4b4bbdffd6b807a85083112db989e1a02f04377281b9e8b",
     "index.png": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
-    "index.wasm": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+    "index.audio.worklet.js": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
+    "index.js": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba",
+    "index.audio.position.worklet.js": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
+    "index.pck": "36e6cbeb1977fb7e1935dd0a89025419bee9022ac50e604e8b5e2d12046a4671"
   },
   "selected_source_sha256": {
-    "scripts/main.gd": "3a317bee8e0a435728accba4473df2b923f331aebb3a49fda62c045353a7a452",
-    "scripts/demo_state.gd": "17b29c0572fba0d1f88e4cb4b910f2d3d343c5fa92a704edfc42493d3b33e4e0",
-    "scripts/back_mountain_view.gd": "8bce8fc75fddce338ac053f293761bf7002f3fd0d4384cd1fc1a4c63b9b45b05",
-    "scripts/back_mountain_sword_practice.gd": "1cecdbfa237817d8cadde260af1bc34a2cc1e09f1191bba23da8ba254203400c",
-    "scripts/jiang_sword_actor.gd": "c92735849c7c5277fe1827d19e5cadd4bae548a32d068b6c114247cc78cabdaa",
-    "scripts/sword_manual_catalog.gd": "14c728de7dad4065e898107d2867f5dc349e88fd3baa67d1ebc722f0f50b2a9f",
-    "assets/data/sword_manuals.json": "873ec58c098a3ab2608deb796f5c4bd7e50df8ba7b8e647659b8c678949acefe",
-    "assets/data/back_mountain_sword_practice.json": "550eadb13347e00f1a8c612005652072ed257ee20b6ddc62392d4e7e05ed56f7",
-    "assets/data/rules.json": "18bc6f1b74fa4423f3e464775f2d5b63a2adb07b8fa7f1c96f87df8711184951",
+    "README.md": "8f7544b92a83867f39d260e2f229f8ae12eb40b47697317965e3c2bbd0451e67",
+    "assets/art/sword_training/back-body-reference-v1.png": "0439eba10666ce077ddafe479c24f3dbb1d7d5183cd1a9a0f76467a0c39e10df",
     "assets/art/sword_training/continuous-parts-v1.png": "db71b7a2b1f396fec09d3ee3ce741ca3c261f6376894253fa25dd81a21fc63c2",
-    "assets/fonts/ShuDemoSerif.ttf": "942030d0494a33982458c676caa61a07f0cc33defe2bbf509c3c7cca6d5fc7a2",
-    "assets/fonts/source-serif.json": "85108098a541cbaf84d5887fd7c33e0b81b88987f03a2cb40edfe65f7ca4a27d",
-    "project.godot": "940cef825571d86c501fd89fe6eae2217d24851f63c96f6a63f936cddb27b153"
+    "assets/data/back_mountain_sword_practice.json": "2268a9d24cd72faff0618174c6cfd02b9f49a66ee29523fbe7df57db471277df",
+    "assets/data/rules.json": "18bc6f1b74fa4423f3e464775f2d5b63a2adb07b8fa7f1c96f87df8711184951",
+    "assets/data/sword_manuals.json": "26bd6b6e625fc37076358c35493434371293a63057785ae53e4d2ade988d5304",
+    "assets/fonts/ShuDemoSerif.ttf": "d4d3b01311d5bf16a760e19b5d87422b6c80d85a7cb0ce7e987e188769de8775",
+    "assets/fonts/source-serif.json": "4fc41006f95b3c9b3ebcdd6cfd18f77e90a2923a883adc08ce5a78f366227501",
+    "assets/shaders/sword_pose_chroma.gdshader": "c74d6817ab6a7d47d084e5686c4ee5966f599f60ad47659b3c404eb35edf5045",
+    "docs/DECISIONS.md": "a5ad09556e463efea4b32fe46ba8f5dec25b7523b25dc9b742d4e1d3fe6476fd",
+    "docs/DEVELOPMENT.md": "2edbec57d1cfa93a8e2224983da954d71ee5e6dc836cd681c611d7e982dc4b95",
+    "docs/SWORD_FULL_BODY_SLICE.md": "6bacc7718611418e819365b847c5d6440d9606c0c73ff37d0c552f6fda0e3790",
+    "project.godot": "0c7fda92a79cb87e4aa46aab63453fc8dd8a01116920f00fd5a5ebde79f374c8",
+    "scripts/back_mountain_sword_practice.gd": "1cecdbfa237817d8cadde260af1bc34a2cc1e09f1191bba23da8ba254203400c",
+    "scripts/back_mountain_view.gd": "8bce8fc75fddce338ac053f293761bf7002f3fd0d4384cd1fc1a4c63b9b45b05",
+    "scripts/demo_state.gd": "17b29c0572fba0d1f88e4cb4b910f2d3d343c5fa92a704edfc42493d3b33e4e0",
+    "scripts/jiang_sword_actor.gd": "8ae33a10c7096a1f3f4e220aa8c66961ec22fb0a0244a5256b5d4e9c218d4ebe",
+    "scripts/main.gd": "3a317bee8e0a435728accba4473df2b923f331aebb3a49fda62c045353a7a452",
+    "scripts/sword_manual_catalog.gd": "14c728de7dad4065e898107d2867f5dc349e88fd3baa67d1ebc722f0f50b2a9f",
+    "tests/sword_full_body_motion_test.gd": "5cab2ddb988a6a771b04aecdf52c7ac8566ea306150fe586d5e5636728a293df"
   },
   "checks": {
-    "regression_suites": 13,
-    "native_render_checks": 73,
+    "turn_volume_full_body": 31,
+    "motion": 52,
+    "native_render": 59,
     "native_sizes": [
       [
         1152,
@@ -48,17 +56,8 @@
         600
       ]
     ],
-    "local_web_input": true,
-    "actual_local_web_viewport": [
-      762,
-      428
-    ],
-    "font_coverage": {
-      "source_files": 52,
-      "codepoints": 812,
-      "missing": 0
-    },
-    "public_validation": "Performed after deployment; final public receipt retained with local QA evidence"
+    "local_web_input": "Both returning-tide forms, Dynamic and Static; natural return and single settlement passed",
+    "public_validation": "To be performed after deployment"
   },
   "licenses": "licenses/",
   "provenance": "provenance/"

@@ -1,0 +1,21 @@
+{
+  "asset_id": "sword-back-body-reference-v1",
+  "provider": "codex-imagegen",
+  "model": null,
+  "purpose": "Back-facing body reference for authored 180 degree native 2D pivot; scene-reviewed prototype, user acceptance pending",
+  "prompt_file": "art/prompts/sword-training/back-body-reference-v1.txt",
+  "cleanup_prompt_file": "art/prompts/sword-training/back-body-cleanup-v1.txt",
+  "references": [
+    "assets/art/sword_training/continuous-parts-v1.png"
+  ],
+  "intermediate_sha256": "739d79954e5ec85d88407e90380c81a1d9320294021b97aad5d7fc993efede82",
+  "output": "assets/art/sword_training/back-body-reference-v1.png",
+  "created_at": "2026-10-08T16:04:45.242174+00:00",
+  "status": "candidate",
+  "sha256": "0439eba10666ce077ddafe479c24f3dbb1d7d5183cd1a9a0f76467a0c39e10df",
+  "runtime_registration": {
+    "source_x_offset_pixels": 40,
+    "mirror_about_body_pivot_x": 420,
+    "upper_body_only": true
+  }
+}

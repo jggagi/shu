@@ -1,0 +1,28 @@
+{
+  "provider": "codex-imagegen",
+  "model": null,
+  "status": "candidate",
+  "purpose": "five complete body directions for the returning-tide back turn",
+  "prompt_file": "art/prompts/sword-training/full-body-back-turn-v1.txt",
+  "output": "assets/art/sword_training/full-body-back-turn-v1.png",
+  "sha256": "e56a55c600878ae7b61b0a43e954024709e2d322dfa03e3bc460094ea5b28664",
+  "canvas": [
+    1536,
+    1024
+  ],
+  "registration": "assets/data/jiang_back_turn_registration.json",
+  "notes": "Full head, robe and feet in every direction. Original PNG unchanged; no billable API or software purchase.",
+  "generation_chain": {
+    "initial_candidate": ".local/qa/back-turn-v1/art-initial.png",
+    "refinement_prompt": "art/prompts/sword-training/full-body-back-turn-v1.txt",
+    "calls": 2,
+    "reference_notes": "Final built-in edit references the initial turnaround candidate; initial candidate follows the existing original Jiang design. Raw selected PNG is preserved byte-for-byte.",
+    "initial_prompt": "art/prompts/sword-training/full-body-back-turn-initial-v1.txt"
+  },
+  "design_reference": [
+    "assets/art/sword_training/turn-front-quarter-v2.png"
+  ],
+  "references": [
+    ".local/qa/back-turn-v1/art-initial.png"
+  ]
+}

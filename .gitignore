@@ -6,3 +6,8 @@ __pycache__/
 
 # Reproducible animation lab intermediate frames; packed atlases are the runtime assets.
 /assets/art/animation_lab/blender_frames/
+
+# These source import settings preserve 60 fps motion and disable lossy animation optimization.
+!/assets/art/sword_mocap/study.glb.import
+!/assets/art/sword_jiang/study.glb.import
+!/assets/art/sword_jiang_legacy/study.glb.import

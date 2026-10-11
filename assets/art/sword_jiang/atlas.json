@@ -1,0 +1,4666 @@
+{
+  "atlas_count": 21,
+  "decoded_rgba_bytes": 309657600,
+  "duration": 8.6,
+  "fps": 60,
+  "frame_count": 517,
+  "frames": [
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-000.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-001.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-002.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-003.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-004.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-005.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-006.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-007.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-008.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-009.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-010.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-011.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-012.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-013.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-014.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-015.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-016.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-017.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-018.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        768,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        1152,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        1536,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        0,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        384,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        768,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        1152,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-019.png",
+      "region": [
+        1536,
+        1536,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        0,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        384,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        768,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        1152,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        1536,
+        0,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        0,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        384,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        768,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        1152,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        1536,
+        384,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        0,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        384,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        768,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        1152,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        1536,
+        768,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        0,
+        1152,
+        384,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_jiang/atlas-020.png",
+      "region": [
+        384,
+        1152,
+        384,
+        384
+      ]
+    }
+  ],
+  "height": 384,
+  "minimum_frame_margin_px": 59,
+  "schema_version": 1,
+  "width": 384
+}

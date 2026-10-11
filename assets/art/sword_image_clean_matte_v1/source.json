@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "tool": "refine_clip_matte.py",
+  "tool_sha256": "2662ca43a3da48616d5ce36c12a314ff06afea8fdef0a96b137d5df4ee5c6f92",
+  "prediction_cache_reused": true,
+  "offline": true,
+  "cost_rmb": 0,
+  "original_manifest": "res://assets/art/sword_image_driven_v1/atlas.json",
+  "original_manifest_sha256": "f137ba5b8f08b11cc035329deb145d70650682ffb285164df2a67e3436d70f3a",
+  "original_video_sha256": "1975f13cbae95c10623b6c0cab9b9d08ed8c3af00f389fff8baf4e5543d991a8",
+  "model": "isnet-general-use.onnx",
+  "model_sha256": "60920e99c45464f2ba57bee2ad08c919a52bbf852739e96947fbb4358c0d964a",
+  "mean": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "model_contract": "installed rembg DisSession",
+  "authored_regions": "res://assets/data/sword_image_matte_cleanup.json",
+  "authored_regions_sha256": "31301d2074386a2996fa196edbca67b9f8d270392e426cf69a966e32fc3e7172",
+  "alpha_method": "minimum(original anime alpha, general alpha), only in reviewed left region with 16px inward feather and left-boundary-connected general background; closed holes and blue paint inside the authored flying-ribbon contour protected; reviewed upper backdrop pocket suppressed while retaining local ink/detail",
+  "preserved": "original RGB, source video, 61 poses, native25fps, fixed384x576 cells, source anchors, all out-of-region alpha",
+  "limits": "Full general mask would erase the thin sword; it is deliberately restricted. Source motion blur and crop cannot be repaired by alpha refinement."
+}

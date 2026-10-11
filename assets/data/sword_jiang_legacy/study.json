@@ -1,0 +1,274 @@
+{
+  "source_label": "CMU 02_09 · 江砚秋原画服饰候选",
+  "character_style": "legacy",
+  "asset_id": "sword_jiang_legacy",
+  "fps": 60,
+  "frame_count": 517,
+  "duration": 8.6,
+  "original_fps": 120,
+  "camera": {
+    "position": [
+      -4.0,
+      -6.0,
+      3.200000047683716
+    ],
+    "target": [
+      0.0,
+      0.0,
+      0.7799999713897705
+    ],
+    "ortho": 2.6,
+    "coordinate_system": "Blender Z up"
+  },
+  "cleanup": {
+    "uniform_scale": 0.7,
+    "contact_windows": {
+      "l": [
+        [
+          7,
+          42
+        ],
+        [
+          66,
+          121
+        ],
+        [
+          189,
+          250
+        ],
+        [
+          307,
+          380
+        ],
+        [
+          384,
+          427
+        ],
+        [
+          470,
+          516
+        ]
+      ],
+      "r": [
+        [
+          0,
+          14
+        ],
+        [
+          35,
+          72
+        ],
+        [
+          97,
+          476
+        ]
+      ]
+    },
+    "fully_planted_samples": 662,
+    "max_contact_anchor_error_m": 1.1947184438507538e-07,
+    "max_left_target_error_m": 6.674406255472048e-08,
+    "close_hand_calibrated_samples": 271,
+    "fully_gripped_samples": 31,
+    "max_bone_length_error_m": 2.0544510856423948e-07,
+    "max_bone_vector_error_m": 2.1639626233128988e-07,
+    "foot_method": "Low, slow toe-contact windows only; five-frame smooth entry/exit; captured foot rotation retained",
+    "grip_method": "Right hand unchanged; left two-bone IK only for close reachable source gestures; one-handed gestures retained"
+  },
+  "max_bake_endpoint_error_m": 7.215917118074447e-07,
+  "bone_count": 31,
+  "frame_size": 384,
+  "sword_rest_axis": [
+    0.21688181161880493,
+    0.532764732837677,
+    0.8180000185966492
+  ],
+  "ink_edge_m": 0.0028,
+  "character": {
+    "objects": [
+      "JiangBody",
+      "JiangGarment",
+      "JiangFace",
+      "JiangHair"
+    ],
+    "vertex_count": 15862,
+    "reference_paint": {
+      "source": "assets/art/v2/jiang-yanqiu-v2.png",
+      "regions_top_left_px": {
+        "Jiang_Garment_blue": [
+          540,
+          1000,
+          600,
+          1070
+        ],
+        "Jiang_Garment_blue_dark": [
+          900,
+          1040,
+          960,
+          1100
+        ],
+        "Jiang_Garment_blue_light": [
+          277,
+          475,
+          297,
+          510
+        ],
+        "Jiang_Garment_ivory": [
+          210,
+          1060,
+          315,
+          1125
+        ],
+        "Jiang_Garment_ivory_light": [
+          210,
+          1060,
+          315,
+          1125
+        ],
+        "Jiang_Hair_blue_light": [
+          277,
+          475,
+          297,
+          510
+        ],
+        "Jiang_Hair_hair": [
+          700,
+          375,
+          800,
+          465
+        ],
+        "Jiang_Hair_hair_light": [
+          700,
+          375,
+          800,
+          465
+        ],
+        "Jiang_Hair_hair_mid": [
+          700,
+          375,
+          800,
+          465
+        ]
+      },
+      "method": "Original opaque artwork patches mapped by fixed rest-space UVs; original image unchanged"
+    },
+    "identity": {
+      "name": "江砚秋",
+      "reference": "assets/art/v2/jiang-yanqiu-v2.png",
+      "interpretation": "Original volumetric reading with warm light skin, larger brown eyes, layered swept hair, a long high ponytail, pale-blue fabric ribbons, and a knee-length ivory/blue wrap robe.",
+      "coordinate_system": "Blender Z-up; face -Y; character left +X",
+      "face_center_m": [
+        0.002874307567253709,
+        0.005636828951537609,
+        0.4280233681201935
+      ],
+      "face_radii_m": [
+        0.20000000298023224,
+        0.17000000178813934,
+        0.23000000417232513
+      ],
+      "high_ponytail": true,
+      "robe_panels_reach_near_knee": true
+    },
+    "landmarks": {
+      "closed_fist_centers_m": {
+        "left": [
+          0.5453485250473022,
+          0.0144581887871027,
+          0.2801838517189026
+        ],
+        "right": [
+          -0.5493959784507751,
+          0.020484335720539093,
+          0.2744775712490082
+        ]
+      }
+    },
+    "cloth_weights": {
+      "max_influences_allowed": 4,
+      "max_observed_influences": 4,
+      "all_normalized": true,
+      "max_weight_sum_error": 2.220446049250313e-16,
+      "per_object": {
+        "JiangBody": {
+          "vertex_count": 1910,
+          "max_influences": 3,
+          "max_weight_sum_error": 2.220446049250313e-16
+        },
+        "JiangGarment": {
+          "vertex_count": 5472,
+          "max_influences": 4,
+          "max_weight_sum_error": 2.220446049250313e-16
+        },
+        "JiangFace": {
+          "vertex_count": 3510,
+          "max_influences": 1,
+          "max_weight_sum_error": 0.0
+        },
+        "JiangHair": {
+          "vertex_count": 4970,
+          "max_influences": 1,
+          "max_weight_sum_error": 0.0
+        }
+      },
+      "torso_bones": [
+        "root",
+        "lowerback",
+        "upperback",
+        "thorax"
+      ],
+      "left_sleeve_bones": [
+        "lclavicle",
+        "lhumerus",
+        "lradius",
+        "lwrist"
+      ],
+      "right_sleeve_bones": [
+        "rclavicle",
+        "rhumerus",
+        "rradius",
+        "rwrist"
+      ],
+      "lower_panels_follow": {
+        "left": "lfemur",
+        "right": "rfemur"
+      },
+      "deformation": "normalized linear blend skinning; preserve volume disabled"
+    }
+  },
+  "source_sha256": "a217c49c4d3e834b9a7da1ccaffb12f0b8aeed9b7c90c114b365e5f3d265a6df",
+  "reference_art_sha256": "e783171f4dd888be02683412ec401909623afa4a19e8e06e402e0afe654bfaa5",
+  "costume_reference_sha256": "2e57778cc533371f1eea54cc9af7652cade1e9bb4e8eda0902101877a2d6eacc",
+  "model_sha256": "129dec9f7dafef413c1d03c8971bb45e853ab86258746c2c07dbd5b570e8c682",
+  "blender_version": "4.5.9 LTS",
+  "cost_rmb": 0,
+  "phases": [
+    {
+      "start": 0,
+      "label": "起势 / 迈步"
+    },
+    {
+      "start": 0.9,
+      "label": "转髋 / 背转"
+    },
+    {
+      "start": 2.1,
+      "label": "斜劈 / 回剑"
+    },
+    {
+      "start": 5.8,
+      "label": "低势 / 再起"
+    },
+    {
+      "start": 7.6,
+      "label": "收势"
+    }
+  ],
+  "limitations": [
+    "Original full-body interpretation of approved waist-up character reference",
+    "Capture has no weapon markers; prop and left grip are authored",
+    "Limited contact cleanup, no full-body physics",
+    "Skin-deformed robe; no cloth simulation",
+    "Human swordplay is not authenticated Chinese sword technique",
+    "Not a closed loop"
+  ]
+}

@@ -1,0 +1,1544 @@
+{
+  "schema_version": 1,
+  "fps": 25,
+  "frame_count": 61,
+  "duration": 2.44,
+  "width": 384,
+  "height": 576,
+  "frames": [
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-000.png",
+      "region": [
+        4,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        340,
+        1084
+      ],
+      "foot_bbox": [
+        308,
+        1070,
+        66,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-000.png",
+      "region": [
+        396,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        340,
+        1084
+      ],
+      "foot_bbox": [
+        308,
+        1070,
+        66,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-000.png",
+      "region": [
+        788,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        340,
+        1084
+      ],
+      "foot_bbox": [
+        308,
+        1070,
+        66,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-000.png",
+      "region": [
+        1180,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        340,
+        1084
+      ],
+      "foot_bbox": [
+        308,
+        1070,
+        66,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-000.png",
+      "region": [
+        4,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        340,
+        1084
+      ],
+      "foot_bbox": [
+        308,
+        1070,
+        66,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-000.png",
+      "region": [
+        396,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        341,
+        1084
+      ],
+      "foot_bbox": [
+        310,
+        1070,
+        64,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-000.png",
+      "region": [
+        788,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        346,
+        1080
+      ],
+      "foot_bbox": [
+        316,
+        1066,
+        62,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-000.png",
+      "region": [
+        1180,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        356,
+        1078
+      ],
+      "foot_bbox": [
+        326,
+        1064,
+        62,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-000.png",
+      "region": [
+        4,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        357,
+        1078
+      ],
+      "foot_bbox": [
+        328,
+        1064,
+        60,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-000.png",
+      "region": [
+        396,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        374,
+        1078
+      ],
+      "foot_bbox": [
+        342,
+        1064,
+        66,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-000.png",
+      "region": [
+        788,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        375,
+        1078
+      ],
+      "foot_bbox": [
+        342,
+        1064,
+        68,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-000.png",
+      "region": [
+        1180,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        406,
+        1080
+      ],
+      "foot_bbox": [
+        366,
+        1066,
+        82,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-001.png",
+      "region": [
+        4,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        417,
+        1082
+      ],
+      "foot_bbox": [
+        376,
+        1068,
+        84,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-001.png",
+      "region": [
+        396,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        425,
+        1084
+      ],
+      "foot_bbox": [
+        368,
+        1070,
+        116,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-001.png",
+      "region": [
+        788,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        430,
+        1090
+      ],
+      "foot_bbox": [
+        370,
+        1076,
+        122,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-001.png",
+      "region": [
+        1180,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        430,
+        1092
+      ],
+      "foot_bbox": [
+        370,
+        1078,
+        122,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-001.png",
+      "region": [
+        4,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        430,
+        1092
+      ],
+      "foot_bbox": [
+        370,
+        1078,
+        122,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-001.png",
+      "region": [
+        396,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        430,
+        1092
+      ],
+      "foot_bbox": [
+        370,
+        1078,
+        122,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-001.png",
+      "region": [
+        788,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        429,
+        1092
+      ],
+      "foot_bbox": [
+        368,
+        1078,
+        124,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-001.png",
+      "region": [
+        1180,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        429,
+        1092
+      ],
+      "foot_bbox": [
+        368,
+        1078,
+        124,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-001.png",
+      "region": [
+        4,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        429,
+        1092
+      ],
+      "foot_bbox": [
+        368,
+        1078,
+        124,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-001.png",
+      "region": [
+        396,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        429,
+        1092
+      ],
+      "foot_bbox": [
+        368,
+        1078,
+        124,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-001.png",
+      "region": [
+        788,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        426,
+        1090
+      ],
+      "foot_bbox": [
+        362,
+        1076,
+        130,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-001.png",
+      "region": [
+        1180,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        424,
+        1088
+      ],
+      "foot_bbox": [
+        358,
+        1074,
+        134,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-002.png",
+      "region": [
+        4,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        424,
+        1088
+      ],
+      "foot_bbox": [
+        358,
+        1074,
+        134,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-002.png",
+      "region": [
+        396,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        423,
+        1088
+      ],
+      "foot_bbox": [
+        356,
+        1074,
+        136,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-002.png",
+      "region": [
+        788,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        423,
+        1088
+      ],
+      "foot_bbox": [
+        356,
+        1074,
+        136,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-002.png",
+      "region": [
+        1180,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        419,
+        1086
+      ],
+      "foot_bbox": [
+        350,
+        1072,
+        140,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-002.png",
+      "region": [
+        4,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        419,
+        1086
+      ],
+      "foot_bbox": [
+        350,
+        1072,
+        140,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-002.png",
+      "region": [
+        396,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        417,
+        1084
+      ],
+      "foot_bbox": [
+        348,
+        1070,
+        140,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-002.png",
+      "region": [
+        788,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        418,
+        1080
+      ],
+      "foot_bbox": [
+        360,
+        1066,
+        118,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-002.png",
+      "region": [
+        1180,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        426,
+        1078
+      ],
+      "foot_bbox": [
+        378,
+        1064,
+        98,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-002.png",
+      "region": [
+        4,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        427,
+        1078
+      ],
+      "foot_bbox": [
+        380,
+        1064,
+        96,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-002.png",
+      "region": [
+        396,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        431,
+        1074
+      ],
+      "foot_bbox": [
+        388,
+        1060,
+        88,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-002.png",
+      "region": [
+        788,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        427,
+        1068
+      ],
+      "foot_bbox": [
+        378,
+        1054,
+        100,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-002.png",
+      "region": [
+        1180,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        435,
+        1060
+      ],
+      "foot_bbox": [
+        374,
+        1046,
+        124,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-003.png",
+      "region": [
+        4,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        397,
+        1056
+      ],
+      "foot_bbox": [
+        286,
+        1042,
+        224,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-003.png",
+      "region": [
+        396,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        398,
+        1054
+      ],
+      "foot_bbox": [
+        280,
+        1040,
+        238,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-003.png",
+      "region": [
+        788,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        460,
+        1060
+      ],
+      "foot_bbox": [
+        400,
+        1046,
+        122,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-003.png",
+      "region": [
+        1180,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        461,
+        1062
+      ],
+      "foot_bbox": [
+        402,
+        1048,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-003.png",
+      "region": [
+        4,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        463,
+        1060
+      ],
+      "foot_bbox": [
+        404,
+        1046,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-003.png",
+      "region": [
+        396,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        461,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        116,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-003.png",
+      "region": [
+        788,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        462,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        118,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-003.png",
+      "region": [
+        1180,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        462,
+        1066
+      ],
+      "foot_bbox": [
+        404,
+        1052,
+        118,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-003.png",
+      "region": [
+        4,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        462,
+        1066
+      ],
+      "foot_bbox": [
+        404,
+        1052,
+        118,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-003.png",
+      "region": [
+        396,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        462,
+        1066
+      ],
+      "foot_bbox": [
+        404,
+        1052,
+        118,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-003.png",
+      "region": [
+        788,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        463,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-003.png",
+      "region": [
+        1180,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        463,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-004.png",
+      "region": [
+        4,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        463,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-004.png",
+      "region": [
+        396,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        463,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-004.png",
+      "region": [
+        788,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        463,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-004.png",
+      "region": [
+        1180,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        463,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-004.png",
+      "region": [
+        4,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        463,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-004.png",
+      "region": [
+        396,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        463,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-004.png",
+      "region": [
+        788,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        463,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-004.png",
+      "region": [
+        1180,
+        588,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        463,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-004.png",
+      "region": [
+        4,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        463,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-004.png",
+      "region": [
+        396,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        463,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": true,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-004.png",
+      "region": [
+        788,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        463,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": true,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-004.png",
+      "region": [
+        1180,
+        1172,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        463,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/sword_image_clean_matte_v1/atlas-005.png",
+      "region": [
+        4,
+        4,
+        384,
+        576
+      ],
+      "source_anchor_px": [
+        463,
+        1064
+      ],
+      "foot_bbox": [
+        404,
+        1050,
+        120,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    }
+  ],
+  "files_sha256": {
+    "res://assets/art/sword_image_clean_matte_v1/atlas-004.png": "2515b501fc60c7d68b4f1d58698e1a2b8dd77e6aacc91cb71184794a840ff92d",
+    "res://assets/art/sword_image_clean_matte_v1/atlas-005.png": "a4f73b60959035068bc68ba5e26fdf75272429868aa5f6d1ffa0f6556f4dce62",
+    "res://assets/art/sword_image_clean_matte_v1/atlas-001.png": "3888d9b5202eaa9190aea8bb96afd2f62115ed80dab73a824c51881c42155559",
+    "res://assets/art/sword_image_clean_matte_v1/atlas-000.png": "126e436f1626bc835f1175bb613fa522ea1f650af8b6231b4349a660ce5fd8d3",
+    "res://assets/art/sword_image_clean_matte_v1/atlas-002.png": "c01c110e26faca67a92cf40a6f86ce97d2d3691deb933891cdeff073949981ee",
+    "res://assets/art/sword_image_clean_matte_v1/atlas-003.png": "e0827a064ca50ea4c9f1ba288afd64bed8a725b988562eb913610833bd146395"
+  },
+  "source_video_sha256": "1975f13cbae95c10623b6c0cab9b9d08ed8c3af00f389fff8baf4e5543d991a8"
+}

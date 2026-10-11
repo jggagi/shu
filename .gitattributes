@@ -2,3 +2,7 @@
 *.cmd text eol=crlf
 *.ttf binary
 *.png binary
+
+# Preserve upstream motion source bytes and provenance hashes, including CRLF and spacing.
+assets/data/sword_mocap/source/*.asf -text -diff
+assets/data/sword_mocap/source/*.amc -text -diff

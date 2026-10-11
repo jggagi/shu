@@ -1,0 +1,11 @@
+{
+  "Source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
+  "SourceSHA256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
+  "License": "SIL Open Font License 1.1",
+  "LicenseFile": "OFL-Serif.txt",
+  "DerivedName": "Shu Sword Jiang Legacy Serif",
+  "Tool": "fontTools 4.51.0",
+  "DerivedSHA256": "e30d54fec04b745c4fcefb82dfd1d60308db8af9f750744b23f1e37f003365a3",
+  "Codepoints": 229,
+  "MissingCodepoints": []
+}

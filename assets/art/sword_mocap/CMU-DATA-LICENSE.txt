@@ -1,0 +1,9 @@
+CMU Graphics Lab Motion Capture Database
+https://mocap.cs.cmu.edu/
+https://mocap.cs.cmu.edu/faqs.php
+
+The motion capture data may be copied, modified, or redistributed without permission.
+
+CMU does not guarantee data quality or the accuracy of motion classifications.
+Retrieved from the official FAQ; saved HTML evidence is in .local/qa/sword-mocap-v1/.
+This is a permissive dataset statement, not a claim that CMU assigned a CC0 license.

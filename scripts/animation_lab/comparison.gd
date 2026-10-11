@@ -284,7 +284,7 @@ func _sample_all() -> void:
 	if live_player != null and live_animations.has(clip):
 		var animation_name: String = live_animations[clip]
 		if live_player.current_animation != animation_name:live_player.play(animation_name)
-		
+
 		# Blender starts at frame 1; glTF retains its 1/fps time origin.
 		live_player.seek(seconds + 1.0/float(data.fps),true)
 		live_player.advance(0.0)

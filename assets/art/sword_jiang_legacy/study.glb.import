@@ -1,0 +1,6 @@
+[params]
+animation/fps=60
+animation/trimming=false
+_subresources={
+"nodes": {"PATH:AnimationPlayer": {"compression/enabled": false, "optimizer/enabled": false}}
+}

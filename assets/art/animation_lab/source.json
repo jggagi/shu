@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Codex for shu, original procedural motion and study geometry",
+  "purpose": "Zero-cost animation pipeline exploration; final character art and martial choreography unapproved",
+  "source_assets": "No external character pixels or motions imported. Existing shu background art and Jiang palette referenced only.",
+  "pipelines": {
+    "A": "Native Skeleton2D/Bone2D AnimationPlayer, six weighted sleeve polygons; hand and weapon presentation follow projected joints",
+    "B": "Blender 4.5.9 EEVEE transparent sequence at 30fps, 120 frames x 3, fixed camera and canvas",
+    "C": "Same original Blender model and actions in GLB with Skeleton3D/AnimationPlayer; Compatibility renderer"
+  },
+  "glb_time_origin_seconds": 0.03333333333333333,
+  "motion_cost_rmb": 0,
+  "sha256": {
+    "assets/data/animation_lab/motion.json": "f35bf165456e60a9e069a5a682f920e6f3d7e4b22711fb52a958c3ff3dc79885",
+    "assets/art/animation_lab/model.glb": "8a737aba92b4b1879c6deed5f3aa43d527ba41a9e8ee8e7a4daa2460b2838b99",
+    "scripts/animation_lab/native_actor.gd": "96d5e708a9b2a5c972f0ef4a01ddbbb7c97f3d8d57971a31fa989765b46192d9",
+    "tools/animation_lab/make_blender_demo.py": "b411d5c80c75afe5558d68b1ef95e90444ec094a86671599152e283940a05d56",
+    "assets/art/animation_lab/atlas.json": "fb141885e631fbe55a7cf1f7df1eb1f54abeeb1d76da9d577a6cf0b40c33f3b4",
+    "assets/art/animation_lab/cut_0.png": "90a4787735a23459e1528158da2f89d1a146e60f74d1f8abd50f3a3910d314cd",
+    "assets/art/animation_lab/cut_1.png": "1aa6b7548fc1c84ace02c8ecbfafd9d6cb698297239e19deec3cf65768e61fbc",
+    "assets/art/animation_lab/cut_2.png": "774390ae0373c2ca87caabbfe7c312453d4ca1ac1911a0989382ab3790334ed1",
+    "assets/art/animation_lab/cut_3.png": "a62b76d94a34695f44ba13df0cd7a6813d2b949d0df96a0aed95366a8bb422e7",
+    "assets/art/animation_lab/staff_0.png": "733089aa03dd022f923fba682eba12325c161b438cad8c1a4146b43dea51d457",
+    "assets/art/animation_lab/staff_1.png": "fbda6be55b6df960d1266ab076c16dbe0973987b90516cda21653dd60017d0fa",
+    "assets/art/animation_lab/staff_2.png": "71ab8a90e3f5127ee09ab236538e9f5afc6a434be34562f06046f47771b149db",
+    "assets/art/animation_lab/staff_3.png": "18b64d47a605feacf41c4a6e9ababea0e0673e7c9ee16273a32ecc4390057138",
+    "assets/art/animation_lab/thrust_0.png": "8397853457b4115a1fd376896a0922ec6c441fd4b96ddb5a47fd9bed088225ab",
+    "assets/art/animation_lab/thrust_1.png": "b43ee912db4bde7b99520045489c24d707731d94cf15d6fcf38f138c72d517ae",
+    "assets/art/animation_lab/thrust_2.png": "c4b7f68fd028e6206cebb7830ab33c1f0fc4364d3f9e370e204eeb694a30fbfe",
+    "assets/art/animation_lab/thrust_3.png": "c4923668f4280d77da2cc69d09a5c2cefba88f519a8a9fedf9d40a154739cee6"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "Source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
+  "SourceSHA256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
+  "License": "SIL Open Font License 1.1",
+  "LicenseFile": "OFL-Serif.txt",
+  "DerivedName": "Shu Animation Lab Serif",
+  "Codepoints": 221,
+  "Tool": "fontTools 4.51.0",
+  "DerivedSHA256": "48c7f6f68215b4c6869e830f9584b525b3b2015b78d18055f92386ba294f7fb9",
+  "Rebuild": "python tools/animation_lab/rebuild_font.py <source-font>"
+}

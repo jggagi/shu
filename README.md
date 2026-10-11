@@ -143,3 +143,22 @@ python tools/serve_courtyard.py --port 8772
 ```
 
 Web 导出使用独立 `.local` 快照覆盖入口，正式 project.godot 主场景保持。控制面板提供全部时辰／天气；4 动静、T 下一时辰、7／8／9 晴云雨、R 重置。时辰预览不推进 DemoState，主动预览在 Static 中仍平滑变化，运动保持冻结。详细验证与素材来源见 [庭院切片](docs/COURTYARD_SLICE.md)。
+
+
+## 动作方案对照实验
+
+[动作对照试玩入口](https://jggagi.github.io/shu/animation-lab/)：Godot 原生 2D 骨骼、Blender 30 fps 透明序列、同一 Blender 模型的实时 3D，三段原创研究动作共用镜头和时钟。支持半速／逐帧／时间轴／单看；用户已选择 A（Godot 原生 2D 骨骼）；研究人物和具体身法仍需打磨。零付费探索，购买另行确认；不接入正式养成结算。制作与验证见 [实验报告](docs/ANIMATION_OPTIONS_LAB.md)，实际公开构建以该入口 `build-info.json` 为准。
+
+
+## 真人动作灰模对照（2026-10-11，本地研究）
+
+针对 A 路线的背转／全身协调反馈，新增[同源真人动作 B/C 小样](docs/SWORD_MOCAP_STUDY.md)：60 fps 预渲染 2D 与完整骨架实时 3D，共用时钟和镜头。支持慢放、逐帧、拖动、单看；本机入口 [8791](http://127.0.0.1:8791/)。零付费灰模研究，用户已认可当前动作效果；最终主角尚未制作，历史 A 实现与已有游戏保持，B/C 尚未选为产品路线。
+
+江砚秋同源动作造型候选：见 [SWORD_JIANG_STUDY](docs/SWORD_JIANG_STUDY.md)。真人动作灰模已获正向反馈，新主角造型和最终B/C选择仍待试玩；本机独立入口8792，灰模8791保留。
+
+
+## 图像动作后山单式研究（当前单式已获认可）
+
+用户在 v4 边缘清理后反馈「已经很好了」（2026-10-11），认可当前转身挥剑在后山的本地观感。小样支持暂停、半速和逐帧，仍为独立研究入口，未替换正式养成。范围、来源、分阶段证据和剩余限制见 [后山单式记录](docs/SWORD_IMAGE_BACK_MOUNTAIN_SLICE.md)。
+
+新招式的可复用入口：[图像动作制作方法 v1](docs/IMAGE_MOTION_PRODUCTION_METHOD.md) · [game-image-motion-build](.agents/skills/game-image-motion-build/SKILL.md) · [单招式任务卡](.agents/skills/game-image-motion-build/references/shot-brief-template.md)。按“动作参考＋角色原画 → 时序生成 → 透明帧 → 固定大小与接触锚点 → 场景融合 → 试玩”制作；当前工具仍部分绑定此样本。下一扩展验证建议为不同剑式与溪边茶亭双手棍法，尚未执行或据此声明批量制作已通过。

@@ -47,6 +47,7 @@
 - 固定画景、天气、时辰与环境动态 → `.agents/skills/game-painted-scene-build/SKILL.md`。
 - 环境动物、生趣、scene capability 与 ambient scheduling → `.agents/skills/game-ambient-life-build/SKILL.md`。
 - Raster art production → `.agents/skills/game-art/SKILL.md`。
+- 离线原画驱动人物动作、透明帧、锚点与场景融合 → `.agents/skills/game-image-motion-build/SKILL.md`；行动结算仍走养成skill。
 - 养成行动、人物互动、物品叙事与支线 → `.agents/skills/game-cultivation-build/SKILL.md`。
 - 相关引用按当前任务读取，仍遵守本文件的四份必读资料。Skill 保存制作流程与验收方法，不代表 runtime/addon 已安装。
 - skill 未被当前 chat 自动发现时直接读取仓库文件，不因此安装全局 skill 或重新初始化。运行合同不代表对应 addon 已存在。

@@ -1,0 +1,11 @@
+{
+  "Source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
+  "SourceSHA256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
+  "License": "SIL Open Font License 1.1",
+  "LicenseFile": "OFL-Serif.txt",
+  "DerivedName": "Shu Sword Motion Serif",
+  "Tool": "fontTools 4.51.0",
+  "DerivedSHA256": "a09a6dbc6c3d4a929826a676ecaaf2ea547879a4def034518fcb870d592e08fa",
+  "Codepoints": 200,
+  "MissingCodepoints": []
+}

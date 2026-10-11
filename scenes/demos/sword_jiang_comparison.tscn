@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/sword_mocap/comparison.gd" id="1"]
+
+[node name="SwordJiangComparison" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+atlas_path = "res://assets/art/sword_jiang/atlas.json"
+model_path = "res://assets/art/sword_jiang/study.glb"
+study_path = "res://assets/data/sword_jiang/study.json"
+font_path = "res://assets/fonts/ShuSwordJiangSerif.ttf"
+view_crop = Rect2(32, 32, 320, 320)
+study_title = "江砚秋 · 真人动作造型小样"
+study_subtitle = "同一段真人动作，比较江砚秋造型在两种播放方式中的效果"
+study_footer = "CMU 真人动作 · 原创造型候选；握剑与落脚局部校准，衣袍随骨架运动。尚未接入养成。"
+actor_offset = Vector2(0, -20)

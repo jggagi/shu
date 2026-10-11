@@ -1,0 +1,11 @@
+{
+  "Source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifsc/NotoSerifSC%5Bwght%5D.ttf",
+  "SourceSHA256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
+  "License": "SIL Open Font License 1.1",
+  "LicenseFile": "OFL-Serif.txt",
+  "DerivedName": "Shu Image Motion Serif",
+  "Tool": "fontTools 4.51.0",
+  "DerivedSHA256": "111e6bdc469aa9ff2ea265ff2b99b53522b205e806a8e607667f64eaded4642a",
+  "Codepoints": 161,
+  "MissingCodepoints": []
+}

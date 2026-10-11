@@ -1,0 +1,64 @@
+{
+  "source_label": "CMU 02_09 · human swordplay capture",
+  "fps": 60,
+  "frame_count": 517,
+  "duration": 8.6,
+  "clip_start_frame": 1,
+  "clip_end_frame": 1033,
+  "original_fps": 120,
+  "camera": {
+    "position": [
+      -4.0,
+      -6.0,
+      3.200000047683716
+    ],
+    "target": [
+      0.0,
+      0.0,
+      0.9399999976158142
+    ],
+    "ortho": 3.3499999046325684,
+    "coordinate_system": "Blender Z up"
+  },
+  "stage_translation": [
+    -0.34894803166389465,
+    -0.03543074056506157,
+    0.011375432834029198
+  ],
+  "max_bake_endpoint_error_m": 1.0934846499326143e-06,
+  "phases": [
+    {
+      "start": 0,
+      "label": "起势 / 迈步"
+    },
+    {
+      "start": 0.9,
+      "label": "转髋 / 背转"
+    },
+    {
+      "start": 2.1,
+      "label": "斜劈 / 回剑"
+    },
+    {
+      "start": 5.8,
+      "label": "低势 / 再起"
+    },
+    {
+      "start": 7.6,
+      "label": "收势"
+    }
+  ],
+  "limitations": [
+    "Research mannequin, not Jiang final art",
+    "Sword prop rigidly attached to right hand; no captured weapon markers",
+    "Human swordplay is not authenticated Chinese sword technique",
+    "No Q proportions or foot cleanup applied",
+    "Not a closed loop"
+  ],
+  "bone_count": 31,
+  "mesh_vertices": 8126,
+  "source_sha256": "a217c49c4d3e834b9a7da1ccaffb12f0b8aeed9b7c90c114b365e5f3d265a6df",
+  "model_sha256": "11e03c4f46c8333d8bfefebaa122f2a9e24b1afa9b4d9cba62058ae9a65ebe81",
+  "blender_version": "4.5.9 LTS",
+  "cost_rmb": 0
+}

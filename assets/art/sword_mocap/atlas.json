@@ -1,0 +1,4666 @@
+{
+  "atlas_count": 21,
+  "decoded_rgba_bytes": 215040000,
+  "duration": 8.6,
+  "fps": 60,
+  "frame_count": 517,
+  "frames": [
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-000.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-001.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-002.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-003.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-004.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-005.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-006.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-007.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-008.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-009.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-010.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-011.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-012.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-013.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-014.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-015.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-016.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-017.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-018.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        640,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        960,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        1280,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        0,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        320,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        640,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        960,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-019.png",
+      "region": [
+        1280,
+        1280,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        0,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        320,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        640,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        960,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        1280,
+        0,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        0,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        320,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        640,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        960,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        1280,
+        320,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        0,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        320,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        640,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        960,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        1280,
+        640,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        0,
+        960,
+        320,
+        320
+      ]
+    },
+    {
+      "path": "res://assets/art/sword_mocap/atlas-020.png",
+      "region": [
+        320,
+        960,
+        320,
+        320
+      ]
+    }
+  ],
+  "height": 320,
+  "minimum_frame_margin_px": 66,
+  "schema_version": 1,
+  "width": 320
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "packager": {
+    "name": "package_generated_clip.py",
+    "version": "1.0.0",
+    "offline": true,
+    "network_access_used": false
+  },
+  "source": {
+    "basename": "41156a4d-7119-46dc-8f13-f1721bae3459.mp4",
+    "sha256": "1975f13cbae95c10623b6c0cab9b9d08ed8c3af00f389fff8baf4e5543d991a8",
+    "codec": "h264",
+    "width": 768,
+    "height": 1152,
+    "fps": 25,
+    "frame_count": 61,
+    "duration_seconds": 2.44,
+    "reported_lineage": {
+      "provider": "ModelScope",
+      "model_family": "Wan",
+      "verification": "User-reported lineage; generation job, exact model/version, prompt, and seed were not independently verified."
+    },
+    "user_feedback": "User said the generated effect looked good."
+  },
+  "segmentation": {
+    "model_filename": "isnet-anime.onnx",
+    "model_sha256": "f15622d853e8260172812b657053460e20806f04b9e05147d49af7bed31a6e99",
+    "runtime": "ONNX Runtime",
+    "execution_provider": "CPUExecutionProvider",
+    "session_threads": {
+      "intra_op": 2,
+      "inter_op": 1,
+      "execution_mode": "ORT_SEQUENTIAL"
+    },
+    "preprocessing": {
+      "color": "RGB",
+      "resize": [
+        1024,
+        1024
+      ],
+      "resize_filter": "Lanczos",
+      "normalization": "float pixel array divided by max pixel value; subtract RGB means",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tensor": "NCHW float32 with batch dimension",
+      "prediction": "first output, channel zero; min-max normalized; Lanczos resized to source frame size"
+    },
+    "alpha_trim": {
+      "below": 8,
+      "above": 247,
+      "formula": "(mask - 8) * 255 / (247 - 8), clipped to [0, 255], uint8 truncation"
+    }
+  },
+  "packaging": {
+    "rgb_art": "Original decoded RGB is retained; only alpha is added, then RGB and alpha are resized together to the fixed frame cell.",
+    "temporal_policy": {
+      "fps": 25,
+      "frame_count": 61,
+      "duration_seconds": 2.44,
+      "interpolation": false,
+      "crossfade": false,
+      "loop_synthesis": false,
+      "per_frame_crop_or_scale": false
+    },
+    "atlas": {
+      "columns": 4,
+      "rows": 3,
+      "padding_px": 4,
+      "page_width": 1568,
+      "page_height": 1752,
+      "page_count": 6
+    },
+    "foot_coordinates": "Threshold the 384x576 alpha at 128, select the largest connected component in its bottom 30%, and derive support from its final 8 cell rows (16 native source pixels). source_anchor_px is the support-pixel midpoint at the component's lowest row; source_anchor_px and foot_bbox coordinates are doubled to native 768x1152 source pixels. foot_bbox is the support bounds."
+  },
+  "processing_cost": {
+    "local_packaging_usd": 0,
+    "upstream_generation_cost": "Not verified."
+  },
+  "software_versions": {
+    "python": "3.12.7",
+    "numpy": "2.4.6",
+    "pillow": "12.3.0",
+    "scipy": "1.18.0",
+    "onnxruntime": "1.27.0",
+    "ffmpeg": "ffmpeg version 8.0.1 Copyright (c) 2000-2025 the FFmpeg developers",
+    "ffprobe": "ffprobe version 8.0.1 Copyright (c) 2007-2025 the FFmpeg developers"
+  },
+  "anchor_calibration": {
+    "method": "Derived from the saved 384x576 RGBA alpha frames; no segmentation was rerun.",
+    "threshold": 128,
+    "bottom_band_fraction": 0.3,
+    "support_rows_cell": 8,
+    "support_rows_source_pixels": 16,
+    "source_coordinate_scale": 2
+  }
+}

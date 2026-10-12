@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/sword_image_driven/back_mountain_pilot.gd" id="1"]
+
+[node name="HeroMartialSwordReview" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+review_font_path = "res://assets/fonts/ShuHeroMartialSerif.ttf"
+source_manifest_path = "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas.json"
+clean_manifest_path = ""
+review_window_title = "江砚秋 · 后山横抹回剑"
+review_header = "后山 · 横抹回剑"
+action_label = "横抹回剑"
+actor_position = Vector2(1010, 565)
+actor_scale = Vector2(0.78, 0.78)
+fixed_source_anchor_override_enabled = true
+fixed_source_anchor_px = Vector2(424, 904)

@@ -1,6 +1,9 @@
 extends Node2D
 # Offline transparent frames. There is no gameplay state, pose synthesis or body scaling.
 const MANIFEST := "res://assets/art/sword_image_driven_v1/atlas.json"
+@export var manifest_path: String = MANIFEST
+@export var fixed_source_anchor_override_enabled := false
+@export var fixed_source_anchor_px: Vector2 = Vector2.ZERO
 var data: Dictionary = {}
 var frames: Array[AtlasTexture] = []
 var anchors: Array[Vector2] = []
@@ -14,9 +17,10 @@ var speed := 1.0
 signal completed
 
 func _ready() -> void:
-	data = JSON.parse_string(FileAccess.get_file_as_string(MANIFEST))
+	data = JSON.parse_string(FileAccess.get_file_as_string(manifest_path))
 	fps = float(data.fps)
 	duration = float(data.duration)
+	var manifest_cell_scale := float(data.get("cell_scale", 0.5))
 	var pages: Dictionary = {}
 	for entry: Dictionary in data.frames:
 		var page: String = entry.path
@@ -28,30 +32,34 @@ func _ready() -> void:
 		frame.region = Rect2(float(r[0]), float(r[1]), float(r[2]), float(r[3]))
 		frame.filter_clip = true
 		frames.append(frame)
-		var a: Array = entry.source_anchor_px
-		anchors.append(Vector2(float(a[0]), float(a[1])) * 0.5)
-	# A small median rejects segmentation outliers without independently changing body size.
-	var raw := anchors.duplicate()
-	for i in anchors.size():
-		var xs: Array[float] = []
-		var ys: Array[float] = []
-		for j in range(maxi(0, i - 2), mini(anchors.size(), i + 3)):
-			xs.append(raw[j].x)
-			ys.append(raw[j].y)
-		xs.sort()
-		ys.sort()
-		anchors[i] = Vector2(xs[xs.size() / 2], ys[ys.size() / 2])
-	# Sole switching during the turn needs a continuous translation, never a scale change.
-	var filtered := anchors.duplicate()
-	for i in anchors.size():
-		var total := Vector2.ZERO
-		var total_weight := 0.0
-		for j in range(maxi(0, i - 6), mini(anchors.size(), i + 7)):
-			var distance := float(j - i)
-			var weight := exp(-distance * distance / 18.0)
-			total += filtered[j] * weight
-			total_weight += weight
-		anchors[i] = total / total_weight
+		if fixed_source_anchor_override_enabled:
+			anchors.append(fixed_source_anchor_px * manifest_cell_scale)
+		else:
+			var a: Array = entry.source_anchor_px
+			anchors.append(Vector2(float(a[0]), float(a[1])) * 0.5)
+	if not fixed_source_anchor_override_enabled:
+		# A small median rejects segmentation outliers without independently changing body size.
+		var raw := anchors.duplicate()
+		for i in anchors.size():
+			var xs: Array[float] = []
+			var ys: Array[float] = []
+			for j in range(maxi(0, i - 2), mini(anchors.size(), i + 3)):
+				xs.append(raw[j].x)
+				ys.append(raw[j].y)
+			xs.sort()
+			ys.sort()
+			anchors[i] = Vector2(xs[xs.size() / 2], ys[ys.size() / 2])
+		# Sole switching during the turn needs a continuous translation, never a scale change.
+		var filtered := anchors.duplicate()
+		for i in anchors.size():
+			var total := Vector2.ZERO
+			var total_weight := 0.0
+			for j in range(maxi(0, i - 6), mini(anchors.size(), i + 7)):
+				var distance := float(j - i)
+				var weight := exp(-distance * distance / 18.0)
+				total += filtered[j] * weight
+				total_weight += weight
+			anchors[i] = total / total_weight
 	sprite.centered = false
 	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	add_child(sprite)

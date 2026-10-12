@@ -3,6 +3,16 @@ extends "res://scripts/back_mountain_training.gd"
 const Clip = preload("res://scripts/sword_image_driven/clip_actor.gd")
 const CLEAN_MANIFEST := "res://assets/art/sword_image_clean_matte_v1/atlas.json"
 const PILOT_FONT := "res://assets/fonts/ShuSwordImageSerif.ttf"
+@export var review_font_path: String = PILOT_FONT
+@export var source_manifest_path: String = "res://assets/art/sword_image_driven_v1/atlas.json"
+@export var clean_manifest_path: String = CLEAN_MANIFEST
+@export var review_window_title := "江砚秋 · 后山转身挥剑"
+@export var review_header := "后山 · 转身挥剑"
+@export var action_label := "转身挥剑"
+@export var actor_position: Vector2 = Vector2(1010.0, 565.0)
+@export var actor_scale: Vector2 = Vector2(0.62, 0.62)
+@export var fixed_source_anchor_override_enabled := false
+@export var fixed_source_anchor_px: Vector2 = Vector2.ZERO
 var clip: Node2D
 var play_button: Button
 var replay_button: Button
@@ -27,14 +37,18 @@ var _updating_timeline := false
 var _resume_clip_after_static := false
 
 func _ready() -> void:
-	get_window().title = "江砚秋 · 后山转身挥剑"
+	get_window().title = review_window_title
 	config = JSON.parse_string(FileAccess.get_file_as_string(CONFIG_PATH))
 	_build_theme()
 	_build_gust_schedule()
 	_build_blink_schedule()
 	_build_scene()
-	_prepare_clean_matte()
-	set_matte_cleanup(true)
+	if clean_manifest_path.is_empty():
+		matte_enabled = false
+		matte_button.hide()
+	else:
+		_prepare_clean_matte()
+		set_matte_cleanup(true)
 	environment_config = JSON.parse_string(FileAccess.get_file_as_string("res://assets/data/back_mountain_environment.json"))
 	environment_presenter.configure(environment_config)
 	environment_adapter = EnvironmentAdapter.new()
@@ -51,15 +65,18 @@ func _ready() -> void:
 
 func _build_theme() -> void:
 	var game_theme := Theme.new()
-	game_theme.default_font = load(PILOT_FONT)
+	game_theme.default_font = load(review_font_path)
 	game_theme.default_font_size = 20
 	theme = game_theme
 
 func _build_actor_and_sword() -> void:
 	clip = Clip.new()
 	clip.name = "JiangImageMotion"
-	clip.position = Vector2(1010, 565)
-	clip.scale = Vector2.ONE * 0.62
+	clip.manifest_path = source_manifest_path
+	clip.fixed_source_anchor_override_enabled = fixed_source_anchor_override_enabled
+	clip.fixed_source_anchor_px = fixed_source_anchor_px
+	clip.position = actor_position
+	clip.scale = actor_scale
 	_foreground_layer.add_child(clip)
 	_art_nodes.append(clip)
 	blend_material = ShaderMaterial.new()
@@ -98,9 +115,11 @@ func _build_actor_and_sword() -> void:
 
 func _build_header() -> void:
 	_add_panel(Rect2(0, 0, VIEW_SIZE.x, ART_TOP), PAPER, GOLD, 1)
-	_make_label("后山 · 转身挥剑", Rect2(36, 12, 330, 42), 30, INK)
+	_make_label(review_header, Rect2(36, 12, 330, 42), 30, INK)
 	_make_label("江砚秋 · 单式小样", Rect2(38, 53, 330, 25), 17, MUTED)
 	matte_button = _make_button("干净边缘", Rect2(375, 23, 160, 42), _toggle_matte_cleanup)
+	matte_button.visible = not clean_manifest_path.is_empty()
+	matte_button.disabled = clean_manifest_path.is_empty()
 	paper_button = _make_button("轻纸感", Rect2(550, 23, 120, 42), _toggle_paper_texture)
 	blend_button = _make_button("融入山色", Rect2(685, 23, 180, 42), _toggle_scene_blending)
 	time_button = _make_button("巳时", Rect2(880, 23, 122, 42), _next_pilot_time)
@@ -135,13 +154,15 @@ func _process(delta: float) -> void:
 func _refresh_pilot_ui() -> void:
 	if clip == null or phase_label == null:
 		return
-	phase_label.text = "末帧停留" if clip.seconds >= clip.duration else ("准备" if clip.seconds <= 0.0 else "转身挥剑")
+	phase_label.text = "末帧停留" if clip.seconds >= clip.duration else ("准备" if clip.seconds <= 0.0 else action_label)
 	play_button.text = "播放" if clip.paused else "暂停"
 	play_button.disabled = not dynamic_enabled
 	replay_button.disabled = not dynamic_enabled
 	speed_button.text = "半速" if clip.speed < 1.0 else "正常速度"
 	if matte_button != null:
 		matte_button.text = "干净边缘" if matte_enabled else "原始边缘"
+		matte_button.visible = not clean_manifest_path.is_empty()
+		matte_button.disabled = clean_manifest_path.is_empty()
 	if paper_button != null:
 		paper_button.text = "轻纸感" if paper_enabled else "无纸感"
 		paper_button.disabled = not blend_enabled
@@ -257,8 +278,10 @@ func set_paper_texture(value: bool) -> void:
 
 
 func _prepare_clean_matte() -> void:
+	if clean_manifest_path.is_empty():
+		return
 	original_frames.assign(clip.frames)
-	var manifest: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(CLEAN_MANIFEST))
+	var manifest: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(clean_manifest_path))
 	assert(manifest.frames.size() == original_frames.size())
 	assert(manifest.fps == clip.fps and manifest.duration == clip.duration)
 	var pages: Dictionary = {}
@@ -278,7 +301,7 @@ func _toggle_matte_cleanup() -> void:
 	set_matte_cleanup(not matte_enabled)
 
 func set_matte_cleanup(value: bool) -> void:
-	matte_enabled = value
+	matte_enabled = false if clean_manifest_path.is_empty() else value
 	if not original_frames.is_empty() and not clean_frames.is_empty():
 		clip.frames = clean_frames if value else original_frames
 		# Re-sample the same clock and same unchanged anchors; no activity is settled.

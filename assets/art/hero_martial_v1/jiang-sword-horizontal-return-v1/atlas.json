@@ -1,0 +1,1274 @@
+{
+  "schema_version": 1,
+  "shot_id": "jiang-sword-horizontal-return-v1",
+  "source_width": 960,
+  "source_height": 960,
+  "cell_scale": 0.5,
+  "fps": 25.0,
+  "fps_rational": "25/1",
+  "frame_count": 50,
+  "duration": 2.0,
+  "width": 480,
+  "height": 480,
+  "frames": [
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-000.png",
+      "region": [
+        4,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        424,
+        904
+      ],
+      "foot_bbox": [
+        400,
+        890,
+        50,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-000.png",
+      "region": [
+        492,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        424,
+        904
+      ],
+      "foot_bbox": [
+        400,
+        890,
+        50,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-000.png",
+      "region": [
+        980,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        424,
+        904
+      ],
+      "foot_bbox": [
+        400,
+        890,
+        50,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-000.png",
+      "region": [
+        1468,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        463,
+        896
+      ],
+      "foot_bbox": [
+        392,
+        882,
+        144,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-000.png",
+      "region": [
+        4,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        463,
+        896
+      ],
+      "foot_bbox": [
+        392,
+        882,
+        144,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-000.png",
+      "region": [
+        492,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        464,
+        890
+      ],
+      "foot_bbox": [
+        386,
+        876,
+        158,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-000.png",
+      "region": [
+        980,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        458,
+        882
+      ],
+      "foot_bbox": [
+        374,
+        868,
+        170,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-000.png",
+      "region": [
+        1468,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        465,
+        882
+      ],
+      "foot_bbox": [
+        388,
+        868,
+        156,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-000.png",
+      "region": [
+        4,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        467,
+        882
+      ],
+      "foot_bbox": [
+        392,
+        868,
+        152,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-000.png",
+      "region": [
+        492,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        519,
+        882
+      ],
+      "foot_bbox": [
+        496,
+        868,
+        48,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-000.png",
+      "region": [
+        980,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        519,
+        882
+      ],
+      "foot_bbox": [
+        496,
+        868,
+        48,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-000.png",
+      "region": [
+        1468,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        517,
+        880
+      ],
+      "foot_bbox": [
+        494,
+        866,
+        48,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-001.png",
+      "region": [
+        4,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        517,
+        880
+      ],
+      "foot_bbox": [
+        494,
+        866,
+        48,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-001.png",
+      "region": [
+        492,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        517,
+        880
+      ],
+      "foot_bbox": [
+        494,
+        866,
+        48,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-001.png",
+      "region": [
+        980,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        492,
+        862,
+        48,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-001.png",
+      "region": [
+        1468,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        492,
+        862,
+        48,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-001.png",
+      "region": [
+        4,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        492,
+        862,
+        48,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-001.png",
+      "region": [
+        492,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        514,
+        874
+      ],
+      "foot_bbox": [
+        490,
+        860,
+        50,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-001.png",
+      "region": [
+        980,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        514,
+        874
+      ],
+      "foot_bbox": [
+        490,
+        860,
+        50,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-001.png",
+      "region": [
+        1468,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        512,
+        870
+      ],
+      "foot_bbox": [
+        488,
+        856,
+        50,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-001.png",
+      "region": [
+        4,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        512,
+        870
+      ],
+      "foot_bbox": [
+        488,
+        856,
+        50,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-001.png",
+      "region": [
+        492,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        512,
+        870
+      ],
+      "foot_bbox": [
+        488,
+        856,
+        50,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-001.png",
+      "region": [
+        980,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        872
+      ],
+      "foot_bbox": [
+        490,
+        858,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-001.png",
+      "region": [
+        1468,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        874
+      ],
+      "foot_bbox": [
+        490,
+        860,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-002.png",
+      "region": [
+        4,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        517,
+        874
+      ],
+      "foot_bbox": [
+        492,
+        860,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-002.png",
+      "region": [
+        492,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        517,
+        874
+      ],
+      "foot_bbox": [
+        492,
+        860,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-002.png",
+      "region": [
+        980,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        516,
+        876
+      ],
+      "foot_bbox": [
+        492,
+        862,
+        50,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-002.png",
+      "region": [
+        1468,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-002.png",
+      "region": [
+        4,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-002.png",
+      "region": [
+        492,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-002.png",
+      "region": [
+        980,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-002.png",
+      "region": [
+        1468,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-002.png",
+      "region": [
+        4,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-002.png",
+      "region": [
+        492,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-002.png",
+      "region": [
+        980,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-002.png",
+      "region": [
+        1468,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-003.png",
+      "region": [
+        4,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-003.png",
+      "region": [
+        492,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-003.png",
+      "region": [
+        980,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-003.png",
+      "region": [
+        1468,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-003.png",
+      "region": [
+        4,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-003.png",
+      "region": [
+        492,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-003.png",
+      "region": [
+        980,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-003.png",
+      "region": [
+        1468,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-003.png",
+      "region": [
+        4,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-003.png",
+      "region": [
+        492,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-003.png",
+      "region": [
+        980,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-003.png",
+      "region": [
+        1468,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-004.png",
+      "region": [
+        4,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-004.png",
+      "region": [
+        492,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        515,
+        876
+      ],
+      "foot_bbox": [
+        490,
+        862,
+        52,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    }
+  ],
+  "files_sha256": {
+    "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-000.png": "bad080ceaf0e44c96c30416bcabd9ea350ee56d02efac5f3b110cf7112052715",
+    "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-001.png": "ce2e831ed5d6ab94b397001f34dda953d29306302f50b365491dcdf5c832a67f",
+    "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-002.png": "021fa286e691683f497678cd76bca1bcc02b303d71c9acdf5b9e45e6bccd8f14",
+    "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-003.png": "c289591b25f69cbb0942f9edd97167b39c6f31670db6712d0745b54c7faa4997",
+    "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/atlas-004.png": "7ea8bee7269bcc205b2378721d11e3e8beaad000a3a9a97673aff3a417b7aa85",
+    "res://assets/art/hero_martial_v1/jiang-sword-horizontal-return-v1/source.mp4": "e6a5e438f4e3c61ceac1a357d2d06b6514c129047f1863c904fa9fa4890a8f68"
+  },
+  "source_video_sha256": "e6a5e438f4e3c61ceac1a357d2d06b6514c129047f1863c904fa9fa4890a8f68"
+}

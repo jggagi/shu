@@ -42,16 +42,8 @@ html/focus_canvas_on_start=true
 def sha(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
-def main():
-    a=argparse.ArgumentParser(description=__doc__)
-    a.add_argument('--output', type=Path, required=True)
-    a.add_argument('--godot', default='godot')
-    a.add_argument('--stage-only', action='store_true')
-    args=a.parse_args()
-    root=Path(__file__).resolve().parents[2]
-    args.output.mkdir(parents=True, exist_ok=True)
-    stage=args.output/('stage-'+uuid.uuid4().hex[:10]);stage.mkdir()
-    files=[root/'scenes/demos/sword_image_back_mountain.tscn',
+def pilot_dependencies(root):
+    return [root/'scenes/demos/sword_image_back_mountain.tscn',
         *root.glob('scripts/sword_image_driven/*.gd'),
         *root.glob('tests/sword_image_pilot*.gd'),
         *root.glob('assets/art/sword_image_driven_v1/*'),
@@ -63,6 +55,17 @@ def main():
         *[root/('scripts/'+name+'.gd') for name in ['demo_state','environment_presenter','back_mountain_training','back_mountain_environment','back_mountain_lighting','back_mountain_ambient_life','ambient_life_presenter','ambient_cat_motion']],
         *[root/('assets/data/'+name+'.json') for name in ['rules','tea-full-source','back_mountain_training','back_mountain_environment','back_mountain_lighting','back_mountain_ambient_life']],
         root/'assets/fonts/ShuSwordImageSerif.ttf', root/'assets/fonts/source-sword-image.json',root/'assets/fonts/OFL-Serif.txt',root/'assets/fonts/ShuBackMountainSerif.ttf',root/'assets/fonts/ShuDemoSerif.ttf']
+
+def main():
+    a=argparse.ArgumentParser(description=__doc__)
+    a.add_argument('--output', type=Path, required=True)
+    a.add_argument('--godot', default='godot')
+    a.add_argument('--stage-only', action='store_true')
+    args=a.parse_args()
+    root=Path(__file__).resolve().parents[2]
+    args.output.mkdir(parents=True, exist_ok=True)
+    stage=args.output/('stage-'+uuid.uuid4().hex[:10]);stage.mkdir()
+    files=pilot_dependencies(root)
     hashes={}
     for source in files:
         if not source.is_file():

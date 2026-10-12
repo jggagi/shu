@@ -162,3 +162,5 @@ Web 导出使用独立 `.local` 快照覆盖入口，正式 project.godot 主场
 用户在 v4 边缘清理后反馈「已经很好了」（2026-10-11），认可当前转身挥剑在后山的本地观感。小样支持暂停、半速和逐帧，仍为独立研究入口，未替换正式养成。范围、来源、分阶段证据和剩余限制见 [后山单式记录](docs/SWORD_IMAGE_BACK_MOUNTAIN_SLICE.md)。
 
 新招式的可复用入口：[图像动作制作方法 v1](docs/IMAGE_MOTION_PRODUCTION_METHOD.md) · [game-image-motion-build](.agents/skills/game-image-motion-build/SKILL.md) · [单招式任务卡](.agents/skills/game-image-motion-build/references/shot-brief-template.md)。按“动作参考＋角色原画 → 时序生成 → 透明帧 → 固定大小与接触锚点 → 场景融合 → 试玩”制作；当前工具仍部分绑定此样本。下一扩展验证建议为不同剑式与溪边茶亭双手棍法，尚未执行或据此声明批量制作已通过。
+
+主角三类武功制作（更新2026-10-12）：剑法／拳掌完成50／53帧透明包和独立后山预览：[横抹回剑试玩](http://127.0.0.1:8814/)／[站桩冲拳试玩](http://127.0.0.1:8815/)，均为仅本机入口。两段原生行为与两窗口渲染、Web导出通过；剑法Web控件已查看，拳掌Web最后检查因浏览器安全策略阻止恢复而未完成。双手棍法两次获授权的官方ModelScope任务均FAILED，无源片。Windows和用户认可待验收。输入／原片仍可在[制作总览](http://127.0.0.1:8794/)和[透明帧检查](http://127.0.0.1:8794/matte-review.html?shot=fist)查看；来源、逐阶段证据与重建命令见[本轮记录](docs/HERO_MARTIAL_THREE_SLICE.md)。

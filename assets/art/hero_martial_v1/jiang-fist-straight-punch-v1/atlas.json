@@ -1,0 +1,1349 @@
+{
+  "schema_version": 1,
+  "shot_id": "jiang-fist-straight-punch-v1",
+  "source_width": 960,
+  "source_height": 960,
+  "cell_scale": 0.5,
+  "fps": 25.0,
+  "fps_rational": "25/1",
+  "frame_count": 53,
+  "duration": 2.12,
+  "width": 480,
+  "height": 480,
+  "frames": [
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-000.png",
+      "region": [
+        4,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        522,
+        810
+      ],
+      "foot_bbox": [
+        496,
+        796,
+        54,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-000.png",
+      "region": [
+        492,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        523,
+        810
+      ],
+      "foot_bbox": [
+        496,
+        796,
+        56,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-000.png",
+      "region": [
+        980,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        524,
+        810
+      ],
+      "foot_bbox": [
+        498,
+        796,
+        54,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-000.png",
+      "region": [
+        1468,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        492,
+        808
+      ],
+      "foot_bbox": [
+        428,
+        794,
+        130,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-000.png",
+      "region": [
+        4,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        491,
+        808
+      ],
+      "foot_bbox": [
+        424,
+        794,
+        136,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-000.png",
+      "region": [
+        492,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        492,
+        808
+      ],
+      "foot_bbox": [
+        426,
+        794,
+        134,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-000.png",
+      "region": [
+        980,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        531,
+        810
+      ],
+      "foot_bbox": [
+        504,
+        796,
+        56,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-000.png",
+      "region": [
+        1468,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        532,
+        812
+      ],
+      "foot_bbox": [
+        504,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-000.png",
+      "region": [
+        4,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        533,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        56,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-000.png",
+      "region": [
+        492,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        533,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        56,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-000.png",
+      "region": [
+        980,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        533,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        56,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-000.png",
+      "region": [
+        1468,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-001.png",
+      "region": [
+        4,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-001.png",
+      "region": [
+        492,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-001.png",
+      "region": [
+        980,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-001.png",
+      "region": [
+        1468,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-001.png",
+      "region": [
+        4,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-001.png",
+      "region": [
+        492,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-001.png",
+      "region": [
+        980,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-001.png",
+      "region": [
+        1468,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-001.png",
+      "region": [
+        4,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-001.png",
+      "region": [
+        492,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-001.png",
+      "region": [
+        980,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-001.png",
+      "region": [
+        1468,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-002.png",
+      "region": [
+        4,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-002.png",
+      "region": [
+        492,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-002.png",
+      "region": [
+        980,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-002.png",
+      "region": [
+        1468,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-002.png",
+      "region": [
+        4,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-002.png",
+      "region": [
+        492,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        534,
+        812
+      ],
+      "foot_bbox": [
+        506,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-002.png",
+      "region": [
+        980,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        533,
+        812
+      ],
+      "foot_bbox": [
+        504,
+        798,
+        60,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-002.png",
+      "region": [
+        1468,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        532,
+        812
+      ],
+      "foot_bbox": [
+        504,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-002.png",
+      "region": [
+        4,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        532,
+        812
+      ],
+      "foot_bbox": [
+        504,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-002.png",
+      "region": [
+        492,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        532,
+        812
+      ],
+      "foot_bbox": [
+        504,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-002.png",
+      "region": [
+        980,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        532,
+        812
+      ],
+      "foot_bbox": [
+        504,
+        798,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-002.png",
+      "region": [
+        1468,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        530,
+        810
+      ],
+      "foot_bbox": [
+        500,
+        796,
+        62,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-003.png",
+      "region": [
+        4,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        530,
+        810
+      ],
+      "foot_bbox": [
+        500,
+        796,
+        62,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-003.png",
+      "region": [
+        492,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        531,
+        810
+      ],
+      "foot_bbox": [
+        502,
+        796,
+        60,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-003.png",
+      "region": [
+        980,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        529,
+        808
+      ],
+      "foot_bbox": [
+        498,
+        794,
+        64,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-003.png",
+      "region": [
+        1468,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        528,
+        808
+      ],
+      "foot_bbox": [
+        498,
+        794,
+        62,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-003.png",
+      "region": [
+        4,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        529,
+        808
+      ],
+      "foot_bbox": [
+        500,
+        794,
+        60,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-003.png",
+      "region": [
+        492,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        529,
+        808
+      ],
+      "foot_bbox": [
+        500,
+        794,
+        60,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-003.png",
+      "region": [
+        980,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        528,
+        808
+      ],
+      "foot_bbox": [
+        498,
+        794,
+        62,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-003.png",
+      "region": [
+        1468,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        529,
+        810
+      ],
+      "foot_bbox": [
+        502,
+        796,
+        56,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-003.png",
+      "region": [
+        4,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        529,
+        810
+      ],
+      "foot_bbox": [
+        502,
+        796,
+        56,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-003.png",
+      "region": [
+        492,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        528,
+        810
+      ],
+      "foot_bbox": [
+        500,
+        796,
+        58,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-003.png",
+      "region": [
+        980,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        531,
+        812
+      ],
+      "foot_bbox": [
+        504,
+        798,
+        56,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-003.png",
+      "region": [
+        1468,
+        980,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        531,
+        814
+      ],
+      "foot_bbox": [
+        504,
+        800,
+        56,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-004.png",
+      "region": [
+        4,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        531,
+        814
+      ],
+      "foot_bbox": [
+        504,
+        800,
+        56,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-004.png",
+      "region": [
+        492,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        531,
+        814
+      ],
+      "foot_bbox": [
+        504,
+        800,
+        56,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-004.png",
+      "region": [
+        980,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        531,
+        814
+      ],
+      "foot_bbox": [
+        504,
+        800,
+        56,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-004.png",
+      "region": [
+        1468,
+        4,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        531,
+        814
+      ],
+      "foot_bbox": [
+        504,
+        800,
+        56,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    },
+    {
+      "path": "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-004.png",
+      "region": [
+        4,
+        492,
+        480,
+        480
+      ],
+      "source_anchor_px": [
+        531,
+        814
+      ],
+      "foot_bbox": [
+        504,
+        800,
+        56,
+        16
+      ],
+      "source_edge_contacts": {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": false
+      }
+    }
+  ],
+  "files_sha256": {
+    "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-000.png": "3bfda6a3dcc0aa1fe961153969e325babc5e796c9392173f948b0badad5ca41e",
+    "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-001.png": "1c19b8211199d156222e03684d35bcebdc7ff09694c5cd74bf0b36c106f7f29d",
+    "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-002.png": "9d7383f9575e20812cb938e9490fb7f8ff95d035626e721716f5e1b078b94c47",
+    "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-003.png": "c59ac16f825f820d80b9cccb12055d6c77f3175b8b66105fe6e2c4219cefab14",
+    "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/atlas-004.png": "931ef289c0589e57332014e5931901f6008058e72f1d89f4c6c5f70f691b5a76",
+    "res://assets/art/hero_martial_v1/jiang-fist-straight-punch-v1/source.mp4": "28ca3d8d407f7a90453378b68c69fc4b7e5631e54a302c957d032aff203c1c7f"
+  },
+  "source_video_sha256": "28ca3d8d407f7a90453378b68c69fc4b7e5631e54a302c957d032aff203c1c7f"
+}

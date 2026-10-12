@@ -94,6 +94,8 @@ Root复核8项新保护测试通过；实际模型处理成功，50帧RGB全部�
 
 源码归档另从提交`5d949cd74e2822a3147115bc531d1651a07e3499`创建不含历史缓存的Git文件树，598份文件SHA一致。19项输入／片段保护、剑280／拳295项场景检查和原v4的411项回归通过，两个新staging的Web导出成功；新字体元数据模板也进入本次依赖哈希。证据在`.local/qa/hero-martial-pr-v1/clean-archive-validation.json`与AgentDev的`shu-hero-martial-pr-v1/5d949cd74e28/`。它验证归档依赖闭包，不替代上方原生、Web实际UI或Windows证据。
 
+[PR #12](https://github.com/jggagi/shu/pull/12)的自动审查发现正式预设`all_resources`会把新研究图集带进普通游戏包。现已仅在正式Web／Windows预设排除本轮研究资产目录、两张研究场景与独立字体／记录；主入口、游戏代码及旧v4不改。实际资源ZIP前后对比各移除31个研究成员，分别减少13,723,278／13,723,275 bytes；其余成员保留、普通资源内容和脚本类记录不变，UID索引只移除本轮研究纹理／字体映射。两段独立staging仍各带五张图集并使用自己的导出模板。证据在`.local/qa/hero-martial-pr-v1/export-boundary-validation.json`。这是资源包成员检查，未运行Windows实体版本。
+
 重建独立场景（现有Godot4.7.2及同版本模板环境；输出为新的可写目录，Mac外部构建按AGENTS使用agent-dev包装）：
 
 ```sh

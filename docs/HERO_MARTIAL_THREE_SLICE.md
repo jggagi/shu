@@ -92,6 +92,8 @@ Root复核8项新保护测试通过；实际模型处理成功，50帧RGB全部�
 
 最终构建与检查日志在`/Volumes/AgentDev/Builds/shu-hero-martial-three-v1/review-sword-final-v1/`和`review-fist-final-v1/`，冻结收据分别为`sword-7d65a9a0db-receipt.json`与`fist-b23727b1c7-receipt.json`，均保留源文件、staging和Web哈希。渲染证据在各自`render/`目录。`.local/qa/hero-martial-three-v1/current-validation.json`汇总当前保护检查和未通过的验收门。
 
+源码归档另从提交`5d949cd74e2822a3147115bc531d1651a07e3499`创建不含历史缓存的Git文件树，598份文件SHA一致。19项输入／片段保护、剑280／拳295项场景检查和原v4的411项回归通过，两个新staging的Web导出成功；新字体元数据模板也进入本次依赖哈希。证据在`.local/qa/hero-martial-pr-v1/clean-archive-validation.json`与AgentDev的`shu-hero-martial-pr-v1/5d949cd74e28/`。它验证归档依赖闭包，不替代上方原生、Web实际UI或Windows证据。
+
 重建独立场景（现有Godot4.7.2及同版本模板环境；输出为新的可写目录，Mac外部构建按AGENTS使用agent-dev包装）：
 
 ```sh

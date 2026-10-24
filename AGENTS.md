@@ -6,6 +6,7 @@
 - SPEC 管当前产品要求，DECISIONS 管来源与历史，DEVELOPMENT 管执行；本文件管工作方式。冲突要报告，不静默改设定。
 - 已确认采用 Godot 4 稳定版 + GDScript；D01 锁定 Godot 4.7.2 stable 及同版本导出模板（.engine-version）。运行、导出和状态检查命令见 README.md；不擅自更换版本或渲染模式。
 - 保持 Web 优先、小故事、首个可复用场景、固定背景面板／宋式中国画／Q 版、养成画面内的师傅互动。具体要求见规格，不在此复制整份设定。
+- 当前产品结构是原创《蜀》的蜀山养成与城镇游玩；《承平》为城镇系统的适配来源。整合遵循 [当前规划](docs/CHENGPING_INTEGRATION_PLAN.md)，以已存在的 `EngineSession` 为宿主，不重新初始化养成内核或直接导入另一套全局状态。
 
 
 ## 剧情文件归档
@@ -26,8 +27,9 @@
 
 ## 环境与素材
 
-- Windows 是本游戏主要编辑、运行、调试与试玩环境；本机主副本 C:\Users\guoqi\GameDev\projects\shu。其他机器使用本地独立 checkout，不依赖本机绝对路径运行。
-- WSL 仅在 Linux 验证确需时建立原生文件系统内的独立 Git 副本。与 Windows 不共享工作树、.git、依赖、缓存或产物；仅通过 Git 交换提交，从本地仓库首次克隆使用 git clone --no-local。不复制目录同步，不在 /mnt/* 构建。
+- X1 Lite / Fedora 原生 Linux 是后续主要编辑、运行、调试与试玩环境，主工作副本 `/home/x1-lite/games/shu`，用户 `x1-lite`，使用 Bash。开始工作先核对 cwd、whoami、分支与工作区；从当时最新远端 `main` 建立 `codex/` 功能分支。操作与实测环境见 [X1 开发入口](docs/X1_LITE_DEVELOPMENT.md)。
+- Mac mini 停止后续《蜀》开发，保留既有 checkout、制作源工程、素材、QA 与存档；历史 Mac 的绝对路径、`agent-dev`／APFS 规则不用于 X1。Windows 是继续保留的目标平台，实际测试结果单独记录，旧 Windows 主项目路径仅作历史来源。
+- 其他机器使用本地独立 checkout，不共享工作树、.git、依赖、缓存或产物；仅通过 Git 交换提交，首次克隆使用 git clone --no-local。不复制目录同步。X1 是原生 Linux，不能沿用 WSL／/mnt 构建身份，也不能把 X1 结果等同于 Windows／Steam Deck 结果。
 - 必需素材随项目管理或有可复现获取步骤；记录来源、版本、作者、许可与 SHA256，不依赖本机 library。对白与美术原创，参考作品的文本／图像不直接导入。
 - 日志、测试截图与缓存放 .local/（已忽略）。未来版本化发布产物另行安排，不能声称已有不存在的包。
 - 安装项目依赖前检查用途与生命周期脚本；复用匹配版本，不擅自全局安装、升级、修改身份、信任、认证或系统设置。
@@ -51,4 +53,4 @@
 - 养成行动、人物互动、物品叙事与支线 → `.agents/skills/game-cultivation-build/SKILL.md`。
 - 相关引用按当前任务读取，仍遵守本文件的四份必读资料。Skill 保存制作流程与验收方法，不代表 runtime/addon 已安装。
 - skill 未被当前 chat 自动发现时直接读取仓库文件，不因此安装全局 skill 或重新初始化。运行合同不代表对应 addon 已存在。
-- 下一 chat 的 tea 工作入口为 `docs/TEA_HANDOFF.md`。保持历史原稿与新的支线归档规则，按当前授权和实际代码选择小型修订，不用历史阶段边界否定已实现的完整支线。
+- 后续工作先从 `docs/X1_LITE_DEVELOPMENT.md` 和 `docs/CHENGPING_INTEGRATION_PLAN.md` 定位当前基线；仅继续旧正式 Tea 时使用 `docs/TEA_HANDOFF.md`。保持历史原稿与新的支线归档规则，按当前授权和实际代码选择小型修订，不用历史阶段边界否定已实现的完整支线。

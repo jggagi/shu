@@ -1,5 +1,7 @@
 # Godot 养成模式工具包：历史设计与当前方向
 
+2026-10-24接手索引：当前 `0.2.2-mentor-loop` 已有听教→五剑→复命→跨日→存档循环，见[整合切片](CULTIVATION_ENGINE_MENTOR_LOOP.md)和[运行库 API](../addons/cultivation_mode/README.md)。X1 的后续工作按[养成／城镇整合规划](CHENGPING_INTEGRATION_PLAN.md)扩充现有 `EngineSession`；下文历史拟定文件名和“未实现”状态不是当前内核能力清单。
+
 2026-10-23物件切片追记：用户认可8807五剑体验后，同意接入《归剑问天》开篇委托与双杯调查。当前可选支线／物件数据、阶段进度和安全存档见[第二片](CULTIVATION_ENGINE_V02_TEA_SLICE.md)；只迁移A/B，旧正式宿主完整Tea保持，后续剧情／文书回忆／环境迁移与编辑器仍未据此同时接入。下方第一片状态保留历史时点，实际接口以运行库为准。
 
 2026-10-23 当前状态：E1双内容包、完整基础循环与独立存档已有本机验证，见[v0.1基线](CULTIVATION_ENGINE_V0_SLICE.md)。用户随后授权v0.2第一片，五套获批剑法已通过内容包接入共用内核；当前动作／结算／返回与续玩证据见[v0.2切片](CULTIVATION_ENGINE_V02_SWORD_SLICE.md)，体验等待用户试玩。[运行库](../addons/cultivation_mode/README.md)定义已实现接口，[原方案](CULTIVATION_ENGINE_V0_PLAN.md)保留分期来源。仓库制作skill仍为0.2.0；原正式五套／Tea宿主保留，完整Tea和环境迁移仍待后续。

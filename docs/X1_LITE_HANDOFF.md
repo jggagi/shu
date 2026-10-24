@@ -1,5 +1,7 @@
 # X1 Lite 开发交接
 
+接手状态追记（2026-10-24，America/Los_Angeles）：本页保留源码汇合时的交接快照。当前已在 X1 全历史克隆 `main` / `3916899` 至 `/home/x1-lite/games/shu`，核对既有 Godot 4.7.2 和模板；用户明确 X1 为后续主开发机、Mac mini 停止后续开发并保留资料。后续命令及实测／待验收边界见 [X1 开发入口](X1_LITE_DEVELOPMENT.md)，原创《蜀》的养成／城镇接入见[整合规划](CHENGPING_INTEGRATION_PLAN.md)。本轮文档整理没有运行游戏导入、构建或 X1 真实试玩。
+
 客户端日期：2026-10-24。用户授权先将 Mac 本地成果合入并推送远端 `main`，之后以 `https://github.com/jggagi/shu` 的 `main` 为后续开发唯一基准，在 X1 Lite 继续开发。Mac 当前 checkout、制作工程、存档、预览和缓存保留，清理另行安排；本轮没有连接或设置 X1 Lite，也没有部署新的公开试玩。
 
 ## 已汇合的源码

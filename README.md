@@ -4,11 +4,37 @@
 
 **Codex 做可玩 demo → 用户试玩拍板 → Codex 修订 → 更新决定与扩展计划。**
 
-后续开发以 GitHub `main` 为准，在 X1 Lite 继续；Mac 本机资料保留。环境、最新入口与本地制作源工程边界见 [X1 Lite 交接](docs/X1_LITE_HANDOFF.md)。
+后续开发以 GitHub `main` 为基准，在 **X1 Lite / Fedora** 的 `/home/x1-lite/games/shu` 继续；Mac mini 停止后续开发并保留资料。实际环境、命令和待验收项见 [X1 开发入口](docs/X1_LITE_DEVELOPMENT.md)，此前源码汇合来源见 [原交接快照](docs/X1_LITE_HANDOFF.md)。
 
-## 当前整合试玩：《慢半步》听教练剑
+统一产品方向：**原创《蜀》＝蜀山养成＋城镇游玩**。《承平》提供城镇探索、人物互动、调查、任务后果与空间战斗的适配来源；有限时间与机会成本是玩法。接入顺序、现有内核边界和下一切片见 [整合规划](docs/CHENGPING_INTEGRATION_PLAN.md)。
 
-[打开本机试玩](http://127.0.0.1:8812/)：开始《慢半步·听教练剑》，在2D听雨廊听师父点拨，去后山从五套3D人物动作中任选一套练习，再回廊复命、歇息跨日和存档续玩。对白、音频绑定与触发条件都来自内容包，同一内核也可运行原溪亭验证包。新用户目录与旧试玩隔离；制作与验证见[整合切片](docs/CULTIVATION_ENGINE_MENTOR_LOOP.md)。
+下文 `127.0.0.1:88xx` 链接与 Mac 路径保留为历史试玩记录，均指当时 Mac 的本机服务；不能当作 X1 已启动的预览。X1 的 P0 检查已通过，用户反馈「试玩没问题」并授权 P1；未明确的浏览器专项／设备听感仍按[原记录](docs/X1_LITE_P0_VALIDATION.md)保留边界。
+
+## 当前试玩：山下集镇 · 2D／3D 混合场景
+
+城镇已把简绘替换为真实3D建筑、瓦顶、石路、光影与全身四向2D人物。继续使用原P1b城镇数据、走近互动、费用与存档，返山后继续师徒五剑。新原生入口 `scenes/demos/cultivation_engine_v05_town_hd2d.tscn`；同源网页升级 [18814/hd2d/](http://127.0.0.1:18814/hd2d/) 保留原18814站点存储，独立新预览 [18815](http://127.0.0.1:18815/) 的浏览器存储隔离。均应在X1桌面内打开；浏览器实际继续／刷新未验证。
+
+源码与兼容边界、最终检查、原生独立包与试玩步骤见 [混合场景切片](docs/P1B_TOWN_HD2D_SLICE.md)；用户授权的GitHub归档与整合后本地开发路径见[归档说明](docs/X1_TOWN_INTEGRATION_GITHUB.md)。原生窗口使用同一P1b用户存档目录，可直接继续原档；原18812／18813／18814入口保留。当前构图与人物外观待试玩调整。
+
+## 此前 P1b 试玩：街口走走
+
+从听雨廊下山，在一张城镇场景点击石路绕过摊棚；点茶摊掌柜、木牌或返山出口，走近后互动。掌柜记住问候，城内位置可保存恢复；普通走动／阅读免费，往返每程暂定一时辰，返山继续原师徒五剑。场景与全身四向人物采用原创程序简绘，构图、人物外观与旅行节奏待试玩调整。
+
+入口 `scenes/demos/cultivation_engine_v04_town_walk.tscn`，独立包 `shu_town_walk` / `0.3.1`。在 **X1 桌面内浏览器**打开 [18814 本机试玩](http://127.0.0.1:18814/)，或使用新原生窗口。完整步骤、同源验证及未验收项见 [P1b 切片](docs/P1B_TOWN_WALK_SLICE.md)；承平固定来源与许可见 [来源审查](docs/CHENGPING_P1B_SOURCE_AUDIT.md)。新包不迁移 P0/P1a 旧档，18812／18813 原服务保持。浏览器实际操作与设备听感未验证。
+
+## 此前 P1a 试玩：《下山一趟》进城返山
+
+从听雨廊「下山进城」→山下集镇「环顾街口」→「返山回廊」，每程暂定 1 时辰、不扣精力；城内可保存恢复，返回后继续听教、五剑与复命。新独立内容包共用原 `EngineSession`，P0 包和存档保持；城镇当前为原创路线示意，具体美术、往返节奏待试玩调整。没有自由走动、案件或战斗。
+
+入口 `scenes/demos/cultivation_engine_v03_town.tscn`，内容包 `shu_town_return`。X1 本机试玩 [18813](http://127.0.0.1:18813/)，应在 X1 桌面内浏览器打开；验证、独立存档和重启方法见[P1a 切片](docs/P1A_TOWN_RETURN_SLICE.md)。
+
+## 此前 P0 试玩：《慢半步》听教练剑
+
+源码入口为 `scenes/demos/cultivation_engine_v02_mentor.tscn`，版本 `0.2.2-mentor-loop`：在2D听雨廊听师父点拨，去后山从五套固定模型动作中任选一套练习，再回廊复命、歇息跨日和存档续玩。对白、音频绑定与触发条件都来自内容包，同一内核也可运行原溪亭验证包。独立 stage 的用户目录与旧试玩隔离；制作与历史 Mac 验证见[整合切片](docs/CULTIVATION_ENGINE_MENTOR_LOOP.md)，X1 首验按[本机步骤](docs/X1_LITE_DEVELOPMENT.md)执行。
+
+2026-10-24 X1 试玩：原生窗口进程已启动；也可在 **X1 远程桌面内的浏览器**打开 [P0 本机 Web 预览](http://127.0.0.1:18812/)。该地址不指向 Mac mini，服务状态仅代表交付时。选择《慢半步》后按“听教→后山练剑→回廊复命→歇息跨日→保存／继续”试玩；详细步骤、产物和未验证项见[P0 记录](docs/X1_LITE_P0_VALIDATION.md)。
+
+F5 仍启动旧正式 `scenes/main.tscn` / `DemoState` 流程；新内核使用 `EngineSession`，两入口的状态和完成范围分别记录。
 
 ## 此前独立试玩：《慢半步》有声师徒
 
@@ -18,7 +44,7 @@
 
 [打开本机对照 demo](http://127.0.0.1:8809/)：同一段师傅口诀，切换 A Dialogue Manager 与 B Dialogic，体验对白、选择、真实养成结算和存读档。听雨廊师徒统一使用现有 2D 原画；室内养成／对话用 2D，练武与战斗场景才用 3D 人物模型。旧8805–8808与正式入口保持。两边Web已实测，原生退出仍有兼容问题；先看效果，尚未选定正式工具。详见[试样与验证边界](docs/DIALOGUE_TOOLS_LAB.md)。
 
-## 当前本机试玩：《两盏茶》完整支线
+## 旧正式流程：《两盏茶》完整支线
 
 [在线正式版](https://jggagi.github.io/shu/)仍为 **0.1.4-tea-objects**（A/B 已验收发布）。阶段 C 已获用户验收；用户随后授权完整支线。本机候选 **0.1.9-tea-past-local** 已补齐医者诊察、写信和后事过去场景，完成本机专项与真实 Web 全流程验证；新画面与完整体验待你试玩拍板；用户已授权将当前源码归档至 GitHub 分支 `codex/tea-full-past-scenes`，在线试玩尚未发布本候选。
 
@@ -50,7 +76,7 @@ godot --windowed --path . res://scenes/demos/back_mountain_training.tscn
 
 当前本机窗口为 **大橘猫 v2 · 水彩画风**：按「画风有点违和」反馈，以现有后山与主角作风格参考，重新设计细线、水彩毛色、柔和阴影的胖橘。八个透明 PNG 姿态已接入，摸摸与自己玩的行为沿用 v1；旧 SVG 保留作历史。[素材与实际效果](docs/BACK_MOUNTAIN_SLICE.md#大橘猫-v2水彩画风2026-10-06)，新画风已获用户认可（2026-10-06「很好 我喜欢」），授权保存到 GitHub；在线试玩尚未更新。
 
-Mac mini 独立启动：
+历史 Mac mini 启动记录（保留，不作为后续开发入口）：
 
 ```sh
 /Users/guoq/.local/bin/godot --windowed --path /Users/guoq/Developer/shu res://scenes/demos/back_mountain_training.tscn
@@ -72,7 +98,7 @@ python -m http.server 8771 --bind 127.0.0.1 --directory .local/build/stream-teah
 
 打开本机 `http://127.0.0.1:8771/`。1–6 时辰、7／8／9 天气、空格 Static／Resume、R Reset；点击岸边橘猫摸摸。独立导出不会改变原主场景入口。详情与证据见 [本轮切片](docs/STREAM_TEAHOUSE_SLICE.md)。
 
-## 当前可玩：D01 听雨廊
+## 旧正式流程：D01 听雨廊
 
 江砚秋与叶知闲同处听雨廊。修炼推进时间与修为，请教口诀得到一次修炼加成，休息恢复精力。修为达到 60 完成第一课，可重新开始反复试玩。姓名与整体美术风格已由用户确认；构图、动态强度与数值继续供试玩拍板。当前使用分层生成的中国画背景、Q 版师徒、木桌与宣纸木框，原 SVG 占位稿仍保留供比较。
 
@@ -82,7 +108,9 @@ python -m http.server 8771 --bind 127.0.0.1 --directory .local/build/stream-teah
 
 最新本机反馈修订：香炉恢复合适比例并升起细烟；猫更常来，默认多云约6秒可遇见，新增四个迈步、站姿与坐姿，在右侧空桌面短距离往返，点击仍可摸摸。Busy和静态暂停动作，恢复后接续。Mac原生画面已检查；具体节奏与步态待试玩，旧Web／Windows包尚未包含这两轮修订。见[猫走动记录](docs/TINGYU_CAT_DESK_SLICE.md)与[香炉记录](docs/TINGYU_INCENSE_SLICE.md)。
 
-## 运行与导出
+## 旧正式入口与 Windows 目标平台命令
+
+本节保留旧入口与 Windows 目标平台用法；当前 X1 主开发命令及最新师徒整合入口见 [X1 开发入口](docs/X1_LITE_DEVELOPMENT.md)。Windows 导出或旧验证不等于最新版本的 Windows 实机验收。
 
 引擎与导出模板锁定 **Godot 4.7.2 stable**（见 `.engine-version`），语言为 GDScript，Compatibility 渲染；Web 使用单线程模板。
 
@@ -104,7 +132,7 @@ python -m http.server 8771 --bind 127.0.0.1 --directory .local/build/stream-teah
 3. 再修炼一次：这次修为增加 18，之后恢复基础增量 12。
 4. 休息恢复精力，继续修炼达到 60；点击「重新开始」回到首日初始状态。
 
-键盘 1／2／3 对应修炼／请教／休息；4 切换静态／动态，5 切换下一天气，7／8／9 直接选晴／多云／小雨；对话选择时 Esc 可取消。当前没有存档，刷新、重开会开始新一轮。本地听雨廊可点击「开启声音」，旁边滑条调音量；`9` 小雨、`7` 晴可试听雨声与雨后余滴，在线版尚未更新。建议使用桌面窗口；手机竖屏布局留待后续。
+键盘 1／2／3 对应修炼／请教／休息；4 切换静态／动态，5 切换下一天气，7／8／9 直接选晴／多云／小雨；对话选择时 Esc 可取消。此旧 D01／DemoState 入口没有磁盘存档，刷新、重开会开始新一轮；上方新养成内核已有每包隔离的两个轮换检查点，保存时自动轮换，不是两个手选存档槽。本地听雨廊可点击「开启声音」，旁边滑条调音量；`9` 小雨、`7` 晴可试听雨声与雨后余滴，在线版尚未更新。建议使用桌面窗口；手机竖屏布局留待后续。
 
 ## 维护入口
 
@@ -112,11 +140,12 @@ python -m http.server 8771 --bind 127.0.0.1 --directory .local/build/stream-teah
 - [决定日志](docs/DECISIONS.md)：决定来源、确认状态和后续变更。
 - [开发流程与路线图](docs/DEVELOPMENT.md)：验证记录、用户反馈与下一切片条件。
 - [Codex 工作约定](AGENTS.md)：范围和验证规则。
+- [X1 主开发入口](docs/X1_LITE_DEVELOPMENT.md)与[养成／城镇整合规划](docs/CHENGPING_INTEGRATION_PLAN.md)：当前机器、基线、后续工作与验收顺序。
 - [概念图索引](docs/concepts/README.md)：三张原始概念图与 SHA256。
 - [美术来源](assets/art/v2/source.json)与[天气美术来源](assets/art/weather3/source.json)：运行图层、生成提示与 SHA256。
 - `assets/data/tingyu_environment.json` 调听雨廊时辰／天气表现与过渡，`assets/data/weather.json` 保留廊景雨线、竹叶位置与更新频率；`scripts/weather.gd` 为听雨廊 adapter，复用 `EnvironmentPresenter`，养成规则独立。`scripts/weather_cycle.gd` 仅为原循环历史。
 - `assets/data/characters.json` 是当前姓名表；对白通过人物标识读取称呼。
-- `assets/data/layout.json` 调人物位置／面板布局；`rules.json` 调养成数值（行动文案同步 `main.gd`）；`dialogue.json` 改对白。状态结算在 `scripts/demo_state.gd`，界面在 `scripts/main.gd`。
+- `assets/data/layout.json`、`rules.json`、`dialogue.json` 与 `scripts/demo_state.gd`／`scripts/main.gd` 对应旧正式流程。当前内容驱动内核位于 `addons/cultivation_mode/`，包位于 `games/`；扩充以[实际 API](addons/cultivation_mode/README.md)和[内容包合同](games/README.md)为准。
 - `tools/make_art.py` 可重新生成原创 SVG 草图。当前界面使用带 OFL 许可的 Noto Serif SC 派生子集 Shu Demo Serif，旧 Sans 子集保留。字体来源、版本与 SHA256 随文件保存；新增汉字时用 `tools/rebuild_font.py` 扩展字库（fontTools，实际版本见字体来源记录；开发工具，运行无需安装）。
 
 养成边界检查：
@@ -137,9 +166,9 @@ godot --path . --audio-driver Dummy --script res://tests/weather_render.gd
 每轮先收试玩反馈，再调整布局和节奏。D02 拟增加余观涛互动与第二项养成活动，待本轮验收后推进。
 
 
-## 制作 skill 与当前引擎试玩
+## 制作 skill 与此前引擎切片
 
-当前新增[养成引擎v0.2物件试玩](http://127.0.0.1:8808/)：在听雨廊选择《归剑问天》，接受委托后直接点双杯调查；可保存后刷新继续，修补／询问不重复扣费。双杯2/2完成当前阶段并留在支线，后续剧情尚未接入。实际范围与分层记录见[第二片](docs/CULTIVATION_ENGINE_V02_TEA_SLICE.md)。原8807五剑构建及其存档保持；原正式完整Tea不改。本片已完成本机检查，当前体验等待用户试玩。
+此前[养成引擎v0.2物件试玩](http://127.0.0.1:8808/)：在听雨廊选择《归剑问天》，接受委托后直接点双杯调查；可保存后刷新继续，修补／询问不重复扣费。双杯2/2完成当前阶段并留在支线，后续剧情尚未接入。实际范围与分层记录见[第二片](docs/CULTIVATION_ENGINE_V02_TEA_SLICE.md)。原8807五剑构建及其存档保持；原正式完整Tea不改。本片已完成历史 Mac 检查，具体体验认可与 X1 本机验证分别记录。
 
 养成模式制作入口：[game-cultivation-build](.agents/skills/game-cultivation-build/SKILL.md)，仓库级0.2.0。当前[养成引擎v0.2本机试玩](http://127.0.0.1:8807/)在同一内核中运行两包，蜀山通过内容包接入获批五套剑法，支持完整动作／唯一结算／返回及独立存读档。来源、范围和分层验收见[v0.2切片](docs/CULTIVATION_ENGINE_V02_SWORD_SLICE.md)和[实际运行库API](addons/cultivation_mode/README.md)。[v0.1双包基线](docs/CULTIVATION_ENGINE_V0_SLICE.md)及8806构建保留，原8805正式五套／Tea宿主保持。当前体验待用户试玩；天气／生趣、完整Tea迁移与编辑器仍属后续范围。
 

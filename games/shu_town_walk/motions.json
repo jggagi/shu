@@ -1,0 +1,223 @@
+{
+  "jiang_sword": {
+    "character": "player_yanqiu",
+    "idle": "res://assets/art/jiang_sword_cycle/idle/frames.json",
+    "clips": {
+      "songfeng": {
+        "manifest": "res://assets/art/jiang_sword_cycle/action/frames.json",
+        "phases": [
+          {
+            "start_frame": 1,
+            "label": "起势"
+          },
+          {
+            "start_frame": 12,
+            "label": "蓄势"
+          },
+          {
+            "start_frame": 45,
+            "label": "出剑"
+          },
+          {
+            "start_frame": 51,
+            "label": "定势"
+          },
+          {
+            "start_frame": 59,
+            "label": "蓄势"
+          },
+          {
+            "start_frame": 76,
+            "label": "出剑"
+          },
+          {
+            "start_frame": 82,
+            "label": "定势"
+          },
+          {
+            "start_frame": 90,
+            "label": "收势"
+          },
+          {
+            "start_frame": 103,
+            "label": "回位"
+          }
+        ]
+      },
+      "chuanyun": {
+        "manifest": "res://assets/art/jiang_sword_cycle/action-chuanyun/frames.json",
+        "phases": [
+          {
+            "start_frame": 1,
+            "label": "起势"
+          },
+          {
+            "start_frame": 12,
+            "label": "蓄势"
+          },
+          {
+            "start_frame": 45,
+            "label": "出剑"
+          },
+          {
+            "start_frame": 51,
+            "label": "定势"
+          },
+          {
+            "start_frame": 58,
+            "label": "蓄势"
+          },
+          {
+            "start_frame": 72,
+            "label": "出剑"
+          },
+          {
+            "start_frame": 78,
+            "label": "定势"
+          },
+          {
+            "start_frame": 87,
+            "label": "收势"
+          },
+          {
+            "start_frame": 103,
+            "label": "回位"
+          }
+        ]
+      },
+      "huilan": {
+        "manifest": "res://assets/art/jiang_sword_cycle/action-huilan/frames.json",
+        "phases": [
+          {
+            "start_frame": 1,
+            "label": "起势"
+          },
+          {
+            "start_frame": 12,
+            "label": "蓄势"
+          },
+          {
+            "start_frame": 45,
+            "label": "出剑"
+          },
+          {
+            "start_frame": 51,
+            "label": "定势"
+          },
+          {
+            "start_frame": 59,
+            "label": "蓄势"
+          },
+          {
+            "start_frame": 70,
+            "label": "出剑"
+          },
+          {
+            "start_frame": 78,
+            "label": "定势"
+          },
+          {
+            "start_frame": 86,
+            "label": "收势"
+          },
+          {
+            "start_frame": 103,
+            "label": "回位"
+          }
+        ]
+      },
+      "tiaoyue": {
+        "manifest": "res://assets/art/jiang_sword_cycle/action-tiaoyue/frames.json",
+        "phases": [
+          {
+            "start_frame": 1,
+            "label": "起势"
+          },
+          {
+            "start_frame": 12,
+            "label": "蓄势"
+          },
+          {
+            "start_frame": 45,
+            "label": "出剑"
+          },
+          {
+            "start_frame": 51,
+            "label": "定势"
+          },
+          {
+            "start_frame": 58,
+            "label": "蓄势"
+          },
+          {
+            "start_frame": 70,
+            "label": "出剑"
+          },
+          {
+            "start_frame": 78,
+            "label": "定势"
+          },
+          {
+            "start_frame": 86,
+            "label": "收势"
+          },
+          {
+            "start_frame": 103,
+            "label": "回位"
+          }
+        ]
+      },
+      "xieying": {
+        "manifest": "res://assets/art/jiang_sword_cycle/action-xieying/frames.json",
+        "phases": [
+          {
+            "start_frame": 1,
+            "label": "起势"
+          },
+          {
+            "start_frame": 12,
+            "label": "蓄势"
+          },
+          {
+            "start_frame": 45,
+            "label": "出剑"
+          },
+          {
+            "start_frame": 51,
+            "label": "定势"
+          },
+          {
+            "start_frame": 59,
+            "label": "蓄势"
+          },
+          {
+            "start_frame": 66,
+            "label": "出剑"
+          },
+          {
+            "start_frame": 73,
+            "label": "定势"
+          },
+          {
+            "start_frame": 81,
+            "label": "出剑"
+          },
+          {
+            "start_frame": 88,
+            "label": "定势"
+          },
+          {
+            "start_frame": 95,
+            "label": "收势"
+          },
+          {
+            "start_frame": 103,
+            "label": "回位"
+          }
+        ]
+      }
+    },
+    "settle_seconds": 0.25,
+    "hold_seconds": 0.8
+  }
+}

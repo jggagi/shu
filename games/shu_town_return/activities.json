@@ -1,0 +1,426 @@
+{
+  "talk_mentor": {
+    "label": "听师父说两句",
+    "description": "免费开始请教；是否坐下调息及其精力、时间花费由对话选择决定。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {
+        "mentor_lesson_heard": false
+      }
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "mentor_tip",
+    "target_scene": "",
+    "result": "你走近叶知闲，听他讲起方才那一剑。",
+    "character": "mentor_zhixian"
+  },
+  "claim_mentor_lesson": {
+    "label": "随师父调息",
+    "description": "选择坐下听雨调息，消耗8精力、推进1时辰、理解+1；下一套剑法可验证一次+6修为。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": false,
+    "duration": 1,
+    "costs": {
+      "energy": 8
+    },
+    "gains": {
+      "understanding": 1
+    },
+    "conditions": {
+      "stats_gte": {
+        "energy": 8
+      },
+      "flags": {
+        "mentor_lesson_accepted": false
+      }
+    },
+    "set_flags": {
+      "breathing_hint": true,
+      "mentor_lesson_accepted": true
+    },
+    "once_key": "mentor_lesson_accepted",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你随师父听雨调息了一时辰，理解有所加深；下一套剑法将额外提升6点修为。",
+    "character": ""
+  },
+  "go_to_mountain": {
+    "label": "前往后山",
+    "description": "听完师父的点拨后，沿廊阶前往后山练剑。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {
+        "mentor_lesson_heard": true
+      }
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "back_mountain",
+    "result": "你沿石阶来到后山。",
+    "character": ""
+  },
+  "go_to_town": {
+    "label": "下山进城",
+    "description": "沿山路前往集镇；花1时辰，不扣精力。返山另花1时辰。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "town_visited": true
+    },
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "shanxia_town",
+    "result": "你沿石阶下山，走过石桥，来到集镇街口。路上花了一时辰。",
+    "character": ""
+  },
+  "return_to_corridor": {
+    "label": "回到听雨廊",
+    "description": "沿山路返回廊下向师父复命。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "tingyu_corridor",
+    "result": "你回到听雨廊。",
+    "character": ""
+  },
+  "rest_practice": {
+    "label": "歇息片刻",
+    "description": "停下调息，恢复34点精力并推进一时辰；反复歇息会按六时辰时钟自然跨日。",
+    "scenes": [
+      "tingyu_corridor",
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {},
+    "gains": {
+      "energy": 34
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你安静歇息了一会儿，精力有所恢复；时辰照常前行。"
+  },
+  "pine_wind": {
+    "label": "松风剑",
+    "description": "提剑下劈，回带平刺，再收回守势。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "sword": 10
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "mentor_practice_finished": true
+    },
+    "once_key": "",
+    "bonuses": [
+      {
+        "flag": "breathing_hint",
+        "gains": {
+          "cultivation": 6
+        },
+        "consume": true
+      }
+    ],
+    "event": "",
+    "target_scene": "",
+    "result": "你练过一遍松风剑。提剑下劈，回带平刺，再收回守势。",
+    "presentation": {
+      "motion": "jiang_sword",
+      "clip": "songfeng"
+    },
+    "show_count": true
+  },
+  "listening_rain": {
+    "label": "穿云剑",
+    "description": "前送重心，连续直刺，抽剑回到身前。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "sword": 10
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "mentor_practice_finished": true
+    },
+    "once_key": "",
+    "bonuses": [
+      {
+        "flag": "breathing_hint",
+        "gains": {
+          "cultivation": 6
+        },
+        "consume": true
+      }
+    ],
+    "event": "",
+    "target_scene": "",
+    "result": "你练过一遍穿云剑。前送重心，连续直刺，抽剑回到身前。",
+    "presentation": {
+      "motion": "jiang_sword",
+      "clip": "chuanyun"
+    },
+    "show_count": true
+  },
+  "returning_tide": {
+    "label": "回澜剑",
+    "description": "横抹开路，换锋反斩，稳稳收势。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "sword": 10
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "mentor_practice_finished": true
+    },
+    "once_key": "",
+    "bonuses": [
+      {
+        "flag": "breathing_hint",
+        "gains": {
+          "cultivation": 6
+        },
+        "consume": true
+      }
+    ],
+    "event": "",
+    "target_scene": "",
+    "result": "你练过一遍回澜剑。横抹开路，换锋反斩，稳稳收势。",
+    "presentation": {
+      "motion": "jiang_sword",
+      "clip": "huilan"
+    },
+    "show_count": true
+  },
+  "rising_peak": {
+    "label": "挑月剑",
+    "description": "低扫卸势，顺势上挑，收剑回位。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "sword": 10
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "mentor_practice_finished": true
+    },
+    "once_key": "",
+    "bonuses": [
+      {
+        "flag": "breathing_hint",
+        "gains": {
+          "cultivation": 6
+        },
+        "consume": true
+      }
+    ],
+    "event": "",
+    "target_scene": "",
+    "result": "你练过一遍挑月剑。低扫卸势，顺势上挑，收剑回位。",
+    "presentation": {
+      "motion": "jiang_sword",
+      "clip": "tiaoyue"
+    },
+    "show_count": true
+  },
+  "swift_swallow": {
+    "label": "斜影剑",
+    "description": "斜劈换锋，反撩再斩，最后回到守势。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "sword": 10
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "mentor_practice_finished": true
+    },
+    "once_key": "",
+    "bonuses": [
+      {
+        "flag": "breathing_hint",
+        "gains": {
+          "cultivation": 6
+        },
+        "consume": true
+      }
+    ],
+    "event": "",
+    "target_scene": "",
+    "result": "你练过一遍斜影剑。斜劈换锋，反撩再斩，最后回到守势。",
+    "presentation": {
+      "motion": "jiang_sword",
+      "clip": "xieying"
+    },
+    "show_count": true
+  },
+  "report_practice": {
+    "label": "回廊复命",
+    "description": "练过一套剑法后，回听雨廊向师父报告体会。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {
+        "mentor_practice_finished": true,
+        "mentor_reported": false
+      }
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "mentor_practice_report",
+    "target_scene": "",
+    "result": "你回到听雨廊，向师父回报练剑经过。",
+    "character": "mentor_zhixian"
+  },
+  "return_from_town": {
+    "label": "返山回廊",
+    "description": "循原路返回听雨廊；花1时辰，不扣精力。",
+    "scenes": [
+      "shanxia_town"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "town_returned": true
+    },
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "tingyu_corridor",
+    "result": "你沿山路回到听雨廊。往返经历已记在札记中，原来的修行与师父的点拨仍在。",
+    "character": ""
+  },
+  "look_town": {
+    "label": "环顾街口",
+    "description": "看看周围，不花时辰、不扣精力，也不会获得修行数值。",
+    "scenes": [
+      "shanxia_town"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "town_observed": true
+    },
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "桥边有人收起竹篓，屋檐下的摊棚随风轻动。街市向前延伸，来时的山路仍在身后。你记住了这处街口。",
+    "character": ""
+  }
+}

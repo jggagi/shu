@@ -1,0 +1,19 @@
+{
+  "version": "P1a-route-sketch-1",
+  "author": "Codex for shu",
+  "source": "Original vector route sketch authored for this project; not a final painted town background.",
+  "third_party": false,
+  "license": "Project original; no third-party assets",
+  "files": [
+    {
+      "path": "res://assets/art/shanxia_town/route-sketch.svg",
+      "sha256": "46c0e2ed29be43d77a58481b0f129858db4e91261c9c8693c4514642bceeb099"
+    },
+    {
+      "path": "res://assets/art/shanxia_town/route-sketch.png",
+      "sha256": "a67a9bc5ace2fb0f4950ee5208d936dab6c49b6530a8c345106f3938e8921240",
+      "derived_from": "res://assets/art/shanxia_town/route-sketch.svg",
+      "method": "Inkscape local SVG rasterization, 1440px width; no external source or generation service"
+    }
+  ]
+}

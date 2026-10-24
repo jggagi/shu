@@ -3,6 +3,7 @@ extends RefCounted
 
 const MotionAssetsScript = preload("res://addons/cultivation_mode/motion_assets.gd")
 const QuestRuntimeScript = preload("res://addons/cultivation_mode/quest_runtime.gd")
+const WalksContractScript = preload("res://addons/cultivation_mode/walks_contract.gd")
 
 var _errors: Array[String] = []
 
@@ -24,7 +25,7 @@ func load_pack(manifest_path: String) -> Dictionary:
 		var text: String = _read_json_text(path)
 		sources += "\n" + key + "\n" + text
 		pack[key] = _parse_object(text, path)
-	for optional: String in ["motions", "quests", "voices"]:
+	for optional: String in ["motions", "quests", "voices", "walks"]:
 		pack[optional] = {}
 		if not files.has(optional):
 			continue
@@ -236,6 +237,8 @@ func validate(pack: Dictionary) -> Array[String]:
 	for eid: Variant in events:
 		_validate_event(str(eid), events[eid], characters, actions, stats, voices, QuestRuntimeScript.new().known_flags(pack))
 	for issue: String in QuestRuntimeScript.new().validate(pack):
+		_error("game", issue)
+	for issue: String in WalksContractScript.new().validate(pack):
 		_error("game", issue)
 	return _errors.duplicate()
 

@@ -7,6 +7,8 @@ const PHASE_PERFORMING: String = "performing"
 
 const MotionAssetsScript = preload("res://addons/cultivation_mode/motion_assets.gd")
 const QuestRuntimeScript = preload("res://addons/cultivation_mode/quest_runtime.gd")
+const WalksContractScript = preload("res://addons/cultivation_mode/walks_contract.gd")
+const TownNavigationScript = preload("res://addons/cultivation_mode/town_navigation.gd")
 
 const STATE_FIELDS: Array[String] = [
 	"run_id", "sequence", "revision", "day", "slot", "scene", "stats",
@@ -17,6 +19,7 @@ var pack: Dictionary = {}
 var state: Dictionary = {}
 var last_error: String = ""
 var _pending_presentation: Dictionary = {}
+var _walk_navigation: Dictionary = {}
 
 
 func configure(data: Dictionary) -> Dictionary:
@@ -24,6 +27,11 @@ func configure(data: Dictionary) -> Dictionary:
 	if not reason.is_empty():
 		return _failure(reason, "invalid_pack")
 	pack = data.duplicate(true)
+	_walk_navigation.clear()
+	for scene_id: Variant in WalksContractScript.new().maps(pack):
+		var navigation = TownNavigationScript.new()
+		navigation.configure(WalksContractScript.new().maps(pack)[scene_id], false)
+		_walk_navigation[scene_id] = navigation
 	state.clear()
 	_pending_presentation.clear()
 	return start_new()
@@ -60,12 +68,83 @@ func start_new() -> Dictionary:
 		"last_result": {},
 		"journal": []
 	}
+	if WalksContractScript.new().enabled(pack):
+		state["exploration"] = WalksContractScript.new().initial_state(pack)
 	last_error = ""
 	return {"ok": true}
 
 
 func snapshot() -> Dictionary:
 	return state.duplicate(true)
+
+
+func walk_view() -> Dictionary:
+	var scene_id: String = str(state.get("scene", ""))
+	var definition: Dictionary = _dict_or_empty(WalksContractScript.new().maps(pack).get(scene_id))
+	if definition.is_empty():
+		return {}
+	return {"scene_id": scene_id, "definition": definition.duplicate(true), "position": _dict_or_empty(_dict_or_empty(state.get("exploration")).get("positions")).get(scene_id, []).duplicate(), "run_id": str(state.get("run_id", "")), "revision": int(state.get("revision", 0)), "enabled": state.get("phase", "") == PHASE_READY}
+
+
+func commit_walk_position(scene_id: String, position: Array, expected_run_id: String, expected_revision: int) -> Dictionary:
+	if str(state.get("run_id", "")) != expected_run_id:
+		return _failure("行走请求已过期", "stale_run")
+	if int(state.get("revision", -1)) != expected_revision:
+		return _failure("当前状态已更新，请重新选择去处", "stale_revision")
+	if state.get("phase", "") != PHASE_READY:
+		return _failure("请先收起当前对白或回报", "wrong_phase")
+	if scene_id != state.get("scene", "") or not _walk_navigation.has(scene_id):
+		return _failure("当前地点不能行走", "wrong_scene")
+	if position.size() != 2 or not _is_integer(position[0]) or not _is_integer(position[1]):
+		return _failure("行走位置无效", "invalid_position")
+	var destination: Vector2 = Vector2(float(position[0]), float(position[1]))
+	var old: Array = state.exploration.positions[scene_id]
+	var origin: Vector2 = Vector2(float(old[0]), float(old[1]))
+	var navigation = _walk_navigation[scene_id]
+	if navigation.blocked(destination) or not navigation.clear_segment(origin, destination):
+		return _failure("这段路被挡住了", "blocked_path")
+	var canonical: Array = [int(position[0]), int(position[1])]
+	if old != canonical:
+		# Movement changes no clock, resources, flags, action count, journal or receipt.
+		state["exploration"]["positions"][scene_id] = canonical
+		state["revision"] = int(state.get("revision", 0)) + 1
+	last_error = ""
+	return {"ok": true, "position": canonical.duplicate(), "revision": int(state.revision), "run_id": str(state.run_id)}
+
+
+func execute_walk_interaction(interaction_id: String, operation_id: String, expected_run_id: String, expected_revision: int) -> Dictionary:
+	if str(state.get("run_id", "")) != expected_run_id:
+		return _failure("互动请求已过期", "stale_run")
+	var contract = WalksContractScript.new()
+	var item: Dictionary = contract.interaction(pack, interaction_id)
+	var operation: String = operation_id if not operation_id.is_empty() else _next_operation_id()
+	var receipts: Dictionary = _dict_or_empty(state.get("receipts", {}))
+	if receipts.has(operation):
+		var prior: Dictionary = _dict_or_empty(receipts[operation])
+		if prior.get("kind", "") == "walk" and prior.get("interaction_id", "") == interaction_id and contract.valid_receipt(pack, str(prior.get("action_id", "")), interaction_id):
+			return _duplicate_result(prior)
+		return _failure("操作编号已用于其他请求", "operation_mismatch")
+	if int(state.get("revision", -1)) != expected_revision:
+		return _failure("互动请求已更新，请重新点击", "stale_revision")
+	if state.get("phase", "") != PHASE_READY:
+		return _failure("请先收起当前对白或回报", "wrong_phase")
+	if item.is_empty() or item.get("scene_id", "") != state.get("scene", ""):
+		return _failure("当前地点没有该互动", "unknown_interaction")
+	var position: Array = state.exploration.positions[state.scene]
+	var at: Vector2 = Vector2(float(position[0]), float(position[1]))
+	var target: Vector2 = Vector2(float(item.position[0]), float(item.position[1]))
+	if at.distance_to(target) > float(item.radius):
+		return _failure("请先走近再互动", "too_far")
+	if not _walk_navigation[state.scene].clear_segment(at, target):
+		return _failure("互动之间有遮挡", "blocked_path")
+	var action_id: String = contract.action_for(pack, state, item)
+	var action: Dictionary = _dict_or_empty(_dict_or_empty(pack.get("actions")).get(action_id))
+	var prepared: Dictionary = _prepare_action(action_id, action, operation, "walk", {"interaction_id": interaction_id})
+	if not bool(prepared.get("ok", false)):
+		return _failure(str(prepared.get("reason", "互动未完成")), str(prepared.get("code", "action_failed")))
+	state = _dict_or_empty(prepared.get("state")).duplicate(true)
+	last_error = ""
+	return _dict_or_empty(prepared.get("result")).duplicate(true)
 
 
 func available_actions() -> Array[Dictionary]:
@@ -615,6 +694,10 @@ func _prepare_action(action_id: String, action: Dictionary, operation_id: String
 	var target_scene: String = str(action.get("target_scene", ""))
 	if not target_scene.is_empty():
 		next_state["scene"] = target_scene
+		var walk_maps: Dictionary = WalksContractScript.new().maps(pack)
+		if walk_maps.has(target_scene):
+			var spawn: Array = walk_maps[target_scene].spawn
+			next_state["exploration"]["positions"][target_scene] = [int(spawn[0]), int(spawn[1])]
 	next_state["stats"] = initial_stats
 	next_state["flags"] = flags
 	var was_quest_active: bool = not QuestRuntimeScript.new().active(pack, state).is_empty()
@@ -685,6 +768,10 @@ func _prepare_action(action_id: String, action: Dictionary, operation_id: String
 			"sequence": sequence,
 			"result": result.duplicate(true)
 		}
+		if kind == "walk":
+			result["interaction_id"] = str(source.get("interaction_id", ""))
+			wrapper["interaction_id"] = result.interaction_id
+			wrapper["result"] = result.duplicate(true)
 		if kind == "object":
 			var object_id: String = str(source.get("object_id", ""))
 			result["object_id"] = object_id
@@ -1114,6 +1201,9 @@ func _minimal_pack_error(data: Dictionary) -> String:
 	var quest_errors: Array[String] = QuestRuntimeScript.new().validate(data)
 	if not quest_errors.is_empty():
 		return str(quest_errors[0])
+	var walk_errors: Array[String] = WalksContractScript.new().validate(data)
+	if not walk_errors.is_empty():
+		return str(walk_errors[0])
 	return ""
 
 
@@ -1122,9 +1212,12 @@ func _snapshot_error(candidate: Dictionary) -> String:
 		return "尚未载入内容包"
 	if not _is_json_compatible(candidate):
 		return "存档包含不支持的数据"
-	if candidate.size() != STATE_FIELDS.size():
+	var expected_fields: Array[String] = STATE_FIELDS.duplicate()
+	if WalksContractScript.new().enabled(pack):
+		expected_fields.append("exploration")
+	if candidate.size() != expected_fields.size():
 		return "存档字段不匹配"
-	for key in STATE_FIELDS:
+	for key in expected_fields:
 		if not candidate.has(key):
 			return "存档字段不匹配"
 	var run_id: Variant = candidate.get("run_id")
@@ -1191,6 +1284,9 @@ func _snapshot_error(candidate: Dictionary) -> String:
 	else:
 		if last_result != _dict_or_empty(journal[journal.size() - 1]):
 			return "存档结果与记录不一致"
+	var walk_error: String = WalksContractScript.new().snapshot_error(pack, candidate)
+	if not walk_error.is_empty():
+		return walk_error
 	return QuestRuntimeScript.new().snapshot_error(pack, candidate)
 
 
@@ -1253,11 +1349,13 @@ func _validate_receipts(value: Dictionary, sequence: int, candidate_counts: Dict
 			return "存档回执编号不一致"
 		var kind: String = str(wrapper.get("kind", ""))
 		if kind != "action" and kind != "choice":
-			if kind != "object":
+			if kind != "object" and kind != "walk":
 				return "存档回执类型无效"
 		var wrapper_fields: Array[String] = ["operation_id", "kind", "action_id", "event_id", "node_id", "option_id", "sequence", "result"]
 		if kind == "object":
 			wrapper_fields.append("object_id")
+		if kind == "walk":
+			wrapper_fields.append("interaction_id")
 		if not _has_only_keys(wrapper, wrapper_fields):
 			return "存档回执字段无效"
 		var receipt_sequence: Variant = wrapper.get("sequence")
@@ -1277,6 +1375,9 @@ func _validate_receipts(value: Dictionary, sequence: int, candidate_counts: Dict
 				return "存档行动回执引用非菜单行动"
 		elif kind == "choice" and not _valid_choice_source(wrapper):
 			return "存档选项回执无效"
+		elif kind == "walk":
+			if not wrapper.get("interaction_id") is String or not WalksContractScript.new().valid_receipt(pack, action_id, str(wrapper.get("interaction_id", ""))) or not str(wrapper.get("event_id", "")).is_empty() or not str(wrapper.get("node_id", "")).is_empty() or not str(wrapper.get("option_id", "")).is_empty():
+				return "存档城镇互动回执无效"
 		elif kind == "object":
 			var object_id_value: Variant = wrapper.get("object_id", null)
 			if not (wrapper.get("action_id", null) is String) or not (object_id_value is String) or str(object_id_value).is_empty() or not str(wrapper.get("event_id", "")).is_empty() or not str(wrapper.get("node_id", "")).is_empty() or not str(wrapper.get("option_id", "")).is_empty() or not _valid_object_receipt(action_id, str(object_id_value)):
@@ -1324,10 +1425,12 @@ func _valid_object_receipt(action_id: String, object_id: String) -> bool:
 
 func _validate_result(value: Dictionary, operation_id: String, kind: String, action_id: String, wrapper: Dictionary) -> bool:
 	var expected_fields: Array[String] = ["ok", "operation_id", "event_id", "node_id", "option_id", "action_id", "action_label", "delta", "before", "after", "message"]
-	if kind == "action" or kind == "object":
+	if kind == "action" or kind == "object" or kind == "walk":
 		expected_fields = ["ok", "operation_id", "action_id", "action_label", "delta", "before", "after", "message"]
 	if kind == "object":
 		expected_fields.append("object_id")
+	if kind == "walk":
+		expected_fields.append("interaction_id")
 	if not _has_only_keys(value, expected_fields):
 		return false
 	if value.get("ok", false) != true or str(value.get("operation_id", "")) != operation_id:
@@ -1359,9 +1462,16 @@ func _validate_result(value: Dictionary, operation_id: String, kind: String, act
 			return false
 	if not _is_integer(delta.get("slots")) or int(delta.get("slots")) < 0:
 		return false
-	if kind == "action" or kind == "object":
+	if kind == "action" or kind == "object" or kind == "walk":
 		if not (value.get("action_label", null) is String) or not _dict_or_empty(pack.get("actions", {})).has(action_id):
 			return false
+		if kind == "walk":
+			var interaction_id: String = str(wrapper.get("interaction_id", ""))
+			if value.get("interaction_id", "") != interaction_id or not WalksContractScript.new().valid_receipt(pack, action_id, interaction_id):
+				return false
+			var interaction: Dictionary = WalksContractScript.new().interaction(pack, interaction_id)
+			if before.scene != interaction.scene_id:
+				return false
 		if kind == "object":
 			var object_id: String = str(wrapper.get("object_id", ""))
 			if not (wrapper.get("action_id", null) is String) or not (value.get("action_id", null) is String) or not (wrapper.get("object_id", null) is String) or not (value.get("object_id", null) is String) or str(value.get("object_id", "")) != object_id or not _valid_object_receipt(action_id, object_id):

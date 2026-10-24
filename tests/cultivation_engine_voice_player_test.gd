@@ -91,6 +91,8 @@ func _run() -> void:
 
 	player.queue_free()
 	await process_frame
+	# Let the audio server release stopped playback instances before process exit.
+	await create_timer(0.1).timeout
 	print("cultivation_engine_voice_player_test: %d checks, %d failures" % [checks, failures])
 	quit(0 if failures == 0 else 1)
 

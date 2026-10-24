@@ -72,14 +72,26 @@ def stage(output: Path, reuse_stage: Path | None = None,
               ROOT / "assets/fonts/source-cultivation-engine.json", ROOT / "assets/fonts/OFL-Serif.txt"]
     paths += [ROOT / "tools/build_cultivation_engine.py", ROOT / "tools/rebuild_cultivation_engine_font.py",
               ROOT / ".engine-version", ROOT / "addons/cultivation_mode/README.md", ROOT / "games/README.md"]
-    if entry == "scenes/demos/cultivation_engine_v02_mentor.tscn":
+    if entry in {"scenes/demos/cultivation_engine_v02_mentor.tscn",
+                 "scenes/demos/cultivation_engine_v03_town.tscn",
+                 "scenes/demos/cultivation_engine_v04_town_walk.tscn",
+                 "scenes/demos/cultivation_engine_v05_town_hd2d.tscn"}:
         paths += [ROOT / "trunk/mentor-slow-half-step.json", ROOT / "trunk/mentor-practice-report.json",
                   ROOT / "assets/audio/mentor_pause/manifest.json",
                   ROOT / "assets/audio/mentor_practice_report/manifest.json"]
+    if entry in {"scenes/demos/cultivation_engine_v04_town_walk.tscn",
+                 "scenes/demos/cultivation_engine_v05_town_hd2d.tscn"}:
+        paths.append(ROOT / "tools/validate_town_walk_restart.py")
+    if entry == "scenes/demos/cultivation_engine_v05_town_hd2d.tscn":
+        paths += [ROOT / "tools/build_town_hd2d_characters.py",
+                  ROOT / "tools/validate_town_hd2d_compatibility.py"]
     paths.extend(p for p in (ROOT / "tests").glob("cultivation_engine_*.gd"))
     def resources(value):
         if isinstance(value, dict):
-            for child in value.values():
+            for key, child in value.items():
+                # Some provenance maps use resource paths as keys with SHA256
+                # values rather than a {path, sha256} record.
+                yield from resources(key)
                 yield from resources(child)
         elif isinstance(value, list):
             for child in value:
@@ -105,6 +117,21 @@ def stage(output: Path, reuse_stage: Path | None = None,
             for resource in resources(json.loads(path.read_text())):
                 if resource not in visited:
                     pending.append(resource)
+        elif path.suffix in {".gd", ".tscn", ".tres"}:
+            # A selected entry can extend the shared view with a scene adapter.
+            # Follow concrete code/scene dependencies, including adapters outside
+            # the addon, without staging unrelated source directories.
+            for resource in re.findall(r'''["'](res://[^"'\r\n]+\.(?:gd|tscn|tres|gdshader|json|png|jpe?g|webp|svg|glb|gltf|obj))["']''',
+                                       path.read_text()):
+                if resource.startswith("res://.local/") or "%" in resource:
+                    # QA output paths and format-string negative fixtures are
+                    # not static runtime inputs.
+                    continue
+                dependency = ROOT / resource.removeprefix("res://")
+                if ".." in dependency.relative_to(ROOT).parts:
+                    raise SystemExit("Resource dependency escapes repository: " + resource)
+                if dependency not in visited:
+                    pending.append(dependency)
     paths = sorted(visited)
     hashes = {}
     for source in paths:

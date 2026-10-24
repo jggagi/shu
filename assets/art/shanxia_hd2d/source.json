@@ -1,0 +1,34 @@
+{
+  "origin": "project-original code-authored vector art, 2026-10-24",
+  "authoring_tool": "tools/build_town_hd2d_characters.py",
+  "license": "Project-original; no third-party character or image assets copied",
+  "identity": "Shu Jiang Yanqiu: blue/teal robe, pale sash and headband; town tea seller: brown clothes and apron",
+  "cell_size": [
+    80,
+    112
+  ],
+  "columns": 4,
+  "directions": [
+    "down",
+    "up",
+    "left",
+    "right"
+  ],
+  "frames_per_direction": 4,
+  "foot_anchor": [
+    40,
+    104
+  ],
+  "purpose": "Full-body billboard characters for a real 3D town; distance-driven walking, fixed foot anchor",
+  "not_used": "waist-up indoor portraits, fixed practice atlases, Chengping character sprites",
+  "files": {
+    "res://assets/art/shanxia_hd2d/player-walk.svg": "db27a6c07a1cfd24409867a943d3b45872f2a826e4a852ebcb544335c456bed7",
+    "res://assets/art/shanxia_hd2d/tea-seller-walk.svg": "5dc58e3c40720fe99981bfe8e0534bf20d73368a1eb735f9e69794231f458fdd"
+  },
+  "authoring_tool_sha256": "6b5c6680f2b481f37024ffc3621399fd0fea66fac7f0068bb1518178e82bdaab",
+  "viewport_license": {
+    "path": "res://assets/art/shanxia_hd2d/GODOT-VIEWPORT-LICENSE.txt",
+    "sha256": "0339177149b474f7ff676d32218ecb3a8f2538955610023c3769763720d09e4c",
+    "scope": "Godot MIT SubViewport composition portion only; original adapted Chengping code uses explicit user authorization"
+  }
+}

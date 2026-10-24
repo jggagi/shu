@@ -1,0 +1,25 @@
+{
+  "scope": "P1a fixed-location round trip, no new authored story chapter",
+  "base_pack": "shu_mentor_loop",
+  "base_commit": "58f56af9b8c39799f1c94d6492d552efe5848cdd",
+  "inherited_json_sha256": {
+    "rules.json": "e3dfc6d886d7e39873be31fb22c50a4f7f873148c3f13cdd7eccf1c2b4339a37",
+    "characters.json": "b1c1917f30f28d2e9907e92df0adc81e606b005139b6e945e264f498991a34e5",
+    "events.json": "be167f965c735f6d903ddebe319442f2136adced4073258295ddb970accc0bcb",
+    "motions.json": "518a167f8cb72ce5edc50ac3a766d0c1eb28122ef119a0141366ecc6f8770df2",
+    "voices.json": "9e6b9e1ac0cc17ab275b13b2c8c75d6ef747c7ed94ca7642227dfeaeffe790a5",
+    "scenes.json": "680993fac3f5a54abe572578d25670a1151eb70d21439490a237907a86ef9766",
+    "activities.json": "ae9bcf0c2eec8b623312c0f8135f7e8b6642fe5c86d8a639ea7cbb3ddd86147b",
+    "game.json": "c6a2f8bc5bc1d0ca262032472e430393bd07765faef83df13903879377108c65"
+  },
+  "resources": [
+    "res://assets/art/shanxia_town/source.json",
+    "res://assets/audio/mentor_pause/manifest.json",
+    "res://assets/audio/mentor_practice_report/manifest.json"
+  ],
+  "authored_sources": [
+    "trunk/mentor-slow-half-step.json",
+    "trunk/mentor-practice-report.json"
+  ],
+  "new_text": "Original short location/action connective prose for a route prototype; no NPC dialogue or new story manuscript."
+}

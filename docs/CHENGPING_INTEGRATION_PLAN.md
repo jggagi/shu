@@ -75,7 +75,7 @@ Chengping 文件链接固定到来源提交。只选择当前切片确需的规�
 
 ## 6. 下一项实际任务
 
-先完成 **P0：X1 现有基线**，而不是开始编写城镇或重做过去 M1／M2／E1。依据 [开发入口](X1_LITE_DEVELOPMENT.md) 和 [原交接](X1_LITE_HANDOFF.md)，核对本机现有 Godot 4.7.2 与同版本模板、保持独立缓存，导入后运行：
+规划文档已先提交推送为 `403a254`。随后 P0 的 X1 导入、状态、原生窗口自动流程、跨进程恢复和 Web 构建已完成，详见[P0 验证记录](X1_LITE_P0_VALIDATION.md)；当前先交付用户试玩，浏览器真实操作／刷新恢复与设备听感仍待验证。尚不开始编写城镇，也不重做过去 M1／M2／E1。以下是依据 [开发入口](X1_LITE_DEVELOPMENT.md) 和 [原交接](X1_LITE_HANDOFF.md) 保留的基线复现入口：
 
 ```sh
 godot --windowed --path . res://scenes/demos/cultivation_engine_v02_mentor.tscn
@@ -84,4 +84,4 @@ godot --headless --path . --script res://tests/cultivation_engine_mentor_loop_te
 
 若 Godot 不在 PATH，使用核实过的工具绝对路径，不擅自升级引擎。实际试玩按 P0 行走；新机器 Web 构建使用独立 stage，不沿用 Mac 的 `--reuse-stage`。收据写入忽略的 `.local/qa/`，记录已完成与缺项，再决定 P1 的具体城镇构图、往返代价和唯一事件范围。
 
-本轮只整理文档与计划；没有完成系统源码移植、游戏构建、X1 试玩验收、提交／推送或部署。未来阶段的授权和通过结果以各次真实记录为准。
+本计划的新增系统尚未移植；P0 不改变游戏规则或素材。规划提交后的测试清理修正和验收文档按用户追加授权一并归档到当前分支；没有合并 main 或公开部署。未来阶段的授权和通过结果以各次真实记录为准。

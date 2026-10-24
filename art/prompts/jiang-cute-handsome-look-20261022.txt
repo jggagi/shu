@@ -1,0 +1,14 @@
+Use case: identity-preserve
+Asset type: one revised character look-development reference, NOT evidence of an edited 3D mesh.
+Primary request: Make this exact Jiang Yanqiu bust a little cuter and more handsome, while keeping him clearly the same youthful male wuxia protagonist.
+Input image 1: edit target, an actual Blender render of the current Hunyuan bust. Preserve the camera direction, three-quarter angle, head/shoulder composition, bust cut, blue-and-ivory crossed-collar costume, high ponytail, blue cloth ribbon, brown eyes, and overall identity.
+Change only the character styling in these ways:
+- Give him a warm, lively, quietly confident expression: tiny closed-mouth upward smile, bright attentive brown eyes, relaxed brows with a slightly cleaner, more spirited shape. Remove the worried/downturned mouth impression. Keep the large expressive eyes, but refine their shape and lids instead of making them larger.
+- Keep soft youthful cheeks and a small chin; make the lower face a touch more compact and neatly defined. Cute and charming, with the clear spirited presence of a young swordsman. Do not age him into an adult or turn him into an infant.
+- Refine the fringe into a few elegant, readable, swept hair locks with a cleaner forehead silhouette. Reduce the ponytail's bulk by about one quarter and shorten it slightly. Use fewer well-shaped hair clumps and much fewer thin dangling strands around the neck. Retain a little natural lift and motion so the hair feels light and energetic.
+- Make the hair a richer warm chestnut brown and restore modest color contrast; keep the blue-and-ivory palette, clean costume construction, cloth texture and restrained painted shading.
+Style/medium: polished stylized 3D character design render with soft illustrated shading, appealing sculpted volumes, clear eyes and controlled hair shapes. Match the source's stylized finish; preserve true-looking three-dimensional facial and hair volumes.
+Composition/framing: single complete head-and-shoulders bust, same three-quarter view as the source, same apparent scale, complete ponytail and ribbon visible, generous unclipped margins. No additional views or inset panels.
+Lighting/mood: soft neutral studio illumination with clear facial definition, warm approachable heroic personality.
+Background: preserve transparent background and clean alpha edges.
+Constraints: same character, same costume, same orientation and bust framing. This is one visual design revision. No weapon, hands, accessories, text, signature, logo, watermark or UI.

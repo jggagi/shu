@@ -1,0 +1,2024 @@
+{
+  "version": 1,
+  "clip_name": "action-chuanyun",
+  "fps": 30,
+  "frame_count": 180,
+  "duration_seconds": 6.0,
+  "source_size": [
+    1000,
+    1000
+  ],
+  "source_format": "8-bit RGBA PNG",
+  "cell_size": [
+    512,
+    512
+  ],
+  "atlas_columns": 5,
+  "atlas_rows": 5,
+  "frames_per_atlas": 25,
+  "atlas_pages": [
+    "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+    "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+    "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+    "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+    "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+    "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+    "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+    "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-07.png"
+  ],
+  "anchor_source_px": [
+    478.95962,
+    911.13357
+  ],
+  "anchor_resized_px": [
+    245.22732544,
+    466.50038784
+  ],
+  "scene_foot_anchor": [
+    1010.0,
+    565.0
+  ],
+  "actor_scale": 0.62,
+  "frames": [
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0001.png",
+      "source_sha256": "6bc140b94e2b32f626385b8b4c2f21087aeb517b17c174603708f172fc02eec9"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0002.png",
+      "source_sha256": "6936c4645787ad343542e38d1a3fb92468ec1d7a442a5f32c3dfb767f185cafc"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0003.png",
+      "source_sha256": "9e1c62d8b56de6f8a5369d153e97d0a3ab1c354d628fdce1b1e010e7dfb55163"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0004.png",
+      "source_sha256": "e503deb3e15839a016b70db39a90f32d11c23d56240e9b81fb54abd6236773d7"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        2048,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0005.png",
+      "source_sha256": "1edcaa3ddcdb95737c46e7bbef94c7e5a1e323fea5ef4c78b8502e1f66470353"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0006.png",
+      "source_sha256": "160b75680b074bc4f84b3258adc5014aab0002b556cc9292bef6223e90e71be5"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0007.png",
+      "source_sha256": "6e915744ca3af4009e7a8dc2dca78578b2887de025fdf0e8bba5c2f252ce552d"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0008.png",
+      "source_sha256": "8d943a54be10e5fb86f3bd64fe985998282e05eaf5b1ef60f9e46b8a1a57fea1"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0009.png",
+      "source_sha256": "f2723cad9344e1d63fe11831f0b4ef31799d8a39b2d84ecac764f34fc465f6e5"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        2048,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0010.png",
+      "source_sha256": "2f3cb54c3d98e629e1829963af8cc315bf390ad8ff5187cec9c38b3eb292e8a2"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0011.png",
+      "source_sha256": "41a4f9463d4b7ddf31327cf331a7a984abd0808295debf3ecd49ed7a37b41f09"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        512,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0012.png",
+      "source_sha256": "0d73577b6c9009a5a68ae63835b9638a947dbb0d0e6a6461dcb6d327d631782d"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        1024,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0013.png",
+      "source_sha256": "85b68ab336fc1e7ad8a7e113a610d9bcf2548e2c45b1b3ab6b70948ab69acbf0"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        1536,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0014.png",
+      "source_sha256": "7b47708db0bcad6c740de2801a4b8beca597828d910815d33ce6d693494bb6d0"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        2048,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0015.png",
+      "source_sha256": "6ceaca5faf07af4fd8284efb2348553b64a32028d2b4098e5a7b66f740172ee6"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0016.png",
+      "source_sha256": "800df781aa8a5138e90d500d8989eaadc104f39170ae039241386d5b997ac335"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        512,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0017.png",
+      "source_sha256": "5f1d85d09177a99b6bbccb7339e1d1e4b485dd89683de18f378e4180b149dea0"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0018.png",
+      "source_sha256": "2a6de3542e27e51c79e2b41e99e79677a2f093b57f777dfd3e10a10abd1d4c7c"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        1536,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0019.png",
+      "source_sha256": "43cdcd954d2f94e9731ce9737ceefda289dec61c0ae675c3dbc86707c71b0256"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        2048,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0020.png",
+      "source_sha256": "0b5b7accbdd00b33d8787ac75a77d1fd688c530bfb355229febea85246e7f808"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        0,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0021.png",
+      "source_sha256": "250b58f404eddab2bd40786abea5f61e0fbc7c972f00c186e5ad9e2bc99a0d07"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        512,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0022.png",
+      "source_sha256": "4f0dfc476d735c592f8dc622d2250daea33f7527a8242ea253696e8cb367aba7"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        1024,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0023.png",
+      "source_sha256": "9bc0a9694f7cfbecebcb337601650792528a93c1413fa417d7418f00d1848e6c"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        1536,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0024.png",
+      "source_sha256": "b95e8b2270ca162c84bb3c3d024668418662cab1a68ce90fe1a93243c5d4e85e"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-00.png",
+      "region": [
+        2048,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0025.png",
+      "source_sha256": "950f51202ffb4e34ec3de5f21783d62877ef4fce848418c749add68a2e930d5f"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0026.png",
+      "source_sha256": "9f2f673279fcb2cd1180c5b0f0d9f923bb15cd0e51f97081817dcfa55d45e8d0"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0027.png",
+      "source_sha256": "8fab370dd938ff561eb093cd8e5ef80483fcd057b17b6613c1ae6036865cdb6c"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0028.png",
+      "source_sha256": "81b1461fd8c45e62d9871cc4ed7b130b83444ad43ca69f17484efea8af710e26"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0029.png",
+      "source_sha256": "2017cda4ac0bdfd2abccca4c5290044a563dd08031961a4d5855be92aad6e3ef"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        2048,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0030.png",
+      "source_sha256": "b454bf71d2771598132205bd2f00d0328dacb902bd08e72e5555aa8b4b9dcd6d"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0031.png",
+      "source_sha256": "bda4e13924ed100716bd6326724303ad4d03047267c11f2ef63e7fb970e6e65a"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0032.png",
+      "source_sha256": "3f796f427fa011cd623385ef4834af52cc2493877ee9357ccc2f2a626e5ca487"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0033.png",
+      "source_sha256": "73f684dcb867bfc804c8be7bde739c1178ecc584917d7aa6cf6c1162cea01404"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0034.png",
+      "source_sha256": "3d1443a6251d6a6379764ff8f466e1ab2ac1366036c6348b7fe3e1e04b450093"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        2048,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0035.png",
+      "source_sha256": "6c7e4e2b1e4f2a58cadb52f98c9e7c8cda54d1ef2b0334bccf2090cdc768a0d1"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0036.png",
+      "source_sha256": "d64fd3aa2dffc3def82334c85a527e759ae25a84009c63110604dcc61c57c701"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        512,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0037.png",
+      "source_sha256": "3826d015eab60547e6f2d9165375b66e039dee9318715b352e52d784e3249f07"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        1024,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0038.png",
+      "source_sha256": "dab6b08827977b9c5b22c551a0b57e9e64333b551b52a377ca3f3eca4a0344fc"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        1536,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0039.png",
+      "source_sha256": "7b110c0ed97eea5011de12f816a11fe62475dfb2b698951fce8b63606f193be3"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        2048,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0040.png",
+      "source_sha256": "c20bbf93e8f4bb09483c233439f648ff99f0d0f1dafa19fa968fd3c7c611d12d"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0041.png",
+      "source_sha256": "c3b3cd436ae1f16144fd7de047610908514f8f6be615d2f9f5838fb87fda1312"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        512,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0042.png",
+      "source_sha256": "861906d3758632fe97e34d4727a7e917e64eb8510cfa0f547bc9e3fbda909c09"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0043.png",
+      "source_sha256": "963e5c88de26a9128c2c63b189805947e3c04ce3a7cd2a41a05574b7c81f0956"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        1536,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0044.png",
+      "source_sha256": "491dd86a3662930f2b3af6107e561549d7005e3ce5895fba712d592d8dd2395b"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        2048,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0045.png",
+      "source_sha256": "048df7d322c01f784f5fdeb2879234cafbb63573a6b5137bde371fdf5a0d27a4"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        0,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0046.png",
+      "source_sha256": "bc223dca3b14f4cddc83db8a0c115f302a763774387cdd1193287380dfa56893"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        512,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0047.png",
+      "source_sha256": "dae271a4723915785e59a7cd6b7b2a19df1afacf60dd73b56b4112b685ca91df"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        1024,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0048.png",
+      "source_sha256": "15fdac8df41a7ed16e4a5af248da693181bb5adf9f330baedd259f565eb63682"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        1536,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0049.png",
+      "source_sha256": "cedb00eb1818a457db2453c8f705d0904cb861d6d885e11188720c2c8c44f37e"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-01.png",
+      "region": [
+        2048,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0050.png",
+      "source_sha256": "a251ec8773f98115eb80d0c4c04e1f33fe6278b84cac41042da991a8807391e1"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0051.png",
+      "source_sha256": "93a175dddc949a95f5fef824d0dfb642c2ff4d55323b9a1fc44f55e27ebb6dad"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0052.png",
+      "source_sha256": "a16da55fc69a9dd6fe008056a96699d9360320bf986044a952af0281bce477bc"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0053.png",
+      "source_sha256": "a27275f55bfc58b87f16c667fccbf750207c50a45f28d2ad7fbc24220c8fb9dd"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0054.png",
+      "source_sha256": "cfcf3804f528c7ef1ffc43d6e5daf8d2947beb8c796ab980af99c65c8db33b3f"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        2048,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0055.png",
+      "source_sha256": "90f78c3db12c16d7dd779bdd1e7ed30d4746ac58b2b92b00e423d0121676d51c"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0056.png",
+      "source_sha256": "5bee169c65ca4255bdb23231a2ae4df40e94964d0670f9f64fc3653689ceac90"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0057.png",
+      "source_sha256": "8ef07c7ebccf728dd048b3600c68fbbdf97711e66be5d107f81ab7110189f081"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0058.png",
+      "source_sha256": "b148fa9f991a2d997869a6411f37e2525d45714f41f847050e55d258666afb90"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0059.png",
+      "source_sha256": "0001a411008354b0b1dbb3b4f0e38886fccaac26a633dfc629b68409dc71d7ff"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        2048,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0060.png",
+      "source_sha256": "520b6e3ae2e0fd72c8514257a71f800933a94bc9f901e20cf47877bafcfeabd0"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0061.png",
+      "source_sha256": "169595816563fb3d35f11dadf38228e281fb0ad71b12aa52769d64bfd3bcac29"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        512,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0062.png",
+      "source_sha256": "67b207abbb3fe7699297c74072c8a2bae3f2d1f3720735699019618abf9911c8"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        1024,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0063.png",
+      "source_sha256": "4910bdc59636bd823cfaad988a1920f36df2f04764207f7e7a1d5f2429caf7fe"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        1536,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0064.png",
+      "source_sha256": "a2ebc610a9f52f587181dd8264a6bf7ada6cfb00c154998c1f7afb779e39fbab"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        2048,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0065.png",
+      "source_sha256": "244d8b2de3a30a06551fb4e11a91cb5adfa12da439fe84c2e6bdf25aab3196a4"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0066.png",
+      "source_sha256": "5c71af2b5cc1bbb26e9b8ae72c98b7c94a8cb649667f37bb5d070b9d38f42075"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        512,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0067.png",
+      "source_sha256": "d9c9fa903f0339074cc8ed5eb5e160088dc038cf4b087b49c90eadc46a9bf786"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0068.png",
+      "source_sha256": "f910c1825224810cd7ae220692c9ba3de22ebd5301a51809fb77d0c9eaa0936e"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        1536,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0069.png",
+      "source_sha256": "e2cd44ba8674db90fd79493664cf49facd7e31b160c7b926a16e7ad63018710d"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        2048,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0070.png",
+      "source_sha256": "0ebf8b5e270772df6164c5db0f4731599d612ae1a03f21c56b3478febf3c5538"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        0,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0071.png",
+      "source_sha256": "65faed85e08dcfa6034d51d295c942e5af7f755d51bdbcc1492e56e0cfa3e9d5"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        512,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0072.png",
+      "source_sha256": "b5621ec8c65ff2e378c1e832f3a073035da920065752896a962775ea90d559bd"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        1024,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0073.png",
+      "source_sha256": "311357237bf5b0a49209536cd27d247e1cf439f8c22502b8d9701977dd7e0f6e"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        1536,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0074.png",
+      "source_sha256": "d7b9008e110b861ba14f766ab78ea19c7ad38b3d9cd090f7b1c87cda28eaded2"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-02.png",
+      "region": [
+        2048,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0075.png",
+      "source_sha256": "e71ab2cfad0993ad05d621ee23356f9dcc2364d838283dad4e9b37f2fd3e8ecf"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0076.png",
+      "source_sha256": "23934da51fbb67c6bb9ec228b729065dad41b9471e14bc64910f3714fcf4cac9"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0077.png",
+      "source_sha256": "91439a29835cbd1d213e5956b97a2bf610d0980297895afdc5cca569d2f563f1"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0078.png",
+      "source_sha256": "0584aa102507fa103d441cc6b8e9f62e6f65f1dce39162d96dbf008e779cdd50"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0079.png",
+      "source_sha256": "c59f116c8fa5b7241542092f5bfe49f43b24d2e93f8a48d892cb559866ac4b01"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        2048,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0080.png",
+      "source_sha256": "1fed99601b524f543c8287977f2a9f5adec4f2c5f2ed3942775bed8c2712e4df"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0081.png",
+      "source_sha256": "03b4fb8309541be43e246d6d9d03376effd25af0489002dfc9916ce307337e45"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0082.png",
+      "source_sha256": "df6dd74465b5019a6677ae5f532fa178175efc120d0a39b4c44ac3b8ddac9832"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0083.png",
+      "source_sha256": "ef272e55d860f2d9b698c9197b2db28d94274a6bdf19c9fe50de55960139c826"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0084.png",
+      "source_sha256": "5dbf5829f3832384060d7e791031ebd8977567720b1240b6e70ef56c3ca00e8f"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        2048,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0085.png",
+      "source_sha256": "42653d9ddec994aab392a73f20181751e2e63f594779722ea253acdd4bd62511"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0086.png",
+      "source_sha256": "f6384c83fa2d384f7254a5799a7b6d3c2c1e21cbd373e2dbc04cd5ee899b71b9"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        512,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0087.png",
+      "source_sha256": "79c3f92658db2103ffabfa9a08be1759d9e6ea2c5d12f07eacafcd645ab38cff"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        1024,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0088.png",
+      "source_sha256": "ae7e7b91174ea3de1e54d5713729b5b72085e069e2cae0f5eaeac82959a4e8e2"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        1536,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0089.png",
+      "source_sha256": "91a13fa3e431a0b6d6e41011d4e1d9163292d3e03806cb5a8f29c31a5ba95e38"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        2048,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0090.png",
+      "source_sha256": "7f0bff3241d4dc6733c193ffa5349632636ec9379be0abf5fb34d44b4df14eba"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0091.png",
+      "source_sha256": "27f4714754e5697b77c8cd09795b6118122b79f01cea134590911c66a45b2016"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        512,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0092.png",
+      "source_sha256": "8aa23c0f91a58f62cb2e1ce8550cd25f9259eb1e53345d96f8d68be2f36576cd"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0093.png",
+      "source_sha256": "28fc7b23ceba1517280c0ca5112364654492e868d55f5fe9cae824096ecc0f94"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        1536,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0094.png",
+      "source_sha256": "ccda20d58cb368ec6068683b1f9ac58638c28b42ae55bce34c0df6b0ce66abab"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        2048,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0095.png",
+      "source_sha256": "51316a052d46038d09c73371e00b8ac858b1929ab770c3d183bf08f174ddb18b"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        0,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0096.png",
+      "source_sha256": "d92d5ab64ecb381130bd19e810b14b769c1bdb5772968791a0e7fe3e191c2415"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        512,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0097.png",
+      "source_sha256": "b3b000a848c87d19e3cc8b894736c194ad2104fa457b93e6acfcece0c017f5c6"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        1024,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0098.png",
+      "source_sha256": "90622eb43b4148b7e098038f4a8dd88248169457fafdc777d00e5f963db7ad41"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        1536,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0099.png",
+      "source_sha256": "e2d9551d297104ba0e90e47464bb70ca9a98a93bb13431725916cab4d28718fd"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-03.png",
+      "region": [
+        2048,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0100.png",
+      "source_sha256": "93f773bf5ea0d862bc65cfe8ce8007b10b21e81a145e627bdcee40406fcaf603"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0101.png",
+      "source_sha256": "ccdf3023da06ef0723561e84a950af0139195b80bc035f6ebf97a605f0016e12"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0102.png",
+      "source_sha256": "562d2a09524537d4135c6b864262feaf1a0c93d85c564421e2c119a2139c595d"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0103.png",
+      "source_sha256": "36227ba6cfade7acc7aac136665cce3aa41fac666f69e6cacacfdcc55b63e6b7"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0104.png",
+      "source_sha256": "7d0540b4cd3c8941d4ddf056abea27f065caa61641793063eba322f8a1fb2755"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        2048,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0105.png",
+      "source_sha256": "0db572e7cf5172790b5ff4f9fb51951d30b9d167afd6260fd93fabbe563aa488"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0106.png",
+      "source_sha256": "585a566753eb972bbcccd1948bb48664e3aea35679abb6df14c0a4352ef8afe6"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0107.png",
+      "source_sha256": "6e7ee706cb4d69b50c0b23ab2bed5dfc4f87b32d73a1c9d05423e1aa40305468"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0108.png",
+      "source_sha256": "19c8b425971be02e02d5184425bf9e0467227b664a222a39e4f489b4c9f205ad"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0109.png",
+      "source_sha256": "71026b464eacf419b7fb199513cef0493b1bed8e82e9d35046e47cb446e444e0"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        2048,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0110.png",
+      "source_sha256": "29ad2f21aadfcaa95b5b9d7392f60a2b21624d96347b063e2650925b8b486ab5"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0111.png",
+      "source_sha256": "197cd1debbae051b9b62a320c29d97b8e40d75e7043b3d6871482f7d8033fa39"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        512,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0112.png",
+      "source_sha256": "e0677923fd7cb40dbe0427ea8c8ba050a9e65f3f571a90cf1c9de1aa10a96a0b"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        1024,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0113.png",
+      "source_sha256": "2836c108de9eccfa90ac63cb6b25357cefa98706620870833855de651185aeb1"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        1536,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0114.png",
+      "source_sha256": "73b07a1e2cc3cd09be80467de2f962eddb7f3f15f17f738bb846f13fb60fea2a"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        2048,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0115.png",
+      "source_sha256": "4fea9fcc44f03bebc3c29e2c113bdf59abe4a4059b1f94c657991fff301417e7"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0116.png",
+      "source_sha256": "240b826bd8eaf8719110d59f9f2e6f5b71fcf8adb39bae33790051f622ebaa19"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        512,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0117.png",
+      "source_sha256": "f2766ca784818e18bef02a025972ab994f6ae2785e95a855bdf5afe5227c4528"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0118.png",
+      "source_sha256": "0f932018471af68a63f397b6371e09b75b6b3838c0172415263a13610bed26b8"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        1536,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0119.png",
+      "source_sha256": "f62faa63acb848611fab70ffcac93f91f92c7c9ae3c35d108e2449c3b90d515e"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        2048,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0120.png",
+      "source_sha256": "a279631a0aede496c999dd50be15a5cceb2331416d41efde97b101e9ccc6d910"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        0,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0121.png",
+      "source_sha256": "c70e2c5269febceaa726b022e7cd9a0d18ceee4bd85de360e802c8cd681f63c6"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        512,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0122.png",
+      "source_sha256": "db42c31b0c366bcd4959546d8f17316f81dd24b3bdbd0bb209b45f54fb35773b"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        1024,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0123.png",
+      "source_sha256": "1ad502e02f94327191addb9b3657f733abd5ec88a4c1b6932e41ec171ecbfa73"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        1536,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0124.png",
+      "source_sha256": "dc7ce535f50463f564087b40909bd51024ece97135d8b6fc951e4da88941c52b"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-04.png",
+      "region": [
+        2048,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0125.png",
+      "source_sha256": "3d601a34da56dbf535f3fadaae7e2eca42318f96aec4b66b760e152c3d15604f"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0126.png",
+      "source_sha256": "8b93fab0f3906162308b8513cc5f13bf93121343c403bbff54500a49b784a755"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0127.png",
+      "source_sha256": "975e83745ee3594e9b985bdbd591e8543ad844db44f3242875b33974c6b52ecd"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0128.png",
+      "source_sha256": "368ae6f842caf2bacc8af992f64d16ca35febfe98fcbb7646106b8a5107dc3e3"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0129.png",
+      "source_sha256": "f4a1dc0c1ca42d2de1cb32cd6af9314bd2973851c5742f309e4c0c2615cbae39"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        2048,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0130.png",
+      "source_sha256": "71b797cd9415f1743b59b67c7a496ababc4cfddbf883252e4ac51a58c923ac34"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0131.png",
+      "source_sha256": "8726bcf8ee95960d98b75b10d49cde18b63e823e8feb1c74bfc4d1d4b47f890d"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0132.png",
+      "source_sha256": "70ea66d789e7d58e13a3fd30cc6c38104ddee7285890cd68db627005b00836bc"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0133.png",
+      "source_sha256": "6f4ed486b3f574d39a3df05ad4770ad182406fffd668637e754217f740998c51"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0134.png",
+      "source_sha256": "a51c19a8e0a359b8674d9d9a5174aa28920719ffefb73944e23f017a13aa0e99"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        2048,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0135.png",
+      "source_sha256": "5c5bbfe4745add820dd1d8fc64810748f0bca86ca542c989388315c1daccda93"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0136.png",
+      "source_sha256": "ea882a5ea538b6bbf816d8f3208e792f39f5e6d3fe84de9aeff4ccdf6d997242"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        512,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0137.png",
+      "source_sha256": "c4d3b73d31541086071914603da9e110c8d7dce612a4cbe82076f8be4061e69f"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        1024,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0138.png",
+      "source_sha256": "010fe01e1990f90fc9353634069b491ef578e88b7702893139c109eddd0c2731"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        1536,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0139.png",
+      "source_sha256": "218db4c317abdc23e8cd722b771c8ab9f8ab6ecc9a5d7fbac29e4852de9c0b63"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        2048,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0140.png",
+      "source_sha256": "91d9a62af758bbfea35583c90aa29f0ca14ba8d0c594cb3c2646446398f92542"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0141.png",
+      "source_sha256": "f616e2da04cb5987d999a915202da2e7947936d21ae98739d10d45d438995064"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        512,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0142.png",
+      "source_sha256": "b3943a5ad5d8fcf27747d097e0e46800656f2bec20a52d0ed474cf8978891d24"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0143.png",
+      "source_sha256": "1286e23e62f3ad426f70b45569a44926425bc34af6d62ea35f04e38b3ca75874"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        1536,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0144.png",
+      "source_sha256": "964fcb8082ea8091dc871811ef544ab7151abd3404c36a42c34fd0e6e0ed286b"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        2048,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0145.png",
+      "source_sha256": "c5d48fa9e341367cbb3219c7142ca53a1a8138362a48d1091cff6d85ef768757"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        0,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0146.png",
+      "source_sha256": "aa146c82fed33c5e45c98584b2355e45eec37ab36f552decefeac69013742615"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        512,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0147.png",
+      "source_sha256": "be731e2d1a06d27b60f2690710787faa9cb5195786e4ccccfa2bb22d6d92b3ff"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        1024,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0148.png",
+      "source_sha256": "410f14cb4db58d71b3eab4a719e1810bd96b5d51e0033f393d668c1d77077204"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        1536,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0149.png",
+      "source_sha256": "b39c4abb703a4138a37352e616a31af2d661e227e79239fda54af88ff6be5e92"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-05.png",
+      "region": [
+        2048,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0150.png",
+      "source_sha256": "72f5f3929ed188cc67e11490eb8974c57a2dec6466010b77fcb3a72fd7b0dbc9"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0151.png",
+      "source_sha256": "21db6a1b868d0d4b070c6d2699bf3fe85271b9d424e1f6432600f1d6bb050008"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0152.png",
+      "source_sha256": "aaa4771c50722bf051c0d0b57e1d33525c098928b1085cb6f118943d6beed9f5"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0153.png",
+      "source_sha256": "e6015ec69f97d6b692a44aaa99f88f7d87b48ce4815b1db5ef4255838a263e0a"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0154.png",
+      "source_sha256": "222312ccdf141481c523af92a41929b3801620d8341d18643285300a4dacfd71"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        2048,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0155.png",
+      "source_sha256": "92bd0a08ac168a0fa04a2d9748ff8fc84453e9a1325d07e36dedf54877dc2d3a"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0156.png",
+      "source_sha256": "4bf01471bc81309e7f42144ddf72825363d5ddcaa75f6d5c41aa81af4690d1b3"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0157.png",
+      "source_sha256": "929d5db832bca837af4d1178276a482dce6eecfd1038170b916a092b3c1d1020"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0158.png",
+      "source_sha256": "eb050d13dd282dd49bcf288f8c648bf5256e47568e6aae6f423f47ed780e1841"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0159.png",
+      "source_sha256": "9e01c204fa14f577d70f102b0fbbd6a0b33343d459a3d38dcfffb9b030a7f8f9"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        2048,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0160.png",
+      "source_sha256": "23c2d87199a8775cc096bcfa4b0e33133f998316902071c39175a8de28ca7baa"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0161.png",
+      "source_sha256": "128d164559a647f012666fac4e72287258e6b27cadd04270b991c871b30d04a2"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        512,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0162.png",
+      "source_sha256": "bdaa5871ddc3556c9cab2980e9df9bbe20a97b6f84fafa2bd29457634a8c17ee"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        1024,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0163.png",
+      "source_sha256": "172e3ab11c33091c88d01e189872b0f67a2751737a3e98a9301b937f41b15644"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        1536,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0164.png",
+      "source_sha256": "e6ca0c29e4370f85fdbaeab47f4f88b23251200917ef633ff70381ad676e9548"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        2048,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0165.png",
+      "source_sha256": "e3f07a960299fa881ba8645c9949a138f5f7058b9a1aac683745a03c9c816c8f"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0166.png",
+      "source_sha256": "d390e74ecd05e568ecc406b56c37e5e5d416e49a078acf8e1350ba1f1d5de7d5"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        512,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0167.png",
+      "source_sha256": "52e84492dd5e89b69301c28624c83ff9dcf13d3a54e1fa2293ff520f89e70733"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0168.png",
+      "source_sha256": "6bc140b94e2b32f626385b8b4c2f21087aeb517b17c174603708f172fc02eec9"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        1536,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0169.png",
+      "source_sha256": "6bc140b94e2b32f626385b8b4c2f21087aeb517b17c174603708f172fc02eec9"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        2048,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0170.png",
+      "source_sha256": "6bc140b94e2b32f626385b8b4c2f21087aeb517b17c174603708f172fc02eec9"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        0,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0171.png",
+      "source_sha256": "65633b7aeccdec1ca09e5904582712befe4b5412edf5f94860ccd6b63e0cb2c5"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        512,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0172.png",
+      "source_sha256": "6bc140b94e2b32f626385b8b4c2f21087aeb517b17c174603708f172fc02eec9"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        1024,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0173.png",
+      "source_sha256": "6bc140b94e2b32f626385b8b4c2f21087aeb517b17c174603708f172fc02eec9"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        1536,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0174.png",
+      "source_sha256": "7c45e3c25b37b6f8a9e5d1c70b881d446cdc9cbea4c77760dcb1bd41fc7c0ce8"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-06.png",
+      "region": [
+        2048,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0175.png",
+      "source_sha256": "7c45e3c25b37b6f8a9e5d1c70b881d446cdc9cbea4c77760dcb1bd41fc7c0ce8"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-07.png",
+      "region": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0176.png",
+      "source_sha256": "7c45e3c25b37b6f8a9e5d1c70b881d446cdc9cbea4c77760dcb1bd41fc7c0ce8"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-07.png",
+      "region": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0177.png",
+      "source_sha256": "7c45e3c25b37b6f8a9e5d1c70b881d446cdc9cbea4c77760dcb1bd41fc7c0ce8"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-07.png",
+      "region": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0178.png",
+      "source_sha256": "f987df4d5ca4e3f7b0864dc32c0ad532af247a43b5c2afdd4315e20b803f5b58"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-07.png",
+      "region": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0179.png",
+      "source_sha256": "6bc140b94e2b32f626385b8b4c2f21087aeb517b17c174603708f172fc02eec9"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/action-chuanyun/atlas-07.png",
+      "region": [
+        2048,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0180.png",
+      "source_sha256": "6bc140b94e2b32f626385b8b4c2f21087aeb517b17c174603708f172fc02eec9"
+    }
+  ]
+}

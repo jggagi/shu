@@ -4,6 +4,20 @@
 
 **Codex 做可玩 demo → 用户试玩拍板 → Codex 修订 → 更新决定与扩展计划。**
 
+后续开发以 GitHub `main` 为准，在 X1 Lite 继续；Mac 本机资料保留。环境、最新入口与本地制作源工程边界见 [X1 Lite 交接](docs/X1_LITE_HANDOFF.md)。
+
+## 当前整合试玩：《慢半步》听教练剑
+
+[打开本机试玩](http://127.0.0.1:8812/)：开始《慢半步·听教练剑》，在2D听雨廊听师父点拨，去后山从五套3D人物动作中任选一套练习，再回廊复命、歇息跨日和存档续玩。对白、音频绑定与触发条件都来自内容包，同一内核也可运行原溪亭验证包。新用户目录与旧试玩隔离；制作与验证见[整合切片](docs/CULTIVATION_ENGINE_MENTOR_LOOP.md)。
+
+## 此前独立试玩：《慢半步》有声师徒
+
+[打开本机试玩](http://127.0.0.1:8811/)：江砚秋练剑心急，回听雨廊请教师傅。九句原创配音、两个选择分支，验证「对白→调息选择→结算→修习加成→返回→存读档」。室内继续用 2D 师徒，左上可随时开关语音；任务与系统文字不配音。详见[情节、来源与验证](docs/MENTOR_VOICE_SCENE.md)。旧8809对照与旧养成试玩保留；新剧情与叶知闲声线待试玩反馈，原生退出稳定性仍有已知问题。
+
+## 此前独立试样：剧情工具 A/B
+
+[打开本机对照 demo](http://127.0.0.1:8809/)：同一段师傅口诀，切换 A Dialogue Manager 与 B Dialogic，体验对白、选择、真实养成结算和存读档。听雨廊师徒统一使用现有 2D 原画；室内养成／对话用 2D，练武与战斗场景才用 3D 人物模型。旧8805–8808与正式入口保持。两边Web已实测，原生退出仍有兼容问题；先看效果，尚未选定正式工具。详见[试样与验证边界](docs/DIALOGUE_TOOLS_LAB.md)。
+
 ## 当前本机试玩：《两盏茶》完整支线
 
 [在线正式版](https://jggagi.github.io/shu/)仍为 **0.1.4-tea-objects**（A/B 已验收发布）。阶段 C 已获用户验收；用户随后授权完整支线。本机候选 **0.1.9-tea-past-local** 已补齐医者诊察、写信和后事过去场景，完成本机专项与真实 Web 全流程验证；新画面与完整体验待你试玩拍板；用户已授权将当前源码归档至 GitHub 分支 `codex/tea-full-past-scenes`，在线试玩尚未发布本候选。
@@ -123,9 +137,11 @@ godot --path . --audio-driver Dummy --script res://tests/weather_render.gd
 每轮先收试玩反馈，再调整布局和节奏。D02 拟增加余观涛互动与第二项养成活动，待本轮验收后推进。
 
 
-## 制作 skill 与下一轮 tea
+## 制作 skill 与当前引擎试玩
 
-养成模式制作入口：[game-cultivation-build](.agents/skills/game-cultivation-build/SKILL.md)，仓库级 0.1.1；支持养成行动、人物互动及 tea 等固定场景支线。拟议的 cultivation toolkit／编辑器插件仍为设计，尚未实现。
+当前新增[养成引擎v0.2物件试玩](http://127.0.0.1:8808/)：在听雨廊选择《归剑问天》，接受委托后直接点双杯调查；可保存后刷新继续，修补／询问不重复扣费。双杯2/2完成当前阶段并留在支线，后续剧情尚未接入。实际范围与分层记录见[第二片](docs/CULTIVATION_ENGINE_V02_TEA_SLICE.md)。原8807五剑构建及其存档保持；原正式完整Tea不改。本片已完成本机检查，当前体验等待用户试玩。
+
+养成模式制作入口：[game-cultivation-build](.agents/skills/game-cultivation-build/SKILL.md)，仓库级0.2.0。当前[养成引擎v0.2本机试玩](http://127.0.0.1:8807/)在同一内核中运行两包，蜀山通过内容包接入获批五套剑法，支持完整动作／唯一结算／返回及独立存读档。来源、范围和分层验收见[v0.2切片](docs/CULTIVATION_ENGINE_V02_SWORD_SLICE.md)和[实际运行库API](addons/cultivation_mode/README.md)。[v0.1双包基线](docs/CULTIVATION_ENGINE_V0_SLICE.md)及8806构建保留，原8805正式五套／Tea宿主保持。当前体验待用户试玩；天气／生趣、完整Tea迁移与编辑器仍属后续范围。
 
 固定画景、时辰／天气与环境动态使用 [game-painted-scene-build](.agents/skills/game-painted-scene-build/SKILL.md)；低频环境动物与场景能力使用 [game-ambient-life-build](.agents/skills/game-ambient-life-build/SKILL.md)；raster 素材由 [game-art](.agents/skills/game-art/SKILL.md) 制作并在真实场景校准。现有 Environment/Ambient presenters 是 reusable shu modules，`shu_scene_runtime` addon 尚未实现。[制作方法 v1](docs/SCENE_REUSE_HANDOFF.md)记录听雨廊仅接时辰／天气时的历史状态及未来 addon 决策门；当前完整候选和复核状态见[实施记录](docs/TINGYU_COMPLETE_SLICE.md)。
 
@@ -161,6 +177,10 @@ Web 导出使用独立 `.local` 快照覆盖入口，正式 project.godot 主场
 
 用户在 v4 边缘清理后反馈「已经很好了」（2026-10-11），认可当前转身挥剑在后山的本地观感。小样支持暂停、半速和逐帧，仍为独立研究入口，未替换正式养成。范围、来源、分阶段证据和剩余限制见 [后山单式记录](docs/SWORD_IMAGE_BACK_MOUNTAIN_SLICE.md)。
 
-新招式的可复用入口：[图像动作制作方法 v1](docs/IMAGE_MOTION_PRODUCTION_METHOD.md) · [game-image-motion-build](.agents/skills/game-image-motion-build/SKILL.md) · [单招式任务卡](.agents/skills/game-image-motion-build/references/shot-brief-template.md)。按“动作参考＋角色原画 → 时序生成 → 透明帧 → 固定大小与接触锚点 → 场景融合 → 试玩”制作；当前工具仍部分绑定此样本。下一扩展验证建议为不同剑式与溪边茶亭双手棍法，尚未执行或据此声明批量制作已通过。
+新招式的可复用入口：[图像动作制作方法 v2](docs/IMAGE_MOTION_PRODUCTION_METHOD.md) · [game-image-motion-build 1.1.0](.agents/skills/game-image-motion-build/SKILL.md) · [单招式任务卡](.agents/skills/game-image-motion-build/references/shot-brief-template.md)。支持生成图像时序的透明边缘处理，以及固定三维模型直接渲染RGBA两条路线；固定角色五套短剑法与正式养成闭环已有本机验证及正向反馈。双手棍法、多角色／新镜头和生产性能仍需对应验证；具体帧数、锚点和数值不成为技能通用默认。
 
 主角三类武功制作（更新2026-10-12）：剑法／拳掌完成50／53帧透明包和独立后山预览：[横抹回剑试玩](http://127.0.0.1:8814/)／[站桩冲拳试玩](http://127.0.0.1:8815/)，均为仅本机入口。两段原生行为与两窗口渲染、Web导出通过；剑法Web控件已查看，拳掌Web最后检查因浏览器安全策略阻止恢复而未完成。双手棍法两次获授权的官方ModelScope任务均FAILED，无源片。Windows和用户认可待验收。输入／原片仍可在[制作总览](http://127.0.0.1:8794/)和[透明帧检查](http://127.0.0.1:8794/matte-review.html?shot=fist)查看；来源、逐阶段证据与重建命令见[本轮记录](docs/HERO_MARTIAL_THREE_SLICE.md)。
+
+### 五套剑法正式养成试玩（2026-10-23）
+
+本机入口 [正式练剑闭环](http://127.0.0.1:8805/)：听雨廊左下「前往后山」→选剑法→修习→收势后自动返回。沿用精力−22／剑术+10／一时辰；精力不足可回廊休息。当前项目正式入口已接入用户确认的五套动作，实施及分层验证见[本轮切片](docs/FORMAL_FIVE_SWORD_CYCLE_SLICE.md)。本机新流程已获正向反馈；Windows实机待验，旧8804保留，未提交／公开发布。

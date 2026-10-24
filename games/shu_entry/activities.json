@@ -1,0 +1,553 @@
+{
+  "tea_invitation": {
+    "label": "归剑问天 · 旧剑委托",
+    "description": "听山下老人托付归还顾前辈的旧剑。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {
+        "tea_active": false,
+        "tea_quest_complete": false
+      }
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "tea_commission",
+    "target_scene": "",
+    "result": "你开始听山下老人讲起旧剑的委托。",
+    "character": "quest_elder"
+  },
+  "tea_accept": {
+    "label": "替顾前辈送剑",
+    "description": "接受归还旧剑的委托，前往问天峰旧剑坪。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {
+        "tea_active": false,
+        "tea_quest_complete": false
+      }
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "tea.sword_terrace",
+    "result": "你接下送剑委托。",
+    "character": "",
+    "enter_quest": "tea"
+  },
+  "tea_rest": {
+    "label": "歇息片刻",
+    "description": "停下调息，恢复精力。",
+    "scenes": [
+      "tea.sword_terrace"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {},
+    "gains": {
+      "energy": 34
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你安静歇息了一会儿，精力有所恢复。",
+    "character": ""
+  },
+  "tea_return_to_corridor": {
+    "label": "返回听雨廊",
+    "description": "整条支线完成后回到听雨廊。",
+    "scenes": [
+      "tea.sword_terrace"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {
+        "tea_quest_complete": true
+      }
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "tingyu_corridor",
+    "result": "你回到听雨廊。",
+    "character": "",
+    "return_quest": "tea"
+  },
+  "tea_inspect_cup_first": {
+    "label": "查看第一只旧杯",
+    "description": "直接查看，不消耗精力、时间或养成收益。",
+    "scenes": [
+      "tea.sword_terrace"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "tea_cup_first_seen",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "杯口有细小缺痕，杯底留有陈年茶渍。",
+    "character": ""
+  },
+  "tea_repair_cup_first": {
+    "label": "修补",
+    "description": "修补第一只旧杯，消耗22精力；每只杯子的该项行动仅一次。",
+    "scenes": [
+      "tea.sword_terrace"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {
+        "tea_cup_first_seen": true
+      }
+    },
+    "set_flags": {},
+    "once_key": "tea_first_repair_done",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "裂痕被细细补起，却仍能看出岁月留下的痕迹。",
+    "character": ""
+  },
+  "tea_ask_first_cup": {
+    "label": "询问叶知闲",
+    "description": "向叶知闲打听第一只旧杯，消耗8精力；每只杯子的该项行动仅一次。",
+    "scenes": [
+      "tea.sword_terrace"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {
+      "energy": 8
+    },
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {
+        "tea_cup_first_seen": true
+      }
+    },
+    "set_flags": {},
+    "once_key": "tea_first_ask_done",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "谢长安早死于问天峰。顾青萝无法接受恋人死亡，思念成疾。她几十年都把第二杯茶留给一个不会回来的人。",
+    "character": "mentor_zhixian"
+  },
+  "tea_inspect_cup_second": {
+    "label": "查看第二只旧杯",
+    "description": "直接查看，不消耗精力、时间或养成收益。",
+    "scenes": [
+      "tea.sword_terrace"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "tea_cup_second_seen",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "杯底积着一层又一层茶渍。\n杯沿却几乎没有饮用留下的磨痕。",
+    "character": ""
+  },
+  "tea_ask_second_cup": {
+    "label": "询问叶知闲",
+    "description": "向叶知闲打听第二只旧杯，消耗8精力；每只杯子的该项行动仅一次。",
+    "scenes": [
+      "tea.sword_terrace"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {
+      "energy": 8
+    },
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {
+        "tea_cup_second_seen": true
+      }
+    },
+    "set_flags": {},
+    "once_key": "tea_second_ask_done",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "谢长安早死于问天峰。顾青萝无法接受恋人死亡，思念成疾。她几十年都把第二杯茶留给一个不会回来的人。",
+    "character": "mentor_zhixian"
+  },
+  "pine_wind": {
+    "label": "松风剑",
+    "description": "提剑下劈，回带平刺，再收回守势。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "sword": 10
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你练过一遍松风剑。提剑下劈，回带平刺，再收回守势。",
+    "presentation": {
+      "motion": "jiang_sword",
+      "clip": "songfeng"
+    },
+    "show_count": true
+  },
+  "listening_rain": {
+    "label": "穿云剑",
+    "description": "前送重心，连续直刺，抽剑回到身前。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "sword": 10
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你练过一遍穿云剑。前送重心，连续直刺，抽剑回到身前。",
+    "presentation": {
+      "motion": "jiang_sword",
+      "clip": "chuanyun"
+    },
+    "show_count": true
+  },
+  "returning_tide": {
+    "label": "回澜剑",
+    "description": "横抹开路，换锋反斩，稳稳收势。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "sword": 10
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你练过一遍回澜剑。横抹开路，换锋反斩，稳稳收势。",
+    "presentation": {
+      "motion": "jiang_sword",
+      "clip": "huilan"
+    },
+    "show_count": true
+  },
+  "rising_peak": {
+    "label": "挑月剑",
+    "description": "低扫卸势，顺势上挑，收剑回位。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "sword": 10
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你练过一遍挑月剑。低扫卸势，顺势上挑，收剑回位。",
+    "presentation": {
+      "motion": "jiang_sword",
+      "clip": "tiaoyue"
+    },
+    "show_count": true
+  },
+  "swift_swallow": {
+    "label": "斜影剑",
+    "description": "斜劈换锋，反撩再斩，最后回到守势。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "sword": 10
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你练过一遍斜影剑。斜劈换锋，反撩再斩，最后回到守势。",
+    "presentation": {
+      "motion": "jiang_sword",
+      "clip": "xieying"
+    },
+    "show_count": true
+  },
+  "train_mountain": {
+    "label": "后山修习",
+    "description": "专心调息两个时辰，修为稳步提升；若已领会师傅提示，这次修习会得到一次额外加成。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 2,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "cultivation": 12
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [
+      {
+        "flag": "breathing_hint",
+        "gains": {
+          "cultivation": 6
+        },
+        "consume": true
+      }
+    ],
+    "event": "",
+    "target_scene": "",
+    "result": "你完成了两个时辰的修习；师傅提示若已备好，便在这次修习中得到验证。"
+  },
+  "rest_practice": {
+    "label": "歇息片刻",
+    "description": "停下调息，恢复精力。",
+    "scenes": [
+      "tingyu_corridor",
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {},
+    "gains": {
+      "energy": 34
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你安静歇息了一会儿，精力有所恢复。"
+  },
+  "go_to_mountain": {
+    "label": "前往后山",
+    "description": "沿廊阶前往后山空地。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "back_mountain",
+    "result": "你沿石阶来到后山。"
+  },
+  "return_to_corridor": {
+    "label": "回到听雨廊",
+    "description": "沿山路返回廊下。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "tingyu_corridor",
+    "result": "你回到听雨廊。"
+  },
+  "talk_mentor": {
+    "label": "请教叶知闲",
+    "description": "免费开始一段请教；是否领会提示及其精力、时间花费由对话选择决定。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {
+        "energy": 8
+      },
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "mentor_tip",
+    "target_scene": "",
+    "result": "你开始向叶知闲请教；领会提示的花费会在选择时结算。",
+    "character": "mentor_zhixian"
+  },
+  "claim_mentor_lesson": {
+    "label": "领会师傅提示（精力8 · 1时辰）",
+    "description": "从当前对话选择领会：消耗8精力、推进1时辰、理解+1，并为下一次修习准备一次+6修为。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": false,
+    "duration": 1,
+    "costs": {
+      "energy": 8
+    },
+    "gains": {
+      "understanding": 1
+    },
+    "conditions": {
+      "stats_gte": {
+        "energy": 8
+      },
+      "flags": {}
+    },
+    "set_flags": {
+      "breathing_hint": true
+    },
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你花了一时辰领会提示，理解有所加深；下一次修习将额外提升6点修为。",
+    "character": ""
+  },
+  "report_practice": {
+    "label": "回报今日修习",
+    "description": "修为达到60后，向师傅回报并完成今日目标。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {
+        "cultivation": 60
+      },
+      "flags": {
+        "cultivation_goal_reported": false
+      }
+    },
+    "set_flags": {},
+    "once_key": "cultivation_goal_reported",
+    "bonuses": [],
+    "event": "practice_report",
+    "target_scene": "",
+    "result": "师傅听完你的回报，今日修习目标完成。",
+    "character": ""
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "talk_mentor": {
+    "label": "请教叶知闲",
+    "description": "免费开始一段请教；是否领会提示及其精力、时间花费由对话选择决定。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {
+        "energy": 8
+      },
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "mentor_tip",
+    "target_scene": "",
+    "result": "你开始向叶知闲请教；领会提示的花费会在选择时结算。",
+    "character": "mentor_zhixian"
+  },
+  "claim_mentor_lesson": {
+    "label": "领会师傅提示（精力8 · 1时辰）",
+    "description": "从当前对话选择领会：消耗8精力、推进1时辰、理解+1，并为下一次修习准备一次+6修为。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": false,
+    "duration": 1,
+    "costs": {
+      "energy": 8
+    },
+    "gains": {
+      "understanding": 1
+    },
+    "conditions": {
+      "stats_gte": {
+        "energy": 8
+      },
+      "flags": {}
+    },
+    "set_flags": {
+      "breathing_hint": true
+    },
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你花了一时辰领会提示，理解有所加深；下一次修习将额外提升6点修为。",
+    "character": ""
+  },
+  "train_mountain": {
+    "label": "调息修习",
+    "description": "专心调息两个时辰，修为稳步提升；若已领会师傅提示，这次修习会得到一次额外加成。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": true,
+    "duration": 2,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "cultivation": 12
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [
+      {
+        "flag": "breathing_hint",
+        "gains": {
+          "cultivation": 6
+        },
+        "consume": true
+      }
+    ],
+    "event": "",
+    "target_scene": "",
+    "result": "你在廊下完成两个时辰的调息；师傅提示若已备好，便在这次修习中得到验证。"
+  },
+  "rest_practice": {
+    "label": "歇息片刻",
+    "description": "停下调息，恢复精力。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {},
+    "gains": {
+      "energy": 34
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你安静歇息了一会儿，精力有所恢复。"
+  }
+}

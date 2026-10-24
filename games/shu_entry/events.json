@@ -1,0 +1,109 @@
+{
+  "mentor_tip": {
+    "title": "师傅的一句口诀",
+    "start": "opening",
+    "nodes": {
+      "opening": {
+        "type": "say",
+        "speaker": "mentor_zhixian",
+        "text": "修习不必一味求快，先把一口气调匀。",
+        "next": "choice"
+      },
+      "choice": {
+        "type": "choice",
+        "speaker": "mentor_zhixian",
+        "text": "若花一个时辰、消耗8精力领会这句话，下一次修习会多得6点修为。你想这样做吗？",
+        "options": [
+          {
+            "id": "take_lesson",
+            "label": "领会提示（精力8 · 1时辰）",
+            "next": "lesson_taken",
+            "action": "claim_mentor_lesson",
+            "conditions": {
+              "stats_gte": {
+                "energy": 8
+              },
+              "flags": {}
+            }
+          },
+          {
+            "id": "return_to_practice",
+            "label": "记下话头，回去继续修习",
+            "next": "lesson_skipped",
+            "action": "",
+            "conditions": {}
+          }
+        ]
+      },
+      "lesson_taken": {
+        "type": "say",
+        "speaker": "player_yanqiu",
+        "text": "我把这句提示带去练功，下一次修习再验证。",
+        "next": "end"
+      },
+      "lesson_skipped": {
+        "type": "say",
+        "speaker": "player_yanqiu",
+        "text": "好，我回后山把今日的修习做完。",
+        "next": "end"
+      },
+      "end": {
+        "type": "end",
+        "text": "师傅的话还在耳边，去下一次修习中试试看。"
+      }
+    }
+  },
+  "practice_report": {
+    "title": "今日修习回报",
+    "start": "opening",
+    "nodes": {
+      "opening": {
+        "type": "say",
+        "speaker": "mentor_zhixian",
+        "text": "很好，今日修为已达目标。接下来仍可在听雨廊和后山自由安排行动。",
+        "next": "end"
+      },
+      "end": {
+        "type": "end",
+        "text": "今日第一课已成，余下时辰仍可自行安排。"
+      }
+    }
+  },
+  "tea_commission": {
+    "title": "归剑问天",
+    "start": "opening",
+    "nodes": {
+      "opening": {
+        "type": "say",
+        "speaker": "quest_elder",
+        "text": "顾前辈清醒的时候说过，死后把这柄剑送回问天峰。少侠若顺路，替她走一趟吧。",
+        "next": "choice"
+      },
+      "choice": {
+        "type": "choice",
+        "speaker": "quest_elder",
+        "text": "你要接下这趟委托吗？",
+        "options": [
+          {
+            "id": "accept",
+            "label": "替顾前辈送剑",
+            "next": "end",
+            "action": "tea_accept",
+            "conditions": {}
+          },
+          {
+            "id": "decline",
+            "label": "暂不接这趟委托",
+            "next": "end",
+            "action": "",
+            "conditions": {}
+          }
+        ]
+      },
+      "end": {
+        "type": "end",
+        "text": "你暂且留在听雨廊。"
+      }
+    }
+  }
+}

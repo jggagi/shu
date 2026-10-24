@@ -1,5 +1,7 @@
 extends Control
 
+const SceneRouter = preload("res://scripts/cultivation_scene_router.gd")
+const BackMountainScene = preload("res://scenes/back_mountain.tscn")
 const State = preload("res://scripts/demo_state.gd")
 const Weather = preload("res://scripts/weather.gd")
 const AmbientLife = preload("res://scripts/tingyu_ambient_life.gd")
@@ -14,9 +16,18 @@ const PAPER := Color("f4eddf")
 const MUTED := Color("6d6658")
 
 var state = State.new()
+# One live host and one gameplay state; location changes only swap presentation.
+var scene_router = SceneRouter.new()
+var shared_weather_id := "cloudy"
+var shared_dynamic_enabled := true
+var back_mountain_view: Control
+var back_mountain_entry: Button
+var _tingyu_visibility: Dictionary = {}
 var layout: Dictionary
 var dialogue: Dictionary
 var energy_text: Label
+var sword_text: Label
+var _sword_action_serial := 0
 var progress_text: Label
 var relation_text: Label
 var date_text: Label
@@ -102,7 +113,7 @@ func _ready() -> void:
 		if character.id == dialogue.mentor_id:
 			dialogue["mentor_name"] = character.name
 	var game_theme := Theme.new()
-	game_theme.default_font = load("res://assets/fonts/ShuDemoSerif.ttf")
+	game_theme.default_font = load("res://assets/fonts/ShuCultivationSwordSerif.ttf")
 	game_theme.default_font_size = 21
 	theme = game_theme
 	tea_data = JSON.parse_string(FileAccess.get_file_as_string("res://assets/data/tea.json"))
@@ -128,14 +139,17 @@ func _ready() -> void:
 	_show_text("听雨廊 · 师徒同修", dialogue.idle, "今日功课：修为达到 60。")
 
 func _process(delta: float) -> void:
+	if scene_router.current_scene_id != "tingyu":
+		return
 	if actor_life != null:
 		actor_life.advance(delta)
 	if ambient_life != null:
 		ambient_life.advance(delta)
 	_update_corridor_props()
+	_update_navigation()
 
 func foreground_attention_busy() -> bool:
-	return busy or state.dialogue_open or awaiting_continue or state.tea_active or not corridor_object_id.is_empty()
+	return scene_router.current_scene_id != "tingyu" or busy or state.dialogue_open or awaiting_continue or state.tea_active or not corridor_object_id.is_empty()
 
 
 func scene_salient_attention_busy() -> bool:
@@ -324,7 +338,8 @@ func _build_ui() -> void:
 	_label("问道长生", Rect2(70, 98, 110, 27), 18, MUTED)
 	_art("res://assets/art/v2/jiang-yanqiu-v2.png", Rect2(215, 23, 90, 116))
 	_label(dialogue.player_name, Rect2(326, 31, 182, 40), 29)
-	_label("初入蜀山 · 听雨静心", Rect2(326, 80, 204, 28), 18, MUTED)
+	sword_text = _label("", Rect2(326, 80, 204, 28), 18, MUTED)
+	sword_text.tooltip_text = "后山练剑增长剑术；吐纳增长修为。"
 	date_text = _label("", Rect2(563, 30, 314, 34), 24, INK)
 	energy_text = _label("", Rect2(563, 74, 312, 28), 22, INK)
 	energy_bar = _bar(Rect2(564, 115, 300, 10), 100, Color("548d9a"))
@@ -441,6 +456,8 @@ func _build_ui() -> void:
 	rest_button.tooltip_text = "精力最多恢复 34 · 一时辰。"
 
 func _weather_ui() -> void:
+	shared_weather_id = weather.presenter.weather_id
+	shared_dynamic_enabled = weather.enabled
 	weather_label.text = "廊外 · " + weather.phase + (" · 动" if weather.enabled else " · 静")
 	weather_button.text = "降低动态" if weather.enabled else "开启动态"
 	_sound_ui()
@@ -474,6 +491,7 @@ func _refresh() -> void:
 	date_text.text = state.time_text()
 	energy_text.text = "精力  %d / 100" % state.energy
 	progress_text.text = "修为  %d / 60" % state.cultivation
+	sword_text.text = "初入蜀山 · 剑术 %d" % state.swordsmanship
 	relation_text.text = "师徒领悟  %d" % state.understanding
 	bonus_text.text = "点拨在心 · 下次修炼 +6" if state.lesson_bonus > 0 else "循序渐进，气息自稳。"
 	energy_bar.value = state.energy
@@ -488,6 +506,7 @@ func _refresh() -> void:
 	continue_button.visible = awaiting_continue
 	result_text.visible = not state.dialogue_open
 	_refresh_tea()
+	_update_navigation()
 	goal_title.text = "初课已成" if state.complete() else "今日功课"
 	goal_title.add_theme_color_override("font_color", JADE if state.complete() else INK)
 
@@ -598,6 +617,8 @@ func _reset() -> void:
 	_refresh()
 
 func _unhandled_key_input(event: InputEvent) -> void:
+	if scene_router.current_scene_id != "tingyu":
+		return
 	if not event is InputEventKey or not event.pressed or event.echo:
 		return
 	if tea_memory != null and tea_memory.visible and event.keycode != KEY_ESCAPE:
@@ -633,6 +654,10 @@ func _tea_rect(key: String) -> Rect2:
 	return Rect2(r[0], r[1], r[2], r[3])
 
 func _build_tea_ui() -> void:
+	back_mountain_entry = _button("前往后山", _rect("back_mountain_entry"), request_back_mountain)
+	back_mountain_entry.name = "BackMountainEntry"
+	back_mountain_entry.z_index = 4
+	back_mountain_entry.tooltip_text = "往返不消耗时辰、精力或修为。"
 	tea_entry = _button("归剑问天 · 旧剑委托", Rect2(42, 251, 235, 32), _open_tea)
 	tea_entry.z_index = 4
 	tea_entry.tooltip_text = "接受后进入支线，整条完成前留在其中；快捷键 6。查看不消耗精力或时辰。"
@@ -946,6 +971,8 @@ func _close_object_popover() -> void:
 	if tea_paths.has("tea.story_next"): _refresh_tea()
 
 func _input(event: InputEvent) -> void:
+	if scene_router.current_scene_id != "tingyu":
+		return
 	if not corridor_object_id.is_empty() and event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var point := get_global_mouse_position()
 		if not corridor_popover.get_global_rect().has_point(point):
@@ -1070,3 +1097,120 @@ func _tea_investigation_prompt(courtyard: bool, stage: Dictionary) -> String:
 		if available:
 			return str(tea_pacing.investigation_hints.get(item, "旧页")) + " · 查看"
 	return "依次翻阅留下的旧页。"
+
+
+func can_visit_back_mountain() -> bool:
+	if foreground_attention_busy():
+		return false
+	if tea_memory != null and tea_memory.visible:
+		return false
+	if object_popover != null and object_popover.visible:
+		return false
+	if actor_life != null and actor_life.is_action_active():
+		return false
+	return ambient_life == null or not ambient_life.pet_active()
+
+
+func _update_navigation() -> void:
+	if back_mountain_entry == null:
+		return
+	back_mountain_entry.visible = scene_router.current_scene_id == "tingyu" and not state.tea_active
+	back_mountain_entry.disabled = not can_visit_back_mountain()
+	back_mountain_entry.tooltip_text = "请先结束当前互动，再前往后山。" if back_mountain_entry.disabled else "往返不消耗时辰、精力或修为。"
+
+
+func request_back_mountain() -> bool:
+	# Check live occupancy, including Tea, before even changing location identity.
+	if not scene_router.enter_back_mountain(can_visit_back_mountain()):
+		return false
+	shared_weather_id = weather.presenter.weather_id
+	shared_dynamic_enabled = weather.enabled
+	back_mountain_view = BackMountainScene.instantiate()
+	back_mountain_view.configure(state, shared_weather_id, shared_dynamic_enabled)
+	back_mountain_view.sword_audio_policy = Callable(self, "_sword_audio_policy")
+	back_mountain_view.return_requested.connect(return_to_tingyu)
+	back_mountain_view.sword_manual_selected.connect(_select_sword_manual)
+	back_mountain_view.sword_training_requested.connect(_request_sword_training)
+	back_mountain_view.sword_training_finished.connect(_finish_sword_training)
+	_tingyu_visibility.clear()
+	for child in get_children():
+		if child is Control:
+			_tingyu_visibility[child] = child.visible
+			child.hide()
+	add_child(back_mountain_view)
+	return true
+
+
+func return_to_tingyu() -> bool:
+	if busy:
+		return false
+	if not scene_router.return_to_tingyu():
+		return false
+	if is_instance_valid(back_mountain_view):
+		remove_child(back_mountain_view)
+		back_mountain_view.queue_free()
+	back_mountain_view = null
+	for child in _tingyu_visibility:
+		if is_instance_valid(child):
+			child.visible = bool(_tingyu_visibility[child])
+	_tingyu_visibility.clear()
+	# The retained Tingyu adapter has the same preference and weather. No reset,
+	# dialogue close, Tea-session invalidation, or settlement occurs on return.
+	_refresh()
+	return true
+
+
+func _select_sword_manual(manual_id: String) -> Dictionary:
+	if busy or scene_router.current_scene_id != "back_mountain" or not is_instance_valid(back_mountain_view):
+		return {"ok": false, "reason": "当前不能换剑谱。"}
+	if state.tea_active or state.dialogue_open or awaiting_continue:
+		return {"ok": false, "reason": "请先结束当前互动。"}
+	var result: Dictionary = state.select_sword_manual(manual_id)
+	if bool(result.get("ok", false)):
+		back_mountain_view.refresh_sword_manual()
+	else:
+		back_mountain_view.show_sword_failure(str(result.get("reason", "暂时不能换剑谱。")))
+	return result
+
+
+func _request_sword_training() -> Dictionary:
+	if busy or scene_router.current_scene_id != "back_mountain" or not is_instance_valid(back_mountain_view):
+		return {"ok": false, "reason": "当前不能开始练剑。"}
+	if state.tea_active or state.dialogue_open or awaiting_continue:
+		return {"ok": false, "reason": "请先结束当前互动。"}
+	if back_mountain_view.ambient_life != null and back_mountain_view.ambient_life._cat_pet_active():
+		var reason := "等大橘安静下来，再开始练剑。"
+		back_mountain_view.show_sword_failure(reason)
+		return {"ok": false, "reason": reason}
+	# Validate/load the chosen clip before the host commits any resource changes.
+	if not back_mountain_view.prepare_sword_training():
+		var reason := "剑法尚未准备好，请返回听雨廊后重试。"
+		back_mountain_view.show_sword_failure(reason)
+		return {"ok": false, "reason": reason}
+	var receipt: Dictionary = state.train_sword()
+	if not bool(receipt.get("ok", false)):
+		back_mountain_view.show_sword_failure(str(receipt.get("reason", "暂时不能练剑。")))
+		return receipt
+	busy = true
+	_sword_action_serial += 1
+	# The state settles once here. Presentation receives the actual receipt only.
+	weather.set_time_index(state.time_index, true)
+	back_mountain_view.play_sword_training(_sword_action_serial, receipt)
+	return receipt.duplicate(true)
+
+
+func _finish_sword_training(action_id: int) -> void:
+	if not busy or action_id != _sword_action_serial or scene_router.current_scene_id != "back_mountain" or not is_instance_valid(back_mountain_view):
+		return
+	if back_mountain_view.sword_practice.playing:
+		return
+	var receipt: Dictionary = back_mountain_view.sword_receipt.duplicate(true)
+	busy = false
+	return_to_tingyu()
+	var bonus_note := "；师傅的吐纳点拨仍保留。" if state.lesson_bonus > 0 else "。"
+	_show_text("%s · %s · %s" % [dialogue.player_name, receipt.manual_title, receipt.technique_title], str(receipt.result_text), "剑术 +%d · 精力 -%d · 时间 +%d 时辰 · 此谱已修习 %d 遍" % [receipt.gain, receipt.energy_cost, receipt.duration, receipt.practice_count_after] + bonus_note)
+	_refresh()
+
+
+func _sword_audio_policy() -> Dictionary:
+	return {"enabled": weather.ambient_audio.enabled and weather.enabled, "volume": weather.ambient_audio.volume}

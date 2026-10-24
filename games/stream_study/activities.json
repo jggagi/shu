@@ -1,0 +1,182 @@
+{
+  "read_by_river": {
+    "label": "临溪读书",
+    "description": "静读一段时辰，积累心得；若已记下亭主提示，这次阅读会额外得到一次加成。",
+    "scenes": [
+      "riverbank"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "stamina": 15
+    },
+    "gains": {
+      "insight": 8
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [
+      {
+        "flag": "study_hint",
+        "gains": {
+          "insight": 4
+        },
+        "consume": true
+      }
+    ],
+    "event": "",
+    "target_scene": "",
+    "result": "你读完一段书页并记下心得；亭主提示若已备好，便在这次阅读中生效。",
+    "character": ""
+  },
+  "pause_by_stream": {
+    "label": "溪边歇息",
+    "description": "听水声歇一会儿，恢复余力。",
+    "scenes": [
+      "tea_pavilion",
+      "riverbank"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {},
+    "gains": {
+      "stamina": 25
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "一阵水声过后，你恢复了些余力。",
+    "character": ""
+  },
+  "walk_to_river": {
+    "label": "走到溪畔",
+    "description": "沿亭旁石阶走向溪畔。",
+    "scenes": [
+      "tea_pavilion"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "riverbank",
+    "result": "你沿石阶来到溪畔。"
+  },
+  "return_to_tea_pavilion": {
+    "label": "回到溪亭",
+    "description": "从溪畔沿石阶回到亭边。",
+    "scenes": [
+      "riverbank"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "tea_pavilion",
+    "result": "你回到溪亭。"
+  },
+  "talk_to_keeper": {
+    "label": "向亭主请教",
+    "description": "请教一条读书提示，可选择是否收下。",
+    "scenes": [
+      "tea_pavilion"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "stamina": 3
+    },
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "study_tip_available": true
+    },
+    "once_key": "",
+    "bonuses": [],
+    "event": "study_tip",
+    "target_scene": "",
+    "result": "你向亭主闻简请教了一条读书提示。",
+    "character": "pavilion_keeper"
+  },
+  "accept_study_tip": {
+    "label": "记住读书提示",
+    "description": "仅能从当前请教对话选择；将提示留待下一次阅读，额外积累4点心得。",
+    "scenes": [
+      "tea_pavilion"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {
+        "study_tip_available": true,
+        "study_tip_claimed": false
+      }
+    },
+    "set_flags": {
+      "study_hint": true
+    },
+    "once_key": "study_tip_claimed",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你把亭主的提示记在心里；下一次阅读将额外积累4点心得。",
+    "character": ""
+  },
+  "submit_reading_note": {
+    "label": "交读书小记",
+    "description": "心得达到30后提交小记并完成目标。",
+    "scenes": [
+      "tea_pavilion"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {
+        "insight": 30
+      },
+      "flags": {
+        "study_goal_complete": false
+      }
+    },
+    "set_flags": {},
+    "once_key": "study_goal_complete",
+    "bonuses": [],
+    "event": "study_report",
+    "target_scene": "",
+    "result": "亭主读完小记，读书目标完成。",
+    "character": ""
+  }
+}

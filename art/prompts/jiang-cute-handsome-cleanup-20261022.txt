@@ -1,0 +1,6 @@
+Use case: precise-object-edit
+Asset type: cleanup of the attached Jiang Yanqiu character design preview.
+Edit target: the attached transparent PNG.
+Change only the cutout boundary and stray pixels. Remove the bright red and yellow fringe/speckles around the hair, remove isolated white or gray specks below the straight bust cut, and produce clean naturally antialiased alpha edges. Restore plausible warm brown hair edge colors where the fringe was, with no red/yellow halo.
+Preserve the current character design, facial proportions, confident gentle smile, brown eyes, chestnut high ponytail, blue ribbon, blue-and-ivory cross-collar costume, three-quarter view, composition and all interior detail. Do not restyle or change the face, expression, hair silhouette, garments, lighting or camera. Single complete bust with unclipped margins.
+Keep a genuinely transparent background. No text, border, watermark, extra objects or new views.

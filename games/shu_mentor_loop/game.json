@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "shu_mentor_loop",
+  "version": "0.2.2",
+  "title": "慢半步·听教练剑",
+  "subtitle": "听教、练剑、回廊复命",
+  "description": "在听雨廊听完叶知闲的点拨，前往后山练一套剑，再回廊复命。",
+  "initial_scene": "tingyu_corridor",
+  "initial_flags": {
+    "mentor_lesson_heard": false,
+    "mentor_lesson_accepted": false,
+    "breathing_hint": false,
+    "mentor_practice_finished": false,
+    "mentor_reported": false
+  },
+  "theme": {
+    "accent": "#397C78",
+    "paper": "#F3EBDD"
+  },
+  "files": {
+    "rules": "rules.json",
+    "characters": "characters.json",
+    "scenes": "scenes.json",
+    "actions": "activities.json",
+    "events": "events.json",
+    "motions": "motions.json",
+    "voices": "voices.json"
+  },
+  "source_note": "独立内容包：复用已归档原创师徒对话、获认可的室内2D人物原画与五套剑法动作；师徒回报为本包适配，不改变正式主线章节归属。"
+}

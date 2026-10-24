@@ -1,0 +1,35 @@
+{
+  "tingyu_corridor": {
+    "label": "听雨廊",
+    "description": "廊外山色清润，今日可向师傅请教，也可歇息后再去后山。",
+    "background": "res://assets/art/weather3/tingyu-clean-v3.png",
+    "actors": [
+      {
+        "character": "player_yanqiu",
+        "x": 0.31,
+        "y": 0.88,
+        "height": 0.52,
+        "flip": false
+      },
+      {
+        "character": "mentor_zhixian",
+        "x": 0.73,
+        "y": 0.88,
+        "height": 0.58,
+        "flip": false
+      }
+    ],
+    "present": [
+      "player_yanqiu",
+      "mentor_zhixian"
+    ],
+    "accent": "#397C78",
+    "foreground": {
+      "texture": "res://assets/art/v2/desk-v2.png",
+      "x": 0.5,
+      "y": 0.99,
+      "width": 0.95,
+      "height": 0.23
+    }
+  }
+}

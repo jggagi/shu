@@ -1,0 +1,40 @@
+{
+  "clock": {
+    "slots": [
+      "晨",
+      "午",
+      "暮",
+      "夜"
+    ],
+    "start_day": 1,
+    "start_slot": 0,
+    "unit": "时段"
+  },
+  "stats": [
+    {
+      "id": "stamina",
+      "label": "余力",
+      "initial": 80,
+      "min": 0,
+      "max": 80,
+      "color": "#72958C"
+    },
+    {
+      "id": "insight",
+      "label": "心得",
+      "initial": 0,
+      "min": 0,
+      "max": 100,
+      "color": "#BD815C"
+    }
+  ],
+  "goals": [
+    {
+      "id": "reading_note",
+      "label": "心得达到30并交读书小记",
+      "stat": "insight",
+      "target": 30,
+      "completion_flag": "study_goal_complete"
+    }
+  ]
+}

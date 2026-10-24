@@ -6,12 +6,16 @@ const TEA_COURTYARD_ID := "tea.old_courtyard"
 const TEA_C_OBJECT_IDS := ["tea.household", "tea.coats", "tea.medicine_pot", "tea.window", "tea.ledger"]
 const TEA_STORY_ENDING_STAGE := 7
 const TEA_STORY_ENDING_DELAY_MSEC := 1200
+const SwordManualCatalog := preload("res://scripts/sword_manual_catalog.gd")
 
 var rules: Dictionary
 var day := 1
 var time_index := 0
 var energy := 100
 var cultivation := 0
+var swordsmanship := 0
+var selected_sword_manual_id: String = SwordManualCatalog.DEFAULT_ID
+var sword_manual_practice_counts: Dictionary = {}
 var understanding := 0
 var lesson_bonus := 0
 var dialogue_open := false
@@ -50,6 +54,8 @@ func reset() -> void:
 	time_index = 0
 	energy = int(rules.energy_max)
 	cultivation = 0
+	swordsmanship = 0
+	_reset_sword_manual_state()
 	understanding = 0
 	lesson_bonus = 0
 	dialogue_open = false
@@ -69,6 +75,25 @@ func reset() -> void:
 	tea_ending_step = 0
 	_tea_ending_first_fill_msec = 0
 
+func _reset_sword_manual_state() -> void:
+	selected_sword_manual_id = SwordManualCatalog.DEFAULT_ID
+	sword_manual_practice_counts = {}
+	for entry: Dictionary in SwordManualCatalog.manuals():
+		sword_manual_practice_counts[str(entry.get("id", ""))] = 0
+
+
+func select_sword_manual(manual_id: String) -> Dictionary:
+	if dialogue_open:
+		return {"ok": false, "reason": "请先结束与师傅的对话。"}
+	if tea_active:
+		return {"ok": false, "reason": "请先结束茶事调查。"}
+	var selected := SwordManualCatalog.manual(manual_id)
+	if selected.is_empty():
+		return {"ok": false, "reason": "未知的剑谱。"}
+	selected_sword_manual_id = manual_id
+	return {"ok": true, "manual_id": manual_id}
+
+
 func train() -> Dictionary:
 	if dialogue_open:
 		return {"ok": false, "reason": "请先结束与师傅的对话。"}
@@ -82,6 +107,52 @@ func train() -> Dictionary:
 	lesson_bonus = 0
 	_advance(int(rules.training_duration))
 	return {"ok": true, "gain": gain}
+
+func train_sword() -> Dictionary:
+	if dialogue_open:
+		return {"ok": false, "reason": "请先结束与师傅的对话。"}
+	if tea_active:
+		return {"ok": false, "reason": "请先结束茶事调查。"}
+	var manual_data := SwordManualCatalog.manual(selected_sword_manual_id)
+	if manual_data.is_empty():
+		return {"ok": false, "reason": "当前剑谱无效。"}
+	var practice_count_before := int(sword_manual_practice_counts.get(selected_sword_manual_id, 0))
+	var technique_data := SwordManualCatalog.technique(selected_sword_manual_id, practice_count_before)
+	if technique_data.is_empty():
+		return {"ok": false, "reason": "当前剑谱没有可用招式。"}
+	var energy_cost := int(rules.sword_training_cost)
+	if energy < energy_cost:
+		return {"ok": false, "reason": "精力不足，暂时无法练剑。"}
+
+	var gain := int(rules.sword_training_gain)
+	var duration := int(rules.sword_training_duration)
+	var day_before := day
+	var time_index_before := time_index
+	var swordsmanship_before := swordsmanship
+	var practice_count_after := practice_count_before + 1
+	energy -= energy_cost
+	swordsmanship += gain
+	sword_manual_practice_counts[selected_sword_manual_id] = practice_count_after
+	_advance(duration)
+	return {
+		"ok": true,
+		"gain": gain,
+		"energy_cost": energy_cost,
+		"duration": duration,
+		"day_before": day_before,
+		"time_index_before": time_index_before,
+		"day_after": day,
+		"time_index_after": time_index,
+		"swordsmanship_before": swordsmanship_before,
+		"swordsmanship_after": swordsmanship,
+		"manual_id": selected_sword_manual_id,
+		"manual_title": str(manual_data.get("title", "")),
+		"technique_id": str(technique_data.get("id", "")),
+		"technique_title": str(technique_data.get("title", "")),
+		"result_text": str(technique_data.get("result_text", "")),
+		"practice_count_before": practice_count_before,
+		"practice_count_after": practice_count_after,
+	}
 
 func rest() -> Dictionary:
 	if dialogue_open:

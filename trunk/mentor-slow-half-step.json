@@ -1,0 +1,99 @@
+{
+  "id": "mentor_slow_half_step",
+  "title": "慢半步",
+  "status": "原创师徒对话验证切片，正式主线归属待后续内容规划",
+  "setting": "听雨廊；江砚秋练剑心急，叶知闲通过调息和听雨点拨。",
+  "archive": "trunk/mentor-slow-half-step.json",
+  "cast": [
+    "player_yanqiu",
+    "mentor_zhixian"
+  ],
+  "lines": [
+    {
+      "id": "opening",
+      "character": "player_yanqiu",
+      "speaker": "江砚秋",
+      "text": "师父，刚才那一剑，我明明已经快了，怎么还是收不住？",
+      "next": "sit"
+    },
+    {
+      "id": "sit",
+      "character": "mentor_zhixian",
+      "speaker": "叶知闲",
+      "text": "过来坐。你这口气，还留在剑坪上呢。",
+      "next": "hurry"
+    },
+    {
+      "id": "hurry",
+      "character": "player_yanqiu",
+      "speaker": "江砚秋",
+      "text": "我就是想早些练好，免得总让您等。",
+      "next": "advice"
+    },
+    {
+      "id": "advice",
+      "character": "mentor_zhixian",
+      "speaker": "叶知闲",
+      "text": "剑快一点不难。难的是出剑时，心里不抢那一步。",
+      "next": "choice"
+    },
+    {
+      "id": "choice",
+      "character": "mentor_zhixian",
+      "speaker": "叶知闲",
+      "text": "先陪我听一会儿雨。等肩膀松了，再想刚才那一剑。",
+      "next": ""
+    },
+    {
+      "id": "lesson_taken",
+      "character": "player_yanqiu",
+      "speaker": "江砚秋",
+      "text": "好，我不抢。先把这一口气放稳。",
+      "next": "lesson_reply"
+    },
+    {
+      "id": "lesson_reply",
+      "character": "mentor_zhixian",
+      "speaker": "叶知闲",
+      "text": "这就对了。待会儿再出剑，记住此刻肩上的轻松。",
+      "next": "end"
+    },
+    {
+      "id": "lesson_skipped",
+      "character": "player_yanqiu",
+      "speaker": "江砚秋",
+      "text": "那我先去试试。要是还不对，我再来找您。",
+      "next": "skip_reply"
+    },
+    {
+      "id": "skip_reply",
+      "character": "mentor_zhixian",
+      "speaker": "叶知闲",
+      "text": "去吧。慢半步，也无妨。",
+      "next": "end"
+    }
+  ],
+  "choices": [
+    {
+      "id": "take_lesson",
+      "label": "坐下来，随师父调息（精力8 · 1时辰）",
+      "next": "lesson_taken",
+      "action": "claim_mentor_lesson",
+      "conditions": {
+        "stats_gte": {
+          "energy": 8
+        },
+        "flags": {}
+      }
+    },
+    {
+      "id": "return_to_practice",
+      "label": "先回去自己试试",
+      "next": "lesson_skipped",
+      "action": "",
+      "conditions": {}
+    }
+  ],
+  "end_text": "这番话先记在心里。下一次修习，看看剑势是否更稳。",
+  "rules": "沿用既有 claim_mentor_lesson 与下一次修习加成，不新增养成数值或系统。"
+}

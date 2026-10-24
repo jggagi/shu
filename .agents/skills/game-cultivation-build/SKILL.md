@@ -2,19 +2,19 @@
 name: game-cultivation-build
 description: "Build and iterate fixed-scene cultivation/life-sim mode in an existing Godot GDScript game: time/energy, activities, growth, character events and side quests such as tea through staged fixed scenes, object inspection, documents and short memories. Use for cultivation-mode implementation and playtest feedback; not free-roaming exploration, combat, standalone story engines or game initialization."
 metadata:
-  version: "0.1.1"
+  version: "0.2.0"
 ---
 
 # Game Cultivation Build
 
-For ordinary cultivation activities, build the loop: select activity → validate availability → perform activity or character interaction → settle time/energy and actual gains → return to the activity panel. Keep the interactive method: user direction → playable mode slice → user playtest decision → revision → next acceptance point.
+For ordinary cultivation activities, build the loop: select activity → validate availability and prepare required presentation → perform with the host-defined settlement point → show actual time/energy/growth changes → return to the activity panel. Preserve the existing host transaction order; a visual sequence does not decide when to charge. Keep the interactive method: user direction → playable mode slice → user playtest decision → revision → next acceptance point.
 
 This skill specializes in fixed-background/panel cultivation mode. Training, rest, study, character interactions and staged side quests are registered activities/events; include only those requested or already present. A side quest is an embedded branch of cultivation mode. It may use fixed scene profiles, inspectable objects, documents and short memories. Keep its context until the host declares the whole quest complete; completing a stage or closing an object view does not return to the main activity panel. Preserve an explicit project/user-defined interruption policy when one exists. Free-roaming exploration, combat, standalone story engines and unrelated modes require their own workflow.
 
 ## Start with the active project and authorized slice
 
 1. Read the effective repository rules, branch/HEAD and worktree status. Follow required kickoff reads; this skill does not replace them with a summary.
-2. Identify approved mode rules, the selected activity/event and the runtime actually installed. Distinguish approved decisions, proposals, implemented behavior and observed verification.
+2. Check relevant worktrees and working changes before treating a missing feature in this checkout as unimplemented. Preserve existing hosts and compare dependencies before choosing a scoped integration. Identify approved mode rules, the selected activity/event and the runtime actually installed. Distinguish approved decisions, proposals, implemented behavior and observed verification.
 3. For shu, read [project binding](references/shu-binding.md). For another project, use its actual IDs, routing and capabilities; do not copy shu's cast or story locations.
 4. A design-only request produces a proposal. It does not install this skill, extract runtime modules or start a game. An implementation request covers its selected cultivation activity/event; commits, remote saves and releases follow existing authorization.
 
@@ -43,7 +43,9 @@ Use Object → Action → Narrative: select the scene prop, show its anchored co
 
 ## Implement the cultivation loop
 
-Use the project's installed runtime. The [runtime contract](references/runtime-contract.md) describes the proposed toolkit, not an assumption that these classes already exist. With today's shu, adapt current `main.gd`, `demo_state.gd` and weather interfaces only as required by the authorized slice.
+Use the project's installed runtime. The [runtime contract](references/runtime-contract.md) describes proposed signatures, not an assumption that those classes exist. shu now has two independent entries: the formal `main.gd` / `demo_state.gd` host, and the independent `addons/cultivation_mode` content engine loading JSON packs. Select the authorized entry and its single state authority; see the [current binding](references/shu-binding.md). The v0.2 slices add content-configured five-motion playback and Tea A/B object investigation with safe branch checkpoints. The formal host retains full Tea; later Tea stages and document/memory presentation in the new engine, plus environment migration, remain separate scope.
+
+For activities with character clips or delayed completion, read [animated-activity integration](references/animated-activity-integration.md): preflight resources before charging, pass the real receipt, guard completion identity/readiness, and return through the existing host. Keep isolated review controls and their pause semantics out of the formal flow.
 
 Keep stable character, scene and action IDs. Resolve display names from the cast. Use whitelisted host actions; validate before committing state, return actual cost/gain and guard retried selections. Separate narrative progress and game time from presentation weather time. Keep UI independent of scene lighting.
 
@@ -51,7 +53,7 @@ The host rules/state own day/time, energy, growth and any existing relationship 
 
 A cast ID does not guarantee an available portrait. Check the asset index; use an appropriate text-only entrance or authorized new art when needed. Do not relabel another character's image as the new character. A new dialogue branch does not automatically add an unrelated activity.
 
-If the toolkit is installed, use `say`, `choice`, `cue`, `end` nodes and its declared contract version. Validate references before activation. Never execute script text from narrative data. Preserve source art, provenance and notices when adapting assets.
+Use only node types supported by the installed runtime and its declared contract version. The shu content engine currently supports `say`, `choice`, `end`; registered animated actions in v0.2 do not implement the proposed event `cue` protocol. Validate references before activation. Never execute script text from narrative data. Preserve source art, provenance and notices when adapting assets.
 
 ## Presentation observers
 
@@ -67,7 +69,7 @@ Deliver a usable preview/build when authorized and available, with concise accep
 
 ## Keep the next round inexpensive
 
-For package edits, run `scripts/validate_package.py --repo <project-root>` to check examples, local references and pinned tea source. This checks the skill package, not Godot runtime behavior. Read only the detailed references relevant to the selected activity or quest.
+For package edits, run `scripts/validate_package.py --repo <project-root>` to check examples, local references and pinned tea source. The explicit repository allows existing host-document and sibling-skill links only within that repository; without it, references remain skill-contained. This checks the skill package, not Godot runtime behavior. Read only the detailed references relevant to the selected activity or quest.
 
 Update only the current state, relevant indexes/contracts and decision delta. Prefer short deterministic success reports; include file/node details on failures. Measure comparable slices by context size, repeated reads, runtime changes and revision count. Do not claim a token-saving percentage without comparable measurements.
 

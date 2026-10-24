@@ -4,7 +4,7 @@
 
 **Codex 做可玩 demo → 用户试玩拍板 → Codex 修订 → 更新决定与扩展计划。**
 
-后续开发以 GitHub `main` 为基准，在 **X1 Lite / Fedora** 的 `/home/x1-lite/games/shu` 继续；Mac mini 停止后续开发并保留资料。实际环境、命令和待验收项见 [X1 开发入口](docs/X1_LITE_DEVELOPMENT.md)，此前源码汇合来源见 [原交接快照](docs/X1_LITE_HANDOFF.md)。
+后续开发以 GitHub `main` 为唯一源码基准，主工作副本在 **X1 Lite / Fedora** 的 `/home/x1-lite/games/shu`，收尾保持在 `main`。城镇整合已通过 [PR #13](https://github.com/jggagi/shu/pull/13) 合入，已合并功能分支已清理；`gh-pages` 仅保留既有公开试玩产物。Mac mini 停止后续开发并保留资料。实际环境、命令和待验收项见 [X1 开发入口](docs/X1_LITE_DEVELOPMENT.md)，此前源码汇合来源见 [原交接快照](docs/X1_LITE_HANDOFF.md)。
 
 统一产品方向：**原创《蜀》＝蜀山养成＋城镇游玩**。《承平》提供城镇探索、人物互动、调查、任务后果与空间战斗的适配来源；有限时间与机会成本是玩法。接入顺序、现有内核边界和下一切片见 [整合规划](docs/CHENGPING_INTEGRATION_PLAN.md)。
 

@@ -27,7 +27,7 @@
 
 ## 环境与素材
 
-- X1 Lite / Fedora 原生 Linux 是后续主要编辑、运行、调试与试玩环境，主工作副本 `/home/x1-lite/games/shu`，用户 `x1-lite`，使用 Bash。开始工作先核对 cwd、whoami、分支与工作区；从当时最新远端 `main` 建立 `codex/` 功能分支。操作与实测环境见 [X1 开发入口](docs/X1_LITE_DEVELOPMENT.md)。
+- X1 Lite / Fedora 原生 Linux 是后续主要编辑、运行、调试与试玩环境，主工作副本 `/home/x1-lite/games/shu`，用户 `x1-lite`，使用 Bash。`origin/main` 是唯一源码基准，主副本收尾保持在与远端一致的 `main`。开始工作先核对 cwd、whoami、分支与工作区；需要功能分支时从最新远端 `main` 建立短期 `codex/` 分支，获授权合并后删除，不保留长期功能线。`gh-pages` 只承载既有公开试玩产物，不作为开发源码。操作与实测环境见 [X1 开发入口](docs/X1_LITE_DEVELOPMENT.md)。
 - Mac mini 停止后续《蜀》开发，保留既有 checkout、制作源工程、素材、QA 与存档；历史 Mac 的绝对路径、`agent-dev`／APFS 规则不用于 X1。Windows 是继续保留的目标平台，实际测试结果单独记录，旧 Windows 主项目路径仅作历史来源。
 - 其他机器使用本地独立 checkout，不共享工作树、.git、依赖、缓存或产物；仅通过 Git 交换提交，首次克隆使用 git clone --no-local。不复制目录同步。X1 是原生 Linux，不能沿用 WSL／/mnt 构建身份，也不能把 X1 结果等同于 Windows／Steam Deck 结果。
 - 必需素材随项目管理或有可复现获取步骤；记录来源、版本、作者、许可与 SHA256，不依赖本机 library。对白与美术原创，参考作品的文本／图像不直接导入。

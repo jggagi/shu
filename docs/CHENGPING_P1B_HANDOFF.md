@@ -2,6 +2,8 @@
 
 2026-10-24。用户已要求 P1a 收尾、推送 GitHub，并新开 chat 接入承平。本页保留开工时交接。P1b现已完成最小可玩适配并提供新入口18814，当前实施、验证、产物与限制见[P1b切片](P1B_TOWN_WALK_SLICE.md)；以下P1a基础与开工范围仍作为历史起点，不把早期P1a误说成系统已迁入。
 
+后续追记：P1b及2D／3D混合场景已通过 [PR #13](https://github.com/jggagi/shu/pull/13) 合入 `main`，原功能分支已清理。后续从 Shu 主副本的当前 `main` 继续，见[X1开发入口](X1_LITE_DEVELOPMENT.md)；下文分支及未合并范围是开工时记录。
+
 ## 工作位置与源码
 
 - 只在 X1 Lite / Fedora 原生 Linux 开发，实际用户 `x1-lite`；Shu 主副本 `/home/x1-lite/games/shu`，origin `https://github.com/jggagi/shu.git`，当前 `codex/x1-shu-integration-plan`。从包含本交接的 P1a 收尾提交继续；开始先核对实际 HEAD、远端、dirty 状态，不把 `origin/main` 的旧基线覆盖回来。

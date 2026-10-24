@@ -6,9 +6,9 @@
 
 - 主开发机：X1 Lite，Fedora 44 KDE 原生 Linux，实际用户 `x1-lite`，当前执行 shell 为 Bash；未发现 PowerShell。
 - 《蜀》主工作副本：`/home/x1-lite/games/shu`，origin 为 `https://github.com/jggagi/shu.git`。
-- 本次全历史 clone 的基线：`main` / `391689938173e3dc9d8d59fd6d4531a13a5c7e16`，已含 Mac 快照 `bf2afa5` 和原远端 `7ef9ec1`。初始工作区干净；本轮文档分支为 `codex/x1-shu-integration-plan`。
+- 本次全历史 clone 的初始基线：`main` / `391689938173e3dc9d8d59fd6d4531a13a5c7e16`，已含 Mac 快照 `bf2afa5` 和原远端 `7ef9ec1`。初始工作区干净；原文档及城镇分支 `codex/x1-shu-integration-plan` 已通过 PR #13 合并并删除，此处仅保留来源快照。
 - 《承平》独立参考副本：`/home/x1-lite/games/chengping`，`codex/vertical-slice` / `a4a6c1cc1ed9ab4ad7d49291bc8b8d7222c9f6c6`，版本 `0.3.5-alpha`；本轮 fetch 后与同名远端分支一致，工作区干净。
-- 后续功能从当时最新的远端 `main` 建立 `codex/` 分支；上面的 SHA 是本轮可复查快照，不是要求永久停留的版本。已有修改或分叉先审阅，不能强制重置。
+- `origin/main` 是唯一源码基准，主工作副本当前使用 `main` 并跟踪 `origin/main`。后续需要临时功能分支时从最新远端 `main` 建立 `codex/` 分支，获授权合并后删除并回到 `main`；上面的 SHA 是来源快照，不是要求永久停留的版本。已有修改或分叉先审阅，不能强制重置。`gh-pages` 只保留既有公开试玩产物，不能作为开发起点。
 - Mac mini 停止《蜀》的后续编辑、构建和功能开发，仅保留既有源码、制作源工程、素材中间件、QA 和存档；可继续作为访问 X1 桌面的客户端。Windows 保留为目标平台，实际验收另行执行。
 
 源码通过 Git 交换已提交内容；每机 `.git`、`.godot`、构建与存档独立。接入《承平》时按清单审查、适配选定模块和数据并保留来源，不以目录覆盖或整仓历史合并代替系统迁移。
@@ -104,4 +104,4 @@ python3 tools/build_cultivation_engine.py \
 
 ## 城镇整合后的本地入口
 
-P1b与2D／3D表现整合后继续在 **`/home/x1-lite/games/shu`** 开发，当前分支`codex/x1-shu-integration-plan`；承平`/home/x1-lite/games/chengping`继续只是固定来源。没有创建新的合并目录或转回Mac；本轮GitHub保存授权与复现入口见[归档说明](X1_TOWN_INTEGRATION_GITHUB.md)。
+P1b与2D／3D表现整合已通过 [PR #13](https://github.com/jggagi/shu/pull/13) 合入 `main`。继续在 **`/home/x1-lite/games/shu`** 开发，当前分支 `main`，跟踪 `origin/main`；8个已合并远端功能分支及本地城镇分支已清理，全部提交历史仍可从 `main` 到达。承平`/home/x1-lite/games/chengping`继续只是固定来源。没有创建新的合并目录或转回Mac；GitHub归档、分支用途与复现入口见[归档说明](X1_TOWN_INTEGRATION_GITHUB.md)。

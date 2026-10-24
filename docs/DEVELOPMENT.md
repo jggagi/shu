@@ -721,3 +721,9 @@ Root负责合同、资源加载、构建、集成和最终验收，real Luna承�
 ## 2026-10-24 · 用户授权GitHub归档
 
 用户在混合场景交付后明确要求“保存到GitHub，并告诉我合并后的本地开发路径”。据此将P1b行走／存档合同与混合场景表现一并提交到当前`codex/x1-shu-integration-plan`，正常推送origin，不强推、不自行合并main，不触碰旧试玩服务。Git fetch确认原分支与e1e682一致、main仍3916899；发布工作区仅含本轮源码／原创资源／来源与验证文档，忽略产物及用户档不入库。源／stage哈希及现有1065状态、85兼容、384原生输入和192 PCK检查保持，不因纯文档／归档重复构建。持续开发路径为`/home/x1-lite/games/shu`，入口`scenes/demos/cultivation_engine_v05_town_hd2d.tscn`；承平保持独立来源。详见[归档说明](X1_TOWN_INTEGRATION_GITHUB.md)。
+
+## 2026-10-24 · main统一源码与分支清理
+
+用户随后明确要求“清理其他 branch，让 main 作为 source of truth”。PR #13 从已核对的 `a25f6fb` 采用 merge 合并为 `34051e4`，保留全部历史；合并tree与该已验证候选完全一致。主副本 `/home/x1-lite/games/shu` 已切回 `main` 并快进同步远端。逐个确认祖先关系后原子删除8个已合并远端 `codex/` 分支，并安全删除本地城镇分支；没有强推或覆盖独有源码。
+
+GitHub Pages API确认 `gh-pages` 正在发布原公开试玩，故只保留它作为生成产物分支，head与配置未改；`main`是唯一开发源码基准。更新当前入口与工作约定，历史阶段记录保留。此轮仅文档及Git操作，检查文档链接、diff、来源哈希、提交可达与远端／本地一致性，不重复游戏构建或补签试玩验收。具体分支清单及入口见[归档说明](X1_TOWN_INTEGRATION_GITHUB.md)。

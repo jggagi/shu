@@ -1,4 +1,28 @@
-# Cultivation Mode Runtime v0.2
+# Cultivation Mode Runtime v0.3.1
+
+## 山下集镇混合表现（内容版本仍0.3.1）
+
+`scenes/demos/cultivation_engine_v05_town_hd2d.tscn` 使用同一 P1b catalog／包／Session／Store，仅由 `town_hd2d_mode_view` 和继承原 walker 的 `town_hd2d_walker` 替换城镇表现。SubViewport 内真实3D建筑、曲面屋顶、光影、透视摄像机与2D billboard人物由 `town_hd2d_stage.gd` 负责；UI点击先反投影回原逻辑平面，再调用原行走／到达／宿主合同，不改变养成或旅行费用。
+
+全身四向SVG图帧、统一脚点和作者工具／哈希／许可见 `assets/art/shanxia_hd2d/source.json`。表现独立于包JSON内容指纹；旧P1b 15字段存档直接读取，应用custom userdir和save_base_dir继续保持。Web不同origin的数据仍隔离，同源升级入口使用旧18814下的 `/hd2d/` 路径，浏览器实操验收另记。实现、实际检查和入口见 [混合场景切片](../../docs/P1B_TOWN_HD2D_SLICE.md)。
+
+## 可走城镇切片（0.3.1）
+
+新入口 `scenes/demos/cultivation_engine_v04_town_walk.tscn` 运行 `games/town_walk_catalog.json` 的独立 `shu_town_walk` 和原 `stream_study`。P0/P1a 内容、目录、存档保持；没有旧档自动迁入。画面与完整验证见 [P1b 来源审查](../../docs/CHENGPING_P1B_SOURCE_AUDIT.md) 和 [P1b 切片](../../docs/P1B_TOWN_WALK_SLICE.md)。
+
+可选 `files.walks` 引用包内 JSON，合同为 `{schema_version:1,scenes:{scene_id:{size:[w,h],floor:[x,y,w,h],spawn:[x,y],obstacles:[[x,y,w,h]],actor_radius:12,cell_size:20,interactions:{interaction_id:{label,position:[x,y],radius,action,repeat_action?,seen_flag?}}}}}`。坐标及尺寸为有限整数；格距须为2至100的偶数，保证格心可落在整数脚点。地图、旗标和行动引用需已登记。互动行动属于单一地图，必须 `menu:false`、无演出／事件，不允许由对话选项绕过距离。可选重访行动由已登记 `seen_flag` 选择，初次行动必须设置该旗标。
+
+`walks_contract.gd` 负责加载和恢复合同，互动锚点须位于可走空地；`town_navigation.gd` 的膨胀障碍、精确线段检查和网格寻路按固定 Chengping 来源选择适配。Session 缓存只做几何检查的地图实例，不在每帧创建寻路网格。视图／walker 仅保存路径、朝向和待互动目标，所有持久坐标、资源与后果仍属于 Session。
+
+- `walk_view()` 返回当前地图的 `{scene_id,definition,position,run_id,revision,enabled}`；无地图时返回空对象。
+- `commit_walk_position(scene_id, position, expected_run_id, expected_revision)` 只在 `ready`、运行／修订一致、点和从上次位置到新位置的整段都可走时提交整数坐标。仅改变探索位置和 revision，不改变游戏时钟、资源、旗标、sequence、计数、札记或回执；重复当前位置不增加修订。
+- `execute_walk_interaction(interaction_id, operation_id, expected_run_id, expected_revision)` 校验运行／修订、`ready`、地点、距离和遮挡后，以原行动事务一次提交。回执 `kind=walk` 带已登记的 `interaction_id`，相同操作重试只返回原回执；全局 `select_action` 无法直接执行这些非菜单行动。普通查看与问候免费，返山的 1 时辰由同一次宿主事务结算。
+
+**状态／兼容策略：** manifest schema 仍为 1。仅声明非空 walks 的包使用 15 字段状态，新增严格的 `exploration:{schema_version:1,positions:{scene_id:[int_x,int_y]}}`；位置表必须精确对应声明地图，每点可走，路径／朝向／待互动对象不入档。原包保留精确 14 字段。SaveStore format 1 保持，包 ID、内容版本和 JSON 指纹继续隔离；加载器为旧包添加的内存空 `walks` 不参与指纹原文拼接。当前运行库已恢复旧 P0/P1a 封存测试快照，且旧三包指纹与 P1a 封存 stage 完全相同。
+
+城内保存恢复当前位置、日期、属性和旗标；每次明确旅行重新进入城镇时，在旅行同一事务中将城镇位置重置到入口 spawn，重访旗标保留。视图保存前取消临时路径，已逐帧提交的当前位置即为安全点。对白／结果／动作占用阻止移动；`performing/event` 仍不能保存，`ready/result` 可保存。旧 14 字段档不会静默补成新包或自动成为新局，不提供跨版本迁移。
+
+状态检查：`tests/cultivation_engine_town_walk_test.gd`。其五剑完成回调为可信控制器模拟，不代替真实动作播放、原生输入或浏览器操作。
 
 ## 有声师徒循环（0.2.2）
 
@@ -69,7 +93,7 @@ manifest 的 `schema_version=1`，包含 `id/version/title/subtitle/description/
 - `events`：`say/choice/end` 无环图。条件支持属性最低值和布尔旗标；选择可执行已登记的非菜单行动。每个选择节点包含无条件无代价的离开选项。数据不执行脚本。事件取消保留已提交效果；本版普通事件均可结束后继续养成。
 - 可选`files.motions`：注册`{character,idle,clips,settle_seconds,hold_seconds}`；每个`clips`项含`manifest/phases`，阶段为递增的`start_frame/label`。清单沿用版本1的图集帧、帧率、格尺寸和`anchor_resized_px`。待机／动作须有相同格尺寸及锚点，整个动作使用同一锚点，不逐帧裁切。`scenes.actors[].motion`绑定人物，`actions[].presentation`声明`motion/clip`；动画行动须为不切场景／不开事件的菜单行动，并在所有可用场景放有对应人物。`show_count`可显示稳定行动ID的累计次数。
 
-新增普通内容仅变更包内数据／素材和 catalog。全新玩法须扩充能力及验收；本版没有自动美术生成、战斗、自由行走或完整多阶段支线运行器。原始主／支线归档规则不变。
+新增普通内容仅变更包内数据／素材和 catalog。全新玩法须扩充能力及验收；P1b 的可选 walks 能力见上文；本版没有自动美术生成、战斗或完整多阶段支线运行器。原始主／支线归档规则不变。
 
 ## 状态与存档
 

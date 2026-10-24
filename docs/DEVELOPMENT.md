@@ -703,3 +703,21 @@ Root负责合同、资源加载、构建、集成和最终验收，real Luna承�
 失败候选保留：改名测试遗漏两个speaker引用由Root修正夹具；离屏原生QA的process帧数超时在实时时钟只推进约1.4秒时提前中止，改为真实时钟期限、QA限60fps及稳定点击矩形后完整通过。运行源码冻结后仅重绑修订的QA文件，保留旧测试源码与对应收据并重跑状态／两尺寸／Web。播放器待机起招与回中性停留经限定修订；独立审查的最近动作纹理引用由Root确定为有界缓存（待机＋最近一段，另一动作替换、离场释放），无全五套累积；整体Web包仍下载全部资源。
 
 最终来源、复现、候选诊断、分层证据和同卷可恢复快照见[本轮切片](CULTIVATION_ENGINE_V02_SWORD_SLICE.md)，本机收据归`.local/qa/cultivation-engine-v02/`。仓库技能绑定同步实际v0.2 API，未复制runtime或安装全局副本。下一验收点为用户试玩当前五剑循环和刷新续玩；Windows、听感、长期表现与新版本用户认可保持未验证。无新上传、云端调用、积分、费用、依赖安装、Git提交／push或公开发布。
+
+## 2026-10-24 · X1 P1b 承平城镇适配
+
+从Shu codex/x1-shu-integration-plan / e1e682a继续，实际pwd /home/x1-lite/games/shu、whoami x1-lite、Bash，开始clean；先确认18812／18813及原生窗口仍运行，未覆盖旧入口。完整审查两仓必读资料，以承平固定a4a6c1c的navigation/location_controller/world_state及数据／测试为来源，选择性适配四邻接AStar、共用膨胀障碍、接近终点与到达后单次交互。承平没有统一原创代码LICENSE，本片按用户两仓适配授权记录，不伪称MIT或CC0；未复制其素材或剧情。
+
+新增独立包、v04入口、town_mode_view/walker/navigation及walks合同；EngineSession逐帧提交合法整数脚点，只更改位置与revision，互动核对run/revision/phase/scene/距离/通路后由原行动事务结算。旧包14字段与原指纹保持，新包仅加schema1 exploration位置表，内容和应用目录独立，不迁旧档。全身四向人物、街景为原创程序简绘；原听教、五剑、复命、溪亭及存档规则保留。
+
+并行只读审查发现薄墙格网边漏检、高fps逐帧取整停步、奇数格距半像素路点及障碍内互动锚点合同缺口，分别修为精确网格边碰撞、跨帧距离预算、偶数格距和可走锚点校验。原生检查注入真实Godot鼠标事件，不冒称物理输入或浏览器；浏览器工具inventory为空、设备听感等仍未验收。最终同源stage、各测试计数、首次导入退出异常与重试、产物／服务及复现步骤完整记录在[P1b切片](P1B_TOWN_WALK_SLICE.md)。本轮无提交、push、main合并或公开部署。
+
+## 2026-10-24 · P1b混合场景适配
+
+在X1 Shu现有dirty P1b基础继续，承平固定a4a6c1c只读。新增表现子类复用原walker，摄像机反投影得到旧逻辑脚点，原Session仍唯一结算；3D舞台与原创SVG人物素材独立于内容指纹。原town JSON及5个核心文件保持原字节，旧stage真实writer生成的隔离档在新UI继续，原生custom userdir不变。SubViewport部分固定Godot MIT原文与承平原创代码用户授权分别记录，未复制源人物／地图／剧情。
+
+按首图修正偏黄高光、街外纹理波纹与脚点接地。最终stage-a1adc95d2b7a绑定195输入，1065状态、85跨stage兼容、两尺寸384原生输入和192导出PCK输入均0失败；release默认UI另有5帧启动证据。原生试玩与Web本机服务已启动，18814/hd2d/仅新增指向新Web产物的同源路径，旧页面13文件／PID保持。浏览器未能实际操作，不以源码推断替代IndexedDB继续／刷新验收。完整产物、SHA256、失败QA候选、命令与边界见[本轮切片](P1B_TOWN_HD2D_SLICE.md)。未提交、推送或公开部署。
+
+## 2026-10-24 · 用户授权GitHub归档
+
+用户在混合场景交付后明确要求“保存到GitHub，并告诉我合并后的本地开发路径”。据此将P1b行走／存档合同与混合场景表现一并提交到当前`codex/x1-shu-integration-plan`，正常推送origin，不强推、不自行合并main，不触碰旧试玩服务。Git fetch确认原分支与e1e682一致、main仍3916899；发布工作区仅含本轮源码／原创资源／来源与验证文档，忽略产物及用户档不入库。源／stage哈希及现有1065状态、85兼容、384原生输入和192 PCK检查保持，不因纯文档／归档重复构建。持续开发路径为`/home/x1-lite/games/shu`，入口`scenes/demos/cultivation_engine_v05_town_hd2d.tscn`；承平保持独立来源。详见[归档说明](X1_TOWN_INTEGRATION_GITHUB.md)。

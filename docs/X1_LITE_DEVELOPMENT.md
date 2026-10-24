@@ -32,7 +32,9 @@
 
 | 入口 | 实际范围 |
 | --- | --- |
-| `scenes/demos/cultivation_engine_v03_town.tscn` | 当前 P1a 进城返山，`0.3.0-town-return`；同一 `EngineSession` 运行隔离的 `shu_town_return` 与原 `stream_study`，见[P1a 记录](P1A_TOWN_RETURN_SLICE.md) |
+| `scenes/demos/cultivation_engine_v05_town_hd2d.tscn` | 当前混合场景，独立表现包版本`0.3.1-town-hd2d`，P1b内容／原生存档保持；Web18814/hd2d/及18815，见[本轮记录](P1B_TOWN_HD2D_SLICE.md) |
+| `scenes/demos/cultivation_engine_v04_town_walk.tscn` | 此前 P1b 可走城镇，`0.3.1-town-walk`；独立 `shu_town_walk`＋原 `stream_study`，新本机入口18814，见[P1b记录](P1B_TOWN_WALK_SLICE.md) |
+| `scenes/demos/cultivation_engine_v03_town.tscn` | 此前 P1a 进城返山，`0.3.0-town-return`；同一 `EngineSession` 运行隔离的 `shu_town_return` 与原 `stream_study`，见[P1a 记录](P1A_TOWN_RETURN_SLICE.md) |
 | `scenes/demos/cultivation_engine_v02_mentor.tscn` | 已获用户认可的 P0 入口，`0.2.2-mentor-loop`；运行 `shu_mentor_loop` 与 `stream_study`，保持回归和旧存档 |
 | `games/mentor_loop_catalog.json` | 上述有声师徒包及无声验证包的目录；每包独立存档 |
 | `project.godot` 的 F5 / `scenes/main.tscn` | 旧正式五剑养成流程，继续使用 `DemoState`；不能当成新内核整合入口 |
@@ -99,3 +101,7 @@ python3 tools/build_cultivation_engine.py \
 - 原 A/B 剧情插件退出问题仍是已知项；当前师徒入口不加载这些插件，不能因此将旧问题标为修复。
 - Mac 的 `.local/`、Blender 工程、模型／贴图源、原始生成资料、QA 和试玩存档继续保留。以后确需继续编辑的资料先逐项清点、核对可打开与来源，再另行归档；本次不复制目录、不迁移凭据、不清理 Mac。
 - 下一具体任务与后续城镇／战斗切片见[整合规划](CHENGPING_INTEGRATION_PLAN.md)。
+
+## 城镇整合后的本地入口
+
+P1b与2D／3D表现整合后继续在 **`/home/x1-lite/games/shu`** 开发，当前分支`codex/x1-shu-integration-plan`；承平`/home/x1-lite/games/chengping`继续只是固定来源。没有创建新的合并目录或转回Mac；本轮GitHub保存授权与复现入口见[归档说明](X1_TOWN_INTEGRATION_GITHUB.md)。

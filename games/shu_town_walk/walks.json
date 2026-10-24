@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "scenes": {
+    "shanxia_town": {
+      "size": [
+        1280,
+        720
+      ],
+      "floor": [
+        60,
+        160,
+        1160,
+        490
+      ],
+      "spawn": [
+        150,
+        560
+      ],
+      "obstacles": [
+        [
+          480,
+          330,
+          220,
+          150
+        ],
+        [
+          320,
+          175,
+          540,
+          95
+        ]
+      ],
+      "actor_radius": 12,
+      "cell_size": 20,
+      "interactions": {
+        "tea_seller": {
+          "label": "茶摊掌柜",
+          "position": [
+            1010,
+            350
+          ],
+          "radius": 62,
+          "action": "greet_tea_seller",
+          "repeat_action": "greet_tea_seller_again",
+          "seen_flag": "town_tea_greeted"
+        },
+        "street_sign": {
+          "label": "街口木牌",
+          "position": [
+            710,
+            560
+          ],
+          "radius": 58,
+          "action": "read_street_sign"
+        },
+        "mountain_exit": {
+          "label": "返山回廊 · 1时辰",
+          "position": [
+            160,
+            260
+          ],
+          "radius": 62,
+          "action": "return_from_town"
+        }
+      }
+    }
+  }
+}

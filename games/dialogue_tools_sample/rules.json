@@ -1,0 +1,42 @@
+{
+  "clock": {
+    "slots": [
+      "卯时",
+      "辰时",
+      "巳时",
+      "午时",
+      "申时",
+      "酉时"
+    ],
+    "start_day": 1,
+    "start_slot": 0,
+    "unit": "时辰"
+  },
+  "stats": [
+    {
+      "id": "energy",
+      "label": "精力",
+      "initial": 100,
+      "min": 0,
+      "max": 100,
+      "color": "#5B9B91"
+    },
+    {
+      "id": "cultivation",
+      "label": "修为",
+      "initial": 0,
+      "min": 0,
+      "max": 100,
+      "color": "#C98254"
+    },
+    {
+      "id": "understanding",
+      "label": "理解",
+      "initial": 0,
+      "min": 0,
+      "max": 1000,
+      "color": "#8B79A2"
+    }
+  ],
+  "goals": []
+}

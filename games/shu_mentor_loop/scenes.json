@@ -1,0 +1,62 @@
+{
+  "tingyu_corridor": {
+    "label": "听雨廊",
+    "description": "听雨廊中，叶知闲等你回报后山练剑的体会；也可歇息后再去练习。",
+    "background": "res://assets/art/weather3/tingyu-clean-v3.png",
+    "actors": [
+      {
+        "character": "player_yanqiu",
+        "x": 0.31,
+        "y": 0.88,
+        "height": 0.52,
+        "flip": false
+      },
+      {
+        "character": "mentor_zhixian",
+        "x": 0.73,
+        "y": 0.88,
+        "height": 0.58,
+        "flip": false
+      }
+    ],
+    "present": [
+      "player_yanqiu",
+      "mentor_zhixian"
+    ],
+    "accent": "#397C78",
+    "foreground": {
+      "texture": "res://assets/art/v2/desk-v2.png",
+      "x": 0.5,
+      "y": 0.99,
+      "width": 0.95,
+      "height": 0.23
+    }
+  },
+  "back_mountain": {
+    "label": "后山",
+    "description": "雾岭层叠，找一处安静空地练习剑法；练过一套后可回廊中向师父复命。",
+    "background": "res://assets/art/back_mountain_training/far.png",
+    "actors": [
+      {
+        "character": "player_yanqiu",
+        "x": 0.68,
+        "y": 0.9,
+        "height": 0.65,
+        "flip": false,
+        "motion": "jiang_sword"
+      }
+    ],
+    "present": [
+      "player_yanqiu"
+    ],
+    "accent": "#5B806F",
+    "layers": [
+      {
+        "texture": "res://assets/art/back_mountain_training/mid.png"
+      },
+      {
+        "texture": "res://assets/art/back_mountain_training/near.png"
+      }
+    ]
+  }
+}

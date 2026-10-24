@@ -1,0 +1,162 @@
+{
+  "tea": {
+    "title": "归剑问天",
+    "active_flag": "tea_active",
+    "complete_flag": "tea_quest_complete",
+    "scenes": [
+      "tea.sword_terrace"
+    ],
+    "return_scene": "tingyu_corridor",
+    "actions": [
+      "tea_accept",
+      "tea_rest",
+      "tea_return_to_corridor",
+      "tea_inspect_cup_first",
+      "tea_repair_cup_first",
+      "tea_ask_first_cup",
+      "tea_inspect_cup_second",
+      "tea_ask_second_cup"
+    ],
+    "rest_action": "tea_rest",
+    "return_action": "tea_return_to_corridor",
+    "boundary_text": "顾青萝一直在等一个已经死去的人。\n\n本段线索已收齐。这段试玩到此，后续故事尚未开放；你可以留在剑坪查看或歇息。支线未完，暂不能返回养成。",
+    "stages": [
+      {
+        "id": "return_sword",
+        "label": "归剑问天",
+        "complete_flag": "tea_return_sword_complete",
+        "requires": {
+          "flags": {
+            "tea_active": true
+          }
+        },
+        "terminal": false
+      },
+      {
+        "id": "cups_first",
+        "label": "第一次看见两只杯子",
+        "complete_flag": "tea_cups_first_complete",
+        "requires": {
+          "flags": {
+            "tea_cup_first_seen": true,
+            "tea_cup_second_seen": true
+          }
+        },
+        "terminal": false
+      }
+    ],
+    "source_record": {
+      "manuscript": {
+        "repository": "jggagi/shu",
+        "path": "story/sub/tea/README.md",
+        "revision": "086e13eb11bd3710e2b7f8daa1c617c1d386be2c",
+        "sha256": "20fc0889378091e70999bb0cee1ae99df28dad7da0469b9fa8ff76de20f2377c",
+        "selected_sections": [
+          {
+            "title": "4. 世人的误解",
+            "lines": [
+              330,
+              354
+            ]
+          },
+          {
+            "title": "5. 阶段 A：归剑问天",
+            "lines": [
+              363,
+              375
+            ]
+          },
+          {
+            "title": "5. 阶段 B：第一次看见两只杯子",
+            "lines": [
+              377,
+              404
+            ]
+          }
+        ]
+      },
+      "source_data": {
+        "path": "assets/data/tea.json",
+        "content_version": "tea-past-local-1",
+        "sha256": "f6a6b0ab87ae27ea5564966b9340e003d2926f5b95ddea7a8bfa3364a10924e8",
+        "selected_paths": [
+          "commission",
+          "rumor",
+          "impression",
+          "objects.tea.cup_first",
+          "objects.tea.cup_second",
+          "feedback.repair",
+          "ui_adaptation"
+        ],
+        "usage": "Provenance only. This pack copies the selected A/B fields; it does not load assets/data/tea.json at runtime and includes no C-I content."
+      },
+      "art": {
+        "record_path": "assets/art/tea/source.json",
+        "record_sha256": "fc3e7fde49c0ec7381cd15374fecdcdbea01b543c435c0c7da6a5293527d6cba",
+        "status": "integrated_pending_user_review",
+        "user_accepted": false,
+        "author": "AI generated under user-directed shu game-art workflow",
+        "usage": "User-authorized shu project game art; provider terms apply; no third-party purchased assets.",
+        "assets": [
+          {
+            "path": "assets/art/tea/tea-terrace-v1.png",
+            "sha256": "9b4ae56e641a4d0bc0f50916f2812c21185d01d71dcb8077738236837f13567f",
+            "provider": "codex-imagegen",
+            "prompt_path": "art/prompts/tea-terrace-v1.txt"
+          },
+          {
+            "path": "assets/art/tea/tea-cups-v1.png",
+            "sha256": "3f976fb4bdf3ea4419091dd9cdd4e6166e30adfd04559b056e5015f71f84cc45",
+            "provider": "codex-imagegen",
+            "prompt_path": "art/prompts/tea-cups-v1.txt"
+          }
+        ],
+        "layout": {
+          "path": "assets/data/tea-layout.json",
+          "scene_surface_pixels": [
+            1416,
+            638
+          ],
+          "cup_hotspots": {
+            "tea.cup_first": [
+              793,
+              306,
+              165,
+              144
+            ],
+            "tea.cup_second": [
+              1039,
+              309,
+              165,
+              144
+            ]
+          },
+          "atlas_regions": {
+            "tea.cup_first": [
+              139,
+              184,
+              611,
+              535
+            ],
+            "tea.cup_second": [
+              1024,
+              184,
+              613,
+              535
+            ]
+          },
+          "coordinates": "Hotspot x/y/w/h are local to the original 1416x638 tea scene; rect and bottom-center anchor in scenes.json normalize them to this scene surface.",
+          "sha256": "d1f96266f6eaa85468478365333ea3352eef234719269761c27bf5d248fe0673"
+        }
+      },
+      "formal_behavior_authority": {
+        "cost_rules": "assets/data/rules.json:3-11 (training_cost=22, mentor_cost=8, rest_gain=34, rest_duration=1)",
+        "inspection_and_two_cup_gate": "scripts/demo_state.gd:254-270",
+        "per_object_action_cost_and_once_gate": "scripts/demo_state.gd:418-443,490-497",
+        "branch_rest": "scripts/demo_state.gd:164-176; scripts/main.gd:950-955",
+        "hosted_object_and_popover_behavior": "scripts/main.gd:656-691,859-899"
+      },
+      "adaptation": "The first-cup description and repair feedback are the explicitly recorded 2026-10-05 UI adaptation in assets/data/tea.json. The rumor, impression, second-cup description, commission and reveal order retain their selected source text. No new sidequest manuscript or C-I runtime content is added."
+    }
+  }
+}

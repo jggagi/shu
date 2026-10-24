@@ -1,0 +1,73 @@
+{
+  "study_tip": {
+    "title": "验证样例亭主的读书提示",
+    "start": "opening",
+    "nodes": {
+      "opening": {
+        "type": "say",
+        "speaker": "pavilion_keeper",
+        "text": "读书时不妨先记下一个让自己停顿的句子。",
+        "next": "choice"
+      },
+      "choice": {
+        "type": "choice",
+        "speaker": "pavilion_keeper",
+        "text": "把提示记下后，下一次阅读会额外积累4点心得。要记进小记吗？",
+        "options": [
+          {
+            "id": "keep_tip",
+            "label": "记下提示（下次阅读+4）",
+            "next": "tip_taken",
+            "action": "accept_study_tip",
+            "conditions": {
+              "stats_gte": {},
+              "flags": {
+                "study_tip_available": true,
+                "study_tip_claimed": false
+              }
+            }
+          },
+          {
+            "id": "continue_reading",
+            "label": "先回溪畔继续阅读",
+            "next": "tip_skipped",
+            "action": "",
+            "conditions": {}
+          }
+        ]
+      },
+      "tip_taken": {
+        "type": "say",
+        "speaker": "study_guest",
+        "text": "我把提示记在书页边，下一段阅读时再试着用它。",
+        "next": "end"
+      },
+      "tip_skipped": {
+        "type": "say",
+        "speaker": "study_guest",
+        "text": "我先回溪畔读完这一页。",
+        "next": "end"
+      },
+      "end": {
+        "type": "end",
+        "text": "收好书页与小记，余下时光仍可自行安排。"
+      }
+    }
+  },
+  "study_report": {
+    "title": "验证样例读书小记",
+    "start": "opening",
+    "nodes": {
+      "opening": {
+        "type": "say",
+        "speaker": "pavilion_keeper",
+        "text": "心得已达目标，小记也交到了。你仍可继续读书、歇息或往返溪亭与溪畔。",
+        "next": "end"
+      },
+      "end": {
+        "type": "end",
+        "text": "收好书页与小记，余下时光仍可自行安排。"
+      }
+    }
+  }
+}

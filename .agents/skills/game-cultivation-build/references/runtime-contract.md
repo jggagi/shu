@@ -1,6 +1,6 @@
 # Cultivation-mode runtime contract — design only
 
-The following GDScript signatures describe the planned API. They are not drop-in classes or an implemented addon. Runtime code belongs in the host repository; this skill points to its versioned interface.
+The following GDScript signatures describe the planned API. They are not drop-in classes or the implemented content-engine API. shu now has an independent `addons/cultivation_mode` runtime: see its [actual interface](../../../../addons/cultivation_mode/README.md) and [current project binding](shu-binding.md). Its ordinary events support say/choice/end; the cue/staged-quest signatures below remain proposals. Runtime code belongs in the host repository; this skill points to its versioned interface.
 
 ## CultivationModeController and state ownership
 
@@ -80,7 +80,8 @@ The adapter maps coordinates/input to the host's scene model, updates UI, displa
 
 | Source | Available boundary | Extraction requirement |
 | --- | --- | --- |
-| shu `scripts/demo_state.gd` | `train`, `rest`, `begin_dialogue`, `choose`, `reset`; tea `view_tea`, `execute_tea_action`, `rest_tea`, `can_return_from_tea` | Existing host owns numeric rules, tea progress/receipts and completion-gated return; generic gateway remains design |
+| shu `scripts/demo_state.gd` | `train`, `train_sword`, `select_sword_manual`, `rest`, `begin_dialogue`, `choose`, `reset`; tea `view_tea`, `execute_tea_action`, `rest_tea`, `can_return_from_tea` | Existing host owns numeric rules, tea progress/receipts and completion-gated return; generic gateway remains design |
+| shu `main.gd` / `back_mountain_view.gd` / `hero_lookdev/formal_sword_practice.gd` | Real receipt, action-ID completion and existing scene return | See [animated activity](animated-activity-integration.md); preflight before commitment, preserve host Static/occupancy rules, no second settlement |
 | shu `interactive_scene_object.gd` / `scene_object_popover.gd` | Selection/state visuals; compact anchored action intent | Reuse actual Control components and data; do not copy runtime into the skill |
 | shu `scripts/weather.gd` | `setup`, `add_lit_art`, dynamic toggle and audit seek | Externalize scene rects/paths; fixed vs moving lighting assumptions must be explicit |
 | shu `scripts/weather_cycle.gd` | time-based weather sample | Keep presentation clock separate from game clock |
@@ -91,3 +92,7 @@ The adapter maps coordinates/input to the host's scene model, updates UI, displa
 ## First extraction checks
 
 Existing D01 cultivation loop before/after; training spends the host-defined time/energy and grants actual growth; rest restores capped energy and advances time; mentor event completes/cancels then allows another activity. Check invalid graph/action rejection, insufficient energy without partial changes, selection/reply applying once, reset creating a fresh run, actual result text matching deltas, scaled hotspot alignment and static weather leaving gameplay unchanged. For side quests, check locked later evidence, direct inspection, passive journal, both object anchors/sizes, repeated stages without duplicate settlement, object close staying in the branch, stage completion unable to return, in-branch rest and terminal return separately. Use clearly labeled terminal fixtures if the actual ending is unimplemented; persisted checkpoints require actual save support.
+
+## Current shu object-branch extension (2026-10-23)
+
+The independent engine implements optional quests and scene objects for Tea A/B. Actual Session APIs are `quest_view`, `available_objects`, `inspect_object`, and `execute_object_action`; see [current binding](shu-binding.md) and the [runtime README](../../../../addons/cultivation_mode/README.md). Keep these distinct from proposed signatures above. Stage and whole-quest completion use different reserved flags; object actions commit once and safe checkpoints preserve receipts. No event cue/document/memory protocol is implemented by this limited migration.

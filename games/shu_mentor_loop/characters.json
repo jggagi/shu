@@ -1,0 +1,12 @@
+{
+  "player_yanqiu": {
+    "name": "江砚秋",
+    "role": "入门弟子",
+    "portrait": "res://assets/art/v2/jiang-yanqiu-v2.png"
+  },
+  "mentor_zhixian": {
+    "name": "叶知闲",
+    "role": "掌门与生活导师",
+    "portrait": "res://assets/art/v2/ye-zhixian-v2.png"
+  }
+}

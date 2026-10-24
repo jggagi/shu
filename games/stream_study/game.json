@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "stream_study",
+  "version": "0.1.0",
+  "title": "溪亭·读书小记",
+  "subtitle": "临溪展卷，落笔成记",
+  "description": "在亭中请教，于溪畔读书，把所悟写成一页小记。",
+  "initial_scene": "tea_pavilion",
+  "initial_flags": {
+    "study_tip_available": false,
+    "study_tip_claimed": false,
+    "study_goal_complete": false,
+    "study_hint": false
+  },
+  "theme": {
+    "accent": "#547F7B",
+    "paper": "#F1E9D9"
+  },
+  "files": {
+    "rules": "rules.json",
+    "characters": "characters.json",
+    "scenes": "scenes.json",
+    "actions": "activities.json",
+    "events": "events.json"
+  },
+  "source_note": "独立引擎验证夹具；文字人物与短对白为本轮原创样例，非蜀山正式剧情。"
+}

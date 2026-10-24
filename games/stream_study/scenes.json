@@ -1,0 +1,23 @@
+{
+  "tea_pavilion": {
+    "label": "溪亭",
+    "description": "亭边临溪，亭主闻简守着一方书案；这里可以歇息、请教或交上读书小记。",
+    "background": "res://assets/art/stream_teahouse/stream-teahouse-v1.png",
+    "actors": [],
+    "present": [
+      "study_guest",
+      "pavilion_keeper"
+    ],
+    "accent": "#547F7B"
+  },
+  "riverbank": {
+    "label": "溪畔",
+    "description": "沿溪边离开亭子几步，仍能望见亭檐与山谷水色；访客洛清舟在此安静读书。",
+    "background": "res://assets/art/stream_teahouse/stream-teahouse-v1.png",
+    "actors": [],
+    "present": [
+      "study_guest"
+    ],
+    "accent": "#63897B"
+  }
+}

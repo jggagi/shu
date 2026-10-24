@@ -1,0 +1,238 @@
+{
+  "version": 1,
+  "sets": [
+    {
+      "id": "songfeng",
+      "label": "松风剑",
+      "description": "提剑下劈 · 回带平刺",
+      "manifest_path": "res://assets/art/jiang_sword_cycle/action/frames.json",
+      "clip_name": "action",
+      "phases": [
+        {
+          "start_frame": 1,
+          "label": "起势"
+        },
+        {
+          "start_frame": 12,
+          "label": "蓄势"
+        },
+        {
+          "start_frame": 45,
+          "label": "出剑"
+        },
+        {
+          "start_frame": 51,
+          "label": "定势"
+        },
+        {
+          "start_frame": 59,
+          "label": "蓄势"
+        },
+        {
+          "start_frame": 76,
+          "label": "出剑"
+        },
+        {
+          "start_frame": 82,
+          "label": "定势"
+        },
+        {
+          "start_frame": 90,
+          "label": "收势"
+        },
+        {
+          "start_frame": 103,
+          "label": "回位"
+        }
+      ]
+    },
+    {
+      "id": "chuanyun",
+      "label": "穿云剑",
+      "description": "进步直刺 · 抽剑再刺",
+      "manifest_path": "res://assets/art/jiang_sword_cycle/action-chuanyun/frames.json",
+      "clip_name": "action-chuanyun",
+      "phases": [
+        {
+          "start_frame": 1,
+          "label": "起势"
+        },
+        {
+          "start_frame": 12,
+          "label": "蓄势"
+        },
+        {
+          "start_frame": 45,
+          "label": "出剑"
+        },
+        {
+          "start_frame": 51,
+          "label": "定势"
+        },
+        {
+          "start_frame": 58,
+          "label": "蓄势"
+        },
+        {
+          "start_frame": 72,
+          "label": "出剑"
+        },
+        {
+          "start_frame": 78,
+          "label": "定势"
+        },
+        {
+          "start_frame": 87,
+          "label": "收势"
+        },
+        {
+          "start_frame": 103,
+          "label": "回位"
+        }
+      ]
+    },
+    {
+      "id": "huilan",
+      "label": "回澜剑",
+      "description": "横抹开路 · 回身反斩",
+      "manifest_path": "res://assets/art/jiang_sword_cycle/action-huilan/frames.json",
+      "clip_name": "action-huilan",
+      "phases": [
+        {
+          "start_frame": 1,
+          "label": "起势"
+        },
+        {
+          "start_frame": 12,
+          "label": "蓄势"
+        },
+        {
+          "start_frame": 45,
+          "label": "出剑"
+        },
+        {
+          "start_frame": 51,
+          "label": "定势"
+        },
+        {
+          "start_frame": 59,
+          "label": "蓄势"
+        },
+        {
+          "start_frame": 70,
+          "label": "出剑"
+        },
+        {
+          "start_frame": 78,
+          "label": "定势"
+        },
+        {
+          "start_frame": 86,
+          "label": "收势"
+        },
+        {
+          "start_frame": 103,
+          "label": "回位"
+        }
+      ]
+    },
+    {
+      "id": "tiaoyue",
+      "label": "挑月剑",
+      "description": "低扫卸势 · 顺势上挑",
+      "manifest_path": "res://assets/art/jiang_sword_cycle/action-tiaoyue/frames.json",
+      "clip_name": "action-tiaoyue",
+      "phases": [
+        {
+          "start_frame": 1,
+          "label": "起势"
+        },
+        {
+          "start_frame": 12,
+          "label": "蓄势"
+        },
+        {
+          "start_frame": 45,
+          "label": "出剑"
+        },
+        {
+          "start_frame": 51,
+          "label": "定势"
+        },
+        {
+          "start_frame": 58,
+          "label": "蓄势"
+        },
+        {
+          "start_frame": 70,
+          "label": "出剑"
+        },
+        {
+          "start_frame": 78,
+          "label": "定势"
+        },
+        {
+          "start_frame": 86,
+          "label": "收势"
+        },
+        {
+          "start_frame": 103,
+          "label": "回位"
+        }
+      ]
+    },
+    {
+      "id": "xieying",
+      "label": "斜影剑",
+      "description": "斜劈换锋 · 反撩再斩",
+      "manifest_path": "res://assets/art/jiang_sword_cycle/action-xieying/frames.json",
+      "clip_name": "action-xieying",
+      "phases": [
+        {
+          "start_frame": 1,
+          "label": "起势"
+        },
+        {
+          "start_frame": 12,
+          "label": "蓄势"
+        },
+        {
+          "start_frame": 45,
+          "label": "出剑"
+        },
+        {
+          "start_frame": 51,
+          "label": "定势"
+        },
+        {
+          "start_frame": 59,
+          "label": "蓄势"
+        },
+        {
+          "start_frame": 66,
+          "label": "出剑"
+        },
+        {
+          "start_frame": 73,
+          "label": "定势"
+        },
+        {
+          "start_frame": 81,
+          "label": "出剑"
+        },
+        {
+          "start_frame": 88,
+          "label": "定势"
+        },
+        {
+          "start_frame": 95,
+          "label": "收势"
+        },
+        {
+          "start_frame": 103,
+          "label": "回位"
+        }
+      ]
+    }
+  ]
+}

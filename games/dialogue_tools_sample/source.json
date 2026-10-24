@@ -1,0 +1,10 @@
+{
+  "scope": "Authorized original test scene, represented as an isolated dialogue-tools fixture; not a formal mainline assignment.",
+  "source": "trunk/mentor-slow-half-step.json",
+  "source_sha256": "179ada7ba66725b309a5f78364db3fd0b1657ab90303cc8d25048bbf03fef421",
+  "event_id": "mentor_tip",
+  "scene_status": "原创师徒对话验证切片，正式主线归属待后续内容规划",
+  "old_fixture_comparison": "This is newly authored scene text; no claim that it matches the previous fixture.",
+  "adaptation": "Uses the existing claim_mentor_lesson action, cost, and conditions; Session remains the only settlement authority.",
+  "canonical_archive_preserved": true
+}

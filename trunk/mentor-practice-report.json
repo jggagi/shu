@@ -1,0 +1,81 @@
+{
+  "id": "mentor_practice_report",
+  "title": "慢半步·练剑回报",
+  "status": "原创师徒对话的养成回报适配，不指定正式章节归属",
+  "setting": "完成一套剑法后回到听雨廊，向叶知闲报告练习体会。",
+  "source": "trunk/mentor-slow-half-step.json",
+  "cast": [
+    "player_yanqiu",
+    "mentor_zhixian"
+  ],
+  "lines": [
+    {
+      "id": "report_question",
+      "character": "mentor_zhixian",
+      "speaker": "叶知闲",
+      "type": "choice",
+      "text": "方才那套剑，练得如何？"
+    },
+    {
+      "id": "report_calm",
+      "character": "player_yanqiu",
+      "speaker": "江砚秋",
+      "text": "这回我没急着抢那一步，剑也收稳了。",
+      "next": "report_calm_reply"
+    },
+    {
+      "id": "report_calm_reply",
+      "character": "mentor_zhixian",
+      "speaker": "叶知闲",
+      "text": "嗯，先记住这份从容。明日再练，不必把今天的力气都用尽。",
+      "next": "end"
+    },
+    {
+      "id": "report_try",
+      "character": "player_yanqiu",
+      "speaker": "江砚秋",
+      "text": "刚才还是有些急，不过我知道该从哪儿改了。",
+      "next": "report_try_reply"
+    },
+    {
+      "id": "report_try_reply",
+      "character": "mentor_zhixian",
+      "speaker": "叶知闲",
+      "text": "知道哪里急，就有了进步。先歇歇，明日再来。",
+      "next": "end"
+    }
+  ],
+  "choices": [
+    {
+      "id": "with_lesson",
+      "label": "说说调息后的体会",
+      "next": "report_calm",
+      "conditions": {
+        "flags": {
+          "mentor_lesson_accepted": true
+        }
+      }
+    },
+    {
+      "id": "self_practice",
+      "label": "说说自己试剑的体会",
+      "next": "report_try",
+      "conditions": {
+        "flags": {
+          "mentor_lesson_accepted": false
+        }
+      }
+    },
+    {
+      "id": "later",
+      "label": "稍后再向师父回报",
+      "next": "laterend",
+      "conditions": {}
+    }
+  ],
+  "end_texts": {
+    "end": "今日听教与练剑已记下，歇息后仍可继续修行。",
+    "laterend": "今日练剑已记录，稍后仍可回廊复命。"
+  },
+  "rules": "五句师徒对白按调息选择分支；稍后回报不结算、不改状态，也不标记师徒回报完成。正式收尾只在两条完整对话结束后记录，不新增数值奖励或主线章节归属。"
+}

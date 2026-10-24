@@ -1,0 +1,76 @@
+{
+  "version": 2,
+  "presentation_revision": "approved-five-20261023",
+  "manuals": [
+    {
+      "id": "pine_wind",
+      "clip_id": "songfeng",
+      "title": "松风剑",
+      "style": "下劈 · 平刺",
+      "description": "提剑下劈，回带平刺，再收回守势。",
+      "techniques": [
+        {
+          "id": "pine_pair",
+          "title": "下劈接平刺",
+          "result_text": "你练过一遍松风剑。提剑下劈，回带平刺，再收回守势。"
+        }
+      ]
+    },
+    {
+      "id": "listening_rain",
+      "clip_id": "chuanyun",
+      "title": "穿云剑",
+      "style": "进步 · 双刺",
+      "description": "前送重心，连续直刺，抽剑回到身前。",
+      "techniques": [
+        {
+          "id": "rain_double_point",
+          "title": "进步双刺",
+          "result_text": "你练过一遍穿云剑。前送重心，连续直刺，抽剑回到身前。"
+        }
+      ]
+    },
+    {
+      "id": "returning_tide",
+      "clip_id": "huilan",
+      "title": "回澜剑",
+      "style": "横扫 · 反斩",
+      "description": "横抹开路，换锋反斩，稳稳收势。",
+      "techniques": [
+        {
+          "id": "tide_turn",
+          "title": "横扫反斩",
+          "result_text": "你练过一遍回澜剑。横抹开路，换锋反斩，稳稳收势。"
+        }
+      ]
+    },
+    {
+      "id": "rising_peak",
+      "clip_id": "tiaoyue",
+      "title": "挑月剑",
+      "style": "低扫 · 上挑",
+      "description": "低扫卸势，顺势上挑，收剑回位。",
+      "techniques": [
+        {
+          "id": "peak_raise",
+          "title": "低扫上挑",
+          "result_text": "你练过一遍挑月剑。低扫卸势，顺势上挑，收剑回位。"
+        }
+      ]
+    },
+    {
+      "id": "swift_swallow",
+      "clip_id": "xieying",
+      "title": "斜影剑",
+      "style": "换锋 · 连斩",
+      "description": "斜劈换锋，反撩再斩，最后回到守势。",
+      "techniques": [
+        {
+          "id": "swallow_three",
+          "title": "斜斩连击",
+          "result_text": "你练过一遍斜影剑。斜劈换锋，反撩再斩，最后回到守势。"
+        }
+      ]
+    }
+  ]
+}

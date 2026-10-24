@@ -1,0 +1,211 @@
+{
+  "asset_id": "jiang-five-formal-20261023",
+  "source_review": "jiang-five-sword-sets-20261023/stage-2db146eb65bc",
+  "approved_url": "http://127.0.0.1:8804/",
+  "user_motion_accepted": true,
+  "author": "Codex original motion choreography; underlying Jiang Yanqiu model provenance retained",
+  "license": "Underlying model source terms retained; see docs/image-motion/jiang-fullbody-turn-20261022.md. No new third-party motion asset.",
+  "source_record": "docs/image-motion/jiang-five-sword-sets-20261023.md",
+  "files": {
+    "sets.json": {
+      "sha256": "1b970bfd153b41e88688bd187eb2430ce049ef06001415453695c7b89121195d",
+      "bytes": 5021
+    },
+    "idle/atlas-00.png": {
+      "sha256": "dca93be454f562f0aa8b8c833196612b8f51a3f8471d7b48990d5a2fa6e9edf7",
+      "bytes": 1694738
+    },
+    "idle/atlas-01.png": {
+      "sha256": "4048af4ea73146fe20071fdcf0e1b7f18757d2bc0359c17fa1c262b1d0127b6b",
+      "bytes": 1669488
+    },
+    "idle/atlas-02.png": {
+      "sha256": "b3130e6890c85a25ae654036af6c0b4c6123998e2b632cd1fe27972c3ddbf74d",
+      "bytes": 673858
+    },
+    "idle/frames.json": {
+      "sha256": "80d97538fe5c1a2427e95de58f287112b20de35671cee85e8b042f5f20f5bacf",
+      "bytes": 18180
+    },
+    "action-tiaoyue/atlas-06.png": {
+      "sha256": "1a4fd5f5e6d53a156ceeed50a4550a0ee36c9acbe9e79a9898aacb8fe85f2081",
+      "bytes": 1955155
+    },
+    "action-tiaoyue/atlas-07.png": {
+      "sha256": "f7cb4956083a7814137a59ddfd7597c145e39d5d1155b061d3d38ba40c8e892a",
+      "bytes": 177380
+    },
+    "action-tiaoyue/atlas-05.png": {
+      "sha256": "24ef802c5704b8a543424ecb7cbbeaa6a816b3e63c691558daa8e90b55163d04",
+      "bytes": 2636257
+    },
+    "action-tiaoyue/atlas-04.png": {
+      "sha256": "583455f4e59d6a8ca3cde39fb706fa32fc47d1dc1b6841dec644d3abcf98b6ee",
+      "bytes": 2492085
+    },
+    "action-tiaoyue/atlas-00.png": {
+      "sha256": "3b5c5a020a8dc5bdc09d6b44d3f9a55e7d138c384291fe240ca831e7248d9eff",
+      "bytes": 2285828
+    },
+    "action-tiaoyue/atlas-01.png": {
+      "sha256": "e7dd900f78e978eea35a0ea357fed267fb20d5fd1fc6ca1e42d02e1c04961192",
+      "bytes": 2685743
+    },
+    "action-tiaoyue/atlas-03.png": {
+      "sha256": "53cb546ef28393eec9ae2a211564c14a693d6903a97f40f60270f47ace7dfdb4",
+      "bytes": 2574664
+    },
+    "action-tiaoyue/atlas-02.png": {
+      "sha256": "b1217fd02ee36bf53c41dbf8f3d70596da4c042e2f7d5e52286570c816b12e69",
+      "bytes": 2538579
+    },
+    "action-tiaoyue/frames.json": {
+      "sha256": "d552c8b0000c759e99f648bb17a80759cc43462c521944586a3e7f2b4a125814",
+      "bytes": 55340
+    },
+    "action-chuanyun/atlas-06.png": {
+      "sha256": "3ea287f8d305098c9af51f64db6757514eb35d9b6b02d1ceb0a10a69528dcc24",
+      "bytes": 1953951
+    },
+    "action-chuanyun/atlas-07.png": {
+      "sha256": "f7cb4956083a7814137a59ddfd7597c145e39d5d1155b061d3d38ba40c8e892a",
+      "bytes": 177380
+    },
+    "action-chuanyun/atlas-05.png": {
+      "sha256": "5652b7005459c49f434b40620759b5f13b457b13f817c7180e2e4eca30730241",
+      "bytes": 2629011
+    },
+    "action-chuanyun/atlas-04.png": {
+      "sha256": "789e896b86c2ee72b90ed7751f0261ea41a89eee8c9326e71050d0dc08de43df",
+      "bytes": 2512467
+    },
+    "action-chuanyun/atlas-00.png": {
+      "sha256": "78a7c9bfe1f450df7d45d8612f0f54f062a628e7e4bf2459c66948b562cedcff",
+      "bytes": 2271347
+    },
+    "action-chuanyun/atlas-01.png": {
+      "sha256": "fd210ed4aac63499255e8841dbb61cb50e7ec41cc17a4a77e5f66dbc395a6bfa",
+      "bytes": 2681193
+    },
+    "action-chuanyun/atlas-03.png": {
+      "sha256": "a7cf79defdd739229bd679d30b6287f16ec706cbeb332a9c1a547db069f8262f",
+      "bytes": 2466710
+    },
+    "action-chuanyun/atlas-02.png": {
+      "sha256": "bf41215acfd211006893ffb8177e61ce13418faad525edc5d9bde49057a06064",
+      "bytes": 2465043
+    },
+    "action-chuanyun/frames.json": {
+      "sha256": "ab229f6809e144f4f403ec501652743f8738d4f99667059d2ee404e11ad54ba7",
+      "bytes": 55529
+    },
+    "action-huilan/atlas-06.png": {
+      "sha256": "1c2e5c4c399b1645f7af36fc9b7d475e04a2371f2d1606b22bd9a3a0675517c3",
+      "bytes": 1952982
+    },
+    "action-huilan/atlas-07.png": {
+      "sha256": "f7cb4956083a7814137a59ddfd7597c145e39d5d1155b061d3d38ba40c8e892a",
+      "bytes": 177380
+    },
+    "action-huilan/atlas-05.png": {
+      "sha256": "5b0100dcbba8938d415176fb8fb84530c3278f10f4767f961a9083a5bc767d5f",
+      "bytes": 2632694
+    },
+    "action-huilan/atlas-04.png": {
+      "sha256": "3497a5cc6c587f3c02b6310a992bc7058e244de7af4b7a9f8dc590c4cc41f04f",
+      "bytes": 2518339
+    },
+    "action-huilan/atlas-00.png": {
+      "sha256": "0d4a42e92515a175516328ffa30b5ddd63bdad6797ed11874dd5978fc29ff2da",
+      "bytes": 2305132
+    },
+    "action-huilan/atlas-01.png": {
+      "sha256": "cbc5d27d3931409bab0ae2260c2915690bdf4df491c74c4fbe18f1e101501ec5",
+      "bytes": 2715106
+    },
+    "action-huilan/atlas-03.png": {
+      "sha256": "473c5395eff387e1930d211a22031f52d9ca27e17b9128c22e0c9777e7b61051",
+      "bytes": 2634561
+    },
+    "action-huilan/atlas-02.png": {
+      "sha256": "9836f96261c6c76070dfef6fe60af597d65cb0231d92b83f089e3a98e5654ac8",
+      "bytes": 2443873
+    },
+    "action-huilan/frames.json": {
+      "sha256": "b513e3011d652c13f9c05abe8a25dd728dd075ff1f307f81533e82f7a05c95b8",
+      "bytes": 55151
+    },
+    "action/atlas-06.png": {
+      "sha256": "f0f93189d7b9236213a442a4a69c599729ce05c8ab04a2e75688b48dde06be22",
+      "bytes": 1932812
+    },
+    "action/atlas-07.png": {
+      "sha256": "f7cb4956083a7814137a59ddfd7597c145e39d5d1155b061d3d38ba40c8e892a",
+      "bytes": 177380
+    },
+    "action/atlas-05.png": {
+      "sha256": "d9e7a221a1aa35093152a19c4e964b384757fa8d93e9e1eb0f0efcf889280ef1",
+      "bytes": 2601489
+    },
+    "action/atlas-04.png": {
+      "sha256": "46fea1e9516d318b77a0aa876e2550b3486e5e2d55f54c56d4720c0d52570f7b",
+      "bytes": 2483258
+    },
+    "action/atlas-00.png": {
+      "sha256": "f488a8cdfb827d4d4bea3a0906303cbdda458529f73034de9e8126f2bec6c1f3",
+      "bytes": 2303022
+    },
+    "action/atlas-01.png": {
+      "sha256": "232e242d316e80c9af92143f614a8a9b6dc7a1b3a9f741b1ebf406ccd36ee2af",
+      "bytes": 2751769
+    },
+    "action/atlas-03.png": {
+      "sha256": "381ebb7735dc7f8e23857137a9df3433f860963413966e89c0307f7d47aaa8b2",
+      "bytes": 2461418
+    },
+    "action/atlas-02.png": {
+      "sha256": "f3b64a449939e880210187a5ca188a1b3f84c8dbd6b6d713e417b81c55c279f9",
+      "bytes": 2591030
+    },
+    "action/frames.json": {
+      "sha256": "eb32a09e4555c39fc18eb5c93906e86759abb1ed5cb8ad4575a0b96bfccc9b1d",
+      "bytes": 53828
+    },
+    "action-xieying/atlas-06.png": {
+      "sha256": "93b77ebca7099eca7a8bdea6501998aa2de6e35f7cec16322da8fe3fa718cace",
+      "bytes": 1950357
+    },
+    "action-xieying/atlas-07.png": {
+      "sha256": "f7cb4956083a7814137a59ddfd7597c145e39d5d1155b061d3d38ba40c8e892a",
+      "bytes": 177380
+    },
+    "action-xieying/atlas-05.png": {
+      "sha256": "8dad780b60297a6e0bacce56792292b0ec0d359a4aad50e22097252a20a10fe3",
+      "bytes": 2618166
+    },
+    "action-xieying/atlas-04.png": {
+      "sha256": "a69476525678dd791c8b42ad74ad294cfff8d5b1a4624463d794ec8601d878c6",
+      "bytes": 2501450
+    },
+    "action-xieying/atlas-00.png": {
+      "sha256": "bac889c93560d7ca65a219d010016cb065415274f0c35a9f4df24c34699a0399",
+      "bytes": 2294628
+    },
+    "action-xieying/atlas-01.png": {
+      "sha256": "a213972c48c52ad04310d87e9dc73fffbaf6e8418f354e0f02b8ca4c3413123e",
+      "bytes": 2670368
+    },
+    "action-xieying/atlas-03.png": {
+      "sha256": "d10668ee88de6adc83fbe37c6abb845fcb11be00f02a6e8a883635111e71c23d",
+      "bytes": 2549193
+    },
+    "action-xieying/atlas-02.png": {
+      "sha256": "7d250395f154efcccfb0ee5b603c7736d67e6bbd4f0188bd3a34171ffff8af6d",
+      "bytes": 2527650
+    },
+    "action-xieying/frames.json": {
+      "sha256": "eeca93164a3eadf3c89cfb37817b687f296c608c9d31d6fcc2fd117ebb811574",
+      "bytes": 55340
+    }
+  }
+}

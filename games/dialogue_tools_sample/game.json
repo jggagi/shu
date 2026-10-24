@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "dialogue_tools_sample",
+  "version": "0.1.0",
+  "title": "听雨廊 · 一句口诀",
+  "subtitle": "剧情工具对照试样",
+  "description": "同一段口诀对白，比较两种剧情工具与养成循环的接法。",
+  "initial_scene": "tingyu_corridor",
+  "initial_flags": {
+    "breathing_hint": false
+  },
+  "theme": {
+    "accent": "#397C78",
+    "paper": "#F3EBDD"
+  },
+  "files": {
+    "rules": "rules.json",
+    "characters": "characters.json",
+    "scenes": "scenes.json",
+    "actions": "activities.json",
+    "events": "events.json"
+  },
+  "source_note": "独立工具试样：沿用shu_entry的mentor_tip和原结算数值，调息行动仅将可用场景适配到廊下。不新增正式主线或支线原稿，不接入catalog。"
+}

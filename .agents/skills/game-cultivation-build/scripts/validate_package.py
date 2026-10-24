@@ -13,6 +13,33 @@ def require(condition, message):
         raise ValueError(message)
 
 
+def validate_local_references(skill_dir, repo=None) -> int:
+    """Validate local Markdown links, optionally allowing links inside the host repo.
+
+    Repository-wide links are enabled only when the resolved skill directory is
+    itself inside that repository. Otherwise validation stays skill-contained.
+    """
+    skill_root = Path(skill_dir).resolve()
+    allowed_root = skill_root
+    root_label = "skill"
+    if repo is not None:
+        repo_root = Path(repo).resolve()
+        if skill_root.is_relative_to(repo_root):
+            allowed_root = repo_root
+            root_label = "repository"
+
+    links = 0
+    for path in skill_root.rglob("*.md"):
+        for target in re.findall(r"\[[^\]]+\]\(([^)]+)\)", path.read_text(encoding="utf-8")):
+            if "://" in target or target.startswith("#"):
+                continue
+            linked = (path.parent / target.split("#")[0]).resolve()
+            require(linked.is_relative_to(allowed_root), f"{path.name}: reference escapes {root_label}")
+            require(linked.is_file(), f"{path.name}: missing reference {target}")
+            links += 1
+    return links
+
+
 def validate_graph(data):
     nodes = data["nodes"]
     entry = data["entry"]
@@ -99,15 +126,7 @@ def validate_package(skill_dir, repo=None):
     short = re.search(r'short_description: "([^"]+)"', ui)
     require(short is not None and 25 <= len(short.group(1)) <= 64, "UI: description length")
     require("$game-cultivation-build" in ui, "UI: missing skill invocation")
-    links = 0
-    for path in skill_dir.rglob("*.md"):
-        for target in re.findall(r"\[[^\]]+\]\(([^)]+)\)", path.read_text(encoding="utf-8")):
-            if "://" in target or target.startswith("#"):
-                continue
-            linked = (path.parent / target.split("#")[0]).resolve()
-            require(linked.is_relative_to(skill_dir), f"{path.name}: reference escapes skill")
-            require(linked.is_file(), f"{path.name}: missing reference {target}")
-            links += 1
+    links = validate_local_references(skill_dir, repo)
     assets = skill_dir / "assets"
     data = json.loads((assets / "episode.example.json").read_text(encoding="utf-8"))
     catalog = json.loads((assets / "mode.example.json").read_text(encoding="utf-8"))

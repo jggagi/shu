@@ -1,0 +1,699 @@
+{
+  "version": 1,
+  "clip_name": "idle",
+  "fps": 30,
+  "frame_count": 60,
+  "duration_seconds": 2.0,
+  "source_size": [
+    1000,
+    1000
+  ],
+  "source_format": "8-bit RGBA PNG",
+  "cell_size": [
+    512,
+    512
+  ],
+  "atlas_columns": 5,
+  "atlas_rows": 5,
+  "frames_per_atlas": 25,
+  "atlas_pages": [
+    "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+    "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+    "res://assets/art/jiang_sword_cycle/idle/atlas-02.png"
+  ],
+  "anchor_source_px": [
+    478.95962,
+    911.13357
+  ],
+  "anchor_resized_px": [
+    245.22732544,
+    466.50038784
+  ],
+  "scene_foot_anchor": [
+    1010.0,
+    565.0
+  ],
+  "actor_scale": 0.62,
+  "frames": [
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0001.png",
+      "source_sha256": "52e134edac135b5e2b9814d29ea281f92bcd3832dfd0218445d680ebed78303b"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0002.png",
+      "source_sha256": "54a3b184c81fbe6bd55819db132c7c674c95573c486cb7309368fa54889af7d6"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0003.png",
+      "source_sha256": "62dd3608a35c53be0cd23b9e5e84b3309da5ab89688897d7d558823068df205a"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0004.png",
+      "source_sha256": "73157c1d8049a0ecbc60f1ce8e4a0ff0ad9f277053ac2caabfba46c3e3a8c334"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        2048,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0005.png",
+      "source_sha256": "dc3ecc82e6ce5a3e5fabbd2e4f91f14ce26f83d3af88eb42dc084be83df28893"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0006.png",
+      "source_sha256": "db5a5f996a4a9aaaec8f5691d6a20398ae5104d623eef25f2b1f559fb382286a"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0007.png",
+      "source_sha256": "336348c19a39fa9972b0f2f75ff1805d88e1e7619afeb913a4db8144303d6bd3"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0008.png",
+      "source_sha256": "08b263bf0c5f36bd2168446c9b35f7c854553dff49589c0fcaead8c682391136"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0009.png",
+      "source_sha256": "563c2153c83ec79240d6edcf172f0d61900d0a4afecdd8c624d2c751d0500757"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        2048,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0010.png",
+      "source_sha256": "8da5d7596a64c2dabc049c3960b6bacaee051f271b124c4d8875631135069024"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0011.png",
+      "source_sha256": "22e27d59f7cfee76ee3055315e9fa22038350d491db486f14eefbdb3e5dd7aac"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        512,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0012.png",
+      "source_sha256": "7ccc526a4060cd76b9b738227d45ec92d7bbc43bfede76e7cc2d024e07bac323"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        1024,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0013.png",
+      "source_sha256": "e7c17af5f7442f7d63df93ad1180adffafc4d5864cb01390edc7e6aa438c7aa3"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        1536,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0014.png",
+      "source_sha256": "4c9f9425dc9dc28f706e968baa83838bba13e7884a858a2a7bf704b6040e842c"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        2048,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0015.png",
+      "source_sha256": "0f8f18ec37611c54f994519b52da48c889a494614596decd71d0afc0306b14c1"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0016.png",
+      "source_sha256": "f4166b523cfd2ed80b9feff0dc9580e0155b9b9e43bdf6cebc17aaf0ab89b557"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        512,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0017.png",
+      "source_sha256": "f80cb6c215b78ce596a8c2081dba2c660c0465de839c0de08d63d2bbe635a6d0"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0018.png",
+      "source_sha256": "dece7d60662f1f8b8afa35f2da863e1881267010e83da53dc1436f918de3a7e7"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        1536,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0019.png",
+      "source_sha256": "f40686d30ab1c2454383109e29a116a79c0c501898af9f128150ce43813d1f5a"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        2048,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0020.png",
+      "source_sha256": "fbfaf2624b32a1d928a4544ac8c46149d869223faebb1e0b81dc498a599905cb"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        0,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0021.png",
+      "source_sha256": "7e3bb01ce57595e334f3bf5033ae87fca585cc39ade18916a4ddacf0d4eebe86"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        512,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0022.png",
+      "source_sha256": "ce6226089a747aced72996318874396f8715b54428f29a64ef29d5dddd095a30"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        1024,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0023.png",
+      "source_sha256": "cc989dbb9ec92003fa9b260b07b2c9bd61b7cea820b85614d17f70112975dc53"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        1536,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0024.png",
+      "source_sha256": "7e38b54c986ba0a9423cbdfc1453769f5a9badc73ca9820cd41c76037d390f83"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-00.png",
+      "region": [
+        2048,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0025.png",
+      "source_sha256": "ff35c50c7d30d04fbb8b95d639d8535c22b46ff0d92a18f93ec9d5645275c369"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0026.png",
+      "source_sha256": "824e228e9cc8c1c9965ed54a32597b1acffd2fd6a4c733783ae4668f03903269"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0027.png",
+      "source_sha256": "e4368c3859bbef3c5f44a245be35585ca0671bef58ce789d764a6ca23405b668"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0028.png",
+      "source_sha256": "002b2a604fc8423bbeb22a856bcc601ea5493c6cfe186e5e4b28d0d50d180e13"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0029.png",
+      "source_sha256": "63cf8292bb8376f4e4524bd99bbf68986d9fece2841a3e38556b5461870fa72b"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        2048,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0030.png",
+      "source_sha256": "b91bae8326f2e9b534f3a956fec5d243f1b183409d2608c738620600d5bd6d95"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0031.png",
+      "source_sha256": "7e1ce9620e810f5ab95de4adddbbf86f33f21b8fbeb98155ad2a90a56a1cbaba"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0032.png",
+      "source_sha256": "93ff9718ccb791919f293519a9ac6c140978fc87501e3d749474dc6322b6fa49"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0033.png",
+      "source_sha256": "fbafede41c4d765b2ca74c8cc92fd3d05885bbc4dbdb740827033db89f86500c"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0034.png",
+      "source_sha256": "6464ce1728beebed3f3ed47b96fc5b4b48f290966662a9e2aa43d2773eada14b"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        2048,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0035.png",
+      "source_sha256": "5852b52be328efcb2a35d4ce4c2b6ce4ed17ff0e878e238fa5717041c191527d"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0036.png",
+      "source_sha256": "6607dc35f5bf2c46f24365c7966c49d69b765b540d2ed76c5591d36fcf23fa2a"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        512,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0037.png",
+      "source_sha256": "07703b9f096aad7272bbdac0f4b08b69413599b5e2d1898b278b641970f3b960"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        1024,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0038.png",
+      "source_sha256": "5ffa5c9793155e374fbad43d40ef9961543bc3650815a347e7ae2681e0a58b98"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        1536,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0039.png",
+      "source_sha256": "851d66e7e2dd2e2e72cd0e99ee1b444979deee6ff7d48b6d9a39e0503c7e13b2"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        2048,
+        1024,
+        512,
+        512
+      ],
+      "source_frame": "frame-0040.png",
+      "source_sha256": "2abb26a3095926fbe6cb33950a2f0d640a7c586d5725ff447b76a706bd5bc91d"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        0,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0041.png",
+      "source_sha256": "367bd92316fca9f034e71a11b6b14005ae4033a865e8c2216dd28ab21c5f81c3"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        512,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0042.png",
+      "source_sha256": "a6fdf993fd22272c9dfda8779729a469aaa48c88b2cc0ef6f8ccee48f4cea65a"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        1024,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0043.png",
+      "source_sha256": "e49991ef34bc1eae051b922672a10f3fe9d7af6db1d4247a839b65e1bc412e9a"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        1536,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0044.png",
+      "source_sha256": "c2dff7d2ff221e5e1bcf5d298b8716c1c50871a6e8a82abb63fba3c49c057352"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        2048,
+        1536,
+        512,
+        512
+      ],
+      "source_frame": "frame-0045.png",
+      "source_sha256": "62d838c4ae97163d5928f27947c26e1ec020ea4d35b84e46a6059dd42f225931"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        0,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0046.png",
+      "source_sha256": "3fed6f5ab09c8c261fbb6f4b41a33b0a5b18f96ea26e451e3116f9b9e9448343"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        512,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0047.png",
+      "source_sha256": "c4d22ede7b004a87e16b2de86205b134304469105b68612290c991afb5e7bd72"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        1024,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0048.png",
+      "source_sha256": "24b11bb0ffa05d0f862ec824f09acd50a2334b1a6fff0916d25118fc4b1850f5"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        1536,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0049.png",
+      "source_sha256": "18a6f7d3fb78459a15167c4d2f8326e6ca7c2fe28d718f35544c20d4d7a0f152"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-01.png",
+      "region": [
+        2048,
+        2048,
+        512,
+        512
+      ],
+      "source_frame": "frame-0050.png",
+      "source_sha256": "eb0a6a9f3532bf911037e8e16ca5d599d0c78d4b8243deca3e1ac83eed899051"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-02.png",
+      "region": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0051.png",
+      "source_sha256": "012794c5cceb01547ac6636a9d6c7162c4e920785f63eb8800312352a0de298d"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-02.png",
+      "region": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0052.png",
+      "source_sha256": "f691d98580f484279e180286f8e28168fce1fd1be3a61e34eafb38694ff8ec8b"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-02.png",
+      "region": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0053.png",
+      "source_sha256": "f2a8f4696f2eb1db9ad3535f9554e5bdb1a9f2bed3a3f239a6756aba168bf911"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-02.png",
+      "region": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0054.png",
+      "source_sha256": "b6857386168d0cb009aa1be2012d714df95c195aa7eb13d9c7498ea443086f01"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-02.png",
+      "region": [
+        2048,
+        0,
+        512,
+        512
+      ],
+      "source_frame": "frame-0055.png",
+      "source_sha256": "6ed0ea7345e7c908fbf4a2cbe75f8b144ee3656b311420a31bc5e51adbb23a45"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-02.png",
+      "region": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0056.png",
+      "source_sha256": "2f559687a58c5893cbfe3bc3713af52c7ecf952664ba54fe8d447e4e4fe4a2bd"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-02.png",
+      "region": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0057.png",
+      "source_sha256": "9a665c07afe1990b3114e541ba6b1323ffa1ea24a1813389a5d6a340f289693e"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-02.png",
+      "region": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0058.png",
+      "source_sha256": "2bd28a449c85c408a47720b7188abb5e747ae69ca25917b654685fe2fd857350"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-02.png",
+      "region": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0059.png",
+      "source_sha256": "0004d4b458cce06d7a559873ba08a47afaa9b32ec86ab082cca3093ff6d22082"
+    },
+    {
+      "path": "res://assets/art/jiang_sword_cycle/idle/atlas-02.png",
+      "region": [
+        2048,
+        512,
+        512,
+        512
+      ],
+      "source_frame": "frame-0060.png",
+      "source_sha256": "41aad93e74a202391324866b059bf7b80400e286d7709f63359158c0be942633"
+    }
+  ]
+}

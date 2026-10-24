@@ -1,4 +1,4 @@
-# shu project binding — checked 2026-10-06
+# shu project binding — engine v0.2 update 2026-10-23
 
 This binding guides the cultivation-mode skill only and must be checked against current repository rules at execution time. Its scope is the fixed-background activity panel, time/energy/growth settlement, character interactions and side quests staged within fixed cultivation scenes.
 
@@ -23,11 +23,43 @@ This binding guides the cultivation-mode skill only and must be checked against 
 | `elder_xuanshi` | 玄石真人 |
 | `uncle_guantao` | 余观涛 |
 
-Current D01 uses 江砚秋 and 叶知闲. The user reconfirmed 叶知闲 for tea contextual actions on 2026-10-05. Current state and presentation code are `scripts/demo_state.gd`, `scripts/main.gd`, `scripts/weather.gd`, `scripts/weather_cycle.gd`. The proposed `cultivation_mode` addon is not yet installed; detect capabilities before using it. Its current training/rest/mentor rules remain authoritative; relationship mechanics are not implicitly added by the cast roster.
+Current D01 uses 江砚秋 and 叶知闲. The user reconfirmed 叶知闲 for tea contextual actions on 2026-10-05. Current state and presentation code are `scripts/demo_state.gd`, `scripts/main.gd`, `scripts/weather.gd`, `scripts/weather_cycle.gd`. The formal host keeps its current training/rest/mentor rules; the separate E1 runtime is described below. Detect the selected entry before using an interface; relationship mechanics are not implicitly added by the cast roster.
 
 For fixed-scene environment work read repository `game-painted-scene-build`; for ambient life read `game-ambient-life-build`; for raster production read `game-art`. These skills describe production methods. `EnvironmentPresenter` and `AmbientLifePresenter` are reusable shu modules consumed by Back Mountain adapters, not libraries bundled with these skills or a generic Godot runtime. Both observe presentation context without owning energy/time/quest settlement. Binding correction, 2026-10-07: EnvironmentPresenter is now consumed by Tingyu; its local ambient adapter also consumes AmbientLifePresenter. Current coordinated effects and evidence limits are in the [Tingyu production case](../../game-painted-scene-build/references/tingyu-corridor.md). The dated repository snapshot below remains historical; this correction does not change cultivation semantics.
 
-## Repository and acceptance snapshot
+## Current animated sword activity (2026-10-23)
+
+The active project now consumes the approved fixed-model five-combination frames in its formal `scenes/main.tscn` cultivation flow. The existing M1/M2 host was located in a dirty worktree, its required dependencies compared, and a scoped port performed into the active checkout; the donor remains unchanged. Recheck current branch and working files before another integration.
+
+`scripts/main.gd` owns availability, action identity and return; `scripts/demo_state.gd` plus `assets/data/rules.json` own the single sword settlement. `scripts/back_mountain_view.gd` prepares the selected resources before commitment. `scripts/hero_lookdev/formal_sword_practice.gd` receives the actual receipt, completes recovery and then signals the host. `assets/data/sword_manuals.json` maps existing manual/count IDs to the five approved display choices. This case uses one combination per manual; the old ten-form alternation is historical.
+
+The current charge point is before presentation, retaining the existing sword rules. Busy blocks repeated starts, selection and return. Finished callbacks require the current action ID and a presenter that has stopped playing. Formal Static freezes environment and idle breathing while active practice continues; the independent review page's full pause is a different contract. A mentor dialogue can close while its return pose still occupies the scene, so check actual readiness.
+
+User feedback accepted the five motions and was positive on the completed local formal loop. Automated state/host checks, two native display sizes, Web input/return and full snapshot readback are recorded separately in the [formal slice](../../../../docs/FORMAL_FIVE_SWORD_CYCLE_SLICE.md). Windows hardware, long-run/low-end behavior and device listening remain unverified. The next mountain-gate proposal has not been implemented by this skill update. Runtime/source paths and receipt semantics are case bindings. The skill's proposed generic signatures remain design-only; E1 below has a different implemented API.
+
+## Current content engine object slice (2026-10-23)
+
+After positive feedback on 8807, the user authorized the Tea opening commission and double-cup investigation as the next slice. `scenes/demos/cultivation_engine_v02_tea.tscn` uses the same Session with optional `quests` and scene `objects`. Only A/B is migrated; the old formal host still has its full chain. Preserve later text and the whole-quest ending boundary.
+
+The actual runtime README defines `quest_view`, `available_objects`, `inspect_object` and `execute_object_action`. `quest_runtime.gd` validates data and changes only Session-provided staged flags. Flags/counts/receipts remain the single saved state; object receipts include object_id. Reserved flags, object/action identity, stale callbacks and whole-quest return are guarded. Rereading is informational. Ordinary branch actions return directly to ready and allow safe checkpoints; unaccepted ordinary dialogue cannot save. Selected popovers are transient.
+
+Source commission/rumor/cup text, distinct per-cup once keys and original repair/ask costs are retained. Two cups complete B while quest completion remains false. Closing/Escape/rest does not leave the branch. A clearly labeled authored-data fixture tests terminal return; later story has not migrated. New entry/store is isolated; no automatic save migration. Evidence and user approval remain distinct in the [object slice](../../../../docs/CULTIVATION_ENGINE_V02_TEA_SLICE.md).
+
+## Current content engine v0.2 first slice (2026-10-23)
+
+The user authorized content-configured playback of the five approved sword combinations, once-only settlement, return and saved continuation. The current entry is `scenes/demos/cultivation_engine_v02.tscn`; shared `motion_assets.gd` and `atlas_actor.gd` extend the same loader/session/view. The optional pack `files.motions` registry is referenced by scene actors and action `presentation:{motion,clip}`. All identities, frame paths, anchors, labels and numerical effects come from data. See the [actual runtime API](../../../../addons/cultivation_mode/README.md) and [v0.2 slice/evidence](../../../../docs/CULTIVATION_ENGINE_V02_SWORD_SLICE.md).
+
+Preflight idle plus selected clip before EngineSession commits once; `performing` blocks saving and context changes. The trusted presenter returns to neutral, stops, then calls the run/operation-guarded finish API. Restored ready/result checkpoints never replay or settle again. Preserve stable action/manual IDs and per-action counts. The new entry/store is isolated from the retained v0.1 and formal builds; there is no automatic save migration. Full Tea, environment/ambient migration and editor remain later scope. Player approval is a separate gate from test/build evidence.
+
+## Independent E1 baseline (2026-10-23)
+
+The user authorized two content packs on one core, a complete basic cultivation loop and save/load. `scenes/demos/cultivation_engine_v01.tscn` consumes `addons/cultivation_mode/{pack_loader,session,save_store,mode_view}.gd` and `games/catalog.json`. The implemented API and schema are in the [runtime README](../../../../addons/cultivation_mode/README.md), with sources/rules in the [content-pack guide](../../../../games/README.md) and current evidence in the [E1 slice](../../../../docs/CULTIVATION_ENGINE_V0_SLICE.md). Do not substitute the proposed class names in runtime-contract.md.
+
+EngineSession is the single state/settlement authority for an E1 run; the view only presents snapshots and intents. The formal entry continues to use DemoState independently. Both packs supply JSON and assets, with no character/stat/pack-name branches in the core. Empty portraits intentionally display text cards. Ordinary events use say/choice/end; full staged Tea, animated five-sword playback, environment/ambient migration and an editor are later scope. E1 pack adaptations are engine fixtures, not new authored mainline or side-story manuscripts.
+
+SaveStore keeps two rotating checkpoints per pack with validation and explicit recovery/failure notices. Save is allowed only in ready/result without an active event; restored results do not settle again. New runs do not automatically overwrite saved progress. JSON content fingerprints gate state compatibility; asset hashes are separately bound in build receipts. There is no cross-version migration. Real browser refresh recovery and two native sizes were observed; player acceptance and other platforms remain separate.
+
+## Historical repository and acceptance snapshot (2026-10-06)
 
 Recheck at every task start; this is an inspected snapshot, not a permanent claim about branch or deployment state.
 
@@ -48,6 +80,6 @@ Keep stage implemented, stage complete, quest complete and user approved distinc
 
 `scripts/tea_memory_scene.gd` exists and is instantiated by `main.gd`. It presents fixed past tableaux, dialogue/page transitions, holds and close/return intents, with tokens/session and retired-view protection. It reads `tea-memory-layout.json`, Tea object IDs, names and labels: it is story-specific presentation, not a general narrative player. Do not extract `NarrativeSequencePlayer` before a second different narrative use case actually needs picture/page sequence, dialogue, hold and close/return.
 
-Current first-cup repair costs the host `training_cost` (22), contextual ask uses `mentor_cost` (8); those are shu bindings, not universal skill costs. Repair/ask receipts are once per object per run. Reading/inspection has no energy/time cost. `rest_tea` uses the same capped rest settlement/duration as cultivation, is repeatable, and retains the branch. Unaccepted commission can be declined before entry; accepted unfinished branch cannot cancel/return. Explicit restart starts a fresh run and clears flags/receipts; no disk save is implemented. Synthetic terminal fixtures remain test evidence only; today's implementation also contains the actual ending path.
+Current first-cup repair costs the host `training_cost` (22), contextual ask uses `mentor_cost` (8); those are shu bindings, not universal skill costs. Repair/ask receipts are once per object per run. Reading/inspection has no energy/time cost. `rest_tea` uses the same capped rest settlement/duration as cultivation, is repeatable, and retains the branch. Unaccepted commission can be declined before entry; accepted unfinished branch cannot cancel/return. Explicit restart starts a fresh run and clears flags/receipts; that formal Tea host has no disk save. E1 saves above belong to the independent content-engine entry. Synthetic terminal fixtures remain test evidence only; today's implementation also contains the actual ending path.
 
 `InteractiveSceneObject` is a reusable behavior contract with shu-specific presentation (查看/已阅, colors and inline shader). `SceneObjectPopover` shares object/action/session intent but still binds `paper-frame-v2.png`, colors and action text. Neither is fully theme-agnostic. Keep host state separate; evaluate theme/text extraction only against a second real interaction use case.

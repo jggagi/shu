@@ -72,7 +72,8 @@ def stage(output: Path, reuse_stage: Path | None = None,
               ROOT / "assets/fonts/source-cultivation-engine.json", ROOT / "assets/fonts/OFL-Serif.txt"]
     paths += [ROOT / "tools/build_cultivation_engine.py", ROOT / "tools/rebuild_cultivation_engine_font.py",
               ROOT / ".engine-version", ROOT / "addons/cultivation_mode/README.md", ROOT / "games/README.md"]
-    if entry == "scenes/demos/cultivation_engine_v02_mentor.tscn":
+    if entry in {"scenes/demos/cultivation_engine_v02_mentor.tscn",
+                 "scenes/demos/cultivation_engine_v03_town.tscn"}:
         paths += [ROOT / "trunk/mentor-slow-half-step.json", ROOT / "trunk/mentor-practice-report.json",
                   ROOT / "assets/audio/mentor_pause/manifest.json",
                   ROOT / "assets/audio/mentor_practice_report/manifest.json"]

@@ -32,7 +32,8 @@
 
 | 入口 | 实际范围 |
 | --- | --- |
-| `scenes/demos/cultivation_engine_v02_mentor.tscn` | 当前接手首验入口，`0.2.2-mentor-loop`；同一 `EngineSession` 运行 `shu_mentor_loop` 与 `stream_study` |
+| `scenes/demos/cultivation_engine_v03_town.tscn` | 当前 P1a 进城返山，`0.3.0-town-return`；同一 `EngineSession` 运行隔离的 `shu_town_return` 与原 `stream_study`，见[P1a 记录](P1A_TOWN_RETURN_SLICE.md) |
+| `scenes/demos/cultivation_engine_v02_mentor.tscn` | 已获用户认可的 P0 入口，`0.2.2-mentor-loop`；运行 `shu_mentor_loop` 与 `stream_study`，保持回归和旧存档 |
 | `games/mentor_loop_catalog.json` | 上述有声师徒包及无声验证包的目录；每包独立存档 |
 | `project.godot` 的 F5 / `scenes/main.tscn` | 旧正式五剑养成流程，继续使用 `DemoState`；不能当成新内核整合入口 |
 | `scenes/demos/cultivation_engine_v02_tea.tscn` | 新内核《两盏茶》A/B 物件接入；未包含旧正式版完整 C–I / 结局 |

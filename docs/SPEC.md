@@ -14,6 +14,8 @@
 
 已存在的内容驱动养成内核 `addons/cultivation_mode` / `EngineSession` 是整合起点；新内核已有双包、五剑、有声师徒、跨日及独立存档。具体状态以 [API](../addons/cultivation_mode/README.md)与[整合切片](CULTIVATION_ENGINE_MENTOR_LOOP.md)为准，不能因旧文档而重建已有能力。
 
+2026-10-24：用户认可 P0 试玩并授权 P1 首个最小进城／返山闭环。P1a 以同一 Session 保留山中养成进度、往返时间与城镇安全存读档，返回原听雨廊继续修行；P0 内容与旧档保持。当前每程 1 时辰／不扣精力和固定街口示意为实施候选，未定稿为完整城镇规则；行走、案件与战斗仍在后续范围，见[P1a 切片](P1A_TOWN_RETURN_SLICE.md)。
+
 ## 已确认方向
 
 | 编号 | 要求 |

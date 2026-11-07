@@ -1,0 +1,250 @@
+{
+  "source_sha256": "9aa7c926103f58b664427b2400601001562ff9a436b153c9b46d0c9241de6e65",
+  "source_bytes": 175525576,
+  "source_record": "docs/image-motion/jiang-sword-cycle-20261023.md",
+  "blender": "5.2.2 LTS",
+  "new_cloud_calls": 0,
+  "source_overwritten": false,
+  "new_character_design": false,
+  "bone_names": [
+    "pelvis",
+    "spine",
+    "chest",
+    "neck",
+    "head",
+    "ponytail",
+    "upper_arm.R",
+    "forearm.R",
+    "hand.R",
+    "upper_arm.L",
+    "forearm.L",
+    "hand.L",
+    "thigh.R",
+    "shin.R",
+    "foot.R",
+    "thigh.L",
+    "shin.L",
+    "foot.L",
+    "skirt.front.R",
+    "skirt.front.L",
+    "skirt.back.R",
+    "skirt.back.L"
+  ],
+  "color_management": {
+    "bundled_config": "/usr/share/blender/5.2/datafiles/colormanagement/config.ocio",
+    "bundled_sha256": "f10891fc7d34e78e71b535e3f92b3c612177320f990641283247cb84bb8d62ad",
+    "library_version": " 2,  4,  2",
+    "compatibility_copy": true,
+    "workspace_config_sha256": "7acd7b60e2594ed5d7e23ee5eb53f565c1a0d184c32bdb3a7471946a8aebdc17",
+    "change": "version declaration and unsupported ICC metadata only; all transforms/LUTs retained"
+  },
+  "source_animation_frames": [
+    1.0,
+    120.0
+  ],
+  "fps": 30,
+  "palette_bakes": [
+    {
+      "object": "JiangApprovedHead",
+      "method": "Original texture HSV emission bake on full UV square; original WarmGain retained as linear COLOR_0",
+      "excludes": [
+        "lighting",
+        "AO",
+        "shadow",
+        "view transform"
+      ],
+      "materials": [
+        {
+          "material": "Material.002",
+          "texture_size": 2048,
+          "source_image": "texture_pbr_20250901.001",
+          "saturation": 1.1200000047683716
+        }
+      ]
+    },
+    {
+      "object": "JiangFullbody",
+      "method": "Original texture HSV emission bake on full UV square; original WarmGain retained as linear COLOR_0",
+      "excludes": [
+        "lighting",
+        "AO",
+        "shadow",
+        "view transform"
+      ],
+      "materials": [
+        {
+          "material": "Material.001",
+          "texture_size": 2048,
+          "source_image": "texture_pbr_20250901",
+          "saturation": 1.1200000047683716
+        }
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "JiangApprovedHead",
+      "source_vertices": 253625,
+      "source_triangles": 403834,
+      "derived_vertices": 44868,
+      "derived_triangles": 40000,
+      "target_triangles": 40000,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "vertex_groups": 2
+    },
+    {
+      "name": "JiangFullbody",
+      "source_vertices": 240088,
+      "source_triangles": 382991,
+      "derived_vertices": 35843,
+      "derived_triangles": 30000,
+      "target_triangles": 30000,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "vertex_groups": 22
+    },
+    {
+      "name": "JiangRightGrip_HandGrip",
+      "source_vertices": 3930,
+      "source_triangles": 7828,
+      "derived_vertices": 1766,
+      "derived_triangles": 3500,
+      "target_triangles": 3500,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "vertex_groups": 1
+    },
+    {
+      "name": "JiangRightGrip_Jian",
+      "source_vertices": 863,
+      "source_triangles": 1702,
+      "derived_vertices": 863,
+      "derived_triangles": 1702,
+      "target_triangles": 1702,
+      "uv_layers": [],
+      "vertex_groups": 1
+    }
+  ],
+  "textures": [
+    {
+      "name": "texture_pbr_20250901_normal",
+      "mime_type": "image/png",
+      "size": [
+        1024,
+        1024
+      ],
+      "bytes": 523195,
+      "sha256": "2e7d0b766b9d054412dc5ce20e36926a253c40d7cc2daccac4f8284cc7b5aba9"
+    },
+    {
+      "name": "JiangApprovedHead_SaturatedBaseColor",
+      "mime_type": "image/png",
+      "size": [
+        2048,
+        2048
+      ],
+      "bytes": 4818692,
+      "sha256": "345d59d59b7606dbd51a5c7a7aee30984cda6aca396542d2216c1d4e4235d997"
+    },
+    {
+      "name": "texture_pbr_20250901_metallic-texture_pbr_20250901_roughnes",
+      "mime_type": "image/png",
+      "size": [
+        1024,
+        1024
+      ],
+      "bytes": 1085016,
+      "sha256": "5b38758c4082b13b676b2334a649ca1bd707fec8527349b4bf7c511c1384575c"
+    },
+    {
+      "name": "texture_pbr_20250901_normal",
+      "mime_type": "image/png",
+      "size": [
+        1024,
+        1024
+      ],
+      "bytes": 484395,
+      "sha256": "958a40ff3949f1f38f9bb2d9db51d65e77e9675ecbdbe30ee8a7de8d86f3a41c"
+    },
+    {
+      "name": "JiangFullbody_SaturatedBaseColor",
+      "mime_type": "image/png",
+      "size": [
+        2048,
+        2048
+      ],
+      "bytes": 4731284,
+      "sha256": "2ac47107ad2bb8834e71ca31e87046efdad7181b79b58755eefe99da73c59835"
+    },
+    {
+      "name": "texture_pbr_20250901_metallic-texture_pbr_20250901_roughness",
+      "mime_type": "image/png",
+      "size": [
+        1024,
+        1024
+      ],
+      "bytes": 865177,
+      "sha256": "165405c1f6f280c90d8c2eaa720316132b49450a2068bc2a326bdab692d11d9b"
+    }
+  ],
+  "grip_material": {
+    "material": "JiangRightGrip_DarkBlueHandleWrap",
+    "source_ramp_colors_linear": [
+      [
+        0.014000000432133675,
+        0.035999998450279236,
+        0.07800000160932541,
+        1.0
+      ],
+      [
+        0.04500000178813934,
+        0.10499999672174454,
+        0.1899999976158142,
+        1.0
+      ]
+    ],
+    "derived_mean_linear": [
+      0.029500000178813934,
+      0.07050000131130219,
+      0.1340000033378601,
+      1.0
+    ],
+    "simplification": "Only subpixel procedural grip grain; source palette preserved."
+  },
+  "exported_animation_names": [
+    "Idle",
+    "ApprovedSwordPhrase"
+  ],
+  "animation_clips": [
+    {
+      "name": "Idle",
+      "duration_seconds": 0.43333333333333335
+    },
+    {
+      "name": "ApprovedSwordPhrase",
+      "duration_seconds": 4
+    }
+  ],
+  "scene_root_names": [
+    "JiangRig"
+  ],
+  "has_color_0": true,
+  "skin_weight_policy": "Original rig/groups; GLTF top four influences per vertex normalized",
+  "exported_mesh_count": 4,
+  "exported_image_count": 6,
+  "exported_material_count": 8,
+  "coordinate_contract": {
+    "gltf_up": "+Y",
+    "gltf_front_expected": "+Z from Blender -Y",
+    "normalization": "none; preserve original model and use battle adapter"
+  },
+  "derived_triangles": 75202,
+  "source_sha256_after": "9aa7c926103f58b664427b2400601001562ff9a436b153c9b46d0c9241de6e65",
+  "glb_sha256": "e8d74b2e0be789f272597aa6f7fc268f57851bb669ed43d97e2efa91c3860e27",
+  "glb_bytes": 17700976,
+  "elapsed_seconds": 26.31
+}

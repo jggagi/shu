@@ -1,0 +1,43 @@
+--- official-1.8/parse_args.gd
++++ source-runner-1.8/parse_args.gd
+@@ -93,12 +93,28 @@
+ 			gen.queue_free()
+ 	if not export_list.is_empty():
+ 		print(",\n".join(export_list))
++	# Shu isolated CLI shutdown patch: same stock exporter, then stop its
++	# persistent rendering worker as the official GUI quit path already does.
++	await get_tree().process_frame
++	await get_tree().process_frame
++	await mm_renderer.stop_rendering_thread()
+ 	get_tree().quit()
+ 
+ func _ready():
+ 	RenderingServer.set_default_clear_color(Color.BLACK)
+ 	var args : PackedStringArray = OS.get_cmdline_args()
+ 	if ("--export" in args) or ("--export-material" in args):
++		# The stock renderer starts its local RenderingDevice asynchronously.
++		# Wait before loading a graph, whose preview shader also uses it.
++		var ready_frames : int = 0
++		while mm_renderer.rendering_device == null and ready_frames < 600:
++			ready_frames += 1
++			await get_tree().process_frame
++		if mm_renderer.rendering_device == null:
++			push_error("Offline export RenderingDevice did not become ready")
++			await mm_renderer.stop_rendering_thread()
++			get_tree().quit(2)
++			return
+ 		print("Exporting...")
+ 		var image_size : int = 2048
+ 		var dir : DirAccess = DirAccess.open(".")
+--- official-1.8/material_maker/steam.gd
++++ source-runner-1.8/material_maker/steam.gd
+@@ -11,6 +11,9 @@
+ 
+ 
+ func _ready():
++	# Offline local texture export never needs Steam, account or identity APIs.
++	if "--export-material" in OS.get_cmdline_args() or "--export" in OS.get_cmdline_args():
++		return
+ 	if not Engine.has_singleton("Steam"):
+ 		return
+ 	steam_api = Engine.get_singleton("Steam")

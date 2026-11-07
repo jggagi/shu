@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "base_catalog_sha256": "bd226cf15f942368a9af6954a6ae958e678bc0fc360f6a311d4a501c04bb5bc6",
+  "variants": [
+    {
+      "move_id": "palm_gale",
+      "variant_id": "enhanced",
+      "variant_label": "增强版",
+      "description": "增强版：后坐收掌至腰侧，左脚短进步踏稳，左肩随髋前送，水平推掌后收脚归中。",
+      "move": {
+        "id": "palm_gale",
+        "label": "劲风掌",
+        "description": "增强版：后坐收掌至腰侧，左脚短进步踏稳，左肩随髋前送，水平推掌后收脚归中。",
+        "category": "palm",
+        "style": "strong",
+        "actor": "tinglan",
+        "profile": "tinglan22",
+        "preview_only": true,
+        "combat_skill": "",
+        "animation": {
+          "asset": "res://assets/art/martial_workshop/control_rig/palm_gale/af1ee0f5c26908c5/motion.glb",
+          "clip": "PalmGaleControl",
+          "hand": "palm",
+          "source_seconds": 1.45,
+          "sha256": "1f6cbfb51fad300489788c4f914c8501c3a14c2231564ebaa9f692bd3e3eb4f6"
+        },
+        "timing": {
+          "duration": 1.45,
+          "total": 1.85,
+          "release": 0.56,
+          "impact": 0.78,
+          "source_map": [
+            [
+              0,
+              0
+            ],
+            [
+              1.45,
+              1.45
+            ]
+          ]
+        },
+        "visual": {
+          "type": "palm",
+          "pattern": "pressure",
+          "config": {
+            "schema": 1,
+            "scope": "Dedicated palm motion and directional gust; presentation only",
+            "assets": {
+              "wind": "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-wind.png",
+              "dust": "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-dust.png",
+              "impact": "res://assets/art/mountain_ambush/palm_lab/v2/effekseer/palm-gust-v2-atlas.png"
+            },
+            "release_seconds": 0.56,
+            "flight_seconds": 0.22,
+            "impact_seconds": 0.64,
+            "dust_seconds": 0.95,
+            "duration": 1.85,
+            "impact_size": 3.0,
+            "audio": {
+              "release": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-release.wav",
+              "impact": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-impact.wav"
+            }
+          }
+        },
+        "audio": {
+          "release": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-release.wav",
+          "impact": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-impact.wav"
+        },
+        "camera": {
+          "zoom": 0.82
+        },
+        "resource_sha256": {
+          "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-dust.png": "5bdab156960619d2b521ff4efc7f0b2fbb1517725b6938b7c5fe45c666f303e3",
+          "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-wind.png": "76c7fd427ef69324642c5178a56e30f6a2f8b7ccb68956896c56fbc1218abc4b",
+          "res://assets/art/mountain_ambush/palm_lab/v2/effekseer/palm-gust-v2-atlas.png": "a62bd192e6730c688e1b62f9b575807137a50fd952289475c436af6788002f33",
+          "res://assets/art/mountain_ambush/palm_lab/v2/motion/tinglan-palm-clips.glb": "7cfaf94d17313df4274d9cfdfa815fb70576a4a72679f1d6c915bda9fa793c83",
+          "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-impact.wav": "1e7334043e46b0eb4966182f56a20b611283fb0b636c6a98ec81208d2fc5b192",
+          "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-release.wav": "d56ca609c44dc548e2b97ff6a429fc167e29dd75dd3d612cff4b26b09271c802",
+          "res://assets/art/mountain_ambush/tinglan-candidate.glb": "cdbec85183a9e2d452546c6a5a1a164c854042c9a2f4f783b5d184c750d5856b",
+          "res://assets/art/martial_workshop/control_rig/palm_gale/af1ee0f5c26908c5/motion.glb": "1f6cbfb51fad300489788c4f914c8501c3a14c2231564ebaa9f692bd3e3eb4f6"
+        },
+        "resource_hash": "a6883b947f23eccf9f54bcb97d2bc48a7384e9d5592387a11ee25edd2200b09c"
+      }
+    },
+    {
+      "move_id": "sword_cleave",
+      "variant_id": "enhanced",
+      "variant_label": "增强版",
+      "description": "增强版：沉髋举剑过顶，右脚短进步踏稳，腰肩带剑斜劈，停稳余势再收脚归中。",
+      "move": {
+        "id": "sword_cleave",
+        "label": "落雁斩",
+        "description": "增强版：沉髋举剑过顶，右脚短进步踏稳，腰肩带剑斜劈，停稳余势再收脚归中。",
+        "category": "sword",
+        "style": "strong",
+        "actor": "player",
+        "profile": "jiang22",
+        "preview_only": true,
+        "combat_skill": "",
+        "animation": {
+          "asset": "res://assets/art/martial_workshop/control_rig/sword_cleave/158b20053fb99a52/motion.glb",
+          "clip": "SwordCleaveControl",
+          "hand": "default",
+          "source_seconds": 1.55,
+          "sha256": "35ff0301c1b01b4ca6eef0e4124551cfb66333d6bc3f1bc1f8bffe962524bcdc"
+        },
+        "timing": {
+          "duration": 1.55,
+          "total": 1.75,
+          "release": 0.58,
+          "impact": 0.66,
+          "source_map": [
+            [
+              0,
+              0
+            ],
+            [
+              1.55,
+              1.55
+            ]
+          ]
+        },
+        "visual": {
+          "type": "blade",
+          "pattern": "cleave",
+          "config": {
+            "color": "#e9c37c",
+            "core_color": "#fff6d6",
+            "dust_color": "#b7a88a",
+            "life_seconds": 0.4,
+            "width": 0.14,
+            "core_width": 0.04,
+            "radius": 1.5,
+            "height": 1.05,
+            "core_height": 1.07,
+            "span_degrees": 132.0,
+            "streak_count": 8,
+            "whoosh": "res://assets/art/mountain_ambush/skills/sfx/sweep-whoosh.wav",
+            "hit": "res://assets/art/mountain_ambush/skills/sfx/sweep-hit.wav"
+          }
+        },
+        "audio": {
+          "release": "res://assets/art/mountain_ambush/skills/sfx/sweep-whoosh.wav",
+          "impact": "res://assets/art/mountain_ambush/skills/sfx/sweep-hit.wav"
+        },
+        "camera": {
+          "zoom": 0.82
+        },
+        "resource_sha256": {
+          "res://assets/art/mountain_ambush/jiang-approved.glb": "e8d74b2e0be789f272597aa6f7fc268f57851bb669ed43d97e2efa91c3860e27",
+          "res://assets/art/mountain_ambush/skills/sfx/sweep-hit.wav": "7a2531ff1bb8fdf927dd39dea4dbde0c0ad099b7ecf28da7ee080ec9f5c397d2",
+          "res://assets/art/mountain_ambush/skills/sfx/sweep-whoosh.wav": "034b369a3db49b59078b524633a833dac45639aa35f10d7f2db0c5295b9992a7",
+          "res://assets/art/martial_workshop/generated/sword_cleave/00a1471fadb4b40d/motion.glb": "709311806d443966f2283003f72553d89b80cb94643b1e42d54643593c7351a2",
+          "res://assets/art/martial_workshop/control_rig/sword_cleave/158b20053fb99a52/motion.glb": "35ff0301c1b01b4ca6eef0e4124551cfb66333d6bc3f1bc1f8bffe962524bcdc"
+        },
+        "resource_hash": "6bbbdf817f7b93e2ee2b35d5faf732b7a1dccc5a0cdeb0cc03a705142a559ba8"
+      }
+    }
+  ]
+}

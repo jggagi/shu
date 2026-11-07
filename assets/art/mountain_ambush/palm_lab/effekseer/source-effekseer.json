@@ -1,0 +1,184 @@
+{
+  "schema": 1,
+  "status": "Native official Effekseer Recorder rendered; local pixel and sampled frame visual inspection passed; in-scene acceptance pending",
+  "author": "Original Shu effect authored by Codex",
+  "method": "Independent Effekseer Ring/Crescent node composition; official CUI compilation and official libViewer Recorder rasterization",
+  "third_party_samples": [],
+  "third_party_textures": [],
+  "new_cloud_calls": 0,
+  "new_global_installs": 0,
+  "cost_rmb": 0,
+  "tool": {
+    "version": "1.80.7",
+    "tag": "1807",
+    "archive": {
+      "url": "https://github.com/effekseer/Effekseer/releases/download/1807/Effekseer1.80.7Linux.zip",
+      "bytes": 98028674,
+      "sha256": "462a18b289ebee09a792d38f7d5824c5333c0559aff29cb76ddfcf401c9a0505"
+    },
+    "files": {
+      "Effekseer": {
+        "bytes": 64832,
+        "sha256": "e04c211291ca99f499b8ad600b34081a3249559f24b2b28d226d267fe5edb7e9"
+      },
+      "bin/Effekseer": {
+        "bytes": 75368,
+        "sha256": "e5e7a1278f82de328d8bab2742618b7f94afe0d77bfcc46d5ec585b7af43355f"
+      },
+      "bin/libViewer.so": {
+        "bytes": 10522672,
+        "sha256": "fe4cae4a6d81f26631e98eef1b23fb4e20f5154e6d29f3085dd5ededabb10dd7"
+      },
+      "bin/Effekseer.dll": {
+        "bytes": 188416,
+        "sha256": "61041ff3d65461817ff95639d2d3226aa3ed44b4a53785f514c0a63ca4e633b1"
+      },
+      "bin/EffekseerCore.dll": {
+        "bytes": 541184,
+        "sha256": "e69ee0f7a20d4b33e27b8348dc58836726497f52bc3ab8493bae4bb5003be098"
+      },
+      "bin/EffekseerCoreGUI.dll": {
+        "bytes": 485888,
+        "sha256": "f77a74b1e7d6aad6c5e936a6a5d9d4606b7bc0cdc45bbe213c0698417d6dbe22"
+      }
+    },
+    "installation": "isolated repository .local download/extraction; no global installation or settings changes",
+    "CLI": "-cui -in source -o editable.efkefc -e runtime.efk; no CLI recorder switch in official Program.cs",
+    "recorder": "unmodified libViewer.so official SWIG ABI via Python ctypes; requires native OpenGL display",
+    "samples_used": false
+  },
+  "tool_license": {
+    "core": "MIT",
+    "complete_tool_notice": "LICENSE_EFFEKSEER_TOOL.txt",
+    "notice": "Tool is authoring-only. No Effekseer binary/runtime or sample asset included in game."
+  },
+  "upstream_API_sources": [
+    "https://github.com/effekseer/Effekseer/blob/1807/Dev/Editor/Effekseer/Program.cs",
+    "https://github.com/effekseer/Effekseer/blob/1807/Dev/Editor/EffekseerCoreGUI/GUI/Viewer.cs",
+    "https://github.com/effekseer/Effekseer/blob/1807/Dev/Cpp/Viewer/Recorder/EffectRecorder.cpp",
+    "https://github.com/effekseer/Effekseer/blob/1807/Dev/Editor/EffekseerCoreGUI/swig/EffekseerNativePINVOKE.cs"
+  ],
+  "generator": "tools/hero_lookdev/build_palm_effekseer.py",
+  "rebuild": "python3 tools/hero_lookdev/build_palm_effekseer.py --record",
+  "seed": 5482,
+  "random_ranges": "All min/max ranges fixed; explicit authored Global.RandomSeed retained",
+  "camera": {
+    "projection": "orthographic",
+    "angle_x": 0,
+    "angle_y": 0,
+    "distance": 15,
+    "magnification": 3.0,
+    "screen": [
+      256,
+      256
+    ]
+  },
+  "atlas": {
+    "columns": 8,
+    "rows": 3,
+    "frame_size": [
+      256,
+      256
+    ],
+    "frame_count": 24,
+    "fps": 60,
+    "sample_frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "duration_seconds": 0.4,
+    "transparency": "Official Recorder Original = 1. Raw PNG RGB is premultiplied by coverage; use Godot blend_premul_alpha, do not multiply sampled RGB by alpha again.",
+    "res_path": "res://assets/art/mountain_ambush/palm_lab/effekseer/palm-wind-atlas.png",
+    "alpha_mode": "premultiplied",
+    "size": [
+      2048,
+      768
+    ],
+    "visible_frame_range": [
+      1,
+      20
+    ],
+    "transparent_frames": [
+      0,
+      21,
+      22,
+      23
+    ],
+    "bbox_no_clip": true
+  },
+  "source_files": {
+    "assets/art/mountain_ambush/palm_lab/effekseer/palm-wind.efkproj": {
+      "bytes": 18553,
+      "sha256": "d339a64a27863d59ef147b4e0bf58c7cf23b632befbdb942eb34ca59ecde555f"
+    },
+    "assets/art/mountain_ambush/palm_lab/effekseer/palm-wind.efkefc": {
+      "bytes": 5937,
+      "sha256": "c261d1aac346d9e7fdea499c80bbbefd40f6f04025367bc989101beb99923488"
+    },
+    "assets/art/mountain_ambush/palm_lab/effekseer/palm-wind.efk": {
+      "bytes": 4484,
+      "sha256": "3d89c05c6fc85c5b62e7b0c5e1c567fd7c2be907cbf84c37fbd28e666cf1e441"
+    },
+    "assets/art/mountain_ambush/palm_lab/effekseer/LICENSE_EFFEKSEER_TOOL.txt": {
+      "bytes": 12358,
+      "sha256": "e32cc7be243d939dec49776382cd458d05367a88fd8a0d497cda0550e2b6fb23"
+    },
+    "tools/hero_lookdev/build_palm_effekseer.py": {
+      "bytes": 10729,
+      "sha256": "9bc3d7b7e3d90d39aeb07f80deb02348a571b7cfb39ce17ddd3c633df855a3dc"
+    },
+    "assets/art/mountain_ambush/palm_lab/effekseer/palm-wind-atlas.png": {
+      "bytes": 142832,
+      "sha256": "9d5890190606da5b93e441e21da3b12d7e4c92cc4d220885d082452f834f0189"
+    },
+    "assets/art/mountain_ambush/palm_lab/effekseer/README.txt": {
+      "bytes": 1923,
+      "sha256": "5482b6b5d45e63386da6b002e3c0b43a12678892e0ec4e39c7134552cc7991ae"
+    }
+  },
+  "editor_note": "Official 1.80.7 Core.LoadFromXml forcibly sets editor IsLoop=true. Native Recorder plays this finite-life effect once. No infinite emissions; particle births end at frame 5 and all life ends by frame 21.",
+  "verification": {
+    "CPU_compile_repeat_identical": true,
+    "native_recording": "official libViewer Recorder.Begin/Step/End completed",
+    "pixel_analysis": "24 tiles; all RGBA, zero alpha borders, first/end transparent, no clipping",
+    "sampled_visual_frames": [
+      2,
+      5,
+      8,
+      12,
+      17,
+      23
+    ],
+    "render_repeat": "Two official native Recorder runs produced byte-identical PNG (142832 bytes, SHA256 9d5890190606da5b93e441e21da3b12d7e4c92cc4d220885d082452f834f0189); both retained GTK locale startup warning.",
+    "startup_warning": "Gtk-WARNING: gtk_disable_setlocale() must be called before gtk_init(); batch still exited successfully and atlas completed",
+    "in_scene": "pending root integration",
+    "web": "pending",
+    "windows": "not tested",
+    "physical_input": "not tested",
+    "ABI_symbols": "50 required official SWIG entry points resolved in pinned libViewer.so without GPU",
+    "compiled_source_audit": "61 checks, zero failures; compiled five nodes/finite life/radii/colors/seed/no external dependencies and source hashes",
+    "numeric_comparison_note": "Initial lexical decimal equality audit had 3 formatting-only failures; corrected to 1e-6 numeric tolerance, initial report retained in local QA."
+  }
+}

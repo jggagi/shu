@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "original": {
+    "ambient": {
+      "color": "#d5ddd1",
+      "energy": 0.42
+    },
+    "sun": {
+      "rotation": [
+        -52,
+        -34,
+        -7
+      ],
+      "color": "#fff9ee",
+      "energy": 0.64,
+      "shadow_distance": 26.0,
+      "shadow_fade_start": 0.8,
+      "shadow_bias": 0.025,
+      "shadow_normal_bias": 0.65
+    },
+    "fill": {
+      "enabled": false,
+      "rotation": [
+        -28,
+        144,
+        0
+      ],
+      "color": "#a9c3e2",
+      "energy": 0.0
+    },
+    "ssao": {
+      "enabled": false,
+      "radius": 0.35,
+      "intensity": 1.1
+    }
+  },
+  "enhanced": {
+    "ambient": {
+      "color": "#bccbd0",
+      "energy": 0.28
+    },
+    "sun": {
+      "rotation": [
+        -44,
+        -42,
+        -7
+      ],
+      "color": "#fff2df",
+      "energy": 0.8,
+      "shadow_distance": 26.0,
+      "shadow_fade_start": 0.8,
+      "shadow_bias": 0.018,
+      "shadow_normal_bias": 0.32
+    },
+    "fill": {
+      "enabled": true,
+      "rotation": [
+        -28,
+        144,
+        0
+      ],
+      "color": "#b5cad8",
+      "energy": 0.09
+    },
+    "ssao": {
+      "enabled": false,
+      "radius": 0.035,
+      "intensity": 0.28
+    }
+  }
+}

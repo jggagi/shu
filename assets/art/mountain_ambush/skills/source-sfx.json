@@ -1,0 +1,71 @@
+{
+  "author": "Original Shu procedural audio by Codex",
+  "method": "Seeded filtered noise plus damped inharmonic sine synthesis, Python stdlib wave",
+  "input_recordings": [],
+  "third_party_samples": [],
+  "new_cloud_calls": 0,
+  "new_dependency_installs": 0,
+  "cost_rmb": 0,
+  "generator": "tools/hero_lookdev/build_ambush_skill_sfx.py",
+  "generator_sha256": "2e8463053181664b1af10660066a7b1859b5d16b548fa03a9a748fd62b897471",
+  "rebuild": "python3 tools/hero_lookdev/build_ambush_skill_sfx.py",
+  "cues": [
+    {
+      "path": "assets/art/mountain_ambush/skills/sfx/pierce-whoosh.wav",
+      "seed": 17021,
+      "kind": "air",
+      "pitch_factor": 1.0,
+      "frames": 7938,
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_bits": 16,
+      "duration_seconds": 0.36,
+      "peak": 0.6213173483946468,
+      "rms": 0.12645573409658065,
+      "sha256": "33cbb82f543af3a02dd4f802868c2dc61268af493c9b6d0e6c039576bdbe466d"
+    },
+    {
+      "path": "assets/art/mountain_ambush/skills/sfx/pierce-hit.wav",
+      "seed": 17022,
+      "kind": "metal",
+      "pitch_factor": 1.0,
+      "frames": 3308,
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_bits": 16,
+      "duration_seconds": 0.15002267573696146,
+      "peak": 0.6211532141893825,
+      "rms": 0.09584718769666778,
+      "sha256": "d6c968213f4bdf19a8f4edc8f8e650dfe7dde2bb43af82af013d421675fed6d5"
+    },
+    {
+      "path": "assets/art/mountain_ambush/skills/sfx/sweep-whoosh.wav",
+      "seed": 17031,
+      "kind": "air",
+      "pitch_factor": 0.68,
+      "frames": 9261,
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_bits": 16,
+      "duration_seconds": 0.42,
+      "peak": 0.6229431225968984,
+      "rms": 0.13066886931293842,
+      "sha256": "034b369a3db49b59078b524633a833dac45639aa35f10d7f2db0c5295b9992a7"
+    },
+    {
+      "path": "assets/art/mountain_ambush/skills/sfx/sweep-hit.wav",
+      "seed": 17032,
+      "kind": "metal",
+      "pitch_factor": 0.73,
+      "frames": 3969,
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_bits": 16,
+      "duration_seconds": 0.18,
+      "peak": 0.6186171535055818,
+      "rms": 0.09117564581440875,
+      "sha256": "7a2531ff1bb8fdf927dd39dea4dbde0c0ad099b7ecf28da7ee080ec9f5c397d2"
+    }
+  ],
+  "verification_boundary": "PCM encoding, peaks and reproducibility checked separately from device listening."
+}

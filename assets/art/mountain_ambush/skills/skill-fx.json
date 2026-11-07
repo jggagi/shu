@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "trail": {"seconds": 0.115, "max_samples": 12, "min_distance": 0.009},
+  "skills": {
+    "pierce": {
+      "color": "#f1cd85", "core_color": "#fff9df", "dust_color": "#d8ccb3",
+      "life_seconds": 0.38, "width": 0.10, "core_width": 0.025,
+      "flight_start": 0.24, "flight_seconds": 0.10, "streak_count": 6,
+      "whoosh": "res://assets/art/mountain_ambush/skills/sfx/pierce-whoosh.wav",
+      "hit": "res://assets/art/mountain_ambush/skills/sfx/pierce-hit.wav"
+    },
+    "sweep": {
+      "color": "#e9c37c", "core_color": "#fff6d6", "dust_color": "#b7a88a",
+      "life_seconds": 0.44, "width": 0.20, "core_width": 0.065,
+      "radius": 1.56, "height": 1.05, "core_height": 1.07,
+      "span_degrees": 132.0, "streak_count": 8,
+      "whoosh": "res://assets/art/mountain_ambush/skills/sfx/sweep-whoosh.wav",
+      "hit": "res://assets/art/mountain_ambush/skills/sfx/sweep-hit.wav"
+    }
+  }
+}

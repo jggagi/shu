@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "catalog_sha256": "bd226cf15f942368a9af6954a6ae958e678bc0fc360f6a311d4a501c04bb5bc6",
+  "jobs": {
+    "palm_brace": {
+      "path": "/home/x1-lite/games/shu/.local/worktrees/mountain-ambush/assets/art/martial_workshop/generated/palm_brace/524e089694e29b0f/manifest.json",
+      "sha256": "fc8ea4c304c7a29bdbc7b4d758f21a71e2064374edee0dde0884fe25b0a8b636",
+      "fingerprint": "524e089694e29b0f422c2b0955db7b31a908cab18df9ab6e84b36244e82bcf35"
+    },
+    "palm_cloud": {
+      "path": "/home/x1-lite/games/shu/.local/worktrees/mountain-ambush/assets/art/martial_workshop/generated/palm_cloud/bb38c57201e30361/manifest.json",
+      "sha256": "e6930899aee7f389ddd990c3f492362577fa7a2e8e73ce746acfa1ebd3159ac7",
+      "fingerprint": "bb38c57201e30361dffa6ae2974264878afece7826869c9e73f32d48f165cf44"
+    },
+    "palm_gale": {
+      "path": "/home/x1-lite/games/shu/.local/worktrees/mountain-ambush/assets/art/martial_workshop/generated/palm_gale/c31246d929da48a3/manifest.json",
+      "sha256": "57ebf352358bfeaf47fa5900b5fd688eaf577a430e99a14d298173ef39577445",
+      "fingerprint": "c31246d929da48a31966b768e30bee7e86f738eafdd48a707fe302797658556d"
+    },
+    "pierce": {
+      "path": "/home/x1-lite/games/shu/.local/worktrees/mountain-ambush/assets/art/martial_workshop/generated/pierce/f3111cf713ab72b1/manifest.json",
+      "sha256": "604ff8d08584a58bbc83d3c070522213345e1d68552e4239b56722dc549550ee",
+      "fingerprint": "f3111cf713ab72b1e5e8163b794213ca8240ccf738e9e499c6732a29a43968f7"
+    },
+    "sweep": {
+      "path": "/home/x1-lite/games/shu/.local/worktrees/mountain-ambush/assets/art/martial_workshop/generated/sweep/62474d9c4e17cb3b/manifest.json",
+      "sha256": "d66f267e4de03a1d33a57ec6b381d359feb3d941f35c358bde80a338bcb42705",
+      "fingerprint": "62474d9c4e17cb3bd2f2db2f40f91c7f1a1f932cb25d5e54958416c2f1a1cc4c"
+    },
+    "sword_cleave": {
+      "path": "/home/x1-lite/games/shu/.local/worktrees/mountain-ambush/assets/art/martial_workshop/generated/sword_cleave/00a1471fadb4b40d/manifest.json",
+      "sha256": "7204ea73fbde243182e646b5c20a55316f790f65adbaaa01cc77ae914595ed93",
+      "fingerprint": "00a1471fadb4b40dac2c598caf62dc285a654f2030f3e3d661831b0cc3a41611"
+    }
+  }
+}

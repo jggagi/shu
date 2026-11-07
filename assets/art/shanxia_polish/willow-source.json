@@ -1,0 +1,25 @@
+{
+  "title": "Shu original native-vector willow",
+  "date": "2026-10-28",
+  "author": "Codex, authored for Shu",
+  "method": "Original native SVG vector illustration: authored asymmetric trunk and bough silhouettes, deterministic cubic drooping stems, individual lanceolate leaflets and low-opacity foliage washes. No raster image generation or third-party image inputs.",
+  "license": "Original project art; same use and distribution terms as Shu project art. No additional third-party asset license.",
+  "generator": "tools/build_town_willow.py",
+  "generator_sha256": "e462e417d5504b8237a3550ee87418066cfb8d333f8248f958d8f2b98cfb2351",
+  "external_image_inputs": [],
+  "file": "res://assets/art/shanxia_polish/willow.svg",
+  "sha256": "e04406f5afeae1a8ed9e5f27c5bc819d6c9558ab02d93920ecf477781ae38828",
+  "bytes": 1063072,
+  "canvas": [
+    768,
+    896
+  ],
+  "foot_anchor": [
+    384,
+    870
+  ],
+  "anchor_origin": "top-left canvas; pixels",
+  "recommended_world_height": 3.5,
+  "presentation_notes": "Preserve aspect ratio. Transparent canvas, no painted ground shadow. Foot anchor drives placement. Intended for a camera-facing card in the existing mixed scene; use restrained modulation, not a thick outline or bright green tint. Inspect actual character/tree scale and occlusion before acceptance.",
+  "status": "implementation candidate; native SVG illustration, in-scene and user visual acceptance pending"
+}

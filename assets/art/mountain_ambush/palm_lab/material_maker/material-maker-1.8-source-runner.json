@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "tool": "Material Maker",
+  "version": "1.8",
+  "official_source_commit": "7d6daae3c74c09720afe4138ce09699ab3591ce1",
+  "source_archive_url": "https://api.github.com/repos/RodZill4/material-maker/tarball/7d6daae3c74c09720afe4138ce09699ab3591ce1",
+  "source_archive_sha256": "40a89ef34874cc1da738769958bf4a7e3fcd90367d00203871d51d875fc9c1a0",
+  "patch": "material-maker-1.8-cli-shutdown.patch",
+  "patch_sha256": "30355b56b11775335fa0e45f328fc1be87fc89d5ff8f75d8ed65fdb444286533",
+  "modifications": [
+    {
+      "path": "parse_args.gd",
+      "official_sha256": "e9609e65e227ac8fe58a89bc80b452280ec7d506c2cc5358427438f40ec2cb63",
+      "patched_sha256": "dc473ae5cf0dad3bab9290b0acbe1f792c977bf69b076dc30e6fc858d09049a7",
+      "reason": "Offline CLI only: avoid Steam APIs, wait for local RenderingDevice, drain graph then stop stock rendering thread before quit."
+    },
+    {
+      "path": "material_maker/steam.gd",
+      "official_sha256": "cae4442c65a1119a4475ea5d4fe564b0c020dd34d2f2e47e452d6283c3323356",
+      "patched_sha256": "21586a9c8b7f981df5e19556286d34f2cb3b5159be6d9a4145b73a8a852786b2",
+      "reason": "Offline CLI only: avoid Steam APIs, wait for local RenderingDevice, drain graph then stop stock rendering thread before quit."
+    }
+  ],
+  "scope": "Offline authoring-only local source runner; stock texture/noise/GLSL/PNG exporter unchanged; not a Godot game runtime plugin."
+}

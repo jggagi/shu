@@ -1,0 +1,147 @@
+{
+  "title": "Shu original seated tea patron",
+  "date": "2026-10-29",
+  "author": "Codex, authored for Shu",
+  "method": "New native SVG seated silhouette, bent thighs and hanging shins; original face and cloth vectors. No standing-pose transform, raster generation or external art inputs.",
+  "license": "Project-original; no third-party character or image assets copied",
+  "generator": "tools/build_town_tea_patron.py",
+  "generator_sha256": "f1053dc254d79262aba1968aa4086d0150ff5b22b394923c6ca8f65e4b82163b",
+  "style_reference": "assets/art/shanxia_hd2d/tea-seller-walk.svg",
+  "style_reference_sha256": "eb6b9e823db06f60931a7813c9656a5a71a0efbc5dd6e3571375c6880b267c3f",
+  "style_reference_generator": "tools/build_town_hd2d_characters.py",
+  "style_reference_generator_sha256": "7df48b969ad859b19d6df63b9b1ba778e62eab14b4aeed7e1a2513d537916273",
+  "file": "res://assets/art/shanxia_polish/tea-patron.svg",
+  "sha256": "387025950070fcf854dd9f5bae56052e6e0ab8ab3163c1fe5ff6e24d94ce5ecb",
+  "bytes": 11928,
+  "canvas": [
+    192,
+    96
+  ],
+  "cell_size": [
+    64,
+    96
+  ],
+  "facing": "seated profile facing right",
+  "foot_anchor": [
+    32,
+    80
+  ],
+  "seat_anchor": [
+    31,
+    58
+  ],
+  "head_anchor": [
+    33,
+    20
+  ],
+  "anchor_origin": "top-left of each cropped frame, pixels",
+  "recommended_world_height": 1.1,
+  "placement_notes": "Align the source seat anchor to the bench top. Leg geometry alone is compressed about seat y58 to a 22px seat-to-foot separation for the fixed-Y seated billboard and raised stone platform; head, torso, hands and cup remain unchanged. World-height hint is a starting value; the host calibrates actual fixed-Y scale/contact in-scene. No standing sprite or grounded seat geometry is included.",
+  "leg_calibration": {
+    "pivot_y": 58,
+    "scale_y": 0.6111111111111112,
+    "original_foot_anchor": [
+      32,
+      94
+    ],
+    "foot_anchor": [
+      32,
+      80
+    ],
+    "original_svg_sha256": "ee4bf87efc4d3e2a3e2f5d3e30fdae0d048668816da49e4630c6442fb1a848ea",
+    "original_leg_group_sha256": "01c43fdf75d4bbaf489bc35a23e11e21f4419e6894be3d82b5269c48ae3de16e",
+    "scope": "Seated lower-body group only; calibrated for the fixed-Y camera and bench/platform height. Original seated silhouette retained; head/body/working hand-cup vectors are unchanged."
+  },
+  "fixed_parts_sha256": {
+    "legs": "1e42ee01ecf7abbc71f6459cf8f645c1ca5bde59435190a52b7c00c7f5449621",
+    "body": "9d99e071e5f18d2695ef4df70088d510925e51f09183a320ced78f78e30f037d",
+    "head": "885745cbf17260e1730487cdb11e9657974c6d8364bc4831dbe3c9e9b26b941d"
+  },
+  "frames": [
+    {
+      "index": 0,
+      "id": "cup_rest",
+      "crop": [
+        0,
+        0,
+        64,
+        96
+      ],
+      "foot_anchor": [
+        32,
+        80
+      ],
+      "seat_anchor": [
+        31,
+        58
+      ],
+      "head_anchor": [
+        33,
+        20
+      ],
+      "cup_rim_center": [
+        44.5,
+        49.0
+      ]
+    },
+    {
+      "index": 1,
+      "id": "cup_raise",
+      "crop": [
+        64,
+        0,
+        64,
+        96
+      ],
+      "foot_anchor": [
+        32,
+        80
+      ],
+      "seat_anchor": [
+        31,
+        58
+      ],
+      "head_anchor": [
+        33,
+        20
+      ],
+      "cup_rim_center": [
+        46.0,
+        39.0
+      ]
+    },
+    {
+      "index": 2,
+      "id": "cup_sip",
+      "crop": [
+        128,
+        0,
+        64,
+        96
+      ],
+      "foot_anchor": [
+        32,
+        80
+      ],
+      "seat_anchor": [
+        31,
+        58
+      ],
+      "head_anchor": [
+        33,
+        20
+      ],
+      "cup_rim_center": [
+        47.0,
+        29.0
+      ]
+    }
+  ],
+  "timing": {
+    "period_seconds": 12.0,
+    "gesture_start_seconds": 7.0,
+    "gesture_duration_seconds": 2.2,
+    "time_authority": "caller existing ambient_elapsed; helper owns no clock, game state or persistence"
+  },
+  "status": "implementation candidate; source XML and reproducibility checked; real scene scale, seat contact, occlusion and user acceptance pending"
+}

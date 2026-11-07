@@ -1,0 +1,170 @@
+{
+  "name": "ShuPalmOriginalMaterials",
+  "type": "graph",
+  "label": "Shu Palm Materials",
+  "node_position": {
+    "x": 0,
+    "y": 0
+  },
+  "parameters": {},
+  "seed_int": 26025,
+  "nodes": [
+    {
+      "name": "DustCoarse",
+      "type": "perlin",
+      "seed_int": 260251,
+      "node_position": {
+        "x": -220,
+        "y": -40
+      },
+      "parameters": {
+        "iterations": 5,
+        "persistence": 0.55,
+        "scale_x": 5,
+        "scale_y": 5
+      }
+    },
+    {
+      "name": "DustFine",
+      "type": "perlin",
+      "seed_int": 260252,
+      "node_position": {
+        "x": -220,
+        "y": 220
+      },
+      "parameters": {
+        "iterations": 5,
+        "persistence": 0.55,
+        "scale_x": 19,
+        "scale_y": 16
+      }
+    },
+    {
+      "name": "ShuPalmTextureOutput",
+      "type": "shader",
+      "seed_int": 26025,
+      "node_position": {
+        "x": 360,
+        "y": 80
+      },
+      "parameters": {
+        "opacity": 0.9,
+        "width": 0.065,
+        "size": 9
+      },
+      "shader_model": {
+        "name": "Shu Palm Dust and Wind",
+        "shortdesc": "Original palm impact textures",
+        "longdesc": "Two seeded MM noise nodes drive soft dust alpha and an irregular wind ring. Output RGB is neutral white; tint at runtime.",
+        "code": [
+          "vec2 $(name_uv)_p = ($uv - vec2(0.5)) * 2.0;",
+          "float $(name_uv)_r = length($(name_uv)_p);",
+          "float $(name_uv)_a = atan($(name_uv)_p.y, $(name_uv)_p.x);",
+          "float $(name_uv)_c = $coarse($uv);",
+          "float $(name_uv)_f = $fine($uv);",
+          "float $(name_uv)_edge = 1.0-smoothstep(0.44, 0.91, $(name_uv)_r + 0.20*($(name_uv)_c-0.5));",
+          "float $(name_uv)_dust = $(name_uv)_edge * smoothstep(0.18, 0.78, 0.74*$(name_uv)_c + 0.26*$(name_uv)_f) * $opacity;",
+          "float $(name_uv)_wr = 0.61 + 0.045*sin(5.0*$(name_uv)_a + 4.0*$(name_uv)_c);",
+          "float $(name_uv)_band = exp(-pow(($(name_uv)_r-$(name_uv)_wr)/$width, 2.0));",
+          "float $(name_uv)_wisps = 0.55 + 0.45*pow(0.5+0.5*sin(9.0*$(name_uv)_a + 8.0*$(name_uv)_f), 2.0);",
+          "float $(name_uv)_wind = $(name_uv)_band * $(name_uv)_wisps * $opacity * (1.0-smoothstep(0.82, 0.95, $(name_uv)_r));"
+        ],
+        "global": "",
+        "instance": "",
+        "preview_shader": [
+          "shader_type spatial;",
+          "render_mode unshaded, blend_mix, cull_disabled;",
+          "uniform sampler2D texture_dust; // $output(0)",
+          "void fragment() { vec4 c = texture(texture_dust, UV); ALBEDO=c.rgb; ALPHA=c.a; }"
+        ],
+        "inputs": [
+          {
+            "name": "coarse",
+            "type": "f",
+            "default": "0.5",
+            "shortdesc": "Coarse",
+            "label": "Coarse"
+          },
+          {
+            "name": "fine",
+            "type": "f",
+            "default": "0.5",
+            "shortdesc": "Fine",
+            "label": "Fine"
+          }
+        ],
+        "outputs": [
+          {
+            "type": "rgba",
+            "rgba": "vec4(vec3(1.0), $(name_uv)_dust)",
+            "shortdesc": "Dust"
+          },
+          {
+            "type": "rgba",
+            "rgba": "vec4(vec3(1.0), $(name_uv)_wind)",
+            "shortdesc": "Wind"
+          }
+        ],
+        "parameters": [
+          {
+            "name": "opacity",
+            "type": "float",
+            "label": "Opacity",
+            "default": 0.9,
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          },
+          {
+            "name": "width",
+            "type": "float",
+            "label": "Wind width",
+            "default": 0.065,
+            "min": 0.02,
+            "max": 0.2,
+            "step": 0.005
+          },
+          {
+            "name": "size",
+            "type": "size",
+            "label": "Size",
+            "default": 9,
+            "first": 4,
+            "last": 13
+          }
+        ],
+        "exports": {
+          "Shu/Palm PNG": {
+            "export_extension": "png",
+            "files": [
+              {
+                "file_name": "$(path_prefix)-dust.png",
+                "output": 0,
+                "type": "texture"
+              },
+              {
+                "file_name": "$(path_prefix)-wind.png",
+                "output": 1,
+                "type": "texture"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "connections": [
+    {
+      "from": "DustCoarse",
+      "from_port": 0,
+      "to": "ShuPalmTextureOutput",
+      "to_port": 0
+    },
+    {
+      "from": "DustFine",
+      "from_port": 0,
+      "to": "ShuPalmTextureOutput",
+      "to_port": 1
+    }
+  ]
+}

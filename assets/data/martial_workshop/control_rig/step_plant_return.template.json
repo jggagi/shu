@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "kind": "footwork_template",
+  "id": "step_plant_return",
+  "description": "单足短进步：抬脚前送、踏稳定势、抬脚回收；另一足全程支撑。时间归一化，角色根节点不移动。",
+  "coordinates": "Source Blender XYZ, -Y forward, +Z up; offsets from original ankle. Foot orientation remains original.",
+  "phases": [
+    {
+      "from": 0,
+      "to": 0.1,
+      "label": "双足接地，先沉髋"
+    },
+    {
+      "from": 0.1,
+      "to": 0.22,
+      "label": "摆动脚抬起前送"
+    },
+    {
+      "from": 0.22,
+      "to": 0.34,
+      "label": "脚落定，接住重心"
+    },
+    {
+      "from": 0.34,
+      "to": 0.6,
+      "label": "踏稳发力，保持接地"
+    },
+    {
+      "from": 0.6,
+      "to": 0.74,
+      "label": "卸力抬脚，准备回收"
+    },
+    {
+      "from": 0.74,
+      "to": 0.9,
+      "label": "脚收回原位"
+    },
+    {
+      "from": 0.9,
+      "to": 1,
+      "label": "双足原位，完整收势"
+    }
+  ],
+  "keys": [
+    {
+      "t": 0,
+      "advance": 0,
+      "lift": 0
+    },
+    {
+      "t": 0.1,
+      "advance": 0,
+      "lift": 0
+    },
+    {
+      "t": 0.22,
+      "advance": 0.5,
+      "lift": 1
+    },
+    {
+      "t": 0.34,
+      "advance": 1,
+      "lift": 0
+    },
+    {
+      "t": 0.6,
+      "advance": 1,
+      "lift": 0
+    },
+    {
+      "t": 0.74,
+      "advance": 0.55,
+      "lift": 0.75
+    },
+    {
+      "t": 0.9,
+      "advance": 0,
+      "lift": 0
+    },
+    {
+      "t": 1,
+      "advance": 0,
+      "lift": 0
+    }
+  ],
+  "planted_interval": [
+    0.34,
+    0.6
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "author": "Original Shu palm audio authored by Codex",
+  "method": "Fixed-seed filtered noise, brief cloth transient, low damped body modes and finite grit ticks; Python stdlib wave",
+  "input_recordings": [],
+  "third_party_samples": [],
+  "new_cloud_calls": 0,
+  "new_dependency_installs": 0,
+  "cost_rmb": 0,
+  "generator": "tools/hero_lookdev/build_ambush_palm_sfx.py",
+  "generator_sha256": "03904063c790eff70fd0e8dd8e131c1dec322576333a9a3416e7ce5c9d9d2c75",
+  "rebuild": "python3 tools/hero_lookdev/build_ambush_palm_sfx.py",
+  "cues": [
+    {
+      "path": "assets/art/mountain_ambush/palm_lab/v2/sfx/palm-release.wav",
+      "seed": 260551,
+      "kind": "air_cloth",
+      "frames": 6174,
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_bits": 16,
+      "duration_seconds": 0.28,
+      "peak": 0.55999755859375,
+      "rms": 0.15131756917119127,
+      "first_sample": 0,
+      "last_sample": 0,
+      "silent_edge_samples_each_end": 23,
+      "loop": false,
+      "bytes": 12392,
+      "sha256": "d56ca609c44dc548e2b97ff6a429fc167e29dd75dd3d612cff4b26b09271c802"
+    },
+    {
+      "path": "assets/art/mountain_ambush/palm_lab/v2/sfx/palm-impact.wav",
+      "seed": 260552,
+      "kind": "wood_ground_grit",
+      "frames": 7497,
+      "sample_rate": 22050,
+      "channels": 1,
+      "pcm_bits": 16,
+      "duration_seconds": 0.34,
+      "peak": 0.55999755859375,
+      "rms": 0.07506298410517942,
+      "first_sample": 0,
+      "last_sample": 0,
+      "silent_edge_samples_each_end": 23,
+      "loop": false,
+      "bytes": 15038,
+      "sha256": "1e7334043e46b0eb4966182f56a20b611283fb0b636c6a98ec81208d2fc5b192"
+    }
+  ],
+  "runtime_contract": "V2 only: release at 0.56s, impact at 0.78s, default gain -12dB, share existing 招式声 mute. 2 schedules when enabled, 0 when muted; runtime scheduling must be tested separately.",
+  "verification_boundary": "PCM format/levels/zero edges/determinism checked separately from actual device listening or subjective timbre approval; no listening validation claimed."
+}

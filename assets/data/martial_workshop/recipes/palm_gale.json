@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "mode": "reuse",
+  "template": "palm_sweep",
+  "move": {
+    "id": "palm_gale",
+    "label": "劲风掌",
+    "description": "沉身蓄势，掌劲离手，收掌归位。",
+    "category": "palm",
+    "style": "strong",
+    "actor": "tinglan",
+    "profile": "tinglan22",
+    "preview_only": true,
+    "combat_skill": "",
+    "animation": {
+      "asset": "res://assets/art/mountain_ambush/palm_lab/v2/motion/tinglan-palm-clips.glb",
+      "clip": "TinglanPalm",
+      "hand": "palm",
+      "source_seconds": 1.45
+    },
+    "timing": {
+      "duration": 1.45,
+      "total": 1.85,
+      "release": 0.56,
+      "impact": 0.78,
+      "source_map": [
+        [
+          0,
+          0
+        ],
+        [
+          1.45,
+          1.45
+        ]
+      ]
+    },
+    "visual": {
+      "type": "palm",
+      "pattern": "pressure",
+      "config": {
+        "schema": 1,
+        "scope": "Dedicated palm motion and directional gust; presentation only",
+        "assets": {
+          "wind": "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-wind.png",
+          "dust": "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-dust.png",
+          "impact": "res://assets/art/mountain_ambush/palm_lab/v2/effekseer/palm-gust-v2-atlas.png"
+        },
+        "release_seconds": 0.56,
+        "flight_seconds": 0.22,
+        "impact_seconds": 0.64,
+        "dust_seconds": 0.95,
+        "duration": 1.85,
+        "impact_size": 3.0,
+        "audio": {
+          "release": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-release.wav",
+          "impact": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-impact.wav"
+        }
+      }
+    },
+    "audio": {
+      "release": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-release.wav",
+      "impact": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-impact.wav"
+    },
+    "camera": {
+      "zoom": 0.82
+    }
+  },
+  "source_manifests": [
+    "res://assets/art/mountain_ambush/palm_lab/v2/motion/source-palm-clips.json",
+    "res://assets/art/mountain_ambush/palm_lab/v2/effekseer/source-effekseer-v2.json",
+    "res://assets/art/mountain_ambush/palm_lab/v2/sfx/source-palm-sfx.json"
+  ],
+  "order": 2
+}

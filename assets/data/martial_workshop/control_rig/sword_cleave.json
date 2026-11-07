@@ -1,0 +1,422 @@
+{
+  "schema_version": 1,
+  "move_id": "sword_cleave",
+  "variant_id": "enhanced",
+  "variant_label": "增强版",
+  "profile": "jiang22",
+  "category": "sword",
+  "clip": "SwordCleaveControl",
+  "seconds": 1.55,
+  "description": "增强版：沉髋举剑过顶，右脚短进步踏稳，腰肩带剑斜劈，停稳余势再收脚归中。",
+  "phases": [
+    {
+      "from": 0,
+      "to": 0.32,
+      "label": "沉髋提剑，右脚抬起"
+    },
+    {
+      "from": 0.32,
+      "to": 0.44,
+      "label": "举剑过顶，右脚前送"
+    },
+    {
+      "from": 0.44,
+      "to": 0.66,
+      "label": "踏稳转腰，肩腕带剑斜劈"
+    },
+    {
+      "from": 0.66,
+      "to": 0.84,
+      "label": "剑锋斜落，越过身侧"
+    },
+    {
+      "from": 0.84,
+      "to": 1.55,
+      "label": "松肩收锋，抬脚回中性"
+    }
+  ],
+  "keys": [
+    {
+      "t": 0,
+      "shift": [
+        0,
+        0,
+        0
+      ],
+      "hip_yaw": 0,
+      "spine_yaw": 0,
+      "chest_yaw": 0,
+      "lean": 0,
+      "gaze_yaw": 0.0,
+      "left": "neutral",
+      "right": "neutral",
+      "right_direction": "neutral",
+      "palm_open": 0,
+      "palm_yaw": 0,
+      "elbow_L": [
+        0,
+        0,
+        0
+      ],
+      "elbow_R": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "t": 0.16,
+      "shift": [
+        0.008,
+        0.016,
+        -0.035
+      ],
+      "hip_yaw": -10,
+      "spine_yaw": -4,
+      "chest_yaw": -7,
+      "lean": -3,
+      "gaze_yaw": -1.4000000000000001,
+      "left": [
+        0.3,
+        -0.22,
+        1.28
+      ],
+      "right": [
+        -0.33,
+        -0.26,
+        1.55
+      ],
+      "right_direction": [
+        -0.25,
+        -0.25,
+        0.94
+      ],
+      "palm_open": 0,
+      "palm_yaw": 0,
+      "elbow_L": [
+        0,
+        0,
+        0
+      ],
+      "elbow_R": [
+        -0.02,
+        0.0,
+        0.02
+      ]
+    },
+    {
+      "t": 0.32,
+      "shift": [
+        0.01,
+        0.025,
+        -0.055
+      ],
+      "hip_yaw": -20,
+      "spine_yaw": -4,
+      "chest_yaw": -8,
+      "lean": -4,
+      "gaze_yaw": -2.8000000000000003,
+      "left": [
+        0.29,
+        -0.21,
+        1.3
+      ],
+      "right": [
+        -0.22,
+        -0.12,
+        1.9
+      ],
+      "right_direction": [
+        -0.14,
+        -0.15,
+        0.98
+      ],
+      "palm_open": 0,
+      "palm_yaw": 0,
+      "elbow_L": [
+        0,
+        0,
+        0
+      ],
+      "elbow_R": [
+        -0.04,
+        0.02,
+        0.03
+      ]
+    },
+    {
+      "t": 0.44,
+      "shift": [
+        0.008,
+        0.012,
+        -0.065
+      ],
+      "hip_yaw": -8,
+      "spine_yaw": -10,
+      "chest_yaw": -15,
+      "lean": -2,
+      "gaze_yaw": -1.12,
+      "left": [
+        0.29,
+        -0.21,
+        1.3
+      ],
+      "right": [
+        -0.23,
+        -0.12,
+        1.9
+      ],
+      "right_direction": [
+        -0.1,
+        -0.24,
+        0.96
+      ],
+      "palm_open": 0,
+      "palm_yaw": 0,
+      "elbow_L": [
+        0,
+        0,
+        0
+      ],
+      "elbow_R": [
+        -0.04,
+        0.02,
+        0.03
+      ]
+    },
+    {
+      "t": 0.52,
+      "shift": [
+        -0.005,
+        -0.045,
+        -0.095
+      ],
+      "hip_yaw": 10,
+      "spine_yaw": -5,
+      "chest_yaw": -12,
+      "lean": 4,
+      "gaze_yaw": 1.4000000000000001,
+      "left": [
+        0.3,
+        -0.2,
+        1.27
+      ],
+      "right": [
+        -0.26,
+        -0.32,
+        1.67
+      ],
+      "right_direction": [
+        0.0,
+        -0.75,
+        0.66
+      ],
+      "palm_open": 0,
+      "palm_yaw": 0,
+      "elbow_L": [
+        0,
+        0,
+        0
+      ],
+      "elbow_R": [
+        -0.035,
+        -0.015,
+        0.01
+      ]
+    },
+    {
+      "t": 0.58,
+      "shift": [
+        -0.008,
+        -0.08,
+        -0.105
+      ],
+      "hip_yaw": 22,
+      "spine_yaw": 2,
+      "chest_yaw": 0,
+      "lean": 8,
+      "gaze_yaw": 3.08,
+      "left": [
+        0.31,
+        -0.1,
+        1.2
+      ],
+      "right": [
+        -0.16,
+        -0.5,
+        1.36
+      ],
+      "right_direction": [
+        0.36,
+        -0.92,
+        -0.1
+      ],
+      "palm_open": 0,
+      "palm_yaw": 0,
+      "elbow_L": [
+        0.015,
+        0.015,
+        0
+      ],
+      "elbow_R": [
+        0.025,
+        -0.055,
+        -0.01
+      ]
+    },
+    {
+      "t": 0.66,
+      "shift": [
+        -0.012,
+        -0.12,
+        -0.12
+      ],
+      "hip_yaw": 32,
+      "spine_yaw": 1,
+      "chest_yaw": 4,
+      "lean": 11,
+      "gaze_yaw": 4.48,
+      "left": [
+        0.31,
+        0.01,
+        1.16
+      ],
+      "right": [
+        0.02,
+        -0.59,
+        1.08
+      ],
+      "right_direction": [
+        0.66,
+        -0.54,
+        -0.52
+      ],
+      "palm_open": 0,
+      "palm_yaw": 0,
+      "elbow_L": [
+        0.015,
+        0.015,
+        0
+      ],
+      "elbow_R": [
+        0.025,
+        -0.055,
+        -0.01
+      ]
+    },
+    {
+      "t": 0.84,
+      "shift": [
+        -0.008,
+        -0.1,
+        -0.1
+      ],
+      "hip_yaw": 34,
+      "spine_yaw": 2,
+      "chest_yaw": 2,
+      "lean": 9,
+      "gaze_yaw": 4.760000000000001,
+      "left": [
+        0.3,
+        0.015,
+        1.16
+      ],
+      "right": [
+        0.15,
+        -0.44,
+        1.02
+      ],
+      "right_direction": [
+        0.78,
+        -0.3,
+        -0.55
+      ],
+      "palm_open": 0,
+      "palm_yaw": 0,
+      "elbow_L": [
+        0,
+        0,
+        0
+      ],
+      "elbow_R": [
+        0.035,
+        -0.03,
+        -0.02
+      ]
+    },
+    {
+      "t": 1.07,
+      "shift": [
+        0,
+        -0.03,
+        -0.035
+      ],
+      "hip_yaw": 12,
+      "spine_yaw": -1,
+      "chest_yaw": -2,
+      "lean": 3,
+      "gaze_yaw": 1.6800000000000002,
+      "left": [
+        0.32,
+        -0.14,
+        1.16
+      ],
+      "right": [
+        -0.14,
+        -0.36,
+        1.25
+      ],
+      "right_direction": [
+        -0.15,
+        -0.95,
+        0.28
+      ],
+      "palm_open": 0,
+      "palm_yaw": 0,
+      "elbow_L": [
+        0,
+        0,
+        0
+      ],
+      "elbow_R": [
+        0,
+        -0.01,
+        0
+      ]
+    },
+    {
+      "t": 1.55,
+      "shift": [
+        0,
+        0,
+        0
+      ],
+      "hip_yaw": 0,
+      "spine_yaw": 0,
+      "chest_yaw": 0,
+      "lean": 0,
+      "gaze_yaw": 0.0,
+      "left": "neutral",
+      "right": "neutral",
+      "right_direction": "neutral",
+      "palm_open": 0,
+      "palm_yaw": 0,
+      "elbow_L": [
+        0,
+        0,
+        0
+      ],
+      "elbow_R": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "footwork": {
+    "template": "step_plant_return.template.json",
+    "active_side": "R",
+    "distance_m": 0.24,
+    "lift_m": 0.075
+  }
+}

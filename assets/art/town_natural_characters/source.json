@@ -1,0 +1,251 @@
+{
+  "title": "Shu original natural town cast",
+  "date": "2026-10-30",
+  "provider": "nativeSVG",
+  "author": "Original vector drawing and motion authored for Shu by Codex",
+  "license": "Project-original; no external character artwork, model or commercial game asset copied",
+  "method": "New head, neck, shoulder/chest/sleeve/skirt silhouettes; local-colour fine edges, warm shadow planes; native SVG motion construction. No raster generation, image editing or network call.",
+  "generator": {
+    "path": "tools/build_town_natural_characters.py",
+    "sha256": "61001e6730decd3d243e0f48b2e7533ce5075a6cf7dd56234c4b5b7d945309e0"
+  },
+  "legacy_inputs": [
+    {
+      "path": "tools/build_town_hd2d_characters.py",
+      "sha256": "7df48b969ad859b19d6df63b9b1ba778e62eab14b4aeed7e1a2513d537916273",
+      "role": "original project identity and anchored pose reference"
+    },
+    {
+      "path": "tools/build_town_tea_seller_life.py",
+      "sha256": "f590648b9e94cbd75642c9ee88a53c76bc95987872ee21e02f5a13ac61be6d5e",
+      "role": "original project identity and anchored pose reference"
+    },
+    {
+      "path": "tools/build_town_tea_patron.py",
+      "sha256": "f1053dc254d79262aba1968aa4086d0150ff5b22b394923c6ca8f65e4b82163b",
+      "role": "original project identity and anchored pose reference"
+    },
+    {
+      "path": "tools/build_town_painted_characters.py",
+      "sha256": "f10b35865b6f26fb00d363f1c1c21be2abeeaf286ad09af9f9f0d45bcf20990b",
+      "role": "original project identity and anchored pose reference"
+    },
+    {
+      "path": "assets/art/shanxia_hd2d/player-walk.svg",
+      "sha256": "1ec5b3cc4aa4e6c0ef7da57dcf630cb2a7745a65b58d54e540ae6755c3b437e1",
+      "role": "original project identity and anchored pose reference"
+    },
+    {
+      "path": "assets/art/shanxia_hd2d/tea-seller-walk.svg",
+      "sha256": "eb6b9e823db06f60931a7813c9656a5a71a0efbc5dd6e3571375c6880b267c3f",
+      "role": "original project identity and anchored pose reference"
+    },
+    {
+      "path": "assets/art/shanxia_hd2d/source.json",
+      "sha256": "757caf69864b9bb96b38364a67864dd61ef91a441a4936eebe1767d80a4c4817",
+      "role": "original project identity and anchored pose reference"
+    },
+    {
+      "path": "assets/art/shanxia_polish/tea-seller-life.svg",
+      "sha256": "00c8da6673a9508b53ef8be506f24750734aa77a7d7ad63bf66184605fe16142",
+      "role": "original project identity and anchored pose reference"
+    },
+    {
+      "path": "assets/art/shanxia_polish/tea-seller-life-source.json",
+      "sha256": "59cceb85d36777cad2906112e03e711aec8d74bd90903ca291c63a46c3002b42",
+      "role": "original project identity and anchored pose reference"
+    },
+    {
+      "path": "assets/art/shanxia_polish/tea-patron.svg",
+      "sha256": "387025950070fcf854dd9f5bae56052e6e0ab8ab3163c1fe5ff6e24d94ce5ecb",
+      "role": "original project identity and anchored pose reference"
+    },
+    {
+      "path": "assets/art/shanxia_polish/tea-patron-source.json",
+      "sha256": "60603da9bc24c2633dda72a4ba711c9e0873b897cca46fd90f7fe11224496e2f",
+      "role": "original project identity and anchored pose reference"
+    },
+    {
+      "path": "assets/art/town_painted_street/tea-seller-life.svg",
+      "sha256": "30682e577495d15f4309f3ca4eca5a15801fa1de8fc7d6b4a4ecf1c30d8ad55a",
+      "role": "original project identity and anchored pose reference"
+    },
+    {
+      "path": "assets/art/town_painted_street/palette-source.json",
+      "sha256": "c8b8c118758d574590fcb82056ac24d213d26a779f8155dd0d506392c28fc975",
+      "role": "original project identity and anchored pose reference"
+    }
+  ],
+  "files": {
+    "player": {
+      "path": "assets/art/town_natural_characters/player-motion.svg",
+      "sha256": "cb64161308213c6a9a0dc4616802e87a9e7ce313e9020ff94c99b00055abecbb",
+      "bytes": 260053
+    },
+    "tea_seller": {
+      "path": "assets/art/town_natural_characters/tea-seller-life.svg",
+      "sha256": "b720da0fb6a2543594ba1baea311ca89ad5f5b1e2673266b19942f9e405134b8",
+      "bytes": 37326
+    },
+    "tea_patron": {
+      "path": "assets/art/town_natural_characters/tea-patron.svg",
+      "sha256": "53f1d9f34df99f7c32c9fbe87082b154340932f078688ef7b5be4af7f341078d",
+      "bytes": 15408
+    }
+  },
+  "player": {
+    "frame_size": [
+      80,
+      112
+    ],
+    "atlas_size": [
+      960,
+      448
+    ],
+    "columns": 12,
+    "rows": 4,
+    "directions": [
+      "down",
+      "up",
+      "left",
+      "right"
+    ],
+    "foot_anchor": [
+      40,
+      104
+    ],
+    "anchor_origin": "top-left of cropped frame, source pixels",
+    "world_height": 1.55,
+    "walk_frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "idle_frames": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "presentation_tuning": {
+      "B_walk_speed_logical_per_second": 150,
+      "cycle_distance_logical": 90,
+      "distance_per_phase_logical": 11.25,
+      "cycle_seconds_at_B_speed": 0.6,
+      "side_foot_travel_source_px": [
+        20,
+        10,
+        0,
+        -10,
+        -20,
+        -16,
+        0,
+        16
+      ],
+      "recovering_foot_lift_source_px": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        8,
+        4
+      ],
+      "scope": "Runtime integration target supplied by root; engine QA and actual stance slip still require real game capture"
+    },
+    "walk_pose_order": [
+      "left_contact",
+      "left_down_right_recover",
+      "left_support_right_pass",
+      "left_toe_right_reach",
+      "right_contact",
+      "right_down_left_recover",
+      "right_support_left_pass",
+      "right_toe_left_reach"
+    ],
+    "idle_pose_order": [
+      "relaxed_neutral",
+      "upper_body_breathe_in",
+      "upper_body_breathe_peak",
+      "blink"
+    ],
+    "contact": "At least one authored supporting shoe reaches the y104 source ground line in every walk pose. Recovering foot folds at knee; root foot anchor never translates.",
+    "breathing": "Leg paths are byte-identical in all four idle poses. Only upper-body geometry moves: chest <=0.5px, head <=0.225px. No whole-person vertical transform while idle.",
+    "proportion": "Approximately3.1 crown-to-jaw head lengths from crown to sole; short neck, jaw shadow and relaxed asymmetry. Cloth/headband follow the step by a half phase.",
+    "time_authority": "Runtime supplies real walked distance for walk phases and existing frozen/resumed ambient_elapsed for idle; SVG owns no state or clock"
+  },
+  "tea_seller": {
+    "frame_size": [
+      80,
+      112
+    ],
+    "atlas_size": [
+      480,
+      112
+    ],
+    "columns": 6,
+    "rows": 1,
+    "foot_anchor": [
+      40,
+      104
+    ],
+    "anchor_origin": "top-left of cropped frame, source pixels",
+    "world_height": 1.55,
+    "pose_order": [
+      "hold_rest",
+      "hold_lift",
+      "hold_ready",
+      "wipe_right",
+      "wipe_across",
+      "wipe_return"
+    ],
+    "facing": "down; original adult brown-clothed male seller, fine moustache retained",
+    "working_pose_contract": "Original sleeves/hands/cup/cloth trajectory coordinates and order retained from original generator; new short-neck head, relaxed torso/apron and locally coloured shadows. No shoulder/hand/cup group translations.",
+    "time_authority": "existing seller life frame_index_at(stage ambient_elapsed), period14s"
+  },
+  "tea_patron": {
+    "frame_size": [
+      64,
+      96
+    ],
+    "atlas_size": [
+      192,
+      96
+    ],
+    "columns": 3,
+    "rows": 1,
+    "seat_anchor": [
+      31,
+      58
+    ],
+    "foot_anchor": [
+      32,
+      80
+    ],
+    "head_anchor": [
+      33,
+      20
+    ],
+    "anchor_origin": "top-left of cropped frame, source pixels",
+    "world_height": 1.1,
+    "pose_order": [
+      "cup_rest",
+      "cup_raise",
+      "cup_sip"
+    ],
+    "facing": "seated profile facing right",
+    "contact_contract": "Exact original leg and seated body curves, transforms and source anchors retained. Local-colour edges and broad cloth/neck/face planes added without translating seat, feet or hand/cup trajectory.",
+    "time_authority": "existing patron life frame_index_at(stage ambient_elapsed), period12s"
+  },
+  "preservation": {
+    "legacy_inputs_unchanged": true,
+    "writes_only": "assets/art/town_natural_characters/*"
+  },
+  "status": "candidate; original vector source and legacy byte preservation checked; actual Godot scene motion, contact, occlusion and user visual acceptance pending"
+}

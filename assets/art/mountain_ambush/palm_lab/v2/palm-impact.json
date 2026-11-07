@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "scope": "Dedicated palm motion and directional gust; presentation only",
+  "assets": {
+    "wind": "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-wind.png",
+    "dust": "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-dust.png",
+    "impact": "res://assets/art/mountain_ambush/palm_lab/v2/effekseer/palm-gust-v2-atlas.png"
+  },
+  "release_seconds": 0.56,
+  "flight_seconds": 0.22,
+  "impact_seconds": 0.64,
+  "dust_seconds": 0.95,
+  "duration": 1.85,
+  "impact_size": 3.0,
+  "audio": {
+    "release": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-release.wav",
+    "impact": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-impact.wav"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "schema": 1,
+  "status": "Original directional V2 artwork compiled and twice rendered by official Effekseer; byte-identical outputs; in-scene acceptance pending",
+  "author": "Original Shu directional palm gust V2 authored by Codex",
+  "scope": "Offline impact artwork only, no new palm gameplay or runtime plugin",
+  "composition": {
+    "status": "Root reviewed directional source and actual official atlas; source artwork complete, in-scene verification pending",
+    "forward_axis": "+X in source image, camera +Z looking at XY plane",
+    "frames": 32,
+    "fps": 60,
+    "atlas": [
+      2048,
+      1024
+    ],
+    "tile": [
+      256,
+      256
+    ],
+    "grid": [
+      8,
+      4
+    ],
+    "seed": 5483,
+    "composition": "5-frame tiny warm contact, broad asymmetric forward jade crescent, ivory leading edge, offset upper reverse curl/lower sweep/broken wisp, five short forward speed slashes",
+    "node_count": 11,
+    "node_types": {
+      "ring_crescent": 6,
+      "sprite_speed_slash": 5
+    },
+    "finite_generation": "11 nodes each default max-generation one, last life ends at frame28; no random ranges/infinite emitters",
+    "external_assets": [],
+    "recommended_game_blend": "Unmodified Recorder Original alpha, expected premultiplied as V1; must inspect output pixels",
+    "proposed_world_quad_size_m": 2.8,
+    "root_gpu_command": "python3 tools/hero_lookdev/build_palm_effekseer_v2.py --record",
+    "output_path": "assets/art/mountain_ambush/palm_lab/v2/effekseer/palm-gust-v2-atlas.png",
+    "camera": {
+      "orthographic": true,
+      "angles": [
+        0,
+        0
+      ],
+      "distance": 15,
+      "magnification": 3.2
+    }
+  },
+  "tool": {
+    "version": "1.80.7",
+    "tag": "1807",
+    "archive": {
+      "url": "https://github.com/effekseer/Effekseer/releases/download/1807/Effekseer1.80.7Linux.zip",
+      "bytes": 98028674,
+      "sha256": "462a18b289ebee09a792d38f7d5824c5333c0559aff29cb76ddfcf401c9a0505"
+    },
+    "files": {
+      "Effekseer": {
+        "bytes": 64832,
+        "sha256": "e04c211291ca99f499b8ad600b34081a3249559f24b2b28d226d267fe5edb7e9"
+      },
+      "bin/Effekseer": {
+        "bytes": 75368,
+        "sha256": "e5e7a1278f82de328d8bab2742618b7f94afe0d77bfcc46d5ec585b7af43355f"
+      },
+      "bin/libViewer.so": {
+        "bytes": 10522672,
+        "sha256": "fe4cae4a6d81f26631e98eef1b23fb4e20f5154e6d29f3085dd5ededabb10dd7"
+      },
+      "bin/Effekseer.dll": {
+        "bytes": 188416,
+        "sha256": "61041ff3d65461817ff95639d2d3226aa3ed44b4a53785f514c0a63ca4e633b1"
+      },
+      "bin/EffekseerCore.dll": {
+        "bytes": 541184,
+        "sha256": "e69ee0f7a20d4b33e27b8348dc58836726497f52bc3ab8493bae4bb5003be098"
+      },
+      "bin/EffekseerCoreGUI.dll": {
+        "bytes": 485888,
+        "sha256": "f77a74b1e7d6aad6c5e936a6a5d9d4606b7bc0cdc45bbe213c0698417d6dbe22"
+      }
+    },
+    "installation": "isolated repository .local download/extraction; no global installation or settings changes",
+    "CLI": "-cui -in source -o editable.efkefc -e runtime.efk; no CLI recorder switch in official Program.cs",
+    "recorder": "unmodified libViewer.so official SWIG ABI via Python ctypes; requires native OpenGL display",
+    "samples_used": false
+  },
+  "tool_license": {
+    "core": "MIT",
+    "complete_notice": "LICENSE_EFFEKSEER_TOOL.txt"
+  },
+  "third_party_samples": [],
+  "third_party_textures": [],
+  "new_cloud_calls": 0,
+  "new_global_installs": 0,
+  "cost_rmb": 0,
+  "generator": "tools/hero_lookdev/build_palm_effekseer_v2.py",
+  "rebuild": "python3 tools/hero_lookdev/build_palm_effekseer_v2.py --record",
+  "source_files": {
+    "assets/art/mountain_ambush/palm_lab/v2/effekseer/palm-gust-v2.efkproj": {
+      "bytes": 45490,
+      "sha256": "6a176660a35fd2d3a32dad698ea1ad1b3d7d55c4f572fc9da718c1e1594242f2"
+    },
+    "assets/art/mountain_ambush/palm_lab/v2/effekseer/palm-gust-v2.efkefc": {
+      "bytes": 13021,
+      "sha256": "e6983e28edd5e665bc451157eb088f17d8811591f198ba4a6a97b9d117b8ec15"
+    },
+    "assets/art/mountain_ambush/palm_lab/v2/effekseer/palm-gust-v2.efk": {
+      "bytes": 10060,
+      "sha256": "4e0271cca98f0ab71af52f7f0ac8c16336a6ad259beaacefbc07aea435c767c7"
+    },
+    "assets/art/mountain_ambush/palm_lab/v2/effekseer/LICENSE_EFFEKSEER_TOOL.txt": {
+      "bytes": 12358,
+      "sha256": "e32cc7be243d939dec49776382cd458d05367a88fd8a0d497cda0550e2b6fb23"
+    },
+    "tools/hero_lookdev/build_palm_effekseer_v2.py": {
+      "bytes": 13971,
+      "sha256": "890147dcd275c27b76107d086608b7e3d60113b39ac3eeae4b5fc32a574141d8"
+    },
+    "assets/art/mountain_ambush/palm_lab/v2/effekseer/palm-gust-v2-atlas.png": {
+      "bytes": 224700,
+      "sha256": "a62bd192e6730c688e1b62f9b575807137a50fd952289475c436af6788002f33"
+    }
+  },
+  "verification": {
+    "CPU_compilation": "Official 1.80.7 CUI exit0, eleven finite authored nodes retained. 42 compiled-source checks pass; no outside resources or infinite emitters.",
+    "GPU_recording": "Two official libViewer Recorder runs executed serially by root, both exit0. PNG bytes identical.",
+    "pixel_analysis": "2048x1024 RGBA, all 32 tile borders alpha0; RGB<=A everywhere; A0 implies RGB0. Frames0/28..31 empty; 1..27 contain artwork.",
+    "sampled_visual_frames": [
+      2,
+      4,
+      7,
+      10,
+      14,
+      20,
+      26,
+      31
+    ],
+    "actual_visual_observation": "Warm short contact then dominant forward jade crescent, asymmetric reverse and lower curls, short forward slashes. No complete concentric ring stack or long laser.",
+    "warnings": "Both native authoring batches retain Gtk-WARNING: gtk_disable_setlocale() must be called before gtk_init(); tool not described as warning-free.",
+    "in_scene": "Pending root integration and final stage review; authoring atlas review does not establish game quality.",
+    "v1_retained": "All seven V1 asset files and original builder match the V1 frozen SHA; no V1 changes."
+  },
+  "editor_note": "Official Core.LoadFromXml forces editor loop preview true; finite emitters and Recorder single PlayEffect remain one shot.",
+  "atlas": {
+    "path": "res://assets/art/mountain_ambush/palm_lab/v2/effekseer/palm-gust-v2-atlas.png",
+    "size": [
+      2048,
+      1024
+    ],
+    "columns": 8,
+    "rows": 4,
+    "frame_pixels": 256,
+    "frames": 32,
+    "source_fps": 60,
+    "source_duration_seconds": 0.5333333333333333,
+    "visible_frames": [
+      1,
+      27
+    ],
+    "transparent_frames": [
+      0,
+      28,
+      29,
+      30,
+      31
+    ],
+    "alpha_mode": "premultiplied RGBA from official Recorder Original=1, RGB sampled once with blend_premul_alpha",
+    "pivot_pixels": [
+      128,
+      128
+    ],
+    "forward_image_axis": "+X / image right",
+    "min_transparent_border_pixels": 13,
+    "largest_frame_bbox_pixels": [
+      197,
+      155
+    ],
+    "runtime_note": "Game may retime .5333-second source to its own impact sequence; authoring source itself remains 60fps."
+  },
+  "godot_import_requirements": {
+    "process/fix_alpha_border": false,
+    "process/premult_alpha": false,
+    "mipmaps/generate": false,
+    "compress/mode": 0,
+    "reason": "Raw PNG already has premultiplied RGB. Alpha-border dilation or a second premultiplication changes the data; validate imported Texture2D.get_image() in final stage."
+  }
+}

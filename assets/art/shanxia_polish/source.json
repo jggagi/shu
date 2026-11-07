@@ -1,0 +1,16 @@
+{
+  "origin": "Shu original scene panorama sample, 2026-10-28",
+  "provider": "codex-imagegen",
+  "model": null,
+  "purpose": "Selected painterly mountain-valley backdrop for the fixed-camera town polish slice",
+  "status": "implementation candidate; user visual acceptance pending",
+  "license": "Project-generated original image. No third-party game artwork copied.",
+  "style_reference": "res://assets/art/stream_teahouse/stream-teahouse-v1.png",
+  "style_reference_sha256": "fcec0e8e25c22e21842676c702e06d0c3888c95a947846a8ebfee7aea1733901",
+  "prompt_file": "art/prompts/town-mountain-panorama-20261028.txt",
+  "prompt_sha256": "8363a4a3082036c3d7fe022ad72ab97319617e982746a7e5897fa00df45bd862",
+  "files": {
+    "res://assets/art/shanxia_polish/mountain-panorama.png": "6d1a6dd248486e99d41ffb9b21dfb7c231b03ded878f387af343b329d21514f4"
+  },
+  "production_notes": "One built-in generation, no retries. Qwen not configured in this session. Panorama used as a single distant vertical card; no raster editing. Geometry, procedural material textures, steam, cloth, and leaf geometry are authored in town_hd2d_stage.gd."
+}

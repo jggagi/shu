@@ -1,5 +1,7 @@
 # 养成引擎内容包
 
+P3a `mountain_ambush_catalog.json` 使用隔离 `shu_mountain_ambush` / `0.4.0` 与原 `stream_study`。新包继承城镇、师徒与五剑，追加 `begin_ambush` 和受宿主保护的终局行动；`encounter.json` 描述两人对三人、格子、招式、敌方意图与药篓，`game.json.ambush` 固定其 SHA256。每场一时辰、无永久数值奖励；战斗与安全存档边界见[运行库](../addons/cultivation_mode/README.md)及[P3a切片](../docs/P3_MOUNTAIN_AMBUSH_SLICE.md)。这是本切片的能力适配，旧包与旧档保持。
+
 P1b `town_walk_catalog.json` 使用独立 `shu_town_walk` / `0.3.1` 与原 `stream_study`。它继承 P1a 的原师徒与五剑 JSON，只把城镇改为一张可走地图，增加茶摊掌柜初次／重访回应、街口木牌和走近返山出口；新增文字为机制连接旁白，不是新剧情章节或无声人物对白。走动、问候、阅读不花时辰，明确往返每程 1 时辰；宿主唯一结算。
 
 `walks.json` schema 1 登记逻辑尺寸、地面、障碍、入口、人物／物件／出口位置和半径；互动只能执行登记的非菜单行动。`source.json` 固定 P1a 继承文件哈希，Chengping 算法与规则的许可／改写见 [P1b 来源审查](../docs/CHENGPING_P1B_SOURCE_AUDIT.md)。P1b 仅有 walks 能力的状态增加严格 exploration 字段，原内容包仍为 14 字段；独立内容版本、应用目录和存档目录，不迁入 P0/P1a。

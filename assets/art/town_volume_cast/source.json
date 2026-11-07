@@ -1,0 +1,381 @@
+{
+  "schema": 1,
+  "date": "2026-10-30",
+  "status": "Authored town-citizen candidate; Blender/GLB local checks passed. Host-camera integration and user acceptance are recorded separately.",
+  "asset_ready_for_host_scene_review": true,
+  "scope": "Independent adult brown-apron tea seller and seated grey-sage citizen. Approved protagonist is preserved. Real detailed source meshes,22bone skins and authored props/clips; no billboard body or low-detail substitute.",
+  "actors": {
+    "tea_seller": {
+      "model": "res://assets/art/town_volume_cast/tea-seller.glb",
+      "clip": "SellerCupWork",
+      "period": 14,
+      "display_scale": 0.9,
+      "source_anchor": [
+        0,
+        0.00033535502734594047,
+        0.09
+      ],
+      "anchor_kind": "feet",
+      "source_floor_y": 0.00033535502734594047,
+      "sha256": "a1dfdfaba3f05ab3909100e0569981316f2fdf1fb05de8069c9364599cc6ccde",
+      "frames_including_endpoint": 841,
+      "fps": 60,
+      "intentional_derivative_geometry": true
+    },
+    "tea_patron": {
+      "model": "res://assets/art/town_volume_cast/tea-patron.glb",
+      "sha256": "506caf389c66a6db054170593df630f26a638c5f53200b7e31d8569a95db52a1",
+      "clip": "PatronTea",
+      "period": 12,
+      "display_scale": 0.9038526507855911,
+      "source_anchor": [
+        0.10606449842453003,
+        0.33501386642456055,
+        0.13232819736003876
+      ],
+      "anchor_kind": "seat",
+      "source_floor_y": 0.0003354210639372468,
+      "frames_including_endpoint": 721,
+      "fps": 60,
+      "intentional_derivative_geometry": true,
+      "seat_vertex": 880
+    }
+  },
+  "coordinate_contract": {
+    "gltf_up": "+Y",
+    "gltf_forward": "+Z",
+    "source_unit": "metre",
+    "anchors": "Seller true lowest supported sole datum projected under the prior foot convention; patron actual seated butt surface vertex880, not hip bone. Host aligns these anchors to existing map points.",
+    "patron_world_seat_minus_floor_metres": 0.3025,
+    "patron_marker_on_table_side_source_x": 0.10606449842453003
+  },
+  "source": {
+    "source_worktree": "/home/x1-lite/games/shu/.local/worktrees/mountain-ambush",
+    "path": "assets/art/mountain_ambush/jiang-approved.glb",
+    "sha256": "e8d74b2e0be789f272597aa6f7fc268f57851bb669ed43d97e2efa91c3860e27",
+    "original_blend_path": ".local/sources/jiang-approved-warm-9aa7c926/jiang-sword-phrase.blend",
+    "original_blend_sha256": "9aa7c926103f58b664427b2400601001562ff9a436b153c9b46d0c9241de6e65",
+    "source_records": [
+      "docs/image-motion/jiang-fullbody-turn-20261022.md",
+      "docs/image-motion/jiang-sword-cycle-20261023.md",
+      "assets/art/mountain_ambush/source.json"
+    ],
+    "author_and_license": "Existing user-approved Jiang source assembled from previously user-authorized Tencent Hunyuan outputs and original project hand/sword work. Original project provenance and provider use terms are retained; this art is not asserted CC0 or MIT. Newly authored NPC proportions, garment/prop meshes and actions are original project work.",
+    "runtime_dependency_on_retained_authoring_source": false
+  },
+  "authorization": {
+    "user_scope": "User accepted real-volume protagonist18852 and requested the other town characters use the same quality. This round adapts the existing source locally; no additional generation service or downloads.",
+    "static_review": "Root reviewed seller09 and patron10d and accepted host-camera review, not final user art approval."
+  },
+  "assets": [
+    {
+      "path": "res://assets/art/town_volume_cast/tea-seller.glb",
+      "sha256": "a1dfdfaba3f05ab3909100e0569981316f2fdf1fb05de8069c9364599cc6ccde",
+      "bytes": 16211660,
+      "triangles": 66511,
+      "mesh_count": 9,
+      "surface_count": 10,
+      "skin_joint_count": 22,
+      "animations": [
+        {
+          "name": "SellerCupWork",
+          "duration": 14.0,
+          "sample_counts": [
+            2,
+            841
+          ],
+          "channels": 66
+        }
+      ],
+      "embedded_textures": [
+        {
+          "name": "texture_pbr_20250901_normal",
+          "bytes": 523195,
+          "sha256": "2e7d0b766b9d054412dc5ce20e36926a253c40d7cc2daccac4f8284cc7b5aba9",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "JiangApprovedHead_SaturatedBaseColor",
+          "bytes": 4818692,
+          "sha256": "345d59d59b7606dbd51a5c7a7aee30984cda6aca396542d2216c1d4e4235d997",
+          "size": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "texture_pbr_20250901_metallic-texture_pbr_20250901_roughnes",
+          "bytes": 1085016,
+          "sha256": "5b38758c4082b13b676b2334a649ca1bd707fec8527349b4bf7c511c1384575c",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "texture_pbr_20250901_normal",
+          "bytes": 484395,
+          "sha256": "958a40ff3949f1f38f9bb2d9db51d65e77e9675ecbdbe30ee8a7de8d86f3a41c",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "JiangFullbody_SaturatedBaseColor",
+          "bytes": 4731284,
+          "sha256": "2ac47107ad2bb8834e71ca31e87046efdad7181b79b58755eefe99da73c59835",
+          "size": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "texture_pbr_20250901_metallic-texture_pbr_20250901_roughness",
+          "bytes": 865177,
+          "sha256": "165405c1f6f280c90d8c2eaa720316132b49450a2068bc2a326bdab692d11d9b",
+          "size": [
+            1024,
+            1024
+          ]
+        }
+      ],
+      "original_texture_payloads_retained_byte_exact": 6
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-patron.glb",
+      "sha256": "506caf389c66a6db054170593df630f26a638c5f53200b7e31d8569a95db52a1",
+      "bytes": 16033000,
+      "triangles": 70071,
+      "mesh_count": 9,
+      "surface_count": 10,
+      "skin_joint_count": 22,
+      "animations": [
+        {
+          "name": "PatronTea",
+          "duration": 12.0,
+          "sample_counts": [
+            2,
+            721
+          ],
+          "channels": 66
+        }
+      ],
+      "embedded_textures": [
+        {
+          "name": "texture_pbr_20250901_normal",
+          "bytes": 523195,
+          "sha256": "2e7d0b766b9d054412dc5ce20e36926a253c40d7cc2daccac4f8284cc7b5aba9",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "JiangApprovedHead_SaturatedBaseColor",
+          "bytes": 4818692,
+          "sha256": "345d59d59b7606dbd51a5c7a7aee30984cda6aca396542d2216c1d4e4235d997",
+          "size": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "texture_pbr_20250901_metallic-texture_pbr_20250901_roughnes",
+          "bytes": 1085016,
+          "sha256": "5b38758c4082b13b676b2334a649ca1bd707fec8527349b4bf7c511c1384575c",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "texture_pbr_20250901_normal",
+          "bytes": 484395,
+          "sha256": "958a40ff3949f1f38f9bb2d9db51d65e77e9675ecbdbe30ee8a7de8d86f3a41c",
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "TeaPatron_GreyGreen_DerivedBaseColor",
+          "bytes": 4562613,
+          "sha256": "37f724e92ac367f419c7dcaa36907ab246ddd65f6a54c759d226939a84d9b445",
+          "size": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "texture_pbr_20250901_metallic-texture_pbr_20250901_roughness",
+          "bytes": 865177,
+          "sha256": "165405c1f6f280c90d8c2eaa720316132b49450a2068bc2a326bdab692d11d9b",
+          "size": [
+            1024,
+            1024
+          ]
+        }
+      ],
+      "original_texture_payloads_retained_byte_exact": 5
+    }
+  ],
+  "import_profiles": [
+    {
+      "path": "res://assets/art/town_volume_cast/tea-seller.glb.import",
+      "sha256": "2511ca7837a1a16f9a31db72a2c3af2108b5af33da709aa86a22115644a70241",
+      "uid": "uid://c5yjp5wlhav46",
+      "engine": "Godot4.7.2stable",
+      "fps": 60,
+      "optimizer_enabled": false,
+      "compression_enabled": false,
+      "default_then_60fps_independent_import_and_final_glb_reimport_byte_stable": true
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-patron.glb.import",
+      "sha256": "97679e352ff3539df782413f6cb521123b9adab1a4313ec91b78f4df3fb6bbf3",
+      "uid": "uid://dnsye1ehnrbsy",
+      "engine": "Godot4.7.2stable",
+      "fps": 60,
+      "optimizer_enabled": false,
+      "compression_enabled": false,
+      "default_then_60fps_independent_import_and_final_glb_reimport_byte_stable": true
+    }
+  ],
+  "generators": [
+    {
+      "path": "res://tools/build_town_volume_seller.py",
+      "sha256": "24982e70fa434b5e234d7c9b1ac8f2b22d3b4ffa20fed0d200e2634731361452"
+    },
+    {
+      "path": "res://tools/build_town_volume_patron.py",
+      "sha256": "4cab8d98564ed02c8c675d474849bd13d459737d0a889d654e65bba5a252705f"
+    }
+  ],
+  "generator_shared_ik_dependency": "res://tools/build_town_volume_character.py",
+  "authored_changes": {
+    "tea_seller": [
+      "Broader shoulder/torso, smaller head, longer/wider lower jaw, subtler eyes and nasal projection; short knot, working headwrap, fine merchant facial hair.",
+      "Original detailed garment recolored through linear FLOAT_COLOR, complete right hand kept; original sword omitted.",
+      "Closed linen apron/bib/full pocket/straps, fitted waist tie with hanging ends, folded brown collar, hollow celadon cup and folded wiping cloth.",
+      "Fourteen-second22bone clip; fixed boot supports; modest torso breathing; left hand lifts and rubs cup at2–5s while cup stays attached to right hand."
+    ],
+    "tea_patron": [
+      "Independent short combed hair, low bun and headband, smaller head and edited face; no protagonist long tail or unsupported beard.",
+      "Grey-sage derived cloth albedo plus vertex tint; original normal/ORM and face albedo retained, brown-grey boots.",
+      "18969 source trouser vertices reweighted for a genuine seated pose; original robe panels drape around bent legs.",
+      "Twelve-second22bone tea clip, raised-hand stoneware cup; sip lift starts7s, lip hold7.65–8.6s, return by9.2s. Actual seat and supported soles remain still."
+    ]
+  },
+  "geometry_integrity": {
+    "old_full_payload_restore_called": false,
+    "intentional_face_body_rest_skin_changes_preserved": true,
+    "seller_actual_export_reimport_max_vertex_nearest_error_m": 7.246623567880306e-07,
+    "seller_actual_export_reimport_frames": [
+      0,
+      150,
+      210,
+      300,
+      600,
+      840
+    ],
+    "original_approved_source_sha_unchanged": true,
+    "approved_protagonist_protected_files": [
+      {
+        "path": "assets/art/town_volume_character/jiang-town.glb",
+        "sha256": "02a76e2d39963098fdeedae740853a9f12dbf28be658b4277309300b44caf399"
+      },
+      {
+        "path": "assets/art/town_volume_character/source.json",
+        "sha256": "2f5448e43a1b5c3f05a892e55780757cc578237c43c458373318099ee602726a"
+      },
+      {
+        "path": "addons/cultivation_mode/town_volume_character.gd",
+        "sha256": "f4cef22a4d246cbca17093100303fb592f1ea69e055b496588cf297b842895fb"
+      }
+    ],
+    "npc_source_geometry_is_not_claimed_byte_unchanged": true
+  },
+  "contact_and_motion_checks": {
+    "seller": {
+      "evaluated_surface_samples": 141,
+      "support_sole_max_drift_m": 0.0,
+      "support_sole_source_asymmetry_m": 0.00019122104276902974,
+      "full_mesh_loop_endpoint_error_m": 0.0,
+      "cloth_cup_nearest_surface_distance_range_m": [
+        0.0010837577283382416,
+        0.005138390231877565
+      ],
+      "cup_hand_nearest_surface_distance_range_m": [
+        2.8873764676973224e-06,
+        2.9435002488753526e-06
+      ],
+      "cup_skin_bone": "hand.R",
+      "cloth_skin_bone": "hand.L",
+      "cup_roughness": 0.38,
+      "notes": "Surface nearest distances verify contact proximity; they do not assert a collision-free articulated finger grasp. Fixed grip follows source hand geometry."
+    },
+    "patron": {
+      "evaluated_surface_samples": 122,
+      "seat_surface_max_drift_m": 0.0,
+      "support_sole_max_drift_m": 0.0,
+      "support_sole_source_asymmetry_m": 0.00019148638478199006,
+      "full_mesh_loop_endpoint_error_m": 0.0,
+      "lip_rim_nearest_vertex_distance_range_m": [
+        0.0017051021290908892,
+        0.0021512414812717264
+      ],
+      "cup_hand_max_nearest_vertex_distance_m": 0.0010565637374709406,
+      "actual_lip_vertices": [
+        537,
+        811,
+        563,
+        766,
+        564
+      ],
+      "lip_mean_at_8_1s_gltf_yup": [
+        0.0021919654682278633,
+        1.1155011177062988,
+        0.18713019788265228
+      ],
+      "cup_back_rim_at_8_1s_gltf_yup": [
+        0.0021997690200805664,
+        1.115551233291626,
+        0.1889714002609253
+      ],
+      "cup_skin_bone": "hand.R",
+      "cup_roughness": 0.35
+    }
+  },
+  "color_contract": {
+    "COLOR_0": "Linear normalized color values retained for the host Compatibility linear-to-sRGB material adapter; no second gamma bake.",
+    "new_materials": "Authored roughness distinguishes cloth from ceramic; host retains material values.",
+    "seller_textures": "All6 original embedded PNG payloads byte-exact.",
+    "patron_textures": "5 original PNG payloads byte-exact; only body albedo locally recolored, retained at2K. No raster generation."
+  },
+  "review_limits": [
+    "Host fixed-camera/native/Web checks belong to the root integration receipt, not this local asset QA.",
+    "Original approved source has close-up facial/garment cracked or fragmented surfaces; a direct original-source face close-up confirmed the facial network predates this derivative. Merchant collar covers much of broken neck rim but small white seams/source fragments remain.",
+    "Patron forehead/headband edge remains hard in close-up, and garment folds remain stylized; no claim of final production-wide art approval.",
+    "Source left/right boots differ in sole height by approximately0.19mm; no artificial per-frame root grounding was applied.",
+    "Patron10b lip-distance result selected a chin-shadow point and is explicitly invalid;10c was superseded to remove a sleeve-weight artifact. Only10d actual marked lip-line and corrected sleeve are used here."
+  ],
+  "qa_local_directory": "/home/x1-lite/games/shu/.local/qa/town-volume-cast-20261030",
+  "qa_records": {
+    "seller": "seller-authoring/candidate-09/seller-source.json",
+    "seller_export_roundtrip": "seller-authoring/candidate-09/actual-export-geometry-check.json",
+    "patron": "patron-authoring/final-candidate-10d/authoring-report.json",
+    "patron_actual_contacts": "patron-authoring/final-candidate-10d/actual-contact-and-motion.json",
+    "patron_actual_lip_marks": "patron-authoring/final-candidate-10d/mouth-landmark-confirmation.json",
+    "patron_hand_cup_landmarks": "patron-authoring/final-candidate-10d/hand-cup-landmarks.json",
+    "payload_readback": "final-payload-readback.json",
+    "stable_final_godot_import": "import-profiles-final.log"
+  },
+  "no_new_cloud_generation": true,
+  "downloads": 0,
+  "installs": 0,
+  "runtime_model_payloads_restored_from_original": false
+}

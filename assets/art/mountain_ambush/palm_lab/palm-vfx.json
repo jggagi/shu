@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "scope": "Presentation-only palm wind and dust study; no new gameplay skill",
+  "assets": {
+    "wind": "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-wind.png",
+    "dust": "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-dust.png",
+    "impact": "res://assets/art/mountain_ambush/palm_lab/effekseer/palm-wind-atlas.png"
+  },
+  "atlas": {
+    "columns": 8,
+    "rows": 3,
+    "frames": 24,
+    "frame_pixels": 256
+  },
+  "flight_seconds": 0.32,
+  "impact_seconds": 0.56,
+  "dust_seconds": 0.78,
+  "duration": 1.18,
+  "wind_size": 1.12,
+  "impact_size": 3.2,
+  "dust_size": 1.82,
+  "wind_color": "#d4e9df",
+  "dust_color": "#b9aa8f"
+}

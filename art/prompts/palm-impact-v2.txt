@@ -1,0 +1,13 @@
+shot_id: tinglan-palm-impact
+revision: v2 2026-10-25
+Feedback: V1 is a good start but visually insufficient. Small perfect air rings, frozen finger pose and weak impact do not convey a palm strike.
+Scope: one complete presentation-only palm demonstration in the existing mountain battle. No Rules/Session/save/HP/action/turn/objective changes. Existing scenery, Jiang identity, Tinglan original body/clothes/hair and right sword remain.
+Source route: existing fixed Tinglan 22-bone GLB; a separate authored Blender skeletal clip and original five-finger open left-hand variant. Native Godot 3D sampling, not generated video or a raster character sequence. No external model/image/video upload, cloud generation, paid calls or global installation.
+Motion: grounded anticipation and hip coil0-.38; decisive palm drive .38-.56; follow-through .56-.75; full idle return1.45. Left palm pushes; right sword stays down. First/last pose matches neutral, original skin meshes immutable.
+FX: original Effekseer asymmetric directional crescents/speed cuts, fixed seed finite32-frame premultiplied atlas; Material Maker existing true-GPU dust/air textures reused. A short broad coherent gust, not bubbles or a long laser. Wave starts at actual moving palm only at release; impact on a known empty tile, dust spreads along travel and settles.
+Scene: current Compatibility orthographic battle at1152x720 and960x600; same light environment. Restrained pale jade body, warm short impact core, earth-colored dust, one bounded temporary local light; no persistent world grading change.
+Timing: Stage owns a continuous clip/effect timeline. Charge .0-.56, detached gust .56-.78, impact .78, body recovers by1.45, dust finishes1.85. Confirm actual source anchors rather than pose-only math.
+Comparison: preserve v1 source files and18827; current new preview permits choosing new palm or old air-ring draft. Gameplay data and old sword skills unchanged.
+Review: readable anticipation, open palm silhouette, continuous body motion, short directional gust, distinct impact/settling; exact authority/actor/camera restore, busy input, repeat, reset, return. Native/PCK evidence separately from browser, physical input, audio and user aesthetic approval.
+
+Sound revision: two original seeded PCM cues (air/cloth release at.56 and low ground impact at.78), shared existing sound mute. No external recordings; runtime -12dB, finite players freed. Dummy scheduling/mute is separate from heard device audio.

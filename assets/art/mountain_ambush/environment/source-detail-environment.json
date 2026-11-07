@@ -1,0 +1,62 @@
+{
+  "status": "detail candidate awaiting user review",
+  "author": "Codex for Shu",
+  "scope": "Original local geometry and shaders, using unchanged CC0 natural models from the retained Quaternius Standard source",
+  "runtime_inputs": {
+    "layout": "res://assets/art/mountain_ambush/environment/layout.json",
+    "rock_shader": "res://addons/cultivation_mode/ambush_rock_detail.gdshader",
+    "road_shader": "res://addons/cultivation_mode/ambush_road_detail.gdshader"
+  },
+  "original_materials_record": "res://assets/art/mountain_ambush/environment/source-environment.json",
+  "pine_record": "res://assets/art/mountain_ambush/environment/source-detail-pine.json",
+  "recipe": {
+    "flagstones": 22,
+    "embedded_gravel": 260,
+    "wispy_grass": 22,
+    "gravel_authoring_seed": 20261025,
+    "gravel_positions": "Fixed in layout.json, no runtime scattering",
+    "new_raster_images": 0,
+    "new_cloud_calls": 0,
+    "new_dependency_installs": 0,
+    "cost": 0
+  },
+  "notes": [
+    "Near cliff mesh and strata/crevices detail, subdued moss/soil shader and batched shallow gravel/flagstones are original procedural geometry and code, not generated raster art.",
+    "Flagstones and embedded gravel stay below the original tile overlay, retaining the same flat gameplay plane.",
+    "The existing grass-b GLB is newly consumed; original mesh/texture bytes are unchanged. A local shared material copy grades grass at runtime.",
+    "Original 52 ProtonScatter transforms and their provenance remain unchanged.",
+    "Rock shader tint and gravel vertex colors use an explicit sRGB-to-linear conversion; flagstones use low moss to keep neutral stone distinct from reachable-cell teal.",
+    "Only the WindCrown node moves. Amplitude .035*.10*(sin(t+phase)-sin(phase)) stays within .007 radians, below the asset recommendation .008.",
+    "Battle polish keeps all environment geometry/textures and scatter transforms. Runtime grass copy tint is now (0.79,0.84,0.78); distance fog is authored in the stage, without volumetric fog."
+  ],
+  "source_hashes": {
+    "addons/cultivation_mode/ambush_environment.gd": "bdc5551c8735a0319e991a4c7867db55fa85a61a07fcbdf8c4b4bd667cdbfd71",
+    "addons/cultivation_mode/ambush_rock_detail.gdshader": "b39049e16ea12d189714987d7bb38b5e028d8b934d2f4b33daa87531f2e87744",
+    "addons/cultivation_mode/ambush_road_detail.gdshader": "d1c2bc98943ab8e6e8a2f803f972a005bc49bed7caf48d04023bf0d702fded43",
+    "assets/art/mountain_ambush/environment/layout.json": "d4481a2077f0014f6fba9c3d9b77b84c88c862497b88475ba99cb558a015079d"
+  },
+  "palm_sample_revision": "V2 only adds independent palm sampling, local preview zoom, finite pressure/dust/grit/bounce light and original cues; original lighting configuration, environment assets, Rules and gameplay remain unchanged.",
+  "workshop_consumer_revision": "Martial workshop v0.1 shares catalog-driven motion/FX player and local review desk. Original assets and authoring remain as recorded; prior frozen stages retain their original runtime.",
+  "control_rig_consumer_revision": "Two original/enhanced preview motion variants share the existing catalog/player. Original asset and authoring claims remain as recorded; frozen prior stages remain independent. Current validation is recorded separately.",
+  "readability_consumer_revision": "User accepted18831 and authorized whole-body footwork and existing playerstrike combat presentation. Optional shared step/plant/return template drives two enhanced22-bone clips; playerstrike visual mapping and same-step impact/70ms source hold preserve all battle rules and old stages.",
+  "sword_palm_consumer_revision": {
+    "authorization": "User accepted18832 then approved real palm skill and tactical sword/palm slice",
+    "scope": "Encounter adds tinglan/palm using existing deterministic push rules; explicit enhanced visual adapter, same-clock impact/hold/shove and landing collision. Original layout/HP and authored motion/catalog assets retained.",
+    "historical_records": "Earlier authoring and fullbody revision fields describe prior slices; this appended consumer revision binds current runtime without rewriting their history."
+  },
+  "battle_camera_consumer_revision": {
+    "authorization": "User requested mouse-controlled changing battle perspective",
+    "scope": "Bounded right/middle mouse drag orbit and wheel zoom, reset view; original orthographic projection and all battle rules/assets unchanged. Automatic attack focus restores the chosen user view; workshop preset cameras remain independent.",
+    "historical_records": "Earlier revision fields retain prior authoring/consumer history."
+  },
+  "art_detail_consumer_revision": {
+    "authorization": "User requested more detailed characters and scenery after liking the mouse-camera candidate",
+    "scope": "Locally authored procedural 3D refinement for the three enemies and road/rock/wood scenery; same-pose original/refined comparison. Approved hero models, motion clocks, Rules/Session/save, lighting, layout and camera contracts preserved. No downloaded or generated raster assets.",
+    "historical_records": "Earlier revision fields retain prior authoring/consumer history."
+  },
+  "staff_motion_consumer_revision": {
+    "authorization": "User approved one brute staff-motion sample: small rig, anticipation, attack, recovery, interruption and stagger, with comparison and slow playback",
+    "scope": "Locally authored brute-only16bone native Skeleton3D/IK, same-second motion comparison and slow preview. Staff Stage clock and existing recipe reaction clock drive poses. No imported animation/addon, Rigify, mocap or new asset download; Godot native API design referenced. Original heroes, gameplay rules, content0.5.1, environmental geometry/lighting and other enemies preserved.",
+    "historical_records": "Earlier revision fields retain prior authoring/consumer history."
+  }
+}

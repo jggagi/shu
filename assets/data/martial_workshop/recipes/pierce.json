@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "mode": "reuse",
+  "template": "sword_path",
+  "move": {
+    "id": "pierce",
+    "label": "穿云刺",
+    "description": "凝锋前送，剑气直穿。",
+    "category": "sword",
+    "style": "light",
+    "actor": "player",
+    "profile": "jiang22",
+    "preview_only": false,
+    "combat_skill": "pierce",
+    "animation": {
+      "asset": "res://assets/art/mountain_ambush/jiang-martial-clips.glb",
+      "clip": "CloudPierce",
+      "hand": "default",
+      "source_seconds": 0.32
+    },
+    "timing": {
+      "duration": 0.85,
+      "total": 0.85,
+      "release": 0.24,
+      "impact": 0.34,
+      "source_map": [
+        [
+          0,
+          0
+        ],
+        [
+          0.24,
+          0.065
+        ],
+        [
+          0.34,
+          0.13
+        ],
+        [
+          0.42,
+          0.13
+        ],
+        [
+          0.55,
+          0.225
+        ],
+        [
+          0.85,
+          0.32
+        ]
+      ]
+    },
+    "visual": {
+      "type": "blade",
+      "pattern": "pierce",
+      "config": {
+        "color": "#f1cd85",
+        "core_color": "#fff9df",
+        "dust_color": "#d8ccb3",
+        "life_seconds": 0.38,
+        "width": 0.1,
+        "core_width": 0.025,
+        "flight_start": 0.24,
+        "flight_seconds": 0.1,
+        "streak_count": 6,
+        "whoosh": "res://assets/art/mountain_ambush/skills/sfx/pierce-whoosh.wav",
+        "hit": "res://assets/art/mountain_ambush/skills/sfx/pierce-hit.wav"
+      }
+    },
+    "audio": {
+      "release": "res://assets/art/mountain_ambush/skills/sfx/pierce-whoosh.wav",
+      "impact": "res://assets/art/mountain_ambush/skills/sfx/pierce-hit.wav"
+    },
+    "camera": {
+      "zoom": 0.82
+    }
+  },
+  "source_manifests": [
+    "res://assets/art/mountain_ambush/source-martial-clips.json",
+    "res://assets/art/mountain_ambush/skills/source-skill-fx.json"
+  ],
+  "order": 0
+}

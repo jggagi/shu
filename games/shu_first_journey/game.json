@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "shu_first_journey",
+  "version": "0.6.0",
+  "title": "初次下山",
+  "subtitle": "一段可以走完的蜀山行记",
+  "description": "听师父点拨，任选一套剑法练习，再下山到茶摊接护药委托。山道胜败都会留下经历，返山复命即完成本章。剑术达到20：此行江砚秋体力+4。",
+  "initial_scene": "tingyu_corridor",
+  "initial_flags": {
+    "mentor_lesson_heard": false,
+    "mentor_lesson_accepted": false,
+    "breathing_hint": false,
+    "mentor_practice_finished": false,
+    "mentor_reported": false,
+    "town_visited": false,
+    "town_returned": false,
+    "town_observed": false,
+    "town_tea_greeted": false,
+    "town_sign_read": false,
+    "ambush_resolved": false,
+    "ambush_victory": false,
+    "ambush_defeat": false,
+    "journey_commission": false,
+    "journey_complete": false,
+    "journey_victory": false,
+    "journey_defeat": false
+  },
+  "theme": {
+    "accent": "#397C78",
+    "paper": "#F3EBDD"
+  },
+  "files": {
+    "rules": "rules.json",
+    "characters": "characters.json",
+    "scenes": "scenes.json",
+    "actions": "activities.json",
+    "events": "events.json",
+    "motions": "motions.json",
+    "voices": "voices.json",
+    "walks": "walks.json"
+  },
+  "source_note": "原创《蜀》首个完整短章的运行适配：复用既有有声师徒、五剑、山下集镇及已固定的山道护药对局。新增委托与结尾均为系统叙述，不增加人物对白，不自动确立长篇主线。旧包与旧档不迁移。",
+  "ambush": {
+    "encounter_path": "res://games/shu_mountain_ambush/encounter.json",
+    "encounter_sha256": "2bd455f9676073d377021cc6e8c6e8e4455dd72a1f182d1a188dfc5edad1c7d2"
+  },
+  "journey": {
+    "training_sword_threshold": 20,
+    "training_hp_bonus": 4,
+    "endings": {
+      "victory": {
+        "title": "初次下山 · 护药而归",
+        "text": "你把护药的经过如实记下：江砚秋与沈听岚守住了山道，药篓平安送回。听雨廊的这一日，从听教练剑开始，以第一次护住同行的人收束。\n\n本章完成。你仍可歇息、练剑，继续山中生活；重新开始可体验另一段经历。"
+      },
+      "defeat": {
+        "title": "初次下山 · 平安归来",
+        "text": "你把护药的经过如实记下：这一次护送没能完成，你们退回集镇，再平安返回师门。山道上的失手和撤回，也没有被你瞒下。听雨廊的这一日，以认清自己的不足收束。\n\n本章完成。你仍可歇息、练剑，继续山中生活；重新开始可体验另一段经历。"
+      }
+    }
+  }
+}

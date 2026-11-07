@@ -1,0 +1,13 @@
+Asset type: Offline-authored transparent palm-wind impact atlas and procedural dust/wind textures.
+Purpose: A presentation-only replay inside the current Mountain Ambush battlefield.
+Primary request: User agreed to Effekseer palm-wind impact + Material Maker dust texture prototype.
+Reference images: No external/reference image uploaded. Existing battlefield is the composition and palette reference.
+Scene/backdrop: Songfeng mountain road, warm afternoon light, pale cool distant mountains, restrained original Chinese wuxia art.
+Subject: Small advancing wind curl, then a short pale-cyan/warm-white expanding impact and low tan dust.
+Style/medium: Original native Effekseer Ring/Crescent effect; Material Maker stock seeded noise plus original editable shader.
+Composition/framing: Effect stays near an empty tile; retain transparent margins and readable nearby characters.
+Lighting/mood: Restrained brightness, no fullscreen flare. Keep ordinary depth testing and no new light.
+Color palette: Pale cyan, warm ivory, terrain-matching tan. Material Maker RGB neutral white; tint by native game material.
+Materials/textures: Effekseer premultiplied RGBA atlas; Material Maker straight RGBA soft dust and wind ring.
+Constraints: Reuse the existing interrupt pose only as a hand-position reference. Do not claim a new palm skill or animation. No Rules/Session/HP/action/time change. Use selected open-source offline tools, no cloud generation.
+Avoid: Opaque rectangle, black fringe, particle overload, large fireball, unreadable board, copied demo assets, invented tool-success claims.

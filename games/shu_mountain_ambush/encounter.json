@@ -1,0 +1,223 @@
+{
+  "id": "mountain_path_ambush",
+  "title": "山道护药",
+  "briefing": "江砚秋与沈听岚送药返山，三名来敌拦住山道。护住药篓四轮，或将来敌全部击退。 掌法击退能腾出通路，注意先后手。",
+  "width": 9,
+  "height": 7,
+  "survive_rounds": 4,
+  "obstacles": [
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      6,
+      4
+    ]
+  ],
+  "barricades": [
+    {
+      "id": "north_gate",
+      "name": "路口木栅",
+      "pos": [
+        6,
+        3
+      ],
+      "hp": 6,
+      "max_hp": 6
+    },
+    {
+      "id": "south_gate",
+      "name": "侧路木栅",
+      "pos": [
+        6,
+        5
+      ],
+      "hp": 6,
+      "max_hp": 6
+    }
+  ],
+  "objective": {
+    "name": "药篓",
+    "pos": [
+      4,
+      2
+    ],
+    "hp": 18,
+    "max_hp": 18
+  },
+  "skills": [
+    {
+      "id": "strike",
+      "label": "松风剑",
+      "description": "近身一剑，造成六点伤害。",
+      "effect": "strike",
+      "range": 1,
+      "damage": 6
+    },
+    {
+      "id": "push",
+      "label": "回澜剑",
+      "description": "造成三点伤害，击退两格并破坏敌人本轮进步。撞障碍额外两点伤害，近战攻击格随新位置改变。",
+      "effect": "push",
+      "range": 1,
+      "damage": 3,
+      "push_distance": 2,
+      "collision_bonus": 2
+    },
+    {
+      "id": "interrupt",
+      "label": "截脉指",
+      "description": "两格内造成两点伤害，打断敌人本轮的移动与攻击。",
+      "effect": "interrupt",
+      "range": 2,
+      "damage": 2
+    },
+    {
+      "id": "guard",
+      "label": "守势",
+      "description": "本轮每次受伤减少三点；仍可移动。",
+      "effect": "guard",
+      "range": 0,
+      "damage": 0
+    },
+    {
+      "id": "pierce",
+      "label": "穿云刺",
+      "description": "沿正前方两格贯穿，每名敌人受到四点伤害。山石木栅截断剑气，不伤同伴或药篓。",
+      "effect": "pierce",
+      "range": 2,
+      "damage": 4
+    },
+    {
+      "id": "sweep",
+      "label": "回风扫",
+      "description": "横扫正前方及两侧共三格，每名敌人受到三点伤害。不伤同伴或药篓，山石木栅阻挡。",
+      "effect": "sweep",
+      "range": 1,
+      "damage": 3
+    },
+    {
+      "id": "palm",
+      "label": "劲风掌",
+      "description": "两格内造成三点伤害，按预览箭头击退两格并破坏敌人本轮进步。撞障碍额外两点伤害；腾出的格子可供同伴移步追击。",
+      "effect": "push",
+      "range": 2,
+      "damage": 3,
+      "push_distance": 2,
+      "collision_bonus": 2
+    }
+  ],
+  "units": [
+    {
+      "id": "player",
+      "name": "江砚秋",
+      "team": "player",
+      "role": "swordsman",
+      "pos": [
+        3,
+        3
+      ],
+      "hp": 22,
+      "max_hp": 22,
+      "move_range": 3,
+      "skills": [
+        "strike",
+        "push",
+        "pierce",
+        "sweep",
+        "guard"
+      ]
+    },
+    {
+      "id": "tinglan",
+      "name": "沈听岚",
+      "team": "player",
+      "role": "disciple",
+      "pos": [
+        5,
+        5
+      ],
+      "hp": 18,
+      "max_hp": 18,
+      "move_range": 3,
+      "skills": [
+        "strike",
+        "interrupt",
+        "guard",
+        "palm"
+      ]
+    },
+    {
+      "id": "brute",
+      "name": "持棍客",
+      "team": "enemy",
+      "role": "brute",
+      "pos": [
+        4,
+        3
+      ],
+      "hp": 14,
+      "max_hp": 14,
+      "skills": [],
+      "attack": {
+        "label": "砸向药篓",
+        "effect": "melee",
+        "damage": 5,
+        "range": 1,
+        "move_range": 2,
+        "target": "objective"
+      }
+    },
+    {
+      "id": "blade",
+      "name": "刀客",
+      "team": "enemy",
+      "role": "blade",
+      "pos": [
+        5,
+        4
+      ],
+      "hp": 10,
+      "max_hp": 10,
+      "skills": [],
+      "attack": {
+        "label": "直线劈斩",
+        "effect": "line",
+        "damage": 5,
+        "range": 2,
+        "move_range": 2,
+        "target": "nearest_player"
+      }
+    },
+    {
+      "id": "archer",
+      "name": "弓手",
+      "team": "enemy",
+      "role": "archer",
+      "pos": [
+        7,
+        1
+      ],
+      "hp": 8,
+      "max_hp": 8,
+      "skills": [],
+      "attack": {
+        "label": "瞄准药篓",
+        "effect": "shot",
+        "damage": 3,
+        "range": 6,
+        "move_range": 1,
+        "target": "objective"
+      }
+    }
+  ],
+  "source": {
+    "rules_reference": "jggagi/chengping@a4a6c1cc1ed9ab4ad7d49291bc8b8d7222c9f6c6:src/combat/grid.gd,src/combat/combat_controller.gd",
+    "scope": "Selected rule concepts under user authorization; original Shu encounter, no Chengping GameState, character, story or asset import."
+  }
+}

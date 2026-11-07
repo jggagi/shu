@@ -1,0 +1,301 @@
+{
+  "schema": 1,
+  "date": "2026-11-07",
+  "scope": "Presentation integration into existing First Journey; no gameplay JSON or host imported",
+  "donor": {
+    "worktree": "/home/x1-lite/games/shu/.local/worktrees/town-polish",
+    "head": "7c992c578b1fe4a1624c769812425b38080771d3",
+    "dirty": true
+  },
+  "host": {
+    "head": "7c992c578b1fe4a1624c769812425b38080771d3",
+    "dirty": true
+  },
+  "files": {
+    "addons/cultivation_mode/town_hd2d_stage.gd": {
+      "sha256": "d50ec05d33f110bfec69f70a5f07ad950c07c029c224683c55c83fc31f319b9b",
+      "previous_sha256": "bdad51c8e1e3a181fd60540149e69cf6aa9df43a193d2969ccdfd755c93ae067"
+    },
+    "addons/cultivation_mode/town_hd2d_walker.gd": {
+      "sha256": "f23313a0b5ddaa421355f58d8617c322adbc92e54868e6cc6bc755ca25391187",
+      "previous_sha256": "9b728d839f4fbbf1be1c019c01872249ea34ca2078606be9fa3fc5c051d6dbbd"
+    },
+    "addons/cultivation_mode/town_natural_characters.gd": {
+      "sha256": "15534b45ff4e555025750ba3292b10e397b71985e9e9842c4cbd7bed3150d35f",
+      "previous_sha256": null
+    },
+    "addons/cultivation_mode/town_painted_street_art.gd": {
+      "sha256": "4b48c461bb19302b71c356fd4533e1e7f7f63bae405a55cf9a96fa67b2ba0594",
+      "previous_sha256": null
+    },
+    "addons/cultivation_mode/town_river_reflection.gd": {
+      "sha256": "08e4bd3d6124372914a18ba5529c3a830f0529e6ed462012a8b3bab7dfe8b237",
+      "previous_sha256": null
+    },
+    "addons/cultivation_mode/town_street_surface_art.gd": {
+      "sha256": "0e1abaa435ef12cff671b56ad148e9a09f79e3ac47234076f41a97fee77f4988",
+      "previous_sha256": null
+    },
+    "addons/cultivation_mode/town_tea_patron_life.gd": {
+      "sha256": "df5b566d0af4cb275dbd0a78aadb5c3b6f794c76ae2e302d34ccd24ed211537e",
+      "previous_sha256": null
+    },
+    "addons/cultivation_mode/town_tea_seller_life.gd": {
+      "sha256": "f48ef9cdc3f7e710883b1dc49a69d9e99de8a4b2c6f11be5a9fc1b2036a1aa8e",
+      "previous_sha256": null
+    },
+    "addons/cultivation_mode/town_tea_shop_art.gd": {
+      "sha256": "d8292efa115222cba6191b0fbaf15bf12020e6e5bc16d98694d50ab9a4c27c90",
+      "previous_sha256": null
+    },
+    "addons/cultivation_mode/town_volume_cast.gd": {
+      "sha256": "fdd513157296643fc2c7c4e0be38bf2ba22b69306bf3370f21196877f9a95de3",
+      "previous_sha256": null
+    },
+    "addons/cultivation_mode/town_volume_character.gd": {
+      "sha256": "f4cef22a4d246cbca17093100303fb592f1ea69e055b496588cf297b842895fb",
+      "previous_sha256": null
+    },
+    "art/prompts/tea-shop-inner-wall-reference-20261029.txt": {
+      "sha256": "337b2affc58fd7a0fdffd5d64518bc74251272e97bcc4f47144b55fddeb93e71",
+      "previous_sha256": null
+    },
+    "art/prompts/town-mountain-panorama-20261028.txt": {
+      "sha256": "8363a4a3082036c3d7fe022ad72ab97319617e982746a7e5897fa00df45bd862",
+      "previous_sha256": null
+    },
+    "art/prompts/town-natural-characters-20261030/character-calibration.txt": {
+      "sha256": "1c31423a309fd545c9fd35df8551a96607df00199671dfdbd3873b36321de9a7",
+      "previous_sha256": null
+    },
+    "art/prompts/town-painted-street-20261029/camera-locked-street.txt": {
+      "sha256": "907613e58825820f1aa5c431069acb9d679a0d1e03ce438aadc379e375202b29",
+      "previous_sha256": null
+    },
+    "art/prompts/town-product-art-20261029/a-song-celadon.txt": {
+      "sha256": "00108ebd808358d97e78a07bc109cf92010db2c0d661726c21e1a21e3a42cfa3",
+      "previous_sha256": null
+    },
+    "art/prompts/town-product-art-20261029/b-warm-paper.txt": {
+      "sha256": "4e44a45450badc277c25c5ce2c00e3d349e078ac4e54065eb9abddbe6a49abdb",
+      "previous_sha256": null
+    },
+    "art/source/town-product-shop-20261029.blend": {
+      "sha256": "ac92132f654eb5494fa4c03611bba5a57cdd3f7afada74ed399e3d7984f6528a",
+      "previous_sha256": null
+    },
+    "assets/art/shanxia_hd2d/player-walk.svg": {
+      "sha256": "1ec5b3cc4aa4e6c0ef7da57dcf630cb2a7745a65b58d54e540ae6755c3b437e1",
+      "previous_sha256": "db27a6c07a1cfd24409867a943d3b45872f2a826e4a852ebcb544335c456bed7"
+    },
+    "assets/art/shanxia_hd2d/source.json": {
+      "sha256": "757caf69864b9bb96b38364a67864dd61ef91a441a4936eebe1767d80a4c4817",
+      "previous_sha256": "98ce749dba38b5caab9e74f35760215a83aff35f76b9cc1407344e0a82b3ad01"
+    },
+    "assets/art/shanxia_hd2d/tea-seller-walk.svg": {
+      "sha256": "eb6b9e823db06f60931a7813c9656a5a71a0efbc5dd6e3571375c6880b267c3f",
+      "previous_sha256": "5dc58e3c40720fe99981bfe8e0534bf20d73368a1eb735f9e69794231f458fdd"
+    },
+    "assets/art/shanxia_polish/materials/flagstone-graygreen.svg": {
+      "sha256": "c7b71d80cd8e442c4eb88b254e05a11cb5e5bfbc6f411c58dbc97b9109b6e2b0",
+      "previous_sha256": null
+    },
+    "assets/art/shanxia_polish/materials/plaster-ivory.svg": {
+      "sha256": "9892ee08e9e3155708e2b02e3761def3675cfa6f197bbd48d414dee8cc451e40",
+      "previous_sha256": null
+    },
+    "assets/art/shanxia_polish/materials/roof-gray-teal.svg": {
+      "sha256": "cd590e49dbee28d317b3a0fc67b7436f1c07557951ac2d5884b08eac3b98c4d0",
+      "previous_sha256": null
+    },
+    "assets/art/shanxia_polish/materials/source.json": {
+      "sha256": "434ce638b73995f41d0b50a0f8fa17e533ba70af7530908f172499a222de1625",
+      "previous_sha256": null
+    },
+    "assets/art/shanxia_polish/materials/timber-honey.svg": {
+      "sha256": "2140f41728401907f4977ab5ccf38fbae71376a433c151095042eade7b0bdf7b",
+      "previous_sha256": null
+    },
+    "assets/art/shanxia_polish/mountain-panorama.png": {
+      "sha256": "6d1a6dd248486e99d41ffb9b21dfb7c231b03ded878f387af343b329d21514f4",
+      "previous_sha256": null
+    },
+    "assets/art/shanxia_polish/mountain-panorama.png.import": {
+      "sha256": "9efd22b31a91ffbd62c31370a12a547431a3f9c1c89b0d99ab7a87218386a67c",
+      "previous_sha256": null
+    },
+    "assets/art/shanxia_polish/source.json": {
+      "sha256": "cde8d8080c47e94f1bd55969b737813fae3890b75c7a6f31f1a7ac64139d105d",
+      "previous_sha256": null
+    },
+    "assets/art/shanxia_polish/tea-patron-source.json": {
+      "sha256": "60603da9bc24c2633dda72a4ba711c9e0873b897cca46fd90f7fe11224496e2f",
+      "previous_sha256": null
+    },
+    "assets/art/shanxia_polish/tea-patron.svg": {
+      "sha256": "387025950070fcf854dd9f5bae56052e6e0ab8ab3163c1fe5ff6e24d94ce5ecb",
+      "previous_sha256": null
+    },
+    "assets/art/shanxia_polish/tea-seller-life-source.json": {
+      "sha256": "59cceb85d36777cad2906112e03e711aec8d74bd90903ca291c63a46c3002b42",
+      "previous_sha256": null
+    },
+    "assets/art/shanxia_polish/tea-seller-life.svg": {
+      "sha256": "00c8da6673a9508b53ef8be506f24750734aa77a7d7ad63bf66184605fe16142",
+      "previous_sha256": null
+    },
+    "assets/art/shanxia_polish/tea-shop-inner-wall-reference.png": {
+      "sha256": "bb240bd661ea3ebd263b421a494f0deb732f9f98788c677951954353c7a21080",
+      "previous_sha256": null
+    },
+    "assets/art/shanxia_polish/tea-shop-inner-wall-source.json": {
+      "sha256": "f54c13a6837e1eb97cd56511594d167b6461f18bf1531b2ea9584f3e333c5168",
+      "previous_sha256": null
+    },
+    "assets/art/shanxia_polish/willow-source.json": {
+      "sha256": "c4e42730be2959a03411cf7afeecdd1fd473e82c7dd0adc9929a59b82e3507d9",
+      "previous_sha256": null
+    },
+    "assets/art/shanxia_polish/willow.svg": {
+      "sha256": "e04406f5afeae1a8ed9e5f27c5bc819d6c9558ab02d93920ecf477781ae38828",
+      "previous_sha256": null
+    },
+    "assets/art/town_natural_characters/player-motion.svg": {
+      "sha256": "cb64161308213c6a9a0dc4616802e87a9e7ce313e9020ff94c99b00055abecbb",
+      "previous_sha256": null
+    },
+    "assets/art/town_natural_characters/source.json": {
+      "sha256": "87546d14005e387d90b152f394061a81f3b14cc815e01660022cbefc3bd0da77",
+      "previous_sha256": null
+    },
+    "assets/art/town_natural_characters/tea-patron.svg": {
+      "sha256": "53f1d9f34df99f7c32c9fbe87082b154340932f078688ef7b5be4af7f341078d",
+      "previous_sha256": null
+    },
+    "assets/art/town_natural_characters/tea-seller-life.svg": {
+      "sha256": "b720da0fb6a2543594ba1baea311ca89ad5f5b1e2673266b19942f9e405134b8",
+      "previous_sha256": null
+    },
+    "assets/art/town_painted_street/painted-street.png": {
+      "sha256": "6656fe35aa44d9e6a7a0f05e3cc3705a1ccb214cf8d38537d164d8d31748500b",
+      "previous_sha256": null
+    },
+    "assets/art/town_painted_street/palette-source.json": {
+      "sha256": "c8b8c118758d574590fcb82056ac24d213d26a779f8155dd0d506392c28fc975",
+      "previous_sha256": null
+    },
+    "assets/art/town_painted_street/source.json": {
+      "sha256": "7fba05c5122e1ef7d2184f8383cbfce92cb2aeb431c2279d32e69846fe104f4c",
+      "previous_sha256": null
+    },
+    "assets/art/town_painted_street/tea-seller-life.svg": {
+      "sha256": "30682e577495d15f4309f3ca4eca5a15801fa1de8fc7d6b4a4ecf1c30d8ad55a",
+      "previous_sha256": null
+    },
+    "assets/art/town_product_shop/plaster-wash.png": {
+      "sha256": "9092c74a8870f1977741e3fb0daccc727aff53e7760c11772b0afdd912da796a",
+      "previous_sha256": null
+    },
+    "assets/art/town_product_shop/roof-wash.png": {
+      "sha256": "9f16d05287bf05d284fce9ff785c0dc60b6ad954684286b0d496607a025afd63",
+      "previous_sha256": null
+    },
+    "assets/art/town_product_shop/source.json": {
+      "sha256": "74c07b76504af31345bb49317cdc1781b9422cf1e2dcff1411a8c62394c8993f",
+      "previous_sha256": null
+    },
+    "assets/art/town_product_shop/stone-wash.png": {
+      "sha256": "00491a5438e400e7a697eb738767119940253e1c42a9a3f114529779455b5aaa",
+      "previous_sha256": null
+    },
+    "assets/art/town_product_shop/timber-wash.png": {
+      "sha256": "0e04421d4e042aba8ced58b8d31c5af5224775e1eed376781f3f411f7cd4b1e1",
+      "previous_sha256": null
+    },
+    "assets/art/town_product_shop/town-product-shop.glb": {
+      "sha256": "b122622c86ee96d2e78722a313990274c6cf2810de3b04066474b7d957bbf0c5",
+      "previous_sha256": null
+    },
+    "assets/art/town_volume_cast/source.json": {
+      "sha256": "4d1fd5f1998559a7195a8eb790b1a862ade645c098e7e62fc767656d59956b08",
+      "previous_sha256": null
+    },
+    "assets/art/town_volume_cast/tea-patron.glb": {
+      "sha256": "506caf389c66a6db054170593df630f26a638c5f53200b7e31d8569a95db52a1",
+      "previous_sha256": null
+    },
+    "assets/art/town_volume_cast/tea-patron.glb.import": {
+      "sha256": "97679e352ff3539df782413f6cb521123b9adab1a4313ec91b78f4df3fb6bbf3",
+      "previous_sha256": null
+    },
+    "assets/art/town_volume_cast/tea-seller.glb": {
+      "sha256": "a1dfdfaba3f05ab3909100e0569981316f2fdf1fb05de8069c9364599cc6ccde",
+      "previous_sha256": null
+    },
+    "assets/art/town_volume_cast/tea-seller.glb.import": {
+      "sha256": "2511ca7837a1a16f9a31db72a2c3af2108b5af33da709aa86a22115644a70241",
+      "previous_sha256": null
+    },
+    "assets/art/town_volume_character/jiang-town.glb": {
+      "sha256": "02a76e2d39963098fdeedae740853a9f12dbf28be658b4277309300b44caf399",
+      "previous_sha256": null
+    },
+    "assets/art/town_volume_character/jiang-town.glb.import": {
+      "sha256": "e3c706310ad8896137eccadb670e718303df8f4cd24a6d68f72de5e0bd84e885",
+      "previous_sha256": null
+    },
+    "assets/art/town_volume_character/source.json": {
+      "sha256": "2f5448e43a1b5c3f05a892e55780757cc578237c43c458373318099ee602726a",
+      "previous_sha256": null
+    },
+    "tools/build_town_hd2d_characters.py": {
+      "sha256": "7df48b969ad859b19d6df63b9b1ba778e62eab14b4aeed7e1a2513d537916273",
+      "previous_sha256": "6b5c6680f2b481f37024ffc3621399fd0fea66fac7f0068bb1518178e82bdaab"
+    },
+    "tools/build_town_natural_characters.py": {
+      "sha256": "61001e6730decd3d243e0f48b2e7533ce5075a6cf7dd56234c4b5b7d945309e0",
+      "previous_sha256": null
+    },
+    "tools/build_town_painted_characters.py": {
+      "sha256": "f10b35865b6f26fb00d363f1c1c21be2abeeaf286ad09af9f9f0d45bcf20990b",
+      "previous_sha256": null
+    },
+    "tools/build_town_product_shop.py": {
+      "sha256": "be03e82854f20a14bc6ffc7922f9c375eab6b9ac552c40b7ad21b53c4f9bd57a",
+      "previous_sha256": null
+    },
+    "tools/build_town_street_materials.py": {
+      "sha256": "28924db49c4d928dad9dda9d231257a0c1f2fa2221b544b761f32f577ddaa101",
+      "previous_sha256": null
+    },
+    "tools/build_town_tea_patron.py": {
+      "sha256": "f1053dc254d79262aba1968aa4086d0150ff5b22b394923c6ca8f65e4b82163b",
+      "previous_sha256": null
+    },
+    "tools/build_town_tea_seller_life.py": {
+      "sha256": "f590648b9e94cbd75642c9ee88a53c76bc95987872ee21e02f5a13ac61be6d5e",
+      "previous_sha256": null
+    },
+    "tools/build_town_volume_character.py": {
+      "sha256": "b63e64e432d8b8b408b9d30e104bbc949d203fe144d1ddb5c7a170f33316d76b",
+      "previous_sha256": null
+    },
+    "tools/build_town_volume_patron.py": {
+      "sha256": "4cab8d98564ed02c8c675d474849bd13d459737d0a889d654e65bba5a252705f",
+      "previous_sha256": null
+    },
+    "tools/build_town_volume_seller.py": {
+      "sha256": "24982e70fa434b5e234d7c9b1ac8f2b22d3b4ffa20fed0d200e2634731361452",
+      "previous_sha256": null
+    },
+    "tools/build_town_willow.py": {
+      "sha256": "e462e417d5504b8237a3550ee87418066cfb8d333f8248f958d8f2b98cfb2351",
+      "previous_sha256": null
+    }
+  },
+  "limits": [
+    "NPC close-up art remains a candidate",
+    "Fixed painted environment; no free camera rotation",
+    "Existing source use terms retained; no new license granted"
+  ]
+}

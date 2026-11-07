@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "status": "Local tools sample candidate; user visual acceptance pending",
+  "author": "Original Shu effect authored by Codex from user-approved brief",
+  "scope": "Presentation-only replay on empty ground. No damage, action, objective, host, save or turn mutation. Existing Tinglan interrupt pose reused; full palm animation not authored.",
+  "assets": {
+    "effekseer": "effekseer/source-effekseer.json",
+    "material_maker": "material_maker/source.json",
+    "runtime": "palm-vfx.json"
+  },
+  "runtime_contract": {
+    "clock": "Stage process drives step once; helper has no autonomous process",
+    "max_transient_nodes": 5,
+    "repeat_cleanup": "Natural finish or tree exit frees transient nodes",
+    "atlas_alpha": "Effekseer Recorder premultiplied RGBA, blend_premul_alpha; raw RGB sampled once",
+    "material_alpha": "Material Maker straight RGBA; normal alpha",
+    "new_audio": false,
+    "new_lights": false,
+    "new_rules": false
+  },
+  "tool_boundary": "Authoring tools run offline. No native plugin, tool binary or editor SDK is included in Web runtime. Exact versions, SHA and authoring warnings are in tool sidecars.",
+  "new_cloud_calls": false,
+  "new_dependency_installs": false,
+  "cost_rmb": 0,
+  "source_hashes": {
+    "addons/cultivation_mode/ambush_palm_vfx.gd": "0912ec14eac3fb62db027ae4d5df1983c16de36368fc7498eab32ad44d7753a7",
+    "addons/cultivation_mode/ambush_stage.gd": "5cf82cff818e2c5add0de7ce89fe36c0a17b84c8aa70a6df84c4a4379d2c8120",
+    "addons/cultivation_mode/ambush_view.gd": "169577d1cbc95c0f08c91467f3c6708a7c8be703c33c20153a73e3973e19e712",
+    "tools/build_cultivation_engine.py": "b093d1999af5f32e455998ea82642fed9e851548036e70d6d75b50ac1c9cc2ee",
+    "tools/hero_lookdev/build_palm_effekseer.py": "9bc3d7b7e3d90d39aeb07f80deb02348a571b7cfb39ce17ddd3c633df855a3dc",
+    "tools/hero_lookdev/build_palm_material_textures.py": "df8c367a9bbc0d3539962487de2cab9b22717ba70238ca7f91eb8f58e070955f",
+    "tests/cultivation_ambush_palm_vfx_ui_test.gd": "be0084c76d19b82de5dbfc11099b98a9c23366936fc0f0fb2921ad205c3582e1",
+    "art/prompts/palm-vfx-tool-sample.txt": "8ef120f984aa5a2c794321ad177c147f52e3488c6c1e9b19834cebe6cd6d0e18",
+    "assets/art/mountain_ambush/palm_lab/effekseer/LICENSE_EFFEKSEER_TOOL.txt": "e32cc7be243d939dec49776382cd458d05367a88fd8a0d497cda0550e2b6fb23",
+    "assets/art/mountain_ambush/palm_lab/effekseer/README.txt": "5482b6b5d45e63386da6b002e3c0b43a12678892e0ec4e39c7134552cc7991ae",
+    "assets/art/mountain_ambush/palm_lab/effekseer/palm-wind-atlas.png": "9d5890190606da5b93e441e21da3b12d7e4c92cc4d220885d082452f834f0189",
+    "assets/art/mountain_ambush/palm_lab/effekseer/palm-wind.efk": "3d89c05c6fc85c5b62e7b0c5e1c567fd7c2be907cbf84c37fbd28e666cf1e441",
+    "assets/art/mountain_ambush/palm_lab/effekseer/palm-wind.efkefc": "c261d1aac346d9e7fdea499c80bbbefd40f6f04025367bc989101beb99923488",
+    "assets/art/mountain_ambush/palm_lab/effekseer/palm-wind.efkproj": "d339a64a27863d59ef147b4e0bf58c7cf23b632befbdb942eb34ca59ecde555f",
+    "assets/art/mountain_ambush/palm_lab/effekseer/source-effekseer.json": "31aa54316ce8b28c89de17abe479ba52e3341b6aa52e83b34558972041fad54e",
+    "assets/art/mountain_ambush/palm_lab/material_maker/MaterialMaker-LICENSE.md": "db17817a68e6c06c3aba6242d50ec34285c02f1ada4fbd8cd7382110f95c09de",
+    "assets/art/mountain_ambush/palm_lab/material_maker/README.md": "a506c735e367dbc9f4eae9e081649a5c15dab40410270c8b3cc1fed2bd086b1e",
+    "assets/art/mountain_ambush/palm_lab/material_maker/material-maker-1.8-cli-shutdown.patch": "30355b56b11775335fa0e45f328fc1be87fc89d5ff8f75d8ed65fdb444286533",
+    "assets/art/mountain_ambush/palm_lab/material_maker/material-maker-1.8-source-runner.json": "de79f7c913ff5688708b11f669b7b9c1a879d3b313e1a892b42f8e6a7c03e13f",
+    "assets/art/mountain_ambush/palm_lab/material_maker/palm-dust.png": "5bdab156960619d2b521ff4efc7f0b2fbb1517725b6938b7c5fe45c666f303e3",
+    "assets/art/mountain_ambush/palm_lab/material_maker/palm-materials.ptex": "d74edf66dc3ccd90a31cfdd33ee8e77e3f45097d4462b5b5b92f015e916590ac",
+    "assets/art/mountain_ambush/palm_lab/material_maker/palm-wind.png": "76c7fd427ef69324642c5178a56e30f6a2f8b7ccb68956896c56fbc1218abc4b",
+    "assets/art/mountain_ambush/palm_lab/palm-vfx.json": "fe6d0db9de95324d8d78432cbd1925a75fc8f54ff15d318623e60c9a5de5e6f7",
+    "assets/art/mountain_ambush/palm_lab/material_maker/source.json": "329d19ce2b71d3688834e32b66b5990004b615d23a46ca8eedeed3ad93f0f183"
+  },
+  "consumer_revision": "V2 adds an independent dedicated palm presentation; this record still describes the retained V1 tool assets and helper. Original V1 stage preserves its previous runtime SHA.",
+  "workshop_consumer_revision": "Martial workshop v0.1 shares catalog-driven motion/FX player and local review desk. Original assets and authoring remain as recorded; prior frozen stages retain their original runtime.",
+  "control_rig_consumer_revision": "Two original/enhanced preview motion variants share the existing catalog/player. Original asset and authoring claims remain as recorded; frozen prior stages remain independent. Current validation is recorded separately.",
+  "readability_consumer_revision": "User accepted18831 and authorized whole-body footwork and existing playerstrike combat presentation. Optional shared step/plant/return template drives two enhanced22-bone clips; playerstrike visual mapping and same-step impact/70ms source hold preserve all battle rules and old stages.",
+  "sword_palm_consumer_revision": {
+    "authorization": "User accepted18832 then approved real palm skill and tactical sword/palm slice",
+    "scope": "Encounter adds tinglan/palm using existing deterministic push rules; explicit enhanced visual adapter, same-clock impact/hold/shove and landing collision. Original layout/HP and authored motion/catalog assets retained.",
+    "historical_records": "Earlier authoring and fullbody revision fields describe prior slices; this appended consumer revision binds current runtime without rewriting their history."
+  },
+  "battle_camera_consumer_revision": {
+    "authorization": "User requested mouse-controlled changing battle perspective",
+    "scope": "Bounded right/middle mouse drag orbit and wheel zoom, reset view; original orthographic projection and all battle rules/assets unchanged. Automatic attack focus restores the chosen user view; workshop preset cameras remain independent.",
+    "historical_records": "Earlier revision fields retain prior authoring/consumer history."
+  },
+  "art_detail_consumer_revision": {
+    "authorization": "User requested more detailed characters and scenery after liking the mouse-camera candidate",
+    "scope": "Locally authored procedural 3D refinement for the three enemies and road/rock/wood scenery; same-pose original/refined comparison. Approved hero models, motion clocks, Rules/Session/save, lighting, layout and camera contracts preserved. No downloaded or generated raster assets.",
+    "historical_records": "Earlier revision fields retain prior authoring/consumer history."
+  },
+  "staff_motion_consumer_revision": {
+    "authorization": "User approved one brute staff-motion sample: small rig, anticipation, attack, recovery, interruption and stagger, with comparison and slow playback",
+    "scope": "Locally authored brute-only16bone native Skeleton3D/IK, same-second motion comparison and slow preview. Staff Stage clock and existing recipe reaction clock drive poses. No imported animation/addon, Rigify, mocap or new asset download; Godot native API design referenced. Original heroes, gameplay rules, content0.5.1, environmental geometry/lighting and other enemies preserved.",
+    "historical_records": "Earlier revision fields retain prior authoring/consumer history."
+  }
+}

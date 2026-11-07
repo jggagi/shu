@@ -1,0 +1,63 @@
+{
+  "status": "P3a Songfeng unified lighting candidate",
+  "author": "Shu local scene lighting adaptation",
+  "implementation": "Godot 4.7.2 built-in Compatibility directional lighting and PCF shadows; original authored light profiles and UI only",
+  "profile_resource": "res://assets/art/mountain_ambush/environment/lighting.json",
+  "references": [
+    "https://github.com/godotengine/godot-demo-projects/tree/master/3d/lights_and_shadows",
+    "https://docs.godotengine.org/en/4.7/tutorials/3d/environment_and_post_processing.html#screen-space-ambient-occlusion-ssao",
+    "https://github.com/godotengine/godot/blob/4.7/drivers/gles3/shaders/effects/post.glsl"
+  ],
+  "copied_third_party_code": false,
+  "copied_demo_assets": false,
+  "new_textures_or_models": false,
+  "new_dependency_installs": 0,
+  "new_cloud_calls": 0,
+  "cost_rmb": 0,
+  "notes": [
+    "Original profile values remain unchanged. Enhanced profile uses a less saturated warm sun (#fff2df/.80), cool ambient (#bccbd0/.28) and fill (#b5cad8/.09).",
+    "The same lights shade approved actors, refined original procedural enemies and scenery. All model and imported texture payloads remain unchanged.",
+    "The stage adds Compatibility depth fog from 24 to 54 metres, sky contribution zero, to soften distant ridges. This is ordinary distance fog, not volumetric fog.",
+    "SSAO and global Glow remain disabled; no LightmapGI, built-in DOF or renderer change.",
+    "Attack choreography, local camera focus and UI layout are presentation only, preserving rules and host settlement."
+  ],
+  "source_hashes": {
+    "addons/cultivation_mode/ambush_stage.gd": "5cf82cff818e2c5add0de7ce89fe36c0a17b84c8aa70a6df84c4a4379d2c8120",
+    "addons/cultivation_mode/ambush_view.gd": "169577d1cbc95c0f08c91467f3c6708a7c8be703c33c20153a73e3973e19e712",
+    "assets/art/mountain_ambush/environment/lighting.json": "3b34133105a728038a1fc763fd2c0f56cd8a25f373c0409d18205053be58fa64"
+  },
+  "prior_slice_notes": [
+    "Original profile reproduces 18822 light, environment and shadow settings; the extra fill is hidden.",
+    "Both combat actors and scenery share the same world lights, without changing any model or material payload.",
+    "Simplified SSAO was evaluated at 0.10/0.65 and 0.035/0.28 radius/intensity. Actual orthographic scene captures show visible false creases on layered distant mountains, so SSAO is disabled in both shipped profiles.",
+    "No PCSS, SSIL, volumetric fog or LightmapGI was introduced. Shadow bias is tuned for contact; shadow distance does not tighten the shadow frustum of this orthographic camera.",
+    "The comparison changes presentation only, without modifying gameplay, saves or the environment clock.",
+    "P3a barricade updates bind the current Stage/View consumers; all light profiles, renderer settings and existing scenery assets remain byte-identical to the unified-lighting slice.",
+    "P3a combat-light experiment binds current Stage/View consumers only; existing environment profiles, scenery assets, barricade definitions and settlement remain unchanged.",
+    "Action-tempo feedback: current Stage uses a local 0.65 attack/recoil playback rate. Ordinary movement, idle, environment clock and profile values stay unchanged."
+  ],
+  "palm_sample_revision": "V2 only adds independent palm sampling, local preview zoom, finite pressure/dust/grit/bounce light and original cues; original lighting configuration, environment assets, Rules and gameplay remain unchanged.",
+  "workshop_consumer_revision": "Martial workshop v0.1 shares catalog-driven motion/FX player and local review desk. Original assets and authoring remain as recorded; prior frozen stages retain their original runtime.",
+  "control_rig_consumer_revision": "Two original/enhanced preview motion variants share the existing catalog/player. Original asset and authoring claims remain as recorded; frozen prior stages remain independent. Current validation is recorded separately.",
+  "readability_consumer_revision": "User accepted18831 and authorized whole-body footwork and existing playerstrike combat presentation. Optional shared step/plant/return template drives two enhanced22-bone clips; playerstrike visual mapping and same-step impact/70ms source hold preserve all battle rules and old stages.",
+  "sword_palm_consumer_revision": {
+    "authorization": "User accepted18832 then approved real palm skill and tactical sword/palm slice",
+    "scope": "Encounter adds tinglan/palm using existing deterministic push rules; explicit enhanced visual adapter, same-clock impact/hold/shove and landing collision. Original layout/HP and authored motion/catalog assets retained.",
+    "historical_records": "Earlier authoring and fullbody revision fields describe prior slices; this appended consumer revision binds current runtime without rewriting their history."
+  },
+  "battle_camera_consumer_revision": {
+    "authorization": "User requested mouse-controlled changing battle perspective",
+    "scope": "Bounded right/middle mouse drag orbit and wheel zoom, reset view; original orthographic projection and all battle rules/assets unchanged. Automatic attack focus restores the chosen user view; workshop preset cameras remain independent.",
+    "historical_records": "Earlier revision fields retain prior authoring/consumer history."
+  },
+  "art_detail_consumer_revision": {
+    "authorization": "User requested more detailed characters and scenery after liking the mouse-camera candidate",
+    "scope": "Locally authored procedural 3D refinement for the three enemies and road/rock/wood scenery; same-pose original/refined comparison. Approved hero models, motion clocks, Rules/Session/save, lighting, layout and camera contracts preserved. No downloaded or generated raster assets.",
+    "historical_records": "Earlier revision fields retain prior authoring/consumer history."
+  },
+  "staff_motion_consumer_revision": {
+    "authorization": "User approved one brute staff-motion sample: small rig, anticipation, attack, recovery, interruption and stagger, with comparison and slow playback",
+    "scope": "Locally authored brute-only16bone native Skeleton3D/IK, same-second motion comparison and slow preview. Staff Stage clock and existing recipe reaction clock drive poses. No imported animation/addon, Rigify, mocap or new asset download; Godot native API design referenced. Original heroes, gameplay rules, content0.5.1, environmental geometry/lighting and other enemies preserved.",
+    "historical_records": "Earlier revision fields retain prior authoring/consumer history."
+  }
+}

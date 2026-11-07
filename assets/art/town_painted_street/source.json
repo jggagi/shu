@@ -1,0 +1,23 @@
+{
+  "title": "Shu camera-calibrated painted street key-art sample",
+  "date": "2026-10-29",
+  "provider": "codex-imagegen",
+  "model": null,
+  "author": "Codex built-in imagegen, original scene reference authored for Shu",
+  "rights": "Original project key-art calibration; no commercial game imagery or downloaded art. Existing Shu camera capture and original A concept only.",
+  "status": "candidate in-game painted-scene calibration sample; user visual approval pending",
+  "prompt": "art/prompts/town-painted-street-20261029/camera-locked-street.txt",
+  "composition_reference": "docs/concepts/town-painted-street-20261029/camera-environment-1280.png",
+  "landmarks": "docs/concepts/town-painted-street-20261029/camera-landmarks.json",
+  "style_reference": "docs/concepts/town-product-art-20261029/a-song-celadon.png",
+  "reference_roles": "Camera capture is geometry/perspective edit target; A only style reference, not a layout source. New picture contains environment/furniture only, no baked actors.",
+  "output": "res://assets/art/town_painted_street/painted-street.png",
+  "sha256": {
+    "painted-street.png": "6656fe35aa44d9e6a7a0f05e3cc3705a1ccb214cf8d38537d164d8d31748500b",
+    "camera_reference": "ab8755d85a83539450168dddac23bc7fbb0516b35d796c0b203b3257ffc4fe1c",
+    "style_reference": "c0a25c502d47c810f74576c03d1a102e4589dbb1f2b55ab89fe01f01fee9aa1a",
+    "prompt": "907613e58825820f1aa5c431069acb9d679a0d1e03ce438aadc379e375202b29"
+  },
+  "rendering_scope": "Fixed camera painting and opaque screen-projected depth proxies; baked environment light/reflections. Not a fully relightable or freely rotatable 3D town. Existing actor sprites and gameplay retained.",
+  "backend_scope": "One camera-calibrated key-scene reference using built-in imagegen; Qwen remains unconfigured; no batch production or paid API fallback."
+}

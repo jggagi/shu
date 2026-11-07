@@ -1,0 +1,125 @@
+{
+  "title": "Shu original tea seller small cup-work gesture",
+  "date": "2026-10-29",
+  "author": "Codex, authored for Shu",
+  "method": "Native SVG extension of the existing original town seller. Exact shared head/body/apron/feet authoring; replacement working sleeve/hand/cup/cloth vectors only. No raster image generation or external image inputs.",
+  "license": "Project-original; no third-party character or image assets copied",
+  "generator": "tools/build_town_tea_seller_life.py",
+  "generator_sha256": "f590648b9e94cbd75642c9ee88a53c76bc95987872ee21e02f5a13ac61be6d5e",
+  "base_generator": "tools/build_town_hd2d_characters.py",
+  "base_generator_sha256": "7df48b969ad859b19d6df63b9b1ba778e62eab14b4aeed7e1a2513d537916273",
+  "base_walk_sheet": "res://assets/art/shanxia_hd2d/tea-seller-walk.svg",
+  "base_walk_sheet_sha256": "eb6b9e823db06f60931a7813c9656a5a71a0efbc5dd6e3571375c6880b267c3f",
+  "file": "res://assets/art/shanxia_polish/tea-seller-life.svg",
+  "sha256": "00c8da6673a9508b53ef8be506f24750734aa77a7d7ad63bf66184605fe16142",
+  "bytes": 28242,
+  "canvas": [
+    480,
+    112
+  ],
+  "cell_size": [
+    80,
+    112
+  ],
+  "foot_anchor": [
+    40,
+    104
+  ],
+  "anchor_origin": "top-left of each cropped frame, pixels",
+  "recommended_world_height": 1.55,
+  "facing": "down; standing work pose only; legacy walk sheet still supplies all walking/directions",
+  "frames": [
+    {
+      "index": 0,
+      "id": "hold_rest",
+      "crop": [
+        0,
+        0,
+        80,
+        112
+      ],
+      "foot_anchor": [
+        40,
+        104
+      ]
+    },
+    {
+      "index": 1,
+      "id": "hold_lift",
+      "crop": [
+        80,
+        0,
+        80,
+        112
+      ],
+      "foot_anchor": [
+        40,
+        104
+      ]
+    },
+    {
+      "index": 2,
+      "id": "hold_ready",
+      "crop": [
+        160,
+        0,
+        80,
+        112
+      ],
+      "foot_anchor": [
+        40,
+        104
+      ]
+    },
+    {
+      "index": 3,
+      "id": "wipe_right",
+      "crop": [
+        240,
+        0,
+        80,
+        112
+      ],
+      "foot_anchor": [
+        40,
+        104
+      ]
+    },
+    {
+      "index": 4,
+      "id": "wipe_across",
+      "crop": [
+        320,
+        0,
+        80,
+        112
+      ],
+      "foot_anchor": [
+        40,
+        104
+      ]
+    },
+    {
+      "index": 5,
+      "id": "wipe_return",
+      "crop": [
+        400,
+        0,
+        80,
+        112
+      ],
+      "foot_anchor": [
+        40,
+        104
+      ]
+    }
+  ],
+  "timing": {
+    "period_seconds": 14.0,
+    "gesture_start_seconds": 2.0,
+    "gesture_duration_seconds": 3.0,
+    "time_authority": "caller existing ambient_elapsed; helper owns no clock, game state or persistence"
+  },
+  "presentation_notes": "Cup stays below chin; cloth wipes the held cup, not the counter. No head/body bobbing and no moving contact feet. Caller freezes ambient_elapsed during Static/Busy; helper samples that same frozen phase.",
+  "status": "implementation candidate; rendered vector inspection, in-scene and user visual acceptance pending"
+}

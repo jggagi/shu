@@ -6,3 +6,6 @@
 # Preserve upstream motion source bytes and provenance hashes, including CRLF and spacing.
 assets/data/sword_mocap/source/*.asf -text -diff
 assets/data/sword_mocap/source/*.amc -text -diff
+
+# Keep the upstream license bytes referenced by the frozen source hashes.
+assets/art/mountain_ambush/environment/License_Quaternius_CC0.txt -text

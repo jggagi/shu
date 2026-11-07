@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "mode": "reuse",
+  "template": "sword_path",
+  "move": {
+    "id": "sweep",
+    "label": "回风扫",
+    "description": "转腰横抹，剑弧回风。",
+    "category": "sword",
+    "style": "light",
+    "actor": "player",
+    "profile": "jiang22",
+    "preview_only": false,
+    "combat_skill": "sweep",
+    "animation": {
+      "asset": "res://assets/art/mountain_ambush/jiang-martial-clips.glb",
+      "clip": "ReturningSweep",
+      "hand": "default",
+      "source_seconds": 0.32
+    },
+    "timing": {
+      "duration": 0.85,
+      "total": 0.85,
+      "release": 0.24,
+      "impact": 0.34,
+      "source_map": [
+        [
+          0,
+          0
+        ],
+        [
+          0.24,
+          0.065
+        ],
+        [
+          0.34,
+          0.13
+        ],
+        [
+          0.42,
+          0.13
+        ],
+        [
+          0.55,
+          0.225
+        ],
+        [
+          0.85,
+          0.32
+        ]
+      ]
+    },
+    "visual": {
+      "type": "blade",
+      "pattern": "sweep",
+      "config": {
+        "color": "#e9c37c",
+        "core_color": "#fff6d6",
+        "dust_color": "#b7a88a",
+        "life_seconds": 0.44,
+        "width": 0.2,
+        "core_width": 0.065,
+        "radius": 1.56,
+        "height": 1.05,
+        "core_height": 1.07,
+        "span_degrees": 132.0,
+        "streak_count": 8,
+        "whoosh": "res://assets/art/mountain_ambush/skills/sfx/sweep-whoosh.wav",
+        "hit": "res://assets/art/mountain_ambush/skills/sfx/sweep-hit.wav"
+      }
+    },
+    "audio": {
+      "release": "res://assets/art/mountain_ambush/skills/sfx/sweep-whoosh.wav",
+      "impact": "res://assets/art/mountain_ambush/skills/sfx/sweep-hit.wav"
+    },
+    "camera": {
+      "zoom": 0.82
+    }
+  },
+  "source_manifests": [
+    "res://assets/art/mountain_ambush/source-martial-clips.json",
+    "res://assets/art/mountain_ambush/skills/source-skill-fx.json"
+  ],
+  "order": 1
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Shu original tea-street architectural surfaces",
+  "date": "2026-10-28",
+  "author": "Codex, authored for Shu",
+  "method": "Original native SVG vector construction; deterministic brush shapes and curves; no raster image generation or third-party artwork",
+  "license": "Original project art; same use and distribution terms as Shu project art. No additional third-party asset license.",
+  "generator": "tools/build_town_street_materials.py",
+  "generator_sha256": "28924db49c4d928dad9dda9d231257a0c1f2fa2221b544b761f32f577ddaa101",
+  "external_image_inputs": [],
+  "style_constraints": [
+    "Shu Chinese-painting palette",
+    "restrained surface wear",
+    "no painted directional lighting",
+    "repeatable surface scale"
+  ],
+  "status": "implementation candidate; rendered asset review only, in-scene and user visual acceptance pending",
+  "texture_usage": {
+    "albedo_modulation": "Use white (#ffffff) for authored palette, or very restrained warm/cool modulation. Existing saturated dark material colors would double-tint and crush details.",
+    "filter": "linear with mipmaps; repeat enabled",
+    "roof-gray-teal.svg": "16 narrow barrel-tile columns by 8 tiers per repeat. X goes across ridges; Y goes from ridge toward eave. Initial target repeat footprint: width 2.4 m, slope 2.4 m (each tile approx 0.15 m wide, 0.3 m slope length); adapt to authored roof proportions.",
+    "plaster-ivory.svg": "One repeat per approximately 2.5 m wall patch. Mottling is intentionally very low contrast; do not increase contrast to make it look textured.",
+    "timber-honey.svg": "Grain runs along image Y. One repeat approximately 0.5 m across grain and 2.5 m along grain. Rotate UVs for horizontal beams.",
+    "flagstone-graygreen.svg": "Four unequal 128 px courses, three unequal stones per course. One repeat approximately 2.4 m square gives 0.6 m courses; initial path repeat can use 2.0-2.4 m square."
+  },
+  "files": {
+    "roof-gray-teal.svg": {
+      "sha256": "cd590e49dbee28d317b3a0fc67b7436f1c07557951ac2d5884b08eac3b98c4d0",
+      "bytes": 132488,
+      "size": [
+        512,
+        512
+      ]
+    },
+    "plaster-ivory.svg": {
+      "sha256": "9892ee08e9e3155708e2b02e3761def3675cfa6f197bbd48d414dee8cc451e40",
+      "bytes": 336109,
+      "size": [
+        512,
+        512
+      ]
+    },
+    "timber-honey.svg": {
+      "sha256": "2140f41728401907f4977ab5ccf38fbae71376a433c151095042eade7b0bdf7b",
+      "bytes": 135920,
+      "size": [
+        512,
+        512
+      ]
+    },
+    "flagstone-graygreen.svg": {
+      "sha256": "c7b71d80cd8e442c4eb88b254e05a11cb5e5bfbc6f411c58dbc97b9109b6e2b0",
+      "bytes": 83666,
+      "size": [
+        512,
+        512
+      ]
+    }
+  }
+}

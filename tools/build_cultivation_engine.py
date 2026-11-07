@@ -46,7 +46,8 @@ def validate_entry(entry: str) -> str:
 
 def stage(output: Path, reuse_stage: Path | None = None,
           entry: str = DEFAULT_ENTRY, title: str = DEFAULT_TITLE,
-          app_version: str = DEFAULT_APP_VERSION, user_dir: str = DEFAULT_USER_DIR) -> dict:
+          app_version: str = DEFAULT_APP_VERSION, user_dir: str = DEFAULT_USER_DIR,
+          serial_import: bool = False) -> dict:
     if not output.is_absolute() or not output.is_dir():
         raise SystemExit("--output must be an existing absolute build directory")
     entry = validate_entry(entry)
@@ -75,7 +76,9 @@ def stage(output: Path, reuse_stage: Path | None = None,
     if entry in {"scenes/demos/cultivation_engine_v02_mentor.tscn",
                  "scenes/demos/cultivation_engine_v03_town.tscn",
                  "scenes/demos/cultivation_engine_v04_town_walk.tscn",
-                 "scenes/demos/cultivation_engine_v05_town_hd2d.tscn"}:
+                 "scenes/demos/cultivation_engine_v05_town_hd2d.tscn",
+                 "scenes/demos/cultivation_engine_v06_mountain_ambush.tscn",
+                 "scenes/demos/cultivation_engine_v07_first_journey.tscn"}:
         paths += [ROOT / "trunk/mentor-slow-half-step.json", ROOT / "trunk/mentor-practice-report.json",
                   ROOT / "assets/audio/mentor_pause/manifest.json",
                   ROOT / "assets/audio/mentor_practice_report/manifest.json"]
@@ -85,6 +88,73 @@ def stage(output: Path, reuse_stage: Path | None = None,
     if entry == "scenes/demos/cultivation_engine_v05_town_hd2d.tscn":
         paths += [ROOT / "tools/build_town_hd2d_characters.py",
                   ROOT / "tools/validate_town_hd2d_compatibility.py"]
+    if entry in {"scenes/demos/cultivation_engine_v06_mountain_ambush.tscn",
+                 "scenes/demos/cultivation_engine_v07_first_journey.tscn"}:
+        paths += [ROOT / "tools/rebuild_ambush_font.py", ROOT / "assets/fonts/source-ambush.json",
+                  ROOT / "assets/art/mountain_ambush/source.json",
+                  ROOT / "tools/hero_lookdev/export_ambush_jiang.py",
+                  ROOT / "tools/hero_lookdev/build_ambush_tinglan.py",
+                  ROOT / "tools/hero_lookdev/build_fullbody_turn.py",
+                  ROOT / "assets/art/mountain_ambush/environment/source-environment.json",
+                  ROOT / "assets/art/mountain_ambush/environment/source-scatter.json",
+                  ROOT / "assets/art/mountain_ambush/environment/PROTON-LICENSE.txt",
+                  ROOT / "assets/art/mountain_ambush/environment/License_Quaternius_CC0.txt",
+                  ROOT / "tools/hero_lookdev/build_ambush_environment_assets.py",
+                  ROOT / "tools/hero_lookdev/bake_ambush_scatter.gd",
+                  ROOT / "tools/hero_lookdev/bake_ambush_scatter.py",
+                  ROOT / "assets/art/mountain_ambush/environment/source-detail-pine.json",
+                  ROOT / "assets/art/mountain_ambush/environment/source-detail-environment.json",
+                  ROOT / "tools/hero_lookdev/build_ambush_pine_detail.py",
+                  ROOT / "assets/art/mountain_ambush/environment/source-lighting.json",
+                  ROOT / "assets/art/mountain_ambush/environment/source-barricade.json",
+                  ROOT / "assets/art/mountain_ambush/environment/source-combat-light.json",
+                  ROOT / "assets/art/mountain_ambush/source-martial-clips.json",
+                  ROOT / "assets/art/mountain_ambush/jiang-martial-clips.glb.import",
+                  ROOT / "assets/art/mountain_ambush/skills/source-skill-fx.json",
+                  ROOT / "assets/art/mountain_ambush/skills/source-sfx.json",
+                  ROOT / "tools/hero_lookdev/build_ambush_martial_clips.py",
+                  ROOT / "tools/hero_lookdev/build_ambush_skill_sfx.py"]
+        paths.extend((ROOT / "tests").glob("cultivation_ambush_environment_*.gd"))
+        paths.extend((ROOT / "tests").glob("cultivation_ambush_lighting_*.gd"))
+        paths.extend((ROOT / "tests").glob("cultivation_ambush_barricade_*.gd"))
+        paths.extend((ROOT / "tests").glob("cultivation_ambush_combat_light_*.gd"))
+        paths.extend((ROOT / "tests").glob("cultivation_ambush_skills_*.gd"))
+        paths.extend((ROOT / "tests").glob("cultivation_ambush_camera_*.gd"))
+        paths.extend((ROOT / "tests").glob("cultivation_ambush_detail_*.gd"))
+        paths.extend((ROOT / "tests").glob("cultivation_ambush_staff_*.gd"))
+        paths.extend((ROOT / "tests").glob("cultivation_ambush_palm_vfx_*.gd"))
+        paths.extend((ROOT / "tests").glob("cultivation_ambush_palm_impact_*.gd"))
+        paths.extend((ROOT / "tests").glob("cultivation_martial_workshop*.gd"))
+        paths.extend((ROOT / "tests").glob("cultivation_martial_control_rig*.gd"))
+        paths.extend((ROOT / "tests").glob("cultivation_martial_fullbody*.gd"))
+        paths.extend((ROOT / "tests").glob("cultivation_sword_palm*.gd"))
+        paths += [ROOT / "tools/build_martial_control_variants.py", ROOT / "tools/hero_lookdev/build_martial_control_motions.py"]
+        paths.extend(p for p in (ROOT / "assets/art/martial_workshop/control_rig").rglob("*") if p.is_file())
+        paths += [ROOT / "tools/build_martial_workshop.py", ROOT / "tools/hero_lookdev/build_workshop_motions.py"]
+        paths.extend(p for p in (ROOT / "assets/data/martial_workshop").rglob("*") if p.is_file())
+        paths.extend(p for p in (ROOT / "assets/art/martial_workshop/generated").rglob("*") if p.is_file())
+        paths += [ROOT / "tools/hero_lookdev/build_palm_effekseer.py",
+                  ROOT / "tools/hero_lookdev/build_palm_material_textures.py",
+                  ROOT / "tools/hero_lookdev/build_palm_effekseer_v2.py",
+                  ROOT / "tools/hero_lookdev/build_ambush_palm_clips.py",
+                  ROOT / "tools/hero_lookdev/build_ambush_palm_sfx.py"]
+        paths.extend((ROOT / "assets/art/mountain_ambush/palm_lab").glob("**/*.efkproj"))
+        paths.extend((ROOT / "assets/art/mountain_ambush/palm_lab").glob("**/*.efkefc"))
+        paths.extend((ROOT / "assets/art/mountain_ambush/palm_lab").glob("**/*.efk"))
+        paths.extend((ROOT / "assets/art/mountain_ambush/palm_lab").glob("**/*.ptex"))
+        paths.extend((ROOT / "assets/art/mountain_ambush/palm_lab").glob("**/source*.json"))
+        paths.extend((ROOT / "assets/art/mountain_ambush/palm_lab").glob("**/*.json"))
+        paths.extend((ROOT / "assets/art/mountain_ambush/palm_lab").glob("**/*.patch"))
+        paths.extend((ROOT / "assets/art/mountain_ambush/palm_lab").glob("**/README*"))
+        paths.extend((ROOT / "assets/art/mountain_ambush/palm_lab").glob("**/*LICENSE*"))
+        paths += [ROOT / "art/prompts/palm-vfx-tool-sample.txt", ROOT / "art/prompts/palm-impact-v2.txt"]
+        paths.extend((ROOT / "assets/art/mountain_ambush/palm_lab/v2").glob("**/*.import"))
+    if entry == "scenes/demos/cultivation_engine_v07_first_journey.tscn":
+        paths += [ROOT / "tools/rebuild_first_journey_font.py",
+                  ROOT / "assets/fonts/source-first-journey.json",
+                  ROOT / "tests/cultivation_painted_practice_test.gd"]
+        paths.extend((ROOT / "tests").glob("cultivation_first_journey*.gd"))
+        paths.extend((ROOT / "tests").glob("cultivation_training_ground*.gd"))
     paths.extend(p for p in (ROOT / "tests").glob("cultivation_engine_*.gd"))
     def resources(value):
         if isinstance(value, dict):
@@ -113,7 +183,7 @@ def stage(output: Path, reuse_stage: Path | None = None,
         if path in visited:
             continue
         visited.add(path)
-        if path.suffix == ".json":
+        if path.suffix == ".json" and not path.is_relative_to(ROOT / "assets/data/martial_workshop/recipes"):
             for resource in resources(json.loads(path.read_text())):
                 if resource not in visited:
                     pending.append(resource)
@@ -121,7 +191,7 @@ def stage(output: Path, reuse_stage: Path | None = None,
             # A selected entry can extend the shared view with a scene adapter.
             # Follow concrete code/scene dependencies, including adapters outside
             # the addon, without staging unrelated source directories.
-            for resource in re.findall(r'''["'](res://[^"'\r\n]+\.(?:gd|tscn|tres|gdshader|json|png|jpe?g|webp|svg|glb|gltf|obj))["']''',
+            for resource in re.findall(r'''["'](res://[^"'\r\n]+\.(?:gd|tscn|tres|gdshader|json|png|jpe?g|webp|svg|glb|gltf|obj|ttf|otf))["']''',
                                        path.read_text()):
                 if resource.startswith("res://.local/") or "%" in resource:
                     # QA output paths and format-string negative fixtures are
@@ -189,6 +259,10 @@ renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 environment/defaults/default_clear_color=Color(0.93,0.90,0.83,1)
 '''
+    if serial_import:
+        # Only the isolated stage changes editor import scheduling. Runtime
+        # rendering and the source project's settings remain untouched.
+        project += '\n[editor]\nimport/use_multiple_threads=false\n'
     (target / "project.godot").write_text(project)
     preset = '''[preset.0]
 name="Web"
@@ -222,6 +296,7 @@ progressive_web_app/enabled=false
     catalog = json.loads((ROOT / catalog_path.removeprefix("res://")).read_text())
     receipt = {"stage": str(target), "source_root": str(ROOT), "entry": resource_entry,
                "title": title, "app_version": app_version, "user_dir": user_dir,
+               "serial_import": serial_import,
                "head": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
                "source_dirty": True, "source_hashes": hashes, "runtime_hashes": runtime,
                "shared_runtime_digest": runtime_digest,
@@ -243,6 +318,8 @@ if __name__ == "__main__":
     parser.add_argument("--title", default=DEFAULT_TITLE, help="Staged application title")
     parser.add_argument("--app-version", default=DEFAULT_APP_VERSION, help="Staged application version")
     parser.add_argument("--user-dir", default=DEFAULT_USER_DIR, help="Staged Godot custom user directory name")
+    parser.add_argument("--serial-import", action="store_true",
+                        help="Disable parallel editor imports in this stage only")
     args = parser.parse_args()
     print(json.dumps(stage(args.output, args.reuse_stage, args.entry, args.title,
-                           args.app_version, args.user_dir)))
+                           args.app_version, args.user_dir, args.serial_import)))

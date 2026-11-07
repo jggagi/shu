@@ -1,0 +1,217 @@
+{
+  "asset_id": "town-volume-jiang-daily-20261030",
+  "status": "candidate-awaiting-town-playtest",
+  "author": "Shu project local skeletal animation; original approved Jiang model identity preserved",
+  "source": {
+    "path": "/home/x1-lite/games/shu/.local/worktrees/mountain-ambush/assets/art/mountain_ambush/jiang-approved.glb",
+    "sha256": "e8d74b2e0be789f272597aa6f7fc268f57851bb669ed43d97e2efa91c3860e27",
+    "bytes": 17700976,
+    "original_approved_blend_sha256": "9aa7c926103f58b664427b2400601001562ff9a436b153c9b46d0c9241de6e65",
+    "approval_record": "docs/P3_JIANG_MODEL_REUSE.md in retained mountain-ambush worktree",
+    "original_provenance": "docs/image-motion/jiang-fullbody-turn-20261022.md",
+    "license": "Existing user-authorized Tencent Hunyuan model use terms and original project hand/sword authorship retained; no new third-party asset, no CC0 claim"
+  },
+  "identity": "Original warm skin, brown high ponytail, blue/ivory clothing and source body proportions; no new face or costume",
+  "hand_and_weapon": "Only separate sword omitted. Complete original right closed grip/hand retained; daily right fist remains a known source limitation.",
+  "coordinate_contract": {
+    "gltf_up": "+Y",
+    "gltf_front": "+Z",
+    "blender_up": "+Z",
+    "blender_front": "-Y",
+    "source_floor_m": 0.000216,
+    "source_neutral_height_record_m": 2.096427,
+    "root_motion": "none; consumer owns real locomotion and yaw"
+  },
+  "walk_cycle_source_distance": 1.4,
+  "clips": {
+    "TownIdle": {
+      "fps": 60,
+      "frames_including_endpoint": 193,
+      "seconds": 3.2,
+      "motion": "Relaxed low shoulders and arms, very small shared-clock chest/head/pelvis breathing; both soles remain planted"
+    },
+    "TownWalk": {
+      "fps": 60,
+      "frames_including_endpoint": 49,
+      "seconds": 0.8,
+      "full_cycle_steps": 2,
+      "source_distance_per_cycle_m": 1.4,
+      "support_fraction_per_foot": 0.56,
+      "nominal_unscaled_speed_m_s": 1.7499999999999998,
+      "consumer_sampling": "phase = actual_world_distance / (1.40 * uniform_model_scale); animation_seconds = fract(phase) * 0.8",
+      "motion": "Piecewise linear stationary-world support ankles; Hermite swing and 11.5cm clearance; analytical two-bone legs, contralateral arms, small pelvis/chest twist and cloth follow-through"
+    }
+  },
+  "preserved": {
+    "bone_count": 22,
+    "mesh_node_names": [
+      "JiangApprovedHead",
+      "JiangFullbody",
+      "JiangRightGrip_HandGrip"
+    ],
+    "source_textures_byte_identical": true,
+    "source_meshes_weights_uv_edited": false,
+    "all_texture_sha256": [
+      {
+        "name": "texture_pbr_20250901_normal",
+        "size": [
+          1024,
+          1024
+        ],
+        "bytes": 523195,
+        "sha256": "2e7d0b766b9d054412dc5ce20e36926a253c40d7cc2daccac4f8284cc7b5aba9"
+      },
+      {
+        "name": "JiangApprovedHead_SaturatedBaseColor",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 4818692,
+        "sha256": "345d59d59b7606dbd51a5c7a7aee30984cda6aca396542d2216c1d4e4235d997"
+      },
+      {
+        "name": "texture_pbr_20250901_metallic-texture_pbr_20250901_roughnes",
+        "size": [
+          1024,
+          1024
+        ],
+        "bytes": 1085016,
+        "sha256": "5b38758c4082b13b676b2334a649ca1bd707fec8527349b4bf7c511c1384575c"
+      },
+      {
+        "name": "texture_pbr_20250901_normal",
+        "size": [
+          1024,
+          1024
+        ],
+        "bytes": 484395,
+        "sha256": "958a40ff3949f1f38f9bb2d9db51d65e77e9675ecbdbe30ee8a7de8d86f3a41c"
+      },
+      {
+        "name": "JiangFullbody_SaturatedBaseColor",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 4731284,
+        "sha256": "2ac47107ad2bb8834e71ca31e87046efdad7181b79b58755eefe99da73c59835"
+      },
+      {
+        "name": "texture_pbr_20250901_metallic-texture_pbr_20250901_roughness",
+        "size": [
+          1024,
+          1024
+        ],
+        "bytes": 865177,
+        "sha256": "165405c1f6f280c90d8c2eaa720316132b49450a2068bc2a326bdab692d11d9b"
+      }
+    ],
+    "exact_source_geometry_payloads": {
+      "exact_source_accessors_restored": [
+        "JiangApprovedHead/0/POSITION",
+        "JiangApprovedHead/0/NORMAL",
+        "JiangApprovedHead/0/TEXCOORD_0",
+        "JiangApprovedHead/0/COLOR_0",
+        "JiangApprovedHead/0/JOINTS_0",
+        "JiangApprovedHead/0/WEIGHTS_0",
+        "JiangApprovedHead/0/indices",
+        "JiangApprovedHead/1/POSITION",
+        "JiangApprovedHead/1/NORMAL",
+        "JiangApprovedHead/1/TEXCOORD_0",
+        "JiangApprovedHead/1/COLOR_0",
+        "JiangApprovedHead/1/JOINTS_0",
+        "JiangApprovedHead/1/WEIGHTS_0",
+        "JiangApprovedHead/1/indices",
+        "JiangFullbody/0/POSITION",
+        "JiangFullbody/0/NORMAL",
+        "JiangFullbody/0/TEXCOORD_0",
+        "JiangFullbody/0/COLOR_0",
+        "JiangFullbody/0/JOINTS_0",
+        "JiangFullbody/0/WEIGHTS_0",
+        "JiangFullbody/0/indices",
+        "JiangRightGrip_HandGrip/0/POSITION",
+        "JiangRightGrip_HandGrip/0/NORMAL",
+        "JiangRightGrip_HandGrip/0/TEXCOORD_0",
+        "JiangRightGrip_HandGrip/0/JOINTS_0",
+        "JiangRightGrip_HandGrip/0/WEIGHTS_0",
+        "JiangRightGrip_HandGrip/0/indices",
+        "source_inverse_bind_matrices"
+      ],
+      "source_rest_joint_transforms_restored": 22,
+      "reason": "Avoid Blender BYTE_COLOR precision loss and normal/position float roundtrip changes; retain original source buffers without gamma/color/geometry edits"
+    },
+    "exact_payload_readback": {
+      "passed": 50,
+      "failed": 0,
+      "report": "/home/x1-lite/games/shu/.local/qa/town-volume-character-20261030/asset-authoring/candidate-04/exact-payload-readback.json"
+    }
+  },
+  "limits": [
+    "Right hand remains the original complete closed fist",
+    "No fingers, facial rig, cloth physics, toe bones or dynamic foot IK",
+    "Distance calibration assumes uniform root scale and near-straight local locomotion; turn contact still needs real scene review",
+    "Godot/native/Web integration not performed by this asset generator"
+  ],
+  "tool": {
+    "path": "tools/build_town_volume_character.py",
+    "sha256": "b63e64e432d8b8b408b9d30e104bbc949d203fe144d1ddb5c7a170f33316d76b",
+    "blender": "5.2.2 LTS"
+  },
+  "new_cloud_calls": 0,
+  "new_downloads": 0,
+  "new_installs": 0,
+  "source_overwritten": false,
+  "source_sha256_after": "e8d74b2e0be789f272597aa6f7fc268f57851bb669ed43d97e2efa91c3860e27",
+  "result": {
+    "path": "assets/art/town_volume_character/jiang-town.glb",
+    "sha256": "02a76e2d39963098fdeedae740853a9f12dbf28be658b4277309300b44caf399",
+    "bytes": 17686040,
+    "triangles": 73500,
+    "animations": [
+      "TownIdle",
+      "TownWalk"
+    ],
+    "max_analytic_ik_error_m": 0.0,
+    "actual_contacts": {
+      "frames": 49,
+      "evaluated_mesh": "JiangFullbody",
+      "sole_vertex_counts": {
+        "R": 403,
+        "L": 371
+      },
+      "maximum_supported_boot_floor_error_m": 0.000310978459674865,
+      "maximum_supported_sole_world_vertex_drift_m": 4.6835432954139833e-07,
+      "complete_body_loop_endpoint_maximum_vertex_error_m": 0.0,
+      "source_floor_m": 0.000216,
+      "policy": "No per-frame mesh grounding. Sole samples retain original rest-mesh identities and include actual evaluated skinning; virtual actor translation only cancels the declared forward stride."
+    }
+  },
+  "qa": {
+    "saved_editable_blend": "/home/x1-lite/games/shu/.local/qa/town-volume-character-20261030/asset-authoring/candidate-03/review/jiang-town-daily.blend",
+    "renders": [
+      "/home/x1-lite/games/shu/.local/qa/town-volume-character-20261030/asset-authoring/candidate-03/review/idle-000-front.png",
+      "/home/x1-lite/games/shu/.local/qa/town-volume-character-20261030/asset-authoring/candidate-03/review/idle-000-side.png",
+      "/home/x1-lite/games/shu/.local/qa/town-volume-character-20261030/asset-authoring/candidate-03/review/idle-000-back.png",
+      "/home/x1-lite/games/shu/.local/qa/town-volume-character-20261030/asset-authoring/candidate-03/review/walk-000-side.png",
+      "/home/x1-lite/games/shu/.local/qa/town-volume-character-20261030/asset-authoring/candidate-03/review/walk-025-side.png",
+      "/home/x1-lite/games/shu/.local/qa/town-volume-character-20261030/asset-authoring/candidate-03/review/walk-050-side.png",
+      "/home/x1-lite/games/shu/.local/qa/town-volume-character-20261030/asset-authoring/candidate-03/review/walk-075-side.png",
+      "/home/x1-lite/games/shu/.local/qa/town-volume-character-20261030/asset-authoring/candidate-03/review/walk-025-front.png",
+      "/home/x1-lite/games/shu/.local/qa/town-volume-character-20261030/asset-authoring/candidate-03/review/walk-025-back.png"
+    ],
+    "frame_samples": "/home/x1-lite/games/shu/.local/qa/town-volume-character-20261030/asset-authoring/candidate-03/review/motion-samples.json",
+    "actual_game_verification": "not performed by asset generator",
+    "user_acceptance": "pending",
+    "blender_review_scope": "Candidate03 Blender scenes; final repack restores exact original model attributes/rest binds and changes no authored motion. Actual game validation uses final GLB."
+  },
+  "godot_import": {
+    "profile": "res://assets/art/town_volume_character/jiang-town.glb.import",
+    "profile_sha256": "e3c706310ad8896137eccadb670e718303df8f4cd24a6d68f72de5e0bd84e885",
+    "animation_fps": 60,
+    "optimizer_enabled": false,
+    "animation_compression_enabled": false,
+    "full_profile_import_validation": "Godot 4.7.2 Compatibility independent import-profile project exited0 without script/error/warning; profile preserved after actual import",
+    "policy": "Use the versioned full Godot import profile beside the GLB."
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "status": "P3a two martial skills candidate",
+  "author": "Shu original procedural lighting and sword-arc presentation",
+  "scope": "Existing three light modes plus authored pierce/sweep attacks. A single transient light synchronizes with source-pose contact; new attacks use their own mesh VFX instead of the legacy light ribbon.",
+  "references": [
+    {
+      "url": "https://www.docswell.com/s/EpicGamesJapan/KXPWY5-UE4_UFE2018_ACQUIRE_OCTOPATHTRAVELER",
+      "context": "Acquire original presentation, pp71-73: battle-specific point lights, lighting choreography and post effects; conceptual reference only."
+    },
+    {
+      "url": "https://www.unrealengine.com/spotlights/octopath-traveler-s-hd-2d-art-style-and-story-make-for-a-jrpg-dream-come-true",
+      "context": "Developer interview describing light-driven character shadows."
+    },
+    {
+      "url": "https://www.taptap.cn/moment/608885334469510383",
+      "context": "Written account of Wandering Sword producer CiGADC 2024 talk: mixed effects and lighting/exposure. No original production assets or code used."
+    }
+  ],
+  "new_dependency_installs": 0,
+  "new_cloud_calls": 0,
+  "cost_rmb": 0,
+  "copied_third_party_code": false,
+  "copied_game_assets": false,
+  "notes": [
+    "Godot4.7.2 Compatibility and Web single-thread retained; no native extension, new runtime plugin or renderer change.",
+    "New pierce/sweep Rules and encounter data are explicitly authorized by approve. Existing EngineSession and save ledger remain sole persistent authority.",
+    "All presentation previews remain read-only to battle/host state; selected new clips use the same source0.13/contact0.34 choreography and exact actor/camera restoration.",
+    "Legacy push/strike/interrupt modes retain the existing gold/green light ribbons; new pierce/sweep use original blade-sampled mesh ribbons and source-timed flying-qi/sweep geometry without a duplicate fan.",
+    "One light per friendly attack; temporary light resources and original new skill FX/audio are cancelled on completion or scene exit.",
+    "Native input and exported PCK QA do not certify actual browser performance, device sound or user visual acceptance."
+  ],
+  "source_hashes": {
+    "addons/cultivation_mode/ambush_combat_light.gd": "38053ff1a6bcb64f2b82d023397db13346bcfb43de9bdd7a61d4314d1f3a8e6d",
+    "addons/cultivation_mode/ambush_stage.gd": "5cf82cff818e2c5add0de7ce89fe36c0a17b84c8aa70a6df84c4a4379d2c8120",
+    "addons/cultivation_mode/ambush_view.gd": "169577d1cbc95c0f08c91467f3c6708a7c8be703c33c20153a73e3973e19e712",
+    "assets/art/mountain_ambush/environment/combat-lighting.json": "c68964580bc71a681dd5dacafa92303900f430555109383af5685267cc6ba439",
+    "tests/cultivation_ambush_combat_light_ui_test.gd": "22b880db312e64743b72c72db6647c13db7408c6463a57d43ecdc676c8e001d2",
+    "tests/cultivation_ambush_lighting_ui_test.gd": "2f207a9212d19966f2d4dd2b2316e9671a898bb2d619b6a74b6eb1b9ab701566",
+    "tools/build_cultivation_engine.py": "b093d1999af5f32e455998ea82642fed9e851548036e70d6d75b50ac1c9cc2ee",
+    "addons/cultivation_mode/ambush_actor.gd": "d77ea30dc8333221a1e60df479a5f851a09bde89046eb0bcd7362f53f1a2cad3",
+    "addons/cultivation_mode/ambush_environment.gd": "bdc5551c8735a0319e991a4c7867db55fa85a61a07fcbdf8c4b4bd667cdbfd71",
+    "assets/art/mountain_ambush/environment/lighting.json": "3b34133105a728038a1fc763fd2c0f56cd8a25f373c0409d18205053be58fa64",
+    "tests/cultivation_engine_ambush_render.gd": "a32a74e96775b133865e9a68c0e646361a36a4757fc0ea750fdfb14df94a45e2",
+    "addons/cultivation_mode/ambush_skill_fx.gd": "671e9040e353566e5f6075f28389256603fef91bf4a9611cf86d93be10974e40",
+    "tests/cultivation_engine_ambush_skills_test.gd": "d4df61d87f2e000903d2c60bca8ca7fb50fbeb0e6a5281d714726fb6fdf9823d",
+    "tests/cultivation_ambush_skills_ui_test.gd": "84a1b1e02de8ddefc23b9d9677b304246a7fc52741caa5bf19a4072b7183adb7",
+    "assets/art/mountain_ambush/skills/skill-fx.json": "f7eae06e9c45a770060598cd319b67aecef37e179ae7b40957e32d81cce86c78"
+  },
+  "tempo_revision": {
+    "ready_seconds": 0.24,
+    "strike_seconds": 0.1,
+    "hit_stop_seconds": 0.08,
+    "follow_through_seconds": 0.13,
+    "recover_seconds": 0.3,
+    "hit_at_seconds": 0.34,
+    "total_seconds": 0.85,
+    "source_hit_seconds": 0.13,
+    "recoil_speed": 0.65,
+    "ordinary_walk_and_idle": "unchanged",
+    "light_auto_recovery": "Real impact holds .21 wall seconds, then fades .30; preview holds manually for comparison."
+  },
+  "historical_uniform_tempo": {
+    "action_playback_speed": 0.65,
+    "applies_to": "Battle attack/recoil actor stepping, light envelope and combat event timers/tweens",
+    "unchanged": "Ordinary movement and idle, inspection default 1x, camera transition, 0.70 second visual-preview hold, all light profile/config values and rules",
+    "source_pose": "Preview still samples original source elapsed 0.13 seconds by inverse rate conversion"
+  },
+  "camera_revision": {
+    "home": [
+      8.0,
+      10.8,
+      14.8
+    ],
+    "idle": "Closer orthographic framing; all 63 tile centres remain interactive",
+    "friendly_attack_zoom": 0.88,
+    "return_seconds": 0.16,
+    "preview_zoom": 0.78,
+    "preview_peak_seconds": 0.7
+  },
+  "prior_polish_notes": [
+    "Godot 4.7.2 Compatibility, one short-lived OmniLight3D. Modes one/two share geometry, colors and timing; the shadow flag is the intended difference.",
+    "Rules, encounter JSON and EngineSession remain unchanged. The visual preview calls no battle action and consumes no movement, HP, host time or settlement.",
+    "No LightmapGI, SSAO, native depth of field, volumetric fog or renderer change in this experiment.",
+    "Visual resemblance and Web performance require actual observation; no equivalence to the commercial games is claimed.",
+    "Environmental/combat lighting controls are disabled throughout preview and actual action playback so a temporary light cannot overwrite a newly selected profile. They unlock after exact baseline restoration.",
+    "Final tuning: Cube positional shadows replace the rejected DualParaboloid grid artifact. Global Glow remains disabled and exposure multipliers remain 1.0 after the rejected washed-out draft; local unshaded sword ribbons provide the visible arc. The preview alone zooms to 0.78 of the normal orthographic size, identically in all three modes, then restores it.",
+    "Original slash fan is retained for mode zero and enemy attacks; illuminated friendly sword attacks use one gold/white ribbon instead of duplicate fans. Name text is limited to idle selected/hovered actors; compact HP bars remain visible."
+  ],
+  "martial_skills_revision": {
+    "skill_ids": [
+      "pierce",
+      "sweep"
+    ],
+    "new_fx_manifest": "res://assets/art/mountain_ambush/skills/source-skill-fx.json",
+    "motion_manifest": "res://assets/art/mountain_ambush/source-martial-clips.json",
+    "source_contact_seconds": 0.13,
+    "actual_contact_seconds": 0.34,
+    "source_end_seconds": 0.32,
+    "pose_total_seconds": 0.85,
+    "light_arc_disabled_for_new_skills": true
+  },
+  "palm_sample_revision": "V2 only adds independent palm sampling, local preview zoom, finite pressure/dust/grit/bounce light and original cues; original lighting configuration, environment assets, Rules and gameplay remain unchanged.",
+  "workshop_consumer_revision": "Martial workshop v0.1 shares catalog-driven motion/FX player and local review desk. Original assets and authoring remain as recorded; prior frozen stages retain their original runtime.",
+  "control_rig_consumer_revision": "Two original/enhanced preview motion variants share the existing catalog/player. Original asset and authoring claims remain as recorded; frozen prior stages remain independent. Current validation is recorded separately.",
+  "readability_consumer_revision": "User accepted18831 and authorized whole-body footwork and existing playerstrike combat presentation. Optional shared step/plant/return template drives two enhanced22-bone clips; playerstrike visual mapping and same-step impact/70ms source hold preserve all battle rules and old stages.",
+  "sword_palm_consumer_revision": {
+    "authorization": "User accepted18832 then approved real palm skill and tactical sword/palm slice",
+    "scope": "Encounter adds tinglan/palm using existing deterministic push rules; explicit enhanced visual adapter, same-clock impact/hold/shove and landing collision. Original layout/HP and authored motion/catalog assets retained.",
+    "historical_records": "Earlier authoring and fullbody revision fields describe prior slices; this appended consumer revision binds current runtime without rewriting their history."
+  },
+  "battle_camera_consumer_revision": {
+    "authorization": "User requested mouse-controlled changing battle perspective",
+    "scope": "Bounded right/middle mouse drag orbit and wheel zoom, reset view; original orthographic projection and all battle rules/assets unchanged. Automatic attack focus restores the chosen user view; workshop preset cameras remain independent.",
+    "historical_records": "Earlier revision fields retain prior authoring/consumer history."
+  },
+  "art_detail_consumer_revision": {
+    "authorization": "User requested more detailed characters and scenery after liking the mouse-camera candidate",
+    "scope": "Locally authored procedural 3D refinement for the three enemies and road/rock/wood scenery; same-pose original/refined comparison. Approved hero models, motion clocks, Rules/Session/save, lighting, layout and camera contracts preserved. No downloaded or generated raster assets.",
+    "historical_records": "Earlier revision fields retain prior authoring/consumer history."
+  },
+  "staff_motion_consumer_revision": {
+    "authorization": "User approved one brute staff-motion sample: small rig, anticipation, attack, recovery, interruption and stagger, with comparison and slow playback",
+    "scope": "Locally authored brute-only16bone native Skeleton3D/IK, same-second motion comparison and slow preview. Staff Stage clock and existing recipe reaction clock drive poses. No imported animation/addon, Rigify, mocap or new asset download; Godot native API design referenced. Original heroes, gameplay rules, content0.5.1, environmental geometry/lighting and other enemies preserved.",
+    "historical_records": "Earlier revision fields retain prior authoring/consumer history."
+  }
+}

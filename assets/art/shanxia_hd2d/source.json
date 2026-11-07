@@ -22,10 +22,25 @@
   "purpose": "Full-body billboard characters for a real 3D town; distance-driven walking, fixed foot anchor",
   "not_used": "waist-up indoor portraits, fixed practice atlases, Chengping character sprites",
   "files": {
-    "res://assets/art/shanxia_hd2d/player-walk.svg": "db27a6c07a1cfd24409867a943d3b45872f2a826e4a852ebcb544335c456bed7",
-    "res://assets/art/shanxia_hd2d/tea-seller-walk.svg": "5dc58e3c40720fe99981bfe8e0534bf20d73368a1eb735f9e69794231f458fdd"
+    "res://assets/art/shanxia_hd2d/player-walk.svg": "1ec5b3cc4aa4e6c0ef7da57dcf630cb2a7745a65b58d54e540ae6755c3b437e1",
+    "res://assets/art/shanxia_hd2d/tea-seller-walk.svg": "eb6b9e823db06f60931a7813c9656a5a71a0efbc5dd6e3571375c6880b267c3f"
   },
-  "authoring_tool_sha256": "6b5c6680f2b481f37024ffc3621399fd0fea66fac7f0068bb1518178e82bdaab",
+  "authoring_tool_sha256": "7df48b969ad859b19d6df63b9b1ba778e62eab14b4aeed7e1a2513d537916273",
+  "revisions": [
+    {
+      "date": "2026-10-28",
+      "description": "Original SVG revision: warm face and hair detail, blue robe and cream collar, gentler folds; tea seller holds a cup and cloth in the standing work pose. Existing four-direction walk contract retained; no independent wiping animation.",
+      "baseline": {
+        "commit": "7c992c578b1fe4a1624c769812425b38080771d3",
+        "authoring_tool_sha256": "6b5c6680f2b481f37024ffc3621399fd0fea66fac7f0068bb1518178e82bdaab",
+        "source_json_sha256": "98ce749dba38b5caab9e74f35760215a83aff35f76b9cc1407344e0a82b3ad01",
+        "files": {
+          "res://assets/art/shanxia_hd2d/player-walk.svg": "db27a6c07a1cfd24409867a943d3b45872f2a826e4a852ebcb544335c456bed7",
+          "res://assets/art/shanxia_hd2d/tea-seller-walk.svg": "5dc58e3c40720fe99981bfe8e0534bf20d73368a1eb735f9e69794231f458fdd"
+        }
+      }
+    }
+  ],
   "viewport_license": {
     "path": "res://assets/art/shanxia_hd2d/GODOT-VIEWPORT-LICENSE.txt",
     "sha256": "0339177149b474f7ff676d32218ecb3a8f2538955610023c3769763720d09e4c",

@@ -1296,6 +1296,10 @@ func _add_scene_actor(character_id: String, character: Dictionary, actor: Dictio
 	})
 
 
+func _create_motion_actor(_character_id: String, _actor: Dictionary, _motion_id: String) -> Control:
+	return AtlasActorScript.new() as Control
+
+
 func _add_motion_scene_actor(character_id: String, character: Dictionary, actor: Dictionary, actor_motion_id: String) -> void:
 	var pack := _current_pack()
 	var motions: Dictionary = pack.get("motions", {})
@@ -1325,7 +1329,7 @@ func _add_motion_scene_actor(character_id: String, character: Dictionary, actor:
 			_set_presentation_error("静息动作资源无法载入。", false)
 			_add_text_character_card(character_id, character, _text_card_count())
 			return
-		player = AtlasActorScript.new() as Control
+		player = _create_motion_actor(character_id, actor, actor_motion_id)
 		player.name = "AtlasActor_%s" % _safe_name(character_id)
 		_scene_surface.add_child(player)
 		player.connect("phase_changed", Callable(self, "_on_presentation_phase_changed"))
@@ -2362,6 +2366,10 @@ func _cancel_confirmation() -> void:
 	_render()
 
 
+func _create_session(_pack: Dictionary) -> RefCounted:
+	return SessionScript.new()
+
+
 func _perform_launch(index: int, mode: String) -> void:
 	if _input_busy or _is_performing() or index < 0 or index >= _catalog.size():
 		return
@@ -2371,7 +2379,7 @@ func _perform_launch(index: int, mode: String) -> void:
 		_render()
 		return
 	_input_busy = true
-	var candidate: RefCounted = SessionScript.new()
+	var candidate: RefCounted = _create_session(entry.get("pack", {}))
 	var launch_message := "新一局已经开始。"
 	var setup: Dictionary = candidate.call("configure", entry.get("pack", {}))
 	if not bool(setup.get("ok", false)):

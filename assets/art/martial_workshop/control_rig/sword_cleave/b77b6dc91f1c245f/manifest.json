@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "fingerprint": "b77b6dc91f1c245facda3e849929bafd15bd4741bc54c0f511ae81f8160a1d4c",
+  "inputs": {
+    "res://assets/art/martial_workshop/generated/sword_cleave/00a1471fadb4b40d/motion.glb": "709311806d443966f2283003f72553d89b80cb94643b1e42d54643593c7351a2",
+    "res://assets/art/mountain_ambush/jiang-approved.glb": "e8d74b2e0be789f272597aa6f7fc268f57851bb669ed43d97e2efa91c3860e27",
+    "res://assets/art/mountain_ambush/skills/sfx/sweep-hit.wav": "7a2531ff1bb8fdf927dd39dea4dbde0c0ad099b7ecf28da7ee080ec9f5c397d2",
+    "res://assets/art/mountain_ambush/skills/sfx/sweep-whoosh.wav": "034b369a3db49b59078b524633a833dac45639aa35f10d7f2db0c5295b9992a7",
+    "assets/data/martial_workshop/control_rig/step_plant_return.template.json": "472295d78569c89ac5b8a9bbac6f8c3e230496ea82c8260348e297fc7a2316cc",
+    "assets/data/martial_workshop/profiles.json": "c05803ba114109dfc1f271f37624a382e2c83905d0480e3e63d5412305312bd0"
+  },
+  "tools": {
+    "tools/build_martial_control_variants.py": "52436301f2e41274bf3e7f90da2da7d8b1b45ec6902540d1fa2a646331f7d0bd",
+    "tools/hero_lookdev/build_martial_control_motions.py": "5ee280979bef8c6cd755fa42a2ac58b1a8b21e1ef87d18acc4fd9447a53d8601",
+    "tools/build_martial_workshop.py": "041e37c7868c439fc6a8cc01b89140e3ad0b7ced882cf5faf89a7d83b4ac0c0e",
+    "tools/hero_lookdev/build_ambush_martial_clips.py": "649c81337e9df429ebfc6bb8ffb3510538b7e8738e09bd1e76c898d1a6d36209",
+    "tools/hero_lookdev/build_ambush_palm_clips.py": "cd39f33443fa8300927375a68015fdbddd282cff2c773a166b49c1d48a156b49",
+    "blender_binary_sha256": "609cb79642105f2a23b92916a9cd30176a930400aea637f1578a99e8f0b92a57",
+    "godot_binary_sha256": "8d106cbe6144c2dc7e881d61d2429c1a8a76e6b22ef48bd5e48dcf934953f71e"
+  },
+  "recipe_sha256": "82f7f66d7c8d1ac809f07820aac47bbae0c1ab3ababc9122d16740bb7194ddd2",
+  "output_files": {
+    "/home/x1-lite/games/shu/.local/worktrees/mountain-ambush/assets/art/martial_workshop/control_rig/sword_cleave/b77b6dc91f1c245f/motion.glb": "35ff0301c1b01b4ca6eef0e4124551cfb66333d6bc3f1bc1f8bffe962524bcdc",
+    "/home/x1-lite/games/shu/.local/worktrees/mountain-ambush/assets/art/martial_workshop/control_rig/sword_cleave/b77b6dc91f1c245f/motion.glb.import": "72610e898a55c18290b59920e5400bb4fb8aa2915103f08dcfadde039f647e6f",
+    "/home/x1-lite/games/shu/.local/worktrees/mountain-ambush/assets/art/martial_workshop/control_rig/sword_cleave/b77b6dc91f1c245f/source-motion.json": "2cfb15386a43d208916f43b4211a4cbea2436d66016492f82c60ad54c643c42f",
+    "/home/x1-lite/games/shu/.local/worktrees/mountain-ambush/.local/sources/martial-control-rig/sword_cleave/b77b6dc91f1c245f/controls.blend": "256f0d5acc136e51da3a43f7984b76b660f42473eae4c51141fab9518b52cc0f"
+  },
+  "resolved_variant": {
+    "move_id": "sword_cleave",
+    "variant_id": "enhanced",
+    "variant_label": "增强版",
+    "description": "增强版：沉髋举剑过顶，右脚短进步踏稳，腰肩带剑斜劈，停稳余势再收脚归中。",
+    "move": {
+      "id": "sword_cleave",
+      "label": "落雁斩",
+      "description": "增强版：沉髋举剑过顶，右脚短进步踏稳，腰肩带剑斜劈，停稳余势再收脚归中。",
+      "category": "sword",
+      "style": "strong",
+      "actor": "player",
+      "profile": "jiang22",
+      "preview_only": true,
+      "combat_skill": "",
+      "animation": {
+        "asset": "res://assets/art/martial_workshop/control_rig/sword_cleave/b77b6dc91f1c245f/motion.glb",
+        "clip": "SwordCleaveControl",
+        "hand": "default",
+        "source_seconds": 1.55,
+        "sha256": "35ff0301c1b01b4ca6eef0e4124551cfb66333d6bc3f1bc1f8bffe962524bcdc"
+      },
+      "timing": {
+        "duration": 1.55,
+        "total": 1.75,
+        "release": 0.58,
+        "impact": 0.66,
+        "source_map": [
+          [
+            0,
+            0
+          ],
+          [
+            1.55,
+            1.55
+          ]
+        ]
+      },
+      "visual": {
+        "type": "blade",
+        "pattern": "cleave",
+        "config": {
+          "color": "#e9c37c",
+          "core_color": "#fff6d6",
+          "dust_color": "#b7a88a",
+          "life_seconds": 0.4,
+          "width": 0.14,
+          "core_width": 0.04,
+          "radius": 1.5,
+          "height": 1.05,
+          "core_height": 1.07,
+          "span_degrees": 132.0,
+          "streak_count": 8,
+          "whoosh": "res://assets/art/mountain_ambush/skills/sfx/sweep-whoosh.wav",
+          "hit": "res://assets/art/mountain_ambush/skills/sfx/sweep-hit.wav"
+        }
+      },
+      "audio": {
+        "release": "res://assets/art/mountain_ambush/skills/sfx/sweep-whoosh.wav",
+        "impact": "res://assets/art/mountain_ambush/skills/sfx/sweep-hit.wav"
+      },
+      "camera": {
+        "zoom": 0.82
+      },
+      "resource_sha256": {
+        "res://assets/art/mountain_ambush/jiang-approved.glb": "e8d74b2e0be789f272597aa6f7fc268f57851bb669ed43d97e2efa91c3860e27",
+        "res://assets/art/mountain_ambush/skills/sfx/sweep-hit.wav": "7a2531ff1bb8fdf927dd39dea4dbde0c0ad099b7ecf28da7ee080ec9f5c397d2",
+        "res://assets/art/mountain_ambush/skills/sfx/sweep-whoosh.wav": "034b369a3db49b59078b524633a833dac45639aa35f10d7f2db0c5295b9992a7",
+        "res://assets/art/martial_workshop/generated/sword_cleave/00a1471fadb4b40d/motion.glb": "709311806d443966f2283003f72553d89b80cb94643b1e42d54643593c7351a2",
+        "res://assets/art/martial_workshop/control_rig/sword_cleave/b77b6dc91f1c245f/motion.glb": "35ff0301c1b01b4ca6eef0e4124551cfb66333d6bc3f1bc1f8bffe962524bcdc"
+      },
+      "resource_hash": "7698c9449839d7dd7e90e05df66e23122f71262d5d3a4402eda3fc9c384c0f93"
+    }
+  },
+  "provenance": {
+    "author": "Codex for Shu; original custom-control choreography",
+    "license": "Existing user-authorized Shu technical character resource; original source terms retained. New choreography by Codex for Shu.",
+    "cloud_calls": 0,
+    "paid_calls": 0,
+    "installs": 0,
+    "runtime_files_in_fingerprint": false
+  }
+}

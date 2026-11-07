@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "default_mode": 2,
+  "coordinate_space": "parent world_root; from/to are actor foot and target ground positions",
+  "timing": {
+    "windup_seconds": 0.13,
+    "recovery_seconds": 0.18
+  },
+  "sun": {
+    "windup_multiplier": 0.84,
+    "impact_multiplier": 0.7
+  },
+  "exposure": {
+    "windup_multiplier": 1.0,
+    "impact_multiplier": 1.0
+  },
+  "light": {
+    "color": "#ffd39b",
+    "windup_energy": 0.24,
+    "impact_energy": 0.8,
+    "range": 3.2,
+    "attenuation": 1.15,
+    "specular": 0.18,
+    "height": 1.42,
+    "side_offset": -0.62,
+    "forward_offset": 0.46,
+    "impact_forward_offset": 0.72,
+    "shadow_bias": 0.06,
+    "shadow_normal_bias": 0.18
+  },
+  "glow": {
+    "enabled": false,
+    "windup_intensity": 0.035,
+    "impact_intensity": 0.095,
+    "bloom": 0.0,
+    "threshold": 0.89,
+    "scale": 0.1,
+    "luminance_cap": 1.0
+  },
+  "arc": {
+    "color": "#ffe0a0",
+    "core_color": "#f1fcff",
+    "height": 1.07,
+    "radius": 0.92,
+    "width": 0.1,
+    "core_width": 0.035,
+    "span_degrees": 144.0,
+    "segments": 24,
+    "tilt_degrees": -18.0,
+    "windup_alpha": 0.3,
+    "impact_alpha": 0.95
+  },
+  "skills": {
+    "strike": {
+      "energy_multiplier": 1.0,
+      "radius_multiplier": 1.0
+    },
+    "push": {
+      "energy_multiplier": 1.05,
+      "radius_multiplier": 1.12
+    },
+    "interrupt": {
+      "energy_multiplier": 0.83,
+      "radius_multiplier": 0.6,
+      "light_color": "#bbdfcc",
+      "arc_color": "#9fd8bc",
+      "core_color": "#c7e4ec"
+    },
+    "pierce": {
+      "light_color": "#e6e8bc",
+      "energy_multiplier": 0.72
+    },
+    "sweep": {
+      "light_color": "#ffd39b",
+      "energy_multiplier": 0.85
+    }
+  }
+}

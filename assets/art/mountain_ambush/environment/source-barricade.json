@@ -1,0 +1,52 @@
+{
+  "status": "P3a destructible barricade candidate",
+  "author": "Shu local original geometry and gameplay adaptation",
+  "scope": "Two wood panels at one roadblock: ordinary strike opens a route; knockback collision breaks a panel and stops before its cell.",
+  "gameplay_layout": "res://games/shu_mountain_ambush/encounter.json",
+  "runtime_geometry": "Box, cylinder and beam meshes authored in ambush_stage.gd. Five slats, two posts and braces per intact panel; five thin flat debris pieces per broken panel.",
+  "authority": "AmbushRules owns current barricade HP and all blocking, paths, attack visibility, forecasts and events. Stage only presents the committed event sequence. EngineSession remains the sole persistent ledger.",
+  "new_cloud_calls": 0,
+  "new_generated_images": 0,
+  "new_dependency_installs": 0,
+  "cost_rmb": 0,
+  "notes": [
+    "Geometry is original and uses the existing scene's lights and materials. No third-party model or texture was introduced.",
+    "Destroyed debris is below the 0.023 tactical overlay plane and has no collision body; its former cell is walkable immediately in rule state.",
+    "No physical simulation or persistent-world destruction is introduced. A new encounter reconstructs both panels from its definition.",
+    "Authored enemy intent target, direction and path offsets are retained through the round; obstruction and advertised cells are refreshed without hidden retargeting.",
+    "P3a combat-light experiment binds current Stage/View consumers only; existing environment profiles, scenery assets, barricade definitions and settlement remain unchanged.",
+    "Action-tempo feedback: current Stage uses a local 0.65 attack/recoil playback rate. Ordinary movement, idle, environment clock and profile values stay unchanged.",
+    "Battle polish changes camera, UI and attack choreography only; barricade definition, HP, paths, damage and session settlement are byte-identical to the accepted source baseline."
+  ],
+  "source_hashes": {
+    "addons/cultivation_mode/ambush_rules.gd": "0253ca749018ed2bb38f1730616c9dc26aee86c644a6a02e55cb2589dee73d6e",
+    "addons/cultivation_mode/ambush_stage.gd": "5cf82cff818e2c5add0de7ce89fe36c0a17b84c8aa70a6df84c4a4379d2c8120",
+    "addons/cultivation_mode/ambush_view.gd": "169577d1cbc95c0f08c91467f3c6708a7c8be703c33c20153a73e3973e19e712",
+    "games/shu_mountain_ambush/encounter.json": "2bd455f9676073d377021cc6e8c6e8e4455dd72a1f182d1a188dfc5edad1c7d2",
+    "games/shu_mountain_ambush/game.json": "e690a0c9a0cbfbccb338be34bf45ded8d12d7d491e73debce80b33a39c1a86f8"
+  },
+  "palm_sample_revision": "V2 only adds independent palm sampling, local preview zoom, finite pressure/dust/grit/bounce light and original cues; original lighting configuration, environment assets, Rules and gameplay remain unchanged.",
+  "workshop_consumer_revision": "Martial workshop v0.1 shares catalog-driven motion/FX player and local review desk. Original assets and authoring remain as recorded; prior frozen stages retain their original runtime.",
+  "control_rig_consumer_revision": "Two original/enhanced preview motion variants share the existing catalog/player. Original asset and authoring claims remain as recorded; frozen prior stages remain independent. Current validation is recorded separately.",
+  "readability_consumer_revision": "User accepted18831 and authorized whole-body footwork and existing playerstrike combat presentation. Optional shared step/plant/return template drives two enhanced22-bone clips; playerstrike visual mapping and same-step impact/70ms source hold preserve all battle rules and old stages.",
+  "sword_palm_consumer_revision": {
+    "authorization": "User accepted18832 then approved real palm skill and tactical sword/palm slice",
+    "scope": "Encounter adds tinglan/palm using existing deterministic push rules; explicit enhanced visual adapter, same-clock impact/hold/shove and landing collision. Original layout/HP and authored motion/catalog assets retained.",
+    "historical_records": "Earlier authoring and fullbody revision fields describe prior slices; this appended consumer revision binds current runtime without rewriting their history."
+  },
+  "battle_camera_consumer_revision": {
+    "authorization": "User requested mouse-controlled changing battle perspective",
+    "scope": "Bounded right/middle mouse drag orbit and wheel zoom, reset view; original orthographic projection and all battle rules/assets unchanged. Automatic attack focus restores the chosen user view; workshop preset cameras remain independent.",
+    "historical_records": "Earlier revision fields retain prior authoring/consumer history."
+  },
+  "art_detail_consumer_revision": {
+    "authorization": "User requested more detailed characters and scenery after liking the mouse-camera candidate",
+    "scope": "Locally authored procedural 3D refinement for the three enemies and road/rock/wood scenery; same-pose original/refined comparison. Approved hero models, motion clocks, Rules/Session/save, lighting, layout and camera contracts preserved. No downloaded or generated raster assets.",
+    "historical_records": "Earlier revision fields retain prior authoring/consumer history."
+  },
+  "staff_motion_consumer_revision": {
+    "authorization": "User approved one brute staff-motion sample: small rig, anticipation, attack, recovery, interruption and stagger, with comparison and slow playback",
+    "scope": "Locally authored brute-only16bone native Skeleton3D/IK, same-second motion comparison and slow preview. Staff Stage clock and existing recipe reaction clock drive poses. No imported animation/addon, Rigify, mocap or new asset download; Godot native API design referenced. Original heroes, gameplay rules, content0.5.1, environmental geometry/lighting and other enemies preserved.",
+    "historical_records": "Earlier revision fields retain prior authoring/consumer history."
+  }
+}

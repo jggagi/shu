@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "id": "pierce",
+  "mode": "reuse",
+  "template": "sword_path",
+  "fingerprint": "f3111cf713ab72b1e5e8163b794213ca8240ccf738e9e499c6732a29a43968f7",
+  "canonical_recipe_sha256": "e49e877b2901e8a9fd3f20e041bb2f18b347cb05cc4df3474b8e1f6250f0ea76",
+  "inputs": {
+    "res://assets/art/mountain_ambush/jiang-approved.glb": "e8d74b2e0be789f272597aa6f7fc268f57851bb669ed43d97e2efa91c3860e27",
+    "res://assets/art/mountain_ambush/jiang-martial-clips.glb": "c12e21def1323b9ed5a436870d0f5eb560a71a2d626c706ea7a34a0b83745a92",
+    "res://assets/art/mountain_ambush/skills/sfx/pierce-hit.wav": "d6c968213f4bdf19a8f4edc8f8e650dfe7dde2bb43af82af013d421675fed6d5",
+    "res://assets/art/mountain_ambush/skills/sfx/pierce-whoosh.wav": "33cbb82f543af3a02dd4f802868c2dc61268af493c9b6d0e6c039576bdbe466d",
+    "res://assets/art/mountain_ambush/skills/source-skill-fx.json": "291cca43162519e46eedbf3fddb6177e620c769f972f44e08f40d2c865a81e7f",
+    "res://assets/art/mountain_ambush/source-martial-clips.json": "cd472c2b66815a545aad2ecef4f7ecbf88b48a45bb80ce899a3bab63b8f352ef"
+  },
+  "tools": {
+    "tools/build_martial_workshop.py": "041e37c7868c439fc6a8cc01b89140e3ad0b7ced882cf5faf89a7d83b4ac0c0e",
+    "tools/hero_lookdev/build_workshop_motions.py": "cc2da7d97be2abce6c2a7cd06a3645ef4c186754f07b1cfeab40d121f99f1185",
+    "tools/hero_lookdev/build_ambush_palm_clips.py": "cd39f33443fa8300927375a68015fdbddd282cff2c773a166b49c1d48a156b49",
+    "tools/hero_lookdev/build_ambush_martial_clips.py": "649c81337e9df429ebfc6bb8ffb3510538b7e8738e09bd1e76c898d1a6d36209",
+    "blender_binary_sha256": "609cb79642105f2a23b92916a9cd30176a930400aea637f1578a99e8f0b92a57",
+    "godot_binary_sha256": "8d106cbe6144c2dc7e881d61d2429c1a8a76e6b22ef48bd5e48dcf934953f71e"
+  },
+  "output_files": {},
+  "resolved_move": {
+    "id": "pierce",
+    "label": "穿云刺",
+    "description": "凝锋前送，剑气直穿。",
+    "category": "sword",
+    "style": "light",
+    "actor": "player",
+    "profile": "jiang22",
+    "preview_only": false,
+    "combat_skill": "pierce",
+    "animation": {
+      "asset": "res://assets/art/mountain_ambush/jiang-martial-clips.glb",
+      "clip": "CloudPierce",
+      "hand": "default",
+      "source_seconds": 0.32,
+      "sha256": "c12e21def1323b9ed5a436870d0f5eb560a71a2d626c706ea7a34a0b83745a92"
+    },
+    "timing": {
+      "duration": 0.85,
+      "total": 0.85,
+      "release": 0.24,
+      "impact": 0.34,
+      "source_map": [
+        [
+          0,
+          0
+        ],
+        [
+          0.24,
+          0.065
+        ],
+        [
+          0.34,
+          0.13
+        ],
+        [
+          0.42,
+          0.13
+        ],
+        [
+          0.55,
+          0.225
+        ],
+        [
+          0.85,
+          0.32
+        ]
+      ]
+    },
+    "visual": {
+      "type": "blade",
+      "pattern": "pierce",
+      "config": {
+        "color": "#f1cd85",
+        "core_color": "#fff9df",
+        "dust_color": "#d8ccb3",
+        "life_seconds": 0.38,
+        "width": 0.1,
+        "core_width": 0.025,
+        "flight_start": 0.24,
+        "flight_seconds": 0.1,
+        "streak_count": 6,
+        "whoosh": "res://assets/art/mountain_ambush/skills/sfx/pierce-whoosh.wav",
+        "hit": "res://assets/art/mountain_ambush/skills/sfx/pierce-hit.wav"
+      }
+    },
+    "audio": {
+      "release": "res://assets/art/mountain_ambush/skills/sfx/pierce-whoosh.wav",
+      "impact": "res://assets/art/mountain_ambush/skills/sfx/pierce-hit.wav"
+    },
+    "camera": {
+      "zoom": 0.82
+    },
+    "resource_sha256": {
+      "res://assets/art/mountain_ambush/jiang-approved.glb": "e8d74b2e0be789f272597aa6f7fc268f57851bb669ed43d97e2efa91c3860e27",
+      "res://assets/art/mountain_ambush/jiang-martial-clips.glb": "c12e21def1323b9ed5a436870d0f5eb560a71a2d626c706ea7a34a0b83745a92",
+      "res://assets/art/mountain_ambush/skills/sfx/pierce-hit.wav": "d6c968213f4bdf19a8f4edc8f8e650dfe7dde2bb43af82af013d421675fed6d5",
+      "res://assets/art/mountain_ambush/skills/sfx/pierce-whoosh.wav": "33cbb82f543af3a02dd4f802868c2dc61268af493c9b6d0e6c039576bdbe466d"
+    },
+    "resource_hash": "68544fe95b5339b673e36eaa837ab51a6b30e87d3eba970af0215aa200025550"
+  },
+  "source_manifest_hashes": {
+    "res://assets/art/mountain_ambush/source-martial-clips.json": "cd472c2b66815a545aad2ecef4f7ecbf88b48a45bb80ce899a3bab63b8f352ef",
+    "res://assets/art/mountain_ambush/skills/source-skill-fx.json": "291cca43162519e46eedbf3fddb6177e620c769f972f44e08f40d2c865a81e7f"
+  },
+  "provenance": {
+    "author": "Codex for Shu; original choreography",
+    "source_license": "Existing user-authorized Shu technical character resource; original source terms retained. New choreography by Codex for Shu.",
+    "source_originals_modified": false,
+    "cloud_calls": 0,
+    "paid_calls": 0,
+    "installs": 0
+  }
+}

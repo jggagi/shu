@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "profiles": {
+    "jiang22": {
+      "actor": "player",
+      "source_asset": "res://assets/art/mountain_ambush/jiang-approved.glb",
+      "source_sha256": "e8d74b2e0be789f272597aa6f7fc268f57851bb669ed43d97e2efa91c3860e27",
+      "bone_names": [
+        "pelvis",
+        "skirt.back.L",
+        "skirt.back.R",
+        "skirt.front.L",
+        "skirt.front.R",
+        "spine",
+        "chest",
+        "neck",
+        "head",
+        "ponytail",
+        "upper_arm.L",
+        "forearm.L",
+        "hand.L",
+        "upper_arm.R",
+        "forearm.R",
+        "hand.R",
+        "thigh.L",
+        "shin.L",
+        "foot.L",
+        "thigh.R",
+        "shin.R",
+        "foot.R"
+      ],
+      "rest_tolerance": 2e-05,
+      "idle_tolerance": 5e-05,
+      "import": {
+        "fps": 100,
+        "remove_immutable_tracks": false,
+        "optimizer": false
+      },
+      "anchors": {
+        "blade_base": {
+          "provider": "skinned_landmark",
+          "bone": "hand.R",
+          "point": [
+            -0.44460901618003845,
+            0.9777198433876038,
+            0.2789955735206604
+          ]
+        },
+        "blade_tip": {
+          "provider": "skinned_landmark",
+          "bone": "hand.R",
+          "point": [
+            -0.42048200964927673,
+            1.0838791131973267,
+            0.8930292129516602
+          ]
+        }
+      },
+      "hand_variants": {},
+      "source_license": "Existing user-authorized Shu technical character resource; original source terms retained. New choreography by Codex for Shu."
+    },
+    "tinglan22": {
+      "actor": "tinglan",
+      "source_asset": "res://assets/art/mountain_ambush/tinglan-candidate.glb",
+      "source_sha256": "cdbec85183a9e2d452546c6a5a1a164c854042c9a2f4f783b5d184c750d5856b",
+      "bone_names": [
+        "pelvis",
+        "skirt.back.L",
+        "skirt.back.R",
+        "skirt.front.L",
+        "skirt.front.R",
+        "spine",
+        "chest",
+        "neck",
+        "head",
+        "ponytail",
+        "upper_arm.L",
+        "forearm.L",
+        "hand.L",
+        "upper_arm.R",
+        "forearm.R",
+        "hand.R",
+        "thigh.L",
+        "shin.L",
+        "foot.L",
+        "thigh.R",
+        "shin.R",
+        "foot.R"
+      ],
+      "rest_tolerance": 2e-05,
+      "idle_tolerance": 5e-05,
+      "import": {
+        "fps": 100,
+        "remove_immutable_tracks": false,
+        "optimizer": false
+      },
+      "anchors": {
+        "palm": {
+          "provider": "bone_local",
+          "bone": "hand.L",
+          "point": [
+            0,
+            0.055,
+            0.018
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "hand_variants": {
+        "palm": {
+          "asset": "res://assets/art/mountain_ambush/palm_lab/v2/motion/tinglan-palm-clips.glb",
+          "mesh": "TinglanOpenPalm",
+          "hide": [
+            "TinglanRelaxedHand",
+            "TinglanPointingHand"
+          ]
+        }
+      },
+      "source_license": "Existing user-authorized Shu technical character resource; original source terms retained. New choreography by Codex for Shu."
+    }
+  }
+}

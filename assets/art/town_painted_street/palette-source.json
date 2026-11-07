@@ -1,0 +1,52 @@
+{
+  "asset": "tea-seller-life.svg",
+  "purpose": "Read pale trouser legs against pale paving in the fixed painted street",
+  "provider": "nativeSVG",
+  "author": "Shu project original procedural SVG, derived locally by Codex",
+  "license": "Original Shu project asset; no third-party image incorporated",
+  "input": {
+    "path": "assets/art/shanxia_polish/tea-seller-life.svg",
+    "sha256": "00c8da6673a9508b53ef8be506f24750734aa77a7d7ad63bf66184605fe16142"
+  },
+  "generator": {
+    "path": "tools/build_town_painted_characters.py",
+    "sha256": "f10b35865b6f26fb00d363f1c1c21be2abeeaf286ad09af9f9f0d45bcf20990b"
+  },
+  "output": {
+    "path": "assets/art/town_painted_street/tea-seller-life.svg",
+    "sha256": "30682e577495d15f4309f3ca4eca5a15801fa1de8fc7d6b4a4ecf1c30d8ad55a"
+  },
+  "frame_size": [
+    80,
+    112
+  ],
+  "frame_count": 6,
+  "foot_anchor": [
+    40,
+    104
+  ],
+  "changes": {
+    "native_leg_strokes": 12,
+    "original_width": 7,
+    "outline_width": 9,
+    "outline_color": "#918774",
+    "inner_width": 7,
+    "inner_color": "#d5ccb0"
+  },
+  "preserved": [
+    "source SVG bytes outside twelve trouser strokes",
+    "shoe curves",
+    "foot anchors",
+    "head",
+    "torso",
+    "working sleeves",
+    "hands",
+    "cups",
+    "pose order",
+    "80x112 frame contract"
+  ],
+  "validation": {
+    "exact_reverse_to_source": true
+  },
+  "reproduce": "python3 tools/build_town_painted_characters.py"
+}

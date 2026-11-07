@@ -1,0 +1,25 @@
+{
+  "kind": "shu-first-journey-runtime-adaptation",
+  "status": "local playable candidate; user playtest pending",
+  "base_head": "7c992c578b1fe4a1624c769812425b38080771d3",
+  "base_pack": "shu_mountain_ambush 0.5.1",
+  "frozen_app": "0.6.7-staff-motion-candidate",
+  "base_input_sha256": {
+    "games/shu_mountain_ambush/activities.json": "ea8143386648477df6cd68a08ed4e0df05902f61c47c3ddf48f9d973f8d7f6a2",
+    "games/shu_mountain_ambush/characters.json": "b1c1917f30f28d2e9907e92df0adc81e606b005139b6e945e264f498991a34e5",
+    "games/shu_mountain_ambush/encounter.json": "2bd455f9676073d377021cc6e8c6e8e4455dd72a1f182d1a188dfc5edad1c7d2",
+    "games/shu_mountain_ambush/events.json": "be167f965c735f6d903ddebe319442f2136adced4073258295ddb970accc0bcb",
+    "games/shu_mountain_ambush/game.json": "e690a0c9a0cbfbccb338be34bf45ded8d12d7d491e73debce80b33a39c1a86f8",
+    "games/shu_mountain_ambush/motions.json": "518a167f8cb72ce5edc50ac3a766d0c1eb28122ef119a0141366ecc6f8770df2",
+    "games/shu_mountain_ambush/rules.json": "e3dfc6d886d7e39873be31fb22c50a4f7f873148c3f13cdd7eccf1c2b4339a37",
+    "games/shu_mountain_ambush/scenes.json": "a91a9f0879ed73146d2601003bb9c11ca972f29dbb96952fcf51e54430dcd500",
+    "games/shu_mountain_ambush/source.json": "602437aba3e02c12622bd985357ba3db265f5f7776ae8b8338222c63310e60c3",
+    "games/shu_mountain_ambush/voices.json": "9e6b9e1ac0cc17ab275b13b2c8c75d6ef747c7ed94ca7642227dfeaeffe790a5",
+    "games/shu_mountain_ambush/walks.json": "ae989a0e0ceea4fcfda237de8b48022527bd771d69ced17a03d0f9c8b5357b97"
+  },
+  "authorship": "Original system progression, objective and ending text authored in this task; existing character dialogue and recorded voices reused unchanged. This is a short chapter candidate, not a newly approved long-form main story.",
+  "runtime_authority": "JourneySession inherits the existing AmbushSession / EngineSession; encounter and assets remain pinned by their existing source records.",
+  "source_audit": "docs/P3_MOUNTAIN_AMBUSH_SOURCE_AUDIT.md",
+  "new_runtime_pack": "shu_first_journey 0.6.0",
+  "compatibility": "Independent content fingerprint, user directory and checkpoints; no migration or writes to old packs."
+}

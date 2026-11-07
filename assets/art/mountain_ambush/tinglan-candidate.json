@@ -1,0 +1,185 @@
+{
+  "status": "new candidate, not user-approved",
+  "technical_base_sha256": "e8d74b2e0be789f272597aa6f7fc268f57851bb669ed43d97e2efa91c3860e27",
+  "identity_reference": "docs/concepts/03-character-roster.png, upper row second character",
+  "author": "Codex for Shu; local Blender derived model and original detail/hand meshes",
+  "new_cloud_calls": 0,
+  "new_paid_calls": 0,
+  "original_jiang_modified": false,
+  "color_management": {
+    "bundled_config": "/usr/share/blender/5.2/datafiles/colormanagement/config.ocio",
+    "bundled_sha256": "f10891fc7d34e78e71b535e3f92b3c612177320f990641283247cb84bb8d62ad",
+    "library_version": " 2,  4,  2",
+    "compatibility_copy": true,
+    "workspace_config_sha256": "7acd7b60e2594ed5d7e23ee5eb53f565c1a0d184c32bdb3a7471946a8aebdc17",
+    "change": "version declaration and unsupported ICC metadata only; all transforms/LUTs retained"
+  },
+  "builder_sha256": "e7408f605ac9586126a2e9483d4ff7a9f32efc65e7b4b13b821b27117b3f3593",
+  "geometry_edits": {
+    "old_ponytail_vertices_removed": 14263,
+    "left_hand_vertices_removed": 622,
+    "lower_face_width_factor": 0.94
+  },
+  "interrupt": {
+    "frames": [
+      0,
+      12
+    ],
+    "fps": 30,
+    "hit_frame": 4,
+    "neutral_frame": 10,
+    "left_hand": "two fingers, separately authored mesh",
+    "right_hand": "retains one sword grip"
+  },
+  "textures": [
+    {
+      "name": "texture_pbr_20250901_normal",
+      "mime_type": "image/png",
+      "size": [
+        1024,
+        1024
+      ],
+      "bytes": 484395,
+      "sha256": "958a40ff3949f1f38f9bb2d9db51d65e77e9675ecbdbe30ee8a7de8d86f3a41c"
+    },
+    {
+      "name": "JiangFullbody_SaturatedBaseColor",
+      "mime_type": "image/png",
+      "size": [
+        2048,
+        2048
+      ],
+      "bytes": 4731284,
+      "sha256": "2ac47107ad2bb8834e71ca31e87046efdad7181b79b58755eefe99da73c59835"
+    },
+    {
+      "name": "texture_pbr_20250901_metallic-texture_pbr_20250901_roughness",
+      "mime_type": "image/png",
+      "size": [
+        1024,
+        1024
+      ],
+      "bytes": 865177,
+      "sha256": "165405c1f6f280c90d8c2eaa720316132b49450a2068bc2a326bdab692d11d9b"
+    },
+    {
+      "name": "texture_pbr_20250901_normal",
+      "mime_type": "image/png",
+      "size": [
+        1024,
+        1024
+      ],
+      "bytes": 523195,
+      "sha256": "2e7d0b766b9d054412dc5ce20e36926a253c40d7cc2daccac4f8284cc7b5aba9"
+    },
+    {
+      "name": "JiangApprovedHead_SaturatedBaseColor",
+      "mime_type": "image/png",
+      "size": [
+        2048,
+        2048
+      ],
+      "bytes": 4818692,
+      "sha256": "345d59d59b7606dbd51a5c7a7aee30984cda6aca396542d2216c1d4e4235d997"
+    },
+    {
+      "name": "texture_pbr_20250901_metallic-texture_pbr_20250901_roughnes",
+      "mime_type": "image/png",
+      "size": [
+        1024,
+        1024
+      ],
+      "bytes": 1085016,
+      "sha256": "5b38758c4082b13b676b2334a649ca1bd707fec8527349b4bf7c511c1384575c"
+    }
+  ],
+  "animation_clips": [
+    {
+      "name": "ApprovedSwordPhrase",
+      "duration_seconds": 4
+    },
+    {
+      "name": "Idle",
+      "duration_seconds": 0.43333333333333335
+    },
+    {
+      "name": "TinglanInterrupt",
+      "duration_seconds": 0.4
+    }
+  ],
+  "scene_root_names": [
+    "TinglanBronzeClasp",
+    "TinglanFrontPanel1",
+    "TinglanFrontPanel-1",
+    "TinglanHairRibbon1",
+    "TinglanHairRibbon-1",
+    "TinglanHairTie",
+    "TinglanIvoryLapel1",
+    "TinglanIvoryLapel-1",
+    "TinglanJadeClasp",
+    "TinglanLeftCuff",
+    "TinglanLongHair_00",
+    "TinglanLongHair_01",
+    "TinglanLongHair_02",
+    "TinglanLongHair_03",
+    "TinglanLongHair_04",
+    "TinglanLongHair_05",
+    "TinglanLongHair_06",
+    "TinglanPanelPiping1",
+    "TinglanPanelPiping-1",
+    "TinglanPointingHand",
+    "TinglanRelaxedHand",
+    "TinglanRig",
+    "TinglanSideLock1",
+    "TinglanSideLock-1"
+  ],
+  "has_color_0": true,
+  "skin_weight_policy": "Original rig/groups; GLTF top four influences per vertex normalized",
+  "glb_sha256": "cdbec85183a9e2d452546c6a5a1a164c854042c9a2f4f783b5d184c750d5856b",
+  "bytes": 16974732,
+  "triangles": 69249,
+  "mesh_count": 27,
+  "bones": [
+    "pelvis",
+    "skirt.back.L",
+    "skirt.back.R",
+    "skirt.front.L",
+    "skirt.front.R",
+    "spine",
+    "chest",
+    "neck",
+    "head",
+    "ponytail",
+    "upper_arm.L",
+    "forearm.L",
+    "hand.L",
+    "upper_arm.R",
+    "forearm.R",
+    "hand.R",
+    "thigh.L",
+    "shin.L",
+    "foot.L",
+    "thigh.R",
+    "shin.R",
+    "foot.R"
+  ],
+  "calibration": {
+    "floor": 0.00033541873563081026,
+    "height": 2.0964744453085586,
+    "display_height": 1.9,
+    "method": "standing source mesh bounds; runtime actual Idle feet midpoint on X/Z"
+  },
+  "technical_base_record": "docs/P3_JIANG_MODEL_REUSE.md",
+  "author_and_usage": "Existing user-authorized Tencent Hunyuan mesh/texture outputs and original Shu grip/sword/rig as technical base; original source terms retained. New local Tinglan derivative, hand shapes, hair and clothing detail by Codex for Shu.",
+  "rebuild": {
+    "script": "tools/hero_lookdev/build_ambush_tinglan.py",
+    "base": "assets/art/mountain_ambush/jiang-approved.glb",
+    "process_local_ocio": "Existing compatible bundled config; no system changes",
+    "editable_source": ".local/sources/tinglan-candidate-v2/tinglan-candidate.blend"
+  },
+  "limitations": [
+    "Shared technical topology with Jiang; candidate face proportions and palette, no new independent scan or cloud sculpt.",
+    "Hand meshes are rigid to hand.L; no per-finger rig.",
+    "Conservative skirt and ponytail skinning; no cloth simulation."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "status": "Two new skill presentation candidates; in-game visual review and device listening pending",
+  "author": "Original Shu procedural skill mesh and audio presentation",
+  "implementation": "Compatibility-friendly ArrayMesh ribbons from actual blade base/tip samples; no particle-trail addon or copied third-party effect",
+  "skills": {
+    "pierce": "Narrow forward gold/white ribbon flies during strike .24-.34s, covers the full stage-supplied legal endpoint at impact, then leaves a fading retreating tail and six linear glints",
+    "sweep": "Continuous 25-point 132-degree 1.56m front ribbon with shared camera-facing tangent widths and smoothly tapered alpha; raised wider white core and eight brief ground accents; normal depth test retained"
+  },
+  "runtime_module": "res://addons/cultivation_mode/ambush_skill_fx.gd",
+  "runtime_config": "res://assets/art/mountain_ambush/skills/skill-fx.json",
+  "audio_source": "res://assets/art/mountain_ambush/skills/source-sfx.json",
+  "api": {
+    "setup": "setup(muted=false, volume_db=-10.0) -> {ok,reason}; add helper under world before attack",
+    "begin": "begin_attack(skill_id, from, to, blade_base, blade_tip); all supplied positions are global",
+    "clock": "Stage calls update_blade(base,tip), then step(delta); helper has no self-ticking process/timer",
+    "impact": "impact() is idempotent per attack; Stage owns the gameplay hit time",
+    "cleanup": "cancel() stops and frees all transient meshes/audio nodes; finished audio emitters queue their own deletion after callback",
+    "audio": "set_audio(muted,volume_db); muted calls do not play or increment audio_play_count; history records actual play() calls, not device audibility"
+  },
+  "visual_constraints": {
+    "lights_created": 0,
+    "global_lighting_or_camera_changes": false,
+    "depth_test": "normal depth test retained",
+    "trail_lifetime_seconds": 0.115,
+    "trail_max_samples": 12,
+    "pierce_post_impact_life_seconds": 0.38,
+    "sweep_post_impact_life_seconds": 0.44,
+    "pierce_flight_start_seconds": 0.24,
+    "pierce_flight_seconds": 0.1,
+    "pierce_full_range_at_impact": true,
+    "sweep_radius_m": 1.56,
+    "sweep_ribbon_height_m": 1.05,
+    "sweep_core_height_m": 1.07,
+    "sweep_core_half_width_m": 0.065,
+    "sweep_arc_samples": 25,
+    "sweep_shared_endpoints": true
+  },
+  "copied_third_party_code": false,
+  "copied_game_assets": false,
+  "input_recordings": [],
+  "third_party_samples": [],
+  "new_cloud_calls": 0,
+  "new_dependency_installs": 0,
+  "cost_rmb": 0,
+  "source_hashes": {
+    "addons/cultivation_mode/ambush_skill_fx.gd": "f7c2341d5ebc0f36467db35f8778f757fe3f28a45913cef8a8ded1a5ecde68fb",
+    "assets/art/mountain_ambush/skills/skill-fx.json": "f7eae06e9c45a770060598cd319b67aecef37e179ae7b40957e32d81cce86c78",
+    "assets/art/mountain_ambush/skills/source-sfx.json": "d16ec679df8494eefd27ce2ed9ef4b6ad2d98bbdb220f69c25c343c63de77e49",
+    "tools/hero_lookdev/build_ambush_skill_sfx.py": "2e8463053181664b1af10660066a7b1859b5d16b548fa03a9a748fd62b897471",
+    "assets/art/mountain_ambush/skills/sfx/pierce-hit.wav": "d6c968213f4bdf19a8f4edc8f8e650dfe7dde2bb43af82af013d421675fed6d5",
+    "assets/art/mountain_ambush/skills/sfx/pierce-whoosh.wav": "33cbb82f543af3a02dd4f802868c2dc61268af493c9b6d0e6c039576bdbe466d",
+    "assets/art/mountain_ambush/skills/sfx/sweep-hit.wav": "7a2531ff1bb8fdf927dd39dea4dbde0c0ad099b7ecf28da7ee080ec9f5c397d2",
+    "assets/art/mountain_ambush/skills/sfx/sweep-whoosh.wav": "034b369a3db49b59078b524633a833dac45639aa35f10d7f2db0c5295b9992a7"
+  },
+  "validation_boundary": "Isolated headless checks decode WAVs and verify mesh shape, global input conversion, bounded lifetimes, idempotency and audio play calls. They do not establish in-game aesthetics, Web performance, device sound or user acceptance."
+}

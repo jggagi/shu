@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "fingerprint": "d7bd0d5f2a43777415cc5eb31bf2fd3cfba3f5e4187cb46cc0bdbbc98a1144a7",
+  "inputs": {
+    "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-dust.png": "5bdab156960619d2b521ff4efc7f0b2fbb1517725b6938b7c5fe45c666f303e3",
+    "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-wind.png": "76c7fd427ef69324642c5178a56e30f6a2f8b7ccb68956896c56fbc1218abc4b",
+    "res://assets/art/mountain_ambush/palm_lab/v2/effekseer/palm-gust-v2-atlas.png": "a62bd192e6730c688e1b62f9b575807137a50fd952289475c436af6788002f33",
+    "res://assets/art/mountain_ambush/palm_lab/v2/motion/tinglan-palm-clips.glb": "7cfaf94d17313df4274d9cfdfa815fb70576a4a72679f1d6c915bda9fa793c83",
+    "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-impact.wav": "1e7334043e46b0eb4966182f56a20b611283fb0b636c6a98ec81208d2fc5b192",
+    "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-release.wav": "d56ca609c44dc548e2b97ff6a429fc167e29dd75dd3d612cff4b26b09271c802",
+    "res://assets/art/mountain_ambush/tinglan-candidate.glb": "cdbec85183a9e2d452546c6a5a1a164c854042c9a2f4f783b5d184c750d5856b",
+    "assets/data/martial_workshop/profiles.json": "c05803ba114109dfc1f271f37624a382e2c83905d0480e3e63d5412305312bd0"
+  },
+  "tools": {
+    "tools/build_martial_control_variants.py": "f5a47f1d4f6f03f0bbe77f2731856bb755edcead053976f66ddaccb2149997ed",
+    "tools/hero_lookdev/build_martial_control_motions.py": "70e7671fcabe6a7f1636721c1fa3fb6a1ab6f6cfe8db96affb59f1c2395a524d",
+    "tools/build_martial_workshop.py": "041e37c7868c439fc6a8cc01b89140e3ad0b7ced882cf5faf89a7d83b4ac0c0e",
+    "tools/hero_lookdev/build_ambush_martial_clips.py": "649c81337e9df429ebfc6bb8ffb3510538b7e8738e09bd1e76c898d1a6d36209",
+    "tools/hero_lookdev/build_ambush_palm_clips.py": "cd39f33443fa8300927375a68015fdbddd282cff2c773a166b49c1d48a156b49",
+    "blender_binary_sha256": "609cb79642105f2a23b92916a9cd30176a930400aea637f1578a99e8f0b92a57",
+    "godot_binary_sha256": "8d106cbe6144c2dc7e881d61d2429c1a8a76e6b22ef48bd5e48dcf934953f71e"
+  },
+  "recipe_sha256": "0b9ad87b58c0999c40078a4dac2cf310b1a782b82927310feecda01649aa055d",
+  "output_files": {
+    "/home/x1-lite/games/shu/.local/worktrees/mountain-ambush/assets/art/martial_workshop/control_rig/palm_gale/d7bd0d5f2a437774/motion.glb": "e6bc8e5367eb28c3afe2afe3c8ee1db47d1a73cc8a0e803490aee67c14e85152",
+    "/home/x1-lite/games/shu/.local/worktrees/mountain-ambush/assets/art/martial_workshop/control_rig/palm_gale/d7bd0d5f2a437774/motion.glb.import": "39cbd7f7f7f0097fa8398bf51ec637e34cd754b08c956a462812cbec782f37be",
+    "/home/x1-lite/games/shu/.local/worktrees/mountain-ambush/assets/art/martial_workshop/control_rig/palm_gale/d7bd0d5f2a437774/source-motion.json": "fdb44a9cc7f36369706c39e7ebb848902e2dfd50b08d31521093983478b9faf8",
+    "/home/x1-lite/games/shu/.local/worktrees/mountain-ambush/.local/sources/martial-control-rig/palm_gale/d7bd0d5f2a437774/controls.blend": "83f91d95063cf6dcc88f29bf43cdcf9f89555f63a320a5d37602b9d3c73c7ea1"
+  },
+  "resolved_variant": {
+    "move_id": "palm_gale",
+    "variant_id": "enhanced",
+    "variant_label": "增强版",
+    "description": "增强版：左掌明确收至腰侧蓄势，左肩随转髋向前送，伸臂水平推掌，停稳后再收回；双脚锁定。",
+    "move": {
+      "id": "palm_gale",
+      "label": "劲风掌",
+      "description": "增强版：左掌明确收至腰侧蓄势，左肩随转髋向前送，伸臂水平推掌，停稳后再收回；双脚锁定。",
+      "category": "palm",
+      "style": "strong",
+      "actor": "tinglan",
+      "profile": "tinglan22",
+      "preview_only": true,
+      "combat_skill": "",
+      "animation": {
+        "asset": "res://assets/art/martial_workshop/control_rig/palm_gale/d7bd0d5f2a437774/motion.glb",
+        "clip": "PalmGaleControl",
+        "hand": "palm",
+        "source_seconds": 1.45,
+        "sha256": "e6bc8e5367eb28c3afe2afe3c8ee1db47d1a73cc8a0e803490aee67c14e85152"
+      },
+      "timing": {
+        "duration": 1.45,
+        "total": 1.85,
+        "release": 0.56,
+        "impact": 0.78,
+        "source_map": [
+          [
+            0,
+            0
+          ],
+          [
+            1.45,
+            1.45
+          ]
+        ]
+      },
+      "visual": {
+        "type": "palm",
+        "pattern": "pressure",
+        "config": {
+          "schema": 1,
+          "scope": "Dedicated palm motion and directional gust; presentation only",
+          "assets": {
+            "wind": "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-wind.png",
+            "dust": "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-dust.png",
+            "impact": "res://assets/art/mountain_ambush/palm_lab/v2/effekseer/palm-gust-v2-atlas.png"
+          },
+          "release_seconds": 0.56,
+          "flight_seconds": 0.22,
+          "impact_seconds": 0.64,
+          "dust_seconds": 0.95,
+          "duration": 1.85,
+          "impact_size": 3.0,
+          "audio": {
+            "release": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-release.wav",
+            "impact": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-impact.wav"
+          }
+        }
+      },
+      "audio": {
+        "release": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-release.wav",
+        "impact": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-impact.wav"
+      },
+      "camera": {
+        "zoom": 0.82
+      },
+      "resource_sha256": {
+        "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-dust.png": "5bdab156960619d2b521ff4efc7f0b2fbb1517725b6938b7c5fe45c666f303e3",
+        "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-wind.png": "76c7fd427ef69324642c5178a56e30f6a2f8b7ccb68956896c56fbc1218abc4b",
+        "res://assets/art/mountain_ambush/palm_lab/v2/effekseer/palm-gust-v2-atlas.png": "a62bd192e6730c688e1b62f9b575807137a50fd952289475c436af6788002f33",
+        "res://assets/art/mountain_ambush/palm_lab/v2/motion/tinglan-palm-clips.glb": "7cfaf94d17313df4274d9cfdfa815fb70576a4a72679f1d6c915bda9fa793c83",
+        "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-impact.wav": "1e7334043e46b0eb4966182f56a20b611283fb0b636c6a98ec81208d2fc5b192",
+        "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-release.wav": "d56ca609c44dc548e2b97ff6a429fc167e29dd75dd3d612cff4b26b09271c802",
+        "res://assets/art/mountain_ambush/tinglan-candidate.glb": "cdbec85183a9e2d452546c6a5a1a164c854042c9a2f4f783b5d184c750d5856b",
+        "res://assets/art/martial_workshop/control_rig/palm_gale/d7bd0d5f2a437774/motion.glb": "e6bc8e5367eb28c3afe2afe3c8ee1db47d1a73cc8a0e803490aee67c14e85152"
+      },
+      "resource_hash": "3c3ff30bded4b79c0b4ae211f209576039e856b4d113240a57cfc127f8a17033"
+    }
+  },
+  "provenance": {
+    "author": "Codex for Shu; original custom-control choreography",
+    "license": "Existing user-authorized Shu technical character resource; original source terms retained. New choreography by Codex for Shu.",
+    "cloud_calls": 0,
+    "paid_calls": 0,
+    "installs": 0,
+    "runtime_files_in_fingerprint": false
+  }
+}

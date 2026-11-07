@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "id": "palm_gale",
+  "mode": "reuse",
+  "template": "palm_sweep",
+  "fingerprint": "c31246d929da48a31966b768e30bee7e86f738eafdd48a707fe302797658556d",
+  "canonical_recipe_sha256": "3a9a28d0f9cc2a41551e33f22cb0920974d4024318e50f483dd29c6f2e0ce837",
+  "inputs": {
+    "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-dust.png": "5bdab156960619d2b521ff4efc7f0b2fbb1517725b6938b7c5fe45c666f303e3",
+    "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-wind.png": "76c7fd427ef69324642c5178a56e30f6a2f8b7ccb68956896c56fbc1218abc4b",
+    "res://assets/art/mountain_ambush/palm_lab/v2/effekseer/palm-gust-v2-atlas.png": "a62bd192e6730c688e1b62f9b575807137a50fd952289475c436af6788002f33",
+    "res://assets/art/mountain_ambush/palm_lab/v2/effekseer/source-effekseer-v2.json": "f5517c781ece67cd727966984cfa8aac1cfed12bc23d89de819314f0938b4ac6",
+    "res://assets/art/mountain_ambush/palm_lab/v2/motion/source-palm-clips.json": "f8f19b99115ec20732eb0fc9e623d29b8bbae7f3201c133ccd48f73d539dc5aa",
+    "res://assets/art/mountain_ambush/palm_lab/v2/motion/tinglan-palm-clips.glb": "7cfaf94d17313df4274d9cfdfa815fb70576a4a72679f1d6c915bda9fa793c83",
+    "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-impact.wav": "1e7334043e46b0eb4966182f56a20b611283fb0b636c6a98ec81208d2fc5b192",
+    "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-release.wav": "d56ca609c44dc548e2b97ff6a429fc167e29dd75dd3d612cff4b26b09271c802",
+    "res://assets/art/mountain_ambush/palm_lab/v2/sfx/source-palm-sfx.json": "3e283d99ab215efb7e00d67a6a68ed95f30df68cde5d052e35e3fd3ffee4c7fc",
+    "res://assets/art/mountain_ambush/tinglan-candidate.glb": "cdbec85183a9e2d452546c6a5a1a164c854042c9a2f4f783b5d184c750d5856b"
+  },
+  "tools": {
+    "tools/build_martial_workshop.py": "041e37c7868c439fc6a8cc01b89140e3ad0b7ced882cf5faf89a7d83b4ac0c0e",
+    "tools/hero_lookdev/build_workshop_motions.py": "cc2da7d97be2abce6c2a7cd06a3645ef4c186754f07b1cfeab40d121f99f1185",
+    "tools/hero_lookdev/build_ambush_palm_clips.py": "cd39f33443fa8300927375a68015fdbddd282cff2c773a166b49c1d48a156b49",
+    "tools/hero_lookdev/build_ambush_martial_clips.py": "649c81337e9df429ebfc6bb8ffb3510538b7e8738e09bd1e76c898d1a6d36209",
+    "blender_binary_sha256": "609cb79642105f2a23b92916a9cd30176a930400aea637f1578a99e8f0b92a57",
+    "godot_binary_sha256": "8d106cbe6144c2dc7e881d61d2429c1a8a76e6b22ef48bd5e48dcf934953f71e"
+  },
+  "output_files": {},
+  "resolved_move": {
+    "id": "palm_gale",
+    "label": "劲风掌",
+    "description": "沉身蓄势，掌劲离手，收掌归位。",
+    "category": "palm",
+    "style": "strong",
+    "actor": "tinglan",
+    "profile": "tinglan22",
+    "preview_only": true,
+    "combat_skill": "",
+    "animation": {
+      "asset": "res://assets/art/mountain_ambush/palm_lab/v2/motion/tinglan-palm-clips.glb",
+      "clip": "TinglanPalm",
+      "hand": "palm",
+      "source_seconds": 1.45,
+      "sha256": "7cfaf94d17313df4274d9cfdfa815fb70576a4a72679f1d6c915bda9fa793c83"
+    },
+    "timing": {
+      "duration": 1.45,
+      "total": 1.85,
+      "release": 0.56,
+      "impact": 0.78,
+      "source_map": [
+        [
+          0,
+          0
+        ],
+        [
+          1.45,
+          1.45
+        ]
+      ]
+    },
+    "visual": {
+      "type": "palm",
+      "pattern": "pressure",
+      "config": {
+        "schema": 1,
+        "scope": "Dedicated palm motion and directional gust; presentation only",
+        "assets": {
+          "wind": "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-wind.png",
+          "dust": "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-dust.png",
+          "impact": "res://assets/art/mountain_ambush/palm_lab/v2/effekseer/palm-gust-v2-atlas.png"
+        },
+        "release_seconds": 0.56,
+        "flight_seconds": 0.22,
+        "impact_seconds": 0.64,
+        "dust_seconds": 0.95,
+        "duration": 1.85,
+        "impact_size": 3.0,
+        "audio": {
+          "release": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-release.wav",
+          "impact": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-impact.wav"
+        }
+      }
+    },
+    "audio": {
+      "release": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-release.wav",
+      "impact": "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-impact.wav"
+    },
+    "camera": {
+      "zoom": 0.82
+    },
+    "resource_sha256": {
+      "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-dust.png": "5bdab156960619d2b521ff4efc7f0b2fbb1517725b6938b7c5fe45c666f303e3",
+      "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-wind.png": "76c7fd427ef69324642c5178a56e30f6a2f8b7ccb68956896c56fbc1218abc4b",
+      "res://assets/art/mountain_ambush/palm_lab/v2/effekseer/palm-gust-v2-atlas.png": "a62bd192e6730c688e1b62f9b575807137a50fd952289475c436af6788002f33",
+      "res://assets/art/mountain_ambush/palm_lab/v2/motion/tinglan-palm-clips.glb": "7cfaf94d17313df4274d9cfdfa815fb70576a4a72679f1d6c915bda9fa793c83",
+      "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-impact.wav": "1e7334043e46b0eb4966182f56a20b611283fb0b636c6a98ec81208d2fc5b192",
+      "res://assets/art/mountain_ambush/palm_lab/v2/sfx/palm-release.wav": "d56ca609c44dc548e2b97ff6a429fc167e29dd75dd3d612cff4b26b09271c802",
+      "res://assets/art/mountain_ambush/tinglan-candidate.glb": "cdbec85183a9e2d452546c6a5a1a164c854042c9a2f4f783b5d184c750d5856b"
+    },
+    "resource_hash": "1da5014319c1974e9ac0fbb46f7153480ba5661286b673ae6663b30af15b35b3"
+  },
+  "source_manifest_hashes": {
+    "res://assets/art/mountain_ambush/palm_lab/v2/motion/source-palm-clips.json": "f8f19b99115ec20732eb0fc9e623d29b8bbae7f3201c133ccd48f73d539dc5aa",
+    "res://assets/art/mountain_ambush/palm_lab/v2/effekseer/source-effekseer-v2.json": "f5517c781ece67cd727966984cfa8aac1cfed12bc23d89de819314f0938b4ac6",
+    "res://assets/art/mountain_ambush/palm_lab/v2/sfx/source-palm-sfx.json": "3e283d99ab215efb7e00d67a6a68ed95f30df68cde5d052e35e3fd3ffee4c7fc"
+  },
+  "provenance": {
+    "author": "Codex for Shu; original choreography",
+    "source_license": "Existing user-authorized Shu technical character resource; original source terms retained. New choreography by Codex for Shu.",
+    "source_originals_modified": false,
+    "cloud_calls": 0,
+    "paid_calls": 0,
+    "installs": 0
+  }
+}

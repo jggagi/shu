@@ -1,0 +1,699 @@
+{
+  "status": "Songfeng environment slice candidate; not user-approved artwork",
+  "author": "Quaternius",
+  "source_pack": "Stylized Nature MegaKit Standard (68 free source models)",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_file": "License_Quaternius_CC0.txt",
+  "acquisition": {
+    "author": "Quaternius",
+    "pack": "Stylized Nature MegaKit Standard",
+    "source_url": "https://quaternius.itch.io/stylized-nature-megakit",
+    "official_pack_url": "https://quaternius.com/packs/stylizednaturemegakit.html",
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "cost_usd": 0,
+    "paid_versions_downloaded": false,
+    "official_upload_id": "11055123",
+    "retrieved_at_utc": "2026-10-24T14:18:25.727570+00:00",
+    "archive": "Stylized Nature MegaKit[Standard].zip",
+    "bytes": 104088529,
+    "sha256": "298f6732b872e4cf7b30e6e7abf9641c7f6dc6b326df37ac089533ed7e3d58c9",
+    "archive_entries": 459,
+    "archive_safety": "relative paths, no parent traversal or symlinks; CRCs validated",
+    "previous_source": {
+      "url": "https://quaternius.com/packs/ultimatestylizednature.html",
+      "official_drive_folder": "https://drive.google.com/drive/folders/1IV3bXHzkNvuNWFHPi4KPx-G4ghuxIuT-",
+      "status": "Google Drive returned Quota exceeded HTML for both License.txt and AllModels.blend; no asset downloaded from this source"
+    }
+  },
+  "archive_sha256": "298f6732b872e4cf7b30e6e7abf9641c7f6dc6b326df37ac089533ed7e3d58c9",
+  "archive_bytes": 104088529,
+  "builder": "tools/hero_lookdev/build_ambush_environment_assets.py",
+  "builder_sha256": "25eb52b2e2df64263b29e3db0b9766e85d700b377392c651e49dbfeddae02660",
+  "tools": {
+    "python": "3.14.8",
+    "pillow": "12.3.0"
+  },
+  "rebuild": "python3 tools/hero_lookdev/build_ambush_environment_assets.py",
+  "runtime_bytes_glb_and_textures": 4834939,
+  "cost_usd": 0,
+  "new_generated_images": 0,
+  "new_installs": 0,
+  "material_adaptation": "Embedded original resized textures, matte roughness, mild linear base-color multiplier, alpha-tested double-sided foliage",
+  "source_integrity": "Original ZIP and extracted source files are not modified",
+  "assets": [
+    {
+      "id": "rock-a",
+      "path": "rock-a.glb",
+      "source_path": "glTF/Rock_Medium_1.gltf",
+      "source_sha256": "5d1ab1fa03218f4a908728ed0eabe6486344a7e4f510b0d3d6f837fd1d011bd8",
+      "source_dependencies": [
+        {
+          "path": "glTF/Rock_Medium_1.bin",
+          "sha256": "ea79527d4c2b3bdb7a28bf589bf0c1fd96d192a4d0738636753911dd58681e99",
+          "bytes": 13284
+        }
+      ],
+      "source_generator": "Khronos glTF Blender I/O v4.0.44",
+      "triangles": 342,
+      "bytes": 958320,
+      "sha256": "36325771aaffe2f89273190e8d31bf27d45151188773d0f49571eeb3a0db52a4",
+      "coordinates": {
+        "up": "+Y",
+        "pivot": "ground Y=0, XZ bounding-box midpoint",
+        "normalization": "maximum horizontal X/Z extent = 1",
+        "source_min": [
+          -1.7272872924804688,
+          -0.27113133668899536,
+          -1.1498832702636719
+        ],
+        "source_max": [
+          1.4978611469268799,
+          1.988665223121643,
+          1.8392531871795654
+        ],
+        "uniform_scale": 0.3100632478744946,
+        "source_pivot": [
+          -0.11471307277679443,
+          -0.27113133668899536,
+          0.3446849584579468
+        ],
+        "normalized_dimensions_xyz": [
+          1.0,
+          0.700679860870496,
+          0.9268213583349111
+        ]
+      },
+      "images": [
+        {
+          "source_path": "glTF/Rocks_Diffuse.png",
+          "source_sha256": "b813696df6081f469a127092eb0ce45cc39d56f3ccc0699152bfcd3804810b48",
+          "source_dimensions": [
+            2048,
+            2048
+          ],
+          "path": "textures/rocks-diffuse-1024.png",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "bytes": 943270,
+          "sha256": "00db3219f9fa8c8b15659c3e2af2a4965b587cf2321c456f6875f06b161150c1",
+          "embedded": true,
+          "processing": "Original pixels/alpha, resized with Lanczos only; no generated or repainted art"
+        }
+      ],
+      "materials": [
+        {
+          "name": "Rocks",
+          "source": {
+            "doubleSided": true,
+            "name": "Rocks",
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 0
+              },
+              "metallicFactor": 0
+            }
+          },
+          "runtime": {
+            "doubleSided": true,
+            "name": "Rocks",
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 0
+              },
+              "metallicFactor": 0,
+              "baseColorFactor": [
+                0.82,
+                0.86,
+                0.78,
+                1
+              ],
+              "roughnessFactor": 0.95
+            }
+          }
+        }
+      ],
+      "geometry_processing": "No retopology, decimation, UV or vertex changes; one explicit uniform parent transform"
+    },
+    {
+      "id": "rock-b",
+      "path": "rock-b.glb",
+      "source_path": "glTF/Rock_Medium_3.gltf",
+      "source_sha256": "9a575b911372cf91693aa3a56aea8137ec2251c2b99fb34a31272ee64503047f",
+      "source_dependencies": [
+        {
+          "path": "glTF/Rock_Medium_3.bin",
+          "sha256": "63f94bce2d3fb3fe25b2d6c843a828b1bec76855dbaac93fcf5d43582309caad",
+          "bytes": 20124
+        }
+      ],
+      "source_generator": "Khronos glTF Blender I/O v4.0.44",
+      "triangles": 522,
+      "bytes": 965160,
+      "sha256": "6cb67041b40df0ae389efee972c1dcb61b892af5db6f16c53fc567aac3164c03",
+      "coordinates": {
+        "up": "+Y",
+        "pivot": "ground Y=0, XZ bounding-box midpoint",
+        "normalization": "maximum horizontal X/Z extent = 1",
+        "source_min": [
+          -1.8242793083190918,
+          -0.31564441323280334,
+          -0.8904620409011841
+        ],
+        "source_max": [
+          1.5958054065704346,
+          2.000638246536255,
+          2.5856480598449707
+        ],
+        "uniform_scale": 0.2876778844793632,
+        "source_pivot": [
+          -0.11423695087432861,
+          -0.31564441323280334,
+          0.8475930094718933
+        ],
+        "normalized_dimensions_xyz": [
+          0.983882735519625,
+          0.6663432954185953,
+          0.9999999999999999
+        ]
+      },
+      "images": [
+        {
+          "source_path": "glTF/Rocks_Diffuse.png",
+          "source_sha256": "b813696df6081f469a127092eb0ce45cc39d56f3ccc0699152bfcd3804810b48",
+          "source_dimensions": [
+            2048,
+            2048
+          ],
+          "path": "textures/rocks-diffuse-1024.png",
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "bytes": 943270,
+          "sha256": "00db3219f9fa8c8b15659c3e2af2a4965b587cf2321c456f6875f06b161150c1",
+          "embedded": true,
+          "processing": "Original pixels/alpha, resized with Lanczos only; no generated or repainted art"
+        }
+      ],
+      "materials": [
+        {
+          "name": "Rocks",
+          "source": {
+            "doubleSided": true,
+            "name": "Rocks",
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 0
+              },
+              "metallicFactor": 0
+            }
+          },
+          "runtime": {
+            "doubleSided": true,
+            "name": "Rocks",
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 0
+              },
+              "metallicFactor": 0,
+              "baseColorFactor": [
+                0.82,
+                0.86,
+                0.78,
+                1
+              ],
+              "roughnessFactor": 0.95
+            }
+          }
+        }
+      ],
+      "geometry_processing": "No retopology, decimation, UV or vertex changes; one explicit uniform parent transform"
+    },
+    {
+      "id": "grass-a",
+      "path": "grass-a.glb",
+      "source_path": "glTF/Grass_Common_Short.gltf",
+      "source_sha256": "6957b50622c9e26e7296c1b47ea8653bc0d957e0a547de444e2ed96f0075a21a",
+      "source_dependencies": [
+        {
+          "path": "glTF/Grass_Common_Short.bin",
+          "sha256": "7a0f0f7a9ac39cfa4b303bac03a6594f43e48d873b73553fa06a79e4df1271e9",
+          "bytes": 7052
+        }
+      ],
+      "source_generator": "Khronos glTF Blender I/O v4.0.44",
+      "triangles": 155,
+      "bytes": 42600,
+      "sha256": "c683abfd039561a27f5bcbb492b736dd805a9719126db5d38a0731b8df7be953",
+      "coordinates": {
+        "up": "+Y",
+        "pivot": "ground Y=0, XZ bounding-box midpoint",
+        "normalization": "height = 1",
+        "source_min": [
+          -0.3556424081325531,
+          -0.022385215386748314,
+          -0.47937828302383423
+        ],
+        "source_max": [
+          0.2832280695438385,
+          1.311718225479126,
+          0.25788721442222595
+        ],
+        "uniform_scale": 0.7495670645680736,
+        "source_pivot": [
+          -0.0362071692943573,
+          -0.022385215386748314,
+          -0.11074553430080414
+        ],
+        "normalized_dimensions_xyz": [
+          0.4788762685910959,
+          1.0,
+          0.552629934727964
+        ]
+      },
+      "images": [
+        {
+          "source_path": "glTF/Grass.png",
+          "source_sha256": "5d69048193b246a73c996b892607fb36c75d0c60afcb2dab8aa12de3c0b2d9bd",
+          "source_dimensions": [
+            512,
+            512
+          ],
+          "path": "textures/grass-512.png",
+          "dimensions": [
+            512,
+            512
+          ],
+          "bytes": 33605,
+          "sha256": "5d69048193b246a73c996b892607fb36c75d0c60afcb2dab8aa12de3c0b2d9bd",
+          "embedded": true,
+          "processing": "Original pixels/alpha, resized with Lanczos only; no generated or repainted art"
+        }
+      ],
+      "materials": [
+        {
+          "name": "Grass",
+          "source": {
+            "doubleSided": true,
+            "name": "Grass",
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 0
+              },
+              "metallicFactor": 0
+            }
+          },
+          "runtime": {
+            "doubleSided": true,
+            "name": "Grass",
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 0
+              },
+              "metallicFactor": 0,
+              "baseColorFactor": [
+                0.72,
+                0.78,
+                0.66,
+                1
+              ],
+              "roughnessFactor": 0.95
+            },
+            "alphaMode": "MASK",
+            "alphaCutoff": 0.35
+          }
+        }
+      ],
+      "geometry_processing": "No retopology, decimation, UV or vertex changes; one explicit uniform parent transform"
+    },
+    {
+      "id": "grass-b",
+      "path": "grass-b.glb",
+      "source_path": "glTF/Grass_Wispy_Short.gltf",
+      "source_sha256": "3c1d3bdd332420e070abde72d73611d1f13acfbe027e26b2fb943f9bcbd6b1c5",
+      "source_dependencies": [
+        {
+          "path": "glTF/Grass_Wispy_Short.bin",
+          "sha256": "c38f46e5a66ed3917fd45104effb914228d43d3724f4659416e1533dcd71776d",
+          "bytes": 25324
+        }
+      ],
+      "source_generator": "Khronos glTF Blender I/O v4.0.44",
+      "triangles": 494,
+      "bytes": 60876,
+      "sha256": "9ee1ee1bffbd3cc3ac0d2ff0186fb2258cd5529f632d6f5fd6a63f0493a5840a",
+      "coordinates": {
+        "up": "+Y",
+        "pivot": "ground Y=0, XZ bounding-box midpoint",
+        "normalization": "height = 1",
+        "source_min": [
+          -0.7280435562133789,
+          -0.08575008809566498,
+          -0.5828109979629517
+        ],
+        "source_max": [
+          0.5941424369812012,
+          0.9860967993736267,
+          0.6269333362579346
+        ],
+        "uniform_scale": 0.9329690757987577,
+        "source_pivot": [
+          -0.06695055961608887,
+          -0.08575008809566498,
+          0.022061169147491455
+        ],
+        "normalized_dimensions_xyz": [
+          1.2335586441048099,
+          1.0,
+          1.1286540534508436
+        ]
+      },
+      "images": [
+        {
+          "source_path": "glTF/Grass.png",
+          "source_sha256": "5d69048193b246a73c996b892607fb36c75d0c60afcb2dab8aa12de3c0b2d9bd",
+          "source_dimensions": [
+            512,
+            512
+          ],
+          "path": "textures/grass-512.png",
+          "dimensions": [
+            512,
+            512
+          ],
+          "bytes": 33605,
+          "sha256": "5d69048193b246a73c996b892607fb36c75d0c60afcb2dab8aa12de3c0b2d9bd",
+          "embedded": true,
+          "processing": "Original pixels/alpha, resized with Lanczos only; no generated or repainted art"
+        }
+      ],
+      "materials": [
+        {
+          "name": "Grass",
+          "source": {
+            "doubleSided": true,
+            "name": "Grass",
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 0
+              },
+              "metallicFactor": 0
+            }
+          },
+          "runtime": {
+            "doubleSided": true,
+            "name": "Grass",
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 0
+              },
+              "metallicFactor": 0,
+              "baseColorFactor": [
+                0.72,
+                0.78,
+                0.66,
+                1
+              ],
+              "roughnessFactor": 0.95
+            },
+            "alphaMode": "MASK",
+            "alphaCutoff": 0.35
+          }
+        }
+      ],
+      "geometry_processing": "No retopology, decimation, UV or vertex changes; one explicit uniform parent transform"
+    },
+    {
+      "id": "stone-step",
+      "path": "stone-step.glb",
+      "source_path": "glTF/RockPath_Square_Small_2.gltf",
+      "source_sha256": "a5b392f56c41e51b36c8ba9a01ec40f70b5093009733b97992c9efda480f0a83",
+      "source_dependencies": [
+        {
+          "path": "glTF/RockPath_Square_Small_2.bin",
+          "sha256": "d73391a812afae83241489d690a74c1903785386f7e13d116a9b14772b5fe17b",
+          "bytes": 40636
+        }
+      ],
+      "source_generator": "Khronos glTF Blender I/O v4.0.44",
+      "triangles": 559,
+      "bytes": 321444,
+      "sha256": "4eb4cfbf3be31aa34430373abf2388630433cacd8f37fedd4d721589836b5048",
+      "coordinates": {
+        "up": "+Y",
+        "pivot": "ground Y=0, XZ bounding-box midpoint",
+        "normalization": "maximum horizontal X/Z extent = 1",
+        "source_min": [
+          -0.4975392818450928,
+          -0.013205458410084248,
+          -0.4939475357532501
+        ],
+        "source_max": [
+          0.4951825737953186,
+          0.13612976670265198,
+          0.4721206724643707
+        ],
+        "uniform_scale": 1.0073315041048365,
+        "source_pivot": [
+          -0.001178354024887085,
+          -0.013205458410084248,
+          -0.010913431644439697
+        ],
+        "normalized_dimensions_xyz": [
+          1.0,
+          0.15043007692864693,
+          0.9731509412517204
+        ]
+      },
+      "images": [
+        {
+          "source_path": "glTF/PathRocks_Diffuse.png",
+          "source_sha256": "85a04abb2c136fee53b376daf3b7d7f96fdf3966de0258dff6fe2b24da792b23",
+          "source_dimensions": [
+            1024,
+            1024
+          ],
+          "path": "textures/pathrocks-diffuse-512.png",
+          "dimensions": [
+            512,
+            512
+          ],
+          "bytes": 279008,
+          "sha256": "d56300af75681d0976b4c710101bf225ed4cc8e0577168135942a1cd1517822e",
+          "embedded": true,
+          "processing": "Original pixels/alpha, resized with Lanczos only; no generated or repainted art"
+        }
+      ],
+      "materials": [
+        {
+          "name": "PathRocks",
+          "source": {
+            "doubleSided": true,
+            "name": "PathRocks",
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 0
+              },
+              "metallicFactor": 0
+            }
+          },
+          "runtime": {
+            "doubleSided": true,
+            "name": "PathRocks",
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 0
+              },
+              "metallicFactor": 0,
+              "baseColorFactor": [
+                0.82,
+                0.84,
+                0.78,
+                1
+              ],
+              "roughnessFactor": 0.95
+            }
+          }
+        }
+      ],
+      "geometry_processing": "No retopology, decimation, UV or vertex changes; one explicit uniform parent transform"
+    },
+    {
+      "id": "pine-source",
+      "path": "pine-source.glb",
+      "source_path": "glTF/Pine_5.gltf",
+      "source_sha256": "bb060ce1420af32dc996241078d36e4c991577397474aa64f4c691362c482cfa",
+      "source_dependencies": [
+        {
+          "path": "glTF/Pine_5.bin",
+          "sha256": "18982d7f6c430d1a42568d4ef62017398dedb1ddc60dfbab047f8cddea9cf797",
+          "bytes": 120996
+        }
+      ],
+      "source_generator": "Khronos glTF Blender I/O v4.0.44",
+      "triangles": 1646,
+      "bytes": 677512,
+      "sha256": "4d717b14e89e7b05e0f09d557501fdae5f6c75f88e1552cac72a740da5094f7a",
+      "coordinates": {
+        "up": "+Y",
+        "pivot": "ground Y=0, XZ bounding-box midpoint",
+        "normalization": "height = 1",
+        "source_min": [
+          -2.987706422805786,
+          -0.23508861660957336,
+          -3.7784042358398438
+        ],
+        "source_max": [
+          3.432434320449829,
+          8.48871898651123,
+          2.4435970783233643
+        ],
+        "uniform_scale": 0.11462884619810573,
+        "source_pivot": [
+          0.22236394882202148,
+          -0.23508861660957336,
+          -0.6674035787582397
+        ],
+        "normalized_dimensions_xyz": [
+          0.7359333258288402,
+          1.0,
+          0.7132208316856261
+        ]
+      },
+      "images": [
+        {
+          "source_path": "glTF/Bark_NormalTree_Normal.png",
+          "source_sha256": "852f6155404b8c39e100e41e26970e02a6a5c81b482d3726618dab28e3ad03a2",
+          "source_dimensions": [
+            2048,
+            2048
+          ],
+          "path": "textures/bark-normaltree-normal-512.png",
+          "dimensions": [
+            512,
+            512
+          ],
+          "bytes": 285976,
+          "sha256": "ac01ae169adb86db9665c6e78429b8b463da1adcdfb83c4d65c0af6b1fef6789",
+          "embedded": true,
+          "processing": "Original pixels/alpha, resized with Lanczos only; no generated or repainted art"
+        },
+        {
+          "source_path": "glTF/Bark_NormalTree.png",
+          "source_sha256": "f36e94fdd73255347325b998e02a0b2575fdf714b0315bfe5e8ff34bc8e13603",
+          "source_dimensions": [
+            2048,
+            2048
+          ],
+          "path": "textures/bark-normaltree-512.png",
+          "dimensions": [
+            512,
+            512
+          ],
+          "bytes": 243837,
+          "sha256": "9cb8afa1a1394c09c220dd64dd9b1a73e4e05194bc3176baecbfeaf313baed5c",
+          "embedded": true,
+          "processing": "Original pixels/alpha, resized with Lanczos only; no generated or repainted art"
+        },
+        {
+          "source_path": "glTF/Leaf_Pine_C.png",
+          "source_sha256": "86f7ff7a214f5424de48d269568f36a15485e61c80677e426c7be9f45181eef9",
+          "source_dimensions": [
+            2048,
+            2048
+          ],
+          "path": "textures/leaf-pine-c-512.png",
+          "dimensions": [
+            512,
+            512
+          ],
+          "bytes": 23331,
+          "sha256": "c42d27be0d4ccf2a18ca2ad90fcd124d432ac3944255ab99631616356acc83bd",
+          "embedded": true,
+          "processing": "Original pixels/alpha, resized with Lanczos only; no generated or repainted art"
+        }
+      ],
+      "materials": [
+        {
+          "name": "Bark_NormalTree",
+          "source": {
+            "alphaCutoff": 0.20000000298023224,
+            "alphaMode": "MASK",
+            "doubleSided": true,
+            "name": "Bark_NormalTree",
+            "normalTexture": {
+              "index": 0
+            },
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 1
+              },
+              "metallicFactor": 0
+            }
+          },
+          "runtime": {
+            "alphaCutoff": 0.20000000298023224,
+            "alphaMode": "MASK",
+            "doubleSided": true,
+            "name": "Bark_NormalTree",
+            "normalTexture": {
+              "index": 0
+            },
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 1
+              },
+              "metallicFactor": 0,
+              "baseColorFactor": [
+                0.78,
+                0.74,
+                0.66,
+                1
+              ],
+              "roughnessFactor": 0.95
+            }
+          }
+        },
+        {
+          "name": "Leaves_Pine",
+          "source": {
+            "alphaCutoff": 0.20000000298023224,
+            "alphaMode": "MASK",
+            "doubleSided": true,
+            "name": "Leaves_Pine",
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 2
+              },
+              "metallicFactor": 0
+            }
+          },
+          "runtime": {
+            "alphaCutoff": 0.35,
+            "alphaMode": "MASK",
+            "doubleSided": true,
+            "name": "Leaves_Pine",
+            "pbrMetallicRoughness": {
+              "baseColorTexture": {
+                "index": 2
+              },
+              "metallicFactor": 0,
+              "baseColorFactor": [
+                0.62,
+                0.72,
+                0.65,
+                1
+              ],
+              "roughnessFactor": 0.95
+            }
+          }
+        }
+      ],
+      "geometry_processing": "No retopology, decimation, UV or vertex changes; one explicit uniform parent transform"
+    }
+  ]
+}

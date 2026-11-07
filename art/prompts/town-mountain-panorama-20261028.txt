@@ -1,0 +1,8 @@
+Asset type: one scene-reference and distant panorama sample for Shu fixed-camera town
+Purpose: painterly backdrop behind an existing 3D Chinese tea-market street
+Primary request: paint a wide, calm mountain valley outside a small Sichuan town; only distant scenery, no foreground buildings, no people
+Reference image: existing Shu stream teahouse painting, style reference only; do not copy its pavilion, river layout or architecture
+Style/medium: Chinese ink and transparent watercolor on warm fine-grained paper, delicate broken brush edges, layered blue-green mineral washes, graceful mountain silhouettes
+Composition: panoramic 16:9; upper 55 percent layered pale peaks, cloud gaps and soft ivory sky; lower 45 percent receding bamboo groves and low green hills fading into pale sage earth; no focal temple, no central waterfall; keep the middle open for 3D town roofs
+Lighting: soft late-morning daylight, muted blue shadows, gentle warm stone hues, restrained contrast
+Constraints: original environment art; no text, logo, watermark, borders, roads, human figures, prominent buildings, close rocks or near branches. Not pixel art, not a low-poly render.

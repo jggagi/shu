@@ -1,4 +1,14 @@
-# Cultivation Mode Runtime v0.3.1
+# Cultivation Mode Runtime v0.4.0 slice
+
+## 山道遇袭适配（0.4.0，独立包）
+
+`scenes/demos/cultivation_engine_v06_mountain_ambush.tscn` 运行 `games/mountain_ambush_catalog.json`。默认 Session 和旧包合同保持；视图 `_create_session(pack)` 工厂只对声明 `ambush` 的新包创建 `AmbushSession`。本能力是限定遭遇的适配，尚非通用战斗内容编辑器。
+
+`game.json` 的 `ambush:{encounter_path,encounter_sha256}` pin 一份遭遇 JSON，并由原 manifest 原文字节参与内容指纹。进入前核对资源与 SHA256。`AmbushRules` 提供 `configure/snapshot/unit/reachable/preview/move_unit/use_skill/end_round/abandon`，只管理局内状态与展示事件；所有失败指令不改变状态，快照深拷贝，规则和实际事件都不写日期或存档。
+
+`AmbushSession` 继承既有 Session，提供 `begin_ambush(run_id,operation_id,revision)`、`battle()`、`ambush_context()`、`finish_ambush(run_id,operation_id)`、`abandon_ambush` 和 `close_ambush`。`ambush` 忙碌阶段禁止原养成行动与存读；子类验证自己持有的终局，再用原 `_prepare_action` 登记唯一胜败回执。界面无法直接执行结算专用行动。战中重开先撤离结算一次、再用新操作开始；旧回调、重复结果、重置与恢复均有身份保护。
+
+安全档仍是原 walks 包严格15字段，存 ready/result；局内对局和画面不入档，恢复不重播或重算。具体字段、来源、真实检查与试玩见[切片](../../docs/P3_MOUNTAIN_AMBUSH_SLICE.md)，规则／宿主测试分别为 `tests/cultivation_engine_ambush_rules_test.gd` 和 `cultivation_engine_ambush_session_test.gd`。
 
 ## 山下集镇混合表现（内容版本仍0.3.1）
 
@@ -93,7 +103,7 @@ manifest 的 `schema_version=1`，包含 `id/version/title/subtitle/description/
 - `events`：`say/choice/end` 无环图。条件支持属性最低值和布尔旗标；选择可执行已登记的非菜单行动。每个选择节点包含无条件无代价的离开选项。数据不执行脚本。事件取消保留已提交效果；本版普通事件均可结束后继续养成。
 - 可选`files.motions`：注册`{character,idle,clips,settle_seconds,hold_seconds}`；每个`clips`项含`manifest/phases`，阶段为递增的`start_frame/label`。清单沿用版本1的图集帧、帧率、格尺寸和`anchor_resized_px`。待机／动作须有相同格尺寸及锚点，整个动作使用同一锚点，不逐帧裁切。`scenes.actors[].motion`绑定人物，`actions[].presentation`声明`motion/clip`；动画行动须为不切场景／不开事件的菜单行动，并在所有可用场景放有对应人物。`show_count`可显示稳定行动ID的累计次数。
 
-新增普通内容仅变更包内数据／素材和 catalog。全新玩法须扩充能力及验收；P1b 的可选 walks 能力见上文；本版没有自动美术生成、战斗或完整多阶段支线运行器。原始主／支线归档规则不变。
+新增普通内容仅变更包内数据／素材和 catalog。全新玩法须扩充能力及验收；P1b 的可选 walks 和 P3a 的限定遭遇适配见上文；本版没有自动美术生成或完整多阶段支线运行器。原始主／支线归档规则不变。
 
 ## 状态与存档
 

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "scope": "Presentation-only combination practice using existing workshop moves. No cultivation or combat settlement rules.",
+  "adaptation_note": "五套剑法在3D练武场采用现有工坊动作的不同组合演练，不声称逐招还原旧五套动作。现目录没有独立上挑或反斩片段。",
+  "combinations": {
+    "songfeng": {
+      "label": "松风剑 · 组合演练",
+      "description": "落雁斩接穿云刺。",
+      "moves": [
+        {"id": "sword_cleave", "variant_id": "enhanced"},
+        {"id": "pierce", "variant_id": "original"}
+      ]
+    },
+    "chuanyun": {
+      "label": "穿云剑 · 组合演练",
+      "description": "连续两次穿云刺。",
+      "moves": [
+        {"id": "pierce", "variant_id": "original"},
+        {"id": "pierce", "variant_id": "original"}
+      ]
+    },
+    "huilan": {
+      "label": "回澜剑 · 组合演练",
+      "description": "两次回风扫接穿云刺。",
+      "moves": [
+        {"id": "sweep", "variant_id": "original"},
+        {"id": "sweep", "variant_id": "original"},
+        {"id": "pierce", "variant_id": "original"}
+      ]
+    },
+    "tiaoyue": {
+      "label": "挑月剑 · 组合演练",
+      "description": "回风扫接落雁斩；这是现有动作的组合，不含新上挑片段。",
+      "moves": [
+        {"id": "sweep", "variant_id": "original"},
+        {"id": "sword_cleave", "variant_id": "enhanced"}
+      ]
+    },
+    "xieying": {
+      "label": "斜影剑 · 组合演练",
+      "description": "落雁斩、回风扫，再接落雁斩。",
+      "moves": [
+        {"id": "sword_cleave", "variant_id": "enhanced"},
+        {"id": "sweep", "variant_id": "original"},
+        {"id": "sword_cleave", "variant_id": "enhanced"}
+      ]
+    }
+  }
+}

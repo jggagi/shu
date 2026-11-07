@@ -1,0 +1,146 @@
+{
+  "schema": 1,
+  "status": "Actual Material Maker GPU export; inspected original PNG bytes",
+  "author": "Original Shu procedural graph and compositor authored by Codex",
+  "asset_license": "Original Shu project production assets; no third-party texture inputs",
+  "tool": {
+    "name": "Material Maker",
+    "version": "1.8",
+    "source_commit": "7d6daae3c74c09720afe4138ce09699ab3591ce1",
+    "release": "https://github.com/RodZill4/material-maker/releases/tag/1.8",
+    "source": "https://github.com/RodZill4/material-maker/tree/7d6daae3c74c09720afe4138ce09699ab3591ce1",
+    "license": "MIT, Rodolphe Suescun and contributors",
+    "license_copy": "MaterialMaker-LICENSE.md",
+    "linux_archive": "https://github.com/RodZill4/material-maker/releases/download/1.8/material_maker_1_8_linux.tar.gz",
+    "linux_archive_sha256": "8e8eb7050e75086cfafeb4ddc0b09c4fe117f529693e611d6fccca1651e913b3",
+    "source_archive": "https://api.github.com/repos/RodZill4/material-maker/tarball/7d6daae3c74c09720afe4138ce09699ab3591ce1",
+    "source_archive_sha256": "40a89ef34874cc1da738769958bf4a7e3fcd90367d00203871d51d875fc9c1a0",
+    "binary_sha256": "524f53f96e2c8d754b606b10342aad0ee7a48b9061b48a8d268ee65f273d2e76",
+    "embedded_Godot": "4.7.2.stable.official.ed1daf0bf"
+  },
+  "editable_graph": {
+    "path": "assets/art/mountain_ambush/palm_lab/material_maker/palm-materials.ptex",
+    "sha256": "d74edf66dc3ccd90a31cfdd33ee8e77e3f45097d4462b5b5b92f015e916590ac",
+    "nodes": [
+      "DustCoarse: stock MM Value Noise, seed 260251",
+      "DustFine: stock MM Value Noise, seed 260252",
+      "ShuPalmTextureOutput: original editable alpha compositor and two PNG exports"
+    ]
+  },
+  "generator": {
+    "path": "tools/hero_lookdev/build_palm_material_textures.py",
+    "sha256": "df8c367a9bbc0d3539962487de2cab9b22717ba70238ca7f91eb8f58e070955f",
+    "rebuild": "python3 tools/hero_lookdev/build_palm_material_textures.py --export --source-runner",
+    "command_template": [
+      "godot-4.7.2",
+      "--export-material",
+      "--target",
+      "Shu/Palm PNG",
+      "--size",
+      "512",
+      "--output-file",
+      "palm",
+      "-o",
+      "<output-directory>",
+      "<palm-materials.ptex>"
+    ],
+    "command_working_directory": "Isolated fixed Material Maker source-runner-1.8, prepared using adjacent README and versioned patch/manifest",
+    "python_raster_generation": false
+  },
+  "inputs": {
+    "external_images": [],
+    "community_assets": [],
+    "cloud_AI_calls": 0
+  },
+  "outputs": [
+    {
+      "path": "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-dust.png",
+      "bytes": 81744,
+      "sha256": "5bdab156960619d2b521ff4efc7f0b2fbb1517725b6938b7c5fe45c666f303e3",
+      "width": 512,
+      "height": 512,
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        228
+      ],
+      "edge_alpha_max": 0,
+      "alpha_unique_values": 229,
+      "semantics": "Straight RGBA, neutral white RGB, tint in Godot; no black matte."
+    },
+    {
+      "path": "res://assets/art/mountain_ambush/palm_lab/material_maker/palm-wind.png",
+      "bytes": 50100,
+      "sha256": "76c7fd427ef69324642c5178a56e30f6a2f8b7ccb68956896c56fbc1218abc4b",
+      "width": 512,
+      "height": 512,
+      "mode": "RGBA",
+      "alpha_min_max": [
+        0,
+        229
+      ],
+      "edge_alpha_max": 0,
+      "alpha_unique_values": 230,
+      "semantics": "Straight RGBA, neutral white RGB, tint in Godot; no black matte."
+    }
+  ],
+  "checks": {
+    "pixel_checks": 10,
+    "failures": 0
+  },
+  "verification_boundary": "Original PNG encoding/alpha/bounds verified separately from gameplay composition, browser performance and user visual approval.",
+  "authoring_execution": {
+    "recipe": "fixed 1.8 source with CLI shutdown patch",
+    "exit_code": 0,
+    "timed_out": false,
+    "engine_sha256": "8d106cbe6144c2dc7e881d61d2429c1a8a76e6b22ef48bd5e48dcf934953f71e",
+    "source_runner_patch_sha256": "30355b56b11775335fa0e45f328fc1be87fc89d5ff8f75d8ed65fdb444286533",
+    "source_runner_manifest_sha256": "de79f7c913ff5688708b11f669b7b9c1a879d3b313e1a892b42f8e6a7c03e13f",
+    "source_runner_modifications": [
+      {
+        "path": "parse_args.gd",
+        "official_sha256": "e9609e65e227ac8fe58a89bc80b452280ec7d506c2cc5358427438f40ec2cb63",
+        "patched_sha256": "dc473ae5cf0dad3bab9290b0acbe1f792c977bf69b076dc30e6fc858d09049a7",
+        "reason": "Offline CLI only: avoid Steam APIs, wait for local RenderingDevice, drain graph then stop stock rendering thread before quit."
+      },
+      {
+        "path": "material_maker/steam.gd",
+        "official_sha256": "cae4442c65a1119a4475ea5d4fe564b0c020dd34d2f2e47e452d6283c3323356",
+        "patched_sha256": "21586a9c8b7f981df5e19556286d34f2cb3b5159be6d9a4145b73a8a852786b2",
+        "reason": "Offline CLI only: avoid Steam APIs, wait for local RenderingDevice, drain graph then stop stock rendering thread before quit."
+      }
+    ],
+    "export_plan_sha256": "2b1162e39129e5920361486e645c5bc6cab24c99e16cd07b7c315779e280b7d9",
+    "export_run_sha256": "45fef400f0c99da4827bca8a16f06a546bdeae136d08b0bd60fbc298718115fa",
+    "log_sha256": "84e65f49495222400525522f21b6fa7874aa50af8991a6d363621893ce852ce1",
+    "reported_warning_error_lines": [
+      "WARNING: 6 ObjectDB instances were leaked at exit (run with `--verbose` for details).",
+      "ERROR: 1 resources still in use at exit (run with --verbose for details)."
+    ],
+    "script_errors": 0,
+    "boundary": "Exit 0 and valid byte-identical PNGs do not imply a warning-free authoring tool; upstream teardown leaks remain separate from the game runtime."
+  },
+  "cli_shutdown_patch": {
+    "path": "assets/art/mountain_ambush/palm_lab/material_maker/material-maker-1.8-cli-shutdown.patch",
+    "sha256": "30355b56b11775335fa0e45f328fc1be87fc89d5ff8f75d8ed65fdb444286533",
+    "scope": "Offline Material Maker source CLI only: skip Steam autoload initialization for export, wait for RenderingDevice before graph/preview creation, then drain frames and stop the stock rendering worker before quit. Shader, noise and PNG exporter unchanged."
+  },
+  "authoring_history": [
+    {
+      "recipe": "official Linux 1.8 portable, first graph without export preview marker",
+      "exit": "120s timeout; no PNG; partial output was not retained by first wrapper"
+    },
+    {
+      "recipe": "official Linux 1.8 portable, corrected graph",
+      "exit": "120s timeout after two valid PNGs were written; automatic process termination not verified"
+    },
+    {
+      "recipe": "fixed 1.8 source with localized CLI thread shutdown patch, first run",
+      "exit": "0 with two byte-identical PNGs and 10 pixel checks; tool log contained Steam initialization failures, size UI metadata error, preview-before-RenderingDevice error, and teardown leaks. Preserved as dirty authoring evidence."
+    },
+    {
+      "recipe": "fixed 1.8 source with offline startup/readiness/shutdown patch and completed size UI metadata",
+      "exit": "Actual return code, source modifications and output binding recorded in authoring_execution; no shader/noise/export math changes."
+    }
+  ]
+}

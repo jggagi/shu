@@ -1,0 +1,8 @@
+[
+  {
+    "manifest": "res://games/shu_mountain_ambush/game.json"
+  },
+  {
+    "manifest": "res://games/stream_study/game.json"
+  }
+]

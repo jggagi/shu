@@ -1,0 +1,70 @@
+{
+  "tingyu_corridor": {
+    "label": "听雨廊",
+    "description": "初次下山从这里开始：先听师父点拨，再去后山任选五剑练一次，随后下山接护药委托。额外练习有用：剑术达到20，此行江砚秋体力+4。",
+    "background": "res://assets/art/weather3/tingyu-clean-v3.png",
+    "actors": [
+      {
+        "character": "player_yanqiu",
+        "x": 0.31,
+        "y": 0.88,
+        "height": 0.52,
+        "flip": false
+      },
+      {
+        "character": "mentor_zhixian",
+        "x": 0.73,
+        "y": 0.88,
+        "height": 0.58,
+        "flip": false
+      }
+    ],
+    "present": [
+      "player_yanqiu",
+      "mentor_zhixian"
+    ],
+    "accent": "#397C78",
+    "foreground": {
+      "texture": "res://assets/art/v2/desk-v2.png",
+      "x": 0.5,
+      "y": 0.99,
+      "width": 0.95,
+      "height": 0.23
+    }
+  },
+  "back_mountain": {
+    "label": "后山",
+    "description": "任选五剑练习：每次花22精力与1时辰，剑术+10。练一次便可下山；练至剑术20，护药时江砚秋体力+4。精力不足可歇息恢复。",
+    "background": "res://assets/art/back_mountain_training/far.png",
+    "actors": [
+      {
+        "character": "player_yanqiu",
+        "x": 0.68,
+        "y": 0.9,
+        "height": 0.65,
+        "flip": false,
+        "motion": "jiang_sword"
+      }
+    ],
+    "present": [
+      "player_yanqiu"
+    ],
+    "accent": "#5B806F",
+    "layers": [
+      {
+        "texture": "res://assets/art/back_mountain_training/mid.png"
+      },
+      {
+        "texture": "res://assets/art/back_mountain_training/near.png"
+      }
+    ]
+  },
+  "shanxia_town": {
+    "label": "山下集镇",
+    "description": "点击街面走动，绕过摊棚，到右侧茶摊掌柜处领护药委托。准备后走上山道；胜败都可返回集镇，再从左上方出口返山复命。",
+    "background": "res://assets/art/shanxia_town/route-sketch.png",
+    "actors": [],
+    "present": [],
+    "accent": "#7A8067"
+  }
+}

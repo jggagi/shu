@@ -1,0 +1,18 @@
+{
+  "title": "Shu tea shop interior back-wall reference",
+  "date": "2026-10-29",
+  "author": "Codex original image for Shu",
+  "provider": "codex-imagegen",
+  "model": null,
+  "purpose": "single interior style reference selected as sheltered back-wall illustration",
+  "prompt_file": "art/prompts/tea-shop-inner-wall-reference-20261029.txt",
+  "reference": "assets/art/stream_teahouse/stream-teahouse-v1.png",
+  "reference_sha256": "fcec0e8e25c22e21842676c702e06d0c3888c95a947846a8ebfee7aea1733901",
+  "output": "assets/art/shanxia_polish/tea-shop-inner-wall-reference.png",
+  "sha256": "bb240bd661ea3ebd263b421a494f0deb732f9f98788c677951954353c7a21080",
+  "production_scope": "One built-in original style-reference call; Qwen environment unavailable; no bulk production or paid API fallback",
+  "status": "implemented candidate pending in-scene and user visual review",
+  "license": "Original generated project illustration; no referenced game image/text used",
+  "edit_notes": "Full generated image copied without raster edits. Actual shader light and foreground 3D objects are separate.",
+  "prompt_sha256": "337b2affc58fd7a0fdffd5d64518bc74251272e97bcc4f47144b55fddeb93e71"
+}

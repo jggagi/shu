@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "mode": "generate",
+  "template": "sword_path",
+  "move": {
+    "id": "sword_cleave",
+    "label": "落雁斩",
+    "description": "提锋蓄势，斜落一斩，随势回中。",
+    "category": "sword",
+    "style": "strong",
+    "actor": "player",
+    "profile": "jiang22",
+    "preview_only": true,
+    "combat_skill": "",
+    "animation": {
+      "asset": "res://assets/art/martial_workshop/generated/sword_cleave/pending/motion.glb",
+      "clip": "SwordCleave",
+      "hand": "default",
+      "source_seconds": 1.55
+    },
+    "timing": {
+      "duration": 1.55,
+      "total": 1.75,
+      "release": 0.58,
+      "impact": 0.66,
+      "source_map": [
+        [
+          0,
+          0
+        ],
+        [
+          1.55,
+          1.55
+        ]
+      ]
+    },
+    "visual": {
+      "type": "blade",
+      "pattern": "cleave",
+      "config": {
+        "color": "#e9c37c",
+        "core_color": "#fff6d6",
+        "dust_color": "#b7a88a",
+        "life_seconds": 0.4,
+        "width": 0.14,
+        "core_width": 0.04,
+        "radius": 1.5,
+        "height": 1.05,
+        "core_height": 1.07,
+        "span_degrees": 132.0,
+        "streak_count": 8,
+        "whoosh": "res://assets/art/mountain_ambush/skills/sfx/sweep-whoosh.wav",
+        "hit": "res://assets/art/mountain_ambush/skills/sfx/sweep-hit.wav"
+      }
+    },
+    "audio": {
+      "release": "res://assets/art/mountain_ambush/skills/sfx/sweep-whoosh.wav",
+      "impact": "res://assets/art/mountain_ambush/skills/sfx/sweep-hit.wav"
+    },
+    "camera": {
+      "zoom": 0.82
+    }
+  },
+  "motion": {
+    "fps": 100,
+    "keys": [
+      {
+        "t": 0,
+        "hip_yaw": 0,
+        "chest_yaw": 0,
+        "lean": 0,
+        "shift": [
+          0,
+          0,
+          0
+        ],
+        "left": "neutral",
+        "right": "neutral",
+        "right_direction": "neutral",
+        "palm_open": 0,
+        "palm_yaw": 0
+      },
+      {
+        "t": 0.42,
+        "hip_yaw": -24,
+        "chest_yaw": -8,
+        "lean": -3,
+        "shift": [
+          0.01,
+          0.015,
+          -0.045
+        ],
+        "left": [
+          0.3,
+          -0.16,
+          1.25
+        ],
+        "right": [
+          -0.37,
+          -0.22,
+          1.52
+        ],
+        "right_direction": [
+          -0.6,
+          -0.62,
+          0.5
+        ],
+        "palm_open": 0,
+        "palm_yaw": 0
+      },
+      {
+        "t": 0.66,
+        "hip_yaw": 22,
+        "chest_yaw": 8,
+        "lean": 6,
+        "shift": [
+          -0.015,
+          -0.065,
+          -0.055
+        ],
+        "left": [
+          0.29,
+          0.01,
+          1.25
+        ],
+        "right": [
+          -0.13,
+          -0.6,
+          1.13
+        ],
+        "right_direction": [
+          0.55,
+          -0.65,
+          -0.52
+        ],
+        "palm_open": 0,
+        "palm_yaw": 0
+      },
+      {
+        "t": 0.84,
+        "hip_yaw": 32,
+        "chest_yaw": 4,
+        "lean": 4,
+        "shift": [
+          -0.01,
+          -0.04,
+          -0.035
+        ],
+        "left": [
+          0.2,
+          0.04,
+          1.2
+        ],
+        "right": [
+          0.06,
+          -0.42,
+          1.12
+        ],
+        "right_direction": [
+          0.8,
+          -0.4,
+          -0.44
+        ],
+        "palm_open": 0,
+        "palm_yaw": 0
+      },
+      {
+        "t": 1.15,
+        "hip_yaw": 8,
+        "chest_yaw": 0,
+        "lean": 1,
+        "shift": [
+          0,
+          -0.01,
+          -0.015
+        ],
+        "left": [
+          0.3,
+          -0.12,
+          1.13
+        ],
+        "right": [
+          -0.21,
+          -0.28,
+          1.2
+        ],
+        "right_direction": "neutral",
+        "palm_open": 0,
+        "palm_yaw": 0
+      },
+      {
+        "t": 1.55,
+        "hip_yaw": 0,
+        "chest_yaw": 0,
+        "lean": 0,
+        "shift": [
+          0,
+          0,
+          0
+        ],
+        "left": "neutral",
+        "right": "neutral",
+        "right_direction": "neutral",
+        "palm_open": 0,
+        "palm_yaw": 0
+      }
+    ],
+    "contact": 0.66
+  },
+  "order": 3
+}

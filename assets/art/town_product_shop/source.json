@@ -1,0 +1,180 @@
+{
+  "title": "Shu original product tea-shop structure, direction A",
+  "date": "2026-10-29",
+  "author": "Codex, authored for Shu",
+  "license": "Project-original; no external art or models",
+  "method": "Original offline Blender geometry and deterministic code-authored sRGB RGB8 material washes; no imagegen, external pictures, downloaded models, add-ons or Python dependencies.",
+  "blender_version": "5.2.2 LTS",
+  "blender_binary": "/usr/bin/blender",
+  "blender_build_hash": "unknown",
+  "blender_binary_sha256": "609cb79642105f2a23b92916a9cd30176a930400aea637f1578a99e8f0b92a57",
+  "generator": "tools/build_town_product_shop.py",
+  "generator_sha256": "be03e82854f20a14bc6ffc7922f9c375eab6b9ac552c40b7ad21b53c4f9bd57a",
+  "source_blend": "art/source/town-product-shop-20261029.blend",
+  "source_blend_sha256": "ac92132f654eb5494fa4c03611bba5a57cdd3f7afada74ed399e3d7984f6528a",
+  "style_reference": "docs/concepts/town-product-art-20261029/a-song-celadon.png",
+  "style_reference_sha256": "c0a25c502d47c810f74576c03d1a102e4589dbb1f2b55ab89fe01f01fee9aa1a",
+  "style_reference_use": "Project-original composition/color direction only. No picture pixels are copied, projected or embedded into the model or textures.",
+  "outputs": {
+    "plaster-wash.png": {
+      "sha256": "9092c74a8870f1977741e3fb0daccc727aff53e7760c11772b0afdd912da796a",
+      "bytes": 20143
+    },
+    "roof-wash.png": {
+      "sha256": "9f16d05287bf05d284fce9ff785c0dc60b6ad954684286b0d496607a025afd63",
+      "bytes": 27527
+    },
+    "stone-wash.png": {
+      "sha256": "00491a5438e400e7a697eb738767119940253e1c42a9a3f114529779455b5aaa",
+      "bytes": 7812
+    },
+    "timber-wash.png": {
+      "sha256": "0e04421d4e042aba8ced58b8d31c5af5224775e1eed376781f3f411f7cd4b1e1",
+      "bytes": 10082
+    },
+    "town-product-shop.glb": {
+      "sha256": "b122622c86ee96d2e78722a313990274c6cf2810de3b04066474b7d957bbf0c5",
+      "bytes": 1507368
+    }
+  },
+  "meshes": {
+    "Roof": {
+      "vertices": 12968,
+      "triangles": 24280,
+      "material_slots": 1,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "aabb_min": [
+        -3.5950000286102295,
+        2.450000047683716,
+        -0.8537499904632568
+      ],
+      "aabb_max": [
+        3.5950000286102295,
+        3.7269999980926514,
+        0.8537499904632568
+      ]
+    },
+    "Wall": {
+      "vertices": 192,
+      "triangles": 352,
+      "material_slots": 1,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "aabb_min": [
+        -3.359999895095825,
+        0.0,
+        -0.5887500047683716
+      ],
+      "aabb_max": [
+        3.359999895095825,
+        3.180000066757202,
+        0.543749988079071
+      ]
+    },
+    "Wood": {
+      "vertices": 828,
+      "triangles": 1312,
+      "material_slots": 1,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "aabb_min": [
+        -3.5950000286102295,
+        2.0450000762939453,
+        -0.8087499737739563
+      ],
+      "aabb_max": [
+        3.5950000286102295,
+        3.358722686767578,
+        0.8087499737739563
+      ]
+    },
+    "Foundation": {
+      "vertices": 224,
+      "triangles": 408,
+      "material_slots": 1,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "aabb_min": [
+        -3.365000009536743,
+        0.0,
+        -0.5837500095367432
+      ],
+      "aabb_max": [
+        3.365000009536743,
+        0.17000000178813934,
+        0.5837500095367432
+      ]
+    }
+  },
+  "coordinates": {
+    "up": "+Y",
+    "front": "+Z",
+    "unit": "meter",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "placement": "Existing house logical bounds center, identity scale/rotation",
+    "wall_body_size": [
+      6.75,
+      2.42,
+      1.1875
+    ],
+    "foundation_size": [
+      6.73,
+      0.17,
+      1.1675
+    ]
+  },
+  "recipe": {
+    "roof": "Continuous closed 75mm curved body and micro eave lift; 26 shallow circular barrel columns on main roof,11 at the same physical pitch on raised roof; four stepped courses per slope with18mm relief,25-28mm circular rise and real closed round ends. Four broad low-contrast tonal washes continue across the geometry; no white/black grid or separate tile objects. Continuous rounded ridge and real cut under raised bay.",
+    "wall": "Bevelled rear/end shell and raised-bay shell only. Existing native front panels remain.",
+    "wood": "Merged fascia/dark mouth, upper screen and five short braces. No duplicated front posts or door/window frames.",
+    "materials": "Four opaque RGB base-color textures, sRGB, roughness .86/.93; no alpha, metallic, emission, displacement, normal-map shader or runtime generation.",
+    "color_management": "RGB8 PNG bytes written directly and used as source images; no dependency on Blender OCIO conversion or baking. Verify embedded GLB images against originals.",
+    "seed": "Analytical fixed sine washes; no random generator or time input"
+  },
+  "integration": {
+    "replace": [
+      "_build_foundation call",
+      "rear-wall box and two end-wall boxes",
+      "_build_eaves",
+      "_build_upper_sign_bay structure before plaque"
+    ],
+    "retain": [
+      "_build_front_panels",
+      "_build_half_open_door",
+      "_build_service_bay and illustration",
+      "wood floor at z=-.02",
+      "plaque/Label3D block",
+      "small age marks",
+      "footprint/contact pad/sun-occluder metadata"
+    ],
+    "packed_scene_root": "town-product-shop",
+    "mesh_nodes_relative_to_packed_scene_root": {
+      "Roof": "ProductTeaShop/Roof",
+      "Wall": "ProductTeaShop/Wall",
+      "Wood": "ProductTeaShop/Wood",
+      "Foundation": "ProductTeaShop/Foundation"
+    },
+    "mesh_paths_in_house": {
+      "Roof": "town-product-shop/ProductTeaShop/Roof",
+      "Wall": "town-product-shop/ProductTeaShop/Wall",
+      "Wood": "town-product-shop/ProductTeaShop/Wood",
+      "Foundation": "town-product-shop/ProductTeaShop/Foundation"
+    },
+    "fade_nodes": [
+      "ProductTeaShop/Roof",
+      "ProductTeaShop/Wall"
+    ],
+    "state_authority": "Existing stage and unique EngineSession; asset has no script, light, camera or collision"
+  },
+  "build_environment_notes": "Installed Blender reports 5.2.2 LTS, build hash unknown. Host OCIO profile2.5/library2.4.2 mismatch falls back; no color-management baking or rendering is used. Export disables Draco and gltfpack; optional MeshOptimizer is not used. Embedded PNG byte checks are required.",
+  "status": "Original structural asset candidate. Offline geometry/export checks are recorded separately; actual Godot integration and user visual approval are separate."
+}

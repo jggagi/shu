@@ -1,0 +1,72 @@
+{
+  "opening": {
+    "speaker": "player_yanqiu",
+    "text": "师父，刚才那一剑，我明明已经快了，怎么还是收不住？",
+    "file": "res://assets/audio/mentor_pause/opening.wav"
+  },
+  "sit": {
+    "speaker": "mentor_zhixian",
+    "text": "过来坐。你这口气，还留在剑坪上呢。",
+    "file": "res://assets/audio/mentor_pause/sit.wav"
+  },
+  "hurry": {
+    "speaker": "player_yanqiu",
+    "text": "我就是想早些练好，免得总让您等。",
+    "file": "res://assets/audio/mentor_pause/hurry.wav"
+  },
+  "advice": {
+    "speaker": "mentor_zhixian",
+    "text": "剑快一点不难。难的是出剑时，心里不抢那一步。",
+    "file": "res://assets/audio/mentor_pause/advice.wav"
+  },
+  "choice": {
+    "speaker": "mentor_zhixian",
+    "text": "先陪我听一会儿雨。等肩膀松了，再想刚才那一剑。",
+    "file": "res://assets/audio/mentor_pause/choice.wav"
+  },
+  "lesson_taken": {
+    "speaker": "player_yanqiu",
+    "text": "好，我不抢。先把这一口气放稳。",
+    "file": "res://assets/audio/mentor_pause/lesson_taken.wav"
+  },
+  "lesson_reply": {
+    "speaker": "mentor_zhixian",
+    "text": "这就对了。待会儿再出剑，记住此刻肩上的轻松。",
+    "file": "res://assets/audio/mentor_pause/lesson_reply.wav"
+  },
+  "lesson_skipped": {
+    "speaker": "player_yanqiu",
+    "text": "那我先去试试。要是还不对，我再来找您。",
+    "file": "res://assets/audio/mentor_pause/lesson_skipped.wav"
+  },
+  "skip_reply": {
+    "speaker": "mentor_zhixian",
+    "text": "去吧。慢半步，也无妨。",
+    "file": "res://assets/audio/mentor_pause/skip_reply.wav"
+  },
+  "report_question": {
+    "speaker": "mentor_zhixian",
+    "text": "方才那套剑，练得如何？",
+    "file": "res://assets/audio/mentor_practice_report/report_question.wav"
+  },
+  "report_calm": {
+    "speaker": "player_yanqiu",
+    "text": "这回我没急着抢那一步，剑也收稳了。",
+    "file": "res://assets/audio/mentor_practice_report/report_calm.wav"
+  },
+  "report_calm_reply": {
+    "speaker": "mentor_zhixian",
+    "text": "嗯，先记住这份从容。明日再练，不必把今天的力气都用尽。",
+    "file": "res://assets/audio/mentor_practice_report/report_calm_reply.wav"
+  },
+  "report_try": {
+    "speaker": "player_yanqiu",
+    "text": "刚才还是有些急，不过我知道该从哪儿改了。",
+    "file": "res://assets/audio/mentor_practice_report/report_try.wav"
+  },
+  "report_try_reply": {
+    "speaker": "mentor_zhixian",
+    "text": "知道哪里急，就有了进步。先歇歇，明日再来。",
+    "file": "res://assets/audio/mentor_practice_report/report_try_reply.wav"
+  }
+}

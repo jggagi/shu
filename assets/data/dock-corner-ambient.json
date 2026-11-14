@@ -1,0 +1,16 @@
+{
+  "logical_size": [
+    1280,
+    720
+  ],
+  "stern": [
+    1015,
+    425
+  ],
+  "bow": [
+    735,
+    611
+  ],
+  "source_sha256": "a0eed55ffbd00b0ab2767aac6b3c2740bef40e2fb4309b2e6f131c3b51be0d9b",
+  "tea_note": "Low awning occludes the kettle above the table. Animate its pinned cloth hem instead of emitting steam through the cloth."
+}

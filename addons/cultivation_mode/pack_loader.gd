@@ -215,7 +215,7 @@ func validate(pack: Dictionary) -> Array[String]:
 		_ref(action.get("event", ""), events, where + ".event", true)
 		_ref(action.get("target_scene", ""), scenes, where + ".target_scene", true)
 		_ref(action.get("character", ""), characters, where + ".character", true)
-		if action.get("menu") is bool and action.menu == false and action.get("event", "") != "":
+		if action.get("menu") is bool and action.menu == false and action.get("event", "") != "" and not WalksContractScript.new().has_action(pack, str(action_id)):
 			_error(where + ".event", "选择效果不能再打开另一个事件")
 		if action.has("presentation"):
 			var presentation: Dictionary = _object(action.presentation, where + ".presentation")

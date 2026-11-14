@@ -53,6 +53,8 @@ def stage(output: Path, reuse_stage: Path | None = None,
     if not title or not app_version or not user_dir:
         raise SystemExit("--title, --app-version and --user-dir must be non-empty")
     resource_entry = "res://" + entry
+    # The local depth sample consumes the same illustrated-city asset closure.
+    asset_entry = "scenes/demos/cultivation_engine_chengdu_illustrated_street.tscn" if entry in {"scenes/demos/cultivation_engine_chengdu_layered_street.tscn", "scenes/demos/cultivation_engine_chengdu_finished_street.tscn", "scenes/demos/cultivation_engine_chengdu_compact_street.tscn", "scenes/demos/cultivation_engine_chengdu_tea_corner.tscn"} else entry
     reuse_hashes = {}
     if reuse_stage is not None:
         if sys.platform != "darwin" or not reuse_stage.is_absolute() or not (reuse_stage / "build-info.json").is_file():
@@ -64,28 +66,125 @@ def stage(output: Path, reuse_stage: Path | None = None,
             raise SystemExit("Reuse stage engine version mismatch")
     target = output / ("stage-" + uuid.uuid4().hex[:12])
     paths = [ROOT / entry]
-    # The regression scripts preload retained engine entry scenes.
-    paths.extend((ROOT / "scenes/demos").glob("cultivation_engine_v0*.tscn"))
-    for folder in ["addons/cultivation_mode", "games"]:
-        paths.extend(p for p in (ROOT / folder).rglob("*") if p.suffix in {".gd", ".json"})
+    independent_dock = entry == "scenes/demos/cultivation_engine_dock_corner.tscn"
+    if independent_dock:
+        # Standalone slice: follow its concrete dependencies, not every city
+        # adapter/test. Old city builds keep their existing full input scope.
+        for folder in ["games/shu_dock_corner", "games/stream_study", "games/shu_entry"]:
+            paths.extend((ROOT / folder).glob("*.json"))
+        paths.extend([ROOT / "games/dock_corner_catalog.json", ROOT / "tools/rebuild_dock_corner_font.py", ROOT / "tools/rebuild_dock_corner_navigation.py"])
+    else:
+        # The regression scripts preload retained engine entry scenes.
+        paths.extend((ROOT / "scenes/demos").glob("cultivation_engine_v0*.tscn"))
+        for folder in ["addons/cultivation_mode", "games"]:
+            paths.extend(p for p in (ROOT / folder).rglob("*") if p.suffix in {".gd", ".json"})
     paths += [ROOT / "assets/fonts/ShuCultivationEngineSerif.ttf",
               ROOT / "assets/fonts/source-cultivation-engine.json", ROOT / "assets/fonts/OFL-Serif.txt"]
     paths += [ROOT / "tools/build_cultivation_engine.py", ROOT / "tools/rebuild_cultivation_engine_font.py",
               ROOT / ".engine-version", ROOT / "addons/cultivation_mode/README.md", ROOT / "games/README.md"]
-    if entry in {"scenes/demos/cultivation_engine_v02_mentor.tscn",
+    if asset_entry in {"scenes/demos/cultivation_engine_v02_mentor.tscn",
                  "scenes/demos/cultivation_engine_v03_town.tscn",
                  "scenes/demos/cultivation_engine_v04_town_walk.tscn",
-                 "scenes/demos/cultivation_engine_v05_town_hd2d.tscn"}:
+                 "scenes/demos/cultivation_engine_v05_town_hd2d.tscn",
+                 "scenes/demos/cultivation_engine_chengdu.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_large.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_reference.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_scale.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_detail.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_painted.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_painted_city.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_varied_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_crafted_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_art_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_illustrated_street.tscn"}:
         paths += [ROOT / "trunk/mentor-slow-half-step.json", ROOT / "trunk/mentor-practice-report.json",
                   ROOT / "assets/audio/mentor_pause/manifest.json",
                   ROOT / "assets/audio/mentor_practice_report/manifest.json"]
-    if entry in {"scenes/demos/cultivation_engine_v04_town_walk.tscn",
+    if asset_entry in {"scenes/demos/cultivation_engine_v04_town_walk.tscn",
                  "scenes/demos/cultivation_engine_v05_town_hd2d.tscn"}:
         paths.append(ROOT / "tools/validate_town_walk_restart.py")
     if entry == "scenes/demos/cultivation_engine_v05_town_hd2d.tscn":
         paths += [ROOT / "tools/build_town_hd2d_characters.py",
                   ROOT / "tools/validate_town_hd2d_compatibility.py"]
-    paths.extend(p for p in (ROOT / "tests").glob("cultivation_engine_*.gd"))
+    if asset_entry in {"scenes/demos/cultivation_engine_chengdu.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_large.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_reference.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_scale.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_detail.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_painted.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_painted_city.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_varied_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_crafted_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_art_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_illustrated_street.tscn"}:
+        paths += [ROOT / "assets/fonts/ShuChengduSerif.ttf",
+                  ROOT / "assets/fonts/source-chengdu.json", ROOT / "tools/rebuild_chengdu_font.py",
+                  ROOT / "assets/data/chengdu-art-source.json"]
+    if asset_entry in {"scenes/demos/cultivation_engine_chengdu_large.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_reference.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_scale.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_detail.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_painted.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_painted_city.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_varied_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_crafted_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_art_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_illustrated_street.tscn"}:
+        paths += [ROOT / "assets/fonts/ShuChengduLargeSerif.ttf",
+                  ROOT / "assets/fonts/source-chengdu-large.json", ROOT / "tools/rebuild_chengdu_large_font.py"]
+    if asset_entry in {"scenes/demos/cultivation_engine_chengdu_reference.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_scale.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_detail.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_painted.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_painted_city.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_varied_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_crafted_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_art_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_illustrated_street.tscn"}:
+        paths += [ROOT / "assets/fonts/ShuChengduReferenceSerif.ttf",
+                  ROOT / "assets/fonts/source-chengdu-reference.json", ROOT / "tools/rebuild_chengdu_reference_font.py"]
+    if asset_entry in {"scenes/demos/cultivation_engine_chengdu_scale.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_detail.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_painted.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_painted_city.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_varied_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_crafted_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_art_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_illustrated_street.tscn"}:
+        paths += [ROOT / "assets/fonts/ShuChengduScaleSerif.ttf",
+                  ROOT / "assets/fonts/source-chengdu-scale.json", ROOT / "tools/rebuild_chengdu_scale_font.py",
+                  ROOT / "tools/rebuild_chengdu_scale_layout.py"]
+    if independent_dock:
+        paths.extend([ROOT / "tests/cultivation_engine_dock_corner_render.gd", ROOT / "tests/cultivation_engine_dock_interactions_test.gd"])
+    else:
+        paths.extend(p for p in (ROOT / "tests").glob("cultivation_engine_*.gd"))
+    if asset_entry in {"scenes/demos/cultivation_engine_chengdu_painted.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_painted_city.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_varied_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_crafted_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_art_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_illustrated_street.tscn"}:
+        paths.append(ROOT / "assets/art/chengdu_painted_gate/source.json")
+    if asset_entry in {"scenes/demos/cultivation_engine_chengdu_painted_city.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_varied_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_crafted_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_art_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_illustrated_street.tscn"}:
+        paths.append(ROOT / "assets/art/chengdu_painted_city/source.json")
+    if asset_entry in {"scenes/demos/cultivation_engine_chengdu_crafted_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_art_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_illustrated_street.tscn"}:
+        paths.append(ROOT / "assets/art/chengdu_crafted_street/source.json")
+    if asset_entry in {"scenes/demos/cultivation_engine_chengdu_art_street.tscn",
+                 "scenes/demos/cultivation_engine_chengdu_illustrated_street.tscn"}:
+        paths.append(ROOT / "assets/art/chengdu_art_street/source.json")
+        paths.extend((ROOT / "assets/art/chengdu_art_street").glob("*-geometry.png.import"))
+        paths.extend((ROOT / "assets/art/chengdu_concept_finish").glob("*.png"))
+        paths.extend((ROOT / "assets/art/chengdu_concept_finish").glob("*.json"))
+        paths.extend((ROOT / "assets/art/chengdu_market_life").glob("*.png"))
+        paths.extend((ROOT / "assets/art/chengdu_market_life").glob("*.json"))
+        paths.extend((ROOT / "assets/art/chengdu_tea_polish_20261110").glob("*.png"))
+        paths.extend((ROOT / "assets/art/chengdu_tea_polish_20261110").glob("*.json"))
     def resources(value):
         if isinstance(value, dict):
             for key, child in value.items():
@@ -113,6 +212,9 @@ def stage(output: Path, reuse_stage: Path | None = None,
         if path in visited:
             continue
         visited.add(path)
+        if path.suffix == ".glb" and path.with_suffix(".glb.import").is_file():
+            # Preserve authored importer choices for selected skinned models.
+            pending.append(path.with_suffix(".glb.import"))
         if path.suffix == ".json":
             for resource in resources(json.loads(path.read_text())):
                 if resource not in visited:

@@ -1,0 +1,165 @@
+{
+  "scope": "Independent large-world Chengdu candidate: one continuous outdoor walk map, five named regions and retained two-door teahouse. No outdoor scene transitions, new long-form story, say nodes or TTS.",
+  "base_pack": "shu_chengdu",
+  "base_content_version": "0.4.1",
+  "base_commit": "7c992c578b1fe4a1624c769812425b38080771d3",
+  "base_snapshot_sha256": {
+    "activities.json": "c8fccbf66092573bb5a2ef5e73b02c0a75fe1c70ec44d6c40cd6dba699f6631f",
+    "characters.json": "03437af888d6a5e681b046f2634ae1181537646b16ffd1820d164d7b385e7404",
+    "events.json": "002f5c280bba0288701acc2c8a7b6e7a21e69ad04332b29ddb2a744f0a4f43f0",
+    "game.json": "4ecf37065e110fad2944e13890a3a9dbd00d994255524916b1185909dcb9ea87",
+    "motions.json": "518a167f8cb72ce5edc50ac3a766d0c1eb28122ef119a0141366ecc6f8770df2",
+    "rules.json": "e3dfc6d886d7e39873be31fb22c50a4f7f873148c3f13cdd7eccf1c2b4339a37",
+    "scenes.json": "6b8b99282ad1c831d46fd9118933b04289970b8735721567b099bb15c2ceda3d",
+    "source.json": "f312ffe0d82292a3cd44d8d08669d0bd49ded4c31499bee96793654cc999ee7b",
+    "voices.json": "9e6b9e1ac0cc17ab275b13b2c8c75d6ef747c7ed94ca7642227dfeaeffe790a5",
+    "walks.json": "a647c0078b4561c2f3bc64602cc5da5835c83d2e7893c7ef52ec9510eb8b70eb"
+  },
+  "unchanged_files": [
+    "rules.json",
+    "characters.json",
+    "motions.json",
+    "voices.json"
+  ],
+  "preserved_content": [
+    "Original mentor_tip and mentor_practice_report event graphs",
+    "Original eleven mentor, five-sword and rest actions",
+    "Original city flags, once keys, keeper/guest/lost_property/river_umbrella event IDs and choice structure",
+    "Original teahouse logical geometry, interaction IDs and front/back entries"
+  ],
+  "new_text": "Original mechanism and wayfinding narration only. Retained free city-sign, market-goods and cargo-notice inspections adjust directions for one continuous world. No new character speech or voice generation.",
+  "authored_sources": [
+    "trunk/mentor-slow-half-step.json",
+    "trunk/mentor-practice-report.json"
+  ],
+  "source_modules": "Existing EngineSession, navigation and reviewed Chengdu presentation adapters. No second global state or imported story/combat chapter.",
+  "presentation_layout": "res://assets/data/chengdu-large-layout.json",
+  "route_waypoints": {
+    "south_street": [
+      [
+        440,
+        1760
+      ],
+      [
+        440,
+        1700
+      ],
+      [
+        1940,
+        1700
+      ],
+      [
+        3280,
+        1700
+      ],
+      [
+        3300,
+        1330
+      ]
+    ],
+    "north_detour": [
+      [
+        440,
+        1760
+      ],
+      [
+        360,
+        1760
+      ],
+      [
+        360,
+        1020
+      ],
+      [
+        1020,
+        1020
+      ],
+      [
+        1940,
+        1020
+      ],
+      [
+        2720,
+        1020
+      ],
+      [
+        3280,
+        1020
+      ],
+      [
+        3300,
+        1330
+      ]
+    ],
+    "five_regions": [
+      [
+        400,
+        1760
+      ],
+      [
+        360,
+        1760
+      ],
+      [
+        360,
+        1020
+      ],
+      [
+        1020,
+        1020
+      ],
+      [
+        2720,
+        1020
+      ],
+      [
+        3280,
+        1100
+      ],
+      [
+        3280,
+        1700
+      ],
+      [
+        1940,
+        1700
+      ]
+    ],
+    "rear_door_route": [
+      [
+        1600,
+        900
+      ],
+      [
+        1740,
+        900
+      ],
+      [
+        1740,
+        1020
+      ],
+      [
+        1940,
+        1020
+      ],
+      [
+        2720,
+        1020
+      ],
+      [
+        3280,
+        1020
+      ],
+      [
+        3300,
+        1330
+      ]
+    ]
+  },
+  "save_boundary": "Independent pack ID shu_chengdu_large / 0.5.0 and candidate app directory; no migration from six-map shu_chengdu or earlier packages.",
+  "authorization": {
+    "date": "2026-11-07",
+    "source": "User explicitly replied 做 to the continuous large-scene proposal.",
+    "status": "Implementation candidate; layout, camera and play feel await real checks and user acceptance."
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "scope": "Independent paint-dominant eighteen-lot street comparison; original city navigation and EngineSession. Fixed 45 degree yaw,52 degree pitch, continuous camera translation.",
+  "art_source": "res://assets/art/chengdu_illustrated_street_20261112/source.json",
+  "houses": {
+    "ward_city_20_15": {
+      "layer": "corner_shop",
+      "width_meters": 3.22
+    },
+    "ward_city_20_16": {
+      "layer": "home",
+      "width_meters": 3.22
+    },
+    "ward_city_20_19": {
+      "layer": "home",
+      "width_meters": 3.22
+    },
+    "ward_city_20_20": {
+      "layer": "corner_shop",
+      "width_meters": 3.22
+    },
+    "ward_city_21_13": {
+      "layer": "home",
+      "width_meters": 3.22
+    },
+    "ward_city_21_15": {
+      "layer": "home",
+      "width_meters": 3.22
+    },
+    "ward_city_21_16": {
+      "layer": "workshop",
+      "width_meters": 3.22
+    },
+    "ward_city_21_19": {
+      "layer": "two_storey",
+      "width_meters": 3.22
+    },
+    "ward_city_21_20": {
+      "layer": "home",
+      "width_meters": 3.22
+    },
+    "ward_city_22_13": {
+      "layer": "corner_shop",
+      "width_meters": 3.22
+    },
+    "ward_city_22_15": {
+      "layer": "courtyard_tree",
+      "width_meters": 3.35
+    },
+    "ward_city_22_16": {
+      "layer": "two_storey",
+      "width_meters": 3.22
+    },
+    "ward_city_22_19": {
+      "layer": "tea_shop",
+      "width_meters": 3.22
+    },
+    "ward_city_22_20": {
+      "layer": "home",
+      "width_meters": 3.22
+    },
+    "ward_city_23_15": {
+      "layer": "workshop",
+      "width_meters": 3.22
+    },
+    "ward_city_23_16": {
+      "layer": "corner_shop",
+      "width_meters": 3.22
+    },
+    "ward_city_23_19": {
+      "layer": "courtyard_tree",
+      "width_meters": 3.35
+    },
+    "ward_city_23_20": {
+      "layer": "home",
+      "width_meters": 3.22
+    }
+  }
+}

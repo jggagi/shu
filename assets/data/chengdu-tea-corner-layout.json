@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "focus_bounds": [
+    7480,
+    7080,
+    1060,
+    650
+  ],
+  "stops": [
+    {
+      "id": "tea",
+      "label": "茶铺前",
+      "point": [
+        8060,
+        7300
+      ]
+    },
+    {
+      "id": "lane",
+      "label": "窄巷",
+      "point": [
+        7580,
+        7500
+      ]
+    },
+    {
+      "id": "corner",
+      "label": "街角",
+      "point": [
+        7960,
+        7395
+      ]
+    }
+  ],
+  "houses": {
+    "ward_city_22_19": {
+      "seed": 3.1,
+      "landing": true,
+      "plants": [
+        {
+          "cell": 1,
+          "size": [
+            0.35,
+            0.38
+          ],
+          "foot_local": [
+            0.58,
+            0.85
+          ],
+          "potted": true
+        },
+        {
+          "cell": 3,
+          "size": [
+            0.36,
+            0.28
+          ],
+          "foot_local": [
+            -0.81,
+            0.88
+          ],
+          "potted": false
+        }
+      ]
+    },
+    "ward_city_22_16": {
+      "seed": 6.7,
+      "landing": false,
+      "plants": [
+        {
+          "cell": 2,
+          "size": [
+            0.33,
+            0.42
+          ],
+          "foot_local": [
+            0.9,
+            0.43
+          ],
+          "potted": true
+        },
+        {
+          "cell": 3,
+          "size": [
+            0.34,
+            0.26
+          ],
+          "foot_local": [
+            0.89,
+            -0.63
+          ],
+          "potted": false
+        }
+      ]
+    },
+    "ward_city_23_19": {
+      "seed": 9.4,
+      "landing": false,
+      "plants": [
+        {
+          "cell": 0,
+          "size": [
+            0.39,
+            0.66
+          ],
+          "foot_local": [
+            0.84,
+            0.42
+          ],
+          "potted": true
+        },
+        {
+          "cell": 3,
+          "size": [
+            0.28,
+            0.27
+          ],
+          "foot_local": [
+            -0.76,
+            0.86
+          ],
+          "potted": false
+        }
+      ]
+    },
+    "ward_city_23_16": {
+      "seed": 14.3,
+      "landing": true,
+      "plants": [
+        {
+          "cell": 1,
+          "size": [
+            0.29,
+            0.32
+          ],
+          "foot_local": [
+            0.51,
+            0.86
+          ],
+          "potted": true
+        },
+        {
+          "cell": 3,
+          "size": [
+            0.31,
+            0.23
+          ],
+          "foot_local": [
+            -0.87,
+            0.68
+          ],
+          "potted": false
+        }
+      ]
+    }
+  },
+  "seller": {
+    "anchor": [
+      8075,
+      7395
+    ],
+    "clearance": 18,
+    "shoe_y": 0.034,
+    "logical_billboard_envelope": [
+      7970,
+      7280,
+      170,
+      140
+    ]
+  }
+}

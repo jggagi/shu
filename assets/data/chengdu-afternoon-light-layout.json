@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "bounds": [7100, 7080, 1480, 700],
+  "feather_logical": 128,
+  "sunlit_gain": [1.025, 1.012, 0.985],
+  "shadow_gain": [0.72, 0.78, 0.87],
+  "model_direct_tint": [1.07, 1.025, 0.95],
+  "model_fill": 0.82,
+  "note": "Tea shop, courtyard tree and intervening original streets. Reuse the one existing afternoon sun; preserve painted source ownership, alpha, depth bias and all geometry. No additional light or floor."
+}

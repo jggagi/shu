@@ -1,0 +1,75 @@
+{
+  "asset": "Original Shu painterly Chengdu six-material city surface atlas",
+  "provider": "codex-imagegen",
+  "model": null,
+  "mode": "built-in single surface-art reference atlas, selected for world-surface integration",
+  "generation_count": 1,
+  "recorded_at_utc": "2026-11-08T10:51:13.373182+00:00",
+  "author": "Original generated artwork directed for the Shu project",
+  "rights": "Generated original project artwork using the previously selected original Shu paintings as references. Provider terms apply; no third-party license claimed.",
+  "prompt": {
+    "path": "art/prompts/chengdu-painted-city-20261108/surface-atlas.txt",
+    "sha256": "8fb920e9d303995fe68a39a6089cafcd6bc19cf1a0e796907f265067fd75315f"
+  },
+  "references": [
+    {
+      "path": "assets/art/chengdu_painted_gate/painted-gate.png",
+      "sha256": "611c601ad21440b17ccb8044a73b876bf9faa7ae79c4d174153bf3181f3b7fac",
+      "role": "primary approved style and material palette; no gate geometry copied"
+    },
+    {
+      "path": "docs/concepts/chengdu-painted-gate-20261108/town-style-reference.png",
+      "sha256": "6656fe35aa44d9e6a7a0f05e3cc3705a1ccb214cf8d38537d164d8d31748500b",
+      "role": "secondary original Shu painted-tea-street brushwork and jade-water reference only"
+    }
+  ],
+  "selected_output": {
+    "path": "assets/art/chengdu_painted_city/surface-atlas.png",
+    "sha256": "988acb536f20233a826ef8bd9302e1f16c8c94363ea594089fb60104940999bf",
+    "size": [
+      1536,
+      1024
+    ],
+    "transparent_background": false
+  },
+  "atlas": {
+    "columns": 3,
+    "rows": 2,
+    "cell_size": [
+      512,
+      512
+    ],
+    "top": [
+      "roof",
+      "stone",
+      "plaster"
+    ],
+    "bottom": [
+      "wood",
+      "earth",
+      "water"
+    ]
+  },
+  "runtime_use": "Six independent sampled surface tiles on existing real world geometry, not a new full-city backdrop. Independent cell mipmaps prevent atlas bleed. Original gate painting remains its own protected asset.",
+  "local_provider_readiness": {
+    "qwen": "NOT_CONFIGURED: process key and endpoint missing; offline doctor only",
+    "network_calls_in_doctor": false
+  },
+  "paid_api_used": false,
+  "qwen_batch_used": false,
+  "review_status": "Image inspected for exact six-cell layout, palette, material identity and no text/people. Selected for real-scene review; new city result awaits verification and user playtest.",
+  "runtime_derivation": {
+    "implementation": "addons/cultivation_mode/chengdu_painted_city_surfaces.gd",
+    "cells": "Six 512x512 regions decoded once in Godot; independent ImageTextures and generated mipmaps",
+    "water": "Mirrored 2x2 runtime repeat tile (1024x1024), period doubled from 8m to 16m to preserve wave scale; original atlas PNG unchanged",
+    "gain": {
+      "roof": 0.9,
+      "stone": 0.86,
+      "plaster": 0.84,
+      "wood": 1.0,
+      "earth": 1.0,
+      "water": 1.0
+    },
+    "scope": "Only city environment material sampling and intensity; original gate painting, actors, lighting, geometry and state unchanged"
+  }
+}

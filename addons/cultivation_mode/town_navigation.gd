@@ -6,12 +6,36 @@ extends RefCounted
 
 class CollisionGrid extends AStarGrid2D:
 	var solid_boxes: Array[Rect2] = []
+	# Two undirected edges per cell (east/south), shared by every candidate
+	# search on this grid. Unknown=0, clear=1, blocked=2. configure creates a
+	# new grid, so a changed map cannot inherit collision results from an old one.
+	var _edge_states := PackedByteArray()
+
+	func prepare_edge_cache() -> void:
+		_edge_states.resize(region.size.x * region.size.y * 2)
+		_edge_states.fill(0)
 
 	func _compute_cost(from_id: Vector2i, to_id: Vector2i) -> float:
+		var distance := absi(to_id.x - from_id.x) + absi(to_id.y - from_id.y)
+		var index := -1
+		if distance == 1 and is_in_boundsv(from_id) and is_in_boundsv(to_id):
+			var cell := Vector2i(mini(from_id.x, to_id.x), mini(from_id.y, to_id.y)) - region.position
+			index = (cell.y * region.size.x + cell.x) * 2 + (0 if from_id.y == to_id.y else 1)
+			if index < _edge_states.size():
+				if _edge_states[index] == 1:
+					return 1.0
+				if _edge_states[index] == 2:
+					return INF
+			else:
+				index = -1
 		for box: Rect2 in solid_boxes:
 			if segment_hits_rect(get_point_position(from_id), get_point_position(to_id), box):
+				if index >= 0:
+					_edge_states[index] = 2
 				return INF
-		return float(absi(to_id.x - from_id.x) + absi(to_id.y - from_id.y))
+		if index >= 0:
+			_edge_states[index] = 1
+		return float(distance)
 
 	static func segment_hits_rect(from: Vector2, to: Vector2, box: Rect2) -> bool:
 		# Exact slab intersection avoids the source's 5 px sampling gaps.
@@ -77,6 +101,7 @@ func configure(definition: Dictionary, build_grid: bool = true) -> void:
 	grid.default_compute_heuristic = AStarGrid2D.HEURISTIC_MANHATTAN
 	grid.default_estimate_heuristic = AStarGrid2D.HEURISTIC_MANHATTAN
 	grid.update()
+	grid.prepare_edge_cache()
 	for x: int in range(grid.region.size.x):
 		for y: int in range(grid.region.size.y):
 			var id: Vector2i = Vector2i(x, y)

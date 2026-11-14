@@ -1,0 +1,52 @@
+{
+  "morning": {
+    "paint": {
+      "grade_tint": [0.90, 0.98, 1.015], "saturation": 0.91,
+      "light_center": [0.65, 0.22], "light_radius": [0.47, 0.39],
+      "light_color": [0.85, 0.91, 0.77], "light_strength": 0.14,
+      "awning_strength": 0.025, "leaf_strength": 0.13, "mist_strength": 0.13
+    },
+    "actor": {
+      "ambient_color": "#c5dce1", "ambient_energy": 0.57,
+      "sun_color": "#f7ecd1", "sun_energy": 0.65, "sun_rotation": [-35, -65, 0]
+    }
+  },
+  "afternoon": {
+    "paint": {
+      "grade_tint": [1.025, 1.008, 0.995], "saturation": 1.0,
+      "light_center": [0.46, 0.34], "light_radius": [0.38, 0.44],
+      "light_color": [1.0, 0.77, 0.43], "light_strength": 0.17,
+      "awning_strength": 0.065, "leaf_strength": 0.24, "mist_strength": 0.0
+    },
+    "actor": {
+      "ambient_color": "#c9d3d5", "ambient_energy": 0.53,
+      "sun_color": "#ffe4ba", "sun_energy": 0.76, "sun_rotation": [-60, -35, 0]
+    }
+  },
+  "dusk": {
+    "lamplight": 0.38,
+    "paint": {
+      "grade_tint": [0.91, 0.79, 0.77], "saturation": 0.90,
+      "light_center": [0.20, 0.20], "light_radius": [0.55, 0.43],
+      "light_color": [1.0, 0.44, 0.16], "light_strength": 0.28,
+      "awning_strength": 0.04, "leaf_strength": 0.29, "mist_strength": 0.0
+    },
+    "actor": {
+      "ambient_color": "#a8b3d2", "ambient_energy": 0.42,
+      "sun_color": "#ffc58c", "sun_energy": 0.83, "sun_rotation": [-22, 30, 0]
+    }
+  },
+  "moonlight": {
+    "lamplight": 1.0,
+    "paint": {
+      "grade_tint": [0.43, 0.56, 0.77], "saturation": 0.60,
+      "light_center": [0.75, 0.42], "light_radius": [0.56, 0.65],
+      "light_color": [0.36, 0.60, 0.88], "light_strength": 0.085,
+      "awning_strength": 0.0, "leaf_strength": 0.10, "mist_strength": 0.0
+    },
+    "actor": {
+      "ambient_color": "#b9cbea", "ambient_energy": 0.55,
+      "sun_color": "#c2dcff", "sun_energy": 0.42, "sun_rotation": [-48, -60, 0]
+    }
+  }
+}

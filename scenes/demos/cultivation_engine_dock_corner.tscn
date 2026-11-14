@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="Script" path="res://addons/cultivation_mode/dock_corner_mode_view.gd" id="1"]
+[node name="IndependentDockCorner" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+edition_label = "0.2.0 · 码头一角"
+save_base_dir = "user://independent_dock_interactions_v02"
+catalog_path = "res://games/dock_corner_catalog.json"

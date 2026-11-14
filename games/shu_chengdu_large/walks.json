@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "scenes": {
+    "chengdu_city": {
+      "size": [
+        3840,
+        2160
+      ],
+      "floor": [
+        80,
+        120,
+        3680,
+        1960
+      ],
+      "spawn": [
+        440,
+        1760
+      ],
+      "obstacles": [
+        [
+          420,
+          320,
+          520,
+          620
+        ],
+        [
+          1120,
+          240,
+          600,
+          480
+        ],
+        [
+          520,
+          1200,
+          480,
+          360
+        ],
+        [
+          1340,
+          1050,
+          520,
+          360
+        ],
+        [
+          2080,
+          1220,
+          620,
+          280
+        ],
+        [
+          2220,
+          260,
+          720,
+          300
+        ],
+        [
+          2860,
+          1180,
+          320,
+          360
+        ],
+        [
+          2450,
+          760,
+          220,
+          220
+        ],
+        [
+          3420,
+          180,
+          320,
+          1660
+        ],
+        [
+          1880,
+          760,
+          240,
+          220
+        ]
+      ],
+      "actor_radius": 12,
+      "cell_size": 20,
+      "entries": {
+        "from_mountain": [
+          440,
+          1760
+        ],
+        "from_teahouse_front": [
+          1600,
+          1540
+        ],
+        "from_teahouse_back": [
+          1600,
+          900
+        ]
+      },
+      "interactions": {
+        "gate_mountain_exit": {
+          "label": "返山回廊 · 1时辰",
+          "position": [
+            260,
+            1760
+          ],
+          "radius": 58,
+          "action": "return_from_town"
+        },
+        "gate_sign": {
+          "label": "城中方向木牌",
+          "position": [
+            540,
+            1700
+          ],
+          "radius": 58,
+          "action": "read_city_sign"
+        },
+        "market_goods": {
+          "label": "檐下货架",
+          "position": [
+            2140,
+            1570
+          ],
+          "radius": 58,
+          "action": "inspect_market_goods"
+        },
+        "market_teahouse_door": {
+          "label": "前门 · 茶馆",
+          "position": [
+            1600,
+            1480
+          ],
+          "radius": 58,
+          "action": "enter_teahouse"
+        },
+        "lanes_teahouse_door": {
+          "label": "后门 · 茶馆",
+          "position": [
+            1600,
+            960
+          ],
+          "radius": 58,
+          "action": "enter_teahouse_back"
+        },
+        "river_cargo_notice": {
+          "label": "货埠告示 · 前路暂不通",
+          "position": [
+            3300,
+            440
+          ],
+          "radius": 58,
+          "action": "read_cargo_notice"
+        },
+        "river_umbrella": {
+          "label": "临河竹伞",
+          "position": [
+            3300,
+            1330
+          ],
+          "radius": 58,
+          "action": "inspect_river_umbrella"
+        },
+        "river_view": {
+          "label": "看看河面",
+          "position": [
+            3280,
+            1790
+          ],
+          "radius": 58,
+          "action": "look_across_river"
+        }
+      }
+    },
+    "chengdu_teahouse": {
+      "size": [
+        1280,
+        720
+      ],
+      "floor": [
+        60,
+        160,
+        1160,
+        490
+      ],
+      "spawn": [
+        640,
+        570
+      ],
+      "obstacles": [
+        [
+          300,
+          250,
+          190,
+          120
+        ],
+        [
+          740,
+          250,
+          180,
+          120
+        ]
+      ],
+      "actor_radius": 12,
+      "cell_size": 20,
+      "entries": {
+        "from_market": [
+          640,
+          570
+        ],
+        "from_lanes": [
+          640,
+          240
+        ]
+      },
+      "interactions": {
+        "tea_market_exit": {
+          "label": "前门 · 市街",
+          "position": [
+            640,
+            610
+          ],
+          "radius": 58,
+          "action": "leave_teahouse"
+        },
+        "tea_keeper": {
+          "label": "茶馆掌柜",
+          "position": [
+            1010,
+            350
+          ],
+          "radius": 58,
+          "action": "meet_chengdu_keeper",
+          "repeat_action": "revisit_chengdu_keeper",
+          "seen_flag": "chengdu_keeper_met"
+        },
+        "tea_guest": {
+          "label": "窗边茶客",
+          "position": [
+            520,
+            440
+          ],
+          "radius": 58,
+          "action": "meet_chengdu_guest",
+          "repeat_action": "revisit_chengdu_guest",
+          "seen_flag": "chengdu_guest_met"
+        },
+        "tea_lost_property": {
+          "label": "窗边失物架",
+          "position": [
+            930,
+            520
+          ],
+          "radius": 58,
+          "action": "inspect_lost_property"
+        },
+        "tea_lanes_exit": {
+          "label": "后门 · 百工巷",
+          "position": [
+            640,
+            190
+          ],
+          "radius": 58,
+          "action": "leave_teahouse_back"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "height": 238,
+  "portraits": {
+    "player_yanqiu": {
+      "texture": "res://assets/art/v2/jiang-yanqiu-v2.png",
+      "region": [
+        160,
+        210,
+        910,
+        1030
+      ]
+    },
+    "mentor_zhixian": {
+      "texture": "res://assets/art/v2/ye-zhixian-v2.png",
+      "region": [
+        140,
+        80,
+        920,
+        1120
+      ]
+    },
+    "dock_tea_keeper": {
+      "texture": "res://assets/art/dock_dialogue_portraits/tea-keeper.png",
+      "region": [
+        140,
+        0,
+        760,
+        820
+      ]
+    }
+  },
+  "source": "res://assets/art/dock_dialogue_portraits/source.json"
+}

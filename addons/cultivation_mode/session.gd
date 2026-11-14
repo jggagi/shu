@@ -640,7 +640,7 @@ func restore(candidate: Dictionary) -> Dictionary:
 func _prepare_action(action_id: String, action: Dictionary, operation_id: String, kind: String, source: Dictionary) -> Dictionary:
 	var required_phase: String = PHASE_EVENT if kind == "choice" else PHASE_READY
 	var expected_menu: bool = kind == "action"
-	var availability: Dictionary = _check_action(action_id, action, expected_menu, required_phase)
+	var availability: Dictionary = _check_action(action_id, action, expected_menu, required_phase, kind == "walk")
 	if not bool(availability.get("ok", false)):
 		return availability
 	var next_state: Dictionary = state.duplicate(true)
@@ -696,8 +696,9 @@ func _prepare_action(action_id: String, action: Dictionary, operation_id: String
 		next_state["scene"] = target_scene
 		var walk_maps: Dictionary = WalksContractScript.new().maps(pack)
 		if walk_maps.has(target_scene):
-			var spawn: Array = walk_maps[target_scene].spawn
-			next_state["exploration"]["positions"][target_scene] = [int(spawn[0]), int(spawn[1])]
+			# Validated before any transaction; old actions still use the map spawn.
+			var arrival: Dictionary = WalksContractScript.new().arrival_position(pack, action)
+			next_state["exploration"]["positions"][target_scene] = arrival.position.duplicate()
 	next_state["stats"] = initial_stats
 	next_state["flags"] = flags
 	var was_quest_active: bool = not QuestRuntimeScript.new().active(pack, state).is_empty()
@@ -802,7 +803,7 @@ func _prepare_action(action_id: String, action: Dictionary, operation_id: String
 	return {"ok": true, "state": next_state, "result": result}
 
 
-func _check_action(action_id: String, action: Dictionary, expected_menu: bool, required_phase: String) -> Dictionary:
+func _check_action(action_id: String, action: Dictionary, expected_menu: bool, required_phase: String, spatial_entry: bool = false) -> Dictionary:
 	if state.get("phase", "") != required_phase:
 		return {"ok": false, "reason": "当前阶段不能执行行动", "code": "wrong_phase"}
 	if bool(action.get("menu", false)) != expected_menu:
@@ -815,7 +816,7 @@ func _check_action(action_id: String, action: Dictionary, expected_menu: bool, r
 	var event_value: Variant = action.get("event", "")
 	if not (event_value is String):
 		return {"ok": false, "reason": "行动剧情规则无效", "code": "invalid_action"}
-	if not expected_menu and not str(event_value).is_empty():
+	if not expected_menu and not spatial_entry and not str(event_value).is_empty():
 		return {"ok": false, "reason": "对话选项行动不能再开启剧情", "code": "not_available"}
 	var scenes_value: Variant = action.get("scenes", [])
 	if not (scenes_value is Array) or not scenes_value.has(state.get("scene", "")):
@@ -858,7 +859,7 @@ func _check_action(action_id: String, action: Dictionary, expected_menu: bool, r
 	if not _valid_flag_map(action.get("set_flags", {})):
 		return {"ok": false, "reason": "行动旗标规则无效", "code": "invalid_action"}
 	var event_id: String = str(event_value)
-	if expected_menu and not event_id.is_empty():
+	if not event_id.is_empty():
 		var event_data: Dictionary = _dict_or_empty(_dict_or_empty(pack.get("events", {})).get(event_id, {}))
 		if event_data.is_empty() or _event_node(event_id, str(event_data.get("start", ""))).is_empty():
 			return {"ok": false, "reason": "行动剧情入口无效", "code": "invalid_action"}
@@ -868,6 +869,9 @@ func _check_action(action_id: String, action: Dictionary, expected_menu: bool, r
 	var target_scene: String = str(target_scene_value)
 	if not target_scene.is_empty() and not _dict_or_empty(pack.get("scenes", {})).has(target_scene):
 		return {"ok": false, "reason": "行动目标场景无效", "code": "invalid_action"}
+	var arrival: Dictionary = WalksContractScript.new().arrival_position(pack, action)
+	if not arrival.ok:
+		return {"ok": false, "reason": str(arrival.reason), "code": "invalid_action"}
 	var quest_reason: String = QuestRuntimeScript.new().check_action(pack, state, action_id)
 	if not quest_reason.is_empty():
 		return {"ok": false, "reason": quest_reason, "code": "not_available"}

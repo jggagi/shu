@@ -1,0 +1,8 @@
+[
+  {
+    "manifest": "res://games/shu_dock_corner/game.json"
+  },
+  {
+    "manifest": "res://games/stream_study/game.json"
+  }
+]

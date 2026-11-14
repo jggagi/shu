@@ -1,0 +1,81 @@
+{
+  "asset": "courtyard_tree",
+  "godot_bounds_m": [
+    [
+      -0.7660042643547058,
+      0.0,
+      -0.5268084406852722
+    ],
+    [
+      0.807468056678772,
+      3.929062604904175,
+      0.8318389058113098
+    ]
+  ],
+  "triangles": 8860,
+  "mesh_objects": 2,
+  "materials": 2,
+  "semantic_roles": [
+    "wood",
+    "leaf"
+  ],
+  "details": {
+    "crown_layers": 3,
+    "branchlet_groups": 11,
+    "closed_canopy_volumes": 0,
+    "individual_folded_leaves": 1210,
+    "leaf_triangles": 4840,
+    "leaf_length_m": [
+      0.0800080385892318,
+      0.15981139011915635
+    ],
+    "leaf_width_m": [
+      0.04001261740993157,
+      0.07999670819428012
+    ],
+    "leaf_shape": "six-vertex shallow fold; four triangles, attached to 3D branchlets; runtime double-sided",
+    "crown_minimum_expected_y": 2.7,
+    "root_center": [
+      0,
+      0,
+      0.15
+    ],
+    "billboards": 0,
+    "rejected_previous_canopy": "Eleven closed wrinkled masses read as cabbage in actual follow-camera view; archived in source/rejected-closed-crown-first-candidate",
+    "existing_tree_replacement": "one complete tree, trunk and crown together",
+    "actual_crown_minimum_y": 2.82502818107605
+  },
+  "ao": {
+    "wood": {
+      "raw_min": 0.0,
+      "raw_max": 1.0,
+      "raw_mean": 0.258760982428115,
+      "color0_min": 0.6600000262260437,
+      "color0_max": 1.0,
+      "corner_samples": 9390
+    },
+    "leaf": {
+      "raw_min": 0.0,
+      "raw_max": 0.99609375,
+      "raw_mean": 0.2713358729338843,
+      "color0_min": 0.6600000262260437,
+      "color0_max": 0.9986718893051147,
+      "corner_samples": 14520
+    }
+  },
+  "external_images": [],
+  "lights_cameras_collision_in_glb": false,
+  "glb": {
+    "bytes": 944728,
+    "sha256": "eb4bb83aa429e644137c48581a3bc889f2d4b2e3838a2f60d2dde70fd355169d",
+    "mesh_primitives": 2,
+    "all_primitives_have_uv_and_color0": true,
+    "image_count": 0,
+    "export_y_up": true
+  },
+  "source_blend": {
+    "path": "art/source/chengdu-blender-kit-20261110/courtyard_tree.blend",
+    "sha256": "99a723bef72adccd1184e3ceb0e48b65131100c526850170f5823164898ff22f",
+    "bytes": 380227
+  }
+}

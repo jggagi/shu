@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "scope": "Ten existing exterior house lots beside the first street. Original footprints, camera, navigation and state remain authoritative.",
+  "houses": [
+    {"id":"ward_city_22_15","type":"home","form":"front_gable","yaw_degrees":90,"eave_height":1.95,"roof_rise":0.58},
+    {"id":"ward_city_22_16","type":"two_storey","form":"upper_gallery","yaw_degrees":90,"eave_height":3.45,"roof_rise":0.52},
+    {"id":"ward_city_22_19","type":"shop","form":"tea_counter","yaw_degrees":-90,"eave_height":1.82,"roof_rise":0.43,"sign":"茶"},
+    {"id":"ward_city_22_20","type":"home","form":"low_wide","yaw_degrees":-90,"eave_height":1.58,"roof_rise":0.35},
+    {"id":"ward_city_23_15","type":"shop","form":"cloth_awning","yaw_degrees":90,"eave_height":2.10,"roof_rise":0.52,"sign":"锦"},
+    {"id":"ward_city_23_16","type":"corner_shop","form":"chamfered_corner","yaw_degrees":90,"eave_height":1.88,"roof_rise":0.62,"sign":"茶"},
+    {"id":"ward_city_23_19","type":"home","form":"stepped_gable","yaw_degrees":-90,"eave_height":2.12,"roof_rise":0.62},
+    {"id":"ward_city_23_20","type":"home","form":"timber_frame","yaw_degrees":-90,"eave_height":1.78,"roof_rise":0.47},
+    {"id":"ward_city_21_16","type":"shop","form":"low_workshop","yaw_degrees":90,"eave_height":1.62,"roof_rise":0.43},
+    {"id":"ward_city_21_19","type":"two_storey","form":"narrow_upper_gable","yaw_degrees":-90,"eave_height":3.62,"roof_rise":0.60}
+  ]
+}

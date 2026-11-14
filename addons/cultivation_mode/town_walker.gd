@@ -33,7 +33,7 @@ func setup(host: RefCounted, map_id: String, map: Dictionary, font: Font, enable
 	scene_id = map_id
 	definition = map.duplicate(true)
 	_font = font
-	navigation = NavigationScript.new()
+	navigation = _new_navigation()
 	navigation.call("configure", definition)
 	var state: Dictionary = session.call("snapshot")
 	_run_id = str(state.run_id)
@@ -44,6 +44,10 @@ func setup(host: RefCounted, map_id: String, map: Dictionary, font: Font, enable
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND if enabled else Control.CURSOR_ARROW
 	queue_redraw()
+
+
+func _new_navigation() -> RefCounted:
+	return NavigationScript.new()
 
 
 func audit() -> Dictionary:

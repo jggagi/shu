@@ -1,0 +1,20 @@
+{
+  "purpose": "Actual in-game front-facing protagonist proportion guide only; not a character edit target. No original image changed.",
+  "source_path": ".local/qa/chengdu-market-life-20261109/shopfront/herbs.png",
+  "source_sha256": "143089cf3967c78f5ec595d49d3c7e0b70fe05e6d794d43f7b8af417e6d8521a",
+  "crop_pixels_xyxy": [
+    592,
+    390,
+    687,
+    538
+  ],
+  "resize_pixels": [
+    475,
+    740
+  ],
+  "resampling": "nearest neighbor, exactly 5x cropped pixels",
+  "output_path": "art/work/chengdu-tea-polish-20261110/player-proportions-guide.png",
+  "output_sha256": "a408dcb53f7a8636eb3e61eb78950146a75125a052ad5a6509063eed6b7f36ea",
+  "portable_source_path": "assets/art/chengdu_tea_polish_20261110/references/runtime-herbs.png",
+  "portable_guide_path": "assets/art/chengdu_tea_polish_20261110/references/player-proportions-guide.png"
+}

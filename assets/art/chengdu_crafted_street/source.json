@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "asset": "Original Shu four-house crafted street material sample",
+  "provider": "qwen",
+  "model": "qwen-image-3.0",
+  "generation_count": 3,
+  "automatic_retries": 0,
+  "paid_api_used": true,
+  "author": "Original generated artwork directed for the Shu project",
+  "rights": "Generated project artwork using selected original Shu scene references. Provider terms apply; no third-party license claimed.",
+  "recorded_at_utc": "2026-11-08T12:39:45.706068+00:00",
+  "status": "SELECTED_FOR_SCENE_REVIEW_USER_PLAYTEST_PENDING",
+  "runtime_scope": "Three basic-color textures on four existing house footprints and the bounded main-street/side-lane ground material. Existing city size, collisions, gameplay and original paintings retained.",
+  "outputs": [
+    {
+      "kind": "paving",
+      "manifest_asset_id": "a07366f1ab214ca2a724c88407309c50",
+      "path": "res://assets/art/chengdu_crafted_street/paving.png",
+      "sha256": "fc95222ff41d31514d91fb93d70022adcdeb0c30a4fa4e267b54ad6e96cda0fb",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "prompt_file": "art/prompts/chengdu-crafted-street-20261108/01-paving.txt",
+      "prompt_sha256": "d219f94c77b993a4118be8f125fb231f28af67e720f88a9c7b06099b55bf4f23",
+      "references": [
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/01-main-street.png",
+          "sha256": "f16083fe85476dfa54225b0a64c794c1b851c0c04e0217170f1c7623632fc460",
+          "bytes": 3301364,
+          "dimensions": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "docs/concepts/chengdu-painted-gate-20261108/town-style-reference.png",
+          "sha256": "6656fe35aa44d9e6a7a0f05e3cc3705a1ccb214cf8d38537d164d8d31748500b",
+          "bytes": 3359841,
+          "dimensions": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "request_parameters": {
+        "size": "1024x1024",
+        "prompt_extend": false,
+        "enable_thinking": false,
+        "watermark": false,
+        "n": 1
+      },
+      "source_candidate": "art/work/chengdu-crafted-street-20261108/paving.png",
+      "image_review": "Inspected original image: orthographic painterly material, no people, text or scene perspective. Repeat edges require runtime handling and actual scene review.",
+      "transforms": "None: runtime PNG bytes identical to the provider download."
+    },
+    {
+      "kind": "plaster",
+      "manifest_asset_id": "cbda9477e69c4e94ae431098a72d2a7a",
+      "path": "res://assets/art/chengdu_crafted_street/plaster.png",
+      "sha256": "099016d92b36561c84c49b217e3329ce9b97447f32b7843b277f374b61008635",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "prompt_file": "art/prompts/chengdu-crafted-street-20261108/02-plaster.txt",
+      "prompt_sha256": "c82bd231bdc6741f76391003d3e2dc2cf55376baacb0dbfca0a99bcbf5cc38dc",
+      "references": [
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/03-shopfront.png",
+          "sha256": "a782f29f1ba65438d8d461ebfccec9d2153dbe077192c1a8742adbf1d81abff8",
+          "bytes": 3034706,
+          "dimensions": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "docs/concepts/chengdu-painted-gate-20261108/town-style-reference.png",
+          "sha256": "6656fe35aa44d9e6a7a0f05e3cc3705a1ccb214cf8d38537d164d8d31748500b",
+          "bytes": 3359841,
+          "dimensions": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "request_parameters": {
+        "size": "1024x1024",
+        "prompt_extend": false,
+        "enable_thinking": false,
+        "watermark": false,
+        "n": 1
+      },
+      "source_candidate": "art/work/chengdu-crafted-street-20261108/plaster.png",
+      "image_review": "Inspected original image: orthographic painterly material, no people, text or scene perspective. Repeat edges require runtime handling and actual scene review.",
+      "transforms": "None: runtime PNG bytes identical to the provider download."
+    },
+    {
+      "kind": "roof",
+      "manifest_asset_id": "721573d497da453d91dab320305f2cae",
+      "path": "res://assets/art/chengdu_crafted_street/roof.png",
+      "sha256": "d4400e08f30fce43b33a45e3bcd6a4bac656f2f1275511ab6b0ae3a5820f3b19",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "prompt_file": "art/prompts/chengdu-crafted-street-20261108/03-roof.txt",
+      "prompt_sha256": "d0f2dca17d62a7089f00816cea96a5eba05e642f377ee4b3f56aee7bb7e54e93",
+      "references": [
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/02-side-lane.png",
+          "sha256": "82ec0d3cfee1dfce0fbf047a24b52e61ab995b5d8b139dff794e741611ca9bc9",
+          "bytes": 3062529,
+          "dimensions": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "docs/concepts/chengdu-painted-gate-20261108/town-style-reference.png",
+          "sha256": "6656fe35aa44d9e6a7a0f05e3cc3705a1ccb214cf8d38537d164d8d31748500b",
+          "bytes": 3359841,
+          "dimensions": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "request_parameters": {
+        "size": "1024x1024",
+        "prompt_extend": false,
+        "enable_thinking": false,
+        "watermark": false,
+        "n": 1
+      },
+      "source_candidate": "art/work/chengdu-crafted-street-20261108/roof.png",
+      "image_review": "Inspected original image: orthographic painterly material, no people, text or scene perspective. Repeat edges require runtime handling and actual scene review.",
+      "transforms": "None: runtime PNG bytes identical to the provider download."
+    }
+  ],
+  "review_limits": [
+    "Successful provider calls do not imply user acceptance of the game result.",
+    "Not inherently seamless; actual runtime sampler and repeated scene appearance need inspection.",
+    "No baked characters, tree layers or door/window facade illustrations."
+  ],
+  "runtime_derivation": {
+    "implementation": "addons/cultivation_mode/chengdu_crafted_street_surfaces.gd",
+    "source_pngs_modified": false,
+    "per_texture": {
+      "paving": {
+        "path": "res://assets/art/chengdu_crafted_street/paving.png",
+        "crop_pixels": [
+          4,
+          4,
+          1016,
+          1016
+        ],
+        "seam_blend_pixels": 24,
+        "gain": 0.95
+      },
+      "plaster": {
+        "path": "res://assets/art/chengdu_crafted_street/plaster.png",
+        "crop_pixels": [
+          96,
+          96,
+          832,
+          832
+        ],
+        "seam_blend_pixels": 24,
+        "gain": 0.84
+      },
+      "roof": {
+        "path": "res://assets/art/chengdu_crafted_street/roof.png",
+        "crop_pixels": [
+          8,
+          8,
+          1008,
+          1008
+        ],
+        "seam_blend_pixels": 24,
+        "gain": 0.9
+      }
+    },
+    "method": "Decode each selected PNG, crop its specified interior region, blend only 24-pixel opposite edge strips toward their pairwise mean in two axes, then generate mipmaps. Outermost texels match; no mirroring or offline image output.",
+    "ground": {
+      "areas": [
+        [
+          7620,
+          7160,
+          700,
+          600
+        ],
+        [
+          7380,
+          7375,
+          980,
+          130
+        ],
+        [
+          7410,
+          7190,
+          100,
+          500
+        ]
+      ],
+      "edge_feather": 40,
+      "paving_period_meters": 3.2,
+      "wall_edge_width_meters": 0.32,
+      "wall_edge_strength": 0.14,
+      "scope_note": "Opaque material replacement on existing paving planes only. Three feathered rectangles join the main street, cross lane and cloth-shop lane. No new ground mesh or height."
+    },
+    "review_status": "Pending actual runtime view and independent CPU checks."
+  }
+}

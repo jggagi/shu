@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "date": "2026-11-14",
+  "author": "Codex original shu scene costume and motion work",
+  "license": "Original local project geometry/code; underlying adult model retains existing authorized asset provenance/provider terms. No claim of CC0 or repository-wide asset license.",
+  "source_model": "res://assets/art/town_volume_cast/tea-seller.glb",
+  "source_record": "res://assets/art/town_volume_cast/source.json",
+  "gait_model": "res://assets/art/town_volume_character/jiang-town.glb",
+  "gait_record": "res://assets/art/town_volume_character/source.json",
+  "engine": "Godot 4.7.2 stable / Compatibility",
+  "production": "Existing adult mesh instantiated twice. In-memory independent materials map source cloth detail to muted blue or hemp colors. Model-local nonuniform display scales distinguish silhouettes while preserving source data. Original hat/apron/cup/cloth hidden; code-authored cloth cap, small book, straw hat, bamboo basket, cloth roll and straps follow existing head/chest bones. Static bamboo authoring pieces batched by material. Scene-authored analytic upper-body IK runs after the unchanged authored leg-gait sample.",
+  "characters": {
+    "scholar": {
+      "body_stretch": [
+        0.9,
+        1.06,
+        0.94
+      ],
+      "poses": [
+        "hands-behind strolling",
+        "holding/reading small book",
+        "shading eyes and looking across water",
+        "quiet hands behind"
+      ]
+    },
+    "porter": {
+      "body_stretch": [
+        1.12,
+        0.96,
+        1.04
+      ],
+      "poses": [
+        "slight forward lean, hands on straps",
+        "adjusting load with hand at hip",
+        "resting hand near brow",
+        "quiet supported load"
+      ]
+    }
+  },
+  "inputs": {
+    "res://addons/cultivation_mode/dock_corner_costume.gd": "c779840ded64cee2947f2915273db3286cb263d94d66bbfee9e9010fe741ed68",
+    "res://addons/cultivation_mode/dock_corner_cloth.gdshader": "6d24b81e50b62a2ecff4077e3f2827c51a80b30f571b499f15ead4cebb2d9dff",
+    "res://addons/cultivation_mode/dock_corner_resident.gd": "4cead6360068aa51b3397646095c31867a6bab370f01c754165c687579cf6313",
+    "res://assets/data/dock-corner-life.json": "eecf687cf3cda05d18b633985b7bcd633031190cced6784d5059b98ca0549cb3"
+  },
+  "unchanged_originals": [
+    "source GLBs and embedded textures",
+    "shared Actor",
+    "player and keeper",
+    "cat atlas and motion",
+    "painting and navigation",
+    "content pack and EngineSession authority"
+  ],
+  "limits": [
+    "Two distinct dressed instances of the same underlying adult source; no new scan or fully independent face topology.",
+    "Original fixed hand geometry; no articulated fingers or asserted exact grasp.",
+    "Cast-shadow silhouettes follow body bones; new hat/basket shapes do not add full geometry shadows.",
+    "User acceptance and dedicated performance remain separate."
+  ],
+  "new_generation_calls": 0,
+  "downloads": 0,
+  "installs": 0,
+  "authoring_runtime_dependency": "Only repository GDScript/shader/JSON and existing project assets, no local Blender source required."
+}

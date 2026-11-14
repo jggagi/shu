@@ -1,0 +1,57 @@
+{
+  "dialogue_source": "res://assets/data/dock-corner-dialogue-source.json",
+  "splash": [
+    1040,
+    480
+  ],
+  "markers": {
+    "dock_keeper": {
+      "label": "茶商 · 交谈",
+      "label_at": [
+        350,
+        205
+      ],
+      "pick_at": [
+        350,
+        275
+      ],
+      "pick_radius": 35
+    },
+    "dock_steps": {
+      "label": "石阶 · 投石看水",
+      "label_at": [
+        850,
+        300
+      ],
+      "pick_at": [
+        778,
+        373
+      ],
+      "pick_radius": 28
+    },
+    "dock_willow": {
+      "label": "柳下 · 歇脚",
+      "label_at": [
+        245,
+        460
+      ],
+      "pick_at": [
+        240,
+        505
+      ],
+      "pick_radius": 33
+    },
+    "dock_exit": {
+      "label": "柳下小路 · 返山",
+      "label_at": [
+        130,
+        620
+      ],
+      "pick_at": [
+        145,
+        565
+      ],
+      "pick_radius": 25
+    }
+  }
+}

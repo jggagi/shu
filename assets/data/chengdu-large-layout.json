@@ -1,0 +1,491 @@
+{
+  "schema_version": 1,
+  "world_size": [
+    3840,
+    2160
+  ],
+  "logical_view_size": [
+    1280,
+    720
+  ],
+  "source_note": "Original continuous Chengdu outdoor composition. Regions are presentation labels only; all outdoor walking remains scene chengdu_city. Collision and anchors are authoritative in games/shu_chengdu_large/walks.json.",
+  "scenes": {
+    "chengdu_city": {
+      "label": "成都城",
+      "kind": "city",
+      "walk_scene": "res://games/shu_chengdu_large/walks.json#chengdu_city",
+      "size": [
+        3840,
+        2160
+      ],
+      "floor": [
+        80,
+        120,
+        3680,
+        1960
+      ],
+      "regions": [
+        {
+          "id": "gate",
+          "label": "西门",
+          "bounds": [
+            80,
+            1200,
+            720,
+            880
+          ],
+          "label_position": [
+            420,
+            1850
+          ],
+          "safe_point": [
+            400,
+            1760
+          ],
+          "visit_point": [
+            400,
+            1760
+          ]
+        },
+        {
+          "id": "market",
+          "label": "市街",
+          "bounds": [
+            800,
+            1200,
+            2260,
+            880
+          ],
+          "label_position": [
+            1980,
+            1770
+          ],
+          "safe_point": [
+            1940,
+            1700
+          ],
+          "visit_point": [
+            1940,
+            1700
+          ]
+        },
+        {
+          "id": "lanes",
+          "label": "百工巷",
+          "bounds": [
+            80,
+            120,
+            2040,
+            1080
+          ],
+          "label_position": [
+            1050,
+            930
+          ],
+          "safe_point": [
+            1020,
+            1020
+          ],
+          "visit_point": [
+            1020,
+            1020
+          ]
+        },
+        {
+          "id": "square",
+          "label": "榕树坪",
+          "bounds": [
+            2120,
+            120,
+            940,
+            1080
+          ],
+          "label_position": [
+            2630,
+            1040
+          ],
+          "safe_point": [
+            2720,
+            1020
+          ],
+          "visit_point": [
+            2720,
+            1020
+          ]
+        },
+        {
+          "id": "river",
+          "label": "临河巷",
+          "bounds": [
+            3060,
+            120,
+            700,
+            1960
+          ],
+          "label_position": [
+            3260,
+            1080
+          ],
+          "safe_point": [
+            3280,
+            1100
+          ],
+          "visit_point": [
+            3280,
+            1100
+          ]
+        }
+      ],
+      "buildings": [
+        {
+          "id": "west_courtyard",
+          "kind": "courtyard",
+          "bounds": [
+            420,
+            320,
+            520,
+            620
+          ],
+          "label": "西巷宅院",
+          "height": 3.3
+        },
+        {
+          "id": "north_courtyard",
+          "kind": "courtyard",
+          "bounds": [
+            1120,
+            240,
+            600,
+            480
+          ],
+          "label": "百工院",
+          "height": 3.5
+        },
+        {
+          "id": "west_workshop",
+          "kind": "house",
+          "bounds": [
+            520,
+            1200,
+            480,
+            360
+          ],
+          "label": "街边作坊",
+          "height": 3.2
+        },
+        {
+          "id": "teahouse",
+          "kind": "teahouse",
+          "bounds": [
+            1340,
+            1050,
+            520,
+            360
+          ],
+          "label": "少城茶馆",
+          "height": 3.4
+        },
+        {
+          "id": "market_hall",
+          "kind": "house",
+          "bounds": [
+            2080,
+            1220,
+            620,
+            280
+          ],
+          "label": "锦官街铺",
+          "height": 3.1
+        },
+        {
+          "id": "square_north_shops",
+          "kind": "house",
+          "bounds": [
+            2220,
+            260,
+            720,
+            300
+          ],
+          "label": "树坪北铺",
+          "height": 3.4
+        },
+        {
+          "id": "river_shop",
+          "kind": "house",
+          "bounds": [
+            2860,
+            1180,
+            320,
+            360
+          ],
+          "label": "临河小铺",
+          "height": 3.0
+        },
+        {
+          "id": "banyan",
+          "kind": "banyan",
+          "bounds": [
+            2450,
+            760,
+            220,
+            220
+          ],
+          "label": "榕树坪",
+          "height": 4.3
+        },
+        {
+          "id": "river_water",
+          "kind": "water",
+          "bounds": [
+            3420,
+            180,
+            320,
+            1660
+          ],
+          "label": "锦水",
+          "height": 0.0
+        },
+        {
+          "id": "central_workshop",
+          "kind": "house",
+          "bounds": [
+            1880,
+            760,
+            240,
+            220
+          ],
+          "label": "巷口作坊",
+          "height": 2.8
+        }
+      ],
+      "street_bands": [
+        [
+          180,
+          960,
+          3180,
+          120
+        ],
+        [
+          180,
+          1640,
+          3180,
+          160
+        ],
+        [
+          200,
+          900,
+          200,
+          950
+        ],
+        [
+          1000,
+          720,
+          140,
+          1040
+        ],
+        [
+          1880,
+          1000,
+          160,
+          760
+        ],
+        [
+          2700,
+          560,
+          140,
+          1200
+        ],
+        [
+          3200,
+          200,
+          180,
+          1660
+        ],
+        [
+          1380,
+          860,
+          400,
+          150
+        ]
+      ],
+      "landmarks": [
+        {
+          "id": "gate",
+          "label": "成都西门",
+          "position": [
+            260,
+            1760
+          ]
+        },
+        {
+          "id": "tea_front",
+          "label": "少城茶馆 · 前门",
+          "position": [
+            1600,
+            1480
+          ]
+        },
+        {
+          "id": "tea_back",
+          "label": "少城茶馆 · 后门",
+          "position": [
+            1600,
+            960
+          ]
+        },
+        {
+          "id": "square",
+          "label": "榕树坪",
+          "position": [
+            2560,
+            1030
+          ]
+        },
+        {
+          "id": "river",
+          "label": "临河巷",
+          "position": [
+            3280,
+            1100
+          ]
+        }
+      ],
+      "route_waypoints": {
+        "south_street": [
+          [
+            440,
+            1760
+          ],
+          [
+            440,
+            1700
+          ],
+          [
+            1940,
+            1700
+          ],
+          [
+            3280,
+            1700
+          ],
+          [
+            3300,
+            1330
+          ]
+        ],
+        "north_detour": [
+          [
+            440,
+            1760
+          ],
+          [
+            360,
+            1760
+          ],
+          [
+            360,
+            1020
+          ],
+          [
+            1020,
+            1020
+          ],
+          [
+            1940,
+            1020
+          ],
+          [
+            2720,
+            1020
+          ],
+          [
+            3280,
+            1020
+          ],
+          [
+            3300,
+            1330
+          ]
+        ],
+        "five_regions": [
+          [
+            400,
+            1760
+          ],
+          [
+            360,
+            1760
+          ],
+          [
+            360,
+            1020
+          ],
+          [
+            1020,
+            1020
+          ],
+          [
+            2720,
+            1020
+          ],
+          [
+            3280,
+            1100
+          ],
+          [
+            3280,
+            1700
+          ],
+          [
+            1940,
+            1700
+          ]
+        ],
+        "rear_door_route": [
+          [
+            1600,
+            900
+          ],
+          [
+            1740,
+            900
+          ],
+          [
+            1740,
+            1020
+          ],
+          [
+            1940,
+            1020
+          ],
+          [
+            2720,
+            1020
+          ],
+          [
+            3280,
+            1020
+          ],
+          [
+            3300,
+            1330
+          ]
+        ]
+      }
+    },
+    "chengdu_teahouse": {
+      "label": "成都·街边茶馆",
+      "kind": "teahouse",
+      "shop_label": "少城茶馆",
+      "walk_scene": "res://games/shu_chengdu_large/walks.json#chengdu_teahouse",
+      "composition": "Retained two-door teahouse interior; front door returns to the south street, rear door returns to the north lane."
+    }
+  },
+  "palette": {
+    "roof": "#78857a",
+    "wood": "#76624a",
+    "plaster": "#d7ccb0",
+    "stone": "#a7ae9b",
+    "water": "#779893"
+  }
+}

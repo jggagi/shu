@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "scope": "One authored tea-shop shell and one real branching courtyard tree; retain the original lots, dressing, seller, signs, navigation, camera and EngineSession.",
+  "atlas": "res://assets/art/chengdu_blender_kit_20261110/painted-atlas.png",
+  "art_source": "res://assets/art/chengdu_blender_kit_20261110/source.json",
+  "bake_strength": 0.65,
+  "models": {
+    "ward_city_22_19": {
+      "kind": "tea_shop",
+      "scene": "res://assets/art/chengdu_blender_kit_20261110/tea_shop.glb",
+      "maximum_height": 2.72
+    },
+    "ward_city_22_15": {
+      "kind": "courtyard_tree",
+      "scene": "res://assets/art/chengdu_blender_kit_20261110/courtyard_tree.glb",
+      "maximum_height": 4.15
+    }
+  }
+}

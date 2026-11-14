@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "asset": "Original Shu eighteen-house whole-street paintings and camera/geometry calibration",
+  "provider": "qwen",
+  "model": "qwen-image-3.0",
+  "generation_count": 4,
+  "selected_output_count": 3,
+  "rejected_output_count": 1,
+  "automatic_retries": 0,
+  "quality_revision_count": 1,
+  "paid_api_used": true,
+  "author": "Original generated artwork directed for the Shu project",
+  "rights": "Generated original project artwork; provider terms apply. Actual original Shu scene plates are edit targets. Existing original Shu references informed art direction; no user map or third-party art imported into runtime.",
+  "recorded_at_utc": "2026-11-08T13:53:54.175001+00:00",
+  "status": "SELECTED_STREET_ART_CANDIDATE_USER_ACCEPTANCE_PENDING",
+  "runtime_scope": "18 existing house lots, two closed courtyard trees and bounded world-projected street surfaces. Whole-scene paintings contribute to ground, roof and canopy; authored plaster/timber/openings retain the coherent Qwen base materials and real geometry, preventing drawn duplicate windows. Original city size/navigation/continuous following camera/EngineSession unchanged.",
+  "outputs": [
+    {
+      "manifest_asset_id": "d4cbb8c420ad4c49abda31f5f11ae1c0",
+      "source_candidate": "art/work/chengdu-art-street-20261108/south-v2.png",
+      "sha256": "83f1085ab5d3d3826177c7740bbaa240e2f29b4d5ef2d7506487aa537a257c91",
+      "size": [
+        1536,
+        864
+      ],
+      "mode": "RGB",
+      "prompt_file": "art/prompts/chengdu-art-street-20261108/south-v2.txt",
+      "prompt_sha256": "3a857fde898f5eb7dee6800c8b54dc32d5f49d84459afb3cc8fdb454cbdf1ac8",
+      "references": [
+        {
+          "path": "docs/concepts/chengdu-art-street-20261108/south-camera.png",
+          "sha256": "84dce5bcb3c7f2af7e935e849ff19b72aa172e7bb8cb31afde025b4aef1262df",
+          "bytes": 1392727,
+          "dimensions": [
+            1280,
+            720
+          ]
+        }
+      ],
+      "request_parameters": {
+        "size": "1536x864",
+        "prompt_extend": false,
+        "enable_thinking": false,
+        "watermark": false,
+        "n": 1
+      },
+      "negative_prompt_file": "art/prompts/d4cbb8c420ad4c49abda31f5f11ae1c0-negative.txt",
+      "negative_prompt_sha256": "7fd4ae7809d39341aa1ad9350647848725dba4fcb009435098674303dd97358d",
+      "view": "south",
+      "path": "res://assets/art/chengdu_art_street/south.png",
+      "transforms": "None: runtime painting PNG is byte-identical to provider download.",
+      "review": "Selected for full actual-game review. No generated people or objects placed in the walking road. Small painted edge/window/foliage deviations remain and need moving-camera/user judgment."
+    },
+    {
+      "manifest_asset_id": "212fab37e848428ea07759cd03b156ab",
+      "source_candidate": "art/work/chengdu-art-street-20261108/middle.png",
+      "sha256": "175c09e0737d37e91a879d549922a32770ff4b7dd03d028715412efad291b5e2",
+      "size": [
+        1536,
+        864
+      ],
+      "mode": "RGB",
+      "prompt_file": "art/prompts/chengdu-art-street-20261108/middle.txt",
+      "prompt_sha256": "3a857fde898f5eb7dee6800c8b54dc32d5f49d84459afb3cc8fdb454cbdf1ac8",
+      "references": [
+        {
+          "path": "docs/concepts/chengdu-art-street-20261108/middle-camera.png",
+          "sha256": "1dee62c32333ed77349333050cdcbb9cc19a5192af396889786f8a4899df0f87",
+          "bytes": 1375054,
+          "dimensions": [
+            1280,
+            720
+          ]
+        }
+      ],
+      "request_parameters": {
+        "size": "1536x864",
+        "prompt_extend": false,
+        "enable_thinking": false,
+        "watermark": false,
+        "n": 1
+      },
+      "negative_prompt_file": "art/prompts/212fab37e848428ea07759cd03b156ab-negative.txt",
+      "negative_prompt_sha256": "7fd4ae7809d39341aa1ad9350647848725dba4fcb009435098674303dd97358d",
+      "view": "middle",
+      "path": "res://assets/art/chengdu_art_street/middle.png",
+      "transforms": "None: runtime painting PNG is byte-identical to provider download.",
+      "review": "Selected for full actual-game review. No generated people or objects placed in the walking road. Small painted edge/window/foliage deviations remain and need moving-camera/user judgment."
+    },
+    {
+      "manifest_asset_id": "c47661b0b2854fbe95147683c5379b98",
+      "source_candidate": "art/work/chengdu-art-street-20261108/lane.png",
+      "sha256": "8cd98f54c2d347d269962a025c69b83412f37417a062a23870cca7ea94bd3a14",
+      "size": [
+        1536,
+        864
+      ],
+      "mode": "RGB",
+      "prompt_file": "art/prompts/chengdu-art-street-20261108/lane.txt",
+      "prompt_sha256": "3a857fde898f5eb7dee6800c8b54dc32d5f49d84459afb3cc8fdb454cbdf1ac8",
+      "references": [
+        {
+          "path": "docs/concepts/chengdu-art-street-20261108/lane-camera.png",
+          "sha256": "fc3d1a61c1e6095566f698fa3ca525cc85e465c05727b0e799c0c2c22aa45b2d",
+          "bytes": 1364055,
+          "dimensions": [
+            1280,
+            720
+          ]
+        }
+      ],
+      "request_parameters": {
+        "size": "1536x864",
+        "prompt_extend": false,
+        "enable_thinking": false,
+        "watermark": false,
+        "n": 1
+      },
+      "negative_prompt_file": "art/prompts/c47661b0b2854fbe95147683c5379b98-negative.txt",
+      "negative_prompt_sha256": "7fd4ae7809d39341aa1ad9350647848725dba4fcb009435098674303dd97358d",
+      "view": "lane",
+      "path": "res://assets/art/chengdu_art_street/lane.png",
+      "transforms": "None: runtime painting PNG is byte-identical to provider download.",
+      "review": "Selected for full actual-game review. No generated people or objects placed in the walking road. Small painted edge/window/foliage deviations remain and need moving-camera/user judgment."
+    }
+  ],
+  "rejected_outputs": [
+    {
+      "manifest_asset_id": "08965fdb55df4ff2b4467c075fcd3b84",
+      "source_candidate": "art/work/chengdu-art-street-20261108/south.png",
+      "sha256": "accaa36e28c5a99d1035aaa12a4693ed7fe8dfe813347b02cccd037fe12cc872",
+      "size": [
+        1536,
+        864
+      ],
+      "mode": "RGB",
+      "prompt_file": "art/prompts/chengdu-art-street-20261108/south.txt",
+      "prompt_sha256": "24ec3205554832a5bf5d000bf0e0c603e6c877b8f932daa724983e6631e7e22b",
+      "references": [
+        {
+          "path": "docs/concepts/chengdu-art-street-20261108/south-camera.png",
+          "sha256": "84dce5bcb3c7f2af7e935e849ff19b72aa172e7bb8cb31afde025b4aef1262df",
+          "bytes": 1392727,
+          "dimensions": [
+            1280,
+            720
+          ]
+        },
+        {
+          "path": "docs/concepts/chengdu-painted-gate-20261108/town-style-reference.png",
+          "sha256": "6656fe35aa44d9e6a7a0f05e3cc3705a1ccb214cf8d38537d164d8d31748500b",
+          "bytes": 3359841,
+          "dimensions": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/01-main-street.png",
+          "sha256": "f16083fe85476dfa54225b0a64c794c1b851c0c04e0217170f1c7623632fc460",
+          "bytes": 3301364,
+          "dimensions": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "request_parameters": {
+        "size": "1536x864",
+        "prompt_extend": false,
+        "enable_thinking": false,
+        "watermark": false,
+        "n": 1
+      },
+      "reason": "Rejected before installation: added people, table and northern buildings; changed layout/window/roof details. Successful paid output, retained in production provenance and included in generation_count."
+    }
+  ],
+  "calibration_files": [
+    {
+      "path": "res://assets/art/chengdu_art_street/calibration.json",
+      "sha256": "fa59b4c876793760c59857bfd3c0cbcee74f16a0450ddd6a0bc210dfc533be5e",
+      "bytes": 1897
+    },
+    {
+      "path": "res://assets/art/chengdu_art_street/lane-camera.json",
+      "sha256": "a8e4a48e5d25e94b6f80a81d236ff2625e05053d9f9b13a0bb2688ae19a6769c",
+      "bytes": 740489
+    },
+    {
+      "path": "res://assets/art/chengdu_art_street/lane-geometry.png",
+      "sha256": "8dbfbecb0b0dbb01fd2f32153995752d55a09f17dc2e114dbdca1c8e86e95493",
+      "bytes": 161826
+    },
+    {
+      "path": "res://assets/art/chengdu_art_street/lane-geometry.png.import",
+      "sha256": "cc40d9472eb1e9372d6a2184020bdb1456c46412d30ea39eca24d75084c1ef56",
+      "bytes": 973
+    },
+    {
+      "path": "res://assets/art/chengdu_art_street/lane-mask.png",
+      "sha256": "37f516f5b8f27d8ce9862b3d08496400a610153af9dbb252d04e17ca386195a8",
+      "bytes": 21486
+    },
+    {
+      "path": "res://assets/art/chengdu_art_street/lane.png",
+      "sha256": "8cd98f54c2d347d269962a025c69b83412f37417a062a23870cca7ea94bd3a14",
+      "bytes": 2066485
+    },
+    {
+      "path": "res://assets/art/chengdu_art_street/middle-camera.json",
+      "sha256": "65c81a203d572ce9b21cd0a1764dbf5e4031a0e7d571740dd9039167833af4b2",
+      "bytes": 834574
+    },
+    {
+      "path": "res://assets/art/chengdu_art_street/middle-geometry.png",
+      "sha256": "c9e2b766d46315ec9ac7b6b228d46206a752db647225b5fa242bcc22522c452b",
+      "bytes": 192865
+    },
+    {
+      "path": "res://assets/art/chengdu_art_street/middle-geometry.png.import",
+      "sha256": "9631797261fd26f62db9f47e4b4fc8aaf7204d7187b6da128563a79e9e3b5789",
+      "bytes": 980
+    },
+    {
+      "path": "res://assets/art/chengdu_art_street/middle-mask.png",
+      "sha256": "eb4de5d1b8eda27f02af596155618de55ca504a1c48f57d6245ac6d5c57fc8f7",
+      "bytes": 25647
+    },
+    {
+      "path": "res://assets/art/chengdu_art_street/middle.png",
+      "sha256": "175c09e0737d37e91a879d549922a32770ff4b7dd03d028715412efad291b5e2",
+      "bytes": 2045634
+    },
+    {
+      "path": "res://assets/art/chengdu_art_street/south-camera.json",
+      "sha256": "792346e637e9260dd97b0ade9156f06004bfef6308d737586f3e1bed056e9bc7",
+      "bytes": 959510
+    },
+    {
+      "path": "res://assets/art/chengdu_art_street/south-geometry.png",
+      "sha256": "f11cb34f48c004943bb8cefd127b505686308c5649da73cc0c0fd5f392d3a1b9",
+      "bytes": 175329
+    },
+    {
+      "path": "res://assets/art/chengdu_art_street/south-geometry.png.import",
+      "sha256": "df9e0f413f3a256c3c66c94f6367d83903f3098aa73a444d12a37686f7f2d53c",
+      "bytes": 976
+    },
+    {
+      "path": "res://assets/art/chengdu_art_street/south-mask.png",
+      "sha256": "691e474188731db258a9480171870b834c31decee34b3ae7e266864f18c715d1",
+      "bytes": 25305
+    },
+    {
+      "path": "res://assets/art/chengdu_art_street/south.png",
+      "sha256": "83f1085ab5d3d3826177c7740bbaa240e2f29b4d5ef2d7506487aa537a257c91",
+      "bytes": 2116097
+    }
+  ],
+  "calibration_method": "Frozen actual1280x720 reference-camera world projection; source IDs and packed oct-normal/uint16-forward-depth reject hidden/unrelated surfaces. Each original house shares one fixed reference priority; ground uses fixed world-space anchor distances. Valid fragments take one painting RGB and feather against the base. Current following camera never selects or blends paintings. Nine runtime samplers, no SCREEN_UV artwork. Six authored middle-source exclusions reject added foliage; roof has3px source-ID boundary retreat, leaf/ground no retreat. New house plaster/wood/dark preserve existing base materials and real openings.",
+  "data_capture": "Pinned Godot4.7.2 Compatibility actual GPU, no actors/UI/labels/roof fade/new ArtStreet overlay; ID palette unchanged. Two opaque data passes use capture-only inverse of GLES cubic sRGB approximation, GPU256-level chart exact; CPU packs normal.RG and forward-depth high/low bytes into geometry.RGBA. Fifteen independent ground-ray samples: max depth error0.000923m, normal error0.225573degrees. No runtime inverse polynomial.",
+  "geometry_import_settings": {
+    "compress_mode": 0,
+    "lossless": true,
+    "mipmaps_generate": false,
+    "process_fix_alpha_border": false,
+    "process_premult_alpha": false,
+    "alpha_is_depth_data": true,
+    "sampler_filter": "nearest",
+    "source_color": false
+  },
+  "source_geometry": {
+    "stage_script": "res://addons/cultivation_mode/chengdu_art_street_stage.gd",
+    "stage_sha256": "398f3ad121f02e358cfaafe33a9333ab01998dd2a99f88d539b8eaefa6ff6845",
+    "layout": "res://assets/data/chengdu-art-street-layout.json",
+    "layout_sha256": "19dfe109a7a43237c2060482d7ed7ba716f3b4c7d5c595d727139d3b805f5381"
+  },
+  "limitations": [
+    "Only this authored street slice; remaining city uses prior art.",
+    "Small painted silhouette/detail deviations and fixed reference boundaries remain aesthetic limits; gameplay/build passing is not user visual approval.",
+    "Paintings bake daylight and cannot provide arbitrary real-time relighting."
+  ]
+}

@@ -1,5 +1,15 @@
 # Cultivation Mode Runtime v0.3.1
 
+## 成都相连街区扩展（0.4.1 内容候选）
+
+独立入口 `scenes/demos/cultivation_engine_chengdu.tscn` 仍使用 EngineSession／SaveStore。可走地图可选 `entries:{entry_id:[int_x,int_y]}`，跨图行动以 `target_scene` 配合 `target_entry` 选择到达点；加载和事务前都检查入口可走，缺省仍使用原 `spawn`。入口不增加存档字段，位置仍在原 `exploration.positions` 内。
+
+登记于 walks 的非菜单行动现在可开启普通事件；只允许通过 `execute_walk_interaction` 的场景／距离／通路／run／revision 门禁进入，禁止从普通行动入口或事件选项绕过空间检查。事件、选择和一次后果继续由现有事务结算，交谈期间禁止保存，完成或取消后恢复原安全阶段。此项选择性复用 `town-polish` 的实际实现。成都场景与匿名人物使用独立表现适配器，不替换旧集镇入口。
+
+用户反馈「城市结构过于线性」后，当前内容候选由四图扩为六图：西门、市街、茶馆、临河巷、百工巷、榕树坪，共八条双向连接、三个独立回环。两条街区环路及茶馆前后门都复用同一 `target_scene` / `target_entry` 事务，没有任务解锁或强制顺序。具体布局仍待用户试玩；认可改善线性的方向不等于认可该六图方案。
+
+成都界面对成功的免费城内转场自动调用 `acknowledge_result()`，落地后即可继续走动，无需再点「继续」。宿主仍先完成唯一结算并保存真实回执；山城往返、普通查看、事件及养成结果继续使用原交互。原旅行费用、师徒五剑、声音、竹伞与人物重访保持。状态字段结构未扩充，但 `exploration.positions` 必须精确覆盖当前六图；`0.4.1` 候选应用存档隔离，不迁移四图旧档。本轮仍在验证，实际结果见[切片及验证](../../docs/CHENGDU_FIRST_STREETS_SLICE.md)。
+
 ## 山下集镇混合表现（内容版本仍0.3.1）
 
 `scenes/demos/cultivation_engine_v05_town_hd2d.tscn` 使用同一 P1b catalog／包／Session／Store，仅由 `town_hd2d_mode_view` 和继承原 walker 的 `town_hd2d_walker` 替换城镇表现。SubViewport 内真实3D建筑、曲面屋顶、光影、透视摄像机与2D billboard人物由 `town_hd2d_stage.gd` 负责；UI点击先反投影回原逻辑平面，再调用原行走／到达／宿主合同，不改变养成或旅行费用。
@@ -10,7 +20,9 @@
 
 新入口 `scenes/demos/cultivation_engine_v04_town_walk.tscn` 运行 `games/town_walk_catalog.json` 的独立 `shu_town_walk` 和原 `stream_study`。P0/P1a 内容、目录、存档保持；没有旧档自动迁入。画面与完整验证见 [P1b 来源审查](../../docs/CHENGPING_P1B_SOURCE_AUDIT.md) 和 [P1b 切片](../../docs/P1B_TOWN_WALK_SLICE.md)。
 
-可选 `files.walks` 引用包内 JSON，合同为 `{schema_version:1,scenes:{scene_id:{size:[w,h],floor:[x,y,w,h],spawn:[x,y],obstacles:[[x,y,w,h]],actor_radius:12,cell_size:20,interactions:{interaction_id:{label,position:[x,y],radius,action,repeat_action?,seen_flag?}}}}}`。坐标及尺寸为有限整数；格距须为2至100的偶数，保证格心可落在整数脚点。地图、旗标和行动引用需已登记。互动行动属于单一地图，必须 `menu:false`、无演出／事件，不允许由对话选项绕过距离。可选重访行动由已登记 `seen_flag` 选择，初次行动必须设置该旗标。
+地图合同最多8图、每图1024个矩形障碍和16个热点；新增大城由独立小建筑足迹组成。普通地图仍使用原导航，大城的专用导航仅缓存只读几何，位置与行动仍由EngineSession裁定。
+
+可选 `files.walks` 引用包内 JSON，合同为 `{schema_version:1,scenes:{scene_id:{size:[w,h],floor:[x,y,w,h],spawn:[x,y],entries?:{entry_id:[x,y]},obstacles:[[x,y,w,h]],actor_radius:12,cell_size:20,interactions:{interaction_id:{label,position:[x,y],radius,action,repeat_action?,seen_flag?}}}}}`。坐标及尺寸为有限整数；格距须为2至100的偶数，保证格心可落在整数脚点。地图、旗标和行动引用需已登记。互动行动属于单一地图，必须 `menu:false`、无动作演出，可开启普通事件，不允许由对话选项绕过距离。可选重访行动由已登记 `seen_flag` 选择，初次行动必须设置该旗标。
 
 `walks_contract.gd` 负责加载和恢复合同，互动锚点须位于可走空地；`town_navigation.gd` 的膨胀障碍、精确线段检查和网格寻路按固定 Chengping 来源选择适配。Session 缓存只做几何检查的地图实例，不在每帧创建寻路网格。视图／walker 仅保存路径、朝向和待互动目标，所有持久坐标、资源与后果仍属于 Session。
 

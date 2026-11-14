@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "purpose": "One editable, original Blender tea-shop and volumetric courtyard-tree sample for the existing Chengdu continuous scene",
+  "author": "OpenAI Codex, original procedural modelling authored for shu; no third-party model or texture imported",
+  "license": "Project-original source assets; no external asset licence dependency",
+  "date": "2026-11-10",
+  "tool": "Blender",
+  "tool_version": "5.2.2 LTS",
+  "script": "tools/art/build_chengdu_blender_kit.py",
+  "script_sha256": "7008656f75a0b92605d4fff57b9e8d1ec529604ff9d95eb75b5003905cdfb2fe",
+  "reproduce": "blender --background --factory-startup --python tools/art/build_chengdu_blender_kit.py",
+  "coordinates": {
+    "units": "metres",
+    "runtime": "Godot Y-up / front +Z",
+    "blender": "stored (x,-z,y); standard glTF Y-up export restores (x,y,z)"
+  },
+  "atlas": {
+    "runtime_image": "painted-atlas.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "png_origin": "top-left",
+    "png_top_row": [
+      "plaster",
+      "wood",
+      "roof"
+    ],
+    "png_bottom_row": [
+      "stone",
+      "leaf",
+      "ceramic"
+    ],
+    "column_boundaries_px": [
+      0,
+      341,
+      682,
+      1024
+    ],
+    "padding_px": 16,
+    "uv_contract": "Blender UV V is flipped from PNG top-left; glTF exporter flips back. Every UV lies within inner texel centres of its semantic tile.",
+    "vertex_color": "COLOR_0 is a grayscale ambient-occlusion multiplier, never the semantic base color. Runtime shader: painted atlas RGB * COLOR.rgb; roughness1, metallic0."
+  },
+  "bake": {
+    "engine": "Cycles",
+    "device": "CPU",
+    "type": "EMIT from ShaderNodeAmbientOcclusion AO output",
+    "samples": 16,
+    "ray_distance_m": 0.38,
+    "target": "VERTEX_COLORS Color, CORNER FLOAT_COLOR",
+    "postprocess": "Color.rgb = .66 + .34 * clamp(rawAO,0,1)",
+    "baked": true
+  },
+  "environment_limit": "System Blender OCIO profile version2.5 exceeds linked OCIO2.4.2; Blender logs display-transform fallback. Geometry and scalar AO baking do not use the display transform. Godot scene is final colour review.",
+  "assets": [
+    {
+      "asset": "tea_shop",
+      "godot_bounds_m": [
+        [
+          -0.9750000238418579,
+          0.0,
+          -1.034999966621399
+        ],
+        [
+          0.9750000238418579,
+          2.627000093460083,
+          1.034999966621399
+        ]
+      ],
+      "triangles": 5796,
+      "mesh_objects": 4,
+      "materials": 4,
+      "semantic_roles": [
+        "plaster",
+        "wood",
+        "roof",
+        "stone"
+      ],
+      "details": {
+        "front": "+z",
+        "primary_visible_side": "+x",
+        "opening": "real front door and 11cm-deep side window",
+        "roof": "closed curved hip shell with raised tile channels",
+        "room_gameplay": false
+      },
+      "ao": {
+        "plaster": {
+          "raw_min": 0.0,
+          "raw_max": 1.0,
+          "raw_mean": 0.5324047191722973,
+          "color0_min": 0.6600000262260437,
+          "color0_max": 1.0,
+          "corner_samples": 2960
+        },
+        "wood": {
+          "raw_min": 0.0,
+          "raw_max": 1.0,
+          "raw_mean": 0.33324841485507245,
+          "color0_min": 0.6600000262260437,
+          "color0_max": 1.0,
+          "corner_samples": 1104
+        },
+        "roof": {
+          "raw_min": 0.0,
+          "raw_max": 1.0,
+          "raw_mean": 0.5520946808337669,
+          "color0_min": 0.6600000262260437,
+          "color0_max": 1.0,
+          "corner_samples": 7688
+        },
+        "stone": {
+          "raw_min": 0.0,
+          "raw_max": 1.0,
+          "raw_mean": 0.5898763020833333,
+          "color0_min": 0.6600000262260437,
+          "color0_max": 1.0,
+          "corner_samples": 120
+        }
+      },
+      "external_images": [],
+      "lights_cameras_collision_in_glb": false,
+      "glb": {
+        "bytes": 385672,
+        "sha256": "1b221f02df192f38841d9f1cfa120264952265b9106ffc9324709909119bc13e",
+        "mesh_primitives": 4,
+        "all_primitives_have_uv_and_color0": true,
+        "image_count": 0,
+        "export_y_up": true
+      },
+      "source_blend": {
+        "path": "art/source/chengdu-blender-kit-20261110/tea_shop.blend",
+        "sha256": "d2c6dccd0410e2556726e3a60fec680494c45093dd42e255d47604b443094bb2",
+        "bytes": 192690
+      }
+    },
+    {
+      "asset": "courtyard_tree",
+      "godot_bounds_m": [
+        [
+          -0.7660042643547058,
+          0.0,
+          -0.5268084406852722
+        ],
+        [
+          0.807468056678772,
+          3.929062604904175,
+          0.8318389058113098
+        ]
+      ],
+      "triangles": 8860,
+      "mesh_objects": 2,
+      "materials": 2,
+      "semantic_roles": [
+        "wood",
+        "leaf"
+      ],
+      "details": {
+        "crown_layers": 3,
+        "branchlet_groups": 11,
+        "closed_canopy_volumes": 0,
+        "individual_folded_leaves": 1210,
+        "leaf_triangles": 4840,
+        "leaf_length_m": [
+          0.0800080385892318,
+          0.15981139011915635
+        ],
+        "leaf_width_m": [
+          0.04001261740993157,
+          0.07999670819428012
+        ],
+        "leaf_shape": "six-vertex shallow fold; four triangles, attached to 3D branchlets; runtime double-sided",
+        "crown_minimum_expected_y": 2.7,
+        "root_center": [
+          0,
+          0,
+          0.15
+        ],
+        "billboards": 0,
+        "rejected_previous_canopy": "Eleven closed wrinkled masses read as cabbage in actual follow-camera view; archived in source/rejected-closed-crown-first-candidate",
+        "existing_tree_replacement": "one complete tree, trunk and crown together",
+        "actual_crown_minimum_y": 2.82502818107605
+      },
+      "ao": {
+        "wood": {
+          "raw_min": 0.0,
+          "raw_max": 1.0,
+          "raw_mean": 0.258760982428115,
+          "color0_min": 0.6600000262260437,
+          "color0_max": 1.0,
+          "corner_samples": 9390
+        },
+        "leaf": {
+          "raw_min": 0.0,
+          "raw_max": 0.99609375,
+          "raw_mean": 0.2713358729338843,
+          "color0_min": 0.6600000262260437,
+          "color0_max": 0.9986718893051147,
+          "corner_samples": 14520
+        }
+      },
+      "external_images": [],
+      "lights_cameras_collision_in_glb": false,
+      "glb": {
+        "bytes": 944728,
+        "sha256": "eb4bb83aa429e644137c48581a3bc889f2d4b2e3838a2f60d2dde70fd355169d",
+        "mesh_primitives": 2,
+        "all_primitives_have_uv_and_color0": true,
+        "image_count": 0,
+        "export_y_up": true
+      },
+      "source_blend": {
+        "path": "art/source/chengdu-blender-kit-20261110/courtyard_tree.blend",
+        "sha256": "99a723bef72adccd1184e3ceb0e48b65131100c526850170f5823164898ff22f",
+        "bytes": 380227
+      }
+    }
+  ],
+  "limits": [
+    "Local exterior sample only; no change to navigation, actors, saved state or other city lots",
+    "AO is static offline vertex visibility, not full light baking or dynamic GI",
+    "Blender source materials provide preview colors; runtime uses the separately authored Krita atlas"
+  ]
+}

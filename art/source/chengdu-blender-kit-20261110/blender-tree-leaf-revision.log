@@ -1,0 +1,20 @@
+00:00.013  color_management | ERROR OpenColorIO Error: Error: Loading the OCIO profile '/usr/share/blender/5.2/datafiles/colormanagement/config.ocio' failed. This .ocio config  '/usr/share/blender/5.2/datafiles/colormanagement/config.ocio' is version 2.5. This version of the OpenColorIO library (2.4.2) is not able to load that config version.
+                            | The minor version 5 is not supported for major version 2. Maximum minor version is 4.
+00:00.013  color_management | Using fallback mode for management
+/home/x1-lite/.codex/worktrees/chengdu-connected-streets/shu/tools/art/build_chengdu_blender_kit.py:357: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  material.use_nodes = True
+Blender 5.2.2 LTS (hash unknown built 2026-10-07 00:00:00)
+[OpenColorIO Info]: Color management disabled. (Specify the $OCIO environment variable to enable.)
+INFO Draco is available, use library at /usr/lib/blender/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.so
+ERROR MeshOptimizer is not available because library could not be found at /usr/lib/blender/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.so
+06:55:52 | INFO: Starting glTF 2.0 export
+06:55:52 | INFO: Extracting primitive: leaf_mesh
+06:55:52 | INFO: Primitives created: 1
+06:55:52 | INFO: Extracting primitive: wood_mesh
+06:55:52 | INFO: Primitives created: 1
+06:55:52 | INFO: Finished glTF 2.0 export in 0.026241302490234375 s
+
+Info: Saved as "courtyard_tree.blend"
+CHENGDU_BLENDER_KIT_DONE {"tea_shop": {"triangles": 5796, "bounds": [[-0.9750000238418579, 0.0, -1.034999966621399], [0.9750000238418579, 2.627000093460083, 1.034999966621399]], "glb": {"bytes": 385672, "sha256": "1b221f02df192f38841d9f1cfa120264952265b9106ffc9324709909119bc13e", "mesh_primitives": 4, "all_primitives_have_uv_and_color0": true, "image_count": 0, "export_y_up": true}}, "courtyard_tree": {"triangles": 8860, "bounds": [[-0.7660042643547058, 0.0, -0.5268084406852722], [0.807468056678772, 3.929062604904175, 0.8318389058113098]], "glb": {"bytes": 944728, "sha256": "eb4bb83aa429e644137c48581a3bc889f2d4b2e3838a2f60d2dde70fd355169d", "mesh_primitives": 2, "all_primitives_have_uv_and_color0": true, "image_count": 0, "export_y_up": true}}}
+
+Blender quit

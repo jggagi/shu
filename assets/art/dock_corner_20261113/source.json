@@ -1,0 +1,12 @@
+{
+  "author": "Original Shu project direction; Alibaba Bailian Qwen image synthesis",
+  "provider": "bailian",
+  "model": "qwen-image-3.0",
+  "generated": "2026-11-13",
+  "prompt": "art/prompts/dock-corner-20261113/scene.txt",
+  "style_reference": "res://assets/art/chengdu_art_street/middle.png",
+  "runtime": "res://assets/art/dock_corner_20261113/background.png",
+  "sha256": "a0eed55ffbd00b0ab2767aac6b3c2740bef40e2fb4309b2e6f131c3b51be0d9b",
+  "license": "Original project generated art under provider terms; no third-party open-license claim",
+  "status": "selected for independent local dock sample; user visual acceptance pending"
+}

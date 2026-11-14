@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "painting": "res://assets/art/chengdu_painted_gate/painted-gate.png",
+  "source_mask": "res://assets/art/chengdu_painted_gate/source-id-mask.png",
+  "reference_camera": "res://assets/art/chengdu_painted_gate/reference-camera.json",
+  "blend_strength": 1.0,
+  "frame_feather_pixels": 24.0,
+  "source_border_pixels": 0.0,
+  "minimum_reference_normal_dot": 0.08,
+  "sole_contact_height": 0.016,
+  "gate_fallback_palette": {
+    "stone": "#fff0cf",
+    "wood": "#ba9e83",
+    "roof": "#c6d6f0",
+    "plaster": "#fff3d7",
+    "stone_joint": "#756c5d"
+  },
+  "scope": "A world-projective local art pass. Only the original reference-camera-visible source surfaces receive paint. No fixed camera, screen-UV art, new obstacles, world-size changes or state."
+}

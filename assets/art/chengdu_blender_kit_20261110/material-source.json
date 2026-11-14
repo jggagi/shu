@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "asset": "Original Shu Blender tea-shop and tree six-material study",
+  "author": "Codex-directed offline composition of existing original Shu project artwork",
+  "rights": "Existing original project Qwen art; provider terms apply. No third-party texture-library licence is claimed. New correction layers and modelling are project work.",
+  "method": "Deterministic source crop, quiet luminance transfer to a shared palette, three editable OpenRaster layers; actual Krita document import and production exports follow.",
+  "new_cloud_generation_calls": 0,
+  "original_source_png_modified": false,
+  "source_provenance": [
+    "assets/art/chengdu_concept_finish/source.json",
+    "assets/art/chengdu_crafted_street/source.json"
+  ],
+  "atlas": {
+    "size": [
+      1024,
+      1024
+    ],
+    "columns": 3,
+    "rows": 2,
+    "padding_pixels": 16,
+    "pixel_origin": "top-left",
+    "cell_boundaries_x": [
+      0,
+      341,
+      682,
+      1024
+    ],
+    "cell_boundaries_y": [
+      0,
+      512,
+      1024
+    ],
+    "uv_contract": "Use inner centre bounds only. Blender UV V=1-PNG_V; glTF exporter flips V to image-space, so Godot should not flip V again. No repeating or sampling across tile boundaries.",
+    "tiles": [
+      {
+        "name": "plaster",
+        "cell_pixels": [
+          0,
+          0,
+          341,
+          512
+        ],
+        "inner_rect_pixels": [
+          16,
+          16,
+          309,
+          480
+        ],
+        "uv_png_top_left_centres": [
+          0.01611328125,
+          0.01611328125,
+          0.31689453125,
+          0.48388671875
+        ],
+        "source": "assets/art/chengdu_crafted_street/plaster.png",
+        "source_sha256": "099016d92b36561c84c49b217e3329ce9b97447f32b7843b277f374b61008635",
+        "source_crop_ltrb": null,
+        "palette_rgb": [
+          197,
+          183,
+          155
+        ],
+        "luma_spread": 17.0,
+        "blur_source_pixels": 1.8,
+        "source_key_handling": null
+      },
+      {
+        "name": "wood",
+        "cell_pixels": [
+          341,
+          0,
+          341,
+          512
+        ],
+        "inner_rect_pixels": [
+          357,
+          16,
+          309,
+          480
+        ],
+        "uv_png_top_left_centres": [
+          0.34912109375,
+          0.01611328125,
+          0.64990234375,
+          0.48388671875
+        ],
+        "source": "assets/art/chengdu_concept_finish/surfaces.png",
+        "source_sha256": "b9a319f627960977370470d832047cdbde6806511daa31811635c7c0da9b12f9",
+        "source_crop_ltrb": [
+          512,
+          512,
+          1024,
+          1024
+        ],
+        "palette_rgb": [
+          100,
+          73,
+          48
+        ],
+        "luma_spread": 19.0,
+        "blur_source_pixels": 1.1,
+        "source_key_handling": null
+      },
+      {
+        "name": "roof",
+        "cell_pixels": [
+          682,
+          0,
+          342,
+          512
+        ],
+        "inner_rect_pixels": [
+          698,
+          16,
+          310,
+          480
+        ],
+        "uv_png_top_left_centres": [
+          0.68212890625,
+          0.01611328125,
+          0.98388671875,
+          0.48388671875
+        ],
+        "source": "assets/art/chengdu_crafted_street/roof.png",
+        "source_sha256": "d4400e08f30fce43b33a45e3bcd6a4bac656f2f1275511ab6b0ae3a5820f3b19",
+        "source_crop_ltrb": null,
+        "palette_rgb": [
+          101,
+          116,
+          113
+        ],
+        "luma_spread": 15.0,
+        "blur_source_pixels": 1.0,
+        "source_key_handling": null
+      },
+      {
+        "name": "stone",
+        "cell_pixels": [
+          0,
+          512,
+          341,
+          512
+        ],
+        "inner_rect_pixels": [
+          16,
+          528,
+          309,
+          480
+        ],
+        "uv_png_top_left_centres": [
+          0.01611328125,
+          0.51611328125,
+          0.31689453125,
+          0.98388671875
+        ],
+        "source": "assets/art/chengdu_crafted_street/paving.png",
+        "source_sha256": "fc95222ff41d31514d91fb93d70022adcdeb0c30a4fa4e267b54ad6e96cda0fb",
+        "source_crop_ltrb": null,
+        "palette_rgb": [
+          157,
+          147,
+          126
+        ],
+        "luma_spread": 15.0,
+        "blur_source_pixels": 1.2,
+        "source_key_handling": null
+      },
+      {
+        "name": "leaf",
+        "cell_pixels": [
+          341,
+          512,
+          341,
+          512
+        ],
+        "inner_rect_pixels": [
+          357,
+          528,
+          309,
+          480
+        ],
+        "uv_png_top_left_centres": [
+          0.34912109375,
+          0.51611328125,
+          0.64990234375,
+          0.98388671875
+        ],
+        "source": "assets/art/chengdu_concept_finish/foliage.png",
+        "source_sha256": "c283f7cf5824acab47dcaee995770dc01bf7842a975c46476cd03b3be9bd4f8e",
+        "source_crop_ltrb": [
+          328,
+          328,
+          696,
+          696
+        ],
+        "palette_rgb": [
+          133,
+          141,
+          91
+        ],
+        "luma_spread": 13.0,
+        "blur_source_pixels": 5.0,
+        "source_key_handling": "replace magenta gaps with mean valid leaf pigment before luminance conversion"
+      },
+      {
+        "name": "ceramic",
+        "cell_pixels": [
+          682,
+          512,
+          342,
+          512
+        ],
+        "inner_rect_pixels": [
+          698,
+          528,
+          310,
+          480
+        ],
+        "uv_png_top_left_centres": [
+          0.68212890625,
+          0.51611328125,
+          0.98388671875,
+          0.98388671875
+        ],
+        "source": "assets/art/chengdu_crafted_street/plaster.png",
+        "source_sha256": "099016d92b36561c84c49b217e3329ce9b97447f32b7843b277f374b61008635",
+        "source_crop_ltrb": [
+          192,
+          192,
+          832,
+          832
+        ],
+        "palette_rgb": [
+          185,
+          205,
+          190
+        ],
+        "luma_spread": 7.0,
+        "blur_source_pixels": 3.5,
+        "source_key_handling": null
+      }
+    ]
+  },
+  "editable_source": {
+    "path": "art/source/chengdu-blender-kit-20261110/materials.ora",
+    "sha256": "a40750e3a84967f0636196b19f84b906559e5469be63b8d3a0cf504e6011f961",
+    "layers_top_to_bottom": [
+      "Broad restrained shadow glaze",
+      "Existing project pigment structure, palette unified",
+      "Shared six-material base palette"
+    ]
+  },
+  "limitations": [
+    "This is reproducible offline colour/material compositing, not a claim of new human-painted brush strokes.",
+    "Atlas colour is opaque; transparent art-layer composition is retained in ORA/KRA. Tree volume comes from the separate 3D mesh.",
+    "Texture colour and model relief must be reviewed in the actual game camera before any city-wide expansion."
+  ],
+  "software": {
+    "name": "Krita",
+    "version_output": "krita 5.3.4.1 (git bd6e8d0)",
+    "official_page": "https://krita.org/en/download/",
+    "software_licence": "GNU GPL v3 (tool only; project artwork retains its own provenance)",
+    "appimage_url": "https://download.kde.org/stable/krita/5.3.4.1/krita-5.3.4.1-x86_64.AppImage",
+    "appimage_sha256": "e315dfb3da81cdb8bddc4bb3fcd4d9bacd0630fc7065d8ed07de758b267573f0",
+    "official_sha256_url": "https://download.kde.org/stable/krita/5.3.4.1/krita-5.3.4.1-x86_64.AppImage.sha256",
+    "scope": "Project-local portable application, CLI --export over the existing Xwayland display (this AppImage ships xcb only), isolated project-local XDG config/data/cache; no global installation or system settings changed."
+  },
+  "reproduction": {
+    "script": "tools/art/build_chengdu_krita_materials.py",
+    "command": "DISPLAY=<existing X11 display> XAUTHORITY=<existing session auth> QT_QPA_PLATFORM=xcb python tools/art/build_chengdu_krita_materials.py --krita .local/tools/krita/squashfs-root/AppRun",
+    "script_sha256": "4a6ce6b2f84d6d705efba80b5887f42b0d4a7c2a692f44efc75410b7bb354836",
+    "export_commands": [
+      {
+        "command": [
+          ".local/tools/krita/squashfs-root/AppRun",
+          "--nosplash",
+          "--export",
+          "--export-filename",
+          "assets/art/chengdu_blender_kit_20261110/painted-atlas.png",
+          "art/source/chengdu-blender-kit-20261110/materials.ora"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\nFontconfig error: Cannot load default config file: No such file: (null)\nFontconfig error: Cannot load default config file: No such file: (null)\nFontconfig error: Cannot load default config file: No such file: (null)\nm_image KisImage(0x55dc35d231c0, name = \"OpenRaster Image (name)\")\nWarning: some tiles have leaked:\n\tTiles in memory: 1028 \n \tTotal tiles: 1028\n",
+        "output": "assets/art/chengdu_blender_kit_20261110/painted-atlas.png"
+      },
+      {
+        "command": [
+          ".local/tools/krita/squashfs-root/AppRun",
+          "--nosplash",
+          "--export",
+          "--export-filename",
+          "art/source/chengdu-blender-kit-20261110/materials.kra",
+          "art/source/chengdu-blender-kit-20261110/materials.ora"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "Fontconfig error: Cannot load default config file: No such file: (null)\nFontconfig error: Cannot load default config file: No such file: (null)\nFontconfig error: Cannot load default config file: No such file: (null)\nFontconfig error: Cannot load default config file: No such file: (null)\nm_image KisImage(0x564a081e7c20, name = \"OpenRaster Image (name)\")\nWarning: some tiles have leaked:\n\tTiles in memory: 1028 \n \tTotal tiles: 1028\n",
+        "output": "art/source/chengdu-blender-kit-20261110/materials.kra"
+      }
+    ]
+  },
+  "outputs": [
+    {
+      "path": "assets/art/chengdu_blender_kit_20261110/painted-atlas.png",
+      "sha256": "58a1692893f01b4b1c1cc77bcef5cfe951e0d981d571a34be6c16da42dcb33e2",
+      "bytes": 526803
+    },
+    {
+      "path": "art/source/chengdu-blender-kit-20261110/materials.kra",
+      "sha256": "6c5319ee360ca3d935d9b4b59ecf5ffbb0ed9c68dfbc3c3c90a8b427dbf56ebb",
+      "bytes": 2501313
+    }
+  ],
+  "png_inspection": {
+    "mode": "RGBA",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "krita_export_vs_ora_composite_max_difference": 0
+  }
+}

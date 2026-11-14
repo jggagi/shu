@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "purpose": "One Blender-authored tea-shop shell and courtyard tree, with Krita-composited shared painterly materials in the original continuous Chengdu city.",
+  "author": "Codex-directed original Shu project production",
+  "model_provenance": "res://assets/art/chengdu_blender_kit_20261110/model-source.json",
+  "material_provenance": "res://assets/art/chengdu_blender_kit_20261110/material-source.json",
+  "runtime_assets": [
+    "res://assets/art/chengdu_blender_kit_20261110/tea_shop.glb",
+    "res://assets/art/chengdu_blender_kit_20261110/courtyard_tree.glb",
+    "res://assets/art/chengdu_blender_kit_20261110/painted-atlas.png"
+  ],
+  "source_builders": [
+    "tools/art/build_chengdu_blender_kit.py",
+    "tools/art/build_chengdu_krita_materials.py"
+  ],
+  "editable_sources": "art/source/chengdu-blender-kit-20261110/",
+  "new_cloud_generation_calls": 0,
+  "rights": "Original models and correction layers for this project. Reused original Shu Qwen source textures retain their recorded provider terms. Tool licences do not constitute a third-party asset licence.",
+  "acceptance": "Implementation candidate; actual game image review and user playtest remain separate from export and structural checks."
+}

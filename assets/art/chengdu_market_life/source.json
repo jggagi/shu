@@ -1,0 +1,401 @@
+{
+  "schema_version": 1,
+  "asset": "Original Shu Chengdu street market-life production sample: four vendors and four green vegetation clusters",
+  "provider": "qwen",
+  "model": "qwen-image-3.0",
+  "generation_count": 2,
+  "successful_download_count": 2,
+  "automatic_retries": 0,
+  "paid_api_used": true,
+  "author": "Original generated artwork directed for the Shu project",
+  "rights": "Generated project artwork using selected original Shu concept images and an original current-game capture. Provider terms apply; no third-party license claimed.",
+  "recorded_at_utc": "2026-11-09T15:34:18.583084+00:00",
+  "status": "SELECTED_FOR_LIMITED_SCENE_REVIEW_USER_PLAYTEST_PENDING",
+  "runtime_scope": "Two original 2x2 RGB sprite atlases for limited decorative Chengdu street vendors and green plant clusters. These raster outputs do not add dialogues, interaction targets, quest rewards, collision, new navigation blockers or save-state content. Runtime placement and any proposed interactions must be assessed independently.",
+  "scene_reference": {
+    "path": "docs/concepts/chengdu-market-life-20261109/runtime-middle.png",
+    "sha256": "8cb8155a7109a98e267aa42f4f0afb1b47e2244328a1a26a760498ca759f1803",
+    "capture_origin": ".local/qa/chengdu-concept-fix-20261109/after/baseline/0364_middle.png",
+    "description": "Byte-identical portable copy of the actual game middle-street QA capture selected for this production request; supplied as visual scale and palette reference, not an edit target."
+  },
+  "outputs": [
+    {
+      "kind": "vendors",
+      "path": "res://assets/art/chengdu_market_life/vendors.png",
+      "sha256": "f82ae28b9ef8a545bde03914ef08d0a5238a18fa903970c01b26c90bd39821b2",
+      "bytes": 775928,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "manifest_asset_id": "31f1cab2aaf3424d9e7ee2669161daa9",
+      "provider_record_created_at_utc": "2026-11-09T15:31:03.257047+00:00",
+      "source_candidate": "art/work/chengdu-market-life-20261109/vendors.png",
+      "prompt_file": "art/prompts/chengdu-market-life-20261109/01-vendors.txt",
+      "prompt_sha256": "2283170a817f8cf6f46635060e90b546e5884b7b454ef53e807c8cc3e0a3fdab",
+      "references": [
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/03-shopfront.png",
+          "sha256": "a782f29f1ba65438d8d461ebfccec9d2153dbe077192c1a8742adbf1d81abff8",
+          "bytes": 3034706,
+          "dimensions": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/01-main-street.png",
+          "sha256": "f16083fe85476dfa54225b0a64c794c1b851c0c04e0217170f1c7623632fc460",
+          "bytes": 3301364,
+          "dimensions": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "docs/concepts/chengdu-market-life-20261109/runtime-middle.png",
+          "sha256": "8cb8155a7109a98e267aa42f4f0afb1b47e2244328a1a26a760498ca759f1803",
+          "bytes": 1582014,
+          "dimensions": [
+            1280,
+            720
+          ]
+        }
+      ],
+      "request_parameters": {
+        "size": "1024x1024",
+        "prompt_extend": false,
+        "enable_thinking": false,
+        "watermark": false,
+        "n": 1
+      },
+      "atlas_layout": {
+        "columns": 2,
+        "rows": 2,
+        "cell_pixels": [
+          512,
+          512
+        ],
+        "gutter_pixels": 0,
+        "cells": [
+          {
+            "identity": "adult_woman_tea_vendor",
+            "rect_pixels": [
+              0,
+              0,
+              512,
+              512
+            ],
+            "diagnostic_foreground_bounds_local_pixels": [
+              170,
+              25,
+              334,
+              498
+            ],
+            "diagnostic_key_fraction": 0.79510498046875,
+            "suggested_contact_anchor_local_pixels": [
+              256,
+              498
+            ],
+            "anchor_note": "Atlas-cell origin is top-left; pixels increase right/down. Suggested lower shoe or foliage-base anchor is an art placement aid and requires actual scene contact review. This is not an interaction hitbox or gameplay anchor."
+          },
+          {
+            "identity": "adult_man_vegetable_vendor",
+            "rect_pixels": [
+              512,
+              0,
+              512,
+              512
+            ],
+            "diagnostic_foreground_bounds_local_pixels": [
+              114,
+              18,
+              332,
+              493
+            ],
+            "diagnostic_key_fraction": 0.7804718017578125,
+            "suggested_contact_anchor_local_pixels": [
+              256,
+              493
+            ],
+            "anchor_note": "Atlas-cell origin is top-left; pixels increase right/down. Suggested lower shoe or foliage-base anchor is an art placement aid and requires actual scene contact review. This is not an interaction hitbox or gameplay anchor."
+          },
+          {
+            "identity": "adult_woman_cloth_vendor",
+            "rect_pixels": [
+              0,
+              512,
+              512,
+              512
+            ],
+            "diagnostic_foreground_bounds_local_pixels": [
+              149,
+              19,
+              331,
+              488
+            ],
+            "diagnostic_key_fraction": 0.7945709228515625,
+            "suggested_contact_anchor_local_pixels": [
+              256,
+              488
+            ],
+            "anchor_note": "Atlas-cell origin is top-left; pixels increase right/down. Suggested lower shoe or foliage-base anchor is an art placement aid and requires actual scene contact review. This is not an interaction hitbox or gameplay anchor."
+          },
+          {
+            "identity": "older_man_pottery_or_herb_vendor",
+            "rect_pixels": [
+              512,
+              512,
+              512,
+              512
+            ],
+            "diagnostic_foreground_bounds_local_pixels": [
+              153,
+              8,
+              331,
+              491
+            ],
+            "diagnostic_key_fraction": 0.8006439208984375,
+            "suggested_contact_anchor_local_pixels": [
+              256,
+              491
+            ],
+            "anchor_note": "Atlas-cell origin is top-left; pixels increase right/down. Suggested lower shoe or foliage-base anchor is an art placement aid and requires actual scene contact review. This is not an interaction hitbox or gameplay anchor."
+          }
+        ]
+      },
+      "background": {
+        "type": "Near-magenta RGB chroma-key; no true alpha channel",
+        "dominant_rgb": [
+          227,
+          33,
+          191
+        ],
+        "atlas_corner_rgbs": [
+          [
+            219,
+            31,
+            189
+          ],
+          [
+            220,
+            36,
+            193
+          ],
+          [
+            225,
+            40,
+            191
+          ],
+          [
+            221,
+            39,
+            190
+          ]
+        ],
+        "exact_ff00ff_guaranteed": false,
+        "diagnostic_key_rule_8bit": "r-g>80 && b-g>60 && r>140 && b>120",
+        "rule_note": "This read-only rule measured the original RGB artwork. No alpha extraction or image transformation was applied. Scene implementation must inspect edge color and bleed at actual display scale."
+      },
+      "transforms": "None. Original provider-download PNG is copied byte-for-byte into assets. No offline crop, alpha extraction, resampling, recolor or compositing.",
+      "image_review": "Actually viewed original 1024x1024 atlas. Four separate full-body standing adult market figures in the requested order: woman with teapot, straw-hat man with vegetable basket, woman holding folded cloth, gray-haired older man with a small ceramic jar. Fine warm-brown linework and muted watercolor clothing. Full heads, hands, held props and shoes remain inside each cell. No table, counter, ground, cast shadow, text or watermark.",
+      "review_limits": [
+        "Generated figures have restrained chibi proportions with longer adult bodies than an exact three-head ratio; compare their apparent size with the existing scene player before acceptance.",
+        "Requested six-percent top/bottom margin was not fully met. Measured minimum margin is eight pixels, but all figures and shoes are complete and do not cross cell boundaries.",
+        "RGB background varies around near-magenta. Exact #FF00FF comparison is unsuitable. Cell-isolated sampling, tolerant keying and small-scale edge review are required."
+      ]
+    },
+    {
+      "kind": "plants",
+      "path": "res://assets/art/chengdu_market_life/plants.png",
+      "sha256": "6795c259c520bb224965d4c10edc93adabbd3675ff8b6302873819e220db5b62",
+      "bytes": 1024636,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "manifest_asset_id": "4e8ce8861e804d33b42ed8492d15ff87",
+      "provider_record_created_at_utc": "2026-11-09T15:32:05.084121+00:00",
+      "source_candidate": "art/work/chengdu-market-life-20261109/plants.png",
+      "prompt_file": "art/prompts/chengdu-market-life-20261109/02-plants.txt",
+      "prompt_sha256": "cbd9120218af05313eb647363735c4799f7da72e45cb24c250167dc34d873d52",
+      "references": [
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/01-main-street.png",
+          "sha256": "f16083fe85476dfa54225b0a64c794c1b851c0c04e0217170f1c7623632fc460",
+          "bytes": 3301364,
+          "dimensions": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/03-shopfront.png",
+          "sha256": "a782f29f1ba65438d8d461ebfccec9d2153dbe077192c1a8742adbf1d81abff8",
+          "bytes": 3034706,
+          "dimensions": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "docs/concepts/chengdu-market-life-20261109/runtime-middle.png",
+          "sha256": "8cb8155a7109a98e267aa42f4f0afb1b47e2244328a1a26a760498ca759f1803",
+          "bytes": 1582014,
+          "dimensions": [
+            1280,
+            720
+          ]
+        }
+      ],
+      "request_parameters": {
+        "size": "1024x1024",
+        "prompt_extend": false,
+        "enable_thinking": false,
+        "watermark": false,
+        "n": 1
+      },
+      "atlas_layout": {
+        "columns": 2,
+        "rows": 2,
+        "cell_pixels": [
+          512,
+          512
+        ],
+        "gutter_pixels": 0,
+        "cells": [
+          {
+            "identity": "bamboo_leaf_cluster",
+            "rect_pixels": [
+              0,
+              0,
+              512,
+              512
+            ],
+            "diagnostic_foreground_bounds_local_pixels": [
+              47,
+              52,
+              459,
+              454
+            ],
+            "diagnostic_key_fraction": 0.8100814819335938,
+            "suggested_contact_anchor_local_pixels": [
+              256,
+              454
+            ],
+            "anchor_note": "Atlas-cell origin is top-left; pixels increase right/down. Suggested lower shoe or foliage-base anchor is an art placement aid and requires actual scene contact review. This is not an interaction hitbox or gameplay anchor."
+          },
+          {
+            "identity": "broadleaf_herb_cluster",
+            "rect_pixels": [
+              512,
+              0,
+              512,
+              512
+            ],
+            "diagnostic_foreground_bounds_local_pixels": [
+              43,
+              137,
+              474,
+              437
+            ],
+            "diagnostic_key_fraction": 0.7465400695800781,
+            "suggested_contact_anchor_local_pixels": [
+              256,
+              437
+            ],
+            "anchor_note": "Atlas-cell origin is top-left; pixels increase right/down. Suggested lower shoe or foliage-base anchor is an art placement aid and requires actual scene contact review. This is not an interaction hitbox or gameplay anchor."
+          },
+          {
+            "identity": "small_dense_shrub",
+            "rect_pixels": [
+              0,
+              512,
+              512,
+              512
+            ],
+            "diagnostic_foreground_bounds_local_pixels": [
+              58,
+              43,
+              459,
+              433
+            ],
+            "diagnostic_key_fraction": 0.6260452270507812,
+            "suggested_contact_anchor_local_pixels": [
+              256,
+              433
+            ],
+            "anchor_note": "Atlas-cell origin is top-left; pixels increase right/down. Suggested lower shoe or foliage-base anchor is an art placement aid and requires actual scene contact review. This is not an interaction hitbox or gameplay anchor."
+          },
+          {
+            "identity": "vine_and_wall_base_grass",
+            "rect_pixels": [
+              512,
+              512,
+              512,
+              512
+            ],
+            "diagnostic_foreground_bounds_local_pixels": [
+              65,
+              43,
+              437,
+              423
+            ],
+            "diagnostic_key_fraction": 0.8673286437988281,
+            "suggested_contact_anchor_local_pixels": [
+              256,
+              423
+            ],
+            "anchor_note": "Atlas-cell origin is top-left; pixels increase right/down. Suggested lower shoe or foliage-base anchor is an art placement aid and requires actual scene contact review. This is not an interaction hitbox or gameplay anchor."
+          }
+        ]
+      },
+      "background": {
+        "type": "Near-magenta RGB chroma-key; no true alpha channel",
+        "dominant_rgb": [
+          219,
+          26,
+          199
+        ],
+        "atlas_corner_rgbs": [
+          [
+            210,
+            30,
+            201
+          ],
+          [
+            211,
+            37,
+            199
+          ],
+          [
+            213,
+            35,
+            194
+          ],
+          [
+            210,
+            31,
+            194
+          ]
+        ],
+        "exact_ff00ff_guaranteed": false,
+        "diagnostic_key_rule_8bit": "r-g>80 && b-g>60 && r>140 && b>120",
+        "rule_note": "This read-only rule measured the original RGB artwork. No alpha extraction or image transformation was applied. Scene implementation must inspect edge color and bleed at actual display scale."
+      },
+      "transforms": "None. Original provider-download PNG is copied byte-for-byte into assets. No offline crop, alpha extraction, resampling, recolor or compositing.",
+      "image_review": "Actually viewed original 1024x1024 atlas. Four distinct green clusters in requested order: fine bamboo leaves with short stems, low broadleaf herbs, a dense dark-green shrub, and airy vines with wall-base grass. Irregular readable leaves and openings; no autumn-yellow fan canopy. No pots, ground, cast shadow, scenery, text or watermark. All clusters remain wholly inside their cells with generous empty margins.",
+      "review_limits": [
+        "RGB background is near-magenta with small pixel variations, not pure #FF00FF or a true alpha channel. Tolerant keying and actual game edge inspection are required.",
+        "Cluster sizes and natural bases differ. Suggested per-cell contact anchors are recorded, and actual world scale, orientation, density and ground contact remain scene-review decisions."
+      ]
+    }
+  ],
+  "review_limits": [
+    "Successful generation and actual source-image inspection are verified; actual game composition, key edges, placement and user acceptance must be recorded separately.",
+    "Provider automatically appended one manifest entry per successful output. No duplicate approved/provenance entries were added.",
+    "No credentials, private endpoint, signed download URL or system configuration is stored in these records."
+  ]
+}

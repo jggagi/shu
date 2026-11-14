@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "shu_dock_corner",
+  "version": "0.2.0",
+  "title": "柳岸小埠",
+  "subtitle": "码头一角 · 独立样片",
+  "description": "走近茶商交谈，到石阶投石看水纹，在柳下歇脚。沿柳下小路可回听雨廊。",
+  "initial_scene": "dock_corner",
+  "initial_flags": {
+    "mentor_lesson_heard": false,
+    "mentor_lesson_accepted": false,
+    "breathing_hint": false,
+    "mentor_practice_finished": false,
+    "mentor_reported": false,
+    "dock_keeper_met": false,
+    "dock_water_disturbed": false
+  },
+  "theme": {
+    "accent": "#397C78",
+    "paper": "#F3EBDD"
+  },
+  "files": {
+    "rules": "rules.json",
+    "characters": "characters.json",
+    "scenes": "scenes.json",
+    "actions": "activities.json",
+    "events": "events.json",
+    "motions": "motions.json",
+    "voices": "voices.json",
+    "walks": "walks.json"
+  },
+  "source_note": "2026-11-13新增三处生活互动；原师徒回路保持。新对白源归档jggagi/sub/dock-corner-living-sample，精确SHA见assets/data/dock-corner-dialogue-source.json，当前源仅本地未提交。新版本独立存档，不迁移旧样片档。"
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "shu_chengdu_large",
+  "version": "0.5.0",
+  "title": "成都·长街漫游",
+  "subtitle": "连成一城，自在绕行",
+  "description": "从西门走入成都，市街、百工巷、榕树坪与河岸连在同一片街区里。沿街闲逛，也可穿过茶馆前后门；下山与返山各一时辰。",
+  "initial_scene": "tingyu_corridor",
+  "initial_flags": {
+    "mentor_lesson_heard": false,
+    "mentor_lesson_accepted": false,
+    "breathing_hint": false,
+    "mentor_practice_finished": false,
+    "mentor_reported": false,
+    "town_visited": false,
+    "town_returned": false,
+    "chengdu_sign_read": false,
+    "chengdu_keeper_met": false,
+    "chengdu_guest_met": false,
+    "chengdu_umbrella_taken": false,
+    "chengdu_umbrella_carrying": false,
+    "chengdu_umbrella_returned": false
+  },
+  "theme": {
+    "accent": "#397C78",
+    "paper": "#F3EBDD"
+  },
+  "files": {
+    "rules": "rules.json",
+    "characters": "characters.json",
+    "scenes": "scenes.json",
+    "actions": "activities.json",
+    "events": "events.json",
+    "motions": "motions.json",
+    "voices": "voices.json",
+    "walks": "walks.json"
+  },
+  "source_note": "2026-11-07 用户授权「做」连续大场景：独立shu_chengdu_large/0.5.0，单一3840×2160户外地图加保留双门茶馆；五个区域仅为空间和显示划分，室外跨区只行走。继承原师徒五剑、声音、规则、伞与重访；旧六图候选字节保持，使用独立存档，不迁移旧包。"
+}

@@ -1,0 +1,10 @@
+{
+  "author": "Shu original procedural dry-shore receiver mask",
+  "license": "Original project layout-derived mask; no external artwork",
+  "source_hashes": {
+    "assets/data/dock-corner-layout.json": "34d7ab9f4a6342b5aa9c5e7ebf124b0517567e40d25f7c756b601c6ecde06a72",
+    "tools/art/build_dock_shadow_mask.py": "e40a119634e20e45ca6a1f9befafda1b1a95e63196cdc29762c83b16e2c18c3a",
+    "assets/masks/dock_shadows/ground.png": "86eddc2b9150887349bf1eb8944acd557fa437bb324c87d21c542be52a7dd73c"
+  },
+  "scope": "Dry shore including steps, excluding building/solid props, keeper footprint retained"
+}

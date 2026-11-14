@@ -1,0 +1,110 @@
+{
+  "seed": 131124,
+  "people": [
+    {
+      "id": "quay_worker",
+      "scale": 0.73,
+      "tint": "#657e8c",
+      "speed": 24,
+      "start_distance": 18,
+      "path": [
+        [
+          480,
+          175
+        ],
+        [
+          635,
+          135
+        ],
+        [
+          760,
+          100
+        ]
+      ],
+      "archetype": "scholar",
+      "body_stretch": [
+        0.9,
+        1.06,
+        0.94
+      ],
+      "idle_actions": [
+        "read",
+        "look"
+      ]
+    },
+    {
+      "id": "tea_walker",
+      "scale": 0.69,
+      "tint": "#b3a17e",
+      "speed": 21,
+      "start_distance": 130,
+      "path": [
+        [
+          455,
+          350
+        ],
+        [
+          370,
+          400
+        ],
+        [
+          320,
+          440
+        ]
+      ],
+      "archetype": "porter",
+      "body_stretch": [
+        1.12,
+        0.96,
+        1.04
+      ],
+      "idle_actions": [
+        "adjust",
+        "wipe"
+      ]
+    }
+  ],
+  "person_model": "res://assets/art/town_volume_cast/tea-seller.glb",
+  "person_source": "res://assets/art/town_volume_cast/source.json",
+  "gait_source": "res://assets/art/town_volume_character/source.json",
+  "cat": {
+    "texture": "res://assets/art/ambient_life/tingyu-cat-desk-v1.png",
+    "atlas": "res://assets/art/ambient_life/tingyu-cat-desk-layout-v1.json",
+    "source": "res://assets/art/ambient_life/tingyu-cat-desk-source-v1.json",
+    "width": 38,
+    "speed": 8,
+    "sheltered": false,
+    "path": [
+      [
+        425,
+        295
+      ],
+      [
+        477,
+        307
+      ],
+      [
+        510,
+        320
+      ]
+    ]
+  },
+  "schedule": {
+    "seed": 131124,
+    "cat": {
+      "enabled": true,
+      "interval_min": 5,
+      "interval_max": 9,
+      "duration_min": 36,
+      "duration_max": 40,
+      "count_min": 1,
+      "count_max": 1,
+      "weather_chance": {
+        "clear": 1.0,
+        "cloudy": 1.0,
+        "light_rain": 0.0
+      }
+    }
+  },
+  "policy": "Two distinct dry-quay residents: tall/slender blue scholar with cloth cap/book, and broader straw-hatted porter with bamboo basket. Authored upper-body poses retain the existing leg gait. Static/busy/player-near settles at current point; route and idle phase resume. Cat behavior unchanged. Presentation only, no gameplay mutations."
+}

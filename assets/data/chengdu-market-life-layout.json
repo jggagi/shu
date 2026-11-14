@@ -1,0 +1,474 @@
+{
+  "schema_version": 1,
+  "scope": "Six static exterior market displays and restrained low greenery on the existing eighteen first-street lots. Presentation only: no commerce, dialogue, interaction, state, collision or navigation changes.",
+  "source_layout": "res://assets/data/chengdu-art-street-layout.json",
+  "coordinate_space": "Meters in each house's StreetFacingStructure local frame: +z faces the street, +y is up. Original lot bounds and roof-fade row remain authoritative.",
+  "placement_rules": {
+    "merchant_count": 6,
+    "new_tree_count": 0,
+    "shopfront_depth_note": "Existing recessed shop counters, goods, signs and plants remain inside their original blocked lots. Four shop merchants stand at explicitly bounded, nonblocking frontage anchors; the two courtyard merchants remain behind their original low-wall counters.",
+    "greenery_depth_note": "Sixteen ordinary-lot clusters use a fixed world-south-facing thin quad at the south side-wall foot. Width runs along local z; side-wall local x is +/-0.97m inside the original +/-1m lot edge. Two courtyard plants retain their original low-wall positions.",
+    "solid_props_inside_original_blocked_lots": true,
+    "frontage_merchant_note": "Only four open-shop presentation people may use the declared frontage envelopes. They are not collision bodies, obstacles, interaction targets or new navigation data. Their shoe anchors require 18 logical pixels of clearance against the unchanged original obstacles."
+  },
+  "entries": [
+    {
+      "house_id": "ward_city_22_19",
+      "kind": "tea",
+      "sign": "茶点",
+      "sign_style": "board",
+      "vendor_cell": 0,
+      "mode": "open_shop",
+      "vendor_position": [
+        -0.3,
+        0.02,
+        1.5025
+      ],
+      "plants": [
+        {
+          "cell": 0,
+          "position": [
+            0.97,
+            0.2,
+            -0.28
+          ],
+          "size": [
+            0.45,
+            0.7
+          ],
+          "depth": 0.07
+        }
+      ],
+      "vendor_height": 1.7,
+      "vendor_frontage_envelope": {
+        "coordinate_space": "StreetFacingStructure local meters",
+        "local_xz_rect": [
+          -0.6,
+          1.2,
+          0.6,
+          0.62
+        ],
+        "vertical_range_meters": [
+          -0.08,
+          1.8
+        ],
+        "maximum_billboard_width_meters": 0.55,
+        "anchor_radius_logical": 18,
+        "nonblocking": true,
+        "scope": "Presentation person only. Vertical envelope includes transparent sprite-padding compensation; visible shoe contact targets floor y=.02. No new solid or walk blocker."
+      }
+    },
+    {
+      "house_id": "ward_city_23_16",
+      "kind": "fruitveg",
+      "sign": "果铺",
+      "sign_style": "hang",
+      "vendor_cell": 1,
+      "mode": "open_shop",
+      "vendor_position": [
+        -0.3,
+        0.02,
+        1.5025
+      ],
+      "plants": [
+        {
+          "cell": 1,
+          "position": [
+            -0.97,
+            0.2,
+            0.2
+          ],
+          "size": [
+            0.5,
+            0.45
+          ],
+          "depth": 0.07
+        }
+      ],
+      "vendor_height": 1.7,
+      "vendor_frontage_envelope": {
+        "coordinate_space": "StreetFacingStructure local meters",
+        "local_xz_rect": [
+          -0.6,
+          1.2,
+          0.6,
+          0.62
+        ],
+        "vertical_range_meters": [
+          -0.08,
+          1.8
+        ],
+        "maximum_billboard_width_meters": 0.55,
+        "anchor_radius_logical": 18,
+        "nonblocking": true,
+        "scope": "Presentation person only. Vertical envelope includes transparent sprite-padding compensation; visible shoe contact targets floor y=.02. No new solid or walk blocker."
+      }
+    },
+    {
+      "house_id": "ward_city_23_15",
+      "kind": "cloth",
+      "sign": "布铺",
+      "sign_style": "hang",
+      "vendor_cell": 2,
+      "mode": "open_shop",
+      "vendor_position": [
+        -0.3,
+        0.02,
+        1.5025
+      ],
+      "plants": [
+        {
+          "cell": 2,
+          "position": [
+            -0.97,
+            0.2,
+            -0.12
+          ],
+          "size": [
+            0.55,
+            0.48
+          ],
+          "depth": 0.07
+        }
+      ],
+      "vendor_height": 1.7,
+      "vendor_frontage_envelope": {
+        "coordinate_space": "StreetFacingStructure local meters",
+        "local_xz_rect": [
+          -0.6,
+          1.2,
+          0.6,
+          0.62
+        ],
+        "vertical_range_meters": [
+          -0.08,
+          1.8
+        ],
+        "maximum_billboard_width_meters": 0.55,
+        "anchor_radius_logical": 18,
+        "nonblocking": true,
+        "scope": "Presentation person only. Vertical envelope includes transparent sprite-padding compensation; visible shoe contact targets floor y=.02. No new solid or walk blocker."
+      }
+    },
+    {
+      "house_id": "ward_city_21_16",
+      "kind": "pottery",
+      "sign": "器物",
+      "sign_style": "board",
+      "vendor_cell": 3,
+      "mode": "open_shop",
+      "vendor_position": [
+        -0.3,
+        0.02,
+        1.5025
+      ],
+      "plants": [
+        {
+          "cell": 1,
+          "position": [
+            -0.97,
+            0.2,
+            0.3
+          ],
+          "size": [
+            0.5,
+            0.45
+          ],
+          "depth": 0.07
+        }
+      ],
+      "vendor_height": 1.7,
+      "vendor_frontage_envelope": {
+        "coordinate_space": "StreetFacingStructure local meters",
+        "local_xz_rect": [
+          -0.6,
+          1.2,
+          0.6,
+          0.62
+        ],
+        "vertical_range_meters": [
+          -0.08,
+          1.8
+        ],
+        "maximum_billboard_width_meters": 0.55,
+        "anchor_radius_logical": 18,
+        "nonblocking": true,
+        "scope": "Presentation person only. Vertical envelope includes transparent sprite-padding compensation; visible shoe contact targets floor y=.02. No new solid or walk blocker."
+      }
+    },
+    {
+      "house_id": "ward_city_22_15",
+      "kind": "herbs",
+      "sign": "草药",
+      "sign_style": "board",
+      "vendor_cell": 1,
+      "mode": "courtyard_wall_counter",
+      "vendor_position": [
+        -0.18,
+        0.2,
+        0.6
+      ],
+      "plants": [
+        {
+          "cell": 0,
+          "position": [
+            0.72,
+            0.98,
+            0.85
+          ],
+          "size": [
+            0.28,
+            0.42
+          ],
+          "depth": 0.07
+        }
+      ]
+    },
+    {
+      "house_id": "ward_city_23_19",
+      "kind": "bamboo",
+      "sign": "竹器",
+      "sign_style": "hang",
+      "vendor_cell": 2,
+      "mode": "courtyard_wall_counter",
+      "vendor_position": [
+        -0.18,
+        0.2,
+        0.6
+      ],
+      "plants": [
+        {
+          "cell": 2,
+          "position": [
+            0.72,
+            0.98,
+            0.85
+          ],
+          "size": [
+            0.28,
+            0.38
+          ],
+          "depth": 0.07
+        }
+      ]
+    }
+  ],
+  "vegetation": [
+    {
+      "house_id": "ward_city_20_15",
+      "plants": [
+        {
+          "cell": 3,
+          "position": [
+            -0.97,
+            0.2,
+            0.08
+          ],
+          "size": [
+            0.65,
+            0.45
+          ],
+          "depth": 0.07
+        }
+      ]
+    },
+    {
+      "house_id": "ward_city_20_16",
+      "plants": [
+        {
+          "cell": 1,
+          "position": [
+            -0.97,
+            0.2,
+            -0.3
+          ],
+          "size": [
+            0.5,
+            0.45
+          ],
+          "depth": 0.07
+        }
+      ]
+    },
+    {
+      "house_id": "ward_city_20_19",
+      "plants": [
+        {
+          "cell": 2,
+          "position": [
+            0.97,
+            0.2,
+            0.25
+          ],
+          "size": [
+            0.55,
+            0.48
+          ],
+          "depth": 0.07
+        }
+      ]
+    },
+    {
+      "house_id": "ward_city_20_20",
+      "plants": [
+        {
+          "cell": 1,
+          "position": [
+            0.97,
+            0.2,
+            -0.18
+          ],
+          "size": [
+            0.5,
+            0.45
+          ],
+          "depth": 0.07
+        }
+      ]
+    },
+    {
+      "house_id": "ward_city_21_13",
+      "plants": [
+        {
+          "cell": 0,
+          "position": [
+            -0.97,
+            0.2,
+            0.15
+          ],
+          "size": [
+            0.45,
+            0.7
+          ],
+          "depth": 0.07
+        }
+      ]
+    },
+    {
+      "house_id": "ward_city_21_15",
+      "plants": [
+        {
+          "cell": 2,
+          "position": [
+            -0.97,
+            0.2,
+            -0.24
+          ],
+          "size": [
+            0.55,
+            0.48
+          ],
+          "depth": 0.07
+        }
+      ]
+    },
+    {
+      "house_id": "ward_city_21_19",
+      "plants": [
+        {
+          "cell": 0,
+          "position": [
+            0.97,
+            0.2,
+            0.32
+          ],
+          "size": [
+            0.45,
+            0.7
+          ],
+          "depth": 0.07
+        }
+      ]
+    },
+    {
+      "house_id": "ward_city_21_20",
+      "plants": [
+        {
+          "cell": 3,
+          "position": [
+            0.97,
+            0.2,
+            -0.08
+          ],
+          "size": [
+            0.65,
+            0.45
+          ],
+          "depth": 0.07
+        }
+      ]
+    },
+    {
+      "house_id": "ward_city_22_13",
+      "plants": [
+        {
+          "cell": 2,
+          "position": [
+            -0.97,
+            0.2,
+            0.22
+          ],
+          "size": [
+            0.55,
+            0.48
+          ],
+          "depth": 0.07
+        }
+      ]
+    },
+    {
+      "house_id": "ward_city_22_16",
+      "plants": [
+        {
+          "cell": 1,
+          "position": [
+            -0.97,
+            0.2,
+            -0.16
+          ],
+          "size": [
+            0.5,
+            0.45
+          ],
+          "depth": 0.07
+        }
+      ]
+    },
+    {
+      "house_id": "ward_city_22_20",
+      "plants": [
+        {
+          "cell": 3,
+          "position": [
+            0.97,
+            0.2,
+            0.05
+          ],
+          "size": [
+            0.65,
+            0.45
+          ],
+          "depth": 0.07
+        }
+      ]
+    },
+    {
+      "house_id": "ward_city_23_20",
+      "plants": [
+        {
+          "cell": 2,
+          "position": [
+            0.97,
+            0.2,
+            0.28
+          ],
+          "size": [
+            0.55,
+            0.48
+          ],
+          "depth": 0.07
+        }
+      ]
+    }
+  ]
+}

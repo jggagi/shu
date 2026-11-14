@@ -1,0 +1,37 @@
+{
+  "status": "rejected after actual Godot scene review",
+  "reason": "Eleven closed lobed canopy volumes with enlarged atlas pattern read as wrinkled cabbage balls at the continuous camera. Tea-shop shell accepted for continued candidate, tree must use small individually folded volumetric foliage.",
+  "actual_scene_image": ".local/qa/chengdu-blender-kit-20261110/shopfront/lane.png",
+  "files": [
+    {
+      "source": "tools/art/build_chengdu_blender_kit.py",
+      "archive": "art/source/chengdu-blender-kit-20261110/rejected-closed-crown-first-candidate/build_chengdu_blender_kit.py",
+      "sha256": "6f3705553f9dd255a70f14de317e390c9fe0fcee290d3631bc365907365f1ec0"
+    },
+    {
+      "source": "assets/art/chengdu_blender_kit_20261110/courtyard_tree.glb",
+      "archive": "art/source/chengdu-blender-kit-20261110/rejected-closed-crown-first-candidate/courtyard_tree.glb",
+      "sha256": "5bce5792fb16e7a033592e5fc6065b75c61e2b2f312b6bccff0a768d45a8a160"
+    },
+    {
+      "source": "assets/art/chengdu_blender_kit_20261110/model-source.json",
+      "archive": "art/source/chengdu-blender-kit-20261110/rejected-closed-crown-first-candidate/model-source.json",
+      "sha256": "500ad926a4eed749dcbbdf858e38b7f38fd52c0f80c70c5f524be33dce72f869"
+    },
+    {
+      "source": "art/source/chengdu-blender-kit-20261110/courtyard_tree.blend",
+      "archive": "art/source/chengdu-blender-kit-20261110/rejected-closed-crown-first-candidate/courtyard_tree.blend",
+      "sha256": "36124b57b7b4a250c369c650f7601024a04988219cf7c6a8c3b7579c791d3557"
+    },
+    {
+      "source": "art/source/chengdu-blender-kit-20261110/courtyard_tree-audit.json",
+      "archive": "art/source/chengdu-blender-kit-20261110/rejected-closed-crown-first-candidate/courtyard_tree-audit.json",
+      "sha256": "b21a98b1ae23ac8388f4cfc9fc0276d3dbf519c54ee4446818459289197d42f4"
+    },
+    {
+      "source": "art/source/chengdu-blender-kit-20261110/blender-build.log",
+      "archive": "art/source/chengdu-blender-kit-20261110/rejected-closed-crown-first-candidate/blender-build.log",
+      "sha256": "973132c8a5324100b05f87444da540ae5892bdfef92276491084bccdaf265d5e"
+    }
+  ]
+}

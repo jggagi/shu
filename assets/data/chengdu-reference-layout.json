@@ -1,0 +1,1379 @@
+{
+  "schema_version": 1,
+  "world_size": [
+    5120,
+    3840
+  ],
+  "logical_view_size": [
+    1280,
+    720
+  ],
+  "north_is_up": true,
+  "reference_note": "Spatial composition follows the user-provided Chengdu illustration. Authorship/license metadata is retained with the documentary reference; the PNG is not a runtime texture or game asset. This is a playable spatial adaptation, not an asserted historical reconstruction.",
+  "scenes": {
+    "chengdu_city": {
+      "label": "成都城",
+      "kind": "reference_city",
+      "walk_scene": "res://games/shu_chengdu_reference/walks.json#chengdu_city",
+      "size": [
+        5120,
+        3840
+      ],
+      "floor": [
+        80,
+        120,
+        4960,
+        3600
+      ],
+      "regions": [
+        {
+          "id": "south_gate",
+          "label": "南门·万里桥",
+          "bounds": [
+            2240,
+            2700,
+            700,
+            1020
+          ],
+          "label_position": [
+            2600,
+            3180
+          ],
+          "visit_point": [
+            2600,
+            2920
+          ],
+          "safe_point": [
+            2600,
+            2920
+          ]
+        },
+        {
+          "id": "north_precinct",
+          "label": "子城·信相寺",
+          "bounds": [
+            2120,
+            560,
+            1000,
+            1040
+          ],
+          "label_position": [
+            2600,
+            1210
+          ],
+          "visit_point": [
+            2600,
+            1510
+          ],
+          "safe_point": [
+            2600,
+            1510
+          ]
+        },
+        {
+          "id": "mohe",
+          "label": "摩诃池·散花楼",
+          "bounds": [
+            1480,
+            1500,
+            1260,
+            630
+          ],
+          "label_position": [
+            1950,
+            1780
+          ],
+          "visit_point": [
+            1700,
+            2040
+          ],
+          "safe_point": [
+            1700,
+            2040
+          ]
+        },
+        {
+          "id": "wenweng",
+          "label": "文翁石室",
+          "bounds": [
+            1160,
+            2130,
+            1160,
+            650
+          ],
+          "label_position": [
+            1600,
+            2390
+          ],
+          "visit_point": [
+            1600,
+            2620
+          ],
+          "safe_point": [
+            1600,
+            2620
+          ]
+        },
+        {
+          "id": "daci",
+          "label": "大慈寺·药市",
+          "bounds": [
+            3350,
+            1150,
+            990,
+            1200
+          ],
+          "label_position": [
+            3830,
+            1800
+          ],
+          "visit_point": [
+            3830,
+            2110
+          ],
+          "safe_point": [
+            3830,
+            2110
+          ]
+        },
+        {
+          "id": "east_river",
+          "label": "清远江·合江亭",
+          "bounds": [
+            4050,
+            2020,
+            770,
+            1130
+          ],
+          "label_position": [
+            4360,
+            2570
+          ],
+          "visit_point": [
+            4180,
+            2910
+          ],
+          "safe_point": [
+            4180,
+            2910
+          ]
+        },
+        {
+          "id": "yingke",
+          "label": "迎客坊",
+          "bounds": [
+            2320,
+            2130,
+            1730,
+            650
+          ],
+          "label_position": [
+            3110,
+            2550
+          ],
+          "visit_point": [
+            2670,
+            2600
+          ],
+          "safe_point": [
+            2670,
+            2600
+          ]
+        },
+        {
+          "id": "dufu",
+          "label": "杜甫草堂·浣花溪",
+          "bounds": [
+            80,
+            600,
+            1020,
+            1100
+          ],
+          "label_position": [
+            480,
+            1110
+          ],
+          "visit_point": [
+            520,
+            1390
+          ],
+          "safe_point": [
+            520,
+            1390
+          ]
+        },
+        {
+          "id": "qingyang",
+          "label": "青羊宫",
+          "bounds": [
+            80,
+            1700,
+            1020,
+            1100
+          ],
+          "label_position": [
+            560,
+            2110
+          ],
+          "visit_point": [
+            620,
+            2400
+          ],
+          "safe_point": [
+            620,
+            2400
+          ]
+        },
+        {
+          "id": "wuhou",
+          "label": "武侯祠",
+          "bounds": [
+            80,
+            2900,
+            1400,
+            820
+          ],
+          "label_position": [
+            660,
+            3430
+          ],
+          "visit_point": [
+            660,
+            3650
+          ],
+          "safe_point": [
+            660,
+            3650
+          ]
+        },
+        {
+          "id": "weaving",
+          "label": "织锦作坊",
+          "bounds": [
+            2850,
+            3280,
+            1150,
+            440
+          ],
+          "label_position": [
+            3440,
+            3490
+          ],
+          "visit_point": [
+            3440,
+            3670
+          ],
+          "safe_point": [
+            3440,
+            3670
+          ]
+        }
+      ],
+      "buildings": [
+        {
+          "id": "north_river",
+          "kind": "water",
+          "bounds": [
+            1100,
+            280,
+            3420,
+            180
+          ],
+          "label": "清远江",
+          "height": 0
+        },
+        {
+          "id": "east_river_north",
+          "kind": "water",
+          "bounds": [
+            4520,
+            280,
+            240,
+            1500
+          ],
+          "label": "清远江",
+          "height": 0
+        },
+        {
+          "id": "east_river_south",
+          "kind": "water",
+          "bounds": [
+            4520,
+            2020,
+            240,
+            1250
+          ],
+          "label": "清远江",
+          "height": 0
+        },
+        {
+          "id": "jinjiang_west",
+          "kind": "water",
+          "bounds": [
+            1100,
+            3030,
+            1400,
+            240
+          ],
+          "label": "锦江",
+          "height": 0
+        },
+        {
+          "id": "jinjiang_east",
+          "kind": "water",
+          "bounds": [
+            2760,
+            3030,
+            2000,
+            240
+          ],
+          "label": "锦江",
+          "height": 0
+        },
+        {
+          "id": "huanhua_north",
+          "kind": "water",
+          "bounds": [
+            760,
+            700,
+            140,
+            680
+          ],
+          "label": "浣花溪",
+          "height": 0
+        },
+        {
+          "id": "huanhua_south",
+          "kind": "water",
+          "bounds": [
+            760,
+            1540,
+            140,
+            310
+          ],
+          "label": "浣花溪",
+          "height": 0
+        },
+        {
+          "id": "mohe_pool",
+          "kind": "water",
+          "bounds": [
+            1580,
+            1600,
+            650,
+            370
+          ],
+          "label": "摩诃池",
+          "height": 0,
+          "variant": "pond"
+        },
+        {
+          "id": "north_wall",
+          "kind": "city_wall",
+          "bounds": [
+            1100,
+            500,
+            3300,
+            60
+          ],
+          "label": "罗城",
+          "height": 3.8
+        },
+        {
+          "id": "west_wall_north",
+          "kind": "city_wall",
+          "bounds": [
+            1100,
+            500,
+            60,
+            1480
+          ],
+          "label": "罗城",
+          "height": 3.8
+        },
+        {
+          "id": "west_wall_south",
+          "kind": "city_wall",
+          "bounds": [
+            1100,
+            2320,
+            60,
+            460
+          ],
+          "label": "罗城",
+          "height": 3.8
+        },
+        {
+          "id": "east_wall_north",
+          "kind": "city_wall",
+          "bounds": [
+            4340,
+            500,
+            60,
+            1280
+          ],
+          "label": "罗城",
+          "height": 3.8
+        },
+        {
+          "id": "east_wall_south",
+          "kind": "city_wall",
+          "bounds": [
+            4340,
+            2020,
+            60,
+            760
+          ],
+          "label": "罗城",
+          "height": 3.8
+        },
+        {
+          "id": "south_wall_west",
+          "kind": "city_wall",
+          "bounds": [
+            1100,
+            2780,
+            1360,
+            60
+          ],
+          "label": "罗城",
+          "height": 3.8
+        },
+        {
+          "id": "south_wall_mid",
+          "kind": "city_wall",
+          "bounds": [
+            2740,
+            2780,
+            1320,
+            60
+          ],
+          "label": "罗城",
+          "height": 3.8
+        },
+        {
+          "id": "south_wall_east",
+          "kind": "city_wall",
+          "bounds": [
+            4280,
+            2780,
+            120,
+            60
+          ],
+          "label": "罗城",
+          "height": 3.8
+        },
+        {
+          "id": "inner_palace",
+          "kind": "inner_palace",
+          "bounds": [
+            2240,
+            1000,
+            720,
+            440
+          ],
+          "label": "子城",
+          "height": 5.4
+        },
+        {
+          "id": "xinxiang_temple",
+          "kind": "temple",
+          "bounds": [
+            2260,
+            620,
+            680,
+            270
+          ],
+          "label": "信相寺",
+          "height": 4.2
+        },
+        {
+          "id": "sanhua_tower",
+          "kind": "pavilion",
+          "bounds": [
+            2320,
+            1710,
+            220,
+            260
+          ],
+          "label": "散花楼",
+          "height": 6.0
+        },
+        {
+          "id": "wenweng_academy",
+          "kind": "academy",
+          "bounds": [
+            1320,
+            2240,
+            560,
+            320
+          ],
+          "label": "文翁石室",
+          "height": 3.7
+        },
+        {
+          "id": "daci_temple",
+          "kind": "temple",
+          "bounds": [
+            3500,
+            1420,
+            660,
+            620
+          ],
+          "label": "大慈寺",
+          "height": 4.7
+        },
+        {
+          "id": "yingke_fang",
+          "kind": "courtyard",
+          "bounds": [
+            2800,
+            2390,
+            620,
+            280
+          ],
+          "label": "迎客坊",
+          "height": 3.4
+        },
+        {
+          "id": "weaving_workshops",
+          "kind": "house",
+          "bounds": [
+            3150,
+            3370,
+            620,
+            230
+          ],
+          "label": "织锦作坊",
+          "height": 2.8
+        },
+        {
+          "id": "dufu_cottage",
+          "kind": "cottage",
+          "bounds": [
+            250,
+            900,
+            400,
+            400
+          ],
+          "label": "杜甫草堂",
+          "height": 2.3
+        },
+        {
+          "id": "qingyang_palace",
+          "kind": "temple",
+          "bounds": [
+            270,
+            1870,
+            600,
+            450
+          ],
+          "label": "青羊宫",
+          "height": 4.0
+        },
+        {
+          "id": "wuhou_shrine",
+          "kind": "shrine",
+          "bounds": [
+            320,
+            3280,
+            680,
+            310
+          ],
+          "label": "武侯祠",
+          "height": 3.7
+        },
+        {
+          "id": "hejiang_pavilion",
+          "kind": "pavilion",
+          "bounds": [
+            4260,
+            2840,
+            160,
+            130
+          ],
+          "label": "合江亭",
+          "height": 4.5
+        },
+        {
+          "id": "teahouse",
+          "kind": "teahouse",
+          "bounds": [
+            1940,
+            2130,
+            360,
+            240
+          ],
+          "label": "池南茶馆",
+          "height": 3.3
+        },
+        {
+          "id": "northwest_houses",
+          "kind": "house",
+          "bounds": [
+            1270,
+            700,
+            520,
+            350
+          ],
+          "label": "少城旧巷",
+          "height": 3.1
+        },
+        {
+          "id": "west_north_court",
+          "kind": "courtyard",
+          "bounds": [
+            1830,
+            630,
+            280,
+            450
+          ],
+          "label": "城中宅院",
+          "height": 3.1
+        },
+        {
+          "id": "northeast_houses",
+          "kind": "house",
+          "bounds": [
+            3060,
+            650,
+            500,
+            400
+          ],
+          "label": "北街民居",
+          "height": 3.1
+        },
+        {
+          "id": "northeast_court",
+          "kind": "courtyard",
+          "bounds": [
+            3690,
+            650,
+            500,
+            430
+          ],
+          "label": "东城院落",
+          "height": 3.1
+        },
+        {
+          "id": "west_middle_houses",
+          "kind": "house",
+          "bounds": [
+            1270,
+            1170,
+            430,
+            280
+          ],
+          "label": "池西街铺",
+          "height": 3.1
+        },
+        {
+          "id": "pool_north_houses",
+          "kind": "house",
+          "bounds": [
+            1770,
+            1180,
+            300,
+            290
+          ],
+          "label": "池北街铺",
+          "height": 3.1
+        },
+        {
+          "id": "palace_east_houses",
+          "kind": "house",
+          "bounds": [
+            3060,
+            1170,
+            290,
+            380
+          ],
+          "label": "东街民居",
+          "height": 3.1
+        },
+        {
+          "id": "east_middle_court",
+          "kind": "courtyard",
+          "bounds": [
+            2820,
+            1670,
+            420,
+            350
+          ],
+          "label": "东城宅院",
+          "height": 3.1
+        },
+        {
+          "id": "pool_west_houses",
+          "kind": "house",
+          "bounds": [
+            1250,
+            1710,
+            220,
+            330
+          ],
+          "label": "池西民居",
+          "height": 3.1
+        },
+        {
+          "id": "south_market_houses",
+          "kind": "house",
+          "bounds": [
+            2840,
+            2140,
+            480,
+            180
+          ],
+          "label": "南街店铺",
+          "height": 3.1
+        },
+        {
+          "id": "southeast_houses",
+          "kind": "house",
+          "bounds": [
+            3550,
+            2460,
+            420,
+            210
+          ],
+          "label": "东南民居",
+          "height": 3.1
+        },
+        {
+          "id": "medicine_market_west",
+          "kind": "stall",
+          "bounds": [
+            3480,
+            2170,
+            260,
+            100
+          ],
+          "label": "寺前药市",
+          "height": 2.5
+        },
+        {
+          "id": "medicine_market_east",
+          "kind": "stall",
+          "bounds": [
+            3860,
+            2170,
+            260,
+            100
+          ],
+          "label": "寺前药市",
+          "height": 2.5
+        }
+      ],
+      "street_bands": [
+        [
+          2500,
+          1430,
+          200,
+          1940
+        ],
+        [
+          1200,
+          2050,
+          3100,
+          140
+        ],
+        [
+          1180,
+          1440,
+          3150,
+          120
+        ],
+        [
+          1180,
+          1130,
+          3200,
+          120
+        ],
+        [
+          1180,
+          2570,
+          3120,
+          140
+        ],
+        [
+          1180,
+          560,
+          160,
+          2200
+        ],
+        [
+          4200,
+          560,
+          140,
+          2200
+        ],
+        [
+          940,
+          1300,
+          160,
+          1450
+        ],
+        [
+          150,
+          1380,
+          950,
+          160
+        ],
+        [
+          900,
+          2360,
+          400,
+          200
+        ],
+        [
+          2400,
+          3280,
+          2500,
+          140
+        ],
+        [
+          1000,
+          3600,
+          3000,
+          120
+        ],
+        [
+          4320,
+          1780,
+          650,
+          240
+        ],
+        [
+          1480,
+          1460,
+          80,
+          680
+        ]
+      ],
+      "landmarks": [
+        {
+          "id": "mohe_pool",
+          "label": "摩诃池",
+          "position": [
+            1905.0,
+            1785.0
+          ]
+        },
+        {
+          "id": "inner_palace",
+          "label": "子城",
+          "position": [
+            2600.0,
+            1220.0
+          ]
+        },
+        {
+          "id": "xinxiang_temple",
+          "label": "信相寺",
+          "position": [
+            2600.0,
+            755.0
+          ]
+        },
+        {
+          "id": "sanhua_tower",
+          "label": "散花楼",
+          "position": [
+            2430.0,
+            1840.0
+          ]
+        },
+        {
+          "id": "wenweng_academy",
+          "label": "文翁石室",
+          "position": [
+            1600.0,
+            2400.0
+          ]
+        },
+        {
+          "id": "daci_temple",
+          "label": "大慈寺",
+          "position": [
+            3830.0,
+            1730.0
+          ]
+        },
+        {
+          "id": "yingke_fang",
+          "label": "迎客坊",
+          "position": [
+            3110.0,
+            2530.0
+          ]
+        },
+        {
+          "id": "weaving_workshops",
+          "label": "织锦作坊",
+          "position": [
+            3460.0,
+            3485.0
+          ]
+        },
+        {
+          "id": "dufu_cottage",
+          "label": "杜甫草堂",
+          "position": [
+            450.0,
+            1100.0
+          ]
+        },
+        {
+          "id": "qingyang_palace",
+          "label": "青羊宫",
+          "position": [
+            570.0,
+            2095.0
+          ]
+        },
+        {
+          "id": "wuhou_shrine",
+          "label": "武侯祠",
+          "position": [
+            660.0,
+            3435.0
+          ]
+        },
+        {
+          "id": "hejiang_pavilion",
+          "label": "合江亭",
+          "position": [
+            4340.0,
+            2905.0
+          ]
+        }
+      ],
+      "decorations": [
+        {
+          "id": "wanli_bridge",
+          "kind": "bridge",
+          "label": "万里桥",
+          "bounds": [
+            2500,
+            2970,
+            260,
+            360
+          ],
+          "axis": "north_south"
+        },
+        {
+          "id": "qingyuan_bridge",
+          "kind": "bridge",
+          "label": "清远江桥",
+          "bounds": [
+            4300,
+            1780,
+            520,
+            240
+          ],
+          "axis": "east_west"
+        },
+        {
+          "id": "huanhua_bridge",
+          "kind": "bridge",
+          "label": "浣花溪桥",
+          "bounds": [
+            700,
+            1380,
+            260,
+            160
+          ],
+          "axis": "east_west"
+        },
+        {
+          "id": "south_gate",
+          "kind": "gate",
+          "label": "南门",
+          "bounds": [
+            2460,
+            2760,
+            280,
+            100
+          ],
+          "axis": "north_south"
+        },
+        {
+          "id": "west_gate",
+          "kind": "gate",
+          "label": "西门",
+          "bounds": [
+            1080,
+            1980,
+            100,
+            340
+          ],
+          "axis": "east_west"
+        },
+        {
+          "id": "east_gate",
+          "kind": "gate",
+          "label": "东桥门",
+          "bounds": [
+            4320,
+            1780,
+            100,
+            240
+          ],
+          "axis": "east_west"
+        },
+        {
+          "id": "southeast_gate",
+          "kind": "gate",
+          "label": "东南水门",
+          "bounds": [
+            4060,
+            2760,
+            220,
+            100
+          ],
+          "axis": "north_south"
+        },
+        {
+          "id": "dufu_fields",
+          "kind": "fields",
+          "bounds": [
+            100,
+            1540,
+            600,
+            250
+          ],
+          "label": "溪边田畦"
+        },
+        {
+          "id": "south_fields",
+          "kind": "fields",
+          "bounds": [
+            1500,
+            3460,
+            750,
+            220
+          ],
+          "label": "南郊田畦"
+        }
+      ],
+      "bridges": [
+        {
+          "id": "wanli_bridge",
+          "kind": "bridge",
+          "label": "万里桥",
+          "bounds": [
+            2500,
+            2970,
+            260,
+            360
+          ],
+          "axis": "north_south"
+        },
+        {
+          "id": "qingyuan_bridge",
+          "kind": "bridge",
+          "label": "清远江桥",
+          "bounds": [
+            4300,
+            1780,
+            520,
+            240
+          ],
+          "axis": "east_west"
+        },
+        {
+          "id": "huanhua_bridge",
+          "kind": "bridge",
+          "label": "浣花溪桥",
+          "bounds": [
+            700,
+            1380,
+            260,
+            160
+          ],
+          "axis": "east_west"
+        }
+      ],
+      "gates": [
+        {
+          "id": "south_gate",
+          "kind": "gate",
+          "label": "南门",
+          "bounds": [
+            2460,
+            2760,
+            280,
+            100
+          ],
+          "axis": "north_south"
+        },
+        {
+          "id": "west_gate",
+          "kind": "gate",
+          "label": "西门",
+          "bounds": [
+            1080,
+            1980,
+            100,
+            340
+          ],
+          "axis": "east_west"
+        },
+        {
+          "id": "east_gate",
+          "kind": "gate",
+          "label": "东桥门",
+          "bounds": [
+            4320,
+            1780,
+            100,
+            240
+          ],
+          "axis": "east_west"
+        },
+        {
+          "id": "southeast_gate",
+          "kind": "gate",
+          "label": "东南水门",
+          "bounds": [
+            4060,
+            2760,
+            220,
+            100
+          ],
+          "axis": "north_south"
+        }
+      ],
+      "route_waypoints": {
+        "south_axis": [
+          [
+            2600,
+            3360
+          ],
+          [
+            2600,
+            2920
+          ],
+          [
+            2600,
+            2700
+          ],
+          [
+            2600,
+            2070
+          ],
+          [
+            2600,
+            1510
+          ]
+        ],
+        "southern_city_loop": [
+          [
+            2600,
+            2700
+          ],
+          [
+            2400,
+            2700
+          ],
+          [
+            2000,
+            2700
+          ],
+          [
+            2000,
+            2510
+          ],
+          [
+            2350,
+            2510
+          ],
+          [
+            2350,
+            2070
+          ],
+          [
+            2600,
+            2070
+          ],
+          [
+            2670,
+            2600
+          ],
+          [
+            2600,
+            2700
+          ]
+        ],
+        "east_temple_route": [
+          [
+            2600,
+            2070
+          ],
+          [
+            2720,
+            2070
+          ],
+          [
+            3350,
+            2070
+          ],
+          [
+            3350,
+            2350
+          ],
+          [
+            4220,
+            2350
+          ],
+          [
+            4220,
+            2470
+          ]
+        ],
+        "east_bridge_route": [
+          [
+            4220,
+            2350
+          ],
+          [
+            4220,
+            1900
+          ],
+          [
+            4460,
+            1900
+          ],
+          [
+            4900,
+            1900
+          ],
+          [
+            4900,
+            2700
+          ]
+        ],
+        "pool_north_detour": [
+          [
+            2600,
+            1510
+          ],
+          [
+            2140,
+            1510
+          ],
+          [
+            1510,
+            1510
+          ],
+          [
+            1510,
+            2050
+          ],
+          [
+            1700,
+            2050
+          ],
+          [
+            1700,
+            2040
+          ]
+        ],
+        "west_cottage_route": [
+          [
+            1700,
+            2050
+          ],
+          [
+            980,
+            2150
+          ],
+          [
+            980,
+            1460
+          ],
+          [
+            520,
+            1460
+          ],
+          [
+            520,
+            1390
+          ]
+        ],
+        "south_outer_route": [
+          [
+            2600,
+            3360
+          ],
+          [
+            1100,
+            3360
+          ],
+          [
+            1100,
+            3650
+          ],
+          [
+            660,
+            3650
+          ]
+        ],
+        "weaving_route": [
+          [
+            2600,
+            3360
+          ],
+          [
+            2900,
+            3670
+          ],
+          [
+            3440,
+            3670
+          ]
+        ]
+      },
+      "map_labels": [
+        {
+          "id": "qingyuan_river",
+          "label": "清远江",
+          "position": [
+            4780,
+            1100
+          ]
+        },
+        {
+          "id": "jinjiang",
+          "label": "锦江",
+          "position": [
+            3700,
+            3150
+          ]
+        },
+        {
+          "id": "huanhua_stream",
+          "label": "浣花溪",
+          "position": [
+            1000,
+            1200
+          ]
+        }
+      ]
+    },
+    "chengdu_teahouse": {
+      "label": "成都·池南茶馆",
+      "kind": "teahouse",
+      "shop_label": "池南茶馆",
+      "walk_scene": "res://games/shu_chengdu_reference/walks.json#chengdu_teahouse",
+      "composition": "Retained two-door interior; front returns to Wenweng east street, rear returns to Mohe Pool south bank."
+    }
+  },
+  "palette": {
+    "roof": "#78857a",
+    "wood": "#76624a",
+    "plaster": "#d7ccb0",
+    "stone": "#a7ae9b",
+    "water": "#779893"
+  }
+}

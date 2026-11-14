@@ -1,5 +1,7 @@
 extends RefCounted
 ## Optional spatial content and save boundary. Persistent values belong to Session.
+## Spatial event entry follows the reviewed town-polish tea-errand adaptation
+## (2026-11-06); the donor worktree is unchanged. Named arrivals add no state.
 
 const NavigationScript = preload("res://addons/cultivation_mode/town_navigation.gd")
 
@@ -16,6 +18,9 @@ func validate(pack: Dictionary) -> Array[String]:
 		return ["walks: 需要对象"]
 	var walks: Dictionary = value
 	if walks.is_empty():
+		for aid: Variant in _dict(pack.get("actions")):
+			if _dict(_dict(pack.get("actions"))[aid]).has("target_entry"):
+				errors.append("actions." + str(aid) + ".target_entry: 需要目标可走地图")
 		return errors
 	if not _keys(walks, ["schema_version", "scenes"]) or not _integer(walks.get("schema_version")) or int(walks.get("schema_version", 0)) != 1:
 		errors.append("walks: 仅支持 schema_version 1 与 scenes")
@@ -44,8 +49,8 @@ func validate(pack: Dictionary) -> Array[String]:
 		if _integer(definition.get("cell_size")) and int(definition.get("cell_size", 0)) % 2 != 0:
 			errors.append(where + ".cell_size: 整数脚点需要偶数格距")
 		var obstacles: Variant = definition.get("obstacles")
-		if not obstacles is Array or (obstacles is Array and obstacles.size() > 64):
-			errors.append(where + ".obstacles: 需要至多64个矩形")
+		if not obstacles is Array or (obstacles is Array and obstacles.size() > 1024):
+			errors.append(where + ".obstacles: 需要至多1024个矩形")
 		else:
 			for obstacle: Variant in obstacles:
 				if not _rect(obstacle): errors.append(where + ".obstacles: 矩形无效")
@@ -59,6 +64,16 @@ func validate(pack: Dictionary) -> Array[String]:
 		nav.configure(definition, false)
 		if nav.blocked(_point(definition.spawn)):
 			errors.append(where + ".spawn: 不能位于障碍或边界外")
+		if definition.has("entries"):
+			if not definition.entries is Dictionary:
+				errors.append(where + ".entries: 需要入口坐标表")
+			else:
+				for entry_id: Variant in definition.entries:
+					var position: Variant = definition.entries[entry_id]
+					if not _id(entry_id) or not _vector(position):
+						errors.append(where + ".entries: 需要有效入口标识与整数坐标")
+					elif nav.blocked(_point(position)):
+						errors.append(where + ".entries." + str(entry_id) + ": 不能位于障碍或边界外")
 		var interactions: Dictionary = _dict(definition.get("interactions"))
 		if not definition.get("interactions") is Dictionary or interactions.is_empty() or interactions.size() > 16:
 			errors.append(where + ".interactions: 需要1至16个互动点")
@@ -80,18 +95,44 @@ func validate(pack: Dictionary) -> Array[String]:
 				errors.append(here + ".seen_flag: 需要重复回应行动")
 			for aid: Variant in owned:
 				var action: Dictionary = _dict(actions.get(aid))
-				if not _id(aid) or action.is_empty() or action.get("menu", true) != false or _array(action.get("scenes")) != [sid] or action.get("event", "") != "" or action.has("presentation"):
-					errors.append(here + ".action: 需要属于本场景的非菜单普通行动")
+				if not _id(aid) or action.is_empty() or action.get("menu", true) != false or _array(action.get("scenes")) != [sid] or action.has("presentation"):
+					errors.append(here + ".action: 需要属于本场景的非菜单行动或交谈")
 				if action_ids.has(aid): errors.append(here + ".action: 互动行动不能重复绑定")
 				action_ids[aid] = true
 			if item.has("repeat_action") and _dict(_dict(actions.get(item.get("action", ""))).get("set_flags")).get(item.get("seen_flag"), false) != true:
 				errors.append(here + ".seen_flag: 初次互动必须登记重访旗标")
+	for aid: Variant in actions:
+		var action: Dictionary = _dict(actions[aid])
+		if action.has("target_entry"):
+			var arrival: Dictionary = arrival_position(pack, action)
+			if not arrival.ok:
+				errors.append("actions." + str(aid) + ".target_entry: " + str(arrival.reason))
 	# Contextual spatial actions cannot be called through an event choice.
 	for event: Variant in _dict(pack.get("events")).values():
 		for node: Variant in _dict(_dict(event).get("nodes")).values():
 			for option: Variant in _array(_dict(node).get("options")):
 				if action_ids.has(_dict(option).get("action", "")): errors.append("walks: 互动行动不能由对话选项绕过距离门禁")
 	return errors
+
+func arrival_position(pack: Dictionary, action: Dictionary) -> Dictionary:
+	var target: Variant = action.get("target_scene", "")
+	var definition: Dictionary = _dict(maps(pack).get(target)) if target is String else {}
+	if definition.is_empty():
+		return {"ok": not action.has("target_entry"), "position": [], "reason": "入口需要目标可走地图"}
+	var position: Variant = definition.get("spawn")
+	if action.has("target_entry"):
+		var entry: Variant = action.target_entry
+		var entries: Dictionary = _dict(definition.get("entries"))
+		if not _id(entry) or not entries.has(entry):
+			return {"ok": false, "reason": "目标入口未登记"}
+		position = entries[entry]
+	if not _vector(position):
+		return {"ok": false, "reason": "目标入口需要整数坐标"}
+	var nav = NavigationScript.new()
+	nav.configure(definition, false)
+	if nav.blocked(_point(position)):
+		return {"ok": false, "reason": "目标入口位于障碍或边界外"}
+	return {"ok": true, "position": [int(position[0]), int(position[1])], "reason": ""}
 
 func initial_state(pack: Dictionary) -> Dictionary:
 	var positions: Dictionary = {}
@@ -139,6 +180,15 @@ func action_for(pack: Dictionary, snapshot: Dictionary, item: Dictionary) -> Str
 func valid_receipt(pack: Dictionary, action_id: String, interaction_id: String) -> bool:
 	var item: Dictionary = interaction(pack, interaction_id)
 	return not item.is_empty() and action_id in [item.get("action", ""), item.get("repeat_action", "")] and not action_id.is_empty()
+
+func has_action(pack: Dictionary, action_id: String) -> bool:
+	if action_id.is_empty():
+		return false
+	for definition: Variant in maps(pack).values():
+		for item: Variant in _dict(_dict(definition).get("interactions")).values():
+			if action_id in [_dict(item).get("action", ""), _dict(item).get("repeat_action", "")]:
+				return true
+	return false
 
 func _dict(value: Variant) -> Dictionary:
 	return value if value is Dictionary else {}

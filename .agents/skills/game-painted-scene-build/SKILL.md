@@ -2,7 +2,7 @@
 name: game-painted-scene-build
 description: Design or revise fixed illustrated Godot scenes through painted composition, flexible depth layers, time and weather grading, and restrained environmental motion. Use for visual scene slices; habitat-driven animal moments belong to game-ambient-life-build.
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Game Painted Scene Build
@@ -53,6 +53,8 @@ For the concrete bindings and a new-scene handoff, read only the relevant sectio
 - Separate host foreground Busy from the salience of ambient events. An active event can defer new competitors; its own salience must not block its own progress. Review the coordination between environment, actors and ambient life when adding another effect.
 
 ## Make a small, comparable slice
+
+For fixed paintings with realtime walking actors, local lamps or pose shadows, read the [Dock Corner case](references/dock-corner.md). It covers projection calibration, shared actor/animal depth, ground masks and controlled lighting. For planning another town slice, use the [production method and scene brief](../../../docs/PAINTED_TOWN_PRODUCTION_METHOD.md); fixed-scene success does not establish continuous-city seams or performance.
 
 Use the existing scene → composition → one to three high-value motions → small implementation slice → Static/Dynamic comparison → rendered-image review → user playtest sequence. Tune the first idea against actual screenshots before adding another effect. Do not generalize a scene-specific implementation until another real scene needs it.
 

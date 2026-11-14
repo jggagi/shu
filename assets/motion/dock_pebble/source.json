@@ -1,0 +1,16 @@
+{
+  "author": "Shu original local rig motion and synthesized water plop",
+  "license": "Original motion/audio; unchanged character model retains assets/art/town_volume_character/source.json terms",
+  "model_geometry_skin_textures_unchanged": true,
+  "motion": "60 Hz fixed-model skeletal bake, planted feet; settle, right-arm anticipation, underhand release and recovery; closed source right grip retained, no finger rig claim",
+  "sound": "Original seeded damped chirp and filtered noise, mono PCM16 22050Hz, 0.48s; device listening pending",
+  "source_hashes": {
+    "assets/art/town_volume_character/jiang-town.glb": "02a76e2d39963098fdeedae740853a9f12dbf28be658b4277309300b44caf399",
+    "tools/art/build_dock_pebble_motion.gd": "f6c97ecaa7a7f2f89d7b757adb630b7279e2ad4f44ad13747f4552166578360e",
+    "assets/data/dock-corner-pebble-motion.json": "08bd7b348a8024e42da8e0289a5e5b1d8ed00089c582f116560668784310dbc3",
+    "assets/motion/dock_pebble/throw.tres": "fc8df0bc5f47df18d2ab18758f3e50b8464500489ecdad0f16ecb2fc06ca4568",
+    "assets/audio/dock_pebble/plop.wav": "9ea587a93d0cf68d6dc45935cb657b9a3daf01510270ee801ed01d7298f18caa",
+    "tools/art/build_dock_pebble_sound.py": "2a247899d840d8306cc3bf11f345bb01ec7280e36a65516346494f42d0a2b0c1"
+  },
+  "engine": "Godot 4.7.2 stable Compatibility, no model regeneration"
+}

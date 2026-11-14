@@ -1,0 +1,110 @@
+{
+  "tingyu_corridor": {
+    "label": "听雨廊",
+    "description": "叶知闲在廊下等你。可听教、去后山练剑，也可沿石阶下山进成都；下山与返山各花一时辰。",
+    "background": "res://assets/art/weather3/tingyu-clean-v3.png",
+    "actors": [
+      {
+        "character": "player_yanqiu",
+        "x": 0.31,
+        "y": 0.88,
+        "height": 0.52,
+        "flip": false
+      },
+      {
+        "character": "mentor_zhixian",
+        "x": 0.73,
+        "y": 0.88,
+        "height": 0.58,
+        "flip": false
+      }
+    ],
+    "present": [
+      "player_yanqiu",
+      "mentor_zhixian"
+    ],
+    "accent": "#397C78",
+    "foreground": {
+      "texture": "res://assets/art/v2/desk-v2.png",
+      "x": 0.5,
+      "y": 0.99,
+      "width": 0.95,
+      "height": 0.23
+    }
+  },
+  "back_mountain": {
+    "label": "后山",
+    "description": "雾岭层叠，找一处安静空地练习剑法；练过一套后可回廊中向师父复命。",
+    "background": "res://assets/art/back_mountain_training/far.png",
+    "actors": [
+      {
+        "character": "player_yanqiu",
+        "x": 0.68,
+        "y": 0.9,
+        "height": 0.65,
+        "flip": false,
+        "motion": "jiang_sword"
+      }
+    ],
+    "present": [
+      "player_yanqiu"
+    ],
+    "accent": "#5B806F",
+    "layers": [
+      {
+        "texture": "res://assets/art/back_mountain_training/mid.png"
+      },
+      {
+        "texture": "res://assets/art/back_mountain_training/near.png"
+      }
+    ]
+  },
+  "chengdu_gate": {
+    "label": "成都·西门",
+    "description": "西门内的石板路分向两边：向东是市街，往北入百工巷；往西出城，山路通回听雨廊。",
+    "background": "res://assets/art/shanxia_town/route-sketch.png",
+    "actors": [],
+    "present": [],
+    "accent": "#887755"
+  },
+  "chengdu_market": {
+    "label": "成都·市街",
+    "description": "店铺沿主街展开，北侧可进茶馆，东北岔路去榕树坪；向东到临河巷，向西回西门。",
+    "background": "res://assets/art/shanxia_town/route-sketch.png",
+    "actors": [],
+    "present": [],
+    "accent": "#897150"
+  },
+  "chengdu_teahouse": {
+    "label": "成都·街边茶馆",
+    "description": "茶桌之间留着小路。前门回市街，后门通百工巷；掌柜在柜前，茶客坐在窗边。",
+    "background": "res://assets/art/shanxia_town/route-sketch.png",
+    "actors": [],
+    "present": [],
+    "accent": "#946F4B"
+  },
+  "chengdu_river": {
+    "label": "成都·临河巷",
+    "description": "北边店面，南边临水。向西回市街，北边岔路通榕树坪；东侧货埠前路暂不通。",
+    "background": "res://assets/art/shanxia_town/route-sketch.png",
+    "actors": [],
+    "present": [],
+    "accent": "#64847B"
+  },
+  "chengdu_lanes": {
+    "label": "成都·百工巷",
+    "description": "宅院与作坊错落在巷边，石路在墙间弯过。南口回西门，东口到榕树坪，也可从茶馆后门穿到市街。",
+    "background": "res://assets/art/shanxia_town/route-sketch.png",
+    "actors": [],
+    "present": [],
+    "accent": "#7E806C"
+  },
+  "chengdu_square": {
+    "label": "成都·榕树坪",
+    "description": "大榕树在路中舒展开枝叶。树下三岔，往西去百工巷，向南到市街，往东则可听着水声走到临河巷。",
+    "background": "res://assets/art/shanxia_town/route-sketch.png",
+    "actors": [],
+    "present": [],
+    "accent": "#74836D"
+  }
+}

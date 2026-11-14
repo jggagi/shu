@@ -1,15 +1,15 @@
 ---
 name: game-ambient-life-build
-description: Add or revise habitat-driven animal and small life moments in an existing Godot scene, using authored scene capabilities and observed environment or attention state. Use for ambient life presentation; weather and painted composition belong to game-painted-scene-build.
+description: Add or revise habitat-driven animals and authored resident life in an existing Godot scene, using observed environment and attention state. Use for small ambient populations and route/pose presentation; weather and painted composition belong to game-painted-scene-build.
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Game Ambient Life Build
 
 Use this skill to make an existing scene feel quietly inhabited by a small number of scene-appropriate lives. Success means the place feels alive on a second glance, not that it contains more animals. This skill preserves a process and judgment; it does not bundle runtime code, create an addon, or establish a generic animal framework.
 
-The experience is “玩家偶尔发现世界自己在发生事情” in a fixed or semi-fixed scene, not animal AI or an ecology simulation. Birds, squirrels, cats, fish, chickens, butterflies and insects are possible life choices only when the actual scene supports them.
+The experience is “玩家偶尔发现世界自己在发生事情” in a fixed or semi-fixed scene, not animal AI or an ecology simulation. Birds, squirrels, cats, fish, chickens, butterflies and insects are possible life choices only when the actual scene supports them. Authored townspeople can use short routes and quiet pose variation within the same presentation boundary; their dialogue, rewards and story remain with the gameplay host.
 
 `AmbientLifePresenter` is a reusable **shu module**, used by Back Mountain and the local Tingyu adapter. It schedules requests from observed state; adapters own habitat geometry, poses, interaction and scene event coordination. Inspect project code and reuse the presenter where it fits. For resident motion, moving hotspots or interaction feedback, read the [Tingyu case](../game-painted-scene-build/references/tingyu-corridor.md). Keep runtime code in the project; extracting an addon still requires demonstrated common needs and actual playtest.
 
@@ -45,6 +45,8 @@ Keep the current shu presenter choices (`birds`, `squirrel`, `cat`, `fish`) unti
 Fit art to the actual scene: check scale, silhouette, value contrast, outline/edge weight, foot/perch anchors, and depth against the real background. Put distant life behind mountain/trees and place residents on the surface that grounds them. Avoid transparent-image translation that reads as a flat card crossing the painting.
 
 ## Resident poses, travel and interaction
+
+For varied walking townspeople or residents sharing depth with realtime actors, read the [Dock residents case](references/dock-residents.md): silhouette and posture variation, reachable upper-body targets, initial-route blocking, shared depth and preserving travel through UI rebuilds. Keep local tuning and runtime code in the scene; this case does not add crowd AI or NPC story authority.
 
 When the user requests more resident activity, choose a short authored route on a real supporting surface. Let rest, stand, travel, sniff/sit and return phases vary the encounter; several articulated gait poses can convey steps better than moving one unchanged PNG. Travel and body motion should follow the permitted presentation delta and preserve their local phase across pauses. They do not advance gameplay time.
 

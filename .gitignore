@@ -11,3 +11,13 @@ __pycache__/
 !/assets/art/sword_mocap/study.glb.import
 !/assets/art/sword_jiang/study.glb.import
 !/assets/art/sword_jiang_legacy/study.glb.import
+
+# Selected city models retain their authored animation and texture import settings.
+!/assets/art/town_volume_character/*.import
+!/assets/art/town_volume_cast/*.import
+
+# Calibrated street geometry maps use alpha as a depth byte, not opacity.
+!/assets/art/chengdu_art_street/*-geometry.png.import
+
+# Preserve material import settings included in the validated dock build inputs.
+!/assets/art/shanxia_polish/materials/*.svg.import

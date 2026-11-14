@@ -1,0 +1,462 @@
+{
+  "schema_version": 1,
+  "logical_size": [
+    1280,
+    720
+  ],
+  "source_note": "Original authored six-view Chengdu city composition with independent street loops and a two-door teahouse. Presentation bands and backdrops never add collision authority; all solid primary footprints come from games/shu_chengdu/walks.json.",
+  "scenes": {
+    "chengdu_gate": {
+      "label": "成都·西门",
+      "kind": "gate",
+      "shop_label": "成都西门",
+      "composition": "A T-junction inside the western gate: east/west avenue and an actual north passage beneath the gate into the workshop lanes.",
+      "walk_scene": "res://games/shu_chengdu/walks.json#chengdu_gate",
+      "street_bands": [
+        [
+          60,
+          410,
+          1160,
+          140
+        ],
+        [
+          565,
+          160,
+          150,
+          370
+        ]
+      ],
+      "backdrop_houses": [
+        [
+          -170,
+          -105,
+          205,
+          125
+        ],
+        [
+          50,
+          -205,
+          205,
+          125
+        ],
+        [
+          270,
+          -105,
+          205,
+          125
+        ],
+        [
+          710,
+          -105,
+          205,
+          125
+        ],
+        [
+          930,
+          -205,
+          205,
+          125
+        ],
+        [
+          1150,
+          -105,
+          205,
+          125
+        ],
+        [
+          1370,
+          -205,
+          205,
+          125
+        ]
+      ],
+      "edge_trees": [
+        [
+          28,
+          310
+        ],
+        [
+          1250,
+          610
+        ]
+      ],
+      "portals": []
+    },
+    "chengdu_market": {
+      "label": "成都·市街",
+      "kind": "market",
+      "shop_label": "锦官街铺",
+      "composition": "An offset junction: teahouse front on the central north approach, a separate northeastern road turns toward the banyan square, east/west shops retained.",
+      "walk_scene": "res://games/shu_chengdu/walks.json#chengdu_market",
+      "street_bands": [
+        [
+          60,
+          410,
+          1160,
+          140
+        ],
+        [
+          1080,
+          100,
+          140,
+          420
+        ],
+        [
+          570,
+          160,
+          140,
+          360
+        ]
+      ],
+      "backdrop_houses": [
+        [
+          -170,
+          -105,
+          205,
+          125
+        ],
+        [
+          50,
+          -205,
+          205,
+          125
+        ],
+        [
+          270,
+          -105,
+          205,
+          125
+        ],
+        [
+          490,
+          -205,
+          205,
+          125
+        ],
+        [
+          710,
+          -105,
+          205,
+          125
+        ],
+        [
+          930,
+          -205,
+          205,
+          125
+        ],
+        [
+          1370,
+          -205,
+          205,
+          125
+        ]
+      ],
+      "edge_trees": [
+        [
+          28,
+          310
+        ],
+        [
+          1250,
+          610
+        ]
+      ],
+      "portals": [
+        {
+          "position": [
+            1150,
+            140
+          ],
+          "label": "榕树坪"
+        }
+      ]
+    },
+    "chengdu_teahouse": {
+      "label": "成都·街边茶馆",
+      "kind": "teahouse",
+      "shop_label": "少城茶馆",
+      "composition": "A through-room with a real rear opening toward the workshop lanes, south front entry to market, two collision-matched tea tables, keeper and seated guest.",
+      "walk_scene": "res://games/shu_chengdu/walks.json#chengdu_teahouse",
+      "street_bands": [],
+      "backdrop_houses": [],
+      "edge_trees": [],
+      "portals": []
+    },
+    "chengdu_river": {
+      "label": "成都·临河巷",
+      "kind": "river",
+      "shop_label": "临河小铺",
+      "composition": "A T-shaped quay: northern shop gap leads up to the square, the east/west river walk and southern water remain visible.",
+      "walk_scene": "res://games/shu_chengdu/walks.json#chengdu_river",
+      "street_bands": [
+        [
+          60,
+          390,
+          1160,
+          150
+        ],
+        [
+          60,
+          540,
+          1160,
+          110
+        ],
+        [
+          565,
+          100,
+          150,
+          470
+        ]
+      ],
+      "backdrop_houses": [
+        [
+          -170,
+          -105,
+          205,
+          125
+        ],
+        [
+          50,
+          -205,
+          205,
+          125
+        ],
+        [
+          270,
+          -105,
+          205,
+          125
+        ],
+        [
+          710,
+          -105,
+          205,
+          125
+        ],
+        [
+          930,
+          -205,
+          205,
+          125
+        ],
+        [
+          1150,
+          -105,
+          205,
+          125
+        ],
+        [
+          1370,
+          -205,
+          205,
+          125
+        ]
+      ],
+      "edge_trees": [
+        [
+          28,
+          310
+        ],
+        [
+          1250,
+          610
+        ]
+      ],
+      "portals": [
+        {
+          "position": [
+            640,
+            140
+          ],
+          "label": "榕树坪"
+        }
+      ]
+    },
+    "chengdu_lanes": {
+      "label": "成都·百工巷",
+      "kind": "lanes",
+      "shop_label": "百工巷",
+      "composition": "A long closed workshop courtyard and offset east courtyard shape a turning lane: west wall approach, south corner, then east to the square; teahouse rear entrance branches off the south lane.",
+      "walk_scene": "res://games/shu_chengdu/walks.json#chengdu_lanes",
+      "street_bands": [
+        [
+          90,
+          160,
+          190,
+          490
+        ],
+        [
+          90,
+          570,
+          1040,
+          80
+        ],
+        [
+          940,
+          390,
+          170,
+          260
+        ],
+        [
+          540,
+          415,
+          560,
+          115
+        ]
+      ],
+      "backdrop_houses": [
+        [
+          -160,
+          -90,
+          230,
+          145
+        ],
+        [
+          80,
+          -175,
+          210,
+          140
+        ],
+        [
+          330,
+          -105,
+          225,
+          135
+        ],
+        [
+          610,
+          -180,
+          220,
+          140
+        ],
+        [
+          900,
+          -110,
+          230,
+          140
+        ],
+        [
+          1170,
+          -170,
+          230,
+          135
+        ]
+      ],
+      "edge_trees": [
+        [
+          28,
+          220
+        ],
+        [
+          1250,
+          580
+        ]
+      ],
+      "portals": [
+        {
+          "position": [
+            960,
+            675
+          ],
+          "label": "茶馆后门"
+        }
+      ]
+    },
+    "chengdu_square": {
+      "label": "成都·榕树坪",
+      "kind": "square",
+      "shop_label": "榕树坪",
+      "composition": "A raised central banyan court with a small stocked work shelter creates routes around both sides; west lanes, south market and east river have separate approaches.",
+      "walk_scene": "res://games/shu_chengdu/walks.json#chengdu_square",
+      "street_bands": [
+        [
+          60,
+          330,
+          420,
+          120
+        ],
+        [
+          660,
+          330,
+          560,
+          170
+        ],
+        [
+          500,
+          410,
+          180,
+          240
+        ],
+        [
+          480,
+          160,
+          180,
+          110
+        ],
+        [
+          370,
+          410,
+          310,
+          120
+        ]
+      ],
+      "backdrop_houses": [
+        [
+          -170,
+          -120,
+          220,
+          140
+        ],
+        [
+          80,
+          -150,
+          250,
+          155
+        ],
+        [
+          380,
+          -125,
+          240,
+          140
+        ],
+        [
+          670,
+          -170,
+          250,
+          140
+        ],
+        [
+          970,
+          -120,
+          245,
+          145
+        ],
+        [
+          1260,
+          -170,
+          220,
+          140
+        ]
+      ],
+      "edge_trees": [
+        [
+          28,
+          610
+        ],
+        [
+          1250,
+          180
+        ]
+      ],
+      "portals": []
+    }
+  },
+  "palette": {
+    "roof": "#78857a",
+    "wood": "#76624a",
+    "plaster": "#d7ccb0",
+    "stone": "#a7ae9b",
+    "water": "#779893"
+  }
+}

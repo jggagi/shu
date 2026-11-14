@@ -1,0 +1,68 @@
+{
+  "asset": "courtyard_tree",
+  "godot_bounds_m": [
+    [
+      -0.8723499774932861,
+      0.0,
+      -0.539325475692749
+    ],
+    [
+      0.8095359206199646,
+      3.988041639328003,
+      0.8859826326370239
+    ]
+  ],
+  "triangles": 2744,
+  "mesh_objects": 2,
+  "materials": 2,
+  "semantic_roles": [
+    "wood",
+    "leaf"
+  ],
+  "details": {
+    "crown_layers": 3,
+    "closed_canopy_volumes": 11,
+    "crown_minimum_expected_y": 2.7,
+    "root_center": [
+      0,
+      0,
+      0.15
+    ],
+    "billboards": 0,
+    "existing_tree_replacement": "one complete tree, trunk and crown together",
+    "actual_crown_minimum_y": 2.770329475402832
+  },
+  "ao": {
+    "wood": {
+      "raw_min": 0.0,
+      "raw_max": 1.0,
+      "raw_mean": 0.3390564437984496,
+      "color0_min": 0.6600000262260437,
+      "color0_max": 1.0,
+      "corner_samples": 2064
+    },
+    "leaf": {
+      "raw_min": 0.0,
+      "raw_max": 1.0,
+      "raw_mean": 0.5283690918456544,
+      "color0_min": 0.6600000262260437,
+      "color0_max": 1.0,
+      "corner_samples": 4004
+    }
+  },
+  "external_images": [],
+  "lights_cameras_collision_in_glb": false,
+  "glb": {
+    "bytes": 190060,
+    "sha256": "5bce5792fb16e7a033592e5fc6065b75c61e2b2f312b6bccff0a768d45a8a160",
+    "mesh_primitives": 2,
+    "all_primitives_have_uv_and_color0": true,
+    "image_count": 0,
+    "export_y_up": true
+  },
+  "source_blend": {
+    "path": "art/source/chengdu-blender-kit-20261110/courtyard_tree.blend",
+    "sha256": "36124b57b7b4a250c369c650f7601024a04988219cf7c6a8c3b7579c791d3557",
+    "bytes": 153899
+  }
+}

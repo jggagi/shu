@@ -1,0 +1,41 @@
+{
+  "asset": "assets/art/chengdu_blender_kit_20261110/courtyard_tree.glb",
+  "sha256": "eb4bb83aa429e644137c48581a3bc889f2d4b2e3838a2f60d2dde70fd355169d",
+  "primitives": [
+    {
+      "material": "Chengdu_leaf",
+      "triangles": 4840,
+      "degenerate_triangles": 0,
+      "uv_min": [
+        0.34912109375,
+        0.51611328125
+      ],
+      "uv_max": [
+        0.64990234375,
+        0.98388671875
+      ],
+      "raw_color0_min": 43253,
+      "raw_color0_max": 65448,
+      "color0_normalized": true
+    },
+    {
+      "material": "Chengdu_wood",
+      "triangles": 4020,
+      "degenerate_triangles": 0,
+      "uv_min": [
+        0.34912109375,
+        0.01611328125
+      ],
+      "uv_max": [
+        0.64990234375,
+        0.48388671875
+      ],
+      "raw_color0_min": 43253,
+      "raw_color0_max": 65535,
+      "color0_normalized": true
+    }
+  ],
+  "images": [],
+  "cameras": [],
+  "note": "CPU exported-binary audit only; revised Godot view awaits root"
+}

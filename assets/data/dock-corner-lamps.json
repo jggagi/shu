@@ -1,0 +1,9 @@
+{
+  "fixtures": [
+    {"id":"tea", "hanger":[391,119], "center":[391,169], "size":[15,22], "ground":[391,260], "range":2.4, "energy":1.5},
+    {"id":"boat", "hanger":[794,483], "center":[794,514], "size":[10,15], "ground":[794,555], "range":1.8, "energy":1.1}
+  ],
+  "tea_pool":[370,283],
+  "boat_pool":[801,551],
+  "reflection":[794,619]
+}

@@ -1,0 +1,9 @@
+Asset type: one square RPG dialogue portrait, original Shu dock tea keeper.
+Purpose: the speaking person's avatar in a parchment-colored bottom dialogue bar, readable at 128x160 displayed pixels.
+Primary request: create a polished hand-painted head-and-shoulders portrait of the SAME ADULT MALE TEA KEEPER in reference 1. Reference 1 is identity/costume only; remove all rough 3D mesh seams and render artifacts. References 2 and 3 establish the finished Chinese watercolor RPG character style, NOT replacement identities.
+Subject: a friendly working man around thirty-five, short brown hair, a muted olive-brown cloth working headwrap covering the crown, fine short dark moustache and small neat goatee, modest adult face, brown sleeveless merchant vest/apron over ivory linen shirt. Keep him clearly male and recognizably the reference 1 tea keeper. No long ponytail, no scholar hat, no white hair.
+Style/medium: delicate warm ink outlines, hand-painted Chinese watercolor and restrained gouache, gently stylized Q proportions matching refs 2/3, readable expressive eyes, softly shaded clean facial planes, credible cloth folds, high quality original Chinese historical life-sim dialogue portrait.
+Composition/framing: exactly one character, frontal slight three-quarter turn, looking toward the viewer's right where the dialogue text will be. Entire headwrap, ears and chin inside frame, generous small headroom, head and shoulders fill 85 percent of frame, crop at upper chest. Calm welcoming smile. No hands or cups necessary.
+Lighting/mood: soft warm afternoon light, subtle cool shadow, pleasant natural skin, restrained colors.
+Background: solid warm pale parchment, no scene or objects, no frame. The portrait is meant to sit inside a separately coded UI frame.
+Avoid: text, glyphs, logo, signature, watermark, UI, multiple people, child or feminine merchant, photorealism, plastic 3D, angular mesh holes, broken collar, distorted face, floating accessories.

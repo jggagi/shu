@@ -1,0 +1,56 @@
+{
+  "asset": "Original camera-calibrated Chengdu south-gate painted sample",
+  "provider": "codex-imagegen",
+  "model": null,
+  "generation_count": 1,
+  "mode": "single scene-calibrated art-direction sample, built-in image generation",
+  "recorded_at_utc": "2026-11-08T09:54:10.910339+00:00",
+  "author": "Original generated artwork directed for the Shu project",
+  "rights": "Generated original project artwork; no third-party artwork or user map imported into runtime. Existing original Shu painting is style reference only. Provider terms apply; no separate third-party license claimed.",
+  "prompt": {
+    "path": "art/prompts/chengdu-painted-gate-20261108/camera-calibrated-gate.txt",
+    "sha256": "fa77adc0be1962fb9bd3403c54b072235d4636e32196649907b19a5355344431"
+  },
+  "references": [
+    {
+      "path": "docs/concepts/chengdu-painted-gate-20261108/camera-environment.png",
+      "sha256": "0dd0d53fb32fe2afc16d206f665d73248ceefadb68f25e2b5aa2c39a82f94819",
+      "role": "edit target and exact camera/geometry authority; actual Godot 4.7.2 environment-only capture",
+      "source": "This checkout, Detail stage built on accepted Scale city, actor [7800,8400], 1280x720; capture record in .local/qa/chengdu-painted-follow/reference-camera.json"
+    },
+    {
+      "path": "docs/concepts/chengdu-painted-gate-20261108/town-style-reference.png",
+      "sha256": "6656fe35aa44d9e6a7a0f05e3cc3705a1ccb214cf8d38537d164d8d31748500b",
+      "role": "style only; never layout authority",
+      "source": "Clean local first-journey checkout, commit 36760937d1c643a53652ccc5cffd8001ff785a1c, assets/art/town_painted_street/painted-street.png; original Shu generated painting"
+    }
+  ],
+  "selected_output": {
+    "path": "assets/art/chengdu_painted_gate/painted-gate.png",
+    "sha256": "611c601ad21440b17ccb8044a73b876bf9faa7ae79c4d174153bf3181f3b7fac",
+    "width": 1672,
+    "height": 941,
+    "transparent_background": false,
+    "original_generated_file": "/home/x1-lite/.codex/generated_images/01a1b5a4-9632-7d73-8fe9-d8cc34dbd2ea/exec-343befc8-be7f-4ef7-8265-22d1a6963946.png"
+  },
+  "calibration": "World-position projection from the frozen reference camera onto matching actual surfaces; source-ID mask rejects hidden/unrelated surfaces. New continuous-follow adaptation, not reuse of fixed-camera SCREEN_UV helper.",
+  "review_status": "Selected for in-engine prototype inspection. Camera alignment, moving-camera projection and occlusion require new verification. User aesthetic acceptance pending.",
+  "limitations": [
+    "One south-gate sample; remainder of the accepted city retains existing geometry/art.",
+    "Baked light and artistic silhouette deviations may remain; this is not real-time relightable art."
+  ],
+  "paid_api_used": false,
+  "qwen_batch_used": false,
+  "calibration_files": [
+    {
+      "path": "assets/art/chengdu_painted_gate/source-id-mask.png",
+      "sha256": "52fca5a21a2c16ad150704645e9218a1786bc24140169491fcc4bf8dbaf3d975",
+      "role": "exact source-ID render, 1280x720, nearest sampling, no mipmaps; not artwork"
+    },
+    {
+      "path": "assets/art/chengdu_painted_gate/reference-camera.json",
+      "sha256": "ef7b3b7d1d273abd1bfb8733613899a0ba3bb93910d681945f5965884c053e95",
+      "role": "actual reference camera, world projection and stable geometry signatures; not a fixed player camera"
+    }
+  ]
+}

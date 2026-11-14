@@ -1,0 +1,40 @@
+{
+  "author": "Original shu scene adaptation by Codex, 2026-11-13",
+  "license": "Existing project asset provenance and provider terms retained; no new external art or cloud generation. New route/controller/retarget code is original project work.",
+  "reuse": "Two original adult-rig instances are now locally dressed as a slender blue scholar and a broader basket porter, with scene-authored costume geometry, shader cloth palettes and distinct upper-body IK poses. Original GLBs, embedded textures and leg gait clips remain byte exact. The original painted cat atlas and its motion remain unchanged.",
+  "sources": [
+    {
+      "resource": "res://assets/art/town_volume_cast/tea-seller.glb",
+      "sha256": "a1dfdfaba3f05ab3909100e0569981316f2fdf1fb05de8069c9364599cc6ccde"
+    },
+    {
+      "resource": "res://assets/art/town_volume_cast/source.json",
+      "sha256": "4d1fd5f1998559a7195a8eb790b1a862ade645c098e7e62fc767656d59956b08"
+    },
+    {
+      "resource": "res://assets/art/town_volume_character/jiang-town.glb",
+      "sha256": "02a76e2d39963098fdeedae740853a9f12dbf28be658b4277309300b44caf399"
+    },
+    {
+      "resource": "res://assets/art/town_volume_character/source.json",
+      "sha256": "2f5448e43a1b5c3f05a892e55780757cc578237c43c458373318099ee602726a"
+    },
+    {
+      "resource": "res://assets/art/ambient_life/tingyu-cat-desk-v1.png",
+      "sha256": "d4a0771c742adb15b043a8981285dd66fbbea355946d8c509165cc639c8cc918"
+    },
+    {
+      "resource": "res://assets/art/ambient_life/tingyu-cat-desk-layout-v1.json",
+      "sha256": "2f0079440a0da78f2250967d1125ffd6fc1f681d2f1abcdbe5a275e7469c636d"
+    },
+    {
+      "resource": "res://assets/art/ambient_life/tingyu-cat-desk-source-v1.json",
+      "sha256": "11b2543665b37fb3fc58accb43d8a5f67eb21a1e62cda89219b2e8c64c602e71"
+    }
+  ],
+  "downloads": 0,
+  "new_generation": 0,
+  "engine": "Godot 4.7.2 stable / Compatibility",
+  "scope": "Local ambient dock presentation; no character/story identity, dialogue, AI ecology, rewards or gameplay authority added.",
+  "cast_source": "res://assets/data/dock-corner-cast-source.json"
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "atlas": "res://assets/art/chengdu_painted_city/surface-atlas.png",
+  "columns": 3,
+  "rows": 2,
+  "tiles": {"roof": [0, 0], "stone": [1, 0], "plaster": [2, 0], "wood": [0, 1], "earth": [1, 1], "water": [2, 1]},
+  "world_tile_meters": {"stone": 2.4, "earth": 6.0, "water": 8.0},
+  "surface_gain": {"roof": 0.9, "stone": 0.86, "plaster": 0.84, "wood": 1.0, "earth": 1.0, "water": 1.0},
+  "mirrored_repeat": ["water"],
+  "scope": "Original painted material cells on the existing complete city. Keep the approved gate painting overlay, continuous following camera, per-roof reveal, authored geometry, actors and state. Trees, task umbrella props, markers and existing water glints retain their identity."
+}

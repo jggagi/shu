@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "scope": "Four accepted first-street exteriors and their connecting main street/side lane. Presentation only; the original Scale layout, EngineSession, collision and follow camera remain authoritative.",
+  "source": "res://assets/art/chengdu_crafted_street/source.json",
+  "houses": [
+    {"id":"ward_city_22_19","role":"tea_shop","bounds":[8250,7220,170,160]},
+    {"id":"ward_city_23_15","role":"cloth_shop","bounds":[7250,7470,170,160]},
+    {"id":"ward_city_23_19","role":"home","bounds":[8250,7470,170,160]},
+    {"id":"ward_city_22_16","role":"two_storey_home","bounds":[7500,7220,170,160]}
+  ],
+  "textures": {
+    "paving":{"path":"res://assets/art/chengdu_crafted_street/paving.png","crop_pixels":[4,4,1016,1016],"seam_blend_pixels":24,"gain":0.95},
+    "plaster":{"path":"res://assets/art/chengdu_crafted_street/plaster.png","crop_pixels":[96,96,832,832],"seam_blend_pixels":24,"gain":0.84},
+    "roof":{"path":"res://assets/art/chengdu_crafted_street/roof.png","crop_pixels":[8,8,1008,1008],"seam_blend_pixels":24,"gain":0.90}
+  },
+  "ground": {
+    "areas":[[7620,7160,700,600],[7380,7375,980,130],[7410,7190,100,500]],
+    "edge_feather":40,
+    "paving_period_meters":3.2,
+    "wall_edge_width_meters":0.32,
+    "wall_edge_strength":0.14,
+    "scope_note":"Opaque material replacement on existing paving planes only. Three feathered rectangles join the main street, cross lane and cloth-shop lane. No new ground mesh or height."
+  }
+}

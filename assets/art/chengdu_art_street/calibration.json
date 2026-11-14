@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "status": "SELECTED_STREET_PAINTINGS",
+  "world_bounds": [
+    6600,
+    6300,
+    2300,
+    1900
+  ],
+  "world_feather": 100,
+  "views": [
+    {
+      "id": "south",
+      "painting": "res://assets/art/chengdu_art_street/south.png",
+      "source_mask": "res://assets/art/chengdu_art_street/south-mask.png",
+      "geometry_map": "res://assets/art/chengdu_art_street/south-geometry.png",
+      "reference_camera": "res://assets/art/chengdu_art_street/south-camera.json"
+    },
+    {
+      "id": "middle",
+      "painting": "res://assets/art/chengdu_art_street/middle.png",
+      "source_mask": "res://assets/art/chengdu_art_street/middle-mask.png",
+      "geometry_map": "res://assets/art/chengdu_art_street/middle-geometry.png",
+      "reference_camera": "res://assets/art/chengdu_art_street/middle-camera.json",
+      "excluded_source_signatures": [
+        "0f5f80e70cbde65a94c5a68da2b5c9df9ccda7b7a06b2b19af40bb87c679a1b9",
+        "5d0830cef5ee509a7f0d0b170d522282af7b40d38d9cb2f0b89cab7f44dc2980",
+        "91b2070402a48dab586b3792229d3aee13d13fed98a42142e3688ff71e824388",
+        "a4c989a4384123b44e1e2310dba8a2dcd88f10982e969c1dee0e7301f6bb13a5",
+        "c2322f0161d03d7600298f399d113b3da272e89ae102bed36613aee65ae15103",
+        "e6591e397fa5bd7f55c5be84f41faa66b29d788c355994104eaa906a502941da"
+      ],
+      "exclusion_reason": "Generated upper-left foliage/tree did not exist in the calibration. This original house and adjacent western ground source use other valid paintings or the retained fallback base."
+    },
+    {
+      "id": "lane",
+      "painting": "res://assets/art/chengdu_art_street/lane.png",
+      "source_mask": "res://assets/art/chengdu_art_street/lane-mask.png",
+      "geometry_map": "res://assets/art/chengdu_art_street/lane-geometry.png",
+      "reference_camera": "res://assets/art/chengdu_art_street/lane-camera.json"
+    }
+  ]
+}

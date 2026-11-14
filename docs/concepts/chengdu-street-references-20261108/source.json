@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-08T12:02:15.989443+00:00",
+  "user_request": "先渲染一些图片作为参照",
+  "status": "concept candidates awaiting selection; not implemented",
+  "generation_mode": "built-in imagegen",
+  "calls": 3,
+  "model": null,
+  "new_game_runtime_assets": false,
+  "exact_prompt_directory": "art/prompts/chengdu-street-references-20261108",
+  "records": [
+    {
+      "asset_id": "chengdu-street-reference-main-20261108",
+      "provider": "codex-imagegen",
+      "model": null,
+      "purpose": "Chengdu street art-direction reference: integrated main street, not implemented",
+      "prompt_file": "art/prompts/chengdu-street-references-20261108/01-main-street.txt",
+      "references": [
+        "docs/concepts/chengdu-street-references-20261108/reference-current-main.png",
+        "docs/concepts/chengdu-painted-gate-20261108/town-style-reference.png",
+        "assets/art/chengdu_painted_gate/painted-gate.png"
+      ],
+      "output": "docs/concepts/chengdu-street-references-20261108/01-main-street.png",
+      "created_at": "2026-11-08T11:58:19.050126+00:00",
+      "status": "candidate",
+      "sha256": "f16083fe85476dfa54225b0a64c794c1b851c0c04e0217170f1c7623632fc460",
+      "size": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "56b98bf321460c3f8de5d4d84f69dae8144dc543a190771b311367067fb2286f",
+      "reference_hashes": {
+        "docs/concepts/chengdu-street-references-20261108/reference-current-main.png": "70f40b0444b1797679589e48adbe17c18a7306d8b4ec16308d0e019ee923643a",
+        "docs/concepts/chengdu-painted-gate-20261108/town-style-reference.png": "6656fe35aa44d9e6a7a0f05e3cc3705a1ccb214cf8d38537d164d8d31748500b",
+        "assets/art/chengdu_painted_gate/painted-gate.png": "611c601ad21440b17ccb8044a73b876bf9faa7ae79c4d174153bf3181f3b7fac"
+      },
+      "rights_note": "Original project concept image generated with built-in imagegen under provider terms; project references retain their existing provenance. No additional third-party license is asserted."
+    },
+    {
+      "asset_id": "chengdu-street-reference-lane-20261108",
+      "provider": "codex-imagegen",
+      "model": null,
+      "purpose": "Chengdu street art-direction reference: side-lane junction, not implemented",
+      "prompt_file": "art/prompts/chengdu-street-references-20261108/02-side-lane.txt",
+      "references": [
+        "docs/concepts/chengdu-street-references-20261108/01-main-street.png",
+        "docs/concepts/chengdu-street-references-20261108/reference-current-lane.png",
+        "docs/concepts/chengdu-painted-gate-20261108/town-style-reference.png"
+      ],
+      "output": "docs/concepts/chengdu-street-references-20261108/02-side-lane.png",
+      "created_at": "2026-11-08T11:59:26.021867+00:00",
+      "status": "candidate",
+      "sha256": "82ec0d3cfee1dfce0fbf047a24b52e61ab995b5d8b139dff794e741611ca9bc9",
+      "size": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "32c9b5d9f517aef81ebcd8a2b29d2d1d8263fd5468e7182204ef945cbc477dd8",
+      "reference_hashes": {
+        "docs/concepts/chengdu-street-references-20261108/01-main-street.png": "f16083fe85476dfa54225b0a64c794c1b851c0c04e0217170f1c7623632fc460",
+        "docs/concepts/chengdu-street-references-20261108/reference-current-lane.png": "69951961d6b433918890efa24460c3f020aac9b74f12600216489dee0e79154e",
+        "docs/concepts/chengdu-painted-gate-20261108/town-style-reference.png": "6656fe35aa44d9e6a7a0f05e3cc3705a1ccb214cf8d38537d164d8d31748500b"
+      },
+      "rights_note": "Original project concept image generated with built-in imagegen under provider terms; project references retain their existing provenance. No additional third-party license is asserted."
+    },
+    {
+      "asset_id": "chengdu-street-reference-shopfront-20261108",
+      "provider": "codex-imagegen",
+      "model": null,
+      "purpose": "Chengdu street art-direction reference: lived-in shopfront details, not implemented",
+      "prompt_file": "art/prompts/chengdu-street-references-20261108/03-shopfront.txt",
+      "references": [
+        "docs/concepts/chengdu-street-references-20261108/01-main-street.png",
+        "docs/concepts/chengdu-street-references-20261108/reference-current-main.png",
+        "docs/concepts/chengdu-painted-gate-20261108/town-style-reference.png"
+      ],
+      "output": "docs/concepts/chengdu-street-references-20261108/03-shopfront.png",
+      "created_at": "2026-11-08T12:01:21.789327+00:00",
+      "status": "candidate",
+      "sha256": "a782f29f1ba65438d8d461ebfccec9d2153dbe077192c1a8742adbf1d81abff8",
+      "size": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "c1c7222f5827518e1fe49114b3cf787400b6f0ea30add2c84833e5b10553fb78",
+      "reference_hashes": {
+        "docs/concepts/chengdu-street-references-20261108/01-main-street.png": "f16083fe85476dfa54225b0a64c794c1b851c0c04e0217170f1c7623632fc460",
+        "docs/concepts/chengdu-street-references-20261108/reference-current-main.png": "70f40b0444b1797679589e48adbe17c18a7306d8b4ec16308d0e019ee923643a",
+        "docs/concepts/chengdu-painted-gate-20261108/town-style-reference.png": "6656fe35aa44d9e6a7a0f05e3cc3705a1ccb214cf8d38537d164d8d31748500b"
+      },
+      "rights_note": "Original project concept image generated with built-in imagegen under provider terms; project references retain their existing provenance. No additional third-party license is asserted."
+    }
+  ]
+}

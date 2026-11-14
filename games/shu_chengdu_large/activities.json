@@ -1,0 +1,777 @@
+{
+  "talk_mentor": {
+    "label": "听师父说两句",
+    "description": "免费开始请教；是否坐下调息及其精力、时间花费由对话选择决定。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {
+        "mentor_lesson_heard": false
+      }
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "mentor_tip",
+    "target_scene": "",
+    "result": "你走近叶知闲，听他讲起方才那一剑。",
+    "character": "mentor_zhixian"
+  },
+  "claim_mentor_lesson": {
+    "label": "随师父调息",
+    "description": "选择坐下听雨调息，消耗8精力、推进1时辰、理解+1；下一套剑法可验证一次+6修为。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": false,
+    "duration": 1,
+    "costs": {
+      "energy": 8
+    },
+    "gains": {
+      "understanding": 1
+    },
+    "conditions": {
+      "stats_gte": {
+        "energy": 8
+      },
+      "flags": {
+        "mentor_lesson_accepted": false
+      }
+    },
+    "set_flags": {
+      "breathing_hint": true,
+      "mentor_lesson_accepted": true
+    },
+    "once_key": "mentor_lesson_accepted",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你随师父听雨调息了一时辰，理解有所加深；下一套剑法将额外提升6点修为。",
+    "character": ""
+  },
+  "go_to_mountain": {
+    "label": "前往后山",
+    "description": "听完师父的点拨后，沿廊阶前往后山练剑。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {
+        "mentor_lesson_heard": true
+      }
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "back_mountain",
+    "result": "你沿石阶来到后山。",
+    "character": ""
+  },
+  "go_to_town": {
+    "label": "下山进城",
+    "description": "沿山路前往成都西门；花1时辰，不扣精力。返山另花1时辰。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "town_visited": true
+    },
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "chengdu_city",
+    "result": "你沿山路下行，走过城外石桥，从成都西门入城。路上花了一时辰。",
+    "character": "",
+    "target_entry": "from_mountain"
+  },
+  "return_to_corridor": {
+    "label": "回到听雨廊",
+    "description": "沿山路返回廊下向师父复命。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "tingyu_corridor",
+    "result": "你回到听雨廊。",
+    "character": ""
+  },
+  "rest_practice": {
+    "label": "歇息片刻",
+    "description": "停下调息，恢复34点精力并推进一时辰；反复歇息会按六时辰时钟自然跨日。",
+    "scenes": [
+      "tingyu_corridor",
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {},
+    "gains": {
+      "energy": 34
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你安静歇息了一会儿，精力有所恢复；时辰照常前行。"
+  },
+  "pine_wind": {
+    "label": "松风剑",
+    "description": "提剑下劈，回带平刺，再收回守势。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "sword": 10
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "mentor_practice_finished": true
+    },
+    "once_key": "",
+    "bonuses": [
+      {
+        "flag": "breathing_hint",
+        "gains": {
+          "cultivation": 6
+        },
+        "consume": true
+      }
+    ],
+    "event": "",
+    "target_scene": "",
+    "result": "你练过一遍松风剑。提剑下劈，回带平刺，再收回守势。",
+    "presentation": {
+      "motion": "jiang_sword",
+      "clip": "songfeng"
+    },
+    "show_count": true
+  },
+  "listening_rain": {
+    "label": "穿云剑",
+    "description": "前送重心，连续直刺，抽剑回到身前。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "sword": 10
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "mentor_practice_finished": true
+    },
+    "once_key": "",
+    "bonuses": [
+      {
+        "flag": "breathing_hint",
+        "gains": {
+          "cultivation": 6
+        },
+        "consume": true
+      }
+    ],
+    "event": "",
+    "target_scene": "",
+    "result": "你练过一遍穿云剑。前送重心，连续直刺，抽剑回到身前。",
+    "presentation": {
+      "motion": "jiang_sword",
+      "clip": "chuanyun"
+    },
+    "show_count": true
+  },
+  "returning_tide": {
+    "label": "回澜剑",
+    "description": "横抹开路，换锋反斩，稳稳收势。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "sword": 10
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "mentor_practice_finished": true
+    },
+    "once_key": "",
+    "bonuses": [
+      {
+        "flag": "breathing_hint",
+        "gains": {
+          "cultivation": 6
+        },
+        "consume": true
+      }
+    ],
+    "event": "",
+    "target_scene": "",
+    "result": "你练过一遍回澜剑。横抹开路，换锋反斩，稳稳收势。",
+    "presentation": {
+      "motion": "jiang_sword",
+      "clip": "huilan"
+    },
+    "show_count": true
+  },
+  "rising_peak": {
+    "label": "挑月剑",
+    "description": "低扫卸势，顺势上挑，收剑回位。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "sword": 10
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "mentor_practice_finished": true
+    },
+    "once_key": "",
+    "bonuses": [
+      {
+        "flag": "breathing_hint",
+        "gains": {
+          "cultivation": 6
+        },
+        "consume": true
+      }
+    ],
+    "event": "",
+    "target_scene": "",
+    "result": "你练过一遍挑月剑。低扫卸势，顺势上挑，收剑回位。",
+    "presentation": {
+      "motion": "jiang_sword",
+      "clip": "tiaoyue"
+    },
+    "show_count": true
+  },
+  "swift_swallow": {
+    "label": "斜影剑",
+    "description": "斜劈换锋，反撩再斩，最后回到守势。",
+    "scenes": [
+      "back_mountain"
+    ],
+    "menu": true,
+    "duration": 1,
+    "costs": {
+      "energy": 22
+    },
+    "gains": {
+      "sword": 10
+    },
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "mentor_practice_finished": true
+    },
+    "once_key": "",
+    "bonuses": [
+      {
+        "flag": "breathing_hint",
+        "gains": {
+          "cultivation": 6
+        },
+        "consume": true
+      }
+    ],
+    "event": "",
+    "target_scene": "",
+    "result": "你练过一遍斜影剑。斜劈换锋，反撩再斩，最后回到守势。",
+    "presentation": {
+      "motion": "jiang_sword",
+      "clip": "xieying"
+    },
+    "show_count": true
+  },
+  "report_practice": {
+    "label": "回廊复命",
+    "description": "练过一套剑法后，回听雨廊向师父报告体会。",
+    "scenes": [
+      "tingyu_corridor"
+    ],
+    "menu": true,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {
+        "mentor_practice_finished": true,
+        "mentor_reported": false
+      }
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "mentor_practice_report",
+    "target_scene": "",
+    "result": "你回到听雨廊，向师父回报练剑经过。",
+    "character": "mentor_zhixian"
+  },
+  "return_from_town": {
+    "label": "返山回廊",
+    "description": "从成都西门循山路返回听雨廊；花1时辰，不扣精力。",
+    "scenes": [
+      "chengdu_city"
+    ],
+    "menu": false,
+    "duration": 1,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "town_returned": true
+    },
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "tingyu_corridor",
+    "result": "你从西门出城，沿山路回到听雨廊，路上花了一时辰。原来的修行与师父的点拨仍在。",
+    "character": ""
+  },
+  "enter_teahouse": {
+    "label": "从前门走进茶馆",
+    "description": "从临街前门进入茶馆。",
+    "scenes": [
+      "chengdu_city"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "chengdu_teahouse",
+    "result": "你从临街的前门走进茶馆，杯盏轻响在柜前传来。",
+    "character": "",
+    "target_entry": "from_market"
+  },
+  "leave_teahouse": {
+    "label": "走前门回市街",
+    "description": "从前门走回市街。",
+    "scenes": [
+      "chengdu_teahouse"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "chengdu_city",
+    "result": "你走出茶馆前门，回到市街的石板路上。",
+    "character": "",
+    "target_entry": "from_teahouse_front"
+  },
+  "read_city_sign": {
+    "label": "查看城中方向",
+    "description": "走近看看，随后可继续闲逛。",
+    "scenes": [
+      "chengdu_city"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "chengdu_sign_read": true
+    },
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "木牌画着相接的街路：西门以东是市街，北边沿墙可绕入百工巷；从巷中往东，榕树坪的枝叶就在前头。河岸沿城东延伸，茶馆前门临市街、后门接巷子。西门外的山路回听雨廊。",
+    "character": ""
+  },
+  "inspect_market_goods": {
+    "label": "看看街边货架",
+    "description": "走近看看，随后可继续闲逛。",
+    "scenes": [
+      "chengdu_city"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "布卷、竹篮与纸包沿柜摆开。你在檐下慢慢看过；西北侧茶馆前门正开着，沿街向东可听见水声，绕向北边则能去榕树坪。",
+    "character": ""
+  },
+  "meet_chengdu_keeper": {
+    "label": "走近茶馆掌柜",
+    "description": "走近看看，随后可继续闲逛。",
+    "scenes": [
+      "chengdu_teahouse"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "chengdu_keeper_met": true
+    },
+    "once_key": "",
+    "bonuses": [],
+    "event": "chengdu_keeper_first",
+    "target_scene": "",
+    "result": "你走到柜前，掌柜腾出一角空位，朝你点了点头。",
+    "character": ""
+  },
+  "revisit_chengdu_keeper": {
+    "label": "再到茶馆柜前",
+    "description": "走近看看，随后可继续闲逛。",
+    "scenes": [
+      "chengdu_teahouse"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "chengdu_keeper_again",
+    "target_scene": "",
+    "result": "掌柜认出先前来过的蓝衣少年，朝你点头。",
+    "character": ""
+  },
+  "meet_chengdu_guest": {
+    "label": "看看窗边茶客",
+    "description": "走近看看，随后可继续闲逛。",
+    "scenes": [
+      "chengdu_teahouse"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {
+      "chengdu_guest_met": true
+    },
+    "once_key": "",
+    "bonuses": [],
+    "event": "chengdu_guest_first",
+    "target_scene": "",
+    "result": "你在桌边停步，茶客把长凳挪开一些，留出通路。",
+    "character": ""
+  },
+  "revisit_chengdu_guest": {
+    "label": "再经过窗边茶桌",
+    "description": "走近看看，随后可继续闲逛。",
+    "scenes": [
+      "chengdu_teahouse"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "chengdu_guest_again",
+    "target_scene": "",
+    "result": "窗边茶客认出你，仍把长凳往桌下收了收。",
+    "character": ""
+  },
+  "inspect_lost_property": {
+    "label": "看看茶馆失物架",
+    "description": "走近看看，随后可继续闲逛。",
+    "scenes": [
+      "chengdu_teahouse"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "chengdu_lost_property",
+    "target_scene": "",
+    "result": "窗边木架留着几处空位，架旁写着失物暂存的规矩。",
+    "character": ""
+  },
+  "inspect_river_umbrella": {
+    "label": "看看木架上的竹伞",
+    "description": "走近看看，随后可继续闲逛。",
+    "scenes": [
+      "chengdu_city"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "chengdu_river_umbrella",
+    "target_scene": "",
+    "result": "你走近临河木架，看见一柄收拢的竹伞和一块失物木牌。",
+    "character": ""
+  },
+  "take_river_umbrella": {
+    "label": "顺路带竹伞回茶馆",
+    "description": "走近看看，随后可继续闲逛。",
+    "scenes": [
+      "chengdu_city"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {
+        "chengdu_umbrella_taken": false,
+        "chengdu_umbrella_returned": false
+      }
+    },
+    "set_flags": {
+      "chengdu_umbrella_taken": true,
+      "chengdu_umbrella_carrying": true
+    },
+    "once_key": "chengdu_umbrella_taken",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你取下竹伞，准备顺路送到市街茶馆的失物架。",
+    "character": ""
+  },
+  "return_river_umbrella": {
+    "label": "把竹伞放回失物架",
+    "description": "走近看看，随后可继续闲逛。",
+    "scenes": [
+      "chengdu_teahouse"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {
+        "chengdu_umbrella_carrying": true,
+        "chengdu_umbrella_returned": false
+      }
+    },
+    "set_flags": {
+      "chengdu_umbrella_carrying": false,
+      "chengdu_umbrella_returned": true
+    },
+    "once_key": "chengdu_umbrella_returned",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "你将竹伞放在茶馆窗边的失物架，夹好写着临河巷的木签。掌柜抬头看见，朝你点了点头。",
+    "character": ""
+  },
+  "read_cargo_notice": {
+    "label": "看看货埠告示 · 未开放",
+    "description": "走近看看，随后可继续闲逛。",
+    "scenes": [
+      "chengdu_city"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "河岸北端的木栏拦着去货埠的路，告示写着「前路暂不通」。沿岸向南可以回市街，也能向西绕过榕树坪与巷中宅院。",
+    "character": ""
+  },
+  "look_across_river": {
+    "label": "在河边站一会儿",
+    "description": "走近看看，随后可继续闲逛。",
+    "scenes": [
+      "chengdu_city"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "",
+    "result": "水纹沿石岸缓缓移过，远处有人收起晾着的布。你在河边站了一会儿，转身仍能听见街上的脚步声。",
+    "character": ""
+  },
+  "enter_teahouse_back": {
+    "label": "从后门走进茶馆",
+    "description": "从巷边后门进入茶馆。",
+    "scenes": [
+      "chengdu_city"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "chengdu_teahouse",
+    "result": "你从百工巷推开茶馆后门，绕进茶桌间的小路。",
+    "character": "",
+    "target_entry": "from_lanes"
+  },
+  "leave_teahouse_back": {
+    "label": "走后门去百工巷",
+    "description": "从后门走回百工巷。",
+    "scenes": [
+      "chengdu_teahouse"
+    ],
+    "menu": false,
+    "duration": 0,
+    "costs": {},
+    "gains": {},
+    "conditions": {
+      "stats_gte": {},
+      "flags": {}
+    },
+    "set_flags": {},
+    "once_key": "",
+    "bonuses": [],
+    "event": "",
+    "target_scene": "chengdu_city",
+    "result": "你穿过茶馆后门，走回百工巷。墙间石路向两边延伸。",
+    "character": "",
+    "target_entry": "from_teahouse_back"
+  }
+}

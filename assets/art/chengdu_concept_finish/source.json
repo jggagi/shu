@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "asset": "Original Shu Chengdu concept finish material and foliage production sample",
+  "provider": "qwen",
+  "model": "qwen-image-3.0",
+  "generation_count": 2,
+  "successful_download_count": 2,
+  "automatic_retries": 0,
+  "paid_api_used": true,
+  "recorded_at_utc": "2026-11-09T14:50:45.734295+00:00",
+  "author": "Original generated artwork directed for the Shu project",
+  "rights": "Generated project artwork using the selected original Shu concept references. Provider terms apply; no third-party license is claimed.",
+  "status": "SELECTED_FOR_LIMITED_SCENE_REVIEW_USER_PLAYTEST_PENDING",
+  "runtime_scope": "Four material atlas cells for existing Chengdu street geometry and one crown-cluster sprite for existing tree branches. Raster files only; generation does not alter city geometry, camera, collision, navigation, gameplay, save state or source paintings. Full-city rollout and visual acceptance are not implied.",
+  "outputs": [
+    {
+      "kind": "surfaces",
+      "path": "res://assets/art/chengdu_concept_finish/surfaces.png",
+      "sha256": "b9a319f627960977370470d832047cdbde6806511daa31811635c7c0da9b12f9",
+      "bytes": 1589802,
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "manifest_asset_id": "80ce19937bf64e4c863df5267c6a54a3",
+      "source_candidate": "art/work/chengdu-concept-fix-20261109/surfaces.png",
+      "prompt_file": "art/prompts/chengdu-concept-fix-20261109/01-surfaces.txt",
+      "prompt_sha256": "d85b1cc267b721bcba62f49bfbc4a4088e8f131dffbc49ca6032e1a6205dbe30",
+      "references": [
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/01-main-street.png",
+          "sha256": "f16083fe85476dfa54225b0a64c794c1b851c0c04e0217170f1c7623632fc460",
+          "bytes": 3301364,
+          "dimensions": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/02-side-lane.png",
+          "sha256": "82ec0d3cfee1dfce0fbf047a24b52e61ab995b5d8b139dff794e741611ca9bc9",
+          "bytes": 3062529,
+          "dimensions": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/03-shopfront.png",
+          "sha256": "a782f29f1ba65438d8d461ebfccec9d2153dbe077192c1a8742adbf1d81abff8",
+          "bytes": 3034706,
+          "dimensions": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "request_parameters": {
+        "size": "1024x1024",
+        "prompt_extend": false,
+        "enable_thinking": false,
+        "watermark": false,
+        "n": 1
+      },
+      "transforms": "None. Selected runtime PNG bytes are identical to the provider download. No crop, recolor, resampling, alpha extraction or offline seam editing was performed.",
+      "atlas_layout": {
+        "columns": 2,
+        "rows": 2,
+        "cell_pixels": [
+          512,
+          512
+        ],
+        "gutter_pixels": 0,
+        "cells": [
+          {
+            "material": "plaster",
+            "rect_pixels": [
+              0,
+              0,
+              512,
+              512
+            ],
+            "rgb_mean": [
+              202.4082260131836,
+              190.1298828125,
+              171.72553253173828
+            ],
+            "opposite_edge_mean_abs_rgb_difference": {
+              "left_right": [
+                51.193359375,
+                56.720703125,
+                64.51171875
+              ],
+              "top_bottom": [
+                23.85546875,
+                27.728515625,
+                30.537109375
+              ]
+            }
+          },
+          {
+            "material": "roof",
+            "rect_pixels": [
+              512,
+              0,
+              512,
+              512
+            ],
+            "rgb_mean": [
+              112.66372299194336,
+              115.68606567382812,
+              111.28364181518555
+            ],
+            "opposite_edge_mean_abs_rgb_difference": {
+              "left_right": [
+                51.037109375,
+                41.09765625,
+                31.32421875
+              ],
+              "top_bottom": [
+                19.923828125,
+                21.994140625,
+                24.140625
+              ]
+            }
+          },
+          {
+            "material": "paving",
+            "rect_pixels": [
+              0,
+              512,
+              512,
+              512
+            ],
+            "rgb_mean": [
+              148.54888153076172,
+              134.34376907348633,
+              116.6255111694336
+            ],
+            "opposite_edge_mean_abs_rgb_difference": {
+              "left_right": [
+                11.798828125,
+                11.015625,
+                9.412109375
+              ],
+              "top_bottom": [
+                27.400390625,
+                22.30859375,
+                15.91015625
+              ]
+            }
+          },
+          {
+            "material": "wood",
+            "rect_pixels": [
+              512,
+              512,
+              512,
+              512
+            ],
+            "rgb_mean": [
+              78.15577697753906,
+              63.09230041503906,
+              49.41950988769531
+            ],
+            "opposite_edge_mean_abs_rgb_difference": {
+              "left_right": [
+                24.26953125,
+                22.16796875,
+                19.0703125
+              ],
+              "top_bottom": [
+                8.927734375,
+                7.599609375,
+                6.4609375
+              ]
+            }
+          }
+        ]
+      },
+      "image_review": "Actual original viewed at 1024x1024. Four exact no-border quadrants in the requested order, broad readable peeling plaster, blue-gray rounded tile rows, wide short old slabs with cracks and slight moss, dark tea-brown timber grain and joins. No people, facades, props, letters or watermarks. Selected for limited scene review; no user approval implied.",
+      "review_limits": [
+        "Individual cells are not mathematically seamless. Measured opposite-edge differences are recorded; runtime cell isolation, edge handling and scale require scene review.",
+        "Paving is varied broad short slab rows rather than fully random polygonal stone placement.",
+        "The plaster includes pale off-white areas but large gray-ochre peeling patches are readable."
+      ]
+    },
+    {
+      "kind": "foliage",
+      "path": "res://assets/art/chengdu_concept_finish/foliage.png",
+      "sha256": "c283f7cf5824acab47dcaee995770dc01bf7842a975c46476cd03b3be9bd4f8e",
+      "bytes": 1375038,
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "manifest_asset_id": "d8b1db0a91ca476eb588524ddd5b4ff6",
+      "source_candidate": "art/work/chengdu-concept-fix-20261109/foliage.png",
+      "prompt_file": "art/prompts/chengdu-concept-fix-20261109/02-foliage.txt",
+      "prompt_sha256": "e482a87a31416890441a9b7f5c0f440f862a514f2f8aa0c2319fbb60c45f59b6",
+      "references": [
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/02-side-lane.png",
+          "sha256": "82ec0d3cfee1dfce0fbf047a24b52e61ab995b5d8b139dff794e741611ca9bc9",
+          "bytes": 3062529,
+          "dimensions": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/01-main-street.png",
+          "sha256": "f16083fe85476dfa54225b0a64c794c1b851c0c04e0217170f1c7623632fc460",
+          "bytes": 3301364,
+          "dimensions": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "request_parameters": {
+        "size": "1024x1024",
+        "prompt_extend": false,
+        "enable_thinking": false,
+        "watermark": false,
+        "n": 1
+      },
+      "transforms": "None. Selected runtime PNG bytes are identical to the provider download. No crop, recolor, resampling, alpha extraction or offline seam editing was performed.",
+      "image_review": "Actual original viewed at 1024x1024. Single irregular autumn-yellow and muted gray-green crown with fine leaves, visible thin internal branches and openings. No trunk, ground, cast shadow, text or watermark. The central mass is denser than the outer sprays; selected for limited scene review rather than automatic full-scene acceptance.",
+      "background": {
+        "type": "near-magenta RGB chroma-key, not an alpha channel",
+        "dominant_rgb": [
+          229,
+          5,
+          215
+        ],
+        "corner_rgbs": [
+          [
+            211,
+            13,
+            201
+          ],
+          [
+            216,
+            19,
+            207
+          ],
+          [
+            221,
+            27,
+            203
+          ],
+          [
+            207,
+            22,
+            201
+          ]
+        ],
+        "exact_ff00ff_not_guaranteed": true,
+        "diagnostic_key_rule_8bit": "r-g>80 && b-g>60 && r>140 && b>120",
+        "diagnostic_key_fraction": 0.5249643325805664,
+        "diagnostic_foreground_bounds_pixels": [
+          47,
+          42,
+          957,
+          950
+        ]
+      },
+      "review_limits": [
+        "RGB image has no true alpha. Pure #FF00FF equality is unsuitable: background varies around near-magenta and requires runtime color key and edge inspection.",
+        "Minimum detected margin is about 4.1 percent rather than the requested 6 percent. The foliage silhouette is entirely inside the canvas and not clipped.",
+        "Actual sprite key edge, layering, size, density and color must be judged in the real game scene."
+      ]
+    }
+  ],
+  "review_limits": [
+    "Both successful provider calls and original raster inspection are verified; actual runtime rendering and user judgment must be recorded separately.",
+    "Original provider downloads are preserved. Any runtime cropping, mipmap preparation, seamless edge handling or chroma-key operation belongs to the scene implementation and must be documented there."
+  ],
+  "runtime_foliage_derivation": {
+    "raw_png_unchanged": true,
+    "alpha_source": "Raw sRGB before filtering; min(R-G,B-G)>0.02 becomes transparent, remaining pixels opaque.",
+    "filtering": "Image.fix_alpha_edges before mip generation; runtime RGBA ImageTexture shared by the two trees.",
+    "reason": "Post-mipmap RGB chroma key caused pink edge speckles in actual gameplay; candidate-b5e36ab6c5e7 rejected.",
+    "runtime_shader": "Samples derived RGBA with alpha scissor0.5; no RGB chroma classification after mip sampling."
+  }
+}

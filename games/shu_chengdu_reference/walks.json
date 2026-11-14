@@ -1,0 +1,524 @@
+{
+  "schema_version": 1,
+  "scenes": {
+    "chengdu_city": {
+      "size": [
+        5120,
+        3840
+      ],
+      "floor": [
+        80,
+        120,
+        4960,
+        3600
+      ],
+      "spawn": [
+        2600,
+        3360
+      ],
+      "obstacles": [
+        [
+          1100,
+          280,
+          3420,
+          180
+        ],
+        [
+          4520,
+          280,
+          240,
+          1500
+        ],
+        [
+          4520,
+          2020,
+          240,
+          1250
+        ],
+        [
+          1100,
+          3030,
+          1400,
+          240
+        ],
+        [
+          2760,
+          3030,
+          2000,
+          240
+        ],
+        [
+          760,
+          700,
+          140,
+          680
+        ],
+        [
+          760,
+          1540,
+          140,
+          310
+        ],
+        [
+          1580,
+          1600,
+          650,
+          370
+        ],
+        [
+          1100,
+          500,
+          3300,
+          60
+        ],
+        [
+          1100,
+          500,
+          60,
+          1480
+        ],
+        [
+          1100,
+          2320,
+          60,
+          460
+        ],
+        [
+          4340,
+          500,
+          60,
+          1280
+        ],
+        [
+          4340,
+          2020,
+          60,
+          760
+        ],
+        [
+          1100,
+          2780,
+          1360,
+          60
+        ],
+        [
+          2740,
+          2780,
+          1320,
+          60
+        ],
+        [
+          4280,
+          2780,
+          120,
+          60
+        ],
+        [
+          2240,
+          1000,
+          720,
+          440
+        ],
+        [
+          2260,
+          620,
+          680,
+          270
+        ],
+        [
+          2320,
+          1710,
+          220,
+          260
+        ],
+        [
+          1320,
+          2240,
+          560,
+          320
+        ],
+        [
+          3500,
+          1420,
+          660,
+          620
+        ],
+        [
+          2800,
+          2390,
+          620,
+          280
+        ],
+        [
+          3150,
+          3370,
+          620,
+          230
+        ],
+        [
+          250,
+          900,
+          400,
+          400
+        ],
+        [
+          270,
+          1870,
+          600,
+          450
+        ],
+        [
+          320,
+          3280,
+          680,
+          310
+        ],
+        [
+          4260,
+          2840,
+          160,
+          130
+        ],
+        [
+          1940,
+          2130,
+          360,
+          240
+        ],
+        [
+          1270,
+          700,
+          520,
+          350
+        ],
+        [
+          1830,
+          630,
+          280,
+          450
+        ],
+        [
+          3060,
+          650,
+          500,
+          400
+        ],
+        [
+          3690,
+          650,
+          500,
+          430
+        ],
+        [
+          1270,
+          1170,
+          430,
+          280
+        ],
+        [
+          1770,
+          1180,
+          300,
+          290
+        ],
+        [
+          3060,
+          1170,
+          290,
+          380
+        ],
+        [
+          2820,
+          1670,
+          420,
+          350
+        ],
+        [
+          1250,
+          1710,
+          220,
+          330
+        ],
+        [
+          2840,
+          2140,
+          480,
+          180
+        ],
+        [
+          3550,
+          2460,
+          420,
+          210
+        ],
+        [
+          3480,
+          2170,
+          260,
+          100
+        ],
+        [
+          3860,
+          2170,
+          260,
+          100
+        ]
+      ],
+      "actor_radius": 12,
+      "cell_size": 20,
+      "entries": {
+        "from_mountain": [
+          2600,
+          3360
+        ],
+        "from_teahouse_front": [
+          2120,
+          2510
+        ],
+        "from_teahouse_back": [
+          2120,
+          1990
+        ]
+      },
+      "interactions": {
+        "gate_mountain_exit": {
+          "label": "南桥外返山 · 1时辰",
+          "position": [
+            2600,
+            3560
+          ],
+          "radius": 58,
+          "action": "return_from_town"
+        },
+        "gate_sign": {
+          "label": "南门方向牌",
+          "position": [
+            2740,
+            3350
+          ],
+          "radius": 58,
+          "action": "read_city_sign"
+        },
+        "market_goods": {
+          "label": "寺前药市",
+          "position": [
+            3590,
+            2310
+          ],
+          "radius": 58,
+          "action": "inspect_market_goods"
+        },
+        "market_teahouse_door": {
+          "label": "前门 · 池南茶馆",
+          "position": [
+            2120,
+            2450
+          ],
+          "radius": 58,
+          "action": "enter_teahouse"
+        },
+        "lanes_teahouse_door": {
+          "label": "后门 · 池南茶馆",
+          "position": [
+            2120,
+            2050
+          ],
+          "radius": 58,
+          "action": "enter_teahouse_back"
+        },
+        "river_cargo_notice": {
+          "label": "东岸告示",
+          "position": [
+            4430,
+            2200
+          ],
+          "radius": 58,
+          "action": "read_cargo_notice"
+        },
+        "river_umbrella": {
+          "label": "河街竹伞",
+          "position": [
+            4220,
+            2470
+          ],
+          "radius": 58,
+          "action": "inspect_river_umbrella"
+        },
+        "river_view": {
+          "label": "临江望一望",
+          "position": [
+            4000,
+            2970
+          ],
+          "radius": 58,
+          "action": "look_across_river"
+        },
+        "reference_north_precinct": {
+          "label": "子城与信相寺",
+          "position": [
+            2600,
+            940
+          ],
+          "radius": 58,
+          "action": "inspect_north_precinct"
+        },
+        "reference_mohe_pool": {
+          "label": "摩诃池与散花楼",
+          "position": [
+            2350,
+            2030
+          ],
+          "radius": 58,
+          "action": "inspect_mohe_pool"
+        },
+        "reference_wenweng_academy": {
+          "label": "文翁石室",
+          "position": [
+            1600,
+            2620
+          ],
+          "radius": 58,
+          "action": "inspect_wenweng_academy"
+        },
+        "reference_daci_temple": {
+          "label": "大慈寺",
+          "position": [
+            3830,
+            2110
+          ],
+          "radius": 58,
+          "action": "inspect_daci_temple"
+        },
+        "reference_dufu_cottage": {
+          "label": "杜甫草堂",
+          "position": [
+            520,
+            1390
+          ],
+          "radius": 58,
+          "action": "inspect_dufu_cottage"
+        },
+        "reference_qingyang_palace": {
+          "label": "青羊宫",
+          "position": [
+            620,
+            2400
+          ],
+          "radius": 58,
+          "action": "inspect_qingyang_palace"
+        },
+        "reference_wuhou_shrine": {
+          "label": "武侯祠",
+          "position": [
+            660,
+            3650
+          ],
+          "radius": 58,
+          "action": "inspect_wuhou_shrine"
+        },
+        "reference_hejiang_pavilion": {
+          "label": "合江亭",
+          "position": [
+            4180,
+            2910
+          ],
+          "radius": 58,
+          "action": "inspect_hejiang_pavilion"
+        }
+      }
+    },
+    "chengdu_teahouse": {
+      "size": [
+        1280,
+        720
+      ],
+      "floor": [
+        60,
+        160,
+        1160,
+        490
+      ],
+      "spawn": [
+        640,
+        570
+      ],
+      "obstacles": [
+        [
+          300,
+          250,
+          190,
+          120
+        ],
+        [
+          740,
+          250,
+          180,
+          120
+        ]
+      ],
+      "actor_radius": 12,
+      "cell_size": 20,
+      "entries": {
+        "from_market": [
+          640,
+          570
+        ],
+        "from_lanes": [
+          640,
+          240
+        ]
+      },
+      "interactions": {
+        "tea_market_exit": {
+          "label": "前门 · 石室街",
+          "position": [
+            640,
+            610
+          ],
+          "radius": 58,
+          "action": "leave_teahouse"
+        },
+        "tea_keeper": {
+          "label": "茶馆掌柜",
+          "position": [
+            1010,
+            350
+          ],
+          "radius": 58,
+          "action": "meet_chengdu_keeper",
+          "repeat_action": "revisit_chengdu_keeper",
+          "seen_flag": "chengdu_keeper_met"
+        },
+        "tea_guest": {
+          "label": "窗边茶客",
+          "position": [
+            520,
+            440
+          ],
+          "radius": 58,
+          "action": "meet_chengdu_guest",
+          "repeat_action": "revisit_chengdu_guest",
+          "seen_flag": "chengdu_guest_met"
+        },
+        "tea_lost_property": {
+          "label": "窗边失物架",
+          "position": [
+            930,
+            520
+          ],
+          "radius": 58,
+          "action": "inspect_lost_property"
+        },
+        "tea_lanes_exit": {
+          "label": "后门 · 摩诃池岸",
+          "position": [
+            640,
+            190
+          ],
+          "radius": 58,
+          "action": "leave_teahouse_back"
+        }
+      }
+    }
+  }
+}

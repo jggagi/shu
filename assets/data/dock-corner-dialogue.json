@@ -1,0 +1,184 @@
+{
+  "dock_keeper_talk": {
+    "title": "茶商 · 壶边闲话",
+    "start": "ask",
+    "nodes": {
+      "ask": {
+        "type": "choice",
+        "speaker": "dock_tea_keeper",
+        "text": "歇脚，还是看船？石阶上慢些，别踩湿了。",
+        "options": [
+          {
+            "id": "ask_boat",
+            "label": "问问这条船",
+            "next": "boat",
+            "action": "",
+            "conditions": {}
+          },
+          {
+            "id": "ask_tea",
+            "label": "看看茶棚",
+            "next": "tea",
+            "action": "",
+            "conditions": {}
+          },
+          {
+            "id": "leave_keeper",
+            "label": "先四处走走",
+            "next": "end",
+            "action": "",
+            "conditions": {}
+          }
+        ]
+      },
+      "boat": {
+        "type": "say",
+        "speaker": "dock_tea_keeper",
+        "text": "船还系着。看景去石阶上，投石时离船远些。",
+        "next": "end"
+      },
+      "tea": {
+        "type": "say",
+        "speaker": "dock_tea_keeper",
+        "text": "茶壶在篷下，别碰壶口。柳树那头背阴，想歇脚就去那边。",
+        "next": "end"
+      },
+      "end": {
+        "type": "end",
+        "text": "你向茶商点点头，继续在岸边走走。",
+        "set_flags": {
+          "dock_keeper_met": true
+        }
+      }
+    }
+  },
+  "dock_keeper_revisit": {
+    "title": "茶商 · 再搭两句",
+    "start": "ask",
+    "nodes": {
+      "ask": {
+        "type": "choice",
+        "speaker": "dock_tea_keeper",
+        "text": "又转回来了？有事就问，不急着赶路。",
+        "options": [
+          {
+            "id": "ask_boat",
+            "label": "问问这条船",
+            "next": "boat",
+            "action": "",
+            "conditions": {}
+          },
+          {
+            "id": "ask_tea",
+            "label": "看看茶棚",
+            "next": "tea",
+            "action": "",
+            "conditions": {}
+          },
+          {
+            "id": "leave_keeper",
+            "label": "先四处走走",
+            "next": "end",
+            "action": "",
+            "conditions": {}
+          }
+        ]
+      },
+      "boat": {
+        "type": "say",
+        "speaker": "dock_tea_keeper",
+        "text": "船还系着。看景去石阶上，投石时离船远些。",
+        "next": "end"
+      },
+      "tea": {
+        "type": "say",
+        "speaker": "dock_tea_keeper",
+        "text": "茶壶在篷下，别碰壶口。柳树那头背阴，想歇脚就去那边。",
+        "next": "end"
+      },
+      "end": {
+        "type": "end",
+        "text": "你向茶商点点头，继续在岸边走走。",
+        "set_flags": {
+          "dock_keeper_met": true
+        }
+      }
+    }
+  },
+  "dock_pebble": {
+    "title": "石阶水边",
+    "start": "look",
+    "nodes": {
+      "look": {
+        "type": "choice",
+        "speaker": "player_yanqiu",
+        "text": "脚边有几颗干燥的小石子。右侧那片水面离船远些。",
+        "options": [
+          {
+            "id": "toss_pebble",
+            "label": "拾一颗，轻投向空水面",
+            "next": "splash",
+            "action": "toss_dock_pebble",
+            "conditions": {}
+          },
+          {
+            "id": "leave_water",
+            "label": "只看看河面",
+            "next": "end",
+            "action": "",
+            "conditions": {}
+          }
+        ]
+      },
+      "splash": {
+        "type": "say",
+        "speaker": "player_yanqiu",
+        "text": "石子落在船外的水面上，涟漪慢慢散开。",
+        "next": "end"
+      },
+      "end": {
+        "type": "end",
+        "text": "你在石阶上站稳，望了一眼河面。",
+        "set_flags": {}
+      }
+    }
+  },
+  "dock_rest_offer": {
+    "title": "柳下歇脚",
+    "start": "offer",
+    "nodes": {
+      "offer": {
+        "type": "choice",
+        "speaker": "player_yanqiu",
+        "text": "柳荫遮住了日头，水声听得更清楚了。要在这里歇一会儿吗？",
+        "options": [
+          {
+            "id": "rest_dock",
+            "label": "歇一时辰（恢复至多34精力）",
+            "next": "rested",
+            "action": "rest_at_dock",
+            "conditions": {}
+          },
+          {
+            "id": "leave_willow",
+            "label": "先看看，不歇脚",
+            "next": "end",
+            "action": "",
+            "conditions": {}
+          }
+        ]
+      },
+      "rested": {
+        "type": "say",
+        "speaker": "player_yanqiu",
+        "text": "慢慢歇过一会儿，呼吸也匀了些。",
+        "next": "end"
+      },
+      "end": {
+        "type": "end",
+        "text": "你又望了一眼水面，准备继续走走。",
+        "set_flags": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "date_utc": "2026-11-14",
+  "author": "Original Shu art direction, Alibaba Bailian Qwen image synthesis",
+  "provider": "qwen",
+  "model": "qwen-image-3.0",
+  "generation_count": 1,
+  "successful_downloads": 1,
+  "automatic_retries": 0,
+  "manifest_asset_id": "629f7504408742818dd71f8d3efee79a",
+  "runtime": "res://assets/art/dock_dialogue_portraits/tea-keeper.png",
+  "sha256": "eed3a02d85fc74a890037ce9cea1b55836f5ef879c7d5a10a3395a68cb0180a9",
+  "rights": "Original project generated artwork under provider terms; underlying source model and original player/mentor art retain their existing project provenance. No third-party open-license claim.",
+  "purpose": "Current adult male dock tea keeper dialogue avatar, identity reference rendered from the exact current original model. Existing player/mentor portraits reused by stable speaker ID.",
+  "format": "1024x1024 RGB, opaque parchment background; not claimed transparent",
+  "crop_note": "Generated source contains an unwanted bottom caption panel beginning near y845. The original PNG is retained byte exact; runtime AtlasTexture uses region [140,0,760,820], excluding every caption/panel pixel. No text from this image is used as dialogue. No regeneration or destructive crop.",
+  "input_hashes": {
+    "art/source/dock-dialogue/keeper-model.png": "b84afdefe1fa2fde452e5682a521c5de395ae3fd63b060b6e86f2adf0cef186c",
+    "assets/art/v2/jiang-yanqiu-v2.png": "e783171f4dd888be02683412ec401909623afa4a19e8e06e402e0afe654bfaa5",
+    "assets/art/v2/ye-zhixian-v2.png": "2b7b5f00e218617a011343436490e0d6919464ace887089373b00da902e8d5d0",
+    "assets/art/town_volume_cast/tea-seller.glb": "a1dfdfaba3f05ab3909100e0569981316f2fdf1fb05de8069c9364599cc6ccde",
+    "addons/cultivation_mode/chengdu_actor.gd": "f894cd33a4d4270d99609773991a247db506c646dfb7ef32b9bae57dbba87170",
+    "tools/art/render_dock_keeper_portrait.gd": "716168972b07f9d1189ebb8ebdce8d1fb94d770086cc7f7dd25303043a5d7166",
+    "art/prompts/dock-dialogue-20261114/keeper.txt": "78706ab374ece4a3108282a0ebd6a9576b4206f7a70cdbcda41477f83b4996b1"
+  },
+  "original_cast_source": "res://assets/art/town_volume_cast/source.json",
+  "original_portrait_source": "res://assets/art/v2/source.json",
+  "renderer": "res://tools/art/render_dock_keeper_portrait.gd",
+  "status": "selected for cropped runtime avatar review; user acceptance pending"
+}

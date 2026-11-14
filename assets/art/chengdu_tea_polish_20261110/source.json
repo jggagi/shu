@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "asset": "Original Shu one-tea-shop polish: coherent courtyard crown and chibi adult tea seller",
+  "provider": "qwen",
+  "model": "qwen-image-3.0",
+  "generation_count": 2,
+  "successful_download_count": 2,
+  "automatic_retries": 0,
+  "paid_api_used": true,
+  "recorded_at_utc": "2026-11-10T13:51:20.759983+00:00",
+  "author": "Original generated artwork directed for the Shu project",
+  "rights": "Generated project artwork using selected original Shu concepts and an original in-game protagonist guide. Provider terms apply; no third-party license claimed.",
+  "status": "SELECTED_FOR_ONE_SHOP_RUNTIME_REVIEW_USER_PLAYTEST_PENDING",
+  "runtime_scope": "Exactly one new crown painting and one new full-body tea-seller pose for the authorized one-tea-shop polish sample. Does not alter the other vendor atlas, other trees, city size, camera, gameplay, navigation, collisions or save-state rules. Runtime placement, shadows and lighting grouping belong to the scene implementation.",
+  "outputs": [
+    {
+      "kind": "canopy",
+      "path": "res://assets/art/chengdu_tea_polish_20261110/canopy.png",
+      "sha256": "96713d93d129b6874ee9673827f6758317771c776a0505b359594c70f4917798",
+      "bytes": 1217066,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "manifest_asset_id": "ca364dc8d65c420888a23a53c3504e29",
+      "provider_record_created_at_utc": "2026-11-10T13:46:52.527953+00:00",
+      "source_candidate": "art/work/chengdu-tea-polish-20261110/canopy.png",
+      "prompt_file": "art/prompts/chengdu-tea-polish-20261110/01-canopy.txt",
+      "prompt_sha256": "3b73945d7d57ebe545ead5bdbcc2d3cc3f5c0a2bff13d0f177618acb1bf3584b",
+      "references": [
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/01-main-street.png",
+          "sha256": "f16083fe85476dfa54225b0a64c794c1b851c0c04e0217170f1c7623632fc460",
+          "bytes": 3301364,
+          "dimensions": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/03-shopfront.png",
+          "sha256": "a782f29f1ba65438d8d461ebfccec9d2153dbe077192c1a8742adbf1d81abff8",
+          "bytes": 3034706,
+          "dimensions": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/02-side-lane.png",
+          "sha256": "82ec0d3cfee1dfce0fbf047a24b52e61ab995b5d8b139dff794e741611ca9bc9",
+          "bytes": 3062529,
+          "dimensions": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "request_parameters": {
+        "size": "1024x1024",
+        "prompt_extend": false,
+        "enable_thinking": false,
+        "watermark": false,
+        "n": 1
+      },
+      "diagnostic_foreground_bounds_pixels": [
+        80,
+        69,
+        939,
+        948
+      ],
+      "suggested_contact_anchor_pixels": [
+        512,
+        948
+      ],
+      "anchor_convention": "Whole image top-left origin, x right/y down. Suggested lower twig or lowest shoe anchor is an art placement hint, not an interaction rectangle or gameplay coordinate. Actual sprite-ground or branch contact must be reviewed in the game.",
+      "background": {
+        "type": "near-magenta RGB chroma-key; no true alpha channel",
+        "dominant_rgb": [
+          237,
+          27,
+          159
+        ],
+        "corner_rgbs": [
+          [
+            229,
+            27,
+            159
+          ],
+          [
+            229,
+            32,
+            159
+          ],
+          [
+            233,
+            31,
+            160
+          ],
+          [
+            231,
+            34,
+            158
+          ]
+        ],
+        "exact_ff00ff_guaranteed": false,
+        "diagnostic_key_rule_8bit": "r-g>80 && b-g>60 && r>140 && b>120",
+        "diagnostic_key_fraction": 0.5564069747924805,
+        "key_rule_note": "Read-only measurements of the original RGB image. No alpha extraction or image alteration was applied; runtime keying and edge softness remain scene implementation."
+      },
+      "transforms": "None. Selected runtime PNG is byte-identical to the original provider download. No crop, recolor, resampling, alpha extraction, compositing or metadata stripping.",
+      "provider_metadata": {
+        "text_chunks": [
+          {
+            "type": "iTXt",
+            "keyword": "XML:com.adobe.xmp",
+            "payload_bytes": 630
+          }
+        ],
+        "credential_endpoint_personal_path_markers_detected": false,
+        "preserved": true
+      },
+      "image_review": "Actually viewed the complete 1024x1024 original. One coherent irregular yellow-green crown with approximately five readable leaf masses, organic forked branches, open gaps and a very short narrow lower twig junction. No radial fan, parallel brush streaks, crossed-card composition, long trunk, ground, cast shadow, text or watermark. Warm upper-left forms and cooler gray-green shaded leaf groups are visible.",
+      "review_limits": [
+        "Detected top margin is 69 pixels (6.74 percent), slightly below the requested seven percent. Crown and twig tips are fully inside the canvas and not clipped.",
+        "An orthographic high three-quarter view was requested; exact 52-degree camera equality cannot be certified from a generated isolated raster.",
+        "Rounded large forms and visible branch gaps must still be judged after placement on the existing game tree. A coherent source image alone does not prove correct runtime crown orientation."
+      ]
+    },
+    {
+      "kind": "tea_seller",
+      "path": "res://assets/art/chengdu_tea_polish_20261110/tea_seller.png",
+      "sha256": "38e30906bcf3c57b88924ba113fcd0f8756b8542a427d3f616e2e46beaf3cee8",
+      "bytes": 622494,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "manifest_asset_id": "999526388ae04db38e38ddc681585288",
+      "provider_record_created_at_utc": "2026-11-10T13:48:52.286633+00:00",
+      "source_candidate": "art/work/chengdu-tea-polish-20261110/tea_seller.png",
+      "prompt_file": "art/prompts/chengdu-tea-polish-20261110/02-tea-seller.txt",
+      "prompt_sha256": "344a6b3734ac301c8f16b3c805312e77dc6a84111d0ebc2721e93a9e4b1c83bb",
+      "references": [
+        {
+          "path": "assets/art/chengdu_tea_polish_20261110/references/player-proportions-guide.png",
+          "sha256": "a408dcb53f7a8636eb3e61eb78950146a75125a052ad5a6509063eed6b7f36ea",
+          "bytes": 47883,
+          "dimensions": [
+            475,
+            740
+          ]
+        },
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/03-shopfront.png",
+          "sha256": "a782f29f1ba65438d8d461ebfccec9d2153dbe077192c1a8742adbf1d81abff8",
+          "bytes": 3034706,
+          "dimensions": [
+            1672,
+            941
+          ]
+        },
+        {
+          "path": "docs/concepts/chengdu-street-references-20261108/01-main-street.png",
+          "sha256": "f16083fe85476dfa54225b0a64c794c1b851c0c04e0217170f1c7623632fc460",
+          "bytes": 3301364,
+          "dimensions": [
+            1672,
+            941
+          ]
+        }
+      ],
+      "request_parameters": {
+        "size": "1024x1024",
+        "prompt_extend": false,
+        "enable_thinking": false,
+        "watermark": false,
+        "n": 1
+      },
+      "diagnostic_foreground_bounds_pixels": [
+        373,
+        63,
+        650,
+        929
+      ],
+      "suggested_contact_anchor_pixels": [
+        512,
+        929
+      ],
+      "anchor_convention": "Whole image top-left origin, x right/y down. Suggested lower twig or lowest shoe anchor is an art placement hint, not an interaction rectangle or gameplay coordinate. Actual sprite-ground or branch contact must be reviewed in the game.",
+      "background": {
+        "type": "near-magenta RGB chroma-key; no true alpha channel",
+        "dominant_rgb": [
+          239,
+          22,
+          177
+        ],
+        "corner_rgbs": [
+          [
+            225,
+            19,
+            174
+          ],
+          [
+            229,
+            26,
+            175
+          ],
+          [
+            233,
+            31,
+            175
+          ],
+          [
+            227,
+            28,
+            175
+          ]
+        ],
+        "exact_ff00ff_guaranteed": false,
+        "diagnostic_key_rule_8bit": "r-g>80 && b-g>60 && r>140 && b>120",
+        "diagnostic_key_fraction": 0.8360090255737305,
+        "key_rule_note": "Read-only measurements of the original RGB image. No alpha extraction or image alteration was applied; runtime keying and edge softness remain scene implementation."
+      },
+      "transforms": "None. Selected runtime PNG is byte-identical to the original provider download. No crop, recolor, resampling, alpha extraction, compositing or metadata stripping.",
+      "provider_metadata": {
+        "text_chunks": [
+          {
+            "type": "iTXt",
+            "keyword": "XML:com.adobe.xmp",
+            "payload_bytes": 630
+          }
+        ],
+        "credential_endpoint_personal_path_markers_detected": false,
+        "preserved": true
+      },
+      "image_review": "Actually viewed the complete 1024x1024 original. One full-body young-adult woman with a large rounded head, tied bun, compact body, beige cross-collar top, muted gray-green apron, dusty brown-rose skirt and a small brown teapot held in both hands. Both cloth shoes and the whole hair bun are visible. Head/body balance is visibly shorter and larger-headed than the old four-vendor atlas. No furniture, ground, cast shadow, text or watermark.",
+      "approximate_head_proportion_review": {
+        "method": "Manual visual landmarks, approximate and not an automated anatomical measurement",
+        "hair_and_bun_top_y": 63,
+        "chin_bottom_y_approx": 325,
+        "lowest_shoe_bottom_y_exclusive": 929,
+        "total_height_pixels": 866,
+        "head_height_pixels_approx": 262,
+        "total_head_height_ratio_approx": 3.31,
+        "requested_ratio": 3.2,
+        "note": "The estimate includes the hair bun. It supports a much closer chibi proportion, not exact numerical compliance or final user approval."
+      },
+      "review_limits": [
+        "Detected top margin is 63 pixels (6.15 percent), below the requested eight percent; the full bun and all shoes remain complete inside the canvas.",
+        "Two soles have a small apparent front/back perspective difference rather than exactly the same image baseline. Stable game footing and the soft ground shadow must be reviewed at actual camera scale.",
+        "The apparent head ratio is close to the requested 3.2 rather than exact. Actual protagonist scale, adult identity and matching visual weight require in-scene review.",
+        "The prompt asked for a 52-degree overhead view and upper-left warm light; exact generated camera geometry is not measurable from this single raster."
+      ]
+    }
+  ],
+  "actual_player_guide": {
+    "recipe_path": "assets/art/chengdu_tea_polish_20261110/references/player-guide-source.json",
+    "recipe_sha256": "9d1232efcbe2cf01123f742a40f557839fb4969335b7a832700a24ce5d50c79d",
+    "recipe": {
+      "purpose": "Actual in-game front-facing protagonist proportion guide only; not a character edit target. No original image changed.",
+      "source_path": ".local/qa/chengdu-market-life-20261109/shopfront/herbs.png",
+      "source_sha256": "143089cf3967c78f5ec595d49d3c7e0b70fe05e6d794d43f7b8af417e6d8521a",
+      "crop_pixels_xyxy": [
+        592,
+        390,
+        687,
+        538
+      ],
+      "resize_pixels": [
+        475,
+        740
+      ],
+      "resampling": "nearest neighbor, exactly 5x cropped pixels",
+      "output_path": "art/work/chengdu-tea-polish-20261110/player-proportions-guide.png",
+      "output_sha256": "a408dcb53f7a8636eb3e61eb78950146a75125a052ad5a6509063eed6b7f36ea",
+      "portable_source_path": "assets/art/chengdu_tea_polish_20261110/references/runtime-herbs.png",
+      "portable_guide_path": "assets/art/chengdu_tea_polish_20261110/references/player-proportions-guide.png"
+    },
+    "purpose": "Proportion and camera guide only. Original game capture retained byte-for-byte; crop and nearest-neighbor enlargement do not modify any runtime character art. Reference copies are provenance inputs, not new runtime assets."
+  },
+  "review_limits": [
+    "Both provider downloads and actual original-raster inspection are verified. Actual scene contact, shading, occlusion and user acceptance remain separate checks.",
+    "Exactly two serial standard qwen-image-3.0 calls completed with no retry and no Pro selection. Provider automatically recorded each successful output once in the art manifest; no duplicate entries were added.",
+    "The raw source images have near-magenta RGB backgrounds, not alpha. Runtime chroma key and placement must be independently verified."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "scope": "Chengdu connected streets feedback revision: six walk scenes, two street loops and a traversable teahouse; existing anonymous encounters and optional umbrella lost property retained.",
+  "base_pack": "shu_town_walk",
+  "base_commit": "7c992c578b1fe4a1624c769812425b38080771d3",
+  "inherited_json_sha256": {
+    "rules.json": "e3dfc6d886d7e39873be31fb22c50a4f7f873148c3f13cdd7eccf1c2b4339a37",
+    "characters.json": "b1c1917f30f28d2e9907e92df0adc81e606b005139b6e945e264f498991a34e5",
+    "events.json": "be167f965c735f6d903ddebe319442f2136adced4073258295ddb970accc0bcb",
+    "motions.json": "518a167f8cb72ce5edc50ac3a766d0c1eb28122ef119a0141366ecc6f8770df2",
+    "voices.json": "9e6b9e1ac0cc17ab275b13b2c8c75d6ef747c7ed94ca7642227dfeaeffe790a5",
+    "scenes.json": "a91a9f0879ed73146d2601003bb9c11ca972f29dbb96952fcf51e54430dcd500",
+    "activities.json": "ae23319b762bb1dd78b0ef5be45c2c0bc028cda7b1d7342d451511ad904cd2a7",
+    "game.json": "5d9851d0ce97d2cd8182fa9e930712c0230ea39fd5043ae1af7f84d87b484b8a",
+    "walks.json": "ae989a0e0ceea4fcfda237de8b48022527bd771d69ced17a03d0f9c8b5357b97"
+  },
+  "unchanged_files": [
+    "rules.json",
+    "motions.json",
+    "voices.json"
+  ],
+  "unchanged_content": [
+    "Existing player and mentor character definitions",
+    "Existing mentor_tip and mentor_practice_report event graphs",
+    "Existing five-sword actions, mentor interactions, rest and return_to_corridor"
+  ],
+  "authored_sources": [
+    "trunk/mentor-slow-half-step.json",
+    "trunk/mentor-practice-report.json"
+  ],
+  "new_text": "Original brief mechanism/location narration. New city events use choice/end with a system narration registry entry; no new say, spoken character dialogue, audio, named city character or long-form side-story manuscript.",
+  "story_archive_policy": "Mainline manuscripts remain in jggagi/shu trunk/; new side-story manuscripts belong in independent jggagi/sub. This mechanism-only slice creates none.",
+  "source_modules": "Existing EngineSession and reviewed P1b navigation adaptation; see docs/CHENGPING_P1B_SOURCE_AUDIT.md. No additional Chengping source, art, plot or global state imported.",
+  "presentation_layout": "res://assets/data/chengdu-layout.json",
+  "save_boundary": "Pack shu_chengdu / 0.4.1; revised six-map exploration state requires an isolated candidate app save directory. No migration from 0.4.0 or earlier saves.",
+  "feedback_revision": {
+    "date": "2026-11-07",
+    "source": "User feedback: 城市结构过于线性",
+    "previous_content_version": "0.4.0",
+    "content_version": "0.4.1",
+    "connections": "gate-market-river retained; gate-lanes-square-market loop, square-river-market loop, and lanes-teahouse-market passage added.",
+    "rules": "No task gates, forced routes, added city costs, rewards, flags, event graphs, say nodes, voices or named city characters.",
+    "layout_adjustment": "Second teahouse table moved to [740,250,180,120] so the north entrance at [640,240] remains walkable.",
+    "verification": "Implementation candidate; state/native/Web/user acceptance recorded separately."
+  }
+}

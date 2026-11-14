@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "scope": "One tea shop, its opposite gallery house, one existing courtyard tree and one tea merchant. Presentation only; the original15360x11520 city,592 houses,622 obstacles, navigation, continuous follow camera and EngineSession remain authoritative.",
+  "source_layout": "res://assets/data/chengdu-art-street-layout.json",
+  "market_layout": "res://assets/data/chengdu-market-life-layout.json",
+  "art_source": "res://assets/art/chengdu_tea_polish_20261110/source.json",
+  "coordinate_space": "Meters in each target house's StreetFacingStructure frame unless a field explicitly says world or logical. Original bounds and roof-fade rows remain authoritative for solid details.",
+  "targets": {
+    "tea_shop": "ward_city_22_19",
+    "gallery_house": "ward_city_22_16",
+    "tree": "ward_city_22_15"
+  },
+  "source_guide": {
+    "composition_anchor_logical": [
+      7800,
+      7290
+    ],
+    "style_references": [
+      "docs/concepts/chengdu-street-references-20261108/01-main-street.png",
+      "docs/concepts/chengdu-street-references-20261108/03-shopfront.png"
+    ],
+    "goals": "Natural coherent crown instead of repeated fan cards; a restrained tea-shop group visible in the normal south-looking follow view; clearer gallery window and beam layers; one merchant matching the protagonist's chibi proportions and grounded at the existing foot anchor.",
+    "limits": "No new opening, interior, trade, dialogue, interaction, state, walk blocker or road prop. Preserve the other market sites and the second original courtyard tree. Artwork provenance and exact original PNG hashes belong to the new asset source record."
+  },
+  "tree": {
+    "house_id": "ward_city_22_15",
+    "image": "res://assets/art/chengdu_tea_polish_20261110/canopy.png",
+    "center": [
+      0.0,
+      3.35,
+      0.15
+    ],
+    "world_size": [
+      1.78,
+      1.8
+    ],
+    "arch_height": 0.16,
+    "bend_height": 0.1,
+    "minimum_clearance": 2.7,
+    "segments": 10,
+    "replace_only_node_role": "ConceptLeafClusters",
+    "keep_original_trunk_and_branches": true,
+    "within_original_lot": true,
+    "composition_note": "One coherent canopy image on one lightly bent world-XZ mesh. Preserve its natural silhouette; do not replicate radial fan cards."
+  },
+  "merchant": {
+    "house_id": "ward_city_22_19",
+    "image": "res://assets/art/chengdu_tea_polish_20261110/tea_seller.png",
+    "logical_anchor": [
+      8214.8,
+      7276.0
+    ],
+    "shoe_y": 0.02,
+    "visible_height": 1.65,
+    "max_width": 0.75,
+    "anchor_clearance": 18,
+    "local_xz_rect": [
+      -1.9,
+      1.08,
+      2.0,
+      0.9
+    ],
+    "vertical_range": [
+      -0.1,
+      1.9
+    ],
+    "nonblocking": true,
+    "replace_only_selected_market_vendor": true,
+    "head_to_body_ratio_guide": 3.2,
+    "placement_note": "Keep the already walkable tea-shop frontage anchor. Fit the real foreground aspect ratio under the width cap and compensate transparent padding so the actual alpha shoe pixels meet shoe_y; this is not a new collision or interaction target."
+  },
+  "tea_composition": {
+    "house_id": "ward_city_22_19",
+    "preserve_existing_sign": true,
+    "preserve_other_market_sites": true,
+    "awning": {
+      "back_z": 0.6,
+      "front_z": 1.015,
+      "width": 1.65,
+      "back_y": 1.84,
+      "front_y": 1.62
+    },
+    "counter": {
+      "z": 0.9,
+      "y": 1.055
+    },
+    "south_display": {
+      "x": 0.965,
+      "z": -0.1905,
+      "width": 0.9,
+      "ledge_y": 0.955,
+      "depth": 0.06,
+      "blind_y": 1.6,
+      "tea_set_scale": 0.8,
+      "placement_note": "A thin ledge, small tea set and rolled blind beside the real south-wall window. Width runs along local z, depth along local x; x+.5*depth=.995 remains inside the original lot. Do not enlarge or paint a nonexistent window opening."
+    }
+  },
+  "gallery": {
+    "house_id": "ward_city_22_16",
+    "south_trim": true,
+    "beam_y": [
+      0.3,
+      1.88,
+      3.08
+    ],
+    "window_tones": true,
+    "preserve_original_mesh": true,
+    "placement_note": "Emphasize the existing south-side windows, original lower/upper wall setbacks and beam layers. Keep all additions inside the original gallery lot."
+  },
+  "grade": {
+    "bounds": [
+      7380,
+      7100,
+      1120,
+      700
+    ],
+    "feather_logical": 160,
+    "ground_gain": [
+      0.82,
+      0.84,
+      0.87
+    ],
+    "plaster_gain": [
+      1.04,
+      1.0,
+      0.91
+    ],
+    "roof_gain": [
+      0.92,
+      0.97,
+      1.02
+    ],
+    "wood_gain": [
+      0.96,
+      0.9,
+      0.82
+    ],
+    "eave_strength": 0.2
+  }
+}

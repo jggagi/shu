@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "scope": "A complete authored first-street composition, original ten houses plus eight visible neighbours. Geometry and presentation only; original592 lots/622 navigation obstacles and EngineSession remain authoritative.",
+  "geometry_bounds": [
+    6700,
+    6660,
+    2000,
+    1540
+  ],
+  "houses": [
+    {
+      "id": "ward_city_20_15",
+      "role": "home",
+      "bounds": [
+        7250,
+        6720,
+        170,
+        160
+      ],
+      "yaw_degrees": 90,
+      "eave_height": 1.83,
+      "roof_rise": 0.54,
+      "ridge_along_front": true,
+      "courtyard_tree": false
+    },
+    {
+      "id": "ward_city_20_16",
+      "role": "home",
+      "bounds": [
+        7500,
+        6720,
+        170,
+        160
+      ],
+      "yaw_degrees": 90,
+      "eave_height": 1.88,
+      "roof_rise": 0.48,
+      "ridge_along_front": false,
+      "courtyard_tree": false
+    },
+    {
+      "id": "ward_city_20_19",
+      "role": "home",
+      "bounds": [
+        8250,
+        6720,
+        170,
+        160
+      ],
+      "yaw_degrees": -90,
+      "eave_height": 1.82,
+      "roof_rise": 0.54,
+      "ridge_along_front": false,
+      "courtyard_tree": false
+    },
+    {
+      "id": "ward_city_20_20",
+      "role": "home",
+      "bounds": [
+        8500,
+        6720,
+        170,
+        160
+      ],
+      "yaw_degrees": -90,
+      "eave_height": 1.72,
+      "roof_rise": 0.52,
+      "ridge_along_front": false,
+      "courtyard_tree": false
+    },
+    {
+      "id": "ward_city_21_13",
+      "role": "home",
+      "bounds": [
+        6750,
+        6970,
+        170,
+        160
+      ],
+      "yaw_degrees": 90,
+      "eave_height": 1.55,
+      "roof_rise": 0.45,
+      "ridge_along_front": false,
+      "courtyard_tree": false
+    },
+    {
+      "id": "ward_city_21_15",
+      "role": "home",
+      "bounds": [
+        7250,
+        6970,
+        170,
+        160
+      ],
+      "yaw_degrees": 90,
+      "eave_height": 1.95,
+      "roof_rise": 0.58,
+      "ridge_along_front": true,
+      "courtyard_tree": false
+    },
+    {
+      "id": "ward_city_21_16",
+      "role": "workshop",
+      "bounds": [
+        7500,
+        6970,
+        170,
+        160
+      ],
+      "yaw_degrees": 90,
+      "eave_height": 1.72,
+      "roof_rise": 0.48,
+      "ridge_along_front": false,
+      "courtyard_tree": false
+    },
+    {
+      "id": "ward_city_21_19",
+      "role": "two_storey",
+      "bounds": [
+        8250,
+        6970,
+        170,
+        160
+      ],
+      "yaw_degrees": -90,
+      "eave_height": 3.42,
+      "roof_rise": 0.58,
+      "ridge_along_front": false,
+      "courtyard_tree": false
+    },
+    {
+      "id": "ward_city_21_20",
+      "role": "home",
+      "bounds": [
+        8500,
+        6970,
+        170,
+        160
+      ],
+      "yaw_degrees": -90,
+      "eave_height": 1.62,
+      "roof_rise": 0.45,
+      "ridge_along_front": false,
+      "courtyard_tree": false
+    },
+    {
+      "id": "ward_city_22_13",
+      "role": "home",
+      "bounds": [
+        6750,
+        7220,
+        170,
+        160
+      ],
+      "yaw_degrees": 90,
+      "eave_height": 1.82,
+      "roof_rise": 0.56,
+      "ridge_along_front": false,
+      "courtyard_tree": false
+    },
+    {
+      "id": "ward_city_22_15",
+      "role": "home",
+      "bounds": [
+        7250,
+        7220,
+        170,
+        160
+      ],
+      "yaw_degrees": 90,
+      "eave_height": 2.02,
+      "roof_rise": 0.58,
+      "ridge_along_front": true,
+      "courtyard_tree": true
+    },
+    {
+      "id": "ward_city_22_16",
+      "role": "gallery_house",
+      "bounds": [
+        7500,
+        7220,
+        170,
+        160
+      ],
+      "yaw_degrees": 90,
+      "eave_height": 3.3,
+      "roof_rise": 0.6,
+      "ridge_along_front": false,
+      "courtyard_tree": false
+    },
+    {
+      "id": "ward_city_22_19",
+      "role": "tea_shop",
+      "bounds": [
+        8250,
+        7220,
+        170,
+        160
+      ],
+      "yaw_degrees": -90,
+      "eave_height": 2.05,
+      "roof_rise": 0.58,
+      "ridge_along_front": false,
+      "courtyard_tree": false
+    },
+    {
+      "id": "ward_city_22_20",
+      "role": "home",
+      "bounds": [
+        8500,
+        7220,
+        170,
+        160
+      ],
+      "yaw_degrees": -90,
+      "eave_height": 1.78,
+      "roof_rise": 0.52,
+      "ridge_along_front": false,
+      "courtyard_tree": false
+    },
+    {
+      "id": "ward_city_23_15",
+      "role": "cloth_shop",
+      "bounds": [
+        7250,
+        7470,
+        170,
+        160
+      ],
+      "yaw_degrees": 90,
+      "eave_height": 2.1,
+      "roof_rise": 0.56,
+      "ridge_along_front": true,
+      "courtyard_tree": false
+    },
+    {
+      "id": "ward_city_23_16",
+      "role": "corner_shop",
+      "bounds": [
+        7500,
+        7470,
+        170,
+        160
+      ],
+      "yaw_degrees": 90,
+      "eave_height": 1.96,
+      "roof_rise": 0.62,
+      "ridge_along_front": false,
+      "courtyard_tree": false
+    },
+    {
+      "id": "ward_city_23_19",
+      "role": "home",
+      "bounds": [
+        8250,
+        7470,
+        170,
+        160
+      ],
+      "yaw_degrees": -90,
+      "eave_height": 2.04,
+      "roof_rise": 0.58,
+      "ridge_along_front": false,
+      "courtyard_tree": true
+    },
+    {
+      "id": "ward_city_23_20",
+      "role": "timber_home",
+      "bounds": [
+        8500,
+        7470,
+        170,
+        160
+      ],
+      "yaw_degrees": -90,
+      "eave_height": 1.86,
+      "roof_rise": 0.5,
+      "ridge_along_front": false,
+      "courtyard_tree": false
+    }
+  ],
+  "ground": {
+    "areas": [
+      [
+        6700,
+        6660,
+        960,
+        1540
+      ],
+      [
+        7560,
+        6660,
+        800,
+        1540
+      ],
+      [
+        8260,
+        6660,
+        440,
+        1540
+      ]
+    ],
+    "edge_feather": 40,
+    "paving_period_meters": 3.2,
+    "wall_edge_width_meters": 0.32,
+    "wall_edge_strength": 0.14,
+    "scope_note": "The existing opaque ground helper covers the whole visible street composition, without adding planes."
+  },
+  "roof": {
+    "thickness": 0.085,
+    "eave_lift": 0.13,
+    "corner_lift": 0.09,
+    "ridge_radius": 0.045,
+    "width_segments": 12,
+    "slope_segments": 10
+  },
+  "tree": {
+    "minimum_crown_clearance": 2.7,
+    "crown_within_original_lot": true
+  },
+  "art_helper": "res://addons/cultivation_mode/chengdu_art_street_art.gd",
+  "calibration": "res://assets/art/chengdu_art_street/calibration.json"
+}

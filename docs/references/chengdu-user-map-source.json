@@ -1,0 +1,9 @@
+{
+  "file": "docs/references/chengdu-user-map.png",
+  "sha256": "d771ba7d0acde0b05315dfefc4bd396ca0d8a1ff614639e3c398d8ab97c67770",
+  "bytes": 3644687,
+  "origin": "User supplied attachment in this conversation, instruction: 照着地图设计",
+  "author": "Not provided",
+  "license": "Not provided; retained as design reference only, excluded from runtime and exports",
+  "interpretation": "North-up game layout reference; visual direction and relative positions, not a historical survey or chronology source."
+}

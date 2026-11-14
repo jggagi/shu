@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "base_layout": "res://assets/data/chengdu-scale-layout.json",
+  "scope": "Presentation only: the south gate, Wanli Bridge and eight existing houses on the first street. No navigation, actor, camera or Session changes.",
+  "focus_bounds": [
+    7000,
+    7100,
+    1900,
+    3000
+  ],
+  "south_gate": {
+    "id": "south_gate",
+    "wall_ids": [
+      "south_wall_west",
+      "south_wall_mid"
+    ],
+    "wall_return_length": 480,
+    "inscription": "成都",
+    "stone": "#a9b0a0",
+    "wood": "#75604a",
+    "tile": "#687d76"
+  },
+  "wanli_bridge": {
+    "id": "wanli_bridge",
+    "inscription": "万里桥",
+    "post_spacing": 92,
+    "post_height": 0.88,
+    "rail_height": 0.66,
+    "water_side_offset": 22,
+    "bank_length": 480
+  },
+  "houses": [
+    {
+      "id": "ward_city_22_15",
+      "style": "lattice_shop",
+      "sign": "茶"
+    },
+    {
+      "id": "ward_city_22_16",
+      "style": "plaster_door",
+      "sign": ""
+    },
+    {
+      "id": "ward_city_22_19",
+      "style": "cloth_awning",
+      "sign": "锦"
+    },
+    {
+      "id": "ward_city_22_20",
+      "style": "plaster_door",
+      "sign": ""
+    },
+    {
+      "id": "ward_city_23_15",
+      "style": "cloth_awning",
+      "sign": "锦"
+    },
+    {
+      "id": "ward_city_23_16",
+      "style": "lattice_shop",
+      "sign": "茶"
+    },
+    {
+      "id": "ward_city_23_19",
+      "style": "cloth_awning",
+      "sign": "锦"
+    },
+    {
+      "id": "ward_city_23_20",
+      "style": "lattice_shop",
+      "sign": "茶"
+    }
+  ]
+}

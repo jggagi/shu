@@ -1,0 +1,10 @@
+{
+  "source_repository": "jggagi/sub",
+  "source_path": "dock-corner-living-sample/events.json",
+  "source_base_commit": "50acc08b5cdd7d8a83525f1c0c1102ca9b7d6ca5",
+  "source_status": "new local authored file; not committed or pushed",
+  "source_sha256": "35b49e083ae878fac88fc44bb5076351281a9db85571aa0048d8bd949f172bda",
+  "snapshot": "res://assets/data/dock-corner-dialogue.json",
+  "author": "Shu project original interactive adaptation, 2026-11-13",
+  "scope": "Small dock conversations, rest and pebble feedback; no quest chain, third-party dialogue, new portrait or voice."
+}

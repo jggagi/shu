@@ -1,0 +1,405 @@
+{
+  "scope": "Independent nine-times-area Chengdu candidate: 15360x11520 continuous outdoor city with individually blocked normal-sized houses and traversable alleys, plus the retained two-door tea room.",
+  "base_pack": "shu_chengdu_reference",
+  "base_content_version": "0.6.0",
+  "base_commit": "7c992c578b1fe4a1624c769812425b38080771d3",
+  "base_snapshot_sha256": {
+    "activities.json": "d76938861f0c9a9c8b679f7686f5175c25ee8f0ecc1956bb4da8be0e8b917271",
+    "characters.json": "03437af888d6a5e681b046f2634ae1181537646b16ffd1820d164d7b385e7404",
+    "events.json": "2c7a21efe4f350fd554f89157e7e7d0b7ee48ef0196938d992f62a025cfd0695",
+    "game.json": "ddf7d45fc2e9afacf790b8bdd1ae10531565a9a3b8fec0f96b14dd21ecdf5a5b",
+    "motions.json": "518a167f8cb72ce5edc50ac3a766d0c1eb28122ef119a0141366ecc6f8770df2",
+    "rules.json": "e3dfc6d886d7e39873be31fb22c50a4f7f873148c3f13cdd7eccf1c2b4339a37",
+    "scenes.json": "d433dec88000cc3a444b8af3bb5312d139281c12ef9bbabbfb47b727d206d5b8",
+    "source.json": "e92bd3c570c8d4dcf8b9a28830c8c3c4ff29cf5f34861d10232ba87c9c1f8805",
+    "voices.json": "9e6b9e1ac0cc17ab275b13b2c8c75d6ef747c7ed94ca7642227dfeaeffe790a5",
+    "walks.json": "1b091b6b3f8f9fa34c1e93c6d9e0563681ae29394250e6acf4694c990f7cc2a6"
+  },
+  "unchanged_files": [
+    "rules.json",
+    "characters.json",
+    "motions.json",
+    "voices.json",
+    "events.json",
+    "activities.json"
+  ],
+  "preserved_content": [
+    "Original mentor interactions, five sword motions, cultivation rules and voices",
+    "Original sixteen outdoor interactions and their radii/actions",
+    "Optional umbrella choice, once keys, keeper/guest repeat memories and two-door tea interior",
+    "The existing strict EngineSession exploration state; no new persistent state"
+  ],
+  "new_text": "Only the candidate title/scene orientation text describes the larger authored streets. No new say nodes, event graphs, TTS, missions or long-form story.",
+  "reference": {
+    "type": "user_provided_illustration",
+    "orientation": "north_up",
+    "runtime_image_use": false,
+    "historical_reconstruction_claim": false,
+    "image_sha256": "d771ba7d0acde0b05315dfefc4bd396ca0d8a1ff614639e3c398d8ab97c67770"
+  },
+  "authored_sources": [
+    "trunk/mentor-slow-half-step.json",
+    "trunk/mentor-practice-report.json"
+  ],
+  "presentation_layout": "res://assets/data/chengdu-scale-layout.json",
+  "generator": "tools/rebuild_chengdu_scale_layout.py",
+  "save_boundary": "Independent shu_chengdu_scale / 0.7.0 candidate and app directory; no migration or overwrite of earlier candidates.",
+  "route_waypoints": {
+    "south_axis": [
+      [
+        7800,
+        10080
+      ],
+      [
+        7800,
+        8820
+      ],
+      [
+        7800,
+        8160
+      ],
+      [
+        7800,
+        6210
+      ],
+      [
+        7800,
+        4200
+      ]
+    ],
+    "southern_city_loop": [
+      [
+        7800,
+        8160
+      ],
+      [
+        6000,
+        8160
+      ],
+      [
+        6000,
+        7560
+      ],
+      [
+        7080,
+        7560
+      ],
+      [
+        7080,
+        6210
+      ],
+      [
+        8040,
+        6210
+      ],
+      [
+        8040,
+        8160
+      ],
+      [
+        7800,
+        8160
+      ]
+    ],
+    "east_temple_route": [
+      [
+        7800,
+        6210
+      ],
+      [
+        10050,
+        6210
+      ],
+      [
+        10050,
+        7050
+      ],
+      [
+        12660,
+        7050
+      ],
+      [
+        12660,
+        7410
+      ]
+    ],
+    "east_bridge_route": [
+      [
+        12660,
+        7050
+      ],
+      [
+        12660,
+        5700
+      ],
+      [
+        14680,
+        5700
+      ],
+      [
+        14680,
+        8100
+      ]
+    ],
+    "pool_north_detour": [
+      [
+        7800,
+        4200
+      ],
+      [
+        6420,
+        4200
+      ],
+      [
+        4530,
+        4200
+      ],
+      [
+        4530,
+        6150
+      ],
+      [
+        5100,
+        6150
+      ],
+      [
+        5100,
+        6120
+      ]
+    ],
+    "west_cottage_route": [
+      [
+        5100,
+        6150
+      ],
+      [
+        5100,
+        6450
+      ],
+      [
+        2940,
+        6450
+      ],
+      [
+        2940,
+        4380
+      ],
+      [
+        1350,
+        4380
+      ],
+      [
+        1350,
+        3720
+      ]
+    ],
+    "south_outer_route": [
+      [
+        7800,
+        10080
+      ],
+      [
+        3300,
+        10080
+      ],
+      [
+        3300,
+        10800
+      ],
+      [
+        1980,
+        10800
+      ],
+      [
+        1980,
+        10660
+      ]
+    ],
+    "weaving_route": [
+      [
+        7800,
+        10080
+      ],
+      [
+        8700,
+        10080
+      ],
+      [
+        8700,
+        11010
+      ],
+      [
+        10380,
+        11010
+      ]
+    ],
+    "north_precinct_loop": [
+      [
+        7800,
+        4200
+      ],
+      [
+        7020,
+        4200
+      ],
+      [
+        7020,
+        2920
+      ],
+      [
+        7800,
+        2920
+      ],
+      [
+        8580,
+        2920
+      ],
+      [
+        8580,
+        4200
+      ],
+      [
+        7800,
+        4200
+      ]
+    ],
+    "tea_front_access": [
+      [
+        6000,
+        7560
+      ],
+      [
+        6000,
+        7010
+      ],
+      [
+        6360,
+        7010
+      ]
+    ],
+    "tea_back_access": [
+      [
+        5100,
+        6150
+      ],
+      [
+        6360,
+        6150
+      ],
+      [
+        6360,
+        6490
+      ]
+    ],
+    "temple_market_access": [
+      [
+        10050,
+        6210
+      ],
+      [
+        11490,
+        6210
+      ],
+      [
+        11490,
+        5780
+      ]
+    ],
+    "qingyang_access": [
+      [
+        2940,
+        6450
+      ],
+      [
+        2940,
+        6740
+      ],
+      [
+        1710,
+        6740
+      ]
+    ],
+    "he_junction_access": [
+      [
+        12660,
+        7410
+      ],
+      [
+        12510,
+        7410
+      ],
+      [
+        12510,
+        8730
+      ],
+      [
+        12540,
+        8730
+      ]
+    ]
+  },
+  "scale_summary": {
+    "reference_world_size": [
+      5120,
+      3840
+    ],
+    "outdoor_area_multiplier": 9,
+    "individual_house_count": 592,
+    "obstacle_count": 622,
+    "actor_scale_changed": false,
+    "camera_scale_changed": false,
+    "main_street_width": 210,
+    "city_alley_width": [
+      80,
+      90
+    ]
+  },
+  "authorization": {
+    "date": "2026-11-07",
+    "source": "User feedback: 城市尺度还不够大; continuing the authorized map-directed city implementation.",
+    "status": "Implementation candidate; the larger layout, density and walking feel await actual checks and user acceptance."
+  },
+  "protected_package_json_sha256": {
+    "shu_chengdu": {
+      "activities.json": "c8fccbf66092573bb5a2ef5e73b02c0a75fe1c70ec44d6c40cd6dba699f6631f",
+      "characters.json": "03437af888d6a5e681b046f2634ae1181537646b16ffd1820d164d7b385e7404",
+      "events.json": "002f5c280bba0288701acc2c8a7b6e7a21e69ad04332b29ddb2a744f0a4f43f0",
+      "game.json": "4ecf37065e110fad2944e13890a3a9dbd00d994255524916b1185909dcb9ea87",
+      "motions.json": "518a167f8cb72ce5edc50ac3a766d0c1eb28122ef119a0141366ecc6f8770df2",
+      "rules.json": "e3dfc6d886d7e39873be31fb22c50a4f7f873148c3f13cdd7eccf1c2b4339a37",
+      "scenes.json": "6b8b99282ad1c831d46fd9118933b04289970b8735721567b099bb15c2ceda3d",
+      "source.json": "f312ffe0d82292a3cd44d8d08669d0bd49ded4c31499bee96793654cc999ee7b",
+      "voices.json": "9e6b9e1ac0cc17ab275b13b2c8c75d6ef747c7ed94ca7642227dfeaeffe790a5",
+      "walks.json": "a647c0078b4561c2f3bc64602cc5da5835c83d2e7893c7ef52ec9510eb8b70eb"
+    },
+    "shu_chengdu_large": {
+      "activities.json": "1acba41b5dd86a960e25f1dcb68040e8274dad5a6dd6c2c382c39e5d486a9b4a",
+      "characters.json": "03437af888d6a5e681b046f2634ae1181537646b16ffd1820d164d7b385e7404",
+      "events.json": "45f3cfa858b85fc25aec639db9c009a977ae314450b399adf89e131e980502a4",
+      "game.json": "01100585e9365f1389712cd01c5e4cd11f044989c024da56e4229eedb4617649",
+      "motions.json": "518a167f8cb72ce5edc50ac3a766d0c1eb28122ef119a0141366ecc6f8770df2",
+      "rules.json": "e3dfc6d886d7e39873be31fb22c50a4f7f873148c3f13cdd7eccf1c2b4339a37",
+      "scenes.json": "c3377e4d1a144386f385d8e7d3ae23ba534f085d5fb94b084c723b739657cf2a",
+      "source.json": "5ed1b44938daaf29aed5f4362562272ab9ddd4539b089544054d3cb2b2edcb58",
+      "voices.json": "9e6b9e1ac0cc17ab275b13b2c8c75d6ef747c7ed94ca7642227dfeaeffe790a5",
+      "walks.json": "f5f191b72d417a993c625d3a0127e1f1015de73669f8b5abf8313b7273eada81"
+    },
+    "shu_chengdu_reference": {
+      "activities.json": "d76938861f0c9a9c8b679f7686f5175c25ee8f0ecc1956bb4da8be0e8b917271",
+      "characters.json": "03437af888d6a5e681b046f2634ae1181537646b16ffd1820d164d7b385e7404",
+      "events.json": "2c7a21efe4f350fd554f89157e7e7d0b7ee48ef0196938d992f62a025cfd0695",
+      "game.json": "ddf7d45fc2e9afacf790b8bdd1ae10531565a9a3b8fec0f96b14dd21ecdf5a5b",
+      "motions.json": "518a167f8cb72ce5edc50ac3a766d0c1eb28122ef119a0141366ecc6f8770df2",
+      "rules.json": "e3dfc6d886d7e39873be31fb22c50a4f7f873148c3f13cdd7eccf1c2b4339a37",
+      "scenes.json": "d433dec88000cc3a444b8af3bb5312d139281c12ef9bbabbfb47b727d206d5b8",
+      "source.json": "e92bd3c570c8d4dcf8b9a28830c8c3c4ff29cf5f34861d10232ba87c9c1f8805",
+      "voices.json": "9e6b9e1ac0cc17ab275b13b2c8c75d6ef747c7ed94ca7642227dfeaeffe790a5",
+      "walks.json": "1b091b6b3f8f9fa34c1e93c6d9e0563681ae29394250e6acf4694c990f7cc2a6"
+    }
+  },
+  "protected_layout_sha256": {
+    "assets/data/chengdu-layout.json": "3a36c965d424852f0be73989cec6ffb0fe46a239ade078892da13114782e82ee",
+    "assets/data/chengdu-large-layout.json": "efa414b0219efd5f7dec3970fd87f00a138cbaae0c08d84b81327db0551da24c",
+    "assets/data/chengdu-reference-layout.json": "28cce6396bc248568b4d4d7ac1db555a8c15e4cf35974dcea4e5a17e88cd00aa"
+  }
+}

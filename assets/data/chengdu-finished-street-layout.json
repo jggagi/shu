@@ -1,0 +1,696 @@
+{
+  "schema_version": 1,
+  "scope": "Eighteen original first-street lots:54 split sections, complete contacts and three authored dressing densities. No new navigation, gameplay or raster generation.",
+  "profiles": {
+    "tea_shop": {
+      "roof": [
+        [
+          0,
+          195
+        ],
+        [
+          70,
+          248
+        ],
+        [
+          180,
+          282
+        ],
+        [
+          305,
+          331
+        ],
+        [
+          500,
+          274
+        ],
+        [
+          669,
+          214
+        ]
+      ],
+      "base": [
+        [
+          0,
+          410
+        ],
+        [
+          155,
+          470
+        ],
+        [
+          310,
+          537
+        ],
+        [
+          490,
+          477
+        ],
+        [
+          669,
+          414
+        ]
+      ],
+      "contact": [
+        [
+          59,
+          449
+        ],
+        [
+          311,
+          578
+        ],
+        [
+          625,
+          454
+        ]
+      ]
+    },
+    "two_storey": {
+      "roof": [
+        [
+          0,
+          250
+        ],
+        [
+          110,
+          302
+        ],
+        [
+          275,
+          357
+        ],
+        [
+          460,
+          292
+        ],
+        [
+          569,
+          250
+        ]
+      ],
+      "base": [
+        [
+          0,
+          520
+        ],
+        [
+          150,
+          593
+        ],
+        [
+          329,
+          658
+        ],
+        [
+          475,
+          601
+        ],
+        [
+          569,
+          547
+        ]
+      ],
+      "contact": [
+        [
+          42,
+          552
+        ],
+        [
+          329,
+          691
+        ],
+        [
+          540,
+          582
+        ]
+      ]
+    },
+    "corner_shop": {
+      "roof": [
+        [
+          0,
+          220
+        ],
+        [
+          135,
+          303
+        ],
+        [
+          280,
+          337
+        ],
+        [
+          433,
+          252
+        ],
+        [
+          533,
+          212
+        ]
+      ],
+      "base": [
+        [
+          0,
+          385
+        ],
+        [
+          130,
+          446
+        ],
+        [
+          270,
+          511
+        ],
+        [
+          430,
+          441
+        ],
+        [
+          533,
+          380
+        ]
+      ],
+      "contact": [
+        [
+          28,
+          408
+        ],
+        [
+          270,
+          551
+        ],
+        [
+          503,
+          433
+        ]
+      ]
+    },
+    "courtyard_tree": {
+      "roof": [
+        [
+          0,
+          315
+        ],
+        [
+          100,
+          334
+        ],
+        [
+          250,
+          392
+        ],
+        [
+          420,
+          350
+        ],
+        [
+          602,
+          310
+        ]
+      ],
+      "base": [
+        [
+          0,
+          535
+        ],
+        [
+          130,
+          625
+        ],
+        [
+          251,
+          674
+        ],
+        [
+          440,
+          585
+        ],
+        [
+          602,
+          518
+        ]
+      ],
+      "contact": [
+        [
+          44,
+          590
+        ],
+        [
+          251,
+          714
+        ],
+        [
+          570,
+          566
+        ]
+      ]
+    },
+    "home": {
+      "roof": [
+        [
+          0,
+          198
+        ],
+        [
+          120,
+          256
+        ],
+        [
+          291,
+          343
+        ],
+        [
+          460,
+          273
+        ],
+        [
+          594,
+          201
+        ]
+      ],
+      "base": [
+        [
+          0,
+          370
+        ],
+        [
+          125,
+          436
+        ],
+        [
+          256,
+          502
+        ],
+        [
+          460,
+          415
+        ],
+        [
+          594,
+          351
+        ]
+      ],
+      "contact": [
+        [
+          26,
+          413
+        ],
+        [
+          256,
+          545
+        ],
+        [
+          565,
+          404
+        ]
+      ]
+    },
+    "workshop": {
+      "roof": [
+        [
+          0,
+          196
+        ],
+        [
+          130,
+          245
+        ],
+        [
+          320,
+          300
+        ],
+        [
+          480,
+          247
+        ],
+        [
+          620,
+          180
+        ]
+      ],
+      "base": [
+        [
+          0,
+          355
+        ],
+        [
+          150,
+          418
+        ],
+        [
+          321,
+          475
+        ],
+        [
+          500,
+          400
+        ],
+        [
+          620,
+          345
+        ]
+      ],
+      "contact": [
+        [
+          57,
+          403
+        ],
+        [
+          321,
+          516
+        ],
+        [
+          589,
+          387
+        ]
+      ]
+    }
+  },
+  "houses": {
+    "ward_city_20_15": "corner_shop",
+    "ward_city_20_16": "home",
+    "ward_city_20_19": "home",
+    "ward_city_20_20": "corner_shop",
+    "ward_city_21_13": "home",
+    "ward_city_21_15": "home",
+    "ward_city_21_16": "workshop",
+    "ward_city_21_19": "two_storey",
+    "ward_city_21_20": "home",
+    "ward_city_22_13": "corner_shop",
+    "ward_city_22_15": "courtyard_tree",
+    "ward_city_22_16": "two_storey",
+    "ward_city_22_19": "tea_shop",
+    "ward_city_22_20": "home",
+    "ward_city_23_15": "workshop",
+    "ward_city_23_16": "corner_shop",
+    "ward_city_23_19": "courtyard_tree",
+    "ward_city_23_20": "home"
+  },
+  "motion": {
+    "tea_shop": {},
+    "two_storey": {},
+    "corner_shop": {},
+    "courtyard_tree": {},
+    "home": {},
+    "workshop": {}
+  },
+  "house_motion": {
+    "ward_city_22_19": {
+      "steam_pixel": [
+        392,
+        384
+      ],
+      "banner_pixel": [
+        110,
+        291
+      ],
+      "banner_text": "茶"
+    },
+    "ward_city_23_16": {
+      "banner_pixel": [
+        115,
+        311
+      ],
+      "banner_text": "果"
+    },
+    "ward_city_23_15": {
+      "banner_pixel": [
+        157,
+        283
+      ],
+      "banner_text": "布"
+    },
+    "ward_city_21_16": {
+      "banner_pixel": [
+        157,
+        283
+      ],
+      "banner_text": "器"
+    },
+    "ward_city_22_15": {
+      "banner_pixel": [
+        390,
+        465
+      ],
+      "banner_text": "药"
+    }
+  },
+  "zones": {
+    "shops": {
+      "label": "铺面段",
+      "description": "Existing six merchants, five readable cloth signs, focused low greenery."
+    },
+    "homes": {
+      "label": "民居巷",
+      "description": "Seven quiet homes, sparse potted or wall-foot foliage, no new signs."
+    },
+    "corners": {
+      "label": "街口",
+      "description": "Five open corners/gallery lots, no new pots or signs; keep road and sightline clear."
+    }
+  },
+  "dressing": {
+    "ward_city_20_15": {
+      "zone": "corners",
+      "plants": []
+    },
+    "ward_city_20_16": {
+      "zone": "homes",
+      "plants": [
+        {
+          "cell": 1,
+          "size": [
+            0.34,
+            0.43
+          ],
+          "foot_local": [
+            1.045,
+            0.985
+          ],
+          "potted": false
+        }
+      ]
+    },
+    "ward_city_20_19": {
+      "zone": "homes",
+      "plants": [
+        {
+          "cell": 2,
+          "size": [
+            0.37,
+            0.6
+          ],
+          "foot_local": [
+            0.94,
+            0.88
+          ],
+          "potted": true
+        }
+      ]
+    },
+    "ward_city_20_20": {
+      "zone": "corners",
+      "plants": []
+    },
+    "ward_city_21_13": {
+      "zone": "homes",
+      "plants": [
+        {
+          "cell": 0,
+          "size": [
+            0.37,
+            0.6
+          ],
+          "foot_local": [
+            0.94,
+            0.88
+          ],
+          "potted": true
+        }
+      ]
+    },
+    "ward_city_21_15": {
+      "zone": "homes",
+      "plants": [
+        {
+          "cell": 1,
+          "size": [
+            0.34,
+            0.43
+          ],
+          "foot_local": [
+            1.045,
+            0.985
+          ],
+          "potted": false
+        }
+      ]
+    },
+    "ward_city_21_16": {
+      "zone": "shops",
+      "plants": [
+        {
+          "cell": 3,
+          "size": [
+            0.43,
+            0.44
+          ],
+          "foot_local": [
+            0.94,
+            0.88
+          ],
+          "potted": true
+        }
+      ]
+    },
+    "ward_city_21_19": {
+      "zone": "corners",
+      "plants": []
+    },
+    "ward_city_21_20": {
+      "zone": "homes",
+      "plants": [
+        {
+          "cell": 0,
+          "size": [
+            0.37,
+            0.6
+          ],
+          "foot_local": [
+            0.94,
+            0.88
+          ],
+          "potted": true
+        }
+      ]
+    },
+    "ward_city_22_13": {
+      "zone": "corners",
+      "plants": []
+    },
+    "ward_city_22_15": {
+      "zone": "shops",
+      "plants": [
+        {
+          "cell": 2,
+          "size": [
+            0.43,
+            0.44
+          ],
+          "foot_local": [
+            0.94,
+            0.88
+          ],
+          "potted": true
+        }
+      ]
+    },
+    "ward_city_22_16": {
+      "zone": "corners",
+      "plants": []
+    },
+    "ward_city_22_19": {
+      "zone": "shops",
+      "plants": [
+        {
+          "cell": 0,
+          "size": [
+            0.46,
+            0.72
+          ],
+          "foot_local": [
+            0.94,
+            0.88
+          ],
+          "potted": true
+        }
+      ]
+    },
+    "ward_city_22_20": {
+      "zone": "homes",
+      "plants": [
+        {
+          "cell": 1,
+          "size": [
+            0.34,
+            0.43
+          ],
+          "foot_local": [
+            1.045,
+            0.985
+          ],
+          "potted": false
+        }
+      ]
+    },
+    "ward_city_23_15": {
+      "zone": "shops",
+      "plants": [
+        {
+          "cell": 2,
+          "size": [
+            0.43,
+            0.44
+          ],
+          "foot_local": [
+            0.94,
+            0.88
+          ],
+          "potted": true
+        }
+      ]
+    },
+    "ward_city_23_16": {
+      "zone": "shops",
+      "plants": [
+        {
+          "cell": 1,
+          "size": [
+            0.43,
+            0.44
+          ],
+          "foot_local": [
+            0.94,
+            0.88
+          ],
+          "potted": true
+        }
+      ]
+    },
+    "ward_city_23_19": {
+      "zone": "shops",
+      "plants": [
+        {
+          "cell": 0,
+          "size": [
+            0.46,
+            0.72
+          ],
+          "foot_local": [
+            0.94,
+            0.88
+          ],
+          "potted": true
+        }
+      ]
+    },
+    "ward_city_23_20": {
+      "zone": "homes",
+      "plants": [
+        {
+          "cell": 1,
+          "size": [
+            0.34,
+            0.43
+          ],
+          "foot_local": [
+            1.045,
+            0.985
+          ],
+          "potted": false
+        }
+      ]
+    }
+  }
+}

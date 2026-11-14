@@ -1,0 +1,469 @@
+{
+  "mentor_tip": {
+    "title": "慢半步",
+    "start": "opening",
+    "nodes": {
+      "opening": {
+        "type": "say",
+        "speaker": "player_yanqiu",
+        "text": "师父，刚才那一剑，我明明已经快了，怎么还是收不住？",
+        "voice": "opening",
+        "next": "sit"
+      },
+      "sit": {
+        "type": "say",
+        "speaker": "mentor_zhixian",
+        "text": "过来坐。你这口气，还留在剑坪上呢。",
+        "voice": "sit",
+        "next": "hurry"
+      },
+      "hurry": {
+        "type": "say",
+        "speaker": "player_yanqiu",
+        "text": "我就是想早些练好，免得总让您等。",
+        "voice": "hurry",
+        "next": "advice"
+      },
+      "advice": {
+        "type": "say",
+        "speaker": "mentor_zhixian",
+        "text": "剑快一点不难。难的是出剑时，心里不抢那一步。",
+        "voice": "advice",
+        "next": "choice"
+      },
+      "choice": {
+        "type": "choice",
+        "speaker": "mentor_zhixian",
+        "text": "先陪我听一会儿雨。等肩膀松了，再想刚才那一剑。",
+        "voice": "choice",
+        "options": [
+          {
+            "id": "take_lesson",
+            "label": "坐下来，随师父调息（精力8 · 1时辰）",
+            "next": "lesson_taken",
+            "action": "claim_mentor_lesson",
+            "conditions": {
+              "stats_gte": {
+                "energy": 8
+              },
+              "flags": {
+                "mentor_lesson_accepted": false
+              }
+            }
+          },
+          {
+            "id": "return_to_practice",
+            "label": "先回去自己试试",
+            "next": "lesson_skipped",
+            "action": "",
+            "conditions": {}
+          }
+        ]
+      },
+      "lesson_taken": {
+        "type": "say",
+        "speaker": "player_yanqiu",
+        "text": "好，我不抢。先把这一口气放稳。",
+        "voice": "lesson_taken",
+        "next": "lesson_reply"
+      },
+      "lesson_reply": {
+        "type": "say",
+        "speaker": "mentor_zhixian",
+        "text": "这就对了。待会儿再出剑，记住此刻肩上的轻松。",
+        "voice": "lesson_reply",
+        "next": "end"
+      },
+      "lesson_skipped": {
+        "type": "say",
+        "speaker": "player_yanqiu",
+        "text": "那我先去试试。要是还不对，我再来找您。",
+        "voice": "lesson_skipped",
+        "next": "skip_reply"
+      },
+      "skip_reply": {
+        "type": "say",
+        "speaker": "mentor_zhixian",
+        "text": "去吧。慢半步，也无妨。",
+        "voice": "skip_reply",
+        "next": "end"
+      },
+      "end": {
+        "type": "end",
+        "text": "这番话先记在心里。下一次修习，看看剑势是否更稳。",
+        "set_flags": {
+          "mentor_lesson_heard": true
+        }
+      }
+    }
+  },
+  "mentor_practice_report": {
+    "title": "练剑回报",
+    "start": "report_question",
+    "nodes": {
+      "report_question": {
+        "type": "choice",
+        "speaker": "mentor_zhixian",
+        "text": "方才那套剑，练得如何？",
+        "voice": "report_question",
+        "options": [
+          {
+            "id": "with_lesson",
+            "label": "说说调息后的体会",
+            "next": "report_calm",
+            "action": "",
+            "conditions": {
+              "flags": {
+                "mentor_lesson_accepted": true
+              }
+            }
+          },
+          {
+            "id": "self_practice",
+            "label": "说说自己试剑的体会",
+            "next": "report_try",
+            "action": "",
+            "conditions": {
+              "flags": {
+                "mentor_lesson_accepted": false
+              }
+            }
+          },
+          {
+            "id": "later",
+            "label": "稍后再向师父回报",
+            "next": "laterend",
+            "action": "",
+            "conditions": {}
+          }
+        ]
+      },
+      "report_calm": {
+        "type": "say",
+        "speaker": "player_yanqiu",
+        "text": "这回我没急着抢那一步，剑也收稳了。",
+        "voice": "report_calm",
+        "next": "report_calm_reply"
+      },
+      "report_calm_reply": {
+        "type": "say",
+        "speaker": "mentor_zhixian",
+        "text": "嗯，先记住这份从容。明日再练，不必把今天的力气都用尽。",
+        "voice": "report_calm_reply",
+        "next": "end"
+      },
+      "report_try": {
+        "type": "say",
+        "speaker": "player_yanqiu",
+        "text": "刚才还是有些急，不过我知道该从哪儿改了。",
+        "voice": "report_try",
+        "next": "report_try_reply"
+      },
+      "report_try_reply": {
+        "type": "say",
+        "speaker": "mentor_zhixian",
+        "text": "知道哪里急，就有了进步。先歇歇，明日再来。",
+        "voice": "report_try_reply",
+        "next": "end"
+      },
+      "end": {
+        "type": "end",
+        "text": "今日听教与练剑已记下，歇息后仍可继续修行。",
+        "set_flags": {
+          "mentor_reported": true
+        }
+      },
+      "laterend": {
+        "type": "end",
+        "text": "今日练剑已记录，稍后仍可回廊复命。"
+      }
+    }
+  },
+  "chengdu_keeper_first": {
+    "title": "柜前相遇",
+    "start": "opening",
+    "nodes": {
+      "opening": {
+        "type": "choice",
+        "speaker": "chengdu_narration",
+        "text": "掌柜把柜上的杯盏排齐，指向窗边留空的木架。架旁有字：临河巷拾得的物件，可暂放此处等人认领。",
+        "options": [
+          {
+            "id": "see_rack",
+            "label": "顺着手势看看失物架",
+            "next": "rack",
+            "action": "",
+            "conditions": {
+              "flags": {}
+            }
+          },
+          {
+            "id": "leave",
+            "label": "点头致意，继续逛逛",
+            "next": "leave",
+            "action": "",
+            "conditions": {
+              "flags": {}
+            }
+          }
+        ]
+      },
+      "rack": {
+        "type": "end",
+        "text": "木架就在窗边。若在临河巷见到待认领的物件，可自行决定是否顺路带来。"
+      },
+      "leave": {
+        "type": "end",
+        "text": "你记住了这处茶馆，转身继续闲逛。"
+      }
+    }
+  },
+  "chengdu_keeper_again": {
+    "title": "柜前重逢",
+    "start": "opening",
+    "nodes": {
+      "opening": {
+        "type": "choice",
+        "speaker": "chengdu_narration",
+        "text": "掌柜记得你先前来过，给柜前留出同一角空位。茶馆与街巷仍可慢慢逛。",
+        "options": [
+          {
+            "id": "see_returned",
+            "label": "看看已经归架的竹伞",
+            "next": "returned",
+            "action": "",
+            "conditions": {
+              "flags": {
+                "chengdu_umbrella_returned": true
+              }
+            }
+          },
+          {
+            "id": "leave",
+            "label": "点头致意，继续逛逛",
+            "next": "leave",
+            "action": "",
+            "conditions": {
+              "flags": {}
+            }
+          }
+        ]
+      },
+      "returned": {
+        "type": "end",
+        "text": "上回带回的竹伞仍在窗边失物架，临河巷的木签夹在伞绳上。掌柜也记得你送来的这一趟。"
+      },
+      "leave": {
+        "type": "end",
+        "text": "先前的问候还在，离开后再来，掌柜仍会认得你。"
+      }
+    }
+  },
+  "chengdu_guest_first": {
+    "title": "窗边经过",
+    "start": "opening",
+    "nodes": {
+      "opening": {
+        "type": "choice",
+        "speaker": "chengdu_narration",
+        "text": "窗边茶客侧身给你让路，指了指窗外河岸的方向。桌上摊着一张画得简单的街路图。",
+        "options": [
+          {
+            "id": "look_map",
+            "label": "看看茶桌旁的街路图",
+            "next": "map",
+            "action": "",
+            "conditions": {
+              "flags": {}
+            }
+          },
+          {
+            "id": "leave",
+            "label": "轻轻点头，继续逛逛",
+            "next": "leave",
+            "action": "",
+            "conditions": {
+              "flags": {}
+            }
+          }
+        ]
+      },
+      "map": {
+        "type": "end",
+        "text": "图上几笔街路连成一片：前门外是市街，后门出去沿墙入百工巷。榕树坪在巷东，河岸沿城东延伸；绕过宅院，南北两路都能回到茶馆。"
+      },
+      "leave": {
+        "type": "end",
+        "text": "茶客收回手，继续看窗外。你可以随时离开茶馆。"
+      }
+    }
+  },
+  "chengdu_guest_again": {
+    "title": "窗边重逢",
+    "start": "opening",
+    "nodes": {
+      "opening": {
+        "type": "choice",
+        "speaker": "chengdu_narration",
+        "text": "茶客认出先前经过的人，又把长凳收进桌下。窗外临河方向的街路仍在。",
+        "options": [
+          {
+            "id": "look_map",
+            "label": "再看看去河街的方向",
+            "next": "map",
+            "action": "",
+            "conditions": {
+              "flags": {}
+            }
+          },
+          {
+            "id": "leave",
+            "label": "点头后继续逛逛",
+            "next": "leave",
+            "action": "",
+            "conditions": {
+              "flags": {}
+            }
+          }
+        ]
+      },
+      "map": {
+        "type": "end",
+        "text": "去河边可从前门沿市街向东走，也可从后门绕巷中宅院，经过榕树坪再向东。整片街区都在脚下的石路上相连。"
+      },
+      "leave": {
+        "type": "end",
+        "text": "你点头走过，茶客也向你点点头。先前那次照面，他还记得。"
+      }
+    }
+  },
+  "chengdu_river_umbrella": {
+    "title": "临河竹伞",
+    "start": "opening",
+    "nodes": {
+      "opening": {
+        "type": "choice",
+        "speaker": "chengdu_narration",
+        "text": "木架上挂着失物牌：拾得物件，可送市街茶馆窗边的失物架。伞绳上还留着水痕。",
+        "options": [
+          {
+            "id": "take",
+            "label": "顺路带竹伞回茶馆",
+            "next": "taken",
+            "action": "take_river_umbrella",
+            "conditions": {
+              "flags": {
+                "chengdu_umbrella_taken": false,
+                "chengdu_umbrella_returned": false
+              }
+            }
+          },
+          {
+            "id": "carrying",
+            "label": "看看木架留下的空钩",
+            "next": "carrying",
+            "action": "",
+            "conditions": {
+              "flags": {
+                "chengdu_umbrella_carrying": true
+              }
+            }
+          },
+          {
+            "id": "returned",
+            "label": "记起已送回茶馆的竹伞",
+            "next": "returned",
+            "action": "",
+            "conditions": {
+              "flags": {
+                "chengdu_umbrella_returned": true
+              }
+            }
+          },
+          {
+            "id": "leave",
+            "label": "先不管它，继续闲逛",
+            "next": "leave",
+            "action": "",
+            "conditions": {
+              "flags": {}
+            }
+          }
+        ]
+      },
+      "taken": {
+        "type": "end",
+        "text": "竹伞已随身带好。可沿市街回茶馆前门，也可向北绕过榕树坪与百工巷，走到茶馆后门；窗边失物架留着暂存的位置。"
+      },
+      "carrying": {
+        "type": "end",
+        "text": "木钩已经空了。竹伞正由你带着，茶馆窗边留着暂存的位置。"
+      },
+      "returned": {
+        "type": "end",
+        "text": "这里的木钩仍空着。你记得已经把竹伞送到茶馆，临河巷的木签也夹在了伞绳上。"
+      },
+      "leave": {
+        "type": "end",
+        "text": "你从木架旁走开，沿着河街继续闲逛。"
+      }
+    }
+  },
+  "chengdu_lost_property": {
+    "title": "窗边失物架",
+    "start": "opening",
+    "nodes": {
+      "opening": {
+        "type": "choice",
+        "speaker": "chengdu_narration",
+        "text": "木架旁写着：拾得物件，留记来源，暂存待领。你可以看看，也可以继续逛街。",
+        "options": [
+          {
+            "id": "return",
+            "label": "把随身竹伞放到架上",
+            "next": "returned",
+            "action": "return_river_umbrella",
+            "conditions": {
+              "flags": {
+                "chengdu_umbrella_carrying": true,
+                "chengdu_umbrella_returned": false
+              }
+            }
+          },
+          {
+            "id": "revisit",
+            "label": "看看上回送来的竹伞",
+            "next": "remembered",
+            "action": "",
+            "conditions": {
+              "flags": {
+                "chengdu_umbrella_returned": true
+              }
+            }
+          },
+          {
+            "id": "leave",
+            "label": "先离开失物架",
+            "next": "leave",
+            "action": "",
+            "conditions": {
+              "flags": {}
+            }
+          }
+        ]
+      },
+      "returned": {
+        "type": "end",
+        "text": "竹伞已经放好，临河巷的木签也留在伞绳上。等失主来寻，便能在这里认领。"
+      },
+      "remembered": {
+        "type": "end",
+        "text": "架上仍是上回那柄竹伞，木签记着它从临河巷来。你看了一眼，记起送它回来时的水声。"
+      },
+      "leave": {
+        "type": "end",
+        "text": "你收回目光，仍可在茶馆里走动；前门回市街，后门通百工巷。"
+      }
+    }
+  }
+}

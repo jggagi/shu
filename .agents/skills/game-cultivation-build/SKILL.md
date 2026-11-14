@@ -2,7 +2,7 @@
 name: game-cultivation-build
 description: "Build and iterate fixed-scene cultivation/life-sim mode in an existing Godot GDScript game: time/energy, activities, growth, character events and side quests such as tea through staged fixed scenes, object inspection, documents and short memories. Use for cultivation-mode implementation and playtest feedback; not free-roaming exploration, combat, standalone story engines or game initialization."
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Game Cultivation Build
@@ -52,6 +52,8 @@ Keep stable character, scene and action IDs. Resolve display names from the cast
 The host rules/state own day/time, energy, growth and any existing relationship values. The mode controller owns activity availability display, interaction occupancy and return to the panel; do not create a second numeric state authority. Check eligibility against current state before settlement. A rejected action changes no resources and retains occupancy. Graph event actions follow `failure_next`; direct contextual object actions show the host rejection reason in the passive journal and stay in the branch. For ordinary character events, end/cancel releases occupancy. For an embedded side quest, stage end, object close, Escape and recoverable failures retain the branch; only its authorized whole-quest return gate releases it. Rest within the branch can advance time without returning to the main panel. A restart is a new run, not an early return within the same quest. When an explicitly awaited narrative cue exists, its acknowledgement is tied to the active session/node/cue instance; obsolete or reset callbacks cannot advance it. This cue protocol does not require confirmation for ordinary object inspection.
 
 A cast ID does not guarantee an available portrait. Check the asset index; use an appropriate text-only entrance or authorized new art when needed. Do not relabel another character's image as the new character. A new dialogue branch does not automatically add an unrelated activity.
+
+For a bottom portrait dialogue bar, read [current-event portrait dialogue](references/portrait-dialogue.md). Keep avatar, name, text and original option callbacks tied to the same authoritative node; preserve narration, modal priority and action feedback timing. Its Dock layout values are case-specific, not a new shared dialogue framework.
 
 Use only node types supported by the installed runtime and its declared contract version. The shu content engine currently supports `say`, `choice`, `end`; registered animated actions in v0.2 do not implement the proposed event `cue` protocol. Validate references before activation. Never execute script text from narrative data. Preserve source art, provenance and notices when adapting assets.
 

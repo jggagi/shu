@@ -1,0 +1,80 @@
+{
+  "asset": "tea_shop",
+  "godot_bounds_m": [
+    [
+      -0.9750000238418579,
+      0.0,
+      -1.034999966621399
+    ],
+    [
+      0.9750000238418579,
+      2.627000093460083,
+      1.034999966621399
+    ]
+  ],
+  "triangles": 5796,
+  "mesh_objects": 4,
+  "materials": 4,
+  "semantic_roles": [
+    "plaster",
+    "wood",
+    "roof",
+    "stone"
+  ],
+  "details": {
+    "front": "+z",
+    "primary_visible_side": "+x",
+    "opening": "real front door and 11cm-deep side window",
+    "roof": "closed curved hip shell with raised tile channels",
+    "room_gameplay": false
+  },
+  "ao": {
+    "plaster": {
+      "raw_min": 0.0,
+      "raw_max": 1.0,
+      "raw_mean": 0.5324047191722973,
+      "color0_min": 0.6600000262260437,
+      "color0_max": 1.0,
+      "corner_samples": 2960
+    },
+    "wood": {
+      "raw_min": 0.0,
+      "raw_max": 1.0,
+      "raw_mean": 0.33324841485507245,
+      "color0_min": 0.6600000262260437,
+      "color0_max": 1.0,
+      "corner_samples": 1104
+    },
+    "roof": {
+      "raw_min": 0.0,
+      "raw_max": 1.0,
+      "raw_mean": 0.5520946808337669,
+      "color0_min": 0.6600000262260437,
+      "color0_max": 1.0,
+      "corner_samples": 7688
+    },
+    "stone": {
+      "raw_min": 0.0,
+      "raw_max": 1.0,
+      "raw_mean": 0.5898763020833333,
+      "color0_min": 0.6600000262260437,
+      "color0_max": 1.0,
+      "corner_samples": 120
+    }
+  },
+  "external_images": [],
+  "lights_cameras_collision_in_glb": false,
+  "glb": {
+    "bytes": 385672,
+    "sha256": "1b221f02df192f38841d9f1cfa120264952265b9106ffc9324709909119bc13e",
+    "mesh_primitives": 4,
+    "all_primitives_have_uv_and_color0": true,
+    "image_count": 0,
+    "export_y_up": true
+  },
+  "source_blend": {
+    "path": "art/source/chengdu-blender-kit-20261110/tea_shop.blend",
+    "sha256": "d2c6dccd0410e2556726e3a60fec680494c45093dd42e255d47604b443094bb2",
+    "bytes": 192690
+  }
+}

@@ -2,7 +2,7 @@
 
 P1b `town_walk_catalog.json` 使用独立 `shu_town_walk` / `0.3.1` 与原 `stream_study`。它继承 P1a 的原师徒与五剑 JSON，只把城镇改为一张可走地图，增加茶摊掌柜初次／重访回应、街口木牌和走近返山出口；新增文字为机制连接旁白，不是新剧情章节或无声人物对白。走动、问候、阅读不花时辰，明确往返每程 1 时辰；宿主唯一结算。
 
-`walks.json` schema 1 登记逻辑尺寸、地面、障碍、入口、人物／物件／出口位置和半径；互动只能执行登记的非菜单行动。`source.json` 固定 P1a 继承文件哈希，Chengping 算法与规则的许可／改写见 [P1b 来源审查](../docs/CHENGPING_P1B_SOURCE_AUDIT.md)。P1b 仅有 walks 能力的状态增加严格 exploration 字段，原内容包仍为 14 字段；独立内容版本、应用目录和存档目录，不迁入 P0/P1a。
+`walks.json` schema 1 登记逻辑尺寸、地面、障碍、入口、人物／物件／出口位置和半径；互动只能执行登记的非菜单行动。可选 `entries` 提供命名到达点，跨图行动的 `target_entry` 指向其目标地图入口，省略时沿用 `spawn`。走近行动可开启现有普通事件，不能经菜单或对话选项绕过空间门禁。`source.json` 固定 P1a 继承文件哈希，Chengping 算法与规则的许可／改写见 [P1b 来源审查](../docs/CHENGPING_P1B_SOURCE_AUDIT.md)。P1b 仅有 walks 能力的状态增加严格 exploration 字段，原内容包仍为 14 字段；独立内容版本、应用目录和存档目录，不迁入 P0/P1a。
 
 ## 既有 v0.2 内容包
 
@@ -20,3 +20,5 @@ P1b `town_walk_catalog.json` 使用独立 `shu_town_walk` / `0.3.1` 与原 `stre
 运行数据和短对白不替代主／支线原稿归档；未搬动历史剧情。原始蜀山场景和正式8805流程保留。
 
 美术均复用既有源文件，不重绘、不上传、不改名冒充人物：蜀山人物见 `assets/art/v2/source.json`，听雨廊见 `assets/art/weather3/source.json`，后山见 `assets/art/back_mountain_training/source.json`，溪亭见 `assets/art/stream_teahouse/source.json`。所有消费文件的 SHA256 记录在构建生成的 `build-info.json`；字库来源与 OFL 许可见 `assets/fonts/source-cultivation-engine.json` 和 `OFL-Serif.txt`。新文字人物有意仅显示姓名卡。
+
+成都大城候选 `shu_chengdu_scale / 0.7.0` 使用独立目录 `chengdu_scale_catalog.json`；新地图保留同一 EngineSession 和茶馆两门。空间合同上限提高至每图1024障碍，互动仍至多16；旧包的数据、角色与存档不迁移。

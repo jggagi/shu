@@ -1,0 +1,13 @@
+{
+  "softness":2.0,
+  "max_length":108.0,
+  "opacity":{"morning":0.23,"afternoon":0.28,"dusk":0.24,"moonlight":0.13},
+  "parts":[
+    ["pelvis","chest",8.5], ["chest","neck",8.0], ["head","head",7.5],
+    ["chest","upper_arm.L",5.0], ["chest","upper_arm.R",5.0],
+    ["upper_arm.L","forearm.L",3.8], ["forearm.L","hand.L",3.0],
+    ["upper_arm.R","forearm.R",3.8], ["forearm.R","hand.R",3.0],
+    ["pelvis","thigh.L",5.0], ["thigh.L","shin.L",5.0], ["shin.L","foot.L",3.2],
+    ["pelvis","thigh.R",5.0], ["thigh.R","shin.R",5.0], ["shin.R","foot.R",3.2]
+  ]
+}

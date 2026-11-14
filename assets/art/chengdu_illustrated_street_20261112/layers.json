@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "source": "art/source/chengdu-illustrated-street-20261112/architecture.png",
+  "source_sha256": "911a2273fb4e46a45123c8287f00d37e43de08e25ff27a1ac3c0884f8ace931f",
+  "method": "Measured magenta colour matte; edge unmixing; preserved interior RGB; 4px RGB dilation; explicit per-cell rectangles and bottom contact anchors. Original provider PNG unchanged.",
+  "layers": {
+    "tea_shop": {
+      "path": "res://assets/art/chengdu_illustrated_street_20261112/tea_shop.png",
+      "source_box": [
+        16,
+        112,
+        710,
+        738
+      ],
+      "crop": [
+        16,
+        17,
+        685,
+        600
+      ],
+      "size": [
+        669,
+        583
+      ],
+      "anchor_px": [
+        311.0,
+        578.0
+      ],
+      "alpha_zero": 144866,
+      "alpha_partial": 876,
+      "alpha_opaque": 244285,
+      "sha256": "85f66f0228b69e6cc2641591b867161658d7a45c26b76711e21964c586fa93bd"
+    },
+    "two_storey": {
+      "path": "res://assets/art/chengdu_illustrated_street_20261112/two_storey.png",
+      "source_box": [
+        750,
+        26,
+        1355,
+        740
+      ],
+      "crop": [
+        19,
+        17,
+        588,
+        713
+      ],
+      "size": [
+        569,
+        696
+      ],
+      "anchor_px": [
+        329.0,
+        691.0
+      ],
+      "alpha_zero": 145004,
+      "alpha_partial": 1425,
+      "alpha_opaque": 249595,
+      "sha256": "c8b89874841168c0fd51bf4f08602952aaf0acd33f56ccb0d0f3f74c303c8ec9"
+    },
+    "workshop": {
+      "path": "res://assets/art/chengdu_illustrated_street_20261112/workshop.png",
+      "source_box": [
+        1370,
+        180,
+        2035,
+        738
+      ],
+      "crop": [
+        19,
+        27,
+        639,
+        549
+      ],
+      "size": [
+        620,
+        522
+      ],
+      "anchor_px": [
+        321.0,
+        516.0
+      ],
+      "alpha_zero": 127403,
+      "alpha_partial": 8353,
+      "alpha_opaque": 187884,
+      "sha256": "d9a6eaa20f95d8414c3d0fbf4f88f8d6fa43bac531134269161da4d4c19e346e"
+    },
+    "courtyard_tree": {
+      "path": "res://assets/art/chengdu_illustrated_street_20261112/courtyard_tree.png",
+      "source_box": [
+        20,
+        742,
+        700,
+        1505
+      ],
+      "crop": [
+        37,
+        7,
+        639,
+        726
+      ],
+      "size": [
+        602,
+        719
+      ],
+      "anchor_px": [
+        251.0,
+        714.0
+      ],
+      "alpha_zero": 197888,
+      "alpha_partial": 5641,
+      "alpha_opaque": 229309,
+      "sha256": "538bd0636f0bb751f31addbecac628fe6cac0712fe2b28fcc5c16fc4c9238d81"
+    },
+    "home": {
+      "path": "res://assets/art/chengdu_illustrated_street_20261112/home.png",
+      "source_box": [
+        735,
+        885,
+        1350,
+        1500
+      ],
+      "crop": [
+        10,
+        19,
+        604,
+        569
+      ],
+      "size": [
+        594,
+        550
+      ],
+      "anchor_px": [
+        256.0,
+        545.0
+      ],
+      "alpha_zero": 129509,
+      "alpha_partial": 1378,
+      "alpha_opaque": 195813,
+      "sha256": "d60f9d7d74400659a37584570c4262c987cf661d2c8b478421a624b3cb3d579e"
+    },
+    "corner_shop": {
+      "path": "res://assets/art/chengdu_illustrated_street_20261112/corner_shop.png",
+      "source_box": [
+        1410,
+        880,
+        2010,
+        1510
+      ],
+      "crop": [
+        36,
+        21,
+        569,
+        577
+      ],
+      "size": [
+        533,
+        556
+      ],
+      "anchor_px": [
+        270.0,
+        551.0
+      ],
+      "alpha_zero": 96773,
+      "alpha_partial": 1876,
+      "alpha_opaque": 197699,
+      "sha256": "4e7cb8e062076fd4360fd9db73eb50caea98c79ae8570e6d5f9fbd4a3e662684"
+    }
+  }
+}

@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-07",
+  "scope": "Original connected Chengdu scene presentation; selected existing town character models, original embedded textures and idle/walk/cup clips reused without payload edits.",
+  "source_checkout": {
+    "path": "/home/x1-lite/games/shu/.local/worktrees/first-journey",
+    "commit": "36760937d1c643a53652ccc5cffd8001ff785a1c",
+    "dirty": false,
+    "baseline_source": "origin/main 7c992c578b1fe4a1624c769812425b38080771d3"
+  },
+  "author": "Shu project authorship; original approved Jiang identity and locally authored daily/NPC derivatives",
+  "license": "Existing user-authorized Tencent Hunyuan model use terms and original project hand/sword/derivative authorship retained. Models and images are not claimed MIT or CC0. No new external generation, service calls or downloads.",
+  "runtime_dependencies": [
+    {
+      "path": "res://assets/art/town_volume_character/jiang-town.glb",
+      "sha256": "02a76e2d39963098fdeedae740853a9f12dbf28be658b4277309300b44caf399",
+      "bytes": 17686040,
+      "reuse": "byte-exact from retained source checkout"
+    },
+    {
+      "path": "res://assets/art/town_volume_character/jiang-town.glb.import",
+      "sha256": "e3c706310ad8896137eccadb670e718303df8f4cd24a6d68f72de5e0bd84e885",
+      "bytes": 1278,
+      "reuse": "byte-exact from retained source checkout"
+    },
+    {
+      "path": "res://assets/art/town_volume_character/jiang-town_JiangApprovedHead_SaturatedBaseColor.png",
+      "sha256": "345d59d59b7606dbd51a5c7a7aee30984cda6aca396542d2216c1d4e4235d997",
+      "bytes": 4818692,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_character/jiang-town_JiangApprovedHead_SaturatedBaseColor.png.import",
+      "sha256": "7bb7791d06960561ad3677c14d16b97daee22494364da6fbd13a8feff2b59865",
+      "bytes": 1143,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_character/jiang-town_JiangFullbody_SaturatedBaseColor.png",
+      "sha256": "2ac47107ad2bb8834e71ca31e87046efdad7181b79b58755eefe99da73c59835",
+      "bytes": 4731284,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_character/jiang-town_JiangFullbody_SaturatedBaseColor.png.import",
+      "sha256": "f8d440b168a2b38b44e2b73af853a5bf648917177d2e7f7c1b585005a1348ff8",
+      "bytes": 1132,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_character/jiang-town_texture_pbr_20250901_metallic-texture_pbr_20250901_roughnes.png",
+      "sha256": "5b38758c4082b13b676b2334a649ca1bd707fec8527349b4bf7c511c1384575c",
+      "bytes": 1085016,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_character/jiang-town_texture_pbr_20250901_metallic-texture_pbr_20250901_roughnes.png.import",
+      "sha256": "582ae1431c823430e79c5cbf4b520ea0109deb182e1785e79d6aba824a36e21b",
+      "bytes": 1213,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_character/jiang-town_texture_pbr_20250901_metallic-texture_pbr_20250901_roughness.png",
+      "sha256": "165405c1f6f280c90d8c2eaa720316132b49450a2068bc2a326bdab692d11d9b",
+      "bytes": 865177,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_character/jiang-town_texture_pbr_20250901_metallic-texture_pbr_20250901_roughness.png.import",
+      "sha256": "57c9dd8e678ab867437c62a244dcbdeef7ace5d23ce3642e9f493aacb9fc8e0b",
+      "bytes": 1216,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_character/jiang-town_texture_pbr_20250901_normal.png",
+      "sha256": "2e7d0b766b9d054412dc5ce20e36926a253c40d7cc2daccac4f8284cc7b5aba9",
+      "bytes": 523195,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_character/jiang-town_texture_pbr_20250901_normal.png.import",
+      "sha256": "1a0f1c50465aa6fc1a898ca81f77a15105feb9bf2d022b0e62557d90d61a8480",
+      "bytes": 1117,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_character/jiang-town_texture_pbr_20250901_normal_3.png",
+      "sha256": "958a40ff3949f1f38f9bb2d9db51d65e77e9675ecbdbe30ee8a7de8d86f3a41c",
+      "bytes": 484395,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_character/jiang-town_texture_pbr_20250901_normal_3.png.import",
+      "sha256": "0bca9d80930815b36ecb812869e76c75ce35a51c7d3887392e72c71b5c862a9f",
+      "bytes": 1123,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_character/source.json",
+      "sha256": "2f5448e43a1b5c3f05a892e55780757cc578237c43c458373318099ee602726a",
+      "bytes": 9755,
+      "reuse": "byte-exact from retained source checkout"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/source.json",
+      "sha256": "4d1fd5f1998559a7195a8eb790b1a862ade645c098e7e62fc767656d59956b08",
+      "bytes": 15307,
+      "reuse": "byte-exact from retained source checkout"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-patron.glb",
+      "sha256": "506caf389c66a6db054170593df630f26a638c5f53200b7e31d8569a95db52a1",
+      "bytes": 16033000,
+      "reuse": "byte-exact from retained source checkout"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-patron.glb.import",
+      "sha256": "97679e352ff3539df782413f6cb521123b9adab1a4313ec91b78f4df3fb6bbf3",
+      "bytes": 1273,
+      "reuse": "byte-exact from retained source checkout"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-patron_JiangApprovedHead_SaturatedBaseColor.png",
+      "sha256": "345d59d59b7606dbd51a5c7a7aee30984cda6aca396542d2216c1d4e4235d997",
+      "bytes": 4818692,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-patron_JiangApprovedHead_SaturatedBaseColor.png.import",
+      "sha256": "70f369f92074b18b68341c54ab3104a7cb96ad5c962e8a8ccdaa49687c4fc7e1",
+      "bytes": 1139,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-patron_TeaPatron_GreyGreen_DerivedBaseColor.png",
+      "sha256": "37f724e92ac367f419c7dcaa36907ab246ddd65f6a54c759d226939a84d9b445",
+      "bytes": 4562613,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-patron_TeaPatron_GreyGreen_DerivedBaseColor.png.import",
+      "sha256": "000676f816275fd17cfa06a36f81903a6ef3b5fb782459251130df0a16661e20",
+      "bytes": 1139,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-patron_texture_pbr_20250901_metallic-texture_pbr_20250901_roughnes.png",
+      "sha256": "5b38758c4082b13b676b2334a649ca1bd707fec8527349b4bf7c511c1384575c",
+      "bytes": 1085016,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-patron_texture_pbr_20250901_metallic-texture_pbr_20250901_roughnes.png.import",
+      "sha256": "e12fcc21512169c267f276be956c26d3587e025185191557ab3ec4ae2304ae74",
+      "bytes": 1208,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-patron_texture_pbr_20250901_metallic-texture_pbr_20250901_roughness.png",
+      "sha256": "165405c1f6f280c90d8c2eaa720316132b49450a2068bc2a326bdab692d11d9b",
+      "bytes": 865177,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-patron_texture_pbr_20250901_metallic-texture_pbr_20250901_roughness.png.import",
+      "sha256": "28c2ef505937a83b3860a3147e77a5b90b50705a864eb53e0f54513d11858ad5",
+      "bytes": 1210,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-patron_texture_pbr_20250901_normal.png",
+      "sha256": "2e7d0b766b9d054412dc5ce20e36926a253c40d7cc2daccac4f8284cc7b5aba9",
+      "bytes": 523195,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-patron_texture_pbr_20250901_normal.png.import",
+      "sha256": "80ae040b498286d94e82e3127f3d87a232f4e6921d5ad23c357d0b923dc891e0",
+      "bytes": 1112,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-patron_texture_pbr_20250901_normal_3.png",
+      "sha256": "958a40ff3949f1f38f9bb2d9db51d65e77e9675ecbdbe30ee8a7de8d86f3a41c",
+      "bytes": 484395,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-patron_texture_pbr_20250901_normal_3.png.import",
+      "sha256": "b73239df18fab08ab866d4c9704db794c7b7145db95a4903f4a7d482651b92b7",
+      "bytes": 1117,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-seller.glb",
+      "sha256": "a1dfdfaba3f05ab3909100e0569981316f2fdf1fb05de8069c9364599cc6ccde",
+      "bytes": 16211660,
+      "reuse": "byte-exact from retained source checkout"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-seller.glb.import",
+      "sha256": "2511ca7837a1a16f9a31db72a2c3af2108b5af33da709aa86a22115644a70241",
+      "bytes": 1273,
+      "reuse": "byte-exact from retained source checkout"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-seller_JiangApprovedHead_SaturatedBaseColor.png",
+      "sha256": "345d59d59b7606dbd51a5c7a7aee30984cda6aca396542d2216c1d4e4235d997",
+      "bytes": 4818692,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-seller_JiangApprovedHead_SaturatedBaseColor.png.import",
+      "sha256": "f845de882bb058203526af674d4258873f53dec08c44639b123ec7d26050c9e8",
+      "bytes": 1139,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-seller_JiangFullbody_SaturatedBaseColor.png",
+      "sha256": "2ac47107ad2bb8834e71ca31e87046efdad7181b79b58755eefe99da73c59835",
+      "bytes": 4731284,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-seller_JiangFullbody_SaturatedBaseColor.png.import",
+      "sha256": "4eb2557bea8f1599434bcef25b187159b7998416a2c6d188f8587efd512d5640",
+      "bytes": 1127,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-seller_texture_pbr_20250901_metallic-texture_pbr_20250901_roughnes.png",
+      "sha256": "5b38758c4082b13b676b2334a649ca1bd707fec8527349b4bf7c511c1384575c",
+      "bytes": 1085016,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-seller_texture_pbr_20250901_metallic-texture_pbr_20250901_roughnes.png.import",
+      "sha256": "e800d85c4765a65652a1632d9a9b03d08a2a5feec4e52a50cabc90e8a2ad7df5",
+      "bytes": 1208,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-seller_texture_pbr_20250901_metallic-texture_pbr_20250901_roughness.png",
+      "sha256": "165405c1f6f280c90d8c2eaa720316132b49450a2068bc2a326bdab692d11d9b",
+      "bytes": 865177,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-seller_texture_pbr_20250901_metallic-texture_pbr_20250901_roughness.png.import",
+      "sha256": "5fb90f8dc58d028b9ecacb5fd50c42adca0b41a6ef3c582ca9e790e17c2132ee",
+      "bytes": 1211,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-seller_texture_pbr_20250901_normal.png",
+      "sha256": "2e7d0b766b9d054412dc5ce20e36926a253c40d7cc2daccac4f8284cc7b5aba9",
+      "bytes": 523195,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-seller_texture_pbr_20250901_normal.png.import",
+      "sha256": "9bc7ab7a18c4a3874491ca6acfd91348e838977c947f545cf61d9a5d0e3199b0",
+      "bytes": 1112,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-seller_texture_pbr_20250901_normal_3.png",
+      "sha256": "958a40ff3949f1f38f9bb2d9db51d65e77e9675ecbdbe30ee8a7de8d86f3a41c",
+      "bytes": 484395,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/town_volume_cast/tea-seller_texture_pbr_20250901_normal_3.png.import",
+      "sha256": "b720431bda56550583ed5cd3f800a3dbc6abbe06b3b69de614e646e9df42d3e6",
+      "bytes": 1118,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/shanxia_polish/materials/flagstone-graygreen.svg",
+      "sha256": "c7b71d80cd8e442c4eb88b254e05a11cb5e5bfbc6f411c58dbc97b9109b6e2b0",
+      "bytes": 83666,
+      "reuse": "byte-exact from retained source checkout"
+    },
+    {
+      "path": "res://assets/art/shanxia_polish/materials/flagstone-graygreen.svg.import",
+      "sha256": "eac661e1c1345f95dcffbc365149da8e44ec717869644dc877eb7db68540bd86",
+      "bytes": 1094,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/shanxia_polish/materials/plaster-ivory.svg",
+      "sha256": "9892ee08e9e3155708e2b02e3761def3675cfa6f197bbd48d414dee8cc451e40",
+      "bytes": 336109,
+      "reuse": "byte-exact from retained source checkout"
+    },
+    {
+      "path": "res://assets/art/shanxia_polish/materials/plaster-ivory.svg.import",
+      "sha256": "c00813b30f4ecbe410036b8fda0de01a89f8a8d4b3ee4360c10747723a6d7bfd",
+      "bytes": 1076,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/shanxia_polish/materials/roof-gray-teal.svg",
+      "sha256": "cd590e49dbee28d317b3a0fc67b7436f1c07557951ac2d5884b08eac3b98c4d0",
+      "bytes": 132488,
+      "reuse": "byte-exact from retained source checkout"
+    },
+    {
+      "path": "res://assets/art/shanxia_polish/materials/roof-gray-teal.svg.import",
+      "sha256": "288b720646b033d9393c9d0dd6da95f369a5a7c75cf4c890f61208eb0990443f",
+      "bytes": 1079,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    },
+    {
+      "path": "res://assets/art/shanxia_polish/materials/source.json",
+      "sha256": "434ce638b73995f41d0b50a0f8fa17e533ba70af7530908f172499a222de1625",
+      "bytes": 2713,
+      "reuse": "byte-exact from retained source checkout"
+    },
+    {
+      "path": "res://assets/art/shanxia_polish/materials/timber-honey.svg",
+      "sha256": "2140f41728401907f4977ab5ccf38fbae71376a433c151095042eade7b0bdf7b",
+      "bytes": 135920,
+      "reuse": "byte-exact from retained source checkout"
+    },
+    {
+      "path": "res://assets/art/shanxia_polish/materials/timber-honey.svg.import",
+      "sha256": "8d1aefeaf03d8e0b5cd478a7452e5c54523cf6daede494522db08a4602636b9f",
+      "bytes": 1073,
+      "reuse": "Godot 4.7.2 import profile / texture extracted locally from unchanged embedded GLB payload"
+    }
+  ],
+  "source_records": [
+    "res://assets/art/town_volume_character/source.json",
+    "res://assets/art/town_volume_cast/source.json",
+    "res://assets/art/shanxia_polish/materials/source.json"
+  ],
+  "local_code_reuse": {
+    "base": "res://addons/cultivation_mode/town_hd2d_stage.gd",
+    "character_adapters_read_only": [
+      "addons/cultivation_mode/town_volume_character.gd at retained source checkout",
+      "addons/cultivation_mode/town_volume_cast.gd at retained source checkout"
+    ],
+    "portions": "Original model loading, manual animation sampling, one Compatibility vertex-color conversion, two ankle contact shadows. New chengdu_actor.gd adapts only these presentation concerns; no combat code copied.",
+    "viewport_notice": "Godot MIT notice remains in inherited town_hd2d_stage.gd; Chengping selective-adaptation authorization remains as recorded there."
+  },
+  "limits": [
+    "The original source includes fixed right hand grip and small stylized face/cloth seams; unchanged payload reuse does not claim those source limitations fixed.",
+    "Character clips preserve approved source quality; this new four-view layout awaits user acceptance.",
+    "Local source record paths identify retained authoring history, not runtime dependencies."
+  ],
+  "architectural_materials": "Four original Shu authored SVG surfaces selected unchanged from retained tea-street materials; local new stage only. Material source retains original author/method/license/SHA256.",
+  "validation": {
+    "probe": "res://.local/qa/chengdu-scene/probe.json",
+    "engine": "4.7.2.stable.official.ed1daf0bf",
+    "renderer": "Compatibility / Radeon 780M",
+    "result": "Four real 1280x720 stage renders inspected; four validate() results empty; 12 projection round trips max error 0.0000611 logical pixels. Player/NPC real22-bone payloads loaded with original clips. Actual arrival UI route is root integration responsibility.",
+    "candidate": "2026-11-07 gray-surface revision",
+    "user_acceptance": "pending",
+    "windows": "unverified",
+    "audio": "unverified",
+    "detached_construction": "All four actual Compatibility scenes constructed and initially synced before attachment, then attached and rendered: no warning/error. Local bone-chain calculation compared with live skeleton world transforms (max error below 0.000001m); sole contacts stay at y=0.004m.",
+    "quest_props": "Read-only set_city_flags controls river umbrella taken/returned state; actual render probe checked river hide and returned rack reveal/reset."
+  }
+}
